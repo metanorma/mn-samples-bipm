@@ -1,0 +1,551 @@
+= Guide to the Realization of the ITS-90
+:appendix: 2
+:partnumber: 1
+:edition: 1
+:copyright-year: 2018
+:revdate: 2018-01-01
+:language: en
+:docnumber: ITS-90
+:title-en: Guide to the Realization of the ITS-90 -- Introduction
+:doctype: guide
+:committee-en: Consultative Committee for Thermometry
+:committee-acronym: CCT
+:workgroup: Task Group for the Realization of the Kelvin
+:workgroup-acronym: CCT-TG-K
+:fullname: B Fellmuth
+:docstage: in-force
+:docsubstage: 60
+:imagesdir: images
+:mn-document-class: bipm
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+
+[.preface]
+== Abstract
+
+This paper is a part of guidelines, prepared on behalf of the Consultative Committee for Thermometry, on the methods how to realize the International Temperature Scale of 1990.
+
+It gives a historical review and discusses the major issues linked to the establishment of temperature scales of today and tomorrow.
+
+
+== Scope
+
+From 1927 to 1975, the various International Temperature Scales (ITSs) have incorporated a moderate amount of supplementary information concerning their practical realization. However, limitations of space prevented this information from being exhaustive. Furthermore, the lengthy periods between scale editions, ranging from seven to twenty-one years, have caused much of it to become outdated. The low temperature scale of 1976 (_Echelle Provisoire de Température de 1976 entre 0,5 K et 30 K_, http://iopscience.iop.org/article/10.1088/0026-1394/15/2/001/pdf[EPT-76])is the first one, which provided no such information. Supplementaryinformation was instead given in a more extensive and comprehensive form in a separate document, containing information on both the EPT-76 and the _International Practical Temperature Scale of 1968_, http://iopscience.iop.org/article/10.1088/0026-1394/12/1/003/pdf[IPTS-68].For the _International Temperature Scale of 1990_, ITS-90, such an accompanying document was prepared in 1990 byWorking Group 1 _Defining fixed points and interpolating instruments_ of the CCT and approved by the CCT. It is now called https://www.bipm.org/en/committees/cc/cct/publications-cc.html[_Guide to the Realization of the ITS-90_]and posted on the BIPM website. Its parts have been written as self-contained papers by different authors.
+
+The _Guide to the Realization of the ITS-90_ describes methods by which the ITS-90 can be realized successfully. However, the document should not be taken as laying down how this must be done. The description of any particular apparatus is more for illustration than prescription, and considerable variations can often be effective. Likewise, quoted numerical data and dimensions are mostly for guidance only. Methods of realizing the scale will continue to evolve, and this will be reflected in periodic revisions of the text. Techniques for the realization of the defining fixed points of the ITS-90, excluding the vapour-pressure points, and for the comparison of fixed-point cells, at the highest level of accuracy, have been recommended by Working Group 1 in [Mangum _et al._ 2000] and [Mangum _et al._ 1999], respectively.
+
+Though many new methods for realizing the base unit kelvin, including the measurement of thermodynamic temperature, and new temperature fixed points have been developed, the _Guide to the Realization of the ITS-90_ strictly deals only with the realization of the ITS-90 according to its definition. Some references for new or alternative methods are given as background information in a few chapters. A description of such methods can be found in the companion documents posted as https://www.bipm.org/en/committees/cc/cct/publications-cc.html[_Guide on Secondary Thermometry_] on the BIPM website. A  https://www.bipm.org/en/committees/cc/cct/publications-cc.html[_Guide to the Realization of the Provisional Low Temperature Scale of 2000_ (PLTS-2000)] is also available there.]Future versions of the _Mise en Pratique of the Definition of the Kelvin_ (https://www.bipm.org/cc/CCT/Allowed/28/MeP-K-19_June_2017_DRAFT.pdf[MeP-K]) will endorse multiple methods for the realization of the kelvin [Ripple _et al._ 2010, Fellmuth _et al._ 2016]. However, a diversity of endorsements could lead to the risk that reportedtemperature values may be ambiguous, so proper notation and an explanation of the methods used are given in the MeP-K.
+
+
+== Historical background
+
+The ITS-90 [CIPM 1989, Preston-Thomas 1990] has evolved from a series of earlier ITSs. These were formulated to allow measurements of temperature to be made accurately and reproducibly, with temperatures measured on these scales being as close
+an approximation as possible to the corresponding thermodynamic temperatures. A full description of these scales, together with a historical review, can be found in, for example, [Quinn 1990]. A brief description of several of the scales is also given in the appendix to the text of the ITS-90. This description is reproduced here accompanied by some explanations. In addition, details of three further scales (Normal Hydrogen Scale, ITS-90, and PLTS-2000) are discussed, with special emphasis laid on the structure, the thermodynamic basis, the uncertainty, and the reproducibility of the ITS-90. The historical background should aid in understanding the methods applied for the two scales currently in effect (ITS-90 and PLTS-2000). Finally, ideas are added on a possible improvement of the ITS by establishing a new ITS-XX, which is a long-term task. This should especially illustrate the deficiencies of the ITS-90, which may be of interest for special applications.
+
+
+=== Normal Hydrogen Scale
+
+The Normal Hydrogen Scale was adopted by the International Committee for Weights and Measures (CIPM) at its sixth session, and was subsequently approved by the first General Conference on Weights and Measures (CGPM) [CGPM 1889]. This temperature scale had been developed by Chappuis in the laboratories of the International Bureau of Weights and Measures (BIPM). It was based on gas thermometer measurements using the ice and steam points at 0 °C and 100 °C as fixed points, and was transferred to mercury-in-glass thermometers for distribution to other laboratories. At that time, the temperature range of this scale was from -25 degrees centigrade to +100 degrees centigrade, a range that was gradually extended in subsequent years. In 1913, the fifth CGPM approved the use of gases other than hydrogen, and expressed its readiness to substitute thermodynamic temperatures in place of the Normal Hydrogen Scale as soon as that became practicable.
+
+
+=== International Temperature Scale of 1927 (ITS-27)
+
+The seventh CGPM adopted provisionally, pending the acquisition of better thermodynamic data, the International Temperature Scale of 1927 [CGPM 1927], to overcome the practical difficulties of the direct realization of thermodynamic temperatures by gas thermometry, and as a universally acceptable replacement for the differing existing national temperature scales. The ITS-27 was based upon a number of reproducible temperatures, or fixed points, to which numerical values were assigned, and three standard instruments, each of the instruments being calibrated at one or more of the fixed points. The calibrations gave the constants for the formulae that defined temperatures in the various temperature ranges. A platinum resistance thermometer (PRT) was used for the lowest temperature range, a platinum10%rhodium-platinum (Pt10%Rh Pt) thermocouple for the middle range, and an optical pyrometer for the highest range.
+
+The fixed points for the PRT range were the melting point of ice (0.000 °C) and the boiling points of oxygen, water and sulphur, defined as -182.97 °C, 100.000 °C, and 444.60 °C, respectively. The resistance-temperature interpolating formulae were the Callendar equation between 0 °C and 660 °C and the Callendar-van Dusen equation
+between -190 °C and 0 °C. The permitted range of the constants of these formulae imposed some degree of quality control in the thermometer construction.
+
+The fixed points for the Pt10%Rh-Pt thermocouple range were the melting points of silver and gold, defined as 960.5 °C and 1063 °C, respectively, while a third calibration point (not a fixed) was the freezing point of antimony (630.5 °C) as measured by a calibrated PRT. The EMF-temperature interpolating formula was a quadratic that defined temperatures between 660 °C and 1063 °C. The permitted ranges of the constants imposed a degree of quality control on the composition of the thermocouple wires.
+
+Both the lower and upper limits of the temperature range assigned to the PRT were significant extensions beyond the associated calibration temperatures of approximately 90 K and 444 °C. One awkward result of the upper extension was the non-existence of an official freezing temperature for aluminium. This freezing temperature was extremely close to the assigned changeover point of 660 °C. However, it proved to be a little above the assigned upper limit of the PRT, yet a little below the, supposedly identical, lower limit assigned to the Pt10%Rh Pt thermocouple. At the other end of the PRT range, it was found that for temperatures significantly below the lowest calibration temperature, departures from thermodynamic temperatures were unacceptably high.
+
+The fixed point for the optical pyrometer was the melting point of gold, which was used in conjunction with the (approximate) Wien radiation law relating spectral concentration of radiance to temperature. The value assigned to the second radiation constant c2 was stem:[1.432 xx 10^{-2} " m K"] (c1 disappears in the comparison between the unknown and the calibration temperatures). Wavelength restrictions were the use of "visible" monochromatic radiation with stem:[lambda T <= 3 xx 10^{-3} " m K"]. The various errors arising from the use of the Wien law as well as from the values assigned to the gold point and to c2 were not in general significant for, or even detectable by, the users of that period.
+
+
+=== International Temperature Scale of 1948 (ITS-48)
+
+The ninth CGPM adopted the International Temperature Scale of 1948 [CGPM 1948].
+Changes from the ITS-27 were:
+
+* the lower limit of the PRT range was changed from -190 °C to the defined oxygen boiling point of -182.97 °C;
+
+* the junction of this range and the thermocouple range became the measured antimony freezing point (about 630 °C) instead of 660 °C;
+
+* the silver freezing point was defined as being 960.8 °C instead of 960.5 °C;
+
+* the gold freezing point replaced the gold melting point (1063 °C);
+
+* the Wien law was replaced by the Planck radiation law;
+
+* the value assigned to the second radiation constant became stem:[1.438 xx 10^{-2} " m K"];
+
+* the permitted ranges for the constants in the interpolating formulae for the PRTs and thermocouples were modified;
+
+* the limitation on stem:[lambda T] for optical pyrometry (stem:[lambda T < 3 xx 10^{-3} " m K"]) was changed to the requirement that "visible" radiation be used.
+
+
+=== International Practical Temperature Scale of 1948, amended edition of 1960 (IPTS-48)
+
+The eleventh CGPM adopted the International Practical Temperature Scale of 1948, amended edition of 1960 [CGPM 1960]. The modifications to the ITS-48 were:
+
+* the triple point of water, which in 1954 had become the sole point defining the unit of thermodynamic temperature, the kelvin, replaced the melting point of ice as the calibration point in this region;
+
+* the freezing point of zinc, defined as 419.505 °C, became a preferred alternative to the sulphur boiling point (444.6 °C) as a calibration point;
+
+* the permitted ranges of the constants of the interpolation formulae for the platinum resistance thermometers and the thermocouples were further modified;
+
+* the restriction to "visible" radiation for optical pyrometry was removed.
+
+Inasmuch as the numerical values of temperature on the ITS-48 were the same as on the IPTS-48, the latter was not a revision of the scale of 1948 but merely an amended form of it.
+
+
+=== International Practical Temperature Scale of 1968 (IPTS-68)
+
+In 1968 the CIPM promulgated the International Practical Temperature Scale of 1968, having been invited to do so by the thirteenth CGPM of 1967/68 [CGPM 1967/68]. The IPTS-68 incorporated very extensive changes from the IPTS-48. These included numerical changes, intended to bring it more nearly in accord with thermodynamic temperatures, which were sufficiently large to be apparent to many users. Other changes were as follows:
+
+* the lower limit of the scale was extended down to 13.81 K;
+
+* at even lower temperatures (0.5 K to 5.2 K) the use of the 1958 ^4^He vapour pressure scale [Brickwedde _et al._ 1960] and the 1962 ^3^He vapour pressure scale [Sydoriak _et al_. 1964] were recommended;
+
+* six new fixed points were introduced: the triple point of equilibrium hydrogen (13.81 K), an intermediate equilibrium-hydrogen vapour-pressure point (17.042 K), the boiling point of equilibrium hydrogen (20.28 K), the boiling point of neon (27.102 K), the triple point of oxygen (54.361 K), and the freezing point of tin (231.9681 °C), which became a permitted alternative to the boiling point of water;
+
+* the boiling point of sulphur was deleted;
+
+* the values assigned to four fixed points were changed: the boiling point of oxygen (90.188 K), the freezing point of zinc (419.58 °C), the freezing point of silver (961.93 °C), and the freezing point of gold (1064.43 °C);
+
+* the interpolating formulae for the resistance thermometer range became very much more complex;
+
+* the value assigned to c2 became stem:[1.4388 xx 10^{-2} " m K"];
+
+* the permitted ranges of the constants for the interpolation formulae for the platinum resistance thermometers and thermocouples were again modified.
+
+
+=== International Practical Temperature Scale of 1968, amended edition of 1975 (IPTS-68(75))
+
+The International Practical Temperature Scale of 1968, amended edition of 1975 [CGPM 1975, Preston-Thomas 1976], was adopted by the fifteenth CGPM in 1975. As was the case for the IPTS-48 vis-à-vis the ITS-48, the IPTS-68(75) introduced no numerical changes in any measured temperature stem:[T_{68}]. Most of the extensive textual changes in the scale were intended only to clarify and simplify its use. More substantive changes were:
+
+* the condensation point of oxygen replaced, with no change in numerical value, the boiling point of oxygen;
+
+* the triple point of argon (83.798 K) was introduced as a permitted alternative to the condensation point of oxygen;
+
+* new values of the isotopic composition of naturally occurring neon were adopted;
+
+* the recommendation to use the helium vapour pressure scales was withdrawn.
+
+
+=== Echelle Provisoire de Température de 1976 entre 0,5 K et 30 K (EPT-76)
+
+The 1976 Provisional 0.5 K to 30 K Temperature Scale, EPT-76 [BIPM 1979], was adopted in order to provide an agreed basis for thermometry in that temperature range. It was intended in particular to:
+
+* provide a smooth interpolation in place of the erratic interpolation below 27 K, which had been found in the IPTS-68, and thus, substantially reduce the errors (with respect to corresponding thermodynamic values);
+
+* correct the thermodynamic errors in the 1958 ^4^He and 1962 ^3^He vapour-pressure scales;
+
+* bridge the gap between 5.2 K and 13.81 K, in which there had not previously been an ITS.
+
+Other objectives in devising the EPT-76 were "that it should be thermodynamically smooth, that it should be continuous with the IPTS-68 at 27.1 K, and that it should agree with thermodynamic temperature stem:[T] as closely as these two conditions allow". In contrast with the IPTS-68, and to ensure its rapid adoption, several methods of realizing the EPT-76 were approved. These included:
+
+* using a thermodynamic interpolation instrument and one or more of eleven listed reference points (that included five superconductive transitions);
+
+* taking differences from the IPTS-68 above 13.81 K;
+
+* taking differences from helium vapour-pressure scales below 5 K;
+
+* taking differences from certain well-established laboratory scales.
+
+To the extent that these methods lacked internal consistency it was admitted that slight differences between realizations might be introduced. However, the advantages to be gained by adopting the EPT-76 as a working scale until such time as the IPTS-68 was revised and extended were considered to outweigh the disadvantages [Durieux _et al._ 1979, Pfeiffer and Kaeser 1982].
+
+
+=== International Temperature Scale of 1990 (ITS-90)
+
+The International Temperature Scale of 1990 was adopted by the CIPM in 1989 [CIPM 1989] in accordance with the request embodied in Resolution 7 of the 18th CGPM [CGPM 1987] and came into effect on 1 January 1990. The full text of the ITS-90 is available on the BIPM website; the following excerpt (the introduction to Section 3 of the text of the ITS-90) constitutes a brief description:
+
+* Between 0.65 K and 5.0 K, stem:[T_{90}] is defined in terms of the vapour-pressure temperature relations of ^3^He and ^4^He.
+
+* Between 3.0 K and the triple point of neon (24.5561 K), stem:[T_{90}] is defined by means of a helium gas thermometer calibrated at three experimentally realizable temperatures having assigned numerical values (defining fixed points) and using specified interpolation procedures.
+
+* Between the triple point of equilibrium hydrogen (13.8033 K) and the freezing point of silver (1234.93 K), stem:[T_{90}] is defined by means of PRTs calibrated at specified sets of defining fixed points and using specified interpolation procedures.
+
+* Above the freezing point of silver (1234.93 K), stem:[T_{90}] is defined in terms of a defining fixed point and the Planck radiation law.
+
+The ITS-90 differs from the IPTS-68 in several important respects:
+
+* It extends to lower temperature, 0.65 K instead of 13.8 K, and hence also replaces the EPT-76 from 0.65 K to 30 K. The range was limited to 0.65 K for the simple reason that it did not seem possible to measure ^3^He vapour pressures below 100 Pa with the small relative uncertainty of order 0.1 % to achieve an uncertainty of stem:[T_{90}] of 0.1 mK.
+
+* In most ranges, it is in closer agreement with thermodynamic temperatures.
+
+* It has improved continuity and accuracy.
+
+* It has a number of overlapping ranges and sub-ranges, and in certain ranges it has alternative but substantially equivalent definitions.
+
+* New versions of the helium vapour-pressure scales are not merely recommended but are an integral part of the scale.
+
+* It includes a gas thermometer, calibrated at three fixed points, as one of the defining instruments.
+
+* The upper limit of the PRT as the defining instrument has been raised from 630 °C to the silver point (961.78 °C).
+
+* The Pt10%Rh-Pt thermocouple is no longer a defining instrument of the scale, and thus the slope discontinuity, which existed in IPTS-68 at 630 °C, the junction between the PRT and thermocouple ranges, has been removed.
+
+* The range based upon the Planck radiation law begins at the silver point instead at the gold point, and any one of the silver, gold or copper freezing points may be selected as the reference point for this part of the scale.
+
+
+[[fig1]]
+.Schematic representation of the ranges, sub-ranges and interpolation instruments of ITS-90. The temperatures shown are approximate only.
+image::01-introduction/fig1.png[]
+
+
+The design of the ITS-90 is shown schematically in Figure 1, and the list of defining fixed points is given in Table 1. The thermodynamic basis of ITS-90 is described in [Rusby _et al._ 1991]. The estimation of the uncertainty of realizing the fixed points suffers from the fact that complete uncertainty budgets treating the influence of impurities, as recommended in _Guide_ https://www.bipm.org/utils/common/pdf/ITS-90/Guide_ITS-90_2_1_Impurities_2018.pdf[Section 2.1 Influence of impurities],are available only in rare cases. Therefore, two different estimates are given in Table 1. The larger stem:[u(T_{90})] values are, except for the vapour-pressure points and the freezing points of Auand Cu, standard deviations of the results of international inter-comparisons of fixed-point realizations: e-H~2~, Ne, O~2~, Ar: Star intercomparison of sealed triple-point cells [Fellmuth _et al._ 2012]; Hg to Zn: Key comparison CCT-K3 [Mangum _et al._ 2002]; Al and Ag: Key comparison CCT-K4 [Nubbemeyer and Fischer 2002]; H~2~O: Key comparison CCT-K7 [Stock _et al_. 2006]. Key comparison CCT-K3 was performed using PRTs as transfer standards; thus, the uncertainty values may be larger due to the
+possible instability of the PRTs. For the vapour-pressure points, average published values are listed. The smaller  stem:[u(T_{90})] values given in parenthesis are the smallest uncertainty estimates claimed by metrological institutes. The estimates given for the freezing points of Au and Cu, which are only used for the calibration of radiation thermometers, are based on a document published by Working Group 5 of the CCT [Fischer _et al._ 2003], where the larger value corresponds to the "normal value", and the smaller one to the "best value". The values stem:[T - T_{90}] are estimates of the differences between thermodynamic temperatures and the ITS-90, and  stem:[u(T - T_{90})] are their uncertainties, as published by Working Group 4 of the CCT in [Fischer _et al._ 2011] and summarised in Section 4 of the https://www.bipm.org/cc/CCT/Allowed/28/MeP-K-19_June_2017_DRAFT.pdf[MeP-K.]In these documents, interpolation functions forstem:[T - T_{90}] are also given.
+
+
+[[tab1]]
+.The defining fixed points of the ITS-90. The values stem:[u(T_{90})] are estimates for thestandard uncertainty of the current best practical realization (see text). The valuesstem:[T - T_{90}] are estimates of the differences between thermodynamic temperatures and the ITS-90, and  stem:[u(T - T_{90})] are their uncertainties, as published in [Fischer _et al._ 2011] and summarised in Section 4 of the MeP-K.
+[cols="5*^.^"]
+|===
+h| stem:[T_{90} // "K"] h| stem:[t_{90} // "°C"]
+h| Substance footnote:[The temperature values are defined for ideally pure substances. Between 1.25 K and 3.2 K bothhelium isotopes (^3^He and ^4^He) can be used. For hydrogen, the SLAP (Standard Light Antarctic Precipitation) deuterium content is prescribed in a Technical Annex of the MeP-K, and water must have the VSMOW (Vienna Standard Mean Ocean Water) isotopic composition. (In the Technical Annex, also functions are specified that allow correcting to these isotopic reference compositions.) All other substances are of natural isotopic composition. e-H~2~ is hydrogen at the equilibrium concentration of the two nuclear-spin isomers (often designated by the prefixes ortho and para).]
+h| State footnote:[For complete definitions and advice on the realization of these various states, see _Guide_ Chapter 2 _Fixed points_. The symbols have the following meaning: vp: vapour-pressure point; tp: triple point (temperature at which the solid, liquid and vapour phases are in equilibrium); gp: gas-thermometer point (temperature realized with an interpolating constant-volume gas thermometer, see _Guide_ https://www.bipm.org/utils/common/pdf/ITS-90/Guide_ITS-90_4_GasThermometry_2018.pdf[Chapter 4 _Gas Thermometry_]); mp, fp: melting point, freezing point (temperature, at a pressure of 101325 Pa, at which the solid and liquid phases are in equilibrium).]
+h| stem:[W_r (T_{90})] footnote:[Reference value for the PRT resistance ratio stem:[W(T_{90}) = R(T_{90}) // R(0.01 °C)].]
+2+h| stem:[u (T_{90}) // "mK"] h| stem:[T - T_{90} // "mK"] h| stem:[u(T - T_90) // "mK"]
+
+
+| stem:[3] to stem:[5] | stem:[-270] to stem:[-268] | He | vp | -- 2+| stem:[0.2 (0.03)] | 0 | stem:[0.1]
+
+
+| stem:[13.8033] | stem:[-259.3467] | e-H~2~ | tp | stem:[0.00119007] | stem:[0.03] | stem:[(0.05)] | stem:[0.44] | stem:[0.14]
+
+
+| stem:[~~ 17.035] | stem:[~~ -256.115] | e-H~2~ or He | vp or gp | stem:[0.00229646] 2+| stem:[0.2 (0.03)] | stem:[0.51] | stem:[0.16]
+
+
+| stem:[~~ 20.27] | stem:[~~ -252.88] | e-H~2~ or He | vp or gp | stem:[0.00423536] 2+| stem:[0.2 (0.03)] | stem:[0.32] | stem:[0.17]
+
+
+| stem:[24.5561] | stem:[-248.5939] | Ne | tp | stem:[0.00844974] | stem:[0.09] | stem:[(0.05)] | stem:[-0.23] | stem:[0.20]
+
+
+| stem:[54.3584] | stem:[-218.7916] | O~2~ | tp | stem:[0.09171804] | stem:[0.06] | stem:[(0.02)] | stem:[-1.06] | stem:[1.6]
+
+
+| stem:[83.8058] | stem:[-189.3442] | Ar | tp | stem:[0.21585975] | stem:[0.06] | stem:[(0.02)] | stem:[-4.38] | stem:[1.3]
+
+
+| stem:[234.3156] | stem:[-38.8344] | Hg | tp | stem:[0.84414211] | stem:[0.2] | stem:[(0.1)] | stem:[-3.25] | stem:[1.0]
+
+
+| stem:[273.16] | stem:[0.01] | H~2~O | tp | stem:[1.00000000] | stem:[0.05] | stem:[(0.03)] | stem:[0] | stem:[0]
+
+
+| stem:[302.9146] | stem:[29.7646] | Ga | mp | stem:[1.11813889] 2+| stem:[0.2] stem:[(0.03)] | stem:[4.38] | stem:[0.4]
+
+
+| stem:[429.7485] | stem:[156.5985] | In | fp | stem:[1.60980185] | stem:[0.8] | stem:[(0.2)] | stem:[10.1] | stem:[0.8]
+
+
+| stem:[505.078] | stem:[231.928] | Sn | fp | stem:[1.89279768] | stem:[0.6] | stem:[(0.2)] | stem:[11.5] | stem:[1.3]
+
+
+| stem:[692.677] | stem:[419.527] | Zn | fp | stem:[2.56891730] | stem:[0.8] | stem:[(0.4)] | stem:[13.8] | stem:[6.9]
+
+
+| stem:[933.473] | stem:[660.323] | Al | fp | stem:[3.37600860] 2+| 2 stem:[(0.5)] | stem:[28.7] | stem:[6.6]
+
+
+| stem:[1234.93] | stem:[961.78] | Ag | fp | stem:[4.28642053] 2+| 4 stem:[(0.6)] | stem:[46.2] | stem:[14]
+
+
+| stem:[1337.33] | stem:[1064.18] | Au | fp | -- 2+| stem:[25 (8)] | stem:[39.9] | stem:[20]
+
+
+| stem:[1357.77] | stem:[1084.62] | Cu | fp | -- 2+| stem:[25 (8)] | stem:[52.1] | stem:[20]
+
+|===
+
+
+Below 1 K, the Provisional Low Temperature Scale from 0.9 mK to 1 K (PLTS-2000) [CIPM 2001] is a better approximation of thermodynamic temperature than ITS-90. A vapour-pressure scale, which is consistent with the PLTS-2000, has been established in [Engert _et al._ 2007]. According to the results presented in this paper, the difference stem:[T - T_{90}] amounts to -1.6 mK at 0.65 K with an uncertainty of stem:[u(T - T_{90}) = 0.43 " mK"].
+
+One of the guiding principles in setting up the ITS-90 was that it should. allow the user as much choice in its realization as was compatible with an accurate and reproducible scale. For this reason the scale includes many sub-ranges. Within all except one of these, stem:[T_{90}] is defined independently of calibration points outside the range. (The exception is the PRT range extending upwards from the triple point of neon (24.5561 K), which calls for a calibration at the triple-point of hydrogen (13.8033 K).) Thus, if a PRT is to be calibrated over the whole low-temperature range from 13.8 K to 273.16 K, all of the eight calibration points in that range must be used. If, however, a calibration is required only in the range from the triple point of argon (83.8058 K) to the triple point of water, then only the three calibration points in this range are needed, 83.8058 K, 234.3156 K (triple point of mercury) and 273.16 K. Similarly, in the range above 0 °C, a thermometer may be calibrated from 0 °C to 30 °C using just the triple point of water and melting point of gallium (29.7646 °C). This last range offers the simplest possible way of achieving the highest accuracy thermometry in the room temperature range. It allows the user to avoid the trouble and expense of setting up calibration points at temperatures outside the range of interest, and in addition it allows the thermometer itself to be maintained under the best possible conditions by not requiring it to be heated significantly above the temperature of normal use. The price that is paid for this useful flexibility in the scale is the presence of a certain level of increased non-uniqueness compared with a scale having no overlapping ranges or sub-ranges. This is discussed in Subsection 3.2.
+
+
+=== Provisional Low Temperature Scale from 0.9 mK to 1 K (PLTS-2000)
+
+In October 2000, the CIPM adopted the https://www.bipm.org/utils/common/pdf/ITS-90/Guide-PLTS-2000.pdf[PLTS-2000] [CIPM 2001]. It is based on noise and magnetic thermometry performed at three institutes [Rusby _et al_ 2002, Fellmuth _et al_ 2003]. Considering the uncertainty estimates for the thermometers used and thespread of the results obtained, the relative standard uncertainty of the PLTS-2000 in thermodynamic terms has been estimated to range from 2 % at 1 mK to 0.05 % at 1 K.
+
+The PLTS-2000 is defined from 0.9 mK to 1 K by a polynomial with 13 terms describing the temperature dependence of the melting pressure of ^3^He. Furthermore, four natural features on the ^3^He melting curve can be used as intrinsic fixed points of temperature and pressure because their temperature and pressure values are also defined in the text of the PLTS-2000: the pressure minimum (315.24 mK, 2.93113 MPa), the transition to the superfluid 'A' phase (2.444 mK, 3.43407 MPa), the 'A to B' transition in the superfluid (1.896 mK, 3.43609 MPa), and the Néel transition in the solid (0.902 mK, 3.43934 MPa). The melting pressure of ^3^He has been chosen as scale carrier for several reasons. First of all, it is a thermodynamic property of a pure substance; i.e., though impurities may have an influence, no principle non-uniqueness due to different interpolation behaviour of thermometers as for PRTs occurs. The melting pressure can be reproduced much better than the readings of all other thermometers and a temperature range of about three decades is covered. Furthermore, apart from a narrow range near the minimum of the melting curve, a high resolution down to 0.1 µK can be achieved. A _Guide to the realization of the PLTS-2000_ is available on the https://www.bipm.org/utils/common/pdf/ITS-90/Guide-PLTS-2000.pdf[BIPM website] and published in [Rusby _et al_ 2007].
+
+
+=== ITS-XX
+
+Applying ITS-90 for measuring temperatures means accepting several deficiencies of this scale. As a long-term task, the following changes of the scale are, from today's perspective, desirable in preparing a new scale ITS-XX (cf. Ripple _et al._ 2010, White and Rourke 2017):
+
+* improvement of the approximation of thermodynamic temperature, see Subsection 2.8;
+* merging of PLTS-2000 and ITS-90, e.g. by including PTB-2006;
+* reduction of the non-uniqueness in the PRT sub-ranges (see below) by improving the quality criteria for PRTs, the reference and interpolation functions;
+* replacement of high-temperature PRTs as interpolating instruments above the freezing point of aluminium because their instability is too large in this range;
+* removing the intrinsic limitations of the ITS-90 above the silver freezing point [Machin _et al._ 2010], e.g., the increase of the uncertainty in proportion to the square of stem:[T_{90}] above the fixed-point temperature;
+* inclusion of high-temperature fixed points [Machin _et al._ 2010].
+
+
+== Numerical
+
+=== Differences between scales
+
+Differences between various International Temperatures Scales are shown graphically in Figures 2 to 5. Differences stem:[T_{48} - T_{27}] exist only above 630 °C. They are smaller than the uncertainty of the great majority of temperature measurements carried out between 1927 and 1948. Thus, the 1948 change of temperature scale required little or no retroactive adjustments when comparing pre-1948 and post-1948 experimental work, and no analytic expressions for this are given here. In contrast, the differences stem:[T_{68} - T_{48}], stem:[T_{76} - T_{68}], stem:[T_{90} - T_{76}], and stem:[T_{90} - T_{68}] are substantially larger than the uncertainties quotedin the scientific literature of those periods, and numerical corrections are often necessary for comparisons of work before and after the transition dates.
+
+
+[[fig2]]
+.The differencesT_{48}-T_{27}as a function ofT_{48}(after [Hall 1955]).
+image::01-introduction/fig2.png[]
+
+
+[[fig3]]
+.The differencesT_{68}-T_{48}as a function ofT_{68}[Bedford_et al._1970].
+image::01-introduction/fig3.png[]
+
+
+[[fig4]]
+.The differences stem:[T_{76} - T_{vp} (T_{76} - T_{58} ~~ T_{76} - T_{62}] below 3.2 K, stem:[T_{76} - T_{58}] from 3.2 K to 5 K) and stem:[T_{76} - T_{68}] as a function of stem:[T_{76}] (Tables 2 and 3 in [BIPM 1979]).
+image::01-introduction/fig4.png[]
+
+
+[[fig5]]
+.The differences stem:[T_{90} - T_{68}] as a function of stem:[T_{90}] (Table 1 in [Rusby _et al._ 1994]; Table 6 in [Preston-Thomas 1990] should not be used for the range from 630 °C to 1064 °C).
+image::01-introduction/fig5.png[]
+
+
+The scale differences shown in Figures 2 to 4 can be described analytically, with a maximum relative deviation of 10 %, by applying the following polynomials, the coefficients of which have been determined by fitting and are given in Table 2.
+
+
+[stem]
+++++
+(t_{68} - t_{48}) // "°C" = sum_{i=0}^7 a_{i1} (t_{68} // "°C")^i ,
+++++
+
+[stem]
+++++
+(t_{76} - t_{vp}) // "K" = sum_{i=0}^6 a_{i2} (t_{76} // "K")^i ,
+++++
+
+[stem]
+++++
+(t_{76} - t_{68}) // "K" = sum_{i=0}^7 a_{i3} (t_{76} // "K")^i .
+++++
+
+
+[[tab2]]
+.Values of the coefficients in Equations (1) to (3).
+[cols="6*^.^"]
+|===
+h| Difference 3+h| stem:[(T_{68} - T_{48}) // "°C"] h| stem:[(T_{76} - T_vp) // "K"] h| stem:[(T_{76} - T_{68}) // K]
+
+h| Coefficients 3+h| stem:[a_{i1}] h| stem:[a_{i2}] h| stem:[a_{i3}]
+
+h| Range | -180 °C to 0 °C | 0 °C to 470 °C | 470 °C to 4000 °C | 0.5 K to 5.0 K | 13.8 K to 27 K
+
+| stem:[i]  5+h|
+
+| 0 | stem:[8.188411 xx 10^{-03}] | stem:[2.83469 xx 10^{-04}] | stem:[6.0317242 xx 10^{+00}] | stem:[2.23912 xx 10^{-01}] | stem:[2.9833378 xx 10^{+03}]
+| 1 | stem:[9.722129 xx 10^{-04}] | stem:[-4.85523 xx 10^{-04}] | stem:[-3.2703041 xx 10^{-02}] | stem:[3.91083 xx 10^{+00}] | stem:[-1.7432246 xx 10^{+03}]
+| 2 | stem:[1.009974 xx 10^{-04}] | stem:[6.05956 xx 10^{-06}] | stem:[6.5078688 xx 10^{-05}] | stem:[-9.15169 xx 10^{-01}] | stem:[3.5475491 xx 10^{+02}]
+| 3 | stem:[2.952294 xx 10^{-06}] | stem:[-8.17404 xx 10^{-09}] | stem:[-6.0234949 xx 10^{-08}] | stem:[-9.41146 xx 10^{-01}] | stem:[-3.6115034 xx 10^{+01}]
+| 4 | stem:[4.520372 xx 10^{-08}] | stem:[-6.63454 xx 10^{-11}] | stem:[3.0420643 xx 10^{-11}] | stem:[7.85521 xx 10^{-01}] | stem:[2.0647652 xx 10^{+00}]
+| 5 | stem:[3.863623 xx 10^{-10}] | stem:[3.11292 xx 10^{-13}] | stem:[-8.5348347 xx 10^{-15}] | stem:[-1.93925 xx 10^{-01}] | stem:[-6.7604230 xx 10^{-02}]
+| 6 | stem:[1.684889 xx 10^{-12}] | stem:[-5.65993 xx 10^{-16}] | stem:[1.2509557 xx 10^{-18}] | stem:[1.55490 xx 10^{-02}] | stem:[1.1874103 xx 10^{-03}]
+| 7 | stem:[2.879618 xx 10^{-15}] | stem:[3.98137 xx 10^{-19}] | stem:[-7.4707543 xx 10^{-23}] |  | stem:[-8.6958350 xx 10^{-06}]
+
+|===
+
+
+The helium vapour-pressure equations for the ITS-90 are those originally derived for the EPT-76. Thus, in the range below 4.2 K (omitted in Table 6 of the text of the ITS-90) the differences stem:[T_{90} - T_{76}] can be considered to be zero kelvin. In the range from 4.2 K to 27 K, the differences stem:[T_{90} - T_{76}] listed in this Table 6 were derived by applying the equation
+
+[stem]
+++++
+(T_{90} - T_{76}) // "K" = -5.6 xx 10^{-6} (T_{90} // "K")^2 .
+++++
+
+
+But since several methods of realizing the EPT-76 were approved, an uncertainty of at least a few tenths of a millikelvin has to be considered for comparisons of work done applying the two scales.
+
+The polynomial representations of the differences between ITS-90 and IPTS-68 from 13.8 K to 903.8 K (630.6 ºC) are due to R. L. Rusby [Rusby 1990] with the coefficients given in Table 3:
+
+* from 13.8 K to 83.8 K (uncertainty approximately 1 mK):
+
+[stem]
+++++
+(T_{90} - T_{68}) // "K" = sum_{i=0}^{12} b_{i1} ((T_{90} - 40 " K") // 40 " K")^i ,
+++++
+
+
+* from 83.8 K to 903.8 K (630.6 ºC) (uncertainty about 1.5 mK up to 0 °C, and 1 mK above 0 °C)
+
+[stem]
+++++
+(T_{90} - T_{68}) // "°C" = sum_{i=0}^{8} b_{i2} (T_{90} // 630 " °C")^i .
+++++
+
+
+For the range from 630 ºC to 1064 ºC, revised values for stem:[T_{90} - T_{68}] have been published by Rusby _et al._ [Rusby _et al._ 1994] in Table 1, which are better estimates than the values listed in Table 6 of the text of the ITS-90 and are approximated by a polynomial of fifth order, the coefficients of which are also given in Table 3:
+
+[stem]
+++++
+(T_{90} - T_{68}) // "°C" = sum_{i=0}^{5} b_{i3} (T_{90} // "°C")^i .
+++++
+
+In this temperature range, the reproducibility of the IPTS-68 was limited to the level of about stem:[(0.1 - 0.2) " °C"] due to the use of the platinum10%rhodium-platinum thermocouple as the interpolating instrument. This limitation affected all measurements and scale comparisons involving the IPTS-68.
+
+
+[[tab3]]
+.Values of the coefficients in Equations (5) to (7) describing the differences stem:[T_{90} - T_{68}] and stem:[T_{90} - T_{68}].
+[cols="4*"]
+|===
+h| Coefficients h| stem:[b_{i1}] h| stem:[b_{i2}] h| stem:[b_{i3}]
+h| Range h| 13.8 K to 83.8 K h| 83.8 K to 903.8 K h| 630 ºC to 1064 ºC
+h| stem:[i] 3+h|
+
+| 0 | -0.005903 | | stem:[7.8687209 xx 10^{+01}]
+
+| 1 | 0.008174 | -0.148759 | stem:[-4.7135991 xx  10^{-01}]
+
+| 2 | -0.061924 | -0.267408 | stem:[1.0954715 xx 10^{-03}]
+
+| 3 | -0.193388 | 1.080760 | stem:[-1.2357884 xx 10^{-06}]
+
+| 4 | 1.490793 | 1.269056 | stem:[6.7736583 xx 10^{-10}]
+
+| 5 | 1.252347 | -4.089591 | stem:[-1.4458081 xx 10^{-13}]
+
+| 6 | -9.835868 | -1.871251 |
+
+| 7 | 1.411912 | 7.438081 |
+
+| 8 | 25.277595 | -3.536296 |
+
+| 9 | -19.183815 | |
+
+| 10 | -18.437089 | |
+
+| 11 | 27.000895 | |
+
+| 12 | -8.716324 | |
+
+|===
+
+
+Above the gold freezing point (1064.18 ºC), the differences stem:[T_{90} - T_{68}] are only caused by the difference stem:[Delta T(Au) = -0.25 " K"] of the temperature values assigned in the two scales to this fixed point. The stem:[T_{90} - T_{68}] values listed in Table 6 of the text of the ITS-90 and shown in Figure 5 have been calculated for the domain, in which the Wien equation is a close approximation to the Planck equation, and for which a quadratic deviation function can be applied:
+
+
+[stem]
+++++
+T_{90} - T_{68} = Delta T ("Au") (T_{90} / {T_{90} ("Au")})^2 .
+++++
+
+
+This domain covers practically the entire visible region of the spectrum; i.e., the listed values apply with negligible error at wavelengths near 0.65 µm up to about 4000 ºC. At a wavelength of 1 µm and at higher temperatures, a wavelength dependence arising from the Planck equation (see Equation (15) of the text of the ITS-90) has to be considered.
+
+The conversion of IPTS-68 PRT calibrations to ITS-90 is not straightforward. There are no simple analytical relations between the coefficients of ITS-90 and those of the IPTS-68. The conversion, therefore, consists of calculating the resistance ratios stem:[W(T_{68}) = R(T_{68})/R(0 " °C")] at the IPTS-68 values of the required ITS-90 fixed points,converting the ratios to stem:[W(T_{90}) = R(T_{90})/R(0.01 " °C")], by multiplying by stem:[0.9999601], and applying the appropriate formula and temperature values as specified in the ITS-90.
+
+For the triple points of neon and mercury, the melting point of gallium and the freezing point of indium, which were not defining fixed points of the IPTS-68, the values of stem:[T_{68}] should be taken as 24.5616 K, 234.3082 K, 302.9219 K, and 429.7850 K, respectively [Rusby _et al._ 1991]. Where the IPTS-68 calibration used the condensation point of oxygen, rather than the triple point of argon, the stem:[T_{68}] value most appropriately assigned to the argon point may differ slightly from the value 83.798 K specified in the IPTS-68. The freezing point of aluminium lay beyond the range of the PRT in the IPTS-68, but on extrapolating the IPTS-68 equations, its value was found to be 933.607 K [Bedford _et al._ 1984], although this could be in error by 5 mK or more.
+
+
+=== Non-uniqueness
+
+The irreproducibility of temperatures measured on the ITS-90 is caused by the dispersion due to deficiencies in the realization of the scale, the associated measurement instrumentation, and the so-called _non-uniqueness_ of the scale [Mangum _et al_. 1997]. Three types of non-uniqueness can be identified:
+
+* _Type 1_ arises from the application of different interpolation equations inoverlapping ranges using the same thermometer,
+
+* _Type 2_ arises from the use of different kinds of thermometers in overlappingranges, and
+
+* _Type 3_ arises from the use of different interpolating thermometers of the same kind.
+
+Types 1 and 2 are caused by the imperfect definition of the ITS-90, through errors in the thermodynamic temperature values assigned to the defining fixed points, and/or through scale equations that are not in agreement with the true thermodynamic equations of state. These deficiencies manifest themselves as non-uniqueness as soon as multiple definitions are allowed, as in the ITS-90. Type 3 is connected with deficiencies of the interpolating thermometers specified in the ITS-90. The thermometers, calibrated at a given set of defining fixed points, exhibit non-unique interpolation behaviour over the temperature ranges between the fixed points since they are not ideal, which implies, for example, that thermometers, albeit of the same kind, are not identical in their physical-chemical constitution. Since all realizations of the ITS-90 according to its definition are equally valid, the non-uniqueness determines fundamentally the lowest bounds for the uncertainty of measured temperatures on the ITS-90.
+
+The estimation of the uncertainty caused by the non-uniqueness encounters the problem that it is not possible to make reliable theoretical estimates of the possible spread of the properties of the interpolating instruments due to different effects. For instance, though the requirements for accepting PRTs specified in the text of the ITS-90 are fulfilled, the platinum wires may be quite different with respect to crystal quality (grain size, concentrations of dislocations and vacancies), impurity content, and surface effects. Thus, experimental information is necessary, which of course cannot be comprehensive.
+
+Only in the range from 0.65 K to 1.25 K, there is principally no non-uniqueness because multiple definitions do not exist. The realization of the ITS-90 in the range from 1.25 K to 24.5561 K using vapour-pressure and interpolating constant-volume gas thermometry is treated in _Guide_ https://www.bipm.org/utils/common/pdf/ITS-90/Guide_ITS-90_3_VPS_p_2018.pdf[Chapter 3 Vapour pressure scales and pressure measurement] and https://www.bipm.org/utils/common/pdf/ITS-90/Guide_ITS-90_4_GasThermometry_2018.pdf[Chapter 4 Gas Thermometry], respectively. The examples and estimates cited there yield non-uniqueness of the order of a few 0.1 mK. Above 13.8033 K, the uncertainty of the interpolation using PRTs also has to be considered. A collation of the experimental information on Type 1 and Type 3 non-uniqueness in the eleven PRT subranges between 13.8033 K and 1234.93 K is given in _Guide_ Chapter 5 _Platinum resistance thermometry_. These two types of non-uniqueness contribute up to 0.5 mK or more to the uncertainty in the interpolated temperatures between fixed points. In most of the PRT subranges, this is a main or even the largest uncertainty component. (Results published in [Mangum _et al_. 1990] show that PRTs calibrated up to 1234.93 K should not be used below 692.677 K because the Type 1 non-uniqueness may amount to a few mK.) Above the freezing point of silver (1234.93 K), a Type 1 non-uniqueness results from the possibility of using three different fixed points for calibrating radiation thermometers. However, this is considered to be below the normal measurement uncertainty.
+
+
+=== Propagation of uncertainty
+
+For estimating the uncertainty of temperatures interpolated between fixed points, it is important to consider the propagation of the calibration uncertainty at the fixed points (see _Guide_ https://www.bipm.org/utils/common/pdf/ITS-90/Guide_ITS-90_5_SPRT_2018.pdf[Chapter 5_Platinum resistance thermometry_]and [White and Saunders 2007]). Depending on the particular interpolating functions and the calibration temperatures, the propagation may cause a significant increase of the uncertainty. For the interpolating constant-volume gas thermometer, this increase is estimated in _Guide_ Chapter 4 _Gas Thermometry_ to be of the order of a few 10 %. This order of magnitude is also valid for most of the eleven subranges, in which PRTs are used as interpolating instruments (see _Guide_ https://www.bipm.org/utils/common/pdf/ITS-90/Guide_ITS-90_5_SPRT_2018.pdf[Chapter 5_Platinum resistance thermometry_]). But in a few unfavourable cases, e.g. in the range between the triple points of argon (83.8058 K) and water (0.01 °C), the propagation may double the uncertainty at the fixed points.
+
+
+[bibliography]
+== References
+
+* [[[Bedford1970,1]]] Bedford R E, Dauphinee T M and Preston-Thomas H (1970) _Temperature Measurement. Tools and Techniques in Physical Metallurgy_, ed. Weinberg F(Marcel Dekker, New York)
+
+* [[[Bedford1984,1]]] Bedford R E, Bonnier G, Maas H and Pavese F (1984) _Metrologia_ *20* 145-155 BIPM 1979 _Metrologia_ *15* 65-68
+
+* [[[Brickwedde1960,1]]] Brickwedde F G, van Dijk H, Durieux M, Clement J R and Logan J K 1960 _J. Res. NBS_ *64A*1-17
+
+* [[[cgpm1889,1]]] CGPM (1889) _Comptes Rendus des Séances de la Première Conférence Générale des Poids et Mesures_ 35 (This document and the following ones are available on requestfrom the BIPM.)
+
+* [[[cgpm1927,1]]] CGPM (1927) _Comptes Rendus des Séances de la Septième Conférence Générale des Poids et Mesures_ pp. 94-99
+
+* [[[cgpm1948,1]]] CGPM (1948) _Comptes Rendus des Séances de la Neuvième Conférence Générale des Poids et Mesures_ pp. 89-100
+
+* [[[cgpm1960,1]]] CGPM (1960) _Comptes Rendus des Séances de la Onzième Conférence Générale des Poids et Mesures_ pp. 124-133
+
+* [[[cgpm1967-68,1]]] CGPM (1967/68) _Comptes Rendus des Séances de la Treizième Conférence Générale des Poids et Mesures_ A1-A24
+
+* [[[cgpm1975,1]]] CGPM (1975) _Comptes Rendus des Séances de la Quinzième Conférence Générale des Poids et Mesures_ A1-A21
+
+* [[[cgpm1987,1]]] CGPM (1987) _Comptes Rendus des Séances de la Dix-septième Conférence Générale des Poids et Mesures_ pp. 67-69 and 101
+
+* [[[cipm1989,1]]] CIPM (1989) _Procès-Verbaux des Séances du Comité International des Poids et Mesures, 78th meeting_
+
+* [[[cipm2001,1]]] CIPM (2001) _Procès Verbaux des Séances du Comité International des Poids et Mesures_ *89*(BIPM, Sèvres) pp. 128-130
+
+* [[[Durieux1979,1]]] Durieux M, Astrov D N, Kemp W R G and Swenson C A (1979) _Metrologia_ *15* 57-63 Engert J, Fellmuth B and Jousten K (2007) _Metrologia_ *44* 40-52
+
+* [[[Fellmuth2003,1]]] Fellmuth B, Hechtfischer D and Hoffmann A (2003) "PTB-96 The Ultra-Low Temperature Scale of PTB" _Proc. Temperature Its Measurement and Control in Science and Industry_, vol 7, ed. Ripple D C (Am. Inst. of Phys., New York) pp. 71-76
+
+* [[[Fellmuth2012,1]]] Fellmuth B, Wolber L, Head D I, Hermier Y, Hill K D, Nakano T, Pavese F, Peruzzi A, Rusby R L, Shkraba V, Steele A G, Steur P P M, Szmyrka-Grzebyk A, Tew W L, Wang L and White D R (2012) _Metrologia_ *49* 257-265
+
+* [[[Fellmuth2016,1]]] Fellmuth B, Fischer J, Machin G, Picard S, Steur P P M, Tamura O, White D R, Yoon H (2016) _Phil. Trans. R. Soc._ *A 374*, 20150037, DOI: 10.1098/rsta.2015.0037
+
+* [[[Fischer2003,1]]] Fischer J, Battuello M, Sadli M, Ballico M, Seung Nam Park, Saunders P, Yuan Zundong, Johnson B C, van der Ham E, Wang Li, Fumihiro Sakuma, Machin G, Fox N, Ugur S and Matveyev M (2003) _CCT 22^e^ Session, Doc. CCT/03-03_ (This document is available on the http://www.bipm.org/en/committees/cc/cct/[BIPM website].)
+
+* [[[Fischer2011,1]]] Fischer J, de Podesta M, Hill K D, Moldover M, Pitre L, Rusby R, Steur P, Tamura O, White R and Wolber L (2011) _Int. J. Thermophys._ *32* 12-25
+
+* [[[HallJ1955,1]]] HallJ A (1955) "The International Temperature Scale" _Proc. Temperature Its Measurement and Control in Science and Industry_, vol 2, ed. Wolfe H C (ReinholdPublishing Corporation, New York) pp. 115-139
+
+* [[[Machin2010,1]]] Machin G, Anhalt K, Bloembergen P, Hartmann J, Saunders P, Woolliams E, Yamada Y and Yoon H (2010) "Realisation and dissemination of thermodynamic temperature above the silver point (1234.93 K)" _CCT 25^th^ Session, Doc. CCT/2010-12_ (This document is available on request from the BIPM.)
+
+* [[[Mangum1990,1]]] Mangum B W, Pfeiffer E R and Strouse G F (1990) "Non-uniqueness of some standard platinum resistance thermometers over the temperature range from 13.8 K to 1235 K" _Proc. 4^th^ Symposium on Temperature and Thermal Measurements in Industry and Science_ (Finnish Society of Automatic Control, Helsinki) pp. 17-36
+
+* [[[Mangum1997,1]]] Mangum B W, Bloembergen P, Chattle M V, Fellmuth B, Marcarino P and Pokhodun A I (1997) _Metrologia_ *34* 427-429
+
+* [[[Mangum1999,1]]] Mangum B W, Bloembergen P, Chattle M V, Fellmuth B, Marcarino P and Pokhodun A I (1999) _Metrologia_ *36* 79-88
+
+* [[[Mangum2000,1]]] Mangum B W, Bloembergen P, Chattle M V, Fellmuth B, Marcarino P and Pokhodun A I (2000) "Optimal realization of the defining fixed points of the ITS-90 that are used for contact thermometry" _CCT 20^e^ Session, Doc. CCT/2000-13_ (This document is available on request from the BIPM.)
+
+* [[[Mangum2002,1]]] Mangum B W, Strouse G F, Guthrie W F, Pello R, Stock M, Renaot E, Hermier Y, Bonnier G, Marcarino P, Gam K S, Kang K H, Kim Y G, Nicholas J V, White D R, Dransfield T D, Duan Y, Qu Y, Connolly J, Rusby R L, Gray J, Sutton G J M, Head. I, Hill K D, Steele A, Nara K, Tegeler E, Noatsch U, Heyer D, Fellmuth B, Thiele-Krivoj B, Duris S, Pokhodun A I, Moiseeva N P, Ivanova A G, de Groot M J and Dubbeldam J F (2002) _Metrologia_ *39* 179-205
+
+* [[[Nubbemeyer2002,1]]] Nubbemeyer H G and Fischer J (2002) _Metrologia_ *39* 03001
+
+* [[[Pfeiffer1982,1]]] Pfeiffer E R and Kaeser R S (1982) "Realization of the 1976 Provisional 0.5 K to 30 K Temperature Scale at the National Bureau of Standards" _Proc. Temperature Its Measurement and Control in Science and Industry_, vol 5, ed. Schooley J F (Am.Inst. of Phys., New York) 159-167
+
+* [[[Preston1976,1]]] Preston-Thomas H (1976) _Metrologia_ *12* 7-17
+
+* [[[Preston1990,1]]] Preston-Thomas H (1990) _Metrologia_ *27* 3-10 and 107
+
+* [[[Quinn1990,1]]] Quinn T J (1990) Temperature, 2^nd^ edition (Academic Press, London)
+
+* [[[Ripple2010,1]]] Ripple D C, Davis R, Fellmuth B, Fischer J, Machin G, Quinn T, Steur P, Tamura O and White D R (2010) _Int. J. Thermophys._ *31* 1795-1808
+
+* [[[Rusby1990,1]]] Rusby R L (1990) _Private communication_
+
+* [[[Rusby1991,1]]] Rusby R L, Hudson R P, Durieux M, Schooley J F, Steur P P M and Swenson C A (1991) _Metrologia_ *28* 9-18
+
+* [[[Rusby1994,1]]] Rusby R L, Hudson R P and Durieux M (1994) _Metrologia_ *31* 149-153
+
+* [[[Rusby2002,1]]] Rusby R L, Durieux M, Reesink A L, Hudson R P, Schuster G, Kühne M, Fogle W E, Soulen R J and Adams E D (2002) _J. Low Temp. Phys_. *126* 633-642
+
+* [[[Rusby2007,1]]] Rusby R L, Fellmuth B, Engert J, Fogle W E, Adams E D, Pitre L and Durieux M (2007) _J. Low Temp. Phys_. *149* 156-175
+
+* [[[Sydoriak2007,1]]] Sydoriak S G, Sherman R H and Roberts T R (1964) _J. Res. NBS_ *68A* 547-588 White D R and Saunders P (2007) _Meas. Sci. & Technol._ *18* 2157-2169
+
+* [[[White2017,1]]] White D R and Rourke P M C (2017) "Towards ITS-XX" _CCT 28^th^ Session, Doc. CCT/17-17_ (This document is available on request from the BIPM.)
