@@ -1,0 +1,345 @@
+= Guide to the Realization of the ITS-90
+:appendix: 2
+:partnumber: 1
+:edition: 1
+:copyright-year: 2018
+:revdate: 2018-01-01
+:language: en
+:docnumber: ITS-90
+:title-en: Guide to the Realization of the ITS-90 -- Triple Point of Water
+:doctype: guide
+:committee-en: Consultative Committee for Thermometry
+:committee-acronym: CCT
+:workgroup: Task Group for the Realization of the Kelvin
+:workgroup-acronym: CCT-TG-K
+:fullname: A. Peruzzi
+:fullname_2: E. Mendez-Lango
+:fullname_3: J. Zhang
+:fullname_4: M. Kalemci
+:docstage: in-force
+:docsubstage: 60
+:imagesdir: images
+:mn-document-class: bipm
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+
+[.preface]
+== Abstract
+
+This paper is a part of guidelines, prepared on behalf of the Consultative Committee for Thermometry, on the methods how to realize the International Temperature Scale of 1990.
+
+It discusses all major issues linked to the triple point of water when used as a fixed point for the realization of the kelvin.
+
+
+== Introduction
+
+The triple point of water (TPW) is the unique physical state of water in which all three phases (solid, liquid and vapour) coexist at thermodynamic equilibrium. The TPW is realized in practice by using TPW cells in sealed borosilicate glass- or fused-silica-envelopes containing from stem:[400 " cm"^3] to stem:[500 " cm"^3] of high-purity water. A re-entrant well, located along the axis of the cell, allows for insertion of the Standard Platinum Resistance Thermometer (SPRT) to be calibrated. An ice mantle is produced around the thermometer well by one of the methods described in Subsection 5.1. After creating the ice mantle, the cell is accommodated in a water maintenance bath controlled at a temperature close to stem:[0.01 " °C"] (typically within few mK) or in a Dewar flask containing crushed ice, and the equilibrium between the three phases is automatically established within the cell and can be maintained for many weeks.
+
+
+== Manufacture of a triple point of water cell
+
+The main steps in the manufacture of a TPW cell cover:
+
+* The cell envelope (borosilicate or fused-silica) which is annealed to release strains and leak-tested to ensure that it is vacuum tight.
+
+* A thoroughly cleaned and pre-conditioned cell-envelope to prevent its inner surface from dissolution into the water.
+
+* A high-purity source water which is distilled, degassed and transferred into the cell envelope by distillation or by gravity.
+
+* Flame-sealing of the cell at a constricted section of the filling tube.
+
+* An isotopic and chemical analysis of a sample of the same water sealed in the cell.
+
+Details of the manufacturing process of TPW cells can be found in [<<Barber1954,Barber _et al._ 1954>>, <<de2002,de Groot _et al._ 2002>>, <<Ya2005,Ya _et al._ 2005>>, <<Uytun2003,Uytun _et al._ 2003>>]. Though some NMIs, mainly for research purposes, still manufacture TPW cells (CENAM, NIM, NMIJ, UME, VNIIM and VSL), nowadays the common choice for most users is to purchase TPW cells commercially available from different suppliers.
+
+
+== Isotopic composition of the cell water
+
+Natural water is a mixture of four main isotopologues: ^1^H~2~^16^O, ^1^H~2~^17^O, ^1^H~2~^18^O and ^2^H^1^H^16^O. The _Mise en Pratique for the definition of the kelvin_, MeP-K [<<BIPM2011,BIPM 2011>>] requires the water in the TPW cell to have the isotopic composition:
+
+[align=left]
+stem:[0.00015576] mole of ^2^H per mole of ^1^H,
+
+stem:[0.0003799] mole of ^17^O per mole of ^16^O, and
+
+stem:[0.0020052] mole of ^18^O per mole of ^16^O,
+
+which are the amount-of-substance ratios of Vienna Standard Mean Ocean Water (VSMOW), based on the best measurement available [<<de2003,De Laeter _et al._ 2003>>].
+
+Natural fractionation effects ensure that most of the continental surface (fresh) water, from which cells are made, is depleted in the heavy isotope ^2^H (indicated with stem:[D] in the following) and, to a lesser extent, ^18^O and ^17^O, with a strong dependence on the latitude, altitude and season at the location of the precipitation [<<Bowen2003,Bowen and Revenaugh 2003>>]. During the distillation and degassing processes in the manufacture of the cells, the water may be further depleted or enriched [<<Nicholas1997,Nicholas _et al._ 1997>>, <<Peruzzi2007,Peruzzi _et al._ 2007>>]. The combination of these effects leads to cells that allow realizing temperatures typically ranging between stem:[110" "mu"K"] below to stem:[10" "mu"K"] above the temperature realized with VSMOW water. Because of the dependence on source water and processing, the isotopic depression in cells is highly dependent on the cell manufacturer. Recently some manufacturers have adapted their manufacturing processes to obtain cells with water close to the VSMOW definition. The best of these cells may have an isotopic composition within stem:[10" "mu"K"] temperature equivalent of the ideal [<<Strouse2007,Strouse and Zhao 2007>>, <<Tavener2007,Tavener 2007>>].
+
+Ideally, the isotopic composition of the cell water should be measured by taking a sample after the cell has been sealed [<<Nicholas1997,Nicholas _et al._ 1997>>, <<Strouse2007,Strouse and Zhao 2007>>], and a correction stem:[Delta T_{"iso"}] should be applied, that takes into account the deviation of the cell water from the VSMOW isotopic composition.
+
+The deviation of the cell water from VSMOW is conventionally expressed in terms of stem:[delta]D, stem:[delta]^18^O and stem:[delta]^17^O (called "stem:[delta]-values"):
+
+[stem]
+++++
+delta ""^{18}"O"_{"CAL"} = {(""^{18}"O" // ""^{16}"O")_{"sample"} -  (""^{18}"O" // ""^{16}"O")_{"VSMOW"}} / {(""^{18}"O" // ""^{16}"O")_{"VSMOW"}}
+++++
+
+and similarly for stem:[delta]D and stem:[delta]^17^O. The subscription CAL emphasizes that the stem:[delta]-value has been determined with respect to VSMOW. For all natural waters, the stem:[delta]-values are in the parts-per-thousand range, so are expressed in permil (‰, per thousand); they are usually negative for most cells.
+
+Besides VSMOW, to further improve the inter-laboratory reproducibility of the water isotopic composition measurements, Standard Light Antarctic Precipitation (SLAP) water [<<Gonfiantini1978,Gonfiantini 1978>>, <<Li1988,Li _et al._ 1988>>] is also used to define the scale. The stem:[delta]-values of SLAP have been defined based on consensus between expert laboratories taking part in a large international intercomparison [Gonfiantini, 1984]. They are stem:[delta]D = -428 ‰ and stem:[delta]^18^O = -55.5 ‰ with respect to VSMOW. These consensus values are used in the definition of the so-called normalized VSMOW-SLAP scale:
+
+
+[stem]
+++++
+""^{18}"O" ("sample")_{"NORM"} = [delta ""^{18}"O" ("sample")_{"CAL"} {(-0.0555)} / {delta ""^{18}"O" } ]
+++++
+
+
+and similarly for D, with the value stem:[-0.428] in the nominator. All isotope laboratories usually report their isotope stem:[delta]-values for water in this normalized way. It should be noted that the original reference VSMOW and SLAP waters are exhausted. Their successors, VSMOW2 and SLAP2 have been prepared with utmost care to resemble the originals to within the uncertainties. Only for SLAP2 the stem:[delta]D value is -427.5 ‰ instead of -428 ‰.
+
+For all naturally occurring surface waters, the isotopic composition is sufficiently close to that of VSMOW, and the correlation between the ^18^O and the ^17^O contents is so strong [<<Meijer1998,Meijer and Li 1998>>] that the correction stem:[Delta T_{"iso"}] to be applied to the triple-point temperature realized by a sample water can be specified by a linear function of only the stem:[delta]D and stem:[delta]^18^O values:
+
+[stem]
+++++
+Delta T_{"iso"} = - A_{"D"} cdot delta "D" - A_{"O"} cdot delta ""^{18}"O",
+++++
+
+
+where the last term on the right accounts for both the stem:[delta]^17^O and the stem:[delta]^18^O effects, but requires only the knowledge of the stem:[delta]^18^O.
+
+The most precise set of isotopic depression constants presently available, and those specified for use with the ITS-90, are by Faghihi _et al_. (<<Faghihi2015a,2015a>> and <<Faghihi2015b,2015b>>). These values are: stem:[A_{"D"} = 673" "mu"K"] and stem:[A_{"O"} = 630" "mu"K"], with estimated standard uncertainties of stem:[4" "mu"K"] and stem:[10" "mu"K"], respectively.
+
+The uncertainty in the isotope correction is usually dominated by the uncertainties in stem:[delta]D and stem:[A_{"D"}]. For cells not more than stem:[100" "mu"K"] different from VSMOW, the uncertainties in the corrections are less than stem:[2" "mu"K"] at most, so are generally negligible.
+
+The practice by some TPW cell manufacturers of adding un-natural, isotope-enriched waters to the initial source waters, to compensate for isotope depletion taking place during the purification process, is not recommended. After adding such enriched waters, the isotopic correction cannot be calculated using the recommended formula above and must be evaluated with the following instead:
+
+[stem]
+++++
+Delta T_{"iso"} = - A_{"D"} cdot delta "D" - A_{"O"} cdot delta ""^{18}"O" - A_{17} cdot {delta ""^{17}"O" - [(1 + delta ""^{18}"O")^{0.528} - 1]},
+++++
+
+which requires full isotopic analysis (stem:[delta]D, stem:[delta]^18^O and stem:[delta]^17^O) and the use of a third depression coefficient stem:[A_{17} = 60" "mu"K"], with estimated standard uncertainty of stem:[1" "mu"K"] [<<White2010,White and Tew 2010>>].
+
+Most TPW cells made from continental fresh water can be expected to be within the temperature equivalents stem:[-110" "mu"K"] and stem:[+10" "mu"K"] of VSMOW, so a correction of stem:[+50" "mu"K"] and a standard uncertainty of stem:[35" "mu"K"] will account for typical variations in isotopic composition. Such a simple alternative is acceptable where no isotopic information is available.
+
+A further, smaller, isotopic effect occurs with isotopic fractionation between water and ice when the cell is in use [<<Nicholas1997,Nicholas _et al._ 1997>>]. In theory, the effect causes the temperature to be dependent on the frozen fraction and ranges from no effect for zero frozen fraction to about stem:[-15" "mu"K"] for a cell nearly fully frozen. In practice, the freezing rates for cells are sufficiently fast and the isotopic equilibration process is so slow that significant fractionation does not occur during the initial freezing of the mantle [<<Ferrick2002,Ferrick _et al._ 2002>>]. Measurements of the composition of the water and ice from partly frozen cells support the theory: cell frozen normally over a period of a few hours exhibit isotopic fractionation of no more than stem:[2" "mu"K"] [<<Nicholas1997,Nicholas _et al._ 1997>>, <<Renaot2005,Renaot _et al._ 2005>>]. One cell frozen slowly over a few days exhibitedfractionation of stem:[7" "mu"K"] [<<Tavener2006,Tavener 2006>>]. However, additional fractionation occurs with freezing at the ice-water interface around the thermometer well. Detailed understanding of the effect of repeated freezing and melting is not known, but it could be responsible for a depression of several microkelvin and some of the observed non-repeatability of cells.
+
+
+== Impurities
+
+The temperature realized by a TPW cell is exactly stem:[273.16 " K"] only for ideally pure VSMOW water. Though extreme care in water purification is taken during the manufacture, the water enclosed within a TPW cell is never completely free of impurities.
+
+Impurities in the water of TPW cells give rise to the most significant source of uncertainty and constitute the most difficult effect to assess. Recent TPW comparisons [<<Stock2006,Stock _et al._ 2006>>, <<Peruzzi2009,Peruzzi _et al._ 2009>>] exhibited results dispersed over ranges exceeding stem:[200" "mu"K"], largely due to impurities.
+
+There are four main sources of impurity in the water of a TPW cell:
+
+. Chemicals used in the cleaning and pre-conditioning of the cell may be a source of contamination. These may include HF, HCl and NH4. Most of these materials have a high dissociation constant, so are detectable from measurements of electrical conductivity [<<Ballico1999,Ballico 1999>>].
+
+. Borosilicate glass, from which most cells and their manufacturing plant are made, is weakly soluble in water resulting in a temperature depression at the time of manufacture and additional drift with time. In high quality cells, actual depressions at the time of manufacture can be as low as a few microkelvin [<<Peruzzi2007,Peruzzi _et al._ 2007>>, <<Strouse2007,Strouse and Zhao 2007>>]. The drift rates range up to stem:[-20" "mu"K"//"year"] with a mean rate of stem:[-4" "mu"K"//"year"], although the variation between the cells is very large [<<Hill2001,Hill 2001>>]. With borosilicate cells, the drift rate is likely to increase with time and is very dependent on the treatment of the glass prior to the manufacture of the cells [<<White2005,White _et al._ 2005>>]. Storage of the cells near stem:[0 " °C"] and manufacture of the cells from fused silica both reduce the drift rate [<<Zief1972,Zief and Speights 1972>>, <<Strouse2007,Strouse and Zhao 2007>>]. The use of fused silica cells may, depending on the manufacturing process, result in a higher level of particular impurities and a higher initial impurity level due to the higher temperature required to melt pure silica and seal the cell.
+
+. Low-volatility compounds in the source water: for example, light hydrocarbons have a similar boiling point to water so distillation may not remove them. The typical magnitude of this impurity effect is unknown, but anecdotal evidence suggests that cells subjected to a prolonged degassing during manufacture (approximately 2 days) can be stem:[20" "mu"K"] higher than other cells, after isotope corrections have been applied.
+
+. Residual gases in the cell water. However, since one quarter of the difference between the temperature of the ice point and the TPW is due to dissolved gasses [<<Ancsin1982,Ancsin 1982>>], it can be inferred that any impurity effect due to dissolved gasses is smaller than the residual-gas-pressure effect, which is generally negligible.
+
+The preferred method for estimating the influence of impurities and the resulting uncertainties is the "Sum of Individual Estimates" (SIE), see _Guide_ https://www.bipm.org/utils/common/pdf/ITS-90/Guide_ITS-90_2_1_Impurities_2018.pdf[Section 2.1] _Influence of impurities_, which requires the determination of the concentrations of allthe relevant impurity species by applying an appropriate analysis technique to a representative sample of the cell water.
+
+Inductively-Coupled Plasma Mass Spectrometry (ICPMS), applied to water samples separated from the cell, showed that the total impurity concentration in high-quality TPW cells can be as low as stem:[0.1" "mu"mol" cdot "mol"^{-1}] [<<Peruzzi2007,Peruzzi _et al._ 2007>>]. ICPMS performed on water from old borosilicate cells resulted in a total impurity concentration of up to stem:[4" "mu"mol" cdot "mol"^{-1}] [<<Hill1999,Hill 1999>>]. Nevertheless, the results of ICPMS are regarded as semi-quantitative due to intrinsic features of the technique and of the sample preparation. Moreover, ICPMS analysis can detect only a limited number (about 60) of elemental impurities and no organic impurities.
+
+Impurity fractionation effects (or segregation) between water and ice, similar to those described in the previous subsection (isotopic fractionation), may occur during the preparation of the ice mantle and consequent storage of the cell in the maintenance bath. The size of such effects depends on
+
+[arabic]
+. the amount of impurities species,
+. the equilibrium distribution coefficient stem:[k_0^i] of the impurities and
+. the details of freezing (freezing rate, diffusion coefficient of the impurities in the solid and in the liquid, presence of convection during freezing e.g. stirring of the liquid).
+
+Ice was reported not to be able to dissolve any compound, e.g. stem:[k_0^i = 0] for any water impurity, except for HCl, HF, NH3, NH4F, LiF, NaF and KF having stem:[k_0^i != 0] [<<Lliboutry1964,Lliboutry 1964>>, <<Workman1950,Workman and Reynolds 1950>>, <<Zaromb1956,Zaromb and Brill 1956>>, <<Jaccard1961,Jaccard and Levi 1961>>, <<Brill1957,Brill 1957>>, <<Granicher1963,Granicher 1963>>, <<Gross1967,Gross 1967>>]. Even for such impurities, stem:[k_0^i << 1] is fulfilled (for example, stem:[k_0^{"HF"} = 0.01] [<<Jaccard1963,Jaccard 1963>>] and stem:[k_0^{"HC1"} = 0.003] [<<Leviand1961,Leviand Lubart 1961>>]), so it is reasonable to assume stem:[k_0^i << 1] for any impurity in water and apply Raoult's law and the Overall Maximum Estimate (OME) method, see again _Guide_ Section 2.1 _Influence of impurities_, to TPW cells. This means that a plot of themeasured TPW temperature versus the inverse liquid fraction stem:[1//F] allows the determination of the impurity level and temperature depression [<<Mendez2002,Mendez-Lango 2002>>].
+
+During freezing, the impurities are rejected into the liquid by the solid-liquid interface or trapped in the ice at grain boundaries. When the first ice-water interface is formed around the thermometer well, the ice so formed is pure. Measuring the temperature realized by the cell in this state and again after the cell has been (gently) inverted several times to mix the inner melt with the main body of water, may give an indication of the impurity level [<<ASTM2002,ASTM 2002>>]. This test must be carried out with the first formation of the ice-water and measurements must be corrected for self heating. A similar effect occurs with extended use of a cell over a week or longer. The water around the well and the main body appear to mix slowly causing a gradual depression of the observed temperature with time [<<Stock2006,Stock _et al._ 2006>>].
+
+The smallest uncertainty component due to impurities is achieved in recently manufactured high-quality cells and is probably below stem:[10" "mu"K"] [<<Nguyen2007,Nguyen and Ballico 2007>>, <<Strouse2007,Strouse and Zhao 2007>>, <<Tavener2007,Tavener 2007>>]. The dispersion of results in recent international comparisons [<<Stock2006,Stock _et al._ 2006>>, <<Peruzzi2009,Peruzzi _et al._ 2009>>] suggests that a depression and uncertainty due to impurities of about stem:[50" "mu"K"] is more typical for older cells.
+
+
+== Hydrostatic pressure effect
+
+The definition of triple point temperature is realized only at the liquid/solid surface in contact with the vapour of the TPW cell but the sensing element of the SPRT is located near the bottom of the thermometer well to provide for adequate immersion. The TPW temperature must therefore be corrected for the hydrostatic pressure difference between the liquid/solid surface and the thermal centre of the SPRT sensing element. The correction is:
+
+[stem]
+++++
+Delta T_{"hyd"} = - {"d"T}/{"d"h} cdot (h_{"liq"} - h_{"SPRT"}),
+++++
+
+where stem:["d"T//"d"h] is the hydrostatic pressure coefficient defined by the ITS-90, i.e. stem:[-0.73 cdot 10^{-3} " K m"^{-1}]. The difference in vertical elevation between the liquid surface stem:[h_{"1iq"}] and the thermal centre of the SPRT sensing element stem:[h_{"SPRT"}] amounts to 200 to 300mm, depending on the size of the cell, translating into a hydrostatic pressure correction of stem:[150" "mu"K"] to stem:[220" "mu"K"].
+
+The uncertainty related to the hydrostatic pressure correction is typically a few stem:[mu"K"] [<<Stock2006,Stock _et al._ 2006>>]. When a profile of the TPW temperature as a function of the SPRT immersion is measured (immersion profile, see [<<Stock2006,Stock _et al._ 2006>>]), the departure of the measured immersion curve from the expected hydrostatic pressure line provides an estimate of the uncertainty due to immersion and stray thermal effects, see [<<Stock2006,Stock _et al._ 2006>>].
+
+
+== Realization of the TPW temperature in a TPW cell
+
+=== Preparation of the ice mantle
+
+The standard method for preparing an ice mantle around the thermometer well of a TPW cell is the "inner sheath method" [<<Cox1982,Cox and Vaughan 1982>>]. With this method, the ice mantle is grown from the inside outward by cooling the thermometer well.
+
+Depending on the coolant used (crushed solid CO~2~, heat pipe immersion cooler, liquid-nitrogen-cooled rod or liquid nitrogen), different variants can be adopted [<<Furukawa1997,Furukawa _et al._ 1997>>] which can be summarized as follows:
+
+. Crushed solid CO~2~: the thermometer well is filled with crushed solid CO~2~ up to the level of the water surface in the cell and solid CO~2~ is added to maintain such level until a mantle of desired thickness is formed. Approximately 1 ml of ethanol is added to the well prior to (along with) the CO~2~ to promote heat transfer and thicker mantle at the bottom.
+
+. Heat pipe immersion cooler [<<Evans1969,Evans and Sweger 1969>>]: approximately 1 ml of ethanol and 5 ml of finely crushed solid CO~2~ are preliminarily added to the thermometer well to promote crystal nucleation, thicker mantle at the bottom and prevent water in the cell from supercooling. The immersion cooler, which consists of a cup for loading the coolant and the heat pipe tube, is then inserted in the thermometer well. The crushed solid CO~2~ and ethanol are loaded into the cup of the immersion cooler, and the space between the thermometer well and the heat pipe tube is filled with ethanol up to the level of the water surface in the cell. The heat piping loop initiates, the evaporated refrigerant travels upward to the condenser, the coolant condenses the refrigerant back to liquid, and the liquid travels back down the walls of the tube to the bottom where the cycle restarts, resulting in the formation of the ice mantle.
+
+. Liquid-nitrogen-cooled rod: the thermometer well is filled with ethanol up to the level of the water surface in the cell and a metal (usually copper) rod pre-cooled in liquid nitrogen is inserted into the thermometer well. Several insertions will be needed to produce an adequate mantle and cooling is interrupted for short intervals during the exchange of the cooling rods.
+
+
+. Liquid nitrogen. This variant can have, on its turn, different sub-variants:
+
+.. [[item_a]]Counter flowing cold nitrogen vapours and liquid through a multi-tube cooler inserted in the thermometer well. The cooling provided by the nitrogen counter-flow is transferred to the cell through ethanol filling the space between the cooler and the thermometer well (again up to the level of the water surface in the cell).
+
+.. Similar to <<item_a>> but return flow of cold nitrogen vapour and liquid takes place directly in the space between the cooler and the thermometer well.
+
+.. The liquid nitrogen is repeatedly allowed directly in the thermometer well, initially at the bottom and later at higher vertical positions.
+
+In all the variants described above, the cell must be preliminarily pre-cooled to a temperature close to stem:[0 " °C"]. During cooling, care must be taken to prevent solid bridging of the ice across the top surface (and the consequent possible rupture of the cell). Moreover, it is essential to remove all the water from the thermometer well before preparing the ice mantle, for example by rinsing the thermometer well with high-purity ethanol.
+
+The time required for forming an ice mantle depends on the variant adopted: approximately 30 minutes for variants 1 and 3, 60 minutes or more for variant 2, 10 minutes to 120 minutes for variant 4.
+
+With an alternative non-standard method, known as "outer sheath method" or "mush method", the ice mantle is grown from the outside inward [<<Cox1982,Cox and Vaughan 1982>>]. With such method, the water is supercooled several kelvins below the TPW temperature, until crystallization occurs either spontaneously or as a result of shock (e.g. by shaking the cell), indicated by the formation of uniform metastable dendrites (the "mush") throughout the cell. The cell is then placed in the maintenance bath at a temperature close to stem:[0.01 " °C"], which action stabilizes the mush. Though this method has practical advantages and it was shown to agree with the inner sheath method within stem:[0.1 " mK"] [<<Cox1982,Cox and Vaughan 1982>>], its use is usually confined to checking the stability of reference SPRTs in secondary level temperature calibration laboratories [<<Li1999,Li and Hirst 1999>>, <<Li2001,Li _et al._ 2001>>, <<Zhao2005,Zhao and Walker 2005>>].
+
+
+=== Aging of the ice mantle before use
+
+The TPW temperature realized by freshly prepared cells is lower than stem:[273.16 " K"], typically by stem:[0.2 " mK"] in cells where the mantle is frozen slowly (e.g. with method 2) and as much as stem:[1 " mK"] for quickly frozen mantles (e.g. method 4) [<<Furukawa1997,Furukawa _et al._ 1997>>, <<Furukawa1982,Furukawa and Bigge 1982>>]. The cause is usually attributed to strains in the ice crystals and a high concentration of crystal defects due to the severe non-equilibrium conditions during the ice formation (see preparation of the ice mantle above). With time and on storage in the maintenance bath near the TPW temperature, the strains are relieved, the crystal defects are healed (this has also a visual confirmation in observing the disappearance of the cracks) and the crystal grains grow in size. The temperature depression effect is reduced to below stem:[100" "mu"K"] over 2 or 3 days as the ice anneals, and after one week the effects are below stem:[30" "mu"K"]. To achieve temperature stability and reproducibility at the level of stem:[10" "mu"K"] or so, it is necessary to allow the mantle to anneal for at least 10 days. The recovery of the equilibrium temperature with aging is attributed not only to strain relief but also to the growth of crystal size. The temperature of the ice-water interface on an ice crystal depends on the curvature of the surface of the ice crystal [<<McAllan1982,McAllan 1982>>]. When the crystals grow in size, the interfacial energy of the crystals decreases and the temperature increases [<<Furukawa1997,Furukawa _et al._ 1997>>, <<Mendez1997,Mendez-Lango 1997>>].
+
+
+=== Generation of the defining water-ice interface (inner melt)
+
+After forming the ice mantle, the TPW cell is stored in a maintenance bath, usually at a temperature which is a few mK below stem:[0.01 " °C"]. Some laboratories prefer to set the maintenance bath at several mK above stem:[0.01 " °C"], to prevent solid bridging of the ice across the top surface. Before performing measurements, the cell must be stored in the maintenance bath for an amount of time appropriate to the level of accuracy required in the realization of the TPW temperature (see paragraph above).
+
+The immersion of the TPW cell in the maintenance bath can be either complete (when the water level of the maintenance bath is above the opening of the thermometer well and the thermometer well is completely filled with bath water) or partial (when the water level of the maintenance bath is below the opening of the thermometer well, and in this case a different liquid, such as ethanol, can be used as thermal exchange between the thermometer and the cell).
+
+Immediately before the measurement, a second ice-water interface must be formed by melting the ice adjacent to the well surface. This "inner melt" is usually made by inserting a glass rod at ambient temperature into the well for less than a minute. The ice mantle should then rotate freely around the well when a small rotational impulse is given to it.
+
+Sometimes the ice mantle sticks to the well very soon after it is initially melted free. This is probably due to freezing of the top of the inner liquid layer, caused by cooling resulting from heat transferred via the vapour to the cold glass, which can be at stem:[0 " °C"] when maintained in a crushed-ice bath. Consequently, the inner melt should be re-generated on each occasion on which the cell is used and the free rotation of the ice mantle should be verified regularly during the course of the day.
+
+If the mantle is not rotating freely, the temperature realized by the cell can be lower than stem:[0.01 " °C"] by as much as stem:[0.1 " mK"]. This is caused by the pressure build up in the frozen layer.
+
+
+=== Maintenance and lifetime of the ice mantle
+
+A TPW cell can be stored in a maintenance bath at a temperature of stem:[2] or stem:[3 " mK"] below stem:[0.01 " °C"] for many weeks. During storage in the maintenance bath, ice will slowly form on the surface of the water in the cell as a result of heat transferred via the vapour to the cold glass. When a cell is not disturbed for several days, the ice will freeze completely across the top surface and must be melted back, for example by warming with the hands, before measurement. Care must be taken to warm the water as little as possible so as not to melt too much of the mantle.
+
+
+=== Operating conditions
+
+A foam pad can be inserted into the bottom of the thermometer well to cushion the SPRT. It has been shown that the use of the foam pad is also effective in eliminating the effect of the "cold spot" at the point of contact between the ice and the bottom of the thermometer well produced by buoyancy forces on the ice mantle [<<Sakurai2005,Sakurai 2005>>, <<White2005,White and Dransfield 2005>>]. A metal or quartz bushing [<<Steur2008,Steur and de Dematteis 2008>>] can also be inserted to centralize the SPRT in the thermometer well and to enhance the thermal contact of the SPRT with the inner melt of the mantle.
+
+Before insertion in the thermometer well, the SPRT should be pre-cooled for at least 5 minutes in an ice bath to approximately stem:[0 " °C"]. When inserting the thermometer in the cell, care must be taken to avoid that ice particles stick to the thermometer and enter the well. Before measurements, a sufficient amount of time should be allowed for thermal equilibrium of the SPRT with the TPW cell. The equilibration time depends on the model of the SPRT and can vary from 15 minutes to one hour.
+
+In order to avoid light piping, a black cover can be laid on the maintenance bath around the SPRT.
+
+
+[bibliography]
+== References
+
+* [[[Ancsin1982,1]]] Ancsin J (1982) "Melting curves of H~2~O", _Temperature: Its Measurement and Control in Science and Industry_, Vol 5, ed. Schooley, J.F., American Institute ofPhysics, New York, pp. 281-284
+
+* [[[ASTM2002,1]]] ASTM (2002) "_Standard Guide for use of water triple point cells",_ E1750-02, American Society for Testing and Materials, West Conshohoken, P.A., USA
+
+* [[[Ballico1999,1]]] Ballico M (1999) _Meas. Sci. Technol._ *40* L33-L36
+
+* [[[Barber1954,1]]] Barber C R, Handley R and Herington E F G (1954) "The Preparation and Use of Cells for the Realization of the Triple Point of Water", _Brit. J. Appl. Phys._ *5* 1230-1248
+
+* [[[BIPM2011,1]]] BIPM (2011) Bureau International des Poids et Mesures, Paris, _Mise en Pratique for the definition of the Kelvin_, http://www.bipm.org/utils/en/pdf/MeP_K.pdf[http://www.bipm.org/utils/en/pdf/MeP\_K.pdf]
+
+* [[[Bowen2003,1]]] Bowen G J and Revenaugh J (2003) "Interpolating the isotopic composition of modern meteoric precipitation", in _Water Resources Research,_ *39*, 10. See also the on-line isotope in precipitation calculator (OIPC) at http://wateriso.utah.edu/waterisotopes/index.html[http://wateriso.utah.edu/waterisotopes/index.html]
+
+* [[[Brill1957,1]]] Brill R (1957) _SIPRE Rep._ *33* 67
+
+* [[[Cox1982,1]]] Cox J D and Vaughan M F (1982) "Temperature fixed points: Evaluation of four types of triple-point cells", _Temperature: Its Measurement and Control in Science and Industry,_ vol. 5, part 1, ed. by Schooley J.F., AIP, New York, pp. 267-280
+
+* [[[Craig1961,1]]] Craig H (1961) "Isotope variation in meteoric waters", _Science_ *133* 1702-1703
+
+* [[[De2002,1]]] De Groot M J, Lacroes N and Dubbeldam J F (2002) "On the Production of Water Triple Point Cells", _Proc. TEMPMEKO 2001,_ vol. 1, ed. by Fellmuth B, Seidel J, Scholz G, VDE Verlag GmbH, ISBN 3-8007-2676-9, Berlin, pp. 221-226
+
+* [[[De2003,1]]] De Laeter J.R., Böhlke J.K., De Bièvre P., Hidaka H., Peiser H.S., Rosman K.J.R., Taylor P.D.P. (2003) _Pure Appl. Chem._ *75* 683-800.
+
+* [[[Evans1969,1]]] Evans J P and Sweger D M (1969) _Rev. Sci. Instrum._ *40* 376-377
+
+* [[[Faghihi2015a,1]]] Faghihi V., Peruzzi A., Aerts-Bijma A.T., Jansen H.G., Spriensma J.J., van Geel J. and Meijer H.A.J. (2015a) "Accurate experimental determination of the isotope effects on the triple point temperature of water. I. Dependence on the ^2^H abundance", _Metrologia_ *52* 819-826
+
+* [[[Faghihi2015b,1]]] Faghihi V., Peruzzi A., Aerts-Bijma A.T., Jansen H.G., Spriensma J.J., van Geel J. and Meijer H.A.J. (2015b) "Accurate experimental determination of the isotope effects on the triple point temperature of water. II. Dependence on the ^18^O and ^17^O abundances", _Metrologia_ *52* 827-834
+
+* [[[Ferrick2002,1]]] Ferrick M G, Calkins D J, Perron N M, Cragin, J H and Kendall C (2002) "Diffusion model validation and interpretation of stable isotopes in river and lake ice", _Hydrol. Process_ *16* 851-872
+
+* [[[Furukawa1982,1]]] Furukawa G T and Bigge W R (1982) "Reproducibility of some triple point of water cells", _Temperature: Its Measurement and Control in Science and Industry_, Vol 5, ed. Schooley, J.F., American Institute of Physics, New York, pp. 291-297
+
+* [[[Furukawa1997,1]]] Furukawa G T, Mangum B W and Strouse G F (1997) "Effects of different methods of preparation of ice mantles of triple point of water cells on the temporal behaviour of the triple-point temperatures", _Metrologia_ *34* 215-233
+
+* [[[Gonfiantini1978,1]]] Gonfiantini R (1978) _Nature_ *271* 534-536
+
+* [[[Gonfiantini1984,1]]] Gonfiantini R (1984) Report on an advisory group meeting on stable isotope reference samples for geochemical and hydrochemical investigations, _IAEA Report to the Director General_.
+
+* [[[Granicher1963,1]]] Granicher H (1963) _Helv. Phys. Acta_ *28* 300
+
+* [[[Gross1967,1]]] Gross G W (1967) _J. Colloid Interface Sci._ *25* 270
+
+* [[[Hill1999,1]]] Hill K D (1999) "Triple point of water cells and the solubility of borosilicate glass", _Proc. TEMPMEKO'99_, ed. J.F. Dubbeldam, M.J. de Groot, IMEKO / NMi VanSwinden Laboratorium, Delft, 68-73
+
+* [[[Hill2001,1]]] Hill K D (2001) "Is there a long-term drift in triple point of water cells?", _Metrologia_ *38*. 79-82
+
+* [[[Jaccard1963,1]]] Jaccard C (1963) _Helv. Phys. Acta_ *32* 89
+
+* [[[Jaccard1961,1]]] Jaccard C and Levi L (1961) _Z. Angew. Math. Phys._ *12* 70
+
+* [[[Levi1961,1]]] Levi L and Lubart, L (1961) _J. Chem. Phys._ *58* 836
+
+* [[[Li1988,1]]] Li W.J., Ni B.L., Jin D.Q., Chang T.L. (1988) _Kexue Tongbao_ (Chinese Science Bulletin) *33* 1610-1613
+
+* [[[Li1999,1]]] Li X and Hirst M (1999) "Fixed points for secondary level calibrations", _Proc. TEMPMEKO'99_, ed. J.F. Dubbeldam, M.J. de Groot, IMEKO / NMi VanSwinden Laboratorium, Delft, pp. 74-79
+
+* [[[Li2001,1]]] Li X, Chen D and Zhao M (2001) in _Proceedings of 2001 NCSL International Workshop and Symposium,_ Washington DC, pp. 478-486
+
+* [[[Lliboutry1964,1]]] Lliboutry L (1964) in "_Traité de Glaciologie_", Masson & Cie éditeurs, Paris, Vol. 1, Chapter 1
+
+* [[[McAllan1982,1]]] McAllan J V (1982) "The effect of pressure on the water triple point temperature", _Temperature: Its Measurement and Control in Science and Industry_, Vol 5, ed. Schooley, J.F., American Institute of Physics, New York, pp. 285-290
+
+* [[[Meijer1998,1]]] Meijer H A and Li W J (1998) _Isotopes Environ. Health Study_ *34* 349-369
+
+* [[[Mendez1997,1]]] Mendez-Lango E (1997) "Effect of crystal size, form and stability on the triple point of water", _Proc. TEMPMEKO 1996_, ed. by Marcarino, P., Levrotto & Bella, Torino, pp. 57-62
+
+* [[[Mendez2002,1]]] Mendez-Lango E (2002) "A non-destructive method to evaluate the impurity content in triple point of water cells", _Proc. of TEMPMEKO2001,_ ed. by Fellmuth, B., Seidel, J., Scholz, G., VDE Verlag GmbH, ISBN 3-8007-2676-9, Berlin, pp. 465-470
+
+* [[[Nguyen2007,1]]] Nguyen K and Ballico M (2007) "Comparison of 5 Isotope Corrected water-triple-point cells with the NMIA-2002 WTP ensemble", _Proc. TEMPMEKO 2007, Int. J. Thermophys._ *28* 1761-1771
+
+* [[[Nicholas1997,1]]] Nicholas J V, White D R, and Dransfield T D (1997) "Isotope influences on the triple point of water and the definition of the kelvin", _Proc. TEMPMEKO 1996_, ed. by Marcarino, P., Levrotto & Bella, Torino, 9-12
+
+* [[[Peruzzi2007,1]]] Peruzzi A, Kerkhof O, and De Groot M J (2007) "Isotope and impurity content in water triple-point cells manufactured at NMI VSL", _Proc. TEMPMEKO 2007, Int. J. Thermophys._ *28* 1931-1940
+
+* [[[Peruzzi2009,1]]] Peruzzi A, Bosma R, Kerkhof O, Rosenkranz P, del Campo Maldonado M D, Strnad R, Nielsen J, Anagnostou M, Veliki T, Zvizdic D, Grudnewicz E, Nedea M, Neagu D M, Steur P P M, Filipe E, Lobo I, Antonsen I, Renao E, Heinonen M, Weckstrom T, Bojkovski J, Turzo-Adras E, Nemeth S, White M, Tegeler E, Dobre M, Duri S, Kartal Dogan A, Uytun A, Augevicius V, Pauzha A, Pokhodun A and Simic S (2009) "EURAMET.T-K7 Key Comparison of Water Triple Point Cells", _Metrologia_ *46* 03001
+
+* [[[Renaot2005,1]]] Renaot E, Valin M H, Bonnier G, Whit M, van der Linden A, Bairy G, Kovacs T, Nemeth S, Bojkovski J, Kuna R, Weckstrom T, Ivarsson J, Rauta C, Helgesen F, Uytun A, Ugur S, Kryl J, Adunka F, Ranostaj J and Duris S. (2005) "Comparison of realizations of the triple point of water (EUROMET Project No 549)", _Proc. TEMPMEKO 2004,_ ed. by Zvizdic, D., Laboratory for Process Measurement,Faculty of mechanical Engineering and Naval Architecture, Zagreb, pp. 1009-1015
+
+* [[[Ripple2005,1]]] Ripple D C, Gam K S, Hermier Y, Hill K, Rusby R, Steele A, Steur P P M, Stock M, Strouse G F and White D R (2005) "Summary of Facts Relating to Isotopic Effects and the Triple Point of Water", Report of the BIPM CCT ad hoc Task Group on the Triple Point of Water, Document CCT/05-07
+
+* [[[Sakurai2005,1]]] Sakurai H (2005) "Hydrostatic Pressure Correction Coefficient of the Triple Point of Water", Document CCT/05-11 http://www.bipm.org/cc/CCT/Allowed/23/CCT\_05\_11.pdf
+
+* [[[Steur2008,1]]] Steur P P M and de Dematteis R (2008) _Metrologia_ *45* 529-533
+
+* [[[Stock2006,1]]] Stock M, Solve S, del Campo D, Chimenti V, E Méndez-Lango, Liedberg H, Steur P P M, Marcarino P, Dematteis , Filipe E, Lobo I, Kang K H, Gam K S, Kim Y-G, Renaot E, Bonnier G, Valin M, White R, Dransfield T D, Duan Y, Xiaoke Y, Strouse G, Ballico M, Sukkar D, Arai M, Mans A, de Groot M, Kerkhof O, Rusby R, Gray J, Head D, Hill K, Tegeler E, Noatsch U, Duris S , Kho H Y, Ugur S, Pokhodun A and Gerasimov S F (2006) "CCT-K7: Key comparison of water triple point cells Report B", _Metrologia_ *43* 03001
+
+* [[[Strouse2007,1]]] Strouse G F and Zhao M (2007) "The impact of isotopic concentration, impurities and cell aging on the water triple point temperature", _Proc. TEMPMEKO 2007, Int. J. Thermophys._ *28* 1913-1922
+
+* [[[Tavener2006,1]]] Tavener, J P (2006) Private communication with White, D.R.
+
+* [[[Tavener2007,1]]] Tavener J P (2007) "The establishment of ITS-90 water triple point references to stem:[+- 2" "mu"K"], and the assessment of 100 water triple point cells made between 2001 and 2006", http://www.isotech.co.uk/files/document_library_file-9.pdf[Talk presented at_TEMPMEKO 2007]
+
+* [[[Uytun2003,1]]] Uytun A, Kartal-Dogan A and Ugur S (2003) "Construction and Characterization of the UME Water Triple Point Cells", XVII IMEKO World Congress, Dubrovnik, Croatia, June pp. 22-28
+
+* [[[White2005,1]]] White D R, and Dransfield T (2005) "Buoyancy effects on the temperature realized by triple-point-of-water cells", in _Proc. TEMPMEKO 2004,_ ed. by Zvizdic, D., Laboratory for Process Measurement, Faculty of mechanical Engineering and Naval Architecture, Zagreb, pp. 313-318
+
+* [[[White2005-2,1]]] White D R, Downes C J, Dransfield T D and Mason R S (2005) "Dissolved glass in triple-point-of-water cells", _Proc. TEMPMEKO 2004,_ ed. by Zvizdic, D., Laboratory for Process Measurement, Faculty of mechanical Engineering and Naval Architecture, Zagreb, pp. 251-256
+
+* [[[White2010,1]]] White D R and Tew W L (2010) "Improved Estimates of the Isotopic Correction Constants for the Triple Point of Water", _Int. J. Thermophys._ *31* 1644-1653
+
+* [[[Workman1950,1]]] Workman E J and Reynolds S E (1950) _Phys. Rev._ *78* 254
+
+* [[[Ya2005,1]]] Ya X, Qiu P, Wang Y, Wu H, Feng Y and Zhang J (2005) "NIM Development of Triple Point of Water Cells of High Quality", _Proc. TEMPMEKO 2004,_ ed. by Zvizdic, D., Laboratory for Process Measurement, Faculty of mechanical Engineering and Naval Architecture, Zagreb, pp. 283-288.
+
+* [[[Zaromb1956,1]]] Zaromb S and Brill R (1956) _J_. _Chem. Phys._ *24* 895
+
+* [[[Zhao2005,1]]] Zhao M and Walker R (2005) in _Proceedings of 2001 NCSL International Workshop and Symposium,_ Washington DC, pp. 506-513
+
+* [[[Zief1972,1]]] Zief,M and Speights R (1972) in "_Ultra-Purity Methods and Techniques_", Marcel Decker, New York, pp. 173-191
+
