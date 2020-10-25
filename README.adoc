@@ -1,0 +1,64 @@
+= Metanorma BIPM samples
+
+image:https://github.com/metanorma/mn-samples-bipm/workflows/ubuntu/badge.svg["Build Status", link="https://github.com/metanorma/mn-samples-bipm/actions?workflow=ubuntu"]
+image:https://github.com/metanorma/mn-samples-bipm/workflows/macos/badge.svg["Build Status", link="https://github.com/metanorma/mn-samples-bipm/actions?workflow=macos"]
+image:https://github.com/metanorma/mn-samples-bipm/workflows/windows/badge.svg["Build Status", link="https://github.com/metanorma/mn-samples-bipm/actions?workflow=windows"]
+image:https://github.com/metanorma/mn-samples-bipm/workflows/docker/badge.svg["Build Status", link="https://github.com/metanorma/mn-samples-bipm/actions?workflow=docker"]
+
+This document is available in its rendered forms here:
+
+* https://metanorma.github.io/mn-samples-bipm/[Metanorma BIPM samples (HTML)]
+
+
+== Fetching the document
+
+[source,sh]
+----
+git clone https://github.com/metanorma/mn-samples-bipm/
+----
+
+== Installing Build Tools
+
+See https://www.metanorma.com/author/topics/install/
+
+
+== Running via Docker or locally
+
+If you have installed the build tools locally, and wish to run the
+locally-installed compilation tools, there is nothing further to set.
+
+If you don't want to deal with local dependencies, use the docker
+version by:
+
+[source,sh]
+----
+export METANORMA_DOCKER=1
+----
+
+The `Makefile` will automatically choose the proper command to
+execute.
+
+
+== Building The Document
+
+[source,sh]
+----
+make clean all
+----
+
+The following outputs will be built:
+
+* BIPM XML (https://github.com/metanorma/metanorma-model-bipm) (`[filename].xml`)
+* HTML (`[filename].html`)
+* PDF (`[filename].pdf`)
+* Word DOC (`[filename].doc`)
+
+
+== Iterating the document
+
+[source,sh]
+----
+make html
+open cc-*.html
+----
+
