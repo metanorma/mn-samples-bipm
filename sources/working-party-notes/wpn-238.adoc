@@ -1,0 +1,192 @@
+= BIPM Working Party Note 238
+:copyright-year: 1995
+:revdate: 01-1995
+:language: en
+:docnumber: 238
+:title-en: The relation between the numbers stem:[M_r] and stem:[B_j]
+:title-fr: 
+:doctype: working-party-note
+:committee-en:
+:committee-fr:
+:committee-acronym:
+:fullname: Jorg W. Müller
+:affiliation:
+:docstage: in-force
+:docsubstage: 60
+:imagesdir: images
+:mn-document-class: bipm
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+
+== The relation between the numbers stem:[M_r] and stem:[B_j]
+
+In our recent study <<muller>> on alternate sums of powers of integers, i.e. of sums of the type
+
+[[eq1]]
+[stem]
+++++
+""_rZZ_n = sum_(j=1)^n (-1)^j j^r, " with " r = 1,2,...,
+++++
+
+it was shown that they can be expressed in the form
+
+[[eq2]]
+[stem]
+++++
+""_rZZ_n = sum_(j=1)^(r-1) ""_rmu_j t^j + 1/2 (-1)^n (2t)^r,
+++++
+
+where stem:[t = [(n+1)/2\]] is given by the number of terms in <<eq1>>, while stem:[""_rmu_j] are coefficients that have been tabulated.
+
+We found that these coefficients can be expressed by the "basic" integers stem:[M_r -= ""_rmu_1], since
+
+[[eq3]]
+[stem]
+++++
+""_rmu_j = (2^(j-1)r!)/(j!(r-j+1)!) M_(r-j+1)," for " r > j
+++++
+
+The alternate sum <<eq1>>, written in powers of stem:[t], thus begins for stem:[r] even with
+
+[[eq4]]
+[stem]
+++++
+""_rZZ_n = M_rt + ""_rmu_2t^2 + ...,
+++++
+
+whereas for stem:[r] odd there is no term proportional to stem:[t].
+
+It appears that the numbers stem:[M_r] play a role similar to that of the well-known Bernoulli numbers stem:[B_j] which occur in the study of the sums
+
+[[eq5]]
+[stem]
+++++
+""_rS_n -= sum_(j=1)^n j^r.
+++++
+
+Some similarities between the numbers stem:[B_j] and stem:[M_r] have already been noted in <<muller>>, but it has not been possible to establish a clear link between the two series. It is the purpose of the present Note to make up for this deficiency. Some familiarity with <<muller>> will make the reading easier.
+
+The idea is to use the fact that the numbers stem:[M_r] are the coefficients of stem:[t], as shown in <<eq4>>. If we can subdivide stem:[""_rZZ_n] into a sum of contributions of type stem:[""_rS_n] and determine the coefficients of the linear terms stem:[t] (in which the Bernoulli numbers occur), it must be possible to obtain the required relation by comparison of the respective coefficients.
+
+Let us begin by decomposing the alternate sum <<eq1>> in a suitable way - the very  rearrangement we tried to avoid in <<muller>>. Since stem:[n] is even, we can put stem:[n//2 = t]. Then
+
+[[eq6]]
+[stem]
+++++
+""_rZZ_n = sum_(j=1)^t (2j)^r - sum_(j=1)^t (2j-1)^r
+++++
+
+[stem%unnumbered]
+++++
+= 2^r sum_(j=1)^t j^r - 2^r (1/2)^r sum_(j=1)^t sum_(k=0)^r ((r),(k)) (-2)^k j^k
+++++
+
+[stem%unnumbered]
+++++
+= 2^r ""_rS_n - sum_(k=0)^r ((r),(k)) (-2)^k ""_kS_n
+++++
+
+[stem%unnumbered]
+++++
+= -sum_(k=0)^(r-1)((r),(k))(-2)^k ""_kS_n.
+++++
+
+Let us now look at the development of a Bernoullian sum stem:[""_rS_n]. From relation (23) given in <<muller>> we conclude that, for stem:[r >= 2] and even,
+
+[[eq7]]
+[stem]
+++++
+""_rS_n = ... + 1/r ((r),(r-1)) B_r t^(r+1-r) = ... + B_rt.
+++++
+
+We note in passing that stem:[""_rS_n] with stem:[r] odd has no terms proportional to stem:[t] as the development stops at stem:[t^2], exactly as for stem:[""_rZZ_n].
+
+The two cases with stem:[r = 0] and stem:[r = 1] appearing in <<eq6>> have to be treated separately. One finds
+
+[[eq8]]
+[stem]
+++++
+""_0S_n = t
+++++
+
+and
+
+[stem%unnumbered]
+++++
+""_1S_n = 1/2t + 1/2t^2.
+++++
+
+A look at <<eq4>> shows that the value of stem:[M_r] can be obtained from <<eq6>> by assembling the coefficients of stem:[t] appearing in stem:[""_kS_n]. Writing <<eq6>> as
+
+[[eq9]]
+[stem]
+++++
+""_rZZ_n = - ""_0S_n + 2r_1S_n - sum_(k=2)^(r-1) ((r),(k)) (-2)^k ""_kS_n,
+++++
+
+we find, with <<eq7>> and <<eq8>>,
+
+[[eq10]]
+[stem]
+++++
+M_r = -1 + 2r 1/2 - sum_(j=2)^(r-1) ((r),(j)) (-2)^j B_j
+++++
+
+[stem%unnumbered]
+++++
+= r - 1 - sum_(j=2)^(r-2) 2^j ((r),(j)) B_j,
+++++
+
+(even)
+
+This is the relation looked for. It shows that the two series of numbers stem:[M_r] and stem:[B_j] are indeed closely linked, and relation <<eq10>> is even somewhat reminiscent of the recurrence formula (18) found previously in <<muller>>. It may be worthwhile noting that the sum in <<eq10>> yields an even integer.
+
+Let us check (10) with three practical applications.
+
+* For = 8:
++
+--
+[stem%unnumbered]
+++++
+M_8 = 8 -1 -sum_(j=2)^6 2^j ((8),(j)) B_j
+++++
+
+[stem%unnumbered]
+++++
+= 7 - [2^2 ((8),(2)) B_2 + 2^4 ((8),(4)) + 2^6 ((8),(8)) B_6]
+++++
+
+[stem%unnumbered]
+++++
+= 7 - [(4 28)/6 - (16 70)/(30) + (64 28)/(42)] = -17;
+++++
+--
+* for stem:[r = 10] :
++
+--
+[stem%unnumbered]
+++++
+M_(10) = 10 - 1 - sum_(j=2)^8 2^j ((10),(j)) B_j = ... = 155;
+++++
+--
+* for stem:[r = 12] :
++
+--
+[stem%unnumbered]
+++++
+M_(12) = 11 - sum_(j=2)^(10) 2^j ((12),(j))B_j = ... = -2" "073
+++++
+--
+
+All these results agree with the numerical values given in <<muller>>.
+
+Obviously, the existence of the new relation <<eq10>> does not me an that the numbers stem:[M_r] become superfluous; their practical usefulness is obvious in <<muller>>. In any case, <<eq10>> is a very useful tool for their numerical evaluation, since it is a simple relation making use only of the Bernoulli numbers, which are readily available in tabular form, for example up to stem:[B_(60)] in <<abramowitz>>.
+
+[bibliography]
+== References
+
+* [[[muller,1]]], J.W. Müller: "Sums of alternate powers - an empirical approach", Rapport BIPM-94/14 (1994)
+
+* [[[abramowitz,2]]], "Handbook of Mathematical Functions", eg. .. by M. Abramowitz and I.A. Stegun, NBS, AMS 55 (GPO, Washington, 1964)
