@@ -1,0 +1,102 @@
+= Guide to the Realization of the ITS-90
+:appendix: 2
+:partnumber: 1
+:edition: 1
+:copyright-year: 2019
+:revdate: 2019-05-20
+:language: en
+:docnumber: ITS-90
+:title-en: Guide to the Realization of the ITS-90 -- Fixed Points for Radiation Thermometry
+:doctype: guide
+:committee-en: Consultative Committee for Thermometry
+:committee-acronym: CCT
+:workgroup: Task Group for the Realization of the Kelvin
+:workgroup-acronym: CCT-TG-K
+:fullname: H. McEvoy, G
+:fullname_2: G. Machin
+:fullname_3: V. Montag
+:docstage: in-force
+:docsubstage: 60
+:imagesdir: images
+:mn-document-class: bipm
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+
+[.preface]
+== Abstract
+
+This paper is a part of guidelines, prepared on behalf of the Consultative Committee for Thermometry, on the methods how to realize the International Temperature Scale of 1990.
+
+It discusses temperature fixed points in radiation thermometry when used for the realization of the International Temperature Scale of 1990 at high temperatures.
+
+
+== Fixed Points for Radiation Thermometry
+
+The International Temperature Scale of 1990 (ITS-90) is defined above the freezing point of silver in terms of a defining fixed point and the Planck radiation law [<<Preston1990,Preston-Thomas 1990>>] in ratio form. The defining fixed points are the freezing points of Ag (stem:[961.78 " °C"]), Au (stem:[1064.18 " °C"]) and Cu (stem:[1084.62 " °C"]).
+
+Specific design and construction of the defining fixed point cells vary. Crucibles are constructed with a re-entrant blackbody cavity, the dimensions of which are designed to offer the highest emissivity whilst remaining practical for use. For example a cavity of length stem:[l = 50 " mm"], aperture radius stem:[r = 3 " mm"], and an assumed emissivity of stem:[0.86] for the graphite gives a calculated (isothermal) cavity emissivity of stem:[0.99964] [<<Yoon2007,Yoon _et al._ 2007>>]. Alternatively a cavity of length stem:[l = 97 " mm"], radius stem:[8 " mm"] and aperture radius stem:[r = 1.5 " mm"] also with an assumed emissivity for the graphite of stem:[0.86] gives a calculated (isothermal) cavity emissivity of stem:[0.999961] [<<Fischer1989,Fischer and Jung 1989>>]. Ideally to ensure uniform temperature of the emitting cavity during a melt or freeze, the crucible should be designed so that the melting or freezing metal extends beyond the aperture. Although not essential, an aperture of material with low emissivity metal, for example Rh, can be placed at the aperture of the cavity to assist alignment of the pyrometer [<<Chu1994,Chu _et al._ 1994>>]. This should only be used if a low size-of-source effect pyrometer is used in conjunction with the fixed point [Radiometric Temperature Measurements 2010]. <<fig1>> and <<fig2>> show two typical fixed point designs.
+
+
+[[fig1]]
+.Design of a Ag, Au and Cu fixed point crucible. The conical cavity has an apex angle of 57° [<<Yoon2007,Yoon _et al._ 2007>>].
+image::02_5-radiation-thermometry/fig1.png[]
+
+[[fig2]]
+.Schematic design of a Au fixed point blackbody cavity andcrucible [<<Chu1994,Chu _et al._ 1994>>].
+image::02_5-radiation-thermometry/fig2.png[]
+
+
+Primary fixed point crucibles are made from high purity graphite that once machined is baked in a vacuum for further purification at stem:[> 1000 " °C"] [<<Ricolfi1977,Ricolfi and Lanza 1977>>]. The filling process generally entails placing pure metal shot into the crucible or a filling hopper and melting the metal with the crucible in a vertical orientation under vacuum. This process needs to be repeated until the internal volume is almost full when the metal is liquid [<<Navarro1999,Navarro _et al._ 1999>>]. Contamination of the metal sample and crucible should be avoided during the filling process.
+
+Metal samples of purity between stem:[99.999%] (5N) and stem:[99.9999%] (6N) are used, to avoid the temperature of a freezing point of the substance being altered (almost invariably depressed) by the presence of impurities, see _Guide_ Section 2.1 _Influence of impurities_. Differences in freezing temperature of less than 10 mKhave been found between samples of 5N and 6N Ag [<<Mangum1990,Mangum and Furukawa 1990>>, <<Fischer2003,Fischer _et al._ 2003>>]. The amount of pure metal used in the fixed point crucible varies dependent on design, but there should be sufficient material to provide a useful freeze duration, and typical quantities of metals range from stem:[0.5 " kg"] to stem:[1.5 " kg"] [<<Ricolfi1977,Ricolfi and Lanza 1977>>, <<Yoon2005,Yoon _et al._ 2005>>, <<Bongiovanni1975,Bongiovanni _et al._ 1975>>].
+
+Fixed point blackbodies must provide a continuous liquid/solid interface around the cavity and as such need to be isothermal. Therefore, a suitable furnace design and set-up ought to be used for Ag, Au and Cu fixed point blackbody realisations to enable this requirement. Modern multi-zone furnaces can offer a suitably uniform temperature distribution along the work tube, however the user will need to investigate the effect of temperature control off-sets for the different zones to obtain the lowest thermal gradients. Alternatively, at least for the Ag fixed point realisation, a single zone furnace can be used with the inclusion of a sodium filled Inconel heat pipe footnote:[Although Na heat pipes can be used for Au and Cu point, their lifetime is greatly reduced (from stem:[~17500] hours to stem:[~1000] hours) when operated above stem:[1000 " °C"] (http://www.1-act.com/newsitems/view/87/ACT_Manufactures_Ultra_High_Temperature_Heat_Pipes_for_Thermometry_Calibration_at_the_Copper_Melting_Point)] [<<McEvoy2003,McEvoy _et al._ 2003>>]. For both configurations, a quartz or an alumina tube should be inserted into the furnace work tube or heat pipe to avoid contamination of the pure metal in the crucible from the surroundings. The blackbody crucible should be placed in the tube in the region of highest temperature uniformity of the furnace. To prevent oxidation of the graphite crucible, pure, inert gas, for example Ar (or N~2~) must flow through the tube whilst the furnace is in operation above about stem:[450 " °C"]. The flow rate of gas is generally slow, examples being between stem:[(0.1 – 0.2) l//"minute"] [<<Yoon2007,Yoon _et al._ 2007>>, <<Ali2005,Ali 2005>>], however exact requirements will depend on design. Sometimes a water-cooled cap is placed at the ends of the quartz tubes to enable an inert gas atmosphere to be maintained around the fixed point crucible before use [<<Battuello2010,Battuello _et al._ 2010>>]. In addition, sacrificial graphite rings can be placed either side of theblackbody assembly to prevent any stray oxygen from reaching the crucible. Insulating blocks in the work tube will further improve temperature uniformity along the blackbody assembly. For an example set-up see <<fig3>>.
+
+
+[[fig3]]
+.Schematic diagram of a Ag point assembly using a Naheat pipe [<<Ali2005,Ali 2005>>].
+image::02_5-radiation-thermometry/fig3.png[]
+
+
+In summary, a primary fixed point blackbody should be constructed and used with the following properties:
+
+* Designed with a high emissivity cavity, typically stem:[> 0.9999].
+* Filled with high-purity metal, at least 5N.
+* Constructed using high-purity graphite crucible.
+* Contain enough metal to exhibit useful freeze durations.
+* During the use of the primary fixed-point blackbody, measures should be taken to avoid oxidation by using a high purity inert gas and the crucible protected using sacrificial graphite pieces.
+* The furnace environment should be as uniform as possible around the fixed point crucible to facilitate flat freeze plateaus.
+
+
+[bibliography]
+== References
+
+* [[[Ali2005,1]]] Ali K (2005) "Consistency of the freezing temperatures of silver and copper assigned by ITS-90", _Proc. TEMPMEKO 2004,_ ed. by Zvizdic, D., Laboratory for Process Measurement, Faculty of mechanical Engineering and Naval Architecture, Zagreb, pp. 107-112
+
+* [[[Battuello2010,1]]] Battuello M,Girard F and Florio M (2010) "Indirect Determination of the Thermodynamic Temperature of a Gold Fixed-Point Cell", _Int. J. Thermophys._ *31* 1491-1497
+
+* [[[Bongiovanni1975,1]]] Bongiovanni G, Crovini L and Marcarino P (1975) "Effects of Dissolved Oxygen and Freezing Techniques on the Silver Freezing Point", _Metrologia_ *11* 125-132
+
+* [[[Chu1994,1]]] Chu B, McEvoy H C and Andrews J W (1994) "The NPL Reference Sources of Blackbody Radiation", _Measurement Science and Technology_ *5* 13-19
+
+* [[[Fischer2003,1]]] Fischer J, Battuello M, Sadli M, Ballico M, Park S N, Saunders P, Zundong Y, Carol Johnson B, van der Ham E, Li W, Sakuma F, Machin G, Fox N, Ugur S and Matveyev M (2003) "CCT-WG5 on Radiation Thermometry: Uncertainty budgets for realisation of scales by radiation thermometry" Document http://www.bipm.org/cc/CCT/Allowed/22/CCT03-03.pdf[CCT/03-03], (BIPM, Paris)
+
+* [[[Fischer1989,1]]] Fischer J and Jung H J (1989) "Determination of the thermodynamic Temperatures of the Freezing Points of Silver and Gold by Near-Infrared Pyrometry", _Metrologia_ *26*. 245-252
+
+* [[[Mangum1990,1]]] Mangum B W and Furukawa G T (1990) "Guidelines for Realizing the International Temperature Scale of 1990 (ITS-90)", _NIST Technical note_ *1265*
+
+* [[[McEvoy2003,1]]] McEvoy H, Machin G, Friedrich R, Hartmann J and Hollandt J (2003) "Comparison of the New NPL Primary Standard Ag Fixed Point Blackbody Source with the Primary Standard Fixed Point of PTB", in _Temperature: Its Measurement and Control in Science and Industry_, Vol*7*, ed. Ripple D C _et al_, American Institute ofPhysics, Melville, pp. 909-914
+
+* [[[Navarro1999,1]]] Navarro M, Bruce S S, Johnson B C, Murthy A V, Saunders R D (1999) "Vacuum Processing Technique for Development of Primary Standard Blackbodies", _Journal of Research of the National Institute of Standards and Technology_ *104*253
+
+* [[[Preston1990,1]]] Preston-Thomas H (1990) "The International Temperature Scale of 1990 (ITS-90)", _Metrologia_ *27*3-10
+
+* [[[Radiometric2010,1]]] _Radiometric Temperature Measurements: I. Fundamentals_, 2010, Academic press,p. 146
+
+* [[[Ricolfi1977,1]]] Ricolfi T and Lanza F (1977) "The Silver and Copper Freezing Points as Accurate Reference Standards for Radiation Pyrometry", _High temp- High press_ *9* 483-487
+
+* [[[Yoon2005,1]]] Yoon H W, Allen D W, Gibson C E, Litorja M, Saunders R D, Brown S W, Eppeldauer G P and Lykke K R (2005) "Temperature Determination of The Ag-and Au- Freezing Point using a Detector-Based Radiation Thermometer", _Proc. TEMPMEKO 2004,_ ed. by Zvizdic, D, Laboratory for Process Measurement,Faculty of mechanical Engineering and Naval Architecture, Zagreb, pp. 113-118
+
+* [[[Yoon2007,1]]] Yoon H W, Allen D W, Gibson C E, Litorja M, Saunders R D, Brown S W, Eppeldauer G P and Lykke K R (2007) "Thermodynamic Temperature Determinations of the Ag- and Au-Freezing Temperatures using a Detector-based Radiation Thermometer", _Applied Optics_ *46* 2870-2880
