@@ -1,0 +1,164 @@
+= BIPM Working Party Note 203
+:copyright-year: 1974
+:revdate: 11-1974
+:language: fr
+:docnumber: 203
+:title-en:
+:title-fr: Densité d'intervalles pour deux oscillateurs superposés à largeurs finies d'impulsions
+:doctype: working-party-note
+:committee-en:
+:committee-fr:
+:committee-acronym:
+:fullname: Jörg W. Müller
+:affiliation:
+:docstage: in-force
+:docsubstage: 60
+:imagesdir: images
+:mn-document-class: bipm
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+== Densité d'intervalles pour deux oscillateurs superposés à largeurs finies d'impulsions
+
+Il ya quelque temps déjà que J.-J. Gostely (E.P.F.L., Lausanne) nous a communiqué le résultat d'une étude qui est en relation étroite avec la méthode dite des deux oscillateurs pour déterminer un temps mort. Mr Gostely a fort justement remarqué que la simple distribution rectangulaire pour la répartition d'intervalles, que l'on a pris l'habitude d'admettre, n'est valable que si l'on peut négliger la,largeur a des impulsions par rapport à la durée du temps mort stem:[tau] que l'on veut déterminer. Si cette contrainte n'est pas respectée, la mesure risque d'être faussée systématiquement.
+
+En effet, la largeur finie des impulsions entraîne des pertes puisque dans le processus superposé deux impulsions (provenant d'oscillateurs différents) ne sont comptées individuellement que si l'intervalle qui les sépare dépasse cette largeur. Il a donc un effet semblable à celui d'un temps mort. Pour la mesure de stem:[tau], on se trouve alors dans une situation qui ressemble beaucoup au cas de deux temps morts successifs et qui risque d'être assez compliquée. Il faut donc se demander si ce phénomène met en doute l'exactitude très élevée que l'on avait attribuée à cette méthode de mesure.
+
+A vrai dire, ce détail ne nous avait pas tout à fait échappé quand la méthode fut proposée. Cependant, quelques raisonnements simples, confirmés par des, calculs, nous ont convaincu que, dans les conditions appliquées aux mesures réelles, la largeur des impulsions ne devrait avoir aucune influence sur les' résultats et que ce serait seulement pour un temps mort comparable ou plutôt inférieur à la largeur a que celle-ci fausserait les valeurs déduites pour stem:[tau]. Or, puisque a est normalement de l'ordre d'une dizaine de nanosecondes tandis que stem:[tau] dépasse toujours une microseconde, il ne devrait pas y avoir de danger réel. L'autre zone périlleuse, celle où le temps mort se rapproche de l'inverse de la fréquence la plus élevée, peut être facilement évitée par une réduction des fréquences utilisées.
+
+Néanmoins, il faut avouer que les problèmes liés à la largeur finie des impulsions n'ont jamais été traités dans tous les détails et, puisqu'on est bien souvent surpris de constater comme il est facile de commettre des erreurs dans ce genre de raisonnement, un léger doute ne pouvait être écarté complètement. C'est pourquoi le calcul de la répartition des intervalles pour le processus superposé, où la largeur des impulsions a été prise en considération de façon rigoureuse, vient fort à propos. Le résultat de Mr Gostely pour la densité des intervalles est
+
+[stem%unnumbered]
+++++
+f(t) = 1/(T_1+T_2-a_1-a_2) [U(t-a_1) * U(T_1+a_2-t)
+++++
+
+[stem%unnumbered]
+++++
++U(t-a_2) * U(T_1-a_1-t) + (T_2-T_1+a_1-a_2) * delta(t-T_1)],
+++++
+
+où stem:[nu_1 = 1//T_1] et et stem:[nu_2=1//T_2] sont les fréquences des deux oscillateurs, et stem:[a_1] et stem:[a_2] les largeurs de leurs impulsions.
+
+On y odmet que
+
+[stem%unnumbered]
+++++
+2a_2 < T_1 < T_2 " et " T_1 + a_2 < T_2.
+++++
+
+L'allure de cette densité est représentée sur la <<fig1>> {où l'on suppose stem:[a_1 < a_2]).
+
+A première vue, cette distribution peut surprendre, car elle est assez différente de la simple forme rectangulaire (de 0 à stem:[T_1]), qui se termine par une fonction delta à l'endroit stem:[T_1]; mais ceci provient sùrtout du fait que stem:[a_1] et stem:[a_2] y ont été fortement exagérés.
+
+Puisque Mr Gostely ne nous a pas indiqué comment il a obtenu le résultat pour la densité stem:[f(t)], notre première tâche était de la dériver indépendamment. En utilisant largement des notes qui remontent dans leur maiorité à 1968/69, ce premier but n'était pas trop dur à atteindre. En effet, le résultat de Gostely s'est bien confirmé.
+
+En admettant que stem:[T_l < T_2] - ce qui n'est qu'un problème de nomenclature et n'entraîne aucune res,trictian -, nous trouvons, sous la saule condition que stem:[T_1 > a_l +a_2], la formule suivante:
+
+[stem%unnumbered]
+++++
+(T_1+T_2-a_1-a_2)*f(t) = {(0,pour,{(0<t<a_(-)),("ou "t>T_(-)+a_2):}),(1,"''",{(a_(-)<t<a_+","),(T_1-a_1<t<T_(-)),("ou "T_1<t<T_(-)+a_2):}),(2,"''",a_+<t<T_1-a_1),((T_3-T_(-)+a_1)*delta(t-T_1),pour,t=T_1),((T_1-T_4)*delta(t-T_2),"''",t=T2","):}
+++++
+
+[[fig1]]
+.Densité d'intervalles pour stem:[T_2 - T_1 > a_2]
+image::img01.png[]
+
+[[fig2]]
+.Densité d'intervalles pour stem:[T_2 - T_1 < a_2]
+image::img02.png[]
+
+[align=left]
+où:: stem:[T_+ -= "Max"(T_1,T_2-a_2)], +
+stem:[T_(-) -= "Min"(T_1,T_2-a_2)]
+
+[align=left]
+et:: stem:[a_+ -= "Max"(a_1,a_2)], +
+stem:[a_(-) -= "Min"(a_1,a_2)].
+
+Pour stem:[a_(1,2) < T_1//2], le taux de comptage du processus superposé est taujours donné par
+
+[stem%unnumbered]
+++++
+nu = nu_1 + nu_2 - (a_1+a_2) nu_1 nu_2.
+++++
+
+Alors que pour le cos normal, où stem:[T_1<T_2-a_2], cette formule se réduit (comme on le vérifie aisément) à l'expression de Gostely donnée auparavant, l'allure qu'elle prend pour stem:[T_1 > T_2 - a_2] peut être assez différente; on en trouve un exemple dans la <<fig2>>.
+
+La dérivation de la formule générale, bien que tout élémentaire, serait cependant trop longue pour être indiquée ici; les raisonnements détaillés seront décrits dans un petit rapport à part qui est en préparation.
+
+Or, il faut se rendre compte que tout ceci n'est que le prélude inévitable à notre problème principal, qui n'est pas le calcul de stem:[f(t)], mais la détermination d'un temps mortl stem:[tau] inséré dons la série superposée. C'est à partir du taux de comptage expérimental stem:[nu_3] des impulsions "survivantes" que l'on essaiera de déterminer la voleur numérique et le type de stem:[tau]. Pour cette deuxième partie du problème, une solution générale est plus difficile à trouver que pour la première. Bien qu'un grand travail reste à faire, les résultats essentiels (et les plus intéressants) sont déjà bien établis.
+
+En principe, stem:[nu_3] se détermine à partir de la densité modifiée stem:[F(t)] qui décrit les intervalles entre impulsions successives dons le processus perturbé par l'insertion d'un temps mort, et c'est justement le calcul de stem:[F(t)] qui est long et difficile. Rappelons que cela avait déjà été fastidieux pourile simple cas stem:[a=0]. Heureusement, ce travail de forçat peut être largement évité, au moins pour l'esse ntiel des réponses.
+
+Comme dans des situations semblables, c'est de nouveau le temps mort du type cumulatif qui se prête le mieux à un traitement rigoureux. En effet, dans ce cas on a
+
+[stem%unnumbered]
+++++
+nu_3 = nu[1-int_0^(tau)f(t)dt].
+++++
+
+Considérons maintenant le domaine principal pour le temps mort qui est délimité par
+
+[stem%unnumbered]
+++++
+a_+ < tau < T_1-a_1.
+++++
+
+On trouve dans ces conditions
+
+[stem%unnumbered]
+++++
+int_0^(tau)f(t)dt = (a_+ - a_(-)+2(tau-a_+))/(T_1+T_2-a_1-a_2),
+++++
+
+d'où découle
+
+[stem%unnumbered]
+++++
+nu_3 = nu[(T_1+T_2-2tau)/(T_1+T_2-a_1-a_2)].
+++++
+
+En remplaçant stem:[t_(1,2)] par stem:[1//nu_(1,2)] on obtient, après quelques réarrangements,
+
+[stem%unnumbered]
+++++
+nu_3 = nu_1 + nu_2 - 2tau * nu_1nu_2.
+++++
+
+Or, cette simple formule nous est bien familière; car elle est identique à celle qui avait été établie pour stem:[a=0] (voir Rapport BIPM-69/3 ou 69/11). Ce résultat est précieux car il nous garantit - au moins pour un temps mort cumulatif - que l'influence due à la largeur finie des impulsions se limite aux cas où
+
+[stem%unnumbered]
+++++
+tau < a_+ " et " T_1-a_1 < tau < T_1,
+++++
+
+tandis que le domaine habituel pour stem:[tau] n'est point affecté.
+
+Pour de très petits temps morts (inférieurs aux largeurs des impulsions) on trouve, après un petit calcul analogue, pour le taux de comptage observable 
+
+[stem%unnumbered]
+++++
+nu_3 = {(nu,pour,0<tau<a_(-)),(nu-(tau-a_(-))nu_1nu_2,"''",a_(-)<tau<a_+","):}
+++++
+
+où stem:[nu] a été donné auparavant.
+
+Quant au cas d'un temps mort non cumulatif, la situation est un peu plus compliquée. Cependant, on peut de nouveau éviter le calcul fastidieux de stem:[F(t)] en tirant profit d'un raisonnement indirect. Puisque pour notre processus superposé, un double intervalle (entre trois impulsions successives) ne peut être inférieur à stem:[T_1] il s'ensuit qu'un temps mort cumulatif avec stem:[tau <= T_1//2] n'a pas de chance d'effacer, à l'aide de sa partie prolongée (entre stem:[tau] et stem:[2tau], donc inférieure à stem:[T_l]), une outre impulsion, puisqu'il n'yen a pas. Par conséquent, le coractère cumulatif ne peut pas se manifester si stem:[tau] est inférieur à stem:[T_1//2]. Mais en revanche, cela signifie aussi que pour ce domaine le toux expérimental stem:[nu_3] ne dépend pas du type du temps mort. Un raisonnement semblable permet d'assurer que la relation
+
+[stem%unnumbered]
+++++
+nu_3 = nu_1
+++++
+
+reste volable pour un temps mort non cumulatif dont la valeur respecte la contrainte
+
+[stem%unnumbered]
+++++
+T_1//2 < tau < T_1 -a_1.
+++++
+
+De nouveau, l'influence d'une largeur finie des impulsions se borne donc aux limites extrêmes du domaine attribué auparavant aux voleurs numériques" d'un temps mort, et de ce fait elle ne représente guère un danger réel de fausser les résultats obtenus pour un temps mort par la méthode des deux oscillateurs.
+
+Terminons en félicitant Mr Gostely d'avoir lancé une attaque méritoire vers ce problème un peu ingrat, puisque difficile, long et sans éclat. Néanmoins, le résultat est important car il nous permet de mieux comprendre les détails de la mesure, et en particulier d'être rassuré sur l'exactitude de la méthode telle qu'elle a été utilisée jusqu'à maintenant. Enfin, cette occasion nous a obligé de reprendre quelques anciens calculs pour y apporter un peu plus de clarté et de précision, opération qui a peu d'attrait en elle-même et qu'on préfère par conséquent souvent ne pas entreprendre.
