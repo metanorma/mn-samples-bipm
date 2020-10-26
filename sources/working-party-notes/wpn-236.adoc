@@ -1,0 +1,188 @@
+= BIPM Working Party Note 236
+:copyright-year: 1993
+:revdate: 04-1993
+:language: en
+:docnumber: 236
+:title-en: Pooled variances
+:title-fr: 
+:doctype: working-party-note
+:committee-en:
+:committee-fr:
+:committee-acronym:
+:fullname: Jörg W. Müller
+:affiliation:
+:docstage: in-force
+:docsubstage: 60
+:imagesdir: images
+:mn-document-class: bipm
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+== Pooled variances
+
+Experimenters in general are weIl advised to subdivide lengthy measurements into a number of shorter ones, whenever feasible. This gives them the possibility - should anything have gone wrong - at least to be aware of the problem and to know roughly when it occurred. If the results do not indicate an anomaly, the partial results must be combined in such a way that the outcome characterizes the entire measuring period.
+
+Problems with recent measurements have led us to re-consider the question of how experimental values for the variance, obtained in sequences of runs, should be used to arrive at a "best" overall estimate.
+
+This problem occurs rather frequently and, no doubt, has been treated many times. A few years ago we looked at the special case of two samples <<muller>>. In what follows these earlier findings are generalized to include an arbitrary number m of samples. It is shown that the contributions arising from the differences between the individual mean values can be incorporated in those terms that involve only the measured variances.
+
+Suppose that we have to deal with a situation which is "under statistical control". What we actually require is that the first two moments of the number stem:[x] of events, counted in a given time interval, show no significant trend with time.
+
+Now consider measurements that have been performed on m samples, of size stem:[n_j" " (j = 1, 2, ... , m)], taken randomly from sorne stable population. Let the results be available in the form of me an values stem:[bar x_j] and variances stem:[s_j^2] (for a single measurement), which have been obtained by forming from the measurements stem:[x_(ij)] the quantities
+
+[[eq1]]
+[stem]
+++++
+bar x_j = 1/(n_j) sum_(i=1)^(n_j) x_(ij)
+++++
+
+and
+
+[[eq2]]
+[stem]
+++++
+s_j^2 = 1/(n_j-1) sum_(i=1)^(n_j) (x_(ij)-x_j)^2.
+++++
+
+This allows us to form the weighted mean value
+
+[stem%unnumbered]
+++++
+bar(barx) = 1/N sum_(j=1)^m n_jx_j,
+++++
+
+where
+
+[stem%unnumbered]
+++++
+N = sum_(j=1)^m n_j
+++++
+
+is the total number of measurements performed. Note that all the variances <<eq2>> refer to a single measurement stem:[x_(ij)], not to a mean value stem:[bar x_j].
+
+Our problem is to evaluate, on the basis of the data given in <<eq1>> and <<eq2>>, a value for the variance of a single measurement, denoted by stem:[s^2(x)]. According to the definition of a variance, we have, considering all the stem:[N] measurements performed, the estimation
+
+[[eq3]]
+[stem]
+++++
+s^2(x) = 1/(N-1) sum_(j=1)^m sum_(i=1)^(n_j) (x_(ij)- bar(barx))^2.
+++++
+
+This expression will now be rearranged. In a first step we easily find
+
+[stem%unnumbered]
+++++
+(N-1) * s^2(x) = sum_(j=1)^m sum_(i=1)^(n_j) [(x_(ij)-bar x_j) + (bar x_j - bar(barx))]^2
+++++
+
+[[eq4]]
+[stem]
+++++
+= sum_j sum_i [(x_(ij)-bar x_j)^2 + (bar x_j - bar(barx))^2 + 2(x_(ij)-bar x_j)(bar x_j-bar(barx))].
+++++
+
+Since according to <<eq1>>
+
+[stem%unnumbered]
+++++
+sum_(i=1)^(n_j) (x_(ij)-bar x_j) = 0,
+++++
+
+we arrive, by using <<eq2>>, at the form
+
+[[eq5]]
+[stem]
+++++
+s^2(x) = 1/(N-1) sum_(j=1)^m [(n_j-1)s_j^2 + n_j(bar x_j - bar(barx))^2]^2.
+++++
+
+This is a useful identity. For the special case of stem:[m = 2] samples, it follows from <<eq1>> that
+
+[stem%unnumbered]
+++++
+bar x_1 - bar(barx) = bar x_1 - 1/N (n_1 bar x_1+n_2 bar x_2) = n_2/N (bar x_1 - bar x_2),
+++++
+
+and similarly
+
+[stem%unnumbered]
+++++
+bar x_2 - bar(barx) = n_1/N (bar x_2 - bar x_1).
+++++
+
+Hence, the relation <<eq5>> takes the form
+
+[[eq6]]
+[stem]
+++++
+s^2(x) = 1/(N-1) [(n_1-1)s_1^2 + (n_2-1)s_2^2 + (n_1n_2)/N (bar x_1 - bar x_2)^2],
+++++
+
+in agreement with a result given in <<muller>>.
+
+This procedure can be taken a step furthero To see this, let us recall the general formula for the variance stem:[s^2(bar y)] of a weighted mean value stem:[bar y], based on m measured results stem:[y_k] with statistical weights stem:[g_k]. This expression is known to be given by
+
+[[eq7]]
+[stem]
+++++
+s^2(bar y) = (sum_(k=1)^m g_k (y_k - bar y)^2)/((m-1) sum_(k=1)^m g_k). 
+++++
+
+Since in our case, i.e. for the measurement stem:[bar x_j] the sample sizes stem:[n_k] correspond to the weights stem:[g_k] we have the relation
+
+[stem%unnumbered]
+++++
+sum_(j=1)^m n_j (bar x_j - bar(barx))^2 = (m-1) sum_j n_j * s^2 (bar(bar x))
+++++
+
+[[eq8]]
+[stem]
+++++
+= (m-1) * s^2(x),
+++++
+
+as stem:[sum_j n_j = N] and stem:[s^2(bar(barx)) = s^2(x)//N].
+
+Note, however, that the last equation is not an identity: it is a statistical relation. Thus, it does not always hold numerically. It is true on the average and requires that experimental conditions do not change.
+
+If we take advantage of <<eq8>>, <<eq5>> can be brought into the form
+
+[stem%unnumbered]
+++++
+(N-1)*s^2(x) = sum_j (n_j-1) * s_j^2 + (m-1)*s^2(x),
+++++
+
+or
+
+[stem%unnumbered]
+++++
+s^2(x)[N-1 - (m-1)] = sum_j (n_j-1)*s_j^2.
+++++
+
+Hence, we arrive at the general formula
+
+[[eq9]]
+[stem]
+++++
+s^2(x) = (sum_(j=1)^m (n_j-1)*s_j^2)/(N-m),
+++++
+
+which allows us to obtain the required variance from those measured in the stem:[m] samples. This form is quite remarkable in that the experimental mean values stem:[bar x_j], present in <<eq5>>, have disappeared.
+
+For samples of equal size (stem:[n_j = n]) we are readily led to the expression
+
+[[eq10]]
+[stem]
+++++
+s^2(x) = 1/m sum_(j=1)^m s_j^2,
+++++
+
+for which even a knowledge of the sample size is no longer required.
+
+A comparison of <<eq10>> with <<eq3>> shows that, at least for equal groups of measurements obtained in stable conditions, pooled estimates of both the expectation value and the variance are obtained by simply forming arithmetical means. The reader, in hindsight, should feel free to find this result either trivial or quite remarkable. It is likely, although not proven, that analogous relations hold for the central moments of higher order.
+
+[bibliography]
+== References
+
+* [[[muller,1]]], J.W. Müller: "Moments d'échantillons superposés", BIPM WPN-215 (1980).
