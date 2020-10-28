@@ -1,0 +1,364 @@
+= Guide to the Realization of the ITS-90
+:appendix: 2
+:partnumber: 1
+:edition: 1
+:copyright-year: 2018
+:revdate: 2018-01-01
+:language: en
+:docnumber: ITS-90
+:title-en: Guide to the Realization of the ITS-90
+:part-title-en: Radiation Thermometry
+:doctype: guide
+:committee-en: Consultative Committee for Thermometry
+:committee-acronym: CCT
+:workgroup: Task Group for the Realization of the Kelvin
+:workgroup-acronym: CCT-TG-K
+:fullname: H Yoon
+:fullname_2: P Saunders
+:fullname_3: G Machin
+:fullname_4: A D Todd
+:docstage: in-force
+:docsubstage: 60
+:imagesdir: images
+:mn-document-class: bipm
+:mn-output-extensions: xml,html,pdf,rxl
+:si-aspect: K_k
+:local-cache-only:
+:data-uri-image:
+
+
+[.preface]
+== Abstract
+
+This paper is a part of guidelines, prepared on behalf of the Consultative Committee for Thermometry, on the methods how to realize the International Temperature Scale of 1990.
+
+It discusses the major issues linked to radiation thermometry for the realization of the International Temperature Scale of 1990 at high temperatures.
+
+
+== Introduction
+
+=== ITS-90 Definition
+
+Above the freezing point of silver, stem:[1234.93 " K"] (stem:[961.78 " °C"]), the temperature stem:[T_{90}] is, according to the definition of the ITS-90, defined by the equation
+
+[[eq1]]
+[stem]
+++++
+{L_{lambda} (T_{90})}/{L_{lambda} (T_{90} (X))} = {exp(c_2 / {lambda T_{90} (X)}) - 1} / {exp (c_2 / {lambda T_{90}}) - 1} ,
+++++
+
+where stem:[T_{90} (X)] refers to the silver stem:[{T_{90}("Ag") = 1234.93 " K"}], the gold stem:[{T_{90}("Au") = 1337.33 " K"}] or the copper stem:[{T_{90}("Cu") = 1357.77 " K"}] freezing points. stem:[L_{lambda} (T_{90})] andare the spectral radiances of a blackbody at the wavelength stem:[lambda] (in vacuo) at stem:[T_{90}] and at stem:[T_{90} (X)], respectively, and stem:[c_2 = 0.014 388 " m" cdot "K"] footnote:[Although the latest value of the second radiation constant, stem:[c_2], differs from that in the original definition [<<Mohr2012,Mohr _et al._ 2012>>\], the value of stem:[0.014388 " m K"] fixed in the original text of the ITS-90 is to be used.].
+
+
+=== Historical retrospective
+
+Since the introduction of ITS-90 in 1990, there have been several technological improvements that are now implemented in most of the national metrology institutes (NMIs). In the early years of ITS-90, radiation thermometers were insufficiently stable to maintain a temperature scale for long periods of time. For this reason, tungsten strip lamps, with their superior stability, were used to maintain the scale [<<Quinn1972,Quinn _et al_. 1972>>]. The radiation thermometer acted merely as a transfer device for comparing blackbody signals (at a given temperature) with lamp signals (at a given current). With improvements in radiation thermometer stability, particularly through the use of high-quality silicon photodiodes, the trend in NMIs has been to do away with tungsten strip lamps and maintain the temperature directly on the radiation thermometer. For this reason, tungsten strips lamps and transfer standard radiation thermometers are not discussed in this document and interested readers are referred to the literature [<<Quinn1990,Quinn 1990>>].
+
+Further improvements result from the widespread use of high-speed computers. When electronic computing resources were limited, techniques were developed to reduce the amount of numerical computation required to solve the resulting integral equation for stem:[T_{90}] (see <<eq2>> below). This involved the concept of a mean effective wavelength between temperatures stem:[T_{90} (X)] and stem:[T_{90}], which allowed the integral equation to be expressed as an algebraic equation, but is subject to a degree of approximation, and which allowed the definition of <<eq1>> to be implemented literally (albeit at a wavelength that depends on the temperature of the source and the chosen ITS-90 fixed point, in addition to the properties of the radiation thermometer). Now that computers are ubiquitous, the integral equation can be rapidly solved numerically as frequently as desired with no additional approximations. Consequently, the mean effective wavelength is not discussed in this document, but interested readers should see [<<Saunders2003,Saunders 2003>>].
+
+
+== Practical implementation of the ITS-90 definition
+
+=== The measured signal ratio
+
+<<eq1>> is merely a statement of the Planck radiance ratio expressed at a single wavelength. The definition for stem:[T_{90}] neither recommends a method by which, nor restricts the wavelength at which, the ratio of radiances is to be experimentally determined. Thus, the wavelength can be chosen freely, although subject to signal-to-noise considerations. However, in practice, because radiation thermometers necessarily have a finite spectral bandwidth, and because true blackbodies do not exist and measurements are not made in a vacuum, the monochromatic blackbody spectral radiance ratio given by <<eq1>> cannot be measured directly. Instead, the ratio, stem:[r], of spectral radiances integrated over the spectral responsivity of the radiation thermometer is the quantity that must be used to infer stem:[T_{90} (X)]:
+
+[[eq2]]
+[stem]
+++++
+r = {S(T_{90})}/{S(T_{90}(X))} = {int_0^{infty} epsilon (lambda, T_{90}) L_{lambda} (T_{90}) R(lambda) "d"lambda} / {int_0^{infty} epsilon_X (lambda, T_{90}(X)) L_{lambda} (T_{90}(X)) R(lambda)"d"lambda}
+++++
+
+where:
+
+* stem:[r] is the experimentally measured ratio of detector signals;
+
+* stem:[S (T_{90})] and stem:[S (T_{90}(X))] are the individual measured detector signals (e.g. voltage orcurrent) when the radiation thermometer is aimed at a target with temperature stem:[T_{90}], and at the ITS-90 fixed point (silver, gold or copper), respectively;
+
+* stem:[T_{90} (X)] is the defined temperature of the ITS-90 fixed point (silver, gold or copperfreezing point);
+
+* stem:[epsilon (lambda,T_{90})] is the spectral emissivity of the target at temperature stem:[T_{90}];
+
+* stem:[epsilon_X (lambda, T_{90}(X))] is the effective spectral emissivity of the ITS-90 fixed-pointblackbody cavity used (silver, gold or copper);
+
+* stem:[L_{lambda} (T_{90}) = c_1 / {n_{lambda}^2 lambda^5} [exp(c_2 / {n_{lambda} lambda T_{90}}) - 1\]^{-1} ] is the Planck blackbody radiance law at temperature stem:[T_{90}] for a medium with refractive index stem:[n_{lambda}], with stem:[c_1] being the first radiation constant;
+
+* stem:[R (lambda)] is the spectral responsivity of the radiation thermometer;
+
+* stem:[lambda] is the wavelength in the medium in which the radiation thermometer is immersed(usually air).
+
+The integrands in <<eq2>> are close to zero outside the passband defined by the spectral filter of the radiation thermometer, so in practice the limits of integration are compressed to the wavelength region where the spectral responsivity is demonstrably greater than zero. The value of stem:[c_1] in Planck's law cancels in forming the ratio stem:[r], so its value is unimportant. Likewise, because of the low dispersion of air, the stem:[n_{lambda}^{-2}] factor effectively cancels for the typically narrow bandwidths employed inrealising ITS-90. However, the refractive index factor inside the exponential term in Planck's law can be significant for high-accuracy measurements. The spectral emissivities of the ITS-90 blackbody and of the unknown source (which is also generally a blackbody when maintaining ITS-90) can usually be considered to be constant over the bandwidth of the radiation thermometer, so these two quantities can be taken outside their respective integrals in <<eq2>>. Finally, because <<eq2>> is a ratio, the relative spectral responsivity, stem:[s (lambda)], can be used in place of the absolute spectral responsivity, stem:[R (lambda)].
+
+In addition to determining the parameters appearing directly in <<eq2>>, ITS-90 scale realization requires an evaluation of the size-of-source effect (SSE), and an assessment of the linearity of the radiation thermometer. These issues are discussed in <<cls_4>> and <<cls_5>>, respectively.
+
+
+=== Measuring the relative spectral responsivity
+
+Although, as mentioned above, no wavelength is specified in the ITS-90, the wavelength at which radiation thermometers operate when being used to establish the ITS-90 is usually within the range from stem:[600 " nm"] to stem:[1000 " nm"].
+
+The relative spectral responsivity of the thermometer can be measured directly by aiming the thermometer at the exit port of an integrating sphere placed at the exit slit of a monochromator. The integrating sphere acts to create a lambertian, unpolarized, quasi-monochromatic source. The spectral power output from the integrating sphere should be measured with a non-selective (spectrally flat) radiation detector [<<Battuello1995,Battuello _et al_. 1995>>], so that the relative spectral responsivity is proportional to the ratio of thethermometer's signal to the non-selective detector's signal. The relative spectral responsivity of the thermometer can be measured also with the use of tuneable lasers [<<Fischer1993,Fischer and Lei Fu 1993>>].
+
+Preferably, the responsivity of the entire thermometer system should be measured as a system. If the individual components of the transmittance of the optical system and the detector responsivity are measured separately then multiplied together, then the two components should be measured under similar conditions so as to avoid errors due to different positioning and orientation. Details of the measurement of spectral responsivity are given in various papers describing the realization of radiation scales (see in particular [<<Jones1982,Jones and Trapping 1982>>]). The accuracy requirements for this measurement have been discussed by [<<Coates1977,Coates 1977>>, <<Bedford1983,Bedford and Ma 1983>>].
+
+Uncertainties in the measurement of spectral responsivity arise from the uncertainties in the wavelength scale on the monochromator, monochromator drift, scattering and polarization effects, out-of-band transmission (i.e., regions of significant filter transmittance outside the wavelength range measured), and uncertainties associated with the measurements of the non-selective detector. The uncertainty in the realization of stem:[T_{90}] arising from these uncertainties in the measurement of the spectral responsivity can be related to how well the mean (or centre) wavelength, stem:[lambda_0], of the spectral responsivity can be determined, and how well the bandwidth, stem:[sigma], (expressed as a standard deviation of the spectral responsivity 'distribution') can be determined [<<Saunders2011,Saunders 2011>>]:
+
+[[eq3]]
+[stem]
+++++
+u_{T_{90}} = {T_{90}}/{lambda_0} (1 - {T_{90}}/{T_{90}(X)}) u_{lambda_0} ,
+++++
+
+[[eq4]]
+[stem]
+++++
+u_{T_{90}} = (1/{T_{90}(X)} - 1/{T_{90}})[12 - c_2/{n_{lambda_0}lambda_0}(1/{T_{90}(X)} + 1/{T_{90}})] {T_{90}^2 sigma}/{lambda_0^2} u_{sigma} ,
+++++
+
+where [<<SaundersWhite2003,Saunders and White 2003>>]
+
+[[eq5]]
+[stem]
+++++
+lambda_0 = {int_0^{infty} lambda_S (lambda) "d"lambda} / {int_0^{infty} s(lambda) "d"lambda} ,
+++++
+
+and
+
+[[eq6]]
+[stem]
+++++
+sigma^2 = {int_0^{infty} (lambda - lambda_0)^2 s(lambda) "d"lambda} / {int_0^{infty} s(lambda) "d"lambda} ,
+++++
+
+where stem:[s (lambda)] is the relative spectral responsivity.
+
+
+=== Measuring the ITS-90 fixed-point blackbody
+
+The ITS-90 fixed point can be either the Ag, Au or Cu freezing point. The construction of blackbody cavities based on these fixed points is discussed in _Guide_ Chapter 2 _Fixed points_. A measurement of the fixed-point plateau signal provides stem:[S_(T_{90} (X))] in <<eq2>>. From a practical point of view, both sides of <<eq2>> can be divided by the ratio stem:[epsilon // epsilon_X], whereas discussed above, the emissivity values can be considered as constants. Then the measured fixed-point signal can be 'emissivity-corrected', stem:[S'(T_{90} (X)) = S (T_{90} (X))//epsion_X],to represent an equivalent true blackbody signal.
+
+The uncertainty in the realization of stem:[T_{90}] arises from uncertainties associated with determining stem:[S'(T_{90} (X))]: the determination of the fixed-point effective cavity emissivity, stem:[epsilon_X]; the effects of ambient conditions on the thermometer signal; and noise in thedetector and amplifier. These uncertainty components propagate according to [<<Saunders2011,Saunders 2011>>]
+
+[[eq7]]
+[stem]
+++++
+u_{T_{90}} = {u_{lambda_0} lambda_0 T^2} / {C_2} {u_{S' (T_{90}(X))}} / {S' (T_{90} (X))} .
+++++
+
+Additionally, while the value of stem:[T_{90} (X)] is assigned as a defined value with zero uncertainty, uncertainties in the actual temperature of the fixed-point blackbody cavity arise from impurities in the fixed-point metal (see _Guide_ Section 2.1 _Influence of impurities_), a temperature drop across the cavity bottom due to the finite thermalresistance of the cavity material, and uncertainties associated with identifying the fixed-point plateau. These propagate according to [<<Saunders2011,Saunders 2011>>]
+
+[[eq8]]
+[stem]
+++++
+u_{T_{90}} = - {T_{90}^2}/{(T_{90} (X))^2} u_{T_{90}(X)} .
+++++
+
+
+=== Measuring the source of unknown temperature
+
+As for the fixed-point signal discussed above, the signal, stem:[S (T_{90})], measured at the unknown temperature should be corrected for the emissivity of the source, stem:[epsilon]: stem:[S' (T_{90}) = S (T_{90})//epsilon].In addition to this emissivity correction, the source signal must alsobe corrected for the size-of-source effect (SSE) and non-linearity (NL) (see <<cls_4>> and <<cls_5>>). Both of these corrections must be determined with respect to the 'reference' conditions of the fixed point. The uncertainty in the realization of stem:[T_{90}] associated with the determination of this corrected signal, stem:[S'_{"SSE,NL"} (T_{90})], arises from the emissivity of the source, the SSE and NL corrections, determination of any gain ratios for multi-gain amplifiers, ambient conditions, drift in the thermometer characteristics, and detector and amplifier noise. These uncertainties propagate according to [<<Saunders2011,Saunders 2011>>]
+
+[[eq9]]
+[stem]
+++++
+u_{T_{90}} = {n_{lambda_0} lambda_0 T^2}/{C_2} {u_{S'_{"SSE,NL"} (T_{90})}} / {S'_{"SSE,NL"} (T_{90})} .
+++++
+
+
+=== Calculating stem:[T_{90}] from the measured signal ratio
+
+Rewriting <<eq2>> as suggested above, and writing it in terms of the relative spectral responsivity stem:[s (lambda)], gives
+
+
+[[eq10]]
+[stem]
+++++
+r' = {S'_{"SSE,NL"} (T_{90})}/{S' (T_{90} (X))} = {int_0^{infty} L_{lambda} (T_{90}) s(lambda) "d"lambda}/{int_0^{infty} L_{lambda} (T_{90} (X)) s(lambda) "d"lambda} ,
+++++
+
+
+where stem:[r'] is the measured signal ratio corrected for emissivity, SSE, and non-linearity. The denominator on the right-hand side is simply a constant, which will be referred to as stem:[I_X] (i.e. stem:[I_X = int_0^{infty} L_{lambda}(T_{90} (X)) s(lambda) "d"lambda]). Solving <<eq10>> for stem:[T_{90}] requires an iterative method. One such method is the Newton-Raphson algorithm, which for <<eq10>> can be written as
+
+
+[[eq11]]
+[stem]
+++++
+T_{90,i+1} = T_{90,i} + {I_X r' - int_0^{infty} L_{lambda} (T_{90,i}) s(lambda)"d"lambda}/{{c_2}/{T_{90,i}^2} int_0^{infty} {L_{lambda} (T_{90,i}) s(lambda)}/{n_{lambda} lambda [1 - exp(- c_2 // (n_{lambda} lambda T_{90,i}))]} "d"lambda} ,
+++++
+
+
+where stem:[i] is an index numbering the iterations, and stem:[T_{90,0}] is an arbitrary initial guess at the temperature stem:[T_{90}]. If stem:[T_{90,0}] is chosen to be, say, stem:[2250 " K"], then <<eq11>> converges to within stem:[0.1 " mK"] of stem:[T_{90}] in fewer than 10 iterations for any value of stem:[T_{90}] between the silver point and stem:[3300 " K"] [<<Saunders2003,Saunders 2003>>].
+
+An alternative method for calculating stem:[T_{90}] from the measured signal ratio is to use the Planck version of the Sakuma-Hattori equation [<<Sakuma1997,Sakuma and Kobayashi 1997>>] in ratio form. While this involves a small approximation (for relatively narrow bandwidths) [<<Saunders2003,Saunders and White 2003>>], it enables an analytic determination of stem:[T_{90}] to be made:
+
+[[eq12]]
+[stem]
+++++
+T_{90} ~~ {c_2}/{n_{lambda} lambda_0 (1 - 6 sigma^2 // lambda_0^2)} [1/{ln[exp(c_2/{n_{lambda} lambda_0 (1 - 6 sigma^2 // lambda_0^2) T_{90}(X) + c_2 sigma^2 // 2 lambda_0^2}) + r' - 1] - ln (r')} - {sigma^2}/{2 lambda_0^2}]
+++++
+
+
+where stem:[lambda_0] and stem:[sigma] are the mean wavelength and bandwidth, respectively, of the spectral responsivity, given by <<eq5>> and <<eq6>>.
+
+The uncertainty in stem:[T_{90}] derived from <<eq11>> is given by the quadrature sum of <<eq3>>, <<eq4>>, <<eq7>>, <<eq8>>, and <<eq9>>, with the addition of any correlations where appropriate. There is a small additional uncertainty in deriving stem:[T_{90}] from <<eq12>>, arising from the approximation inherent in the Sakuma-Hattori equation [<<Saunders2004,Saunders and White 2004>>].
+
+
+== Standard radiation thermometers
+
+The fundamental requirements embodied in <<eq1>> and <<eq2>> are that the instrument used, a radiation thermometer, be characterised using quasi-monochromatic or monochromatic radiation and that the reference source at the temperature stem:[T_{90} (X)] be a blackbody with a known emissivity. A radiation thermometer consists of an optical system which collects the radiant flux in a limited solid angle and in a well characterised spectral region at a distance from a source of radiation.
+
+
+=== Optical system
+
+Radiation thermometers can be constructed with several types of optical systems. Radiation thermometers do not require large numerical apertures, and the stem:[f//#s] are typically in the range of stem:[f//10] to stem:[f//20]. The part of the source viewed by the radiation thermometer is limited in size, since such targets can more readily be arranged to be approximately isothermal and have a high emissivity. The lenses (or mirrors) of the radiation thermometer should as far as practicable be corrected for aberrations so that they become diffraction limited at all apertures at which they will be used. It is convenient if the lenses are achromatic, especially if the radiation thermometer works at a wavelength in the infrared, so as to allow for visual focusing via an auxiliary viewing system. All lenses and mirrors in the system should be of high optical quality and kept scrupulously clean to minimise the amount of radiation scattered by imperfections and surface contamination.
+
+A further point to consider in designing an optical system is that of stray radiation from outside the target area that can propagate through the system by diffraction, reflection, or scattering from the mechanical or optical elements. Baffles and grooves are effective in suppressing unwanted radiation. Good results are also obtained by the use of a glare stop and by careful positioning of the aperture stop [<<Fischer1989,Fischer and Jung 1989>>, <<Yoon2005,Yoon _et al._ 2005>>]. See also the size-of-source effect in <<cls_4>>.
+
+The responsivity of radiation thermometers could be affected by polarization of radiation, and this dependence will need to be accounted for, particularly when the radiation thermometer is used for measurements of sources not governed by Lambert's law, as, for example, for tungsten strip lamps and blackbodies with safety windows. The approach for attacking this problem has been given in the paper of Goebel and Stock (1998).
+
+
+=== Spectral filters
+
+The spectral filtering of the radiation thermometer responsivity can be performed in several ways, but in the majority of cases interference filters are used. High-quality interference filters with high peak transmittances, narrow bandwidths and high degrees of blocking outside the passband are available from many commercial sources. For reducing the environmental effects of changes in the humidity and ambient temperature, ion-assisted or hard-coated interference filters should be used.
+
+For a given type of filter (Gaussian, rectangular or other shape), the smallest detectable temperature difference due to the error resulting from imperfect blocking outside the passband is inversely proportional to the filter bandwidth: this suggests that a wide-band filter is desirable. However, the use of such filters requires an accurate knowledge of the relative spectral responsivity, stem:[s (lambda)], of the thermometer, and of the spectral emissivity of the source; on the other hand, the uncertainty due to imperfect knowledge of stem:[s (lambda)] within the passband is directly proportional to the bandwidth, stem:[sigma]: This suggests that a narrow-bandwidth filter is desirable. The use of <<eq12>> for calculating stem:[T_{90}] analytically also requires narrow bandwidths, and the uncertainty <<eq3>>, <<eq4>>, <<eq7>>, <<eq8>>, and <<eq9>> are all based on a narrow-bandwidth approximation.
+
+It is very important that wavelengths outside the passband in regions where the detector is still sensitive ideally being blocked to a level less than 1 part in stem:[10^6] of those inside the passband. For a filter bandwidth of stem:[10 " nm"] blocking to 1 part in stem:[10^6] is required, and for a bandwidth near stem:[1 " nm"] blocking has to be to about 1 part in stem:[10^7]. The effects of any secondary peaks from the filter also have to be eliminated. If the interference filter itself does not adequately attenuate these undesired wavelengths, an auxiliary blocking filter can be added for this purpose. In most cases, residual transmission at longer wavelengths is more troublesome because radiation thermometers typically operate on the shorter-wavelength side of the peak of the blackbody spectral radiance curve.
+
+Because the spectral transmittance of an interference filter can vary with the filter temperature (up to stem:[0.02 " nm/°C"] or stem:[0.03 " nm/°C"] between stem:[660 " nm"] and stem:[900 " nm"]) and with angle of incidence of the incoming radiation (about 4 parts in stem:[10^4] per angular degree), the filter temperature should be controlled (room temperature control is usually sufficient) and the transmittance measured _in situ_ or, if not, with a similar radiation beam impinging at the same angle. This angle should be carefully chosen to eliminate unwanted reflections. Note also that the wavelength stem:[lambda] appearing in <<eq1>> is specified as the wavelength in vacuum; if stem:[lambda] for the filter is measured in air, then the refractive index of air, stem:[n_{lambda}], needs to be included, as in <<eq2>> (the value of stem:[n_{lambda}] is stem:[1.00027] for air at stem:[20 " °C"] and normal atmospheric pressure and at a wavelength of stem:[650 " nm"] [<<Edlen1966,Edlén 1966>>]; the influence of variations in humidity and CO2 content are negligible for this purpose). Interference filters are also sensitive to polarization of radiation.
+
+A diffraction or prism monochromator can also be used as a monochromatic filter. So doing, the possibility is provided to choose and to change the mean wavelength, to obtain high quality of limitation of the required portion of spectrum and to suppress radiation outside the bandwidth [<<Pokhodoun1993,Pokhodoun _et al_. 1993>>].
+
+When using a radiation thermometer to establish temperatures approximately above stem:[2000 " K"], it may be necessary to use absorption filters or some other means of reducing the intensity of radiation reaching the detector. Any filters that are placed in the beam should be oriented so as to avoid reflections between them, which could subsequently reach the detector, and to avoid transmission through the interference filter at an angle to the axis. Either of these faults is likely to modify the mean wavelength (see <<eq5>>). The measurement of the filter transmission should be done in the identical conditions as it is used (geometry and angle of the incidence beam, the angle to an optical axis of radiation thermometer etc.)
+
+
+=== Detectors
+
+The majority of radiation thermometers used for the realization of the ITS-90 applies a silicon photodiode since these photodiodes generally show better linearity and stability than photomultipliers. The linearity and stability of silicon detectors for spectral radiation thermometry have been studied extensively [<<Jung1979,Jung 1979>>, <<Coslovi1980,Coslovi and Righini 1980>>, <<Schaefer1983,Schaefer _et al_. 1983>>, <<Sakuma1992,Sakuma _et al_. 1992>>].
+
+It has been found that the departures from linearity increase with both increasing wavelength and increasing photocurrent. It has been shown [<<Jung1979,Jung 1979>>] that if the photocurrent is kept within the range from stem:[3 xx 10^{-10} " A"] to stem:[1 xx 10^{-7} " A"] and the wavelength in the range from stem:[600 " nm"] to stem:[900 " nm"], any non-linearity can easily be corrected within 2 parts in stem:[10^4] (see <<eq9>> for consequent errors in temperature). If the corrections for non-linearity are not made, errors some twenty times this amount can be encountered. Thus, for an accurate realization of the scale, it is important that the non-linearity be accounted for (see <<cls_5>>).
+
+In order to obtain optimum short-term stability and resolution, a silicon detector should be stabilised in temperature and operated in the photovoltaic (i.e. unbiased) mode. Jung has shown that drift, dark current, and noise are all lower for a silicon detector operated in this mode than for one operated in the photoconductive or biased mode. In some cases, it is necessary to make allowance, and to introduce corrections, for the spatial uniformity of responsivity of the silicon photodiode and for its dependence upon the polarization of the incident radiation [<<Jung1979,Jung 1979>>, <<Goebel1998,Goebel and Stock 1998>>].
+
+
+[[cls_4]]
+== Size-of-source effect
+
+The size-of-source effect (SSE) in radiation thermometers arises due to scattering, refraction, and reflection of radiation within the optical system of the thermometer. The net result is that some radiation from within the nominal field of view is lost, and some radiation from outside the nominal field of view is detected. Thus, the measured signal depends on both the physical size of the source and the radiance distribution surrounding the source.
+
+To reduce the SSE, the number of optical elements in the objective lens system should be reduced and selected for the lowest scatter. Optical modelling should be used to assess whether the optical performance from a reduced number of elements in the objective lens system is adequate. Since the SSE can also change due to the presence of dust on the objective, the SSE should be measured prior to any critical radiation thermometry determinations. The objective lens can be kept clean with a constant nitrogen or dry-air positive-pressure purge to reduce surface contaminations. At the expense of decreased throughput, any reduction of the aperture stop diameter will also reduce the SSE. A detailed methodical consideration of the problem associated with the determination of the SSE experimentally has been given [<<Bloembergen1997,Bloembergen _et al_. 1997>>].
+
+The SSE of a radiation thermometer is generally determined using one of two techniques. In the first technique, known as the direct method, the radiation thermometer is focused on a uniform radiance source (such as blackbody) whose aperture diameter can be varied. A plot of relative signal as a function of target diameter provides a measure of the SSE.
+
+In the second technique, known as the indirect method, the radiation thermometer is focused on a uniform source (generally an integrating sphere with variable aperture size) in front of which is an opaque spot or a miniature blackbody whose diameter is slightly larger than the nominal target size of the thermometer. By taking the ratio of on-spot to off-spot radiances for each aperture, the SSE is determined [Machin and Ibrahim <<Machin1999a,1999a>>, <<Machin1999b,1999b>>].
+
+Analysis of the differences between the methods is discussed by [<<Machin2002,Machin and Sergienko 2002>>, <<Sakuma2002,Sakuma _et al_. 2002>>, <<Lowe2003,Lowe _et al_. 2003>>, <<Bart2007,Bart _et al_. 2007>>]. These differences are explained by source non-uniformity, inter-reflections, or different spectral radiance distributions for the sources.
+
+A modified method, which is similar to the traditional indirect one, having advantage in speed, ability to cover large target sizes, and ease of automation, but with some added mathematical complexity, is described by [<<Saunders2009,Saunders and Edgar 2009>>]. Another method of SSE determination, which allows the SSE to be measured directly under the conditions of a real radiance field within a furnace, is described by [<<Matveyev2002,Matveyev 2002>>]. A method of calculation for the lens aberration effect on the SSE is described by [<<Park2002,Park and Kim 2002>>]. Yoon and co-workers have shown that the SSE can be reduced to less than stem:[5 xx 10^{-5}] with commercial achromatic lenses with the introduction of a Lyot stop [<<Yoon2005,Yoon _et al_. 2005>>].
+
+
+[[cls_5]]
+== Non-linearity
+
+The experimentally measured ratio of detector signals at two temperatures represents the ratio of the blackbody radiances at these temperatures only insofar as the detector (and associated electronics) is linear. In practice, even the most linear detectors show some degree of non-linearity, which has to be accounted for in accurate scale realizations.
+
+The most common technique for measuring non-linearity consists of a flux doubling method employing two radiation sources (usually lamps) and a beam-splitting device, according to a scheme suggested by [<<Erminy1963,Erminy 1963>>]. Other techniques that have been successfully applied in precision photoelectric thermometry rely on the use of sectored discs [<<Quinn1969,Quinn and Ford 1969>>] and of attenuating filters [<<Coslovi1980,Coslovi and Righini 1980>>] and luminance dividers [<<Bonhoure1988,Bonhoure and Pello 1988>>]. Useful information on the mathematical handling of non-linearity may be found in [<<Jung1979,Jung 1979>>, <<Saunders2007,Saunders and White 2007>>].
+
+Equipment allowing the measurement of non-linearity with a high degree of accuracy (standard uncertainty of about 0.01 % in the spectral range stem:[400 " nm"] to stem:[800 " nm"]) within a range of radiation power covering five decades (from nanowatt to milliwatt) was developed and investigated by [<<Fisher1993,Fisher and Lei Fu 1993>>]. A system for measuring non-linearity using high-brightness light emitting diodes is described by [<<Park2005,Park _et al_. 2005>>, <<Shin2005,Shin _et al_. 2005>>].
+
+Since the photodiode detector is used in photovoltaic mode, the photocurrent measuring electrometer or the transimpedance amplifier should be calibrated at each of the gain settings used for measurements. This calibration must be traceable to electrical standards. Eppeldauer describes a technique to calibrate transimpedance amplifiers with measurements traceable to electrical standards [<<Eppeldauer2009,Eppeldauer 2009>>].
+
+
+== Uncertainty determinations
+
+The uncertainties for the ITS-90 realizations of temperatures above the silver point have been thoroughly discussed in the documents written by the members of Working Group 5 _Radiation Thermometry_ of the Consultative Committee for Thermometry [<<Fischer2003a,Fischer _et al._ 2003a>>, <<Fischer2003b,Fischer _et al._ 2003b>>].
+
+
+[bibliography]
+== References
+
+* [[[Bart2007,1]]] Bart M, van der Ham E W M and Saunders P A (2007) "New Method to Determine the Size-of-Source Effect" _Int. J Thermophys_ *28* 2111–2117
+
+* [[[Battuello1995,1]]] Battuello M, Ricolfi T and Wang L (1995) "Realization of the ITS-90 above stem:[962 " °C"] with a photodiode-array radiation thermometer" _Metrologia_ *32* 371-378
+
+* [[[Bedford1983,1]]] Bedford R E and Ma C K (1983) "Effects of uncertainties in detector responsivity in thermodynamic temperature measured with an optical pyrometer" _High Temp -High Pressures_ *15* 119-130
+
+* [[[Bloembergen1997,1]]] Bloembergen P, Duan Y, Bosma R and Yuan Z (1997) "Characterization of radiation thermometers on size of source effect" _Proceedings of TEMPMEKO'96_, ed. by Marcarino P, Levrotto & Bella, Torino, pp. 261-266
+
+* [[[Bonhoure1988,1]]] Bonhoure J and Pello R (1988) "Determination of the Departure of the International Practical Temperature Scale of 1968 from Thermodynamic Temperature in the Region between stem:[693 " K"] and stem:[904 " K"]" _Metrologia_ *25* 99-105
+
+* [[[Coates1977,1]]] Coates P B (1977) "Wavelength specification in optical and photoelectric pyrometry", _Metrologia_ *13* 1-5
+
+* [[[CosloviL1980,1]]] CosloviL and Righini F (1980) "Fast Determination of Non-Linearity of Photodetectors" _Appl. Opt._ *19* 3200-3203
+
+* [[[Edlen1966,1]]] Edlén B (1966) "The Refractive Index of Air" _Metrologia_ *2* 71
+
+* [[[Eppeldauer2009,1]]] Eppeldauer G P (2009) "Traceability of photocurrent measurements to electrical standards" _MAPAN - Journal of Metrology Society of India_ *24*(3) 193-202.
+
+* [[[Erminy1963,1]]] Erminy D E (1963) "Scheme for Obtaining Integral and Fractional Multiples of a Given Radiance" _J. Opt. Soc. Am._ *53* 1448-1449
+
+* [[[Fischer1989,1]]] Fischer J and Jung H-J (1989) "Determination of the Thermodynamic Temperatures of the Freezing Points of Silver and Gold by Near-Infrared Pyrometry" _Metrologia_ *26* 245-252
+
+* [[[Fischer2003a,1]]] Fischer J, Battuello M, Sadli M, Ballico M, Park S N, Saunders P, Zundong Y, Johnson B C, van der Ham E, Sakuma F, Machin G, Fox N, Li W, Ugur S and Matveyev M (2003a) "Uncertainty Budgets for Realization of ITS-90 by Radiation Thermometry" _Temperature: Its Measurement and Control in Science and Industry_ Vol 7, ed. Ripple D C _et al._, American Institute of Physics, Melville, New York, pp. 631-638
+
+* [[[Fischer2003b,1]]] Fischer J, Battuello M, Sadli M, Ballico M, Park S N, Saunders P, Zundong Y, Johnson B C, van der Ham E, Li W, Sakuma F, Machin G, Fox N, Ugur S, Matveyev M (CCT-WG5 on radiation thermometry) (2003b) "Uncertainty budgets for realisation of scales by radiation thermometry" _Working Document of BIPM Consultative Committee for Thermometry, 22^nd^ _Meeting,_ Document http://www.bipm.org/cc/CCT/Allowed/22/CCT03-03.pdf[CCT/03-03]
+
+* [[[Fischer1993,1]]] Fischer J and Lei Fu (1993) "Photodiode nonlinearity measurement with an intensity stabilized laser as a radiation source" _Appl. Opt._ *32* 4187-4190
+
+* [[[Goebel1998,1]]] Goebel R and Stock M (1998) "Nonlinearity and polarization effects in silicon trap detectors" _Metrologia_ *35* 413-418
+
+* [[[Jones1982,1]]] Jones T P and Tapping J (1982) "A Precision Photoelectric Pyrometer for the Realisation of the IPTS-68 above stem:[1064.53 " °C"]" _Metrologia_ *18* 23-31
+
+* [[[Jung1979,1]]] Jung H-J (1979) "Spectral Nonlinearity Characteristics of Low-Noise Silicon Detectors and Their Application to Accurate Measurement of Radiant Flux Ratios" _Metrologia_ *15* 173-181
+
+* [[[Lei1993,1]]] Lei Fu and Fisher J (1993) "Characterization of Photodiodes in the UV and Visible Spectral Region Based on Cryogenic Radiometry" _Metrologia_ *30* 297-303.
+
+* [[[Lowe2003,1]]] Lowe D, Battuello M, Machin G and Girard F (2003) "A Comparison of Size of Source Effect Measurements of Radiation Thermometers between IMGC and NPL" _Temperature: Its Measurement and Control in Science and Industry_ Vol 7, ed. byRipple D C _et al._, American Institute of Physics, Melville, pp. 625-630
+
+* [[[Machin2002,1]]] Machin G and Sergienko R (2002) "A Comparative Study of Size of Source Effect (SSE) Determination Techniques" _Proc. of TEMPMEKO 2001_, ed. by Fellmuth B, Seidel J, Scholz G, VDE Verlag GmbH, ISBN 3-8007-2676-9, Berlin, pp. 155-160.
+
+* [[[Machin1999a,1]]] Machin G & Ibrahim M (1999a) "Size of Source Effect and temperature uncertainty I: high temperature systems", Proc. _TEMPMEKO '99, 7^th^ International Symposium on Temperature and Thermal Measurements in Industry and Science_, Delft, TheNetherlands, Eds. J. Dubbeldam & M. J. de Groot, Published: IMEKO/NMi-VSL, pp. 681-686
+
+* [[[Machin1999b,1]]] Machin, G & Ibrahim M (1999b) "Size of Source Effect and temperature uncertainty II: low temperature systems", Proc. TEMPMEKO '99, 7^th^ _International Symposium on Temperature and Thermal Measurements in Industry and Science_, Delft, TheNetherlands, Eds. J. Dubbeldam & M. J. de Groot, Published: IMEKO/NMi-VSL, pp. 687-692
+
+* [[[Matveyev2002,1]]] Matveyev M S (2002) "New Method for Measure of a Size Source Effect in a Standard Radiation Thermometry" _Proc of TEMPMEKO 2001_, ed. by Fellmuth B, Seidel J, Scholz G, VDE Verlag GmbH, ISBN 3-8007-2676-9, Berlin, pp. 167-171
+
+* [[[Mohr2012,1]]] Mohr P J, Taylor B N and Newell D B (2012) _Rev. Mod. Phys_. *84* 1527-1605
+
+* [[[Park2005,1]]] Park C W, Shin D-J, Lee D-H, and Park S-N (2005) "Spectrally Selected Linearity Measurement of a Radiation Thermometer Using High-brightness Light Emitting Diodes" _Working Document of BIPM Consultative Committee for Thermometry, 23^rd^ Meeting,_ Document http://www.bipm.org/cc/CCT/Allowed/23/CCT_05_05.pdf[CCT/05-05]
+
+* [[[Park2002,1]]] Park S N and Kim J T (2002) "A Monte Carlo Calculation of Lens Aberration Effect on the Size of Source Effect in Radiation Pyrometry" _Proc. of TEMPMEKO 2001_, ed. by Fellmuth B, Seidel J and Scholz G, VDE Verlag GmbH, ISBN 3-8007-2676-9, Berlin, pp. 173-177
+
+* [[[Pokhodun1993,1]]] Pokhodun A I, Matveyev M S and Moiseyeva N P (1993) "The Reference Function of a Platinum Resistance Thermometer above the Silver Freezing Point" _Measurement Technique_ *9* 1017-1022
+
+* [[[Quinn1969,1]]] Quinn T J and Ford M C (1969) "On the Use of the NPL Photoelectric Pyrometer to Establish the Temperature Scale Above the Gold Point (stem:[1063 " °C"])" _Proc. Roy. Soc._ *A 312* 31-50
+
+* [[[Quinn1972,1]]] Quinn T J and Lee R (1972) "Vacuum Tungsten Strip Lamps with Improved Stability as Radiance Temperature Standards" _Temperature: Its Measurement and Control in Science and Industry_ Vol 4, ed. by Plumb H H _et al._, Instrument Society ofAmerica, Pittsburgh, pp. 395-411
+
+* [[[Quinn1990,1]]] Quinn T J (1990) _Temperature_, 2nd edition (London: Academic Press) p. 495
+
+* [[[Sakuma1992,1]]] Sakuma F, Fujihara T, Sakate H, Ono A, and Hattori S (1992) "Intercomparison of Scales Among Five 0.65 µm Silicon Detector Radiation Thermometers in the Temperature Range from stem:[1000 " °C"] to stem:[3000 " °C"]" _Temperature: Its Measurement and Control in Science and Industry_ Vol 6, ed. by Schooley J F, American Institute ofPhysics, Melville, New York, pp. 813-818
+
+* [[[Sakuma1997,1]]] Sakuma F and Kobayashi M (1997) "Interpolation equations of scales of radiation thermometers" _Proc. of TEMPMEKO'96_, ed. by Marcarino P, Levrotto & Bella, Torino, pp. 305-310
+
+* [[[Sakuma2002,1]]] Sakuma F, Ma L and Yuan Z (2002) "Distance Effect and Size-of-Source Effect of Radiation Thermometers" _Proc. of TEMPMEKO 2001_, ed. by Fellmuth B, Seidel J, Scholz G, VDE Verlag GmbH, ISBN 3-8007-2676-9, Berlin, pp. 161-166
+
+* [[[Saunders2003,1]]] Saunders P (2003) "Uncertainty arising from the use of the mean effective wavelength in realizing ITS-90" _Temperature: Its Measurement and Control in Science and Industry_, Vol 7, ed. Ripple D C _et al._, American Institute of Physics, Melville,New York, pp. 639–644
+
+* [[[Saunders2011,1]]] Saunders P (2011) "Uncertainties in the realisation of thermodynamic temperature above the silver point" _Int. J. Thermophys._ *32* 26–44
+
+* [[[Saunders2009,1]]] Saunders P and Edgar H (2009) "On the characterisation and correction of the size-of-source effect in radiation thermometers" _Metrologia_ *46* 62–74
+
+* [[[SaundersWhite2003,1]]] Saunders P and White D R (2003) "Physical basis of interpolation equations for radiation thermometry" _Metrologia_ *40* 195–203
+
+* [[[Saunders2004,1]]] Saunders P and White D R (2004) "Interpolation errors for radiation thermometry" _Metrologia_ *41* 41–46
+
+* [[[Saunders2007,1]]] Saunders P and White D R (2007) "Propagation of uncertainty due to non-linearity in radiation thermometers" _Int. J. Thermophys._ *28*, 2098–2110
+
+* [[[Schaefer1983,1]]] Schaefer A R, Zalewski E F and Geist J (1983) "Silicon detector nonlinearity and related effects" _Appl. Opt._ *22* 1232-6
+
+* [[[Shin2005,1]]] Shin D J, Lee D H, Park C W, and Park S N (2005) "A Novel Linearity Tester for Optical Detectors using High-brightness Light Emitting Diodes" _Metrologia_ *42*, 154
+
+* [[[Yoon2005,1]]] Yoon H W, Allen D W and Saunders R D (2005) "Methods to reduce the size-of-source effect in radiation thermometers" _Proc. of TEMPMEKO 2004_, ed. by Zvizdic D, Laboratory for Process Measurement, Faculty of mechanical Engineering and Naval Architecture, Zagreb, pp. 521–526
+
+
