@@ -1,0 +1,122 @@
+= The Provisional Low Temperature Scale from 0.9 mK to 1 K, PLTS-2000
+:appendix-id: 2
+:partnumber: 1
+:edition: 9
+:copyright-year: 2019
+:revdate: 2019-03-13
+:language: en
+:docnumber: plts-2000
+:title-appendix-en: The Provisional Low Temperature Scale from 0.9 mK to 1 K, PLTS-2000
+:doctype: guide
+:docstage: in-force
+:docsubstage: 60
+:imagesdir: images
+:docfile: plts-2000.adoc
+:mn-document-class: bipm
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+
+== The scale
+
+The scale is defined by the following equation relating the melting pressure stem:[p] of ^3^He to temperature stem:[T_{2000}]:
+
+
+[stem%unnumbered]
+++++
+p // "MPa" = sum_{i=-3}^{+9} a_i (T_{2000} // "K")^i
+++++
+
+
+[stem%unnumbered]
+++++
+a_{-3} = -1.3855442 cdot 10^{-12}
+++++
+
+[stem%unnumbered]
+++++
+a_{-2} = 4.5557026 cdot 10^{-9}
+++++
+
+[stem%unnumbered]
+++++
+a_{-1} = -6.4430869 cdot 10^{-6}
+++++
+
+[stem%unnumbered]
+++++
+a_0 = 3.4467434  cdot 10^0
+++++
+
+[stem%unnumbered]
+++++
+a_1 = -4.4176438  cdot 10^0
+++++
+
+[stem%unnumbered]
+++++
+a_2 = 1.5417437  cdot 10^1
+++++
+
+[stem%unnumbered]
+++++
+a_3 = -3.5789853  cdot 10^1
+++++
+
+[stem%unnumbered]
+++++
+a_4 = 7.1499125  cdot 10^1
+++++
+
+[stem%unnumbered]
+++++
+a_5 = -1.0414379  cdot 10^2
+++++
+
+[stem%unnumbered]
+++++
+a_6 = 1.0518538  cdot 10^2
+++++
+
+[stem%unnumbered]
+++++
+a_7 = -6.9443767  cdot 10^1
+++++
+
+[stem%unnumbered]
+++++
+a_8 = 2.6833087  cdot 10^1
+++++
+
+[stem%unnumbered]
+++++
+a_9 = -4.5875709  cdot 10^0
+++++
+
+
+== Background to the PLTS-2000
+
+The melting pressure of ^3^He was chosen as the property on which the extension of the ITS-90 should be based because of the sensitivity and reliability with which it may be measured over a wide range (covering more than three decades of temperature) apart from a narrow region around the pressure minimum at stem:[315.24 " mK"] (see <<fig1>>). The pressure minimum itself has the compensating advantage of providing a convenient pressure fixed point for calibrating the pressure transducer (the pressure must be measured using a transducer _in situ_ because for temperatures below the minimum a sensing line will be blocked with solid ^3^He and the cell is therefore isolated).
+
+The pressure minimum is one of four natural features which may be located and used as fixed points of pressure and temperature, the others being the transition to the superfluid 'A' phase, the 'A to B' transition in the superfluid and the Néel transition in the solid. The pressure and temperature values of these four points on the PLTS-2000 are:
+
+
+[cols="3*",options="unnumbered"]
+|===
+h| Point h| stem:[p//"MPa"] h| stem:[T_{2000}//"mK"]
+| minimum | stem:[2.93113] | stem:[315.24]
+| A | stem:[3.43407] | stem:[2.444]
+| A-B | stem:[3.43609] | stem:[1.896]
+| Néel | stem:[3.43934] | stem:[0.902]
+|===
+
+
+The standard uncertainty of the scale in thermodynamic terms is estimated to be stem:[0.5 " mK"] down to stem:[500 " mK"], decreasing linearly to stem:[0.2 " mK"] at stem:[100 " mK"]. It decreases further with falling temperature, but in percentage terms it increases to about stem:[0.3 %] of stem:[T] at stem:[25 " mK"] and stem:[2 %] of stem:[T] at stem:[0.9 " mK"]. The standard uncertainties in the absolute pressures are estimated to be about stem:[60 " Pa"] (in about stem:[3 " MPa"]).
+
+
+[[fig1]]
+.The ^3^He melting pressure stem:[p] (full line) and the absolute value of the derivative stem:["d"p//"d"T] (dashed line) _vs._ temperature. stem:[T_N], stem:[T_B] and stem:[T_A] indicate the temperatures of three phase transitions in solid or liquid ^3^He.
+image::plts-2000/fig1.png[]
+
+
