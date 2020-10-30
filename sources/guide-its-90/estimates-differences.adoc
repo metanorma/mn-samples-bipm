@@ -1,0 +1,160 @@
+= Estimates of the Differences between Thermodynamic Temperature and the ITS-90
+:appendix-id: 2
+:partnumber: 1
+:edition: 9
+:copyright-year: 
+:revdate: 
+:language: en
+:docnumber: 
+:title-appendix-en: Estimates of the Differences between Thermodynamic Temperature and the ITS-90
+:doctype: guide
+:docstage: in-force
+:docsubstage: 60
+:imagesdir: images
+:docfile: estimates-differences.adoc
+:mn-document-class: bipm
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+
+[.preface]
+== Abstract
+
+At the CCT's request, Working Group 4 (WG4) critically reviewed all available measurements of stem:[T - T_{90}] including constant-volume gas thermometry, acoustic gas thermometry, spectral radiationthermometry, total radiation thermometry, noise thermometry, and dielectric-constant gas thermometry. Consensus estimates are provided for stem:[T - T_{90}], for selected measurements from stem:[4.2 " K"] to stem:[1358 " K"], as well as a recommendation for analytic approximations to stem:[T - T_{90}] for the range stem:[0.65 " K"] to stem:[1358 " K"].
+
+
+== Table of Differences
+
+<<tab1>> summarizes the best estimates of stem:[T - T_{90}] above stem:[4.2 " K"] as of 2010. In general, a weighted average was formed using the uncertainties identified by WG4. For details see <<Fischer2011>>. The data are shown in <<fig1>> and <<fig2>>.
+
+
+[[tab1]]
+.Estimates ofstem:[T - T_{90}] between stem:[4.2 " K"] and stem:[1358 " K"]. The transitions of the defining fixed pointsand secondary reference points of the ITS-90 are marked in the 2^nd^ and 6^th^ columns. All uncertainties are standard uncertainties (stem:[k = 1]). The differences for temperatures above stem:[1358 " K"] are under investigation by Working Group 5. The results presented here may be extrapolated above stem:[1358 " K"] using Planck's law.
+[cols="8*"]
+|===
+a| stem:[T_{90}] +
+(K)
+| a| stem:[T - T_{90}] +
+(mK)
+a| stem:[u] +
+(mK)
+a| stem:[T_{90}] +
+(K)
+| a| stem:[T - T_{90}] +
+(mK)
+a| stem:[u] +
+(mK)
+
+| stem:[4.2] | | stem:[-0.02] | stem:[0.12] | stem:[161.405] | Xe | stem:[-8.43] | stem:[1.8]
+| stem:[5] | | stem:[0.10] | stem:[0.12] | stem:[195] | | stem:[-6.97] | stem:[1.8]
+| stem:[6] | | stem:[0.04] | stem:[0.13] | stem:[234.3156] | Hg | stem:[-3.25] | stem:[1.0]
+| stem:[7] | | stem:[-0.08] | stem:[0.09] | stem:[255] | | stem:[-1.64] | stem:[0.9]
+| stem:[8] | | stem:[0.01] | stem:[0.10] | stem:[273.16] | TPW | stem:[0] | stem:[0]
+| stem:[9.288] | Nb | stem:[0.13] | stem:[0.11] | stem:[290] | | stem:[2.19] | stem:[0.4]
+| stem:[11] |  | stem:[0.27] | stem:[0.12] | stem:[302.9146] | Ga | stem:[4.38] | stem:[0.4]
+| stem:[13.8033] | e-H~2~ | stem:[0.44] | stem:[0.14] | stem:[335] | | stem:[7.62] | stem:[0.5]
+| stem:[17.035] | e-H~2~ | stem:[0.51] | stem:[0.16] | stem:[373.124] | H~2~O | stem:[9.74] | stem:[0.6]
+| stem:[20.27] | e-H~2~ | stem:[0.32] | stem:[0.17] | stem:[429.7485] | In | stem:[10.1] | stem:[0.8]
+| stem:[22.5] | | stem:[0.10] | stem:[0.18] | stem:[505.078] | Sn | stem:[11.5] | stem:[1.3]
+| stem:[24.5561] | Ne | stem:[-0.23] | stem:[0.20] | stem:[600.612] | Pb | stem:[9.21] | stem:[6.1]
+| stem:[35] | | stem:[-0.53] | stem:[1.0] | stem:[692.677] | Zn | stem:[13.8] | stem:[6.9]
+| stem:[45] | | stem:[-0.75] | stem:[1.4] | stem:[800] | | stem:[22.4] | stem:[6.4]
+| stem:[54.3584] | O~2~ | stem:[-1.06] | stem:[1.6] | stem:[903.778] | Sb | stem:[27.6] | stem:[7.6]
+| stem:[70] | | stem:[-1.57] | stem:[1.9] | stem:[933.473] | Al | stem:[28.7] | stem:[6.6]
+| stem:[77.657] | | stem:[-3.80] | stem:[1.2] | stem:[1052.78] | Cu/Ag | stem:[40.9] | stem:[26]
+| stem:[83.8058] | Ar | stem:[-4.38] | stem:[1.3] | stem:[1150] | | stem:[46.3] | stem:[20]
+| stem:[90] | | stem:[-5.30] | stem:[1.1] | stem:[1234.93] | Ag | stem:[46.2] | stem:[14]
+| stem:[100] | | stem:[-6.19] | stem:[1.2] | stem:[1337.33] | Au | stem:[39.9] | stem:[20]
+| stem:[130] | | stem:[-8.07] | stem:[1.6] | stem:[1357.77] | Cu | stem:[52.1] | stem:[20]
+
+|===
+
+
+== Interpolation Functions
+
+If it is not convenient to use <<tab1>>, the differences stem:[T - T_{90}] may be approximated by the following expressions. Above stem:[70 " K"], the relative differences of the interpolation functions (with respect to the values of <<tab1>>) are less than 15 %, except at stem:[600 " K"] and the gold point.
+
+From stem:[0.65 " K"] to stem:[2 " K"], use the polynomial for the temperature scale PTB-2006 (based on the ^3^Helium vapor-pressure) <<Engert2007>> with
+
+
+[stem%unnumbered]
+++++
+T - T_{90} -= T_{2006} - T_{90}.
+++++
+
+
+Below stem:[1 " K"], stem:[T_{2006}] is identical to stem:[T_{"PLTS-"2000}].
+
+From stem:[2 " K"] to stem:[8 " K"],
+
+
+[stem%unnumbered]
+++++
+T - T_{90} -= 0.
+++++
+
+
+From stem:[8 " K"] to stem:[273.16 " K"],
+
+[[eq1]]
+[stem]
+++++
+(T - T_{90})//"mK" = sum_{i=0..7} b_i xx (log_{10} (T_{90}//273.16 " K"))^{i+1}
+++++
+
+
+with the coefficients:
+
+
+[stem%unnumbered]
+++++
+b_0 = 4.42457 xx 10^1 " " b_1 = -1.76311 xx 10^2 " "  b_2 = -1.53985 xx 10^3 " " b_3 = -3.63685 xx 10^3
+++++
+
+[stem%unnumbered]
+++++
+b_4 = -4.19898 xx 10^3 " " b_5 = -2.61319 xx 10^3 " " b_6 = -8.41922 xx 10^2 " " b_7 = -1.10322 xx 10^2
+++++
+
+
+The derivative stem:["d"(T - T_{90})//"d"T_{90}] at the triple point of water is stem:[7.0 xx 10^{-5}].
+
+From stem:[273.16 " K"] to stem:[1357.77 " K"] (copper point):
+
+[[eq2]]
+[stem]
+++++
+(T - T_{90}) // "mK" = (T_{90} // "K") sum_{i=0..4} c_i xx (273.16 " K" // T_{90})^{2i}
+++++
+
+
+with the coefficients:
+
+
+[stem%unnumbered]
+++++
+c_0 = 0.0497 " " c_1 = -0.3032 " " c_2 = 1.0254 " " c_3 = -1.2895 " " c_4 = 0.5176
+++++
+
+
+The derivative at the triple point of water is stem:[10.1 xx 10^{-5}], resulting in a discontinuity of stem:[3.1 xx 10^{-5}] between <<eq1>> and <<eq2>>, see <<fig1>>. This is consistent with the values from recent thermodynamic measurements and measurements of platinum resistance thermometers that conform to ITS-90.
+
+
+[[fig1]]
+.Overview of consensus estimates for stem:[T - T_{90}] with emphasis on the range above the triple pointof water. The smooth functions (<<eq1>> and <<eq2>>, black line) are interpolating the mean values (black dots). Error bars represent uncertainties with stem:[k = 1].
+image::estimates-differences/fig1.png[]
+
+
+[[fig2]]
+.Enlargement of the range between stem:[4.2 " K"] and stem:[80 " K"] of consensus estimates for stem:[T - T_{90}]. Thesmooth function (<<eq1>>, black line) interpolates the mean values (black dots) above stem:[8 " K"]. Error bars represent uncertainties with stem:[k = 1].
+image::estimates-differences/fig2.png[]
+
+
+[bibliography]
+== References
+
+* [[[Fischer2011,1]]]] J. Fischer, M. de Podesta, K. D. Hill, M. Moldover, L. Pitre, R. Rusby, P. Steur, O. Tamura, R. White, L.Wolber, _Int. J. Thermophys._ *32*, 12-25 (2011).
+
+* [[[Engert2007,1]]]] J. Engert, B. Fellmuth, K. Jousten, _Metrologia_ *44*, 40-52 (2007).
+
