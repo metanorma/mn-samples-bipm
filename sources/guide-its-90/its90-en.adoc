@@ -178,8 +178,7 @@ between stem:[30 " K"] and stem:[5.0 " K"]. This last temperature is determined 
 | stem:[W_t (T_{90})]
 
 | | stem:[T_{90}//"K"] | stem:[t_{90}//"°C"] | | |
-| 1 | 3 to 5 | stem:[-270.15] to | He | stem:["V"] |
-| | | stem:[-268.15] | | |
+| 1 | 3 to 5 | stem:[-270.15] to stem:[-268.15] | He | stem:["V"] |
 | 2 | stem:[13.8033] | stem:[-259.3467] | e-H~2~ | stem:["T"] | stem:[0.00119007]
 | 3 | stem:[~~ 17] | stem:[~~ -256.15] | e-H~2~ (or He) | stem:["V"] (or stem:["G"]) |
 | 4 | stem:[~~ 20.3] | stem:[~~ -252.85] | e-H~2~ (or He) | stem:["V"] (or stem:["G"]) |
@@ -216,7 +215,7 @@ stem:[("d"T // "d"h)//(10^{-3} "K" cdot "m"^{-1})] footnote:[Equivalent to milli
 | Oxygen (stem:["T"]) | stem:[54.3584] | stem:[12] | stem:[1.5]
 | Argon (stem:["T"]) | stem:[83.8058] | stem:[25] | stem:[3.3]
 | Mercury (stem:["T"]) | stem:[234.3156] | stem:[5.4] | stem:[7.1]
-| Water (stem:["T"]) | stem:[273.16] | stem:[-75] | stem:[-0.73]
+| Water (stem:["T"]) | stem:[273.16] | stem:[-7.5] | stem:[-0.73]
 | Gallium | stem:[302.9146] | stem:[-2.0] | stem:[1.2]
 | Indium | stem:[429.7485] | stem:[4.9] | stem:[3.3]
 | Tin | stem:[505.078] | stem:[3.3] | stem:[2.2]
@@ -245,9 +244,9 @@ stem:[2.1768 " K"] to stem:[50 " K"]
 | stem:[A_2] | stem:[0.676380] | stem:[0.166756] | stem:[0.413923]
 | stem:[A_3] | stem:[0.372692] | stem:[0.050988] | stem:[0.091159]
 | stem:[A_4] | stem:[0.151656] | stem:[0.026514] | stem:[0.016349]
-| stem:[A_5] | stem:[~~ 0.002263] | stem:[0.001975] | stem:[0.001826]
+| stem:[A_5] | stem:[-0.002263] | stem:[0.001975] | stem:[0.001826]
 | stem:[A_6] | stem:[0.006596] | stem:[- 0.017976] | stem:[-0.004325]
-| stem:[A_7] | stem:[0.088966] | stem:[0.005409] | stem:[~~ 0.004973]
+| stem:[A_7] | stem:[0.088966] | stem:[0.005409] | stem:[-0.004973]
 | stem:[A_8] | stem:[-0.004770] | stem:[0.013259] | 0
 | stem:[A_9] | stem:[-0.054943] | 0 | 0
 | stem:[B] | stem:[7.3] | stem:[5.6] | stem:[10.3]
@@ -421,7 +420,7 @@ is defined:
 [[eq10a]]
 [stem]
 ++++
-W_r(T_{90}) = C_0 + sum_{i=1}^9 C_i [{T_{90}//"K" - 754.15}/48.1]^i
+W_r(T_{90}) = C_0 + sum_{i=1}^9 C_i [{T_{90}//"K" - 754.15}/481]^i
 ++++
 
 An inverse function, equivalent to <<eq10a>> to within stem:[0.13 " mK"], is:
@@ -762,16 +761,16 @@ image::its90-en/fig1.png[]
 
 [[table6]]
 .Differences between ITS-90 and EPT-76, and between ITS-90 and IPTS-68 for specified values of stem:[T_{90}] and stem:[t_{90}]
-[cols="11*"]
+[cols="11*^.^"]
 |===
-11+h| stem:[(T_{90} - T_{76})//"mK"]
+11+<h| stem:[(T_{90} - T_{76})//"mK"]
 
 | stem:[T_{90}//"K"] | stem:[0] | stem:[1] | stem:[2] | stem:[3] | stem:[4] | stem:[5] | stem:[6] | stem:[7] | stem:[8] | stem:[9]
 | stem:[0] | | | | | | stem:[-0.1] | stem:[-0.2] | stem:[-0.3] | stem:[-0.4] | stem:[-0.5]
 | stem:[10] | stem:[-0.6] | stem:[-0.7] | stem:[-0.8] | stem:[-1.0] | stem:[-1.1] | stem:[-1.3] | stem:[-1.4] | stem:[-16] | stem:[-18] | stem:[-2.0]
 | stem:[20] | stem:[-2.2] | stem:[-2.5] | stem:[-27] | stem:[-3.0] | stem:[-32] | stem:[-3.5] | stem:[-38] | stem:[-4.1] | |
 
-11+h| stem:[(T_{90} - T_{68})//"K"]
+11+<h| stem:[(T_{90} - T_{68})//"K"]
 h| stem:[T_{90}//"K"] h| stem:[0] h| stem:[1] h| stem:[2] h| stem:[3] h| stem:[4] h| stem:[5] h| stem:[6] h| stem:[7] h| stem:[8] h| stem:[9]
 | stem:[10] | | | | | stem:[-0.006] | stem:[-0.003] | stem:[-0.004] | stem:[-0.006] | stem:[-0.008] | stem:[-0.009]
 | stem:[20] | stem:[-0.009] | stem:[-0.008] | stem:[-0.007] | stem:[-0.007] | stem:[-0.006] | stem:[-0.005] | stem:[-0.004] | stem:[-0.004] | stem:[-0.005] | stem:[-0.006]
@@ -788,7 +787,7 @@ h| stem:[T_{90}//"K"] h| stem:[0] h| stem:[10] h| stem:[20] h| stem:[30] h| stem
 | stem:[100] | stem:[0.009] | stem:[0.011] | stem:[0.013] | stem:[0.014] | stem:[0.014] | stem:[0.014] | stem:[0.014] | stem:[0.013] | stem:[0.012] | stem:[0.012]
 | stem:[200] | stem:[0.011] | stem:[0.010] | stem:[0.009] | stem:[0.008] | stem:[0.007] | stem:[0.005] | stem:[0.003] | stem:[0.001] | |
 
-11+h| stem:[(t_{90} - t_{68})//"°C"]
+11+<h| stem:[(t_{90} - t_{68})//"°C"]
 h| stem:[t_{90}//"°C"] h| stem:[0] h| stem:[-10] h| stem:[-20] h| stem:[-30] h| stem:[-40] h| stem:[-50] h| stem:[-60] h| stem:[-70] h| stem:[-80] h| stem:[-90]
 | stem:[-100] | stem:[0.013] | stem:[0.013] | stem:[0.014] | stem:[0.014] | stem:[0.014] | stem:[0.013] | stem:[0.012] | stem:[0.010] | stem:[0.008] | stem:[0.008]
 | stem:[0] | stem:[0.000] | stem:[0.002] | stem:[0.004] | stem:[0.006] | stem:[0.008] | stem:[0.009] | stem:[0.010] | stem:[0.011] | stem:[0.012] | stem:[0.012]
