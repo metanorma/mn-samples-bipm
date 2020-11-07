@@ -1,0 +1,27 @@
+---
+metanorma:
+  deploy:
+    email: "ci@metanorma.org"
+  formats:
+    - xml
+    - rxl
+    - html
+    - pdf
+  source:
+    built_targets: # TODO add guide-its-90
+      sources/wpn-203.xml: sources/working-party-notes/wpn-203.adoc
+      sources/wpn-236.xml: sources/working-party-notes/wpn-236.adoc
+      sources/wpn-237.xml: sources/working-party-notes/wpn-237.adoc
+      sources/wpn-238.xml: sources/working-party-notes/wpn-238.adoc
+      sources/rapport-2019-01.xml: sources/rapports/2019-01/document.adoc
+      sources/rapport-2019-02.xml: sources/rapports/2019-02/document.adoc
+      sources/rapport-2019-03.xml: sources/rapports/2019-03/document.adoc
+      sources/rapport-2020-01.xml: sources/rapports/2020-01/rapport-2020-01.adoc
+      sources/rapport-2020-02.xml: sources/rapports/2020-02/document.adoc
+      sources/rapport-2020-03.xml: sources/rapports/2020-03/rapport-2020-03.adoc
+      sources/rapport-2020-04.xml: sources/rapports/2020-04/rapport-2020-04.adoc
+
+relaton:
+  collection:
+    organization: "BIPM: Bureau International de Poids et Mesures"
+    name: "BIPM Publications in Metanorma"
