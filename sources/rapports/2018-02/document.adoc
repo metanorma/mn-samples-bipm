@@ -1,0 +1,362 @@
+= How to define the base units of the revised SI from seven constants with fixed numerical values
+:edition: 3
+:copyright-year: 2018
+:revdate: 2018-04-06
+:language: en
+:docnumber: BIPM-2018/02
+:title-en: How to define the base units of the revised SI from seven constants with fixed numerical values
+:title-fr:
+:doctype: rapport
+:committee-en:
+:committee-fr:
+:committee-acronym:
+:fullname: Richard Davis
+:affiliation: BIPM
+:supersedes-date:
+:supersedes-draft:
+:docstage: in-force
+:docsubstage: 60
+:imagesdir: images
+:mn-document-class: bipm
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Abstract
+
+As part of a revision to the SI expected to be approved later this year and to take effect in May 2019, the seven base units will be defined by giving fixed numerical values to seven "defining constants".
+
+The report shows how the definitions of all seven base units can be derived efficiently from the defining constants, with the result appearing as a table. The table’s form makes evident a number of connections between the defining constants and the base units.
+
+Appendices show how the same methodology could have been used to define the same base units in the present SI, as well as the mathematics which underpins the methodology.
+
+[[introduction]]
+== Introduction
+
+Preparations for the upcoming revision of the International System of Units (SI) began in earnest with Resolution 1 of the 24th meeting of the General Conference on Weights and Measures (CGPM) in 2011 <<cgpm2011>>. The 26th CGPM in November 2018 is expected to give final approval to a revision of the present SI <<bipm2006>> based on the guidance laid down in Ref. <<cgpm2011>>. The SI will then become a system of units based on exact numerical values of seven defining constants, stem:[Delta nu_("Cs")], stem:[c], stem:[h], stem:[e], stem:[k], stem:[N_"A"] and stem:[K_("cd")] exactly as specified in the following bullets:
+
+* the unperturbed ground state hyperfine transition frequency of the caesium 133 atom stem:[Delta nu_("Cs")] is stem:[9192631770" hertz"],
+* the speed of light in vacuum stem:[c] is stem:[299792458" metres per second"],
+* the Planck constant stem:[h] is stem:[6.62607015 xx 10^(−34)" joule second"],
+* the elementary charge stem:[e] is stem:[1.602176634 xx 10^(−19)" coulomb"],
+* the Boltzmann constant stem:[k] is stem:[1.380649 xx 10^(−23)" joule per kelvin"],
+* the Avogadro constant stem:[N_"A"] is stem:[6.02214076 xx 10^(23)" reciprocal mole"],
+* the luminous efficacy of monochromatic radiation of frequency stem:[540 xx 1012" Hz"], stem:[K_("cd")], is stem:[683" lumens per watt"].
+
+The hertz, joule, coulomb, lumen, and watt, with unit symbols Hz, J, C, lm and W, respectively, are related to the seven base units: second, metre, kilogram, ampere, kelvin, mole and candela, with unit symbols s, m, kg, A, K, mol and cd, respectively, through the relations Hz = s^−1^, J = kg m^2^ s^−2^, C = A s, lm = cd sr footnote:[sr is the symbol for steradian, the unit of solid angle. Although sr = m^2^/m^2^ = 1, sr is used when needed for clarity <<bipm2006>>.] and W = kg m^2^ s^−3^ (see Ref. <<bipm2006>>). Only so-called "coherent" units <<bipm2006>> are used here and in the following. This means that, just as in the bullets, we will not affix numerical prefixes (such as mega or nano) either to the base units or to combinations of base units that have special names (such as joule or watt).
+
+The numerical values of stem:[Delta nu_("Cs")], stem:[c] and stem:[K_("cd")] given in the bullets have been fixed (defined to be exact) since 1967, 1983 and 1979 respectively <<bipm2006>>. It was premature in 2011 to specify exact values for stem:[h], stem:[e], stem:[k] and stem:[N_"A"] because their experimentally-determined values were not yet known with sufficiently small uncertainty to assure a smooth transition to the proposed new definitions. That has changed, and the numerical values given above are those recommended in October 2017 by the CODATA Task Group on Fundamental Constants <<newell>>. They have been accepted by the CIPM and are expected to be confirmed by the CGPM at its next meeting, in November 2018.
+
+This note describes an efficient method to convert the information contained in the seven bullets to definitions of the SI base units, which are, not coincidentally, seven in number <<bipm2006>>. The reasons for this particular choice of defining constants are important but have been presented elsewhere <<bipm2018>>.
+
+Starting with the seven bullets, we derive in one step the seven combinations of defining constants whose unit is a base unit of the SI. The algorithm used results in an easy-to-read table. The exact numerical values given in the bullets are then introduced to complete the definitions of the base units. <<present_si>> applies the same method to the present SI, illustrating the method’s generality as well as providing a novel contrast to the upcoming revision. Each base unit will be defined independently of the others, although typical derivations take a different approach. <<derivation_defs>> describes a more abstract method of defining the base units from the values of the defining constants and compares the abstract formalism with that presented in the next two sections.
+
+If all seven base units of the SI can be defined in terms of the seven defining constants, an obvious but important corollary follows: *_All SI units can be defined in terms of the seven defining constants._* The distinction between base and derived units remains useful, but not essential for many purposes. footnote:[Even early editions of the SI Brochure remarked that separate classes of base and derived units are "not essential to the physics of the subject" <<page>>, but added that the classifications were useful, considering the goal of "a single, practical, worldwide system [of units\] for international relations, for teaching and scientific work".]
+
+The following method is consistent with a more rigorous analysis provided by Mohr in 2008 <<mohr>>, which the interested reader is encouraged to consult.
+
+[[defining_constants]]
+== Defining constants written in terms of base units
+
+We begin with <<table1>>, which presents much of the information given in the bullets of <<introduction>> in more usable form. Note that the defining constants are shown as labels in the first column. The four new defining constants and the base units which are redefined in consequence are shown in red. The units of the defining constants can be expressed as the product of powers of the base units, stem:["s"^alpha" m"^beta" kg"^gamma" A"^delta" K"^epsilon" mol"^zeta" cd"^eta] <<bipm2006>>, as specified in the bullets of <<introduction>>. The exponents that are required appear in the rows of <<table1>> for each of the defining constants; for example, the coherent unit of the Planck constant stem:[h] is J s = kg m^2^ s^−1^, so that for the row labelled stem:[h] the exponents stem:[alpha] through stem:[eta] are (-1, 2, 1, 0, 0, 0, 0). The columns show whether a unit appears in a particular bullet. We see, for instance, that the second appears in the unit of every constant except stem:[N_"A"], but with four different exponents.
+
+[[table1]]
+[cols="^,^,^,^,^,^,^,^"]
+|===
+| h| stem:["s"] h| stem:["m"] h| stem:[color(red)("kg")] h| stem:[color(red)("A")] h| stem:[color(red)("K")] h| stem:[color(red)("mol")] h| stem:["cd"]
+h| stem:[Delta nu_("Cs")] e| -1 | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)]
+h| stem:[c] | -1 e| 1 | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)]
+h| stem:[color(red)(h)] | -1 | 2 e| 1 | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)]
+h| stem:[color(red)(e)] | 1 | stem:[color(green)(0)] | stem:[color(green)(0)] e| 1 | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)]
+h| stem:[color(red)(k)] | -2 | 2 | 1 | stem:[color(green)(0)] e| -1 | stem:[color(green)(0)] | stem:[color(green)(0)]
+h| stem:[color(red)(N_"A")] | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] e| -1 | stem:[color(green)(0)]
+h| stem:[K_("cd")] | 3 | -2 | -1 | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] e| 1
+|===
+
+The sequence of the seven defining constants in the left column of labels follows the order in which they are presented in the CGPM Resolution and in <<introduction>>. The sequence of base units in the top row of labels follows the order in which these units are defined in Ref. <<bipm2018>>. This results in a table where the exponents above the diagonal cells are all zero (as are most exponents below the diagonal). The diagonal cells (those with a violet background) associate each defining constant with a unique base unit. The cells with a yellow background show that "helping" units are also needed. For instance, the Planck constant stem:[h] is key to redefining the kilogram (violet cell), but the unit of stem:[h] also contains the inverse second and the metre squared (yellow cells).
+
+[[base_units]]
+== Base units as defined by the "defining constants"
+
+The seven SI base units can be defined in terms of the seven defining constants. To do this, we create a second table, <<table2>>, that shows the combination of defining constants required to define each base unit. <<table2>> is the major contribution of this report.
+
+The numbers in <<table2>> are also exponents, this time used to show the combination of defining constants (labelled in the top row) that has the same unit as each base unit (labelled in the left column). Except for an exact scaling factor, which is easily derived as shown below, each base unit is defined by the product stem:[Delta nu_("Cs")^(alpha')" "c^(beta')" "h^(gamma')" "e^(delta')" "k^(epsilon')" "N_("A")^(zeta')" "K_("cd")^(eta')], where the required exponents for each row appear in the table. If an exponent is zero, it means that its constant is not needed, and its cell, though containing zero, has been left blank for visual clarity. Each column shows which defining constants are needed in the definition of the base units. We see that stem:[Delta nu_("Cs")] is needed to define six of the seven base units (using three different exponents), stem:[c] is only needed to define two base units, etc.
+
+All exponents have been derived from <<table1>> in one step using the following mathematical operation. Note that the cells containing numbers in <<table1>> constitute a stem:[7 xx 7] matrix. Invert that matrix using, for example, the MINVERSE command in Excel. The inverse obtained is the stem:[7 xx 7] matrix of exponents shown in <<table2>>. footnote:[The stem:[7 xx 7] squares of numbers in <<table1>> and <<table2>> are called "lower triangular matrices" because all numbers above the diagonal are zero. The inverse of a triangular matrix is triangular as well, provided that the inverse exists. The inverse exists if and only if none of the numbers in the diagonal cells is zero.] Remember that the blank cells actually contain zero.
+
+[[table2]]
+[cols="^,^,^,^,^,^,^,^"]
+.The revised SI <<bipm2018>>. Blank cells all contain zero (not displayed).
+|===
+| | stem:[Delta nu_("Cs")] h| stem:[c] h| stem:[color(red)(h)] h| stem:[color(red)(e)] h| stem:[color(red)(k)] h| stem:[color(red)(N_"A")] h| stem:[K_("cd")]
+h| stem:["s"] e| -1 | | | | | |
+h| stem:["m"] | -1 e| 1 | | | | |
+h| stem:[color(red)("kg")] | 1 | -2 e| 1 | | | |
+h| stem:[color(red)("A")] | 1 | | e| 1 | | |
+h| stem:[color(red)("K")] | 1 | | 1 | e| -1 | |
+h| stem:[color(red)("mol")] | | | | | e| -1 |
+h| stem:["cd"] | 2 | | 1 | | | e| 1 
+|===
+
+From the "kg" row of <<table2>> we may infer that the following combination of three defining constants has the kilogram as its unit <<mohr>>:
+
+[[eq1]]
+[stem]
+++++
+Delta nu_("Cs")^1 c^(-2)h^1e^0k^0N_"A"^0 K_("cd")^0 = Delta nu_("Cs") c^(-2)h = (Delta nu_("Cs")h)/(c^2).
+++++
+
+In the revised SI, all mass determinations must ultimately be traceable to this quantity because its numerical value in kilograms has been fixed. The exact values of stem:[Delta nu_("Cs")], stem:[c] and stem:[h] given in the bullets of <<introduction>> provide the fixed value. Substituting the information in the first three bullets into the left side of the following equation, which is a combination of physical constants, gives us the right side, which is the value of the combination in the revised SI:
+
+[stem%unnumbered]
+++++
+(Delta nu_("Cs")h)/(c^2) = ((9192631770)(6.62607015 xx 10^(-34)))/(299792458)^2 " kg".
+++++
+
+The numbers in parentheses are obviously the exact numerical values of stem:[Delta nu_("Cs")], stem:[c] and stem:[h] specified in <<introduction>>. The base units associated with these numerical values cancel out (unit symbols can be treated algebraically)—except for the kilogram! Then by simple arithmetic,
+
+[[eq2]]
+[stem]
+++++
+1" kg" = (299792458)^2/((9192631770)(6.62607015 xx 10^(-34))) (Delta nu_("Cs")h)/(c^2) = 1.4755213997... xx 10^(40) (Delta nu_("Cs")h)/(c^2).
+++++
+
+Any given base unit can be defined similarly, without knowing the definitions of any other base units. Only the exact numerical values of the defining constants are required. This definition of the kilogram appears in section 2.3.1 of Ref. <<bipm2018>>. A more formal derivation of the seven definitions, of which <<eq2>> is an example, is provided in <<derivation_defs>> along with a comparison to the simplified approach adopted
+above.
+
+It is irrelevant that the mass stem:[Delta nu_("Cs")h//c^2] is so miniscule that it must be scaled up by 40 orders of magnitude to equal one kilogram. It has always been true that "any method consistent with the laws of physics could be used to realize any SI unit" <<bipm2006>> and such methods already exist for the kilogram as it will be defined by <<eq2>> <<bipm2018>>. <<present_si>> discusses in more detail the condition that assures continuity of the redefined kilogram with the present kilogram, and by extension the continuity conditions for the three other redefined units.
+
+== Summary and Discussion [corrected April 2018]
+
+Several pictorial illustrations of the revised SI are already available <<bipm2017>>, <<wiki>>. In one case, readers are cautioned that the illustration is not an explanation <<bipm2017>>. By contrast, <<table2>> has been derived mathematically from the seven defining constants, knowing only their units. It is easily observed from <<table2>> that:
+
+* The violet cells on the diagonal connect a base unit in the left column with the constant which defines it, in the top row. This is loose terminology because in most instances one or two "helping constants" are required, and these are shown in the yellow cells of each row. All other cells contain zero, and these are left blank;
+* There are only three helping constants, stem:[Delta nu_("Cs")], stem:[c] and stem:[h], and these also serve as the defining constants for the second, metre and kilogram, respectively. [It is perhaps noteworthy that the second, metre and kilogram are the mechanical units of the old metre-kilogram-second (MKS) system, from which the SI evolved];
+* In each row, the product of powers of the constants in the violet cell and any yellow cells form a quantity (which is also a constant) whose unit is the base unit of the row. The exponents needed are shown;
+* At most, two helping constants are required to define any base unit. [The appearance of helping constants can be viewed as a mathematical requirement which reconciles continuity of the historical base units with the most useful selection of defining constants. See <<present_si>>, which shows that the present SI <<bipm2006>> is not very different in this respect];
+* Helping constants are not needed to define either the second or the mole.
+* The ground state hyperfine transition frequency of the caesium 133 atom stem:[Delta nu_("Cs")] is needed in the definitions of all base units except the mole;
+* The speed of light in vacuum stem:[c] is needed _only_ in the definitions of the metre and kilogram;
+* The Planck constant stem:[h] is needed _only_ in the definitions of the kilogram, kelvin and candela;
+* The elementary charge stem:[e], the Boltzmann constant stem:[k], the Avogadro constant stem:[N_"A"] and the luminous efficacy of a specified wavelength stem:[K_("cd")] are each needed to define a single base unit (ampere, kelvin, mole and candela respectively). They are not used as helping constants.
+
+There is no general requirement that exponents in <<table1>> and <<table2>> must be displayed as lower triangular matrices (see <<derivation_defs>>), although this arrangement makes the tables easier to scan visually and therefore has merit. Because <<table1>> is a lower triangular matrix, one can see that the units can also be defined in seven separate steps rather than as a group, as we have done. The step-by-step method, also used in the draft 9th edition of the SI Brochure <<bipm2018>>, first defines the SI second from the upper left corner of <<table1>>. The metre can then be defined from the next row because the helping unit of stem:[c], the second, has already been defined. The kilogram can be defined from the third row because the two helping units of stem:[h] have already been defined. All helping units have now been defined and so the remaining four SI units can be defined in any order one wishes, including of course the order found in <<bipm2018>>.
+
+The seven unique combinations of defining constants whose unit is a base unit (<<eq1>> shows the combination for the kilogram) were derived together by matrix inversion. Since any order of units and defining constants used as labels in <<table1>> leads to identical definitions of the base units, we have chosen an order that makes <<table2>> visually simple. It is also the order found in the major reference for the revised SI <<bipm2018>>.
+
+[[present_si]]
+[appendix,obligation=informative]
+== The present SI
+
+The present SI <<bipm2006>> could also have been formulated in terms of the six defining constants and one defining quantity that had been specified by the CGPM, either explicitly or implicitly, between 1889 and 1983:
+
+* the unperturbed ground state hyperfine transition frequency of the caesium 133 atom stem:[Delta nu_("Cs")] is stem:[9192631770" hertz"], (1967)
+* the speed of light in vacuum stem:[c] is stem:[299792458" metres per second"], (1983)
+* stem:[color(blue)("the mass of the international prototype of the kilogram")] stem:[color(blue)(m_(cc K))] stem:[color(blue)("is 1 kilogram,")] (1889)
+* stem:[color(blue)("the permeability of vacuum")] stem:[color(blue)(mu_0" is "4pi xx 10^(−7)" newton per ampere squared")], (1948, 1954)
+* stem:[color(blue)("the thermodynamic temperature of the triple point of water")] stem:[color(blue)(T_("TPW")" is "273.16" kelvin")], (1954)
+* stem:[color(blue)("the molar mass of carbon 12,")] stem:[color(blue)(M""^(12)C", is "0.012" kilogram per mole")], (1971)
+* the luminous efficacy of monochromatic radiation of frequency stem:[540 xx 1012" Hz"], stem:[K_("cd")], is stem:[683" lumens per watt"]. (1979)
+
+The newton (symbol: N) is expressed in terms of base units as N = kg m s^−2^ <<bipm2006>>. Expressions for the hertz, lumen and watt in terms of base units are found in <<introduction>>. The defining quantity and three defining constants that will be replaced in the revised SI are shown in blue.
+
+Carrying out the same procedure as described in <<defining_constants>> and <<base_units>> for the revised SI, we start with <<tableA1-1>>, which contains an embedded stem:[7 xx 7] matrix. Again, this matrix is a table of exponents inferred from seven bullets, but now they are the bullets found in this Appendix. For ease of comparison with <<table1>> and <<table2>>, the order of units in the top row of <<tableA1-1>> is chosen to be identical to that of <<table1>>, and the order of quantities in the left column is chosen to produce a lower triangular matrix.
+
+[[tableA1-1]]
+[cols="^,^,^,^,^,^,^,^"]
+|===
+| h| stem:["s"] h| stem:["m"] h| stem:[color(blue)("kg")] h| stem:[color(blue)("A")] h| stem:[color(blue)("K")] h| stem:[color(blue)("mol")] h| stem:["cd"]
+h| stem:[Delta nu_("Cs")] e| -1 | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)]
+h| stem:[c] | -1 e| 1 | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)]
+h| stem:[color(blue)(m_(cc K))] | stem:[color(green)(0)] | stem:[color(green)(0)] | 1 | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)]
+h| stem:[color(blue)(mu_0)] | -2 | 1 | 1 e| -2 | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)]
+h| stem:[color(blue)(T_("TPW"))] | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] e| 1 | stem:[color(green)(0)] | stem:[color(green)(0)]
+h| stem:[color(blue)(M(""^(12)"C"))] | stem:[color(green)(0)] | stem:[color(green)(0)] | 1 | stem:[color(green)(0)] | stem:[color(green)(0)] e| -1 | stem:[color(green)(0)]
+h| stem:[K_("cd")] | 3 | -2 | -1 | stem:[color(green)(0)] | stem:[color(green)(0)] | stem:[color(green)(0)] e| 1
+|===
+
+Now transpose the labels of <<tableA1-1>> and invert its embedded matrix to arrive at <<tableA1-2>>. As with <<table2>>, cells containing zero are left blank.
+
+[[tableA1-2]]
+[cols="^,^,^,^,^,^,^,^"]
+.The present SI <<bipm2006>>. The blank cells all contain zero (not displayed).
+|===
+| h| stem:[Delta nu_("Cs")] h| stem:[c] h| stem:[color(blue)(m_(cc K))] h| stem:[color(blue)(mu_0)] | stem:[color(blue)(T_("TPW"))] h| stem:[color(blue)(M(""^(12)"C"))] h| stem:[K_("cd")]
+h| stem:["s"] e| -1 | | | | | |
+h| stem:["m"] | -1 e| 1 | | | | |
+h| stem:[color(blue)("kg")] | | e| 1 | | | |
+h| stem:[color(blue)("A")] | 1/2 | 1/2 | 1/2 e| -1/2 | | |
+h| stem:[color(blue)("K")] | | | | e| 1 | |
+h| stem:[color(blue)("mol")] | | | 1 | | e| -1 |
+h| stem:["cd"] | 1 | 2 | 1 | | | | 1
+|===
+
+This table can easily be compared with <<table2>>. Note that only the first two rows, those for the second and metre, are identical in the two tables.
+
+There is no reason that the exponents must be integers, as this example illustrates. Thus, in the present SI <<bipm2006>>, the ampere is realized by traceability to the quantity stem:[((Delta nu_("Cs")cm_(cc K))/mu_0)^(1/2)] which, according to the information in the first four bullets, has an exact value of order stem:[1.5 xx 10^(12)" A"]. Note that the SI unit of (stem:[Delta nu_("Cs")cm_(cc K)]) is the newton and that of stem:[mu_0] is the newton per ampere squared.
+
+The exponents appearing in <<tableA1-2>> and the exact numerical values of the six constants and one physical quantity listed in the bullets of this Appendix would have been sufficient to define all base units of the present SI. For example, a definition equivalent to the present definition of the ampere <<bipm2006>> would be:
+
+[stem%unnumbered]
+++++
+1" A" = ( ((4pi xx 10^(-7)))/((9192631770)(299792458)(1)) )^(1/2) ( (Delta nu_("Cs")cm_(cc K))/(mu_0) )^(1/2) = 6.789687... xx 10^(-13) ((Delta nu_("Cs")c m_(cc K))/(mu_0))^(1/2)
+++++
+
+In the present SI, stem:[m_(cc K)] is the sole defining quantity which is not some kind of constant. Rather, it is the mass of an artefact known as the international prototype of the kilogram, stem:[cc K], which has been used since 1889 to define one kilogram <<bipm2006>>. This artefact definition of the kilogram is simple, understandable and independent of the six constants. Unfortunately, since the mass of stem:[cc K] is not a physical constant, the stability over time of the unit it defines cannot be assured. The same lack of assurance affects, at least in principle, the three units for which stem:[m_(cc K)] is a "helper", one of which is the ampere (see yellow cells in the column of <<tableA1-2>> labelled "stem:[m_(cc K)]"). When the SI was first approved by the 11th CGPM in 1960, it was recognized that the artefact definition of the kilogram was a weakness of the International System of Units—to be remedied "sooner or later" <<cipm1960>>.
+
+The present definition of the kilogram <<bipm2006>> is contained entirely in the third bullet of this Appendix. In symbols,
+
+[stem%unnumbered]
+++++
+1" kg" = m_(cc K).
+++++
+
+The revised definition of the kilogram <<bipm2018>> is given by <<eq2>>, stem:[1" kg" = 1.4755213997... xx 10^(40) (Delta nu_("Cs")h)/(c^2)]. The value of the prefactor on the right-hand side ensures that there will be no perceptible discontinuity in the kilogram unit when it is redefined <<newell>>, <<bipm2018>>. The continuity condition requires that the weighted mean of the most accurate experimental values of stem:[h] will have been fixed <<newell>> so that, _just after_ the redefinition comes into force,
+
+[stem%unnumbered]
+++++
+x * m_(cc K) = 1.4755213997... xx 10^(40) (Delta nu_("Cs")h)/(c^2),
+++++
+
+where the experimental value of stem:[x] is unity to within an uncertainty that is sufficiently small to make the redefinition imperceptible to the vast majority of users. (Subsequently, the experimental value of stem:[x] might change simply because stem:[m_(cc K)] is not a physical constant. Time will tell.) The impact of the revised SI on most users of the present SI has been assessed to be small by international experts <<cipm2018>>.
+
+[[derivation_defs]]
+[appendix,obligation=informative]
+== Derivation of definitions of the base units in the revised SI (see Ref. <<bipm2018>> section 2.3.1); comparison with the method presented in <<defining_constants>> and <<base_units>> of this report [added March 2018]
+
+*_Preliminary consideration of the defining constants specified in the bullets of <<introduction>>_*
+
+Let stem:[C_i] be the symbol for the stem:[i^("th")] defining constant and let its fixed numerical value be stem:[N_i] when expressed in the SI coherent unit stem:[U_i]. Because stem:[C_i] is one of seven defining constants, the index stem:[i] runs from 1 to 7. The set of stem:[C_i] is comprised of stem:[Delta nu_("Cs")], stem:[c], stem:[h], stem:[e], stem:[k], stem:[N_"A"] and stem:[K_("cd")]. The subscript stem:[i] assigned to the defining constants is an arbitrary choice. We have chosen here the order in which the bullets are listed in <<introduction>>.
+
+The stem:[i^("th")] bullet of <<introduction>> can be written in generic symbols as
+
+[[eqA2-1]]
+[stem]
+++++
+C_i = N_I * U_i.
+++++
+
+The defining constants are quantities which appear in the equations of physics. The right side of <<eqA2-1>> is the exact value of each stem:[C_i] in the revised SI because the numerical values stem:[N_i] have been chosen to be exact. The bullets of <<introduction>> therefore define the coherent unit stem:[U_i] in terms of the quantity stem:[C_i], which is a constant of some type <<bipm2018>>. In the bracket notation introduced in section 2.1 of Ref. <<bipm2018>>, <<eqA2-1>> would be written
+
+[stem%unnumbered]
+++++
+C_i = {C_i}[C_i].
+++++
+
+Any coherent unit of the SI can be expressed as the product of powers of the seven base units <<bipm2006>>, <<bipm2018>>. We refer below to the stem:[i^("th")] base unit as stem:[B_i]. The symbols for the seven base units are: s, m, kg, A, K, mol and cd. Because units are commutative, the index stem:[i] assigned to each base unit is also an arbitrary choice and need not follow the order shown here, although this is the order adopted in <<defining_constants>> and <<base_units>> of this report and in Ref. <<bipm2018>>. The SI unit stem:[U_i] of each defining constant is given in terms of the base units by
+
+[[eqA2-2]]
+[stem]
+++++
+U_i = prod_(j=1)^7 B_j^(a_(ij)).
+++++
+
+The exponents stem:[a_(ij)] are easily inferred from the seven bullets in <<introduction>> and the supplementary information written just below them. The exponents turn out to be integers ranging from -2 through +3. Note that <<eqA2-2>> is merely a consequence of each defining constant being a quantity which has an SI unit.
+
+*_The definitions of the base units_*
+
+Combining <<eqA2-1>> and <<eqA2-2>> to eliminate stem:[U_i], we obtain
+
+[[eqA2-3]]
+[stem]
+++++
+(C_i)/(N_i) = prod_(j=1)^7 B_j^(a_(ij)).
+++++
+
+The task now is to express any given base unit stem:[B_i] as the product of powers of the seven ratios stem:[C_j//N_j]. We therefore seek the "inverse form" of <<eqA2-3>>.
+
+Temporarily treating the symbols of quantities and units as algebraic abstractions, we take the logarithm footnote:[See Ref. <<mohr>> for a formal derivation that avoids any use of logarithms.] of both sides of <<eqA2-3>>:
+
+[[eqA2-4]]
+[stem]
+++++
+"ln"((C_i)/(N_i)) = sum_(j=1)^7 a_(ij)"ln"(B_j).
+++++
+
+Let
+
+[stem%unnumbered]
+++++
+w_i = "ln"(C_i//N_i) 
+++++
+
+and
+
+[stem%unnumbered]
+++++
+z_i = "ln"(B_i).
+++++
+
+The set of seven equations represented by <<eqA2-4>> can now be written compactly in matrix form as
+
+[[eqA2-5]]
+[stem]
+++++
+bb W = bb A bb Z
+++++
+
+where stem:[bb W] and stem:[bb Z] are stem:[1 xx 7] arrays containing seven logarithmic elements of the form stem:[w_i] and stem:[z_i] respectively and stem:[bb A] is the stem:[7 xx 7] matrix of exponents consisting of the elements stem:[a_(ij)].
+
+To solve for stem:[bb Z], multiply <<eqA2-5>> from the left by stem:[bb (A^(-1))]:
+
+[[eqA2-6]]
+[stem]
+++++
+bb Z = bb (A^(−1) W) .
+++++
+
+The existence of stem:[bb (A^(-1))] is obviously a necessary condition.
+
+<<eqA2-6>> represents seven individual equations. We now exponentiate each of these to eliminate the logarithms they contain. If the elements of stem:[bb (A^(-1))] are symbolized by stem:[d_(ij)], then the definition of the stem:[i^("th")] base unit is found to be:
+
+[[eqA2-7]]
+[stem]
+++++
+B_i = prod_(j=1)^7 (C_j/N_j)^(d_(ij)),
+++++
+
+which defines each base unit in terms of the defining constants and their fixed numerical values. The same procedure can be used to show that stem:[B_i = prod_j U_j^(d_(ij))] is the inverse form of <<eqA2-2>>. The definitions of the base units given in Ref. <<bipm2018>> can be recognized as following from <<eqA2-7>> when it is written with separate factors for the terms containing the stem:[N_j] and the stem:[C_j]:
+
+[stem]
+++++
+B_i = (prod_(j=1)^7 N_j^(-d_(ij)))(prod_(j=1)^7C_j^(d_(ij))).
+++++
+
+<<eqA2-7>> can also be used to define the same base units in terms of the present SI when account is taken of the different set of seven bullets, which are shown in <<present_si>>.
+
+*_Comparison with the approach taken in <<defining_constants>> and <<base_units>>_*
+
+<<defining_constants>> and <<base_units>> take advantage of the simplicity of <<eqA2-2>>. The information required for each stem:[U_i] seems practically self-evident. Nevertheless, the set of equations contains all exponents stem:[a_(ij)] which are needed to create matrix stem:[bb A].
+
+In <<defining_constants>>, <<table1>> is described as representing "much of the information" contained in the bullets of <<introduction>>. The information contained is that that the unit stem:[U_i] of the stem:[i^("th")] defining constant stem:[C_i] can be expressed in terms of the base units as stem:["s"^alpha" m"^beta" kg"^gamma" A"^delta" K"^epsilon" mol"^zeta" cd"^eta], where the required exponents are inferred from the stem:[i^("th")] bullet of <<introduction>> (and, when needed, the supplementary information written below the bullets). <<table1>> thus provides an example of how the information contained in <<eqA2-2>> can be displayed. The important point is that <<table1>> contains stem:[bb A], and the cells of <<table1>> contain the array of individual exponents stem:[a_(ij)] for the chosen ordering of base units and defining constants. The ordering is arbitrary from a mathematical point of view and was therefore chosen in <<defining_constants>> for didactic reasons.
+
+It is also true that the exact *value* of the stem:[i^("th")] defining constant stem:[C_i] will be expressed in the revised SI in terms of the base units multiplied by an exact number. The SI *value* of each stem:[C_i] in the revised SI will therefore be stem:[N_i" s"^alpha" m"^beta" kg"^gamma" A"^delta" K"^epsilon" mol"^zeta" cd"^eta], where the exact number stem:[N_i] is stated in the stem:[i^("th")] bullet of <<introduction>>. Multiplication by a pure number does not affect the exponents.
+
+<<table2>> is designed to present a useful picture of the revised SI. With that in mind, <<base_units>> refers to combinations of the defining constants that have the same SI *unit* as the stem:[i^("th")] base unit stem:[B_i]. The stem:[i^("th")] row of <<table2>> is labelled with base unit stem:[B_i]; the stem:[j^("th")] column of <<table2>> is labelled with the defining constant stem:[C_j]. The elements stem:[d_(ij)] of the table were obtained by inverting matrix stem:[bb A], which is contained in <<table1>>. <<table2>> can therefore be used to find the combination of defining constants that has stem:[B_i] as its unit. The *definition* of each stem:[B_i] can be obtained by changing the column labels from stem:[C_j] to stem:[C_j//N_j] thereby making <<table2>> equivalent to <<eqA2-7>>. However, a more intuitive method is adopted for the example presented in <<base_units>>.
+
+== Acknowledgements
+
+The author acknowledges helpful discussions with Estefanía de Mirandés (BIPM), Richard J. C. Brown (NPL) and Paul Quincey (NPL).
+
+[bibliography]
+== References
+
+* [[[cgpm2011,1]]], https://www.bipm.org/en/CGPM/db/24/1/[Resolution 1 of the 24th CGPM] (2011): "On the possible future revision of the International System of Units, the SI"
+
+* [[[bipm2006,2]]], Bureau International des Poids et Mesures, https://www.bipm.org/utils/common/pdf/si_brochure_8_en.pdf[_The International System of Units (SI)_, 8th Edition], 2006; 2014.
+
+* [[[newell,3]]], David B. Newell _et al._, The CODATA 2017 Values of stem:[h], stem:[e], stem:[k], and stem:[N_"A"] for Revision of the SI, _Metrologia_ *55* (2018) L13-L16. https://doi.org/10.1088/1681-7575/aa950a
+
+* [[[bipm2018,4]]], Bureau International des Poids et Mesures, _The International System of Units (SI)_, 9th Edition – https://www.bipm.org/utils/en/pdf/si-revised-brochure/Draft-SI-Brochure-2018.pdf[draft] of 5 February 2018.
+
+* [[[page,5]]], see for instance page 2 of _The International System of Units (SI)_, C.H. Page and P. Vigoureux, eds. Nat. Bur. Stand. (U.S.), Spec. Publ. 330 (July 1974). (This English translation of the 3rd Edition of the SI Brochure was approved by the BIPM.)
+
+* [[[mohr,6]]], Peter J. Mohr, Defining units in the quantum based SI, _Metrologia_, *45* (2008) 129-133.
+
+* [[[bipm2017,7]]], BIPM, Future Revision of the SI https://www.bipm.org/utils/common/pdf/SI-Brand-Book.pdf[Brand Book], April 2017, page 11. (the image is reproduced on the cover page of this report)
+
+* [[[wiki,8]]], Proposed redefinition of SI base units, _Wikipedia_ (accessed 23 February 2018) https://en.wikipedia.org/wiki/Proposed_redefinition_of_SI_base_units
+
+* [[[cipm1960,9]]], see address by CIPM President André Danjon in https://www.bipm.org/utils/common/pdf/CGPM/CGPM11.pdf[_Proceedings_] of the 11th CGPM (1960), pp. 23-25 [in French].
+
+* [[[cipm2018,10]]], Joint statement prepared in 2017 by the CIPM Consultative Committees on the proposed revision of the SI. https://www.bipm.org/utils/common/pdf/SI-statement.pdf (accessed 23 February 2018)
