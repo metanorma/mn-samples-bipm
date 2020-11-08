@@ -1,0 +1,385 @@
+= Comparison of ozone reference standards of the CHMI and the BIPM
+:edition: 3
+:copyright-year: 2018
+:revdate: 2018-04-06
+:language: en
+:docnumber: BIPM-2018/03
+:title-en: Comparison of ozone reference standards of the CHMI and the BIPM
+:title-fr:
+:doctype: rapport
+:committee-en:
+:committee-fr:
+:committee-acronym:
+:fullname: Joële Viallon
+:affiliation: BIPM
+:role: Author for correspondence
+:email: jviallon@bipm.org
+:tel: +33 1 45 07 62 70
+:fax: +33 1 45 07 20 21
+:fullname_2: Philippe Moussay
+:affiliation_2: BIPM
+:fullname_3: Faraz Idrees
+:affiliation_3: BIPM
+:fullname_4: Robert Wielgosz
+:affiliation_4: BIPM
+:fullname_5: Jan Šilhavý
+:affiliation_5: CHMI
+:fullname_6: Miroslav Vokoun
+:affiliation_6: CHMI
+:supersedes-date:
+:supersedes-draft:
+:docstage: in-force
+:docsubstage: 60
+:imagesdir: images
+:mn-document-class: bipm
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Abstract
+
+A comparison of the ozone reference standards of the Czech Hydrometeorological Institute (CHMI) and of the Bureau International des Poids et Mesures (BIPM) has been performed. Both institutes maintain Standard Reference Photometers (SRPs), developed by the National Institute of Standards and Technology (NIST), as their reference standards. The instruments were compared over a nominal ozone mole fraction range of 0 nmol/mol to 860 nmol/mol and the results showed good agreement.
+
+== Introduction
+
+A comparison of the ozone reference standards of the Czech Hydrometeorological Institute (CHMI) and of the Bureau International des Poids et Mesures (BIPM) has been performed. Both institutes maintain Standard Reference Photometers (SRPs) developed by the National Institute of Standards and Technology (NIST) as their reference standards. This comparison was performed following the protocol established for the key comparison https://www.bipm.org/kcdb/[BIPM.QM-K1], adapted to the measurement range normally covered by the CHMI as part of their calibration service, which is 10 nmol/mol to 870 nmol/mol. The measurement protocol is described briefly in <<protocol>>. A description of the standards is given in <<measurement_standards>> of this report, together with their uncertainty budgets. The data treatment is explained in <<analysis>>, and the results of the comparison are given in <<results>>.
+
+== Terms and definitions
+
+stem:[x_(nom)]:: nominal ozone mole fraction in dry air supplied by the ozone generator.
+stem:[x_("A",i)]:: stem:[i]th measurement of the nominal value stem:[x_(nom)] by the photometer A.
+stem:[bar(x)_("A")]:: the mean of stem:[N] measurements of the nominal value stem:[x_(nom)] measured by the photometer A : stem:[bar(x)_("A") = 1/N sum_(i=1)^N x_("A",i)]
+stem:[s_("A")]:: standard deviation of stem:[N] measurements of the nominal value stem:[x_(nom)] measured by the photometer A : stem:[s_("A")^2 = 1/(N-1) sum_(i=1)^N (x_("A",i)-bar(x)_("A"))^2]
+
+* The result of the linear regression fit performed between two sets of data measured by photometers A and B during a comparison is written as: stem:[x_("A") = a_("A,B")x_("B") + b_("A,B")]. With this notation, photometer A is compared to photometer B. stem:[a_("A,B")] is dimensionless and stem:[b_("A,B")] is expressed in units of nmol/mol.
+
+== Measurement schedule
+
+The measurements were performed on 20 September 2017 at the BIPM.
+
+[[protocol]]
+== Measurement protocol
+
+This comparison was performed following the protocol established for the key comparison BIPM.QM-K1, with a modified measurement range: the instruments were compared over a nominal ozone mole fraction range of 0 nmol/mol to 860 nmol/mol (instead of a nominal range of 0 nmol/mol to 500 nmol/mol).
+
+The comparison protocol is summarized in this section. The complete version can be downloaded from the BIPM website (http://www.bipm.org/utils/en/pdf/BIPM.QM-K1_protocol.pdf).
+
+This comparison was performed following protocol A, corresponding to a direct comparison between the CHMI national standard SRP17 and the common reference standard BIPM-SRP27 maintained at the BIPM. A comparison between two (or more) ozone photometers consists of producing ozone-air mixtures at different amount-of-substance fractions over the required range, and measuring these with the photometers.
+
+=== Ozone generation
+
+The same source of purified air is used for all the ozone photometers being compared. This air is used to provide reference air as well as the ozone–air mixture to each ozone photometer. Ambient air is used as the source for reference air. The air is compressed with an oil-free compressor. It is dried and scrubbed using a commercial purification system so that the mole fraction of ozone and nitrogen oxides remaining in the air is below detectable limits. The relative humidity of the reference air is monitored and the mole fraction of water in air is typically less than stem:[3" "mu"mol/mol"]. The mole fraction of volatile organic hydrocarbons in the reference air was measured (November 2002), with no mole fraction of any detected component exceeding stem:[1" nmol/mol"].
+
+A common dual external manifold in Pyrex is used to supply the necessary flows of reference air and ozone–air mixtures to the ozone photometers. The two columns of this manifold are vented to atmospheric pressure.
+
+=== Comparison procedure
+
+All the instruments were switched on and allowed to stabilize for at least 8 hours before the comparison commenced. The pressure and temperature measurement systems of the instruments were checked at this time. If any adjustments were required, these were noted. For this comparison, no adjustments were necessary.
+
+One comparison run normally includes ten different amount-of-substance fractions distributed to cover the range, together with the measurement of reference air at the beginning and end of each run. The nominal amount-of-substance fractions were measured in a sequence imposed by the BIPM.QM-K1 protocol, plus three additional values to extend the range (0, 220, 80, 420, 120, 320, 30, 370, 170, 500, 270, 0, 570, 840, 700 and 0) nmol/mol. Each of these points is an average of ten single measurements.
+
+For each nominal value of the ozone mole fraction stem:[x_("nom")] supplied by the ozone generator, the standard deviation stem:[s_("SRP27")] on the set of ten consecutive measurements stem:[x_("SRP27",i)] recorded by BIPM-SRP27 was calculated. The measurement results were considered as valid if stem:[s_("SRP27")] was less than 1 nmol/mol, which ensures that the photometers were measuring a stable ozone concentration. If not, another series of ten consecutive measurements was performed.
+
+=== Comparison repeatability
+
+The comparison procedure was repeated continuously for BIPM.QM-K1 to evaluate its repeatability. The participant and the BIPM jointly decided when both instruments were stable enough to start recording a set of measurement results to be considered as the official comparison results. The measurements reported here were recorded in an additional run that was performed immediately afterwards.
+
+=== SRP27 stability check
+
+A second ozone reference standard, BIPM-SRP28, was included in the comparison to verify its agreement with BIPM-SRP27 and thus follow its stability over the period of the on-going key comparison.
+
+[[measurement_standards]]
+== Measurement standards
+
+All instruments included in this comparison were Standard Reference Photometers (SRP) built by the NIST. More details on the instrument’s operating principle and capabilities can be found in <<paur>>. The following section describes the SRP measurement principle and uncertainty budget.
+
+=== Measurement equation of a NIST SRP
+
+The measurement of ozone mole fraction by an SRP is based on the absorption of radiation at 253.7 nm by ozonized air in the gas cells of the instrument. One unique characteristic of the instrument design is the use of two gas cells to overcome the instability of the light source. The measurement equation is derived from the Beer–Lambert and ideal gas laws. The number concentration (stem:[C]) of ozone is calculated from:
+
+[[eq1]]
+[stem]
+++++
+C = (-1)/(2 sigma L_("opt")) (T)/(T_("std")) (P_("std"))/(P) "ln"(D)
+++++
+
+where
+
+stem:[sigma]:: is the absorption cross-section of ozone at stem:[253.7" nm"] under standard conditions of temperature and pressure, stem:[1.1476 xx 10^(−17)" cm"^2"/molecule"] <<iso13964>>;
+stem:[L_("opt")]:: is the optical path length of one of the cells;
+stem:[T]:: is the measured temperature of the cells;
+stem:[T_("std")]:: is the standard temperature (stem:[273.15" K"]);
+stem:[P]:: is the measured pressure of the cells;
+stem:[P_("std")]:: is the standard pressure (stem:[101.325" kPa"]);
+stem:[D]:: is the product of transmittances of two cells, with the transmittance (stem:[T_r]) of one cell defined as
+
+[[eq2]]
+[stem]
+++++
+T_r = I_("ozone")/I_("air")
+++++
+
+where
+
+stem:[I_("ozone")]:: is the UV radiation intensity measured from the cell when containing ozonized air; and
+stem:[I_("air")]:: is the UV radiation intensity measured from the cell when containing pure air (also called reference or zero air).
+
+Using the ideal gas law, <<eq1>> can be reformulated in order to express the measurement results as a mole fraction (stem:[x]) of ozone in air:
+
+[[eq3]]
+[stem]
+++++
+x = (-1)/(2sigmaL_("opt")) T/P R/(N_"A") "ln"(D)
+++++
+
+where
+
+stem:[N_"A"]:: is the Avogadro constant, stem:[6.022142 xx 10^(23)" mol"^(−1)], and
+stem:[R]:: is the gas constant, stem:[8.314472" J mol"^(−1)" K"^(−1)].
+
+The formulation implemented in the SRP software is:
+
+[[eq4]]
+[stem]
+++++
+x = (-1)/(2 alpha_"x" L_("opt")) T/(T_("std")) (P_("std"))/P "ln"(D)
+++++
+
+where
+
+stem:[alpha_"x"]:: is the linear absorption coefficient under standard conditions, expressed in cm^−1^, linked to the absorption cross–section with the relation:
+
+[[eq5]]
+[stem]
+++++
+alpha_"x" = sigma (N_"A")/R (P_("std"))/(T_("std"))
+++++
+
+=== Absorption cross–section for ozone
+
+The linear absorption coefficient at standard conditions stem:[alpha_"x"] used within the SRP software algorithm is stem:[308.32" cm"^(−1)]. This corresponds to a value for the absorption cross–section stem:[sigma] of stem:[1.1476 xx 10^(−17)" cm"^2"/molecule"], rather than the more often quoted stem:[1.147 xx 10^(−17)" cm"^2"/molecule"]. In the comparison of two SRP instruments, the absorption cross section can be considered to have a conventional value and its uncertainty can be set to zero. However, in the comparison of different methods or when considering the complete uncertainty budget of the method the uncertainty of the absorption cross–section should be taken into account. A consensus value of 2.12 % at a 95 % level of confidence for the uncertainty of the absorption cross–section has been proposed by the BIPM and the NIST in a recent publication <<viallon3>>.
+
+=== Condition of the BIPM SRPs
+
+Compared to the original design described in <<paur>>, SRP27 and SRP28 have been modified to deal with two biases revealed by a study conducted by the BIPM and the NIST <<viallon3>>. In 2009, an "SRP upgrade kit" was installed in the instruments, as described in <<viallon4>>.
+
+=== Uncertainty budget of the common reference BIPM-SRP27
+
+The uncertainty budget for the ozone mole fraction in dry air (stem:[x]) measured by the instruments BIPM-SRP27 and BIPM-SRP28 in the nominal range 0 nmol/mol to 900 nmol/mol is given in <<table1>>.
+
+[[table1]]
+.Uncertainty budget for the SRPs maintained by the BIPM
+|===
+.2+^h| Component (stem:[y]) 4+^h| Uncertainty stem:[u(y)] .2+^h| Sensitivity coefficient stem:[c_i= (delx)/(dely)] .2+^h| contribution to stem:[u(x)] stem:[abs(c_i)*u(y)] nmol/mol
+^h| Source ^h| Distribution ^h| Standard Uncertainty ^h| Combined standard uncertainty stem:[u(y)]
+
+.3+h| Optical Path stem:[L_("opt")] | Measurement scale | Rectangular | 0.0006 cm .3+<.^| 0.52 cm .3+^.^| stem:[-x/(L_("opt"))] .3+^.^| stem:[2.89 xx 10^(−3)x]
+| Repeatability | Normal | 0.01 cm
+| Correction factor | Rectangular | 0.52 cm
+
+.2+h| Pressure stem:[P] | Pressure gauge | Rectangular | 0.029 kPa .2+.^| 0.034 kPa .2+^.^| stem:[−x/P] .2+^.^| stem:[3.37 xx 10^(−4)x]
+| Difference between cells | Rectangular | 0.017 kPa
+
+.2+h| Temperature stem:[T] | Temperature probe | Rectangular | 0.03 K .2+.^| 0.07 K .2+^.^| stem:[x/T] .2+^.^| stem:[2.29 xx 10^(−4)x]
+| Temperature gradient | Rectangular | 0.058 K
+
+.2+h| Ratio of intensities stem:[D] | Scaler resolution | Rectangular | stem:[8 xx 10^(−6)] .2+.^| stem:[1.4 xx 10^(−5)] .2+^.^| stem:[x/(D"ln"(D))] .2+^.^| 0.28
+| Repeatability | Triangular | stem:[1.1 xx 10^(−5)]
+
+h| Absorption Cross section stem:[sigma] | Hearn value | a| stem:[1.22 xx 10^(−19)] cm^2^/molecule a| stem:[1.22 xx 10^(−19)] cm^2^/molecule ^.^| stem:[-x/alpha] ^.^| stem:[1.06 xx 10^(−2)x]
+|===
+
+As explained in the comparison protocol, following this budget the standard uncertainty associated with the ozone mole fraction measurement with the BIPM SRPs can be expressed as a numerical equation (numerical values expressed as nmol/mol):
+
+[[eq6]]
+[stem]
+++++
+u(x) = sqrt((0.28)^2 + (2.92*10^(-3)x)^2)
+++++
+
+=== Covariance terms for the common reference BIPM-SRP27
+
+Correlations in-between the results of two measurements, performed at two different ozone amount-of-substance fractions with the BIPM–SRP27, were taken into account in the OzonE software. More details on the covariance expression can be found in the protocol. The following expression was applied:
+
+[[eq7]]
+[stem]
+++++
+u(x_i,x_j) = x_i*x_j*u_"b"^2
+++++
+
+where:
+
+[[eq8]]
+[stem]
+++++
+u_"b"^2 = (u^2(T))/(T^2) + (u^2(P))/(P^2) + (u^2(L_("opt")))/(L_("opt")^2)
+++++
+
+The value of stem:[u_"b"] is given by the expression of the measurement uncertainty: stem:[u_"b" = 2.92 xx 10^(−3)].
+
+=== Condition of the CHMI SRP17
+
+Compared to the original design, the CHMI SRP17 has been modified to deal with the two biases revealed in <<viallon3>>. In August 2007, an "SRP upgrade kit" was installed by NIST, as already described in the previous comparison report <<viallon5>>.
+
+=== Uncertainty budget of the CHMI SRP17
+
+The uncertainty budget for the ozone mole fraction in dry air stem:[x] measured by the CHMI standard SRP17 in the nominal range 0 nmol/mol to 900 nmol/mol is given in <<table2>>.
+
+Following this budget, as explained in the protocol of the comparison, the standard uncertainty associated with the ozone mole fraction measurement with the CHMI SRP17 can be expressed as a numerical equation (numerical values expressed as nmol/mol):
+
+[[eq9]]
+[stem]
+++++
+u(x) = sqrt((0.28)^2+(2.92*10^(-3)x)^2)
+++++
+
+No covariance term for the CHMI standard SRP17 was included in the calculations.
+
+[[table2]]
+.SRP17 uncertainty budget
+|===
+.2+^h| Component (stem:[y]) 4+^h| Uncertainty stem:[u(y)] .2+^h| Sensitivity coefficient stem:[c_i= (delx)/(dely)] .2+^h| contribution to stem:[u(x)] stem:[abs(c_i)*u(y)] nmol/mol
+^h| Source ^h| Distribution ^h| Standard Uncertainty ^h| Combined standard uncertainty stem:[u(y)]
+
+.3+h| Optical Path stem:[L_("opt")] | Measurement scale | Rectangular | 0.005 cm .3+.^| 0.52 cm .3+^.^| stem:[−x/(L_("opt")] .3+^.^| stem:[2.89 xx 10^(−3)x]
+| Variability | Rectangular | 0.004 cm
+| Divergence | Rectangular | 0. 52 cm
+
+.2+h| Pressure stem:[P] | Pressure gauge | Rectangular | 0.029 kPa .2+.^| 0.034 kPa .2+^.^| stem:[−x/P] .2+^.^| stem:[3.37 xx 10^(−4)x]
+| Difference between cells | Rectangular | 0.017 kPa
+
+.2+h| Temperature stem:[T] | Temperature probe | Rectangular | 0.03 K .2+.^| 0.07 K .2+^.^| stem:[x/T] .2+^.^| stem:[2.29 xx 10^(−4)x]
+| Temperature gradient | Rectangular | 0.058 K
+
+.2+h| Ratio of intensities stem:[D] | Scaler resolution | Rectangular | stem:[8 xx 10^(−6)] .2+.^| stem:[1.4 xx 10^(−5)] .2+^.^| stem:[x/(D"ln"(D))] .2+^.^| 0.28
+| Repeatability | Triangular | stem:[1.1 xx 10^(−5)]
+
+h| Absorption Cross section stem:[alpha] | Hearn value | a| stem:[1.22 xx 10^(−19)] cm^2^/molecule a| stem:[1.22 xx 10^(−19)] cm^2^/molecule ^.^| stem:[-x/alpha] ^.^| stem:[1.06 xx 10^(−2)x]
+|===
+
+[[analysis]]
+== Analysis of the measurement results by generalized least-squares regression
+
+The relationship between the national and reference standards was first evaluated with a generalized least-squares regression fit, using the OzonE software. This software, which is documented in a publication <<bremser>>, is an extension of the previously used software B_Least recommended by ISO standard 6143:2001 <<iso6143-2>>. It includes the possibility to take into account correlations between measurements performed with the same instrument at different ozone mole fractions. It also facilitates the use of a transfer standard, by the handling of unavoidable correlations, which arise since this instrument needs to be calibrated by the reference standard.
+
+In a direct comparison, a linear relationship between the ozone amount-of-substance fractions measured by SRP__n__ and SRP27 is obtained:
+
+[[eq10]]
+[stem]
+++++
+x_("SRP"n) = a_0 + a_1 x_("SRP27")
+++++
+
+The associated uncertainties on the slope stem:[u(a_1)] and the intercept stem:[u(a_0)] are given by OzonE, as well as the covariance between them and the usual statistical parameters to validate the fitting function.
+
+[[results]]
+== Results of the comparison
+
+SRP17, maintained by the CHMI, was compared with the SRPs maintained by the BIPM following the general procedure outlined above. A cycle of twelve comparison runs between SRP27, SRP28 and SRP17 were performed. Ozone was generated using the Environics 6100 generator with airflow of 10 L/min. The nominal ozone mole fraction range covered during this exercise was 0 nmol mol^−1^ to 500 nmol mol^−1^ for the eleven first runs, then 0 nmol mol^−1^ to 840 nmol mol^−1^ for the last run. The result of the last comparison run is presented in detail in the <<measurement_results>>. The repeatability of the results over the twelve runs is shown in <<repeatability>>, and the stability of the BIPM standards in <<history>>.
+
+[[measurement_results]]
+=== Measurement results
+
+The measurement results of the last of the twelve recorded runs are shown in <<table3>>. For each nominal ozone mole fraction, the standard deviation is reported on the ten successive measurements that were recorded. The values reported here show that both instruments were in a stable regime.
+
+An interesting way to look at these results is to display the difference between the ozone amount-of-substance fractions measured by SRP17 and SRP27 (stem:[x_(17) – x_(27)]) versus the ozone mole fraction measured by SRP27. <<fig1>>, shows that measurement results from both instruments differ little from each other over the entire concentration range of the comparison. Considering a coverage factor of stem:[k = 2] (95 % confidence interval), the difference between both standards is much lower than their combined measurement uncertainties.
+
+[[table3]]
+[cols=">,>,>,>,>,>"]
+.measurement results of the comparison between the CHMI standard SRP17 and the BIPM reference standard SRP27
+|===
+3+^h| Reference standard BIPM-SRP27 (RS) 3+^h| National standard CHMI SRP17 (NS)
+^h| stem:[x_("RS")] nmol/mol ^h| stem:[s_("RS")] nmol/mol ^h| stem:[u(x_("RS"))] nmol/mol ^h| stem:[x_("NS")] nmol/mol ^h| stem:[s_("NS")] nmol/mol ^h| stem:[u(x_("NS"))] nmol/mol
+
+| 0.18 | 0.35 | 0.28 | 0.04 | 0.32 | 0.28
+| 201.04 | 0.25 | 0.65 | 201.71 | 0.14 | 0.65
+| 72.00 | 0.23 | 0.35 | 72.26 | 0.22 | 0.35
+| 386.31 | 0.24 | 1.16 | 387.34 | 0.21 | 1.17
+| 108.73 | 0.17 | 0.42 | 109.17 | 0.15 | 0.42
+| 292.78 | 0.20 | 0.90 | 293.60 | 0.27 | 0.90
+| 25.94 | 0.26 | 0.29 | 26.04 | 0.22 | 0.29
+| 339.56 | 0.47 | 1.03 | 340.71 | 0.49 | 1.03
+| 154.23 | 0.25 | 0.53 | 154.80 | 0.27 | 0.53
+| 465.61 | 0.22 | 1.39 | 466.93 | 0.38 | 1.39
+| 247.91 | 0.32 | 0.78 | 248.57 | 0.17 | 0.78
+| 0.12 | 0.17 | 0.28 | -0.05 | 0.27 | 0.28
+| 576.5 | 0.5 | 1.71 | 578.12 | 0.38 | 1.71
+| 842.1 | 0.4 | 2.47 | 844.58 | 0.33 | 2.48
+| 697.9 | 0.2 | 2.06 | 700.08 | 0.22 | 2.06
+| −0.10 | 0.10 | 0.28 | −0.04 | 0.28 | 0.28
+|===
+
+[[fig1]]
+.difference between the ozone amount-of-substance fractions measured by SRP17 and SRP27 versus the ozone mole fraction measured by SRP27.
+image::img01.png[]
+
+The relationship between SRP17 and SRP27 is given by the result of the generalized least-square regression performed following the method described in <<analysis>>:
+
+[[eq11]]
+[stem]
+++++
+x_("SRP17") = 1.0034x_("SRP27") - 0.06
+++++
+
+The standard uncertainties on the parameters of the regression are stem:[u(a_1) = 0.0032] for the slope and stem:[u(a_0) = 0.21" nmol/mol"] for the intercept. The covariance between the two parameters is stem:["cov"(a_0, a_1) = –1.66 xx 10^(−4)].
+
+The least-squares regression results confirm that a linear fit is appropriate, with a sum of the the squared deviations (SSD) of 0.30 and a goodness of fit (GoF) equal to 0.17.
+
+To assess the agreement of the standards using <<eq10>>, the difference between the calculated slope value and unity, and the intercept value and zero, together with their measurement uncertainties, need to be considered. In this comparison, the value of the intercept is consistent with an intercept of zero, considering the uncertainty in the value of this parameter; i.e stem:[abs(a_0)< 2u(a_0)], and the value of the slope is consistent with a slope of 1; i.e. stem:[abs(1 – a_1)< 2 u(a_1)].
+
+[[repeatability]]
+=== Repeatability
+
+The results of the twelve comparison runs performed successively between SRP17 and SRP27 are reported in <<table4>>. With a standard deviation of 0.04 nmol/mol on the intercept and a relative standard deviation of 0.03 % on the slope, these data show a good repeatability.
+
+[[table4]]
+[cols=">,>,>,>,>,>,>"]
+.results of the ten comparison runs repeated successively
+|===
+^h| Run ^h| Slope stem:[a_1] ^h| stem:[u(a_1)] ^h| Intercept stem:[a_0] / (nmol mol^-1^) ^h| stem:[u(a_0)] / (nmol mol^-1^) ^h| stem:["cov"(a_0, a_1)] ^h| GoF
+
+| 1 | 1.0027 | 0.0033 | 0.09 | 0.22 | −2.05 10^−4^ | 0.395
+| 2 | 1.0030 | 0.0033 | −0.04 | 0.22 | −2.05 10^−4^ | 0.273
+| 3 | 1.0030 | 0.0033 | 0.04 | 0.22 | −2.04 10^−4^ | 0.391
+| 4 | 1.0025 | 0.0033 | 0.05 | 0.22 | −2.04 10^−4^ | 0.363
+| 5 | 1.0025 | 0.0033 | 0.05 | 0.22 | −2.04 10^−4^ | 0.400
+| 6 | 1.0022 | 0.0033 | 0.09 | 0.22 | −2.04 10^−4^ | 0.756
+| 7 | 1.0032 | 0.0033 | −0.01 | 0.22 | −2.04 10^−4^ | 0.277
+| 8 | 1.0030 | 0.0033 | 0.09 | 0.22 | −2.04 10^−4^ | 0.333
+| 9 | 1.0022 | 0.0033 | 0.08 | 0.22 | −2.04 10^−4^ | 0.381
+| 10 | 1.0032 | 0.0033 | 0.00 | 0.22 | −2.05 10^−4^ | 0.473
+| 11 | 1.0026 | 0.0033 | 0.07 | 0.22 | −2.04 10^−4^ | 0.629
+| 12 | 1.0032 | 0.0032 | −0.02 | 0.18 | −1.19 10^−4^ | 0.260
+|===
+
+[[history]]
+=== History of comparisons between BIPM SRP27, SRP28 and CHMI SRP17
+
+Results of the previous comparison performed with CHMI, on the same measurement range and since the first one in December 2002, are shown in <<fig2>> together with the results of this comparison. The slopes stem:[a_1] of the linear relation stem:[x_("SRP"n) = a_0 + a_1 x_("SRP27")] are represented together with their associated uncertainties calculated at the time of each comparison. Results of previous comparisons have been corrected to take into account the changes in the reference BIPM-SRP27 described in <<viallon4>>, which explains the larger uncertainties associated with the corresponding slopes.
+
+<<fig2>> shows that all standards included in these comparisons remained in close agreement.
+
+[[fig2]]
+.Results of previous comparisons between SRP27, SRP28 and CHMI-SRP17 realised at the BIPM. Uncertainties are calculated at stem:[k = 2], with the uncertainty budget in use at the time of each comparison.
+image::img02.png[]
+
+== Conclusion
+
+For the sixth time in fifteen years, a direct comparison between the CHMI national standard SRP17 and the BIPM reference standard SRP27 has been conducted at the BIPM. The measurement range of the SRP17 at the CHMI is 10 nmol/mol to 870 nmol/mol. This entire range was examined during the comparison, and the relative difference between the CHMI SRP17 and BIPM SRP27 measurement results was found to be much smaller than their combined measurement uncertainties.
+
+[bibliography]
+== References
+
+* [[[paur,1]]], Paur R.J., Bass A.M., Norris J.E. and Buckley T.J., 2003, Standard reference photometer for the assay of ozone in calibration atmospheres _Env. Sci. Technol._ *NISTIR 6369*, 25 pp
+
+* [[[iso13964,(2)ISO 13964:1996]]], ISO 13964 : 1996 Ambient air - Determination of ozone - Ultraviolet photometric method (International Organization for Standardization)
+
+* [[[viallon3,3]]], Viallon J., Moussay P., Norris J.E., Guenther F.R. and Wielgosz R.I., 2006, A study of systematic biases and measurement uncertainties in ozone mole fraction measurements with the NIST Standard Reference Photometer _Metrologia_ *43* 441-450
+
+* [[[viallon4,4]]], Viallon J., Moussay P., Idrees F. and Wielgosz R.I., 2010, Upgrade of the BIPM Standard Reference Photometers for Ozone and the effect on the on-going key comparison BIPM.QM-K1, *Rapport BIPM-2010/07*, 16pp
+
+* [[[viallon5,5]]], Viallon J., Moussay P., Wielgosz R.I., Novák J. and Vokoun M., 2008, Final report of the on-going key comparison BIPM.QM-K1: Ozone at ambient level, comparison with CHMI, 2007 _Metrologia_ *45*, *_Tech. Supl._* 08005
+
+* [[[bremser,6]]], Bremser W., Viallon J. and Wielgosz R.I., 2007, Influence of correlation on the assessment of measurement result compatibility over a dynamic range _Metrologia_ *44* 495-504
+
+* [[[iso6143-2,(7)ISO 6143.2:2001]]], ISO 6143.2 : 2001 Gas analysis - Determination of the composition of calibration gas mixtures - Comparison methods (International Organization for Standardization)
