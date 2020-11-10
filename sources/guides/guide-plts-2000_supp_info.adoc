@@ -1,0 +1,723 @@
+= Supplementary Information for the Realization of the PLTS-2000
+:edition: 1
+:copyright-year: 2014
+:revdate: 2014-10-29
+:language: en
+:doctype: guide
+:docstage: in-force
+:docsubstage: 60
+:title-en: Supplementary Information for the Realization of the PLTS-2000
+:title-fr:
+:docnumber: PLTS-2000
+:committee-acronym: CCT
+:committee-en: Consultative Committee for Thermometry
+:committee-fr: Comité consultatif de thermométrie
+:si-aspect: K_k
+:mn-document-class: bipm
+:mn-output-extensions: xml,html,pdf,rxl
+:imagesdir: images
+:local-cache-only:
+:data-uri-image:
+
+[.preface]
+== Abstract
+
+This document has been prepared by a task group of CCT Working Group 4 to give general guidance for establishing and measuring melting pressures of ^3^He in the range from stem:[0.902 " mK"] to stem:[1 " K"], i.e. for realizing the PLTS-2000. It draws on published techniques and designs, and is intended to be suitable for application in national measurement institutes, as well as more generally in ultra-low temperature laboratories where absolute pressure standards are not normally available. It is a slightly modified version of the publication by Rusby _et al._ [<<Rusby2007,2007>>].
+
+The document describes methods by which the PLTS-2000 can be realized successfully. However, it should not be taken as laying down how it must be done. The description of any particular apparatus is more for illustration than prescription, and considerable variation can often be effective. Likewise, quoted numerical data and dimensions are mostly for guidance only.
+
+
+== Introduction
+
+The Provisional Low Temperature Scale of 2000, PLTS-2000, was adopted by the CIPM in October 2000 to provide an extension of the International Temperature Scale of 1990, ITS-90, to lower temperatures. It ranges from the Néel temperature of solid ^3^He, stem:[T_{2000} = 0.902 " mK"], up to stem:[1 " K"], thus overlapping the ITS-90 between stem:[0.65 " K"] and stem:[1 " K"]. Thedefinition and derivation of the PLTS-2000 has been published by Rusby _et al._ [<<Rusby2002,2002>>].
+
+The requirements of temperature measurement in the range well below stem:[1 " K"] differ from those at higher temperatures in nature as well as in degree. There are no longer any gases whose properties can be used in gas thermometry (for primary measurements or interpolation) or in vapour pressure thermometers (as used in the ITS-90). Thermal radiation is virtually extinct, and thermometry must rely mainly on the electrical, magnetic or nuclear properties of condensed matter, whose characteristic energies lie in the millikelvin range. Moreover, the rapid increase in thermal resistances on cooling means that measurements must be almost non-dissipative.
+
+In spite of this, a surprising variety of thermometers have been exploited to meet needs in various parts of the range and with varying degrees of linkage to thermodynamics or statistical physics [<<Hudson1975,Hudson _et al._ 1975>>, <<Schuster1994,Schuster _et al._ 1994>>, <<Lounasmaa1974,Lounasmaa 1974>>, <<Betts1976,Betts 1976>>, <<Richardson1988,Richardson and Smith 1988>>, <<Pobell1996,Pobell 1996>>]. Examples are: noise thermometry using SQUIDs; paramagnetic (Curie law) susceptibility of dilute salts, magnetic alloys or nuclear spins; NMR; anisotropy of gamma-ray emissions to probe the population of hyperfine spin-states in radioactive nuclei; second-sound or osmotic pressure in ^3^He-^4^He mixtures; viscometry using vibrating wires; and _I-V_ characteristics of junctions between metals, semiconductors and superconductors; and in addition the secondary (e.g. resistance) thermometers which may be calibrated against them.
+
+These thermometers all have their advantages and disadvantages, but none has all the qualities necessary for defining an International Temperature Scale -- sensitivity, reproducibility, practicality (convenience of realization or calibration), and universality. Noise thermometers, which may operate in a primary or secondary way over the whole range, suffer from potential offsets which must be taken into account. The CMN magnetic thermometer has materials-related difficulties due to purity and poor thermal diffusivity in single crystals, or ambiguities over the Weiss constant in a powdered sample. Most other thermometers are only suitable as secondary devices, and the ranges of usefulness of many are limited, so that more than one would be needed to construct a complete scale.
+
+However, a thermometer using the melting pressure of 3He, which was first proposed by Scribner and Adams [<<Adams1970,1970>>], almost entirely meets the requirements. In 1996, the CCT called for a ^3^He melting-pressure equation to be derived to serve as the basis for an extension of the ITS-90 down to a temperature of about stem:[1 " mK"], analogous to the use of the vapour pressures of ^3^He and ^4^He in the ITS-90. ^3^He is a well-defined substance, with sufficient availability, and the melting pressure, stem:[p_m], is sensitive to temperature over most of the range of interest. However, there were differences of opinion regarding the stem:[p_m - T] relationship at the lowest temperatures, at the level of stem:[pm 2" "%] of stem:[T], and as a result the PLTS-2000 was adopted on a provisional basis only. These differences have not yet been resolved.
+
+The equation adopted for the melting pressure pm in the PLTS-2000 is
+
+[stem]
+++++
+p_m // "MPa" = sum_{i=-3}^{+9} a_i (T_{2000}//"K")^i ,
+++++
+
+with the following coefficients:
+
+[stem%unnumbered]
+++++
+a_{-3} = -1.3855442 cdot 10^{-12}
+++++
+
+[stem%unnumbered]
+++++
+a_{-2} = 4.5557026 cdot 10^{-9}
+++++
+
+[stem%unnumbered]
+++++
+a_{-1} = -6.4430869 cdot 10^{-6}
+++++
+
+[stem%unnumbered]
+++++
+a_0 = 3.4467434 cdot 10^0
+++++
+
+[stem%unnumbered]
+++++
+a_1 = -4.4176438 cdot 10^0
+++++
+
+[stem%unnumbered]
+++++
+a_2 = 1.5417437 cdot 10^1
+++++
+
+[stem%unnumbered]
+++++
+a_3 = -3.5789853 cdot 10^1
+++++
+
+[stem%unnumbered]
+++++
+a_4 = 7.1499125 cdot 10^1
+++++
+
+[stem%unnumbered]
+++++
+a_5 = -1.0414379 cdot 10^2
+++++
+
+[stem%unnumbered]
+++++
+a_6 = 1.0518538 cdot 10^2
+++++
+
+[stem%unnumbered]
+++++
+a_7 = -6.9443767 cdot 10^1
+++++
+
+[stem%unnumbered]
+++++
+a_8 = 2.6833087 cdot 10^1
+++++
+
+[stem%unnumbered]
+++++
+a_9 = -4.5875709 cdot 10^0.
+++++
+
+
+[[fig1]]
+.The ^3^He melting pressure, stem:[p_m], (full line) and the absolute value of the derivative stem:["d"p_m // "d"T] (dashed line, right-hand scale) versus temperature, from [<<Durieux1999,Durieux and Reesink 1999>>]. stem:[T_{"N"}], stem:[T_{"B"] and stem:[T_{"A"}] indicate the temperatures of three phase transitions in solid or liquid ^3^He.
+image::guide-plts-2000_supp_info/fig1.png[]
+
+
+<<fig1>> is a graphical representation of the melting curve below stem:[1 " K"], which shows that the pressure range of interest is from stem:[2.93 " MPa"] to stem:[4.0 " MPa"]. Values of stem:[p_m] and stem:["d"p_m // "d"T_{2000}] are tabulated at intervals of stem:[T_{2000}] in Appendix A.
+
+The melting pressure of ^3^He was chosen as the property on which the scale should be based because of the sensitivity and reliability with which it may be measured over a wide range, covering more than three decades of temperature, apart from a narrow region around the pressure minimum, at stem:[T_{min} = 315.24 " mK"]. It is a thermodynamic property with few complications arising from purity, _etc._, it provides an unambiguous universal definition, and it is capable of being realized in laboratories around the world without the exchange of artifacts.
+
+However, there are also some practical complications. In particular, the melting-pressure cell must operate at high pressure, with implications for the cell design and gas-handling system, and it must include a pressure transducer capable of good sensitivity and reproducibility.
+
+
+== Requirements and features
+
+Fundamentally the operation of a melting pressure thermometer (MPT) requires that a sample of pure liquid and solid ^3^He be brought to equilibrium at the desired temperature, and that the equilibrium pressure be measured absolutely. Following the original work of Straty and Adams [<<Adams1969,1969>>], several designs of MPT have been described; see for example [<<Greywall1982,Greywall and Busch 1982>>, <<BremerDurieux1992,Bremer and Durieux 1992>>, <<Schuster2001,Schuster _et al._ 2001>>]. In what follows particular use is made of three publications, due to Schuster, Hoffmann and Hechtfischer [<<Hechtfischer2001,2001>>]; Colwell, Fogle and Soulen [<<Colwell1992,1992>>], who used a thermometer provided by Greywall [<<Greywall1982,1982>>]; and Adams [<<Adams2005,2005>>]. They are here designated SHH, CFS and EDA, respectively.
+
+A consequence of the inversion in pressure is that for temperatures below stem:[T_{"min"}] the cell cannot communicate at constant pressure with an external measuring system: the sensing capillary is blocked with a plug of solid ^3^He, and direct contact with the pressure in the cell is lost. A melting-pressure cell must therefore include a pressure transducer, and this leads to the particular usefulness of the intrinsic fixed points discussed below.
+
+In the region around the minimum the thermometer cannot be used directly and some interpolation is required. The method for doing this is not specified in the PLTS-2000, but it can use any secondary sensor (CMN, resistive, etc.) which can be calibrated in this range. Although it may be surprising to base a scale on a thermometer where there is a region of low or zero sensitivity, the minimum has the compensating advantage of providing an in-built pressure fixed point which can be used for the calibration of the pressure transducer, as will be seen. SHH show that by stepping carefully through the minimum, the temperature can also be located, within about stem:[10" "mu"K"].
+
+<<fig1>> indicates the three other intrinsic fixed points of pressure and temperature, which may be detected and used as fixed points of pressure and temperature for the in situ calibration of the pressure transducer. They are the transition to the superfluid 'A' phase, the 'A to B' transition in the superfluid and the Néel transition in the solid. The pressure and temperature values of the four fixed points on the PLTS-2000 are shown in <<table1>>, with the estimated thermodynamic uncertainty (at stem:[k = 1]) in the temperatures, stem:[T], and the uncertainty of the current best practical realization of each point, stem:[delta T_{"r"}]. For the three low-temperature features, stem:[delta T_{"r"}] comes from the pressure resolution with which they can be observed (about stem:[pm 3 " Pa"] for stem:[p_{"A"}] and stem:[p_{"Néel"}], stem:[pm 10 " Pa"] for stem:[p_{"A-B"}], see <<cls_5>>) coupled with the derivative stem:["d"p_m // "d"T]. For the minimum, the pressure resolution is also about stem:[pm 3 " Pa"]; stem:[delta T_{"r"}] comes from locating the point of zero derivative in SHH. The uncertainty in the assigned absolute pressure values was estimated by [<<Rusby2002,Rusby _et al._ 2002>>] to be stem:[pm 60 " Pa"].
+
+
+[[table1]]
+.Values of stem:[p_m] and stem:[T_{2000}] for the ^3^He melting-pressure features, with estimated standarduncertainties with respect to thermodynamic temperature, stem:[T], and the standard uncertainties of the current best realizations, stem:[delta T_{"r"}].
+[cols="1,^,^,^,^"]
+|===
+| Point | stem:[p_m//"MPa"] | stem:[T_{2000}//"mK"] | stem:[Delta T//mu"K"] | stem:[delta T_r // mu"K"]
+
+| Minimum | stem:[2.93113] | stem:[315.24] | stem:[360] | stem:[10]
+
+| A | stem:[3.43407] | stem:[2.444] | stem:[48] | stem:[0.7]
+| A-B | stem:[3.43609] | stem:[1.896] | stem:[38] | stem:[2.8]
+| Néel | stem:[3.43934] | stem:[0.902] | stem:[18] | stem:[1.1]
+
+|===
+
+
+== Cell design
+
+In practical realizations the pressure transducer relies on the capacitive sensing of the displacement of a diaphragm in the cell. The interior, which is typically only a few stem:[xx 100 " mm"^3] in volume, contains a sinter, usually of silver powder, to promote thermal contact with the liquid ^3^He and reduce the time constant for equilibrium. Two examples are shown in <<fig2>>, in which a parallel-plate capacitor senses the displacement of the diaphragm.
+
+
+[[fig2]]
+.^3^He melting-pressure cells of Greywall and Busch [<<Greywall1982,1982>>] (diaphragm of coin silver,diameter stem:[6.4 " mm"], thickness stem:[0.25 " mm"]) and SHH [<<Schuster2001,Schuster _et al._ 2001>>] (diaphragm of BeCu, diameter stem:[6.1 " mm"], thickness stem:[0.4 " mm"]).
+image::guide-plts-2000_supp_info/fig2.png[]
+
+
+
+The design, construction, methods of measurement, and uses of high-resolution capacitive pressure gauges in low-temperature applications have been reviewed by Adams [<<Adams1993,1993>>]. The most critical design parameters of the transducer are the diameter and thickness of the diaphragm, which is usually made of coin silver or BeCu, and the parallelism of the capacitance plates in order to achieve the desired sensitivity, linearity and reproducibility of the device. Considerable care must be taken to ensure that the capacitance plates are parallel, and that the gap is small so as to achieve good sensitivity. For example, Greywall and Busch allowed the epoxy on the lower plate and the top cap to cure while the plates were in contact and the cell was at stem:[4.4 " MPa"] pressure. When the pressure was relieved, they estimated that the spacing between the plates was stem:[36" "mu"m"]. SHH, whose diaphragm was rather thicker, used stem:[10" "mu"m"] and stem:[7" "mu"m"] foils to set the spacings during the curing of the epoxy on the moving and reference plates, respectively.
+
+An alternative cell uses the distension of the cylinder walls in a co-axial capacitor. This was first used in measurements with solid ^4^He [<<Jarvis1968,Jarvis _et al._ 1968>>], and it has also been applied to melting-pressure thermometry [<<Mikheev1994,Mikheev _et al._ 1994>>].
+
+
+== Installation and procedure
+
+In operation the cell is bolted to the experimental platform where the temperature is to be measured. External thermal contact is thus metal-to-metal, ideally gold plated, and within the cell heat transfer from the cell body to the ^3^He is mainly between the liquid and the sinter. The filling and sensing line is generally a copper-nickel capillary of about stem:[0.5 " mm"] diameter which is soft-soldered to a bush on the cell. It is thermally anchored at several points in the refrigerator to reduce heat conduction and to permit calculation of the hydrostatic head correction for absolute pressure calibration (see below). From stem:[4.2 " K"] up to room temperature the tube may be wider, up to stem:[1 " mm"] diameter, and in a vacuum jacket to insulate it from the liquid helium and temperature variations during helium fills. It is advisable to include a second tube to act as an emergency outlet should the first become blocked with impurity such as solid air. SHH include a filter at stem:[1.5 " K"] to keep the system free of solid particles, and they describe their method for anchoring the capillary at stem:[1.5 " K"], at the still (stem:[0.5 " K"]), the base plate (stem:[0.06 " K"]), and at the mixing chamber. Finally they describe how the capillary is connected to the melting-pressure cell.
+
+Since pure ^3^He is expensive and is only available in small quantities, the sample of typically stem:[0.5 " mol"] is kept in a small storage cylinder to which it is returned after use. SHH recommend that the cylinder should be stem:[20 " L"] so that storage is always well below ambient pressure, to guard against loss. The gas can otherwise be stored at some convenient elevated pressure.
+
+The cylinder is connected to the gas-handling system through a valve so it can be removed or replaced. The other essential components of the gas handling are a liquid-nitrogen-cooled 'dipstick' sorption cleaner to remove air and other condensable gases, a ^4^He-cooled dipstick to absorb the sample and generate the necessary high pressures, low and high pressure adjustable valves and gauges, as well as connections to the pressure measuring system and vacuum pumps. Both EDA and SHH give details of their systems, and that of EDA is illustrated in <<fig3>> (see [<<Adams2005,Adams 2005>>] for a full description). SHH describe two versions, one which provides the essential features and another which is more versatile and allows for external pressure calibration and measurement.
+
+
+[[fig3]]
+.The ^3^He gas-handling system of Adams [<<Adams2005,2005>>].
+image::guide-plts-2000_supp_info/fig3.png[]
+
+
+The procedure for condensing the sample in the cell at high pressures is typically as follows. The gas is passed through a charcoal sorption trap or dipstick at liquid-nitrogen temperature to ensure that any air or other impurity gases are removed from it. It is then absorbed in the ^4^He dipstick at stem:[4.2 " K"], which is capable of holding the required quantity of gas and of withstanding the high pressures when it is released into the cell. SHH use a low-pressure dipstick in both nitrogen and helium to remove impurities, and an additional high-pressure helium dipstick.
+
+The cell is first evacuated at room temperature using the helium-cooled trap, allowing sufficient time for gas to migrate along the fine capillaries. The system may also be flushed with gas to ensure that there are no blockages. The cryostat is then cooled to stem:[4.2 " K"] (SHH), or lower (CFS, EDA), whereupon the cell is ready to receive the gas. This is admitted by slowly raising the dipstick in the vessel of liquid helium with the valve to one of the capillaries open, monitoring the pressure on a convenient gauge. It is advisable to fill to progressively higher pressures in steps of stem:[0.5 " MPa"] (SHH), recharging the dipstick if necessary and checking the functioning of the pressure transducer at each stage, until the maximum operating pressure is reached (stem:[3.5 " MPa"] for temperatures below stem:[0.8 " K"], stem:[4 " MPa"] for measurements up to stem:[1 " K"]).
+
+After condensing the gas at about stem:[1.2 " K"] the transducer should be 'trained' and calibrated. Training consists of cycling the pressure over the intended range of use, so as to improve its repeatability. SHH recommend 10 cycles for the full range stem:[2.9 " MPa"] to stem:[4 " MPa"]. Subsequently calibration takes place by reading the capacitance bridge at a series of known pressures. These are generated by a pressure balance (CFS) or they are measured using a calibrated secondary gauge, such as a quartz oscillator gauge (SHH, EDA). Again it is advisable to check the repeatability of the calibration data in more than one pressure cycle.
+
+The uncertainty of the reference pressures clearly affects the overall uncertainty which can be achieved, but another factor is the need to correct for the hydrostatic pressure head due to the ^3^He liquid (and vapour) in the capillary: the value of the pressure head is typically about stem:[650 " Pa"] to stem:[700 " Pa"] (SHH, CFS), and the uncertainties in its determination are likely to be significant. However, it is possible to reduce the uncertainties, or avoid the need for external calibration altogether, by using the intrinsic fixed points of ^3^He. The various options are discussed later.
+
+The melting-pressure thermometer is now set up and available for use, except that no solid has yet been formed. This occurs only when the cell is cooled to the melting curve, whereupon solid preferentially forms in the open volume of the cell, leaving the liquid to maintain good thermal contact through the silver sinter. The initial condition for the formation of the solid must be carefully chosen, as there is no single starting point which allows a complete realization to be achieved; _i.e._, for liquid and solid to coexist throughout the range stem:[0.9 " mK"] to stem:[1 " K"]. Thus a sample of stem:[100" "%] liquid at stem:[1 " K"] and stem:[4 " MPa"] becomes stem:[100" "%] solid at stem:[0.55 " K"]. In practice it may take several attempts to achieve the desired conditions, because the volume and temperature profile of the filling line influences the pressure at which the melting curve is reached.
+
+
+[[fig4]]
+.Co-existence curves of solid and liquid ^3^He, expressed as liquid fraction, for fourdifferent initial pressures, SHH (Figure 13). The dotted area shows that about stem:[55" "%] of the volume of the SHH cell contains sinter, and hence indicates the temperature ranges over which this is penetrated by solid ^3^He.
+image::guide-plts-2000_supp_info/fig4.png[]
+
+
+<<fig4>>, from SHH, shows a family of curves indicating how the range of use varies with the pressure at which solid is initially formed. For example, a sample initially at stem:[3.7 " MPa"] could in principle be used from stem:[0.88 " K"] to stem:[0.9 " mK"], but for most of the range solid would penetrate the sinter, leading to erroneous results, see below. On the other hand, a sample initially at stem:[3.1 " MPa"] is suitable for observing the minimum, but the range of use is only stem:[0.56 " K"] to about stem:[0.1 " K"].
+
+EDA illustrates the requirements for the filling pressure by reference to a plot of the molar volumes of liquid and solid, <<fig5>>, the two-phase region being between the two curves. Once the plug has formed, the sample follows a horizontal path, at constant molar volume: at any point in the two-phase region, the relative distance from the two curves indicates the proportion of solid to liquid in the cell. Clearly, too high a starting pressure, _i.e_. too low a molar volume, results in too much solid being formed.
+
+
+[[fig5]]
+.Molar volumes of liquid and solid^3^He at the melting pressure, with the region of co-existence lying between the two curves, from Adams [<<Adams2005,2005>>]. The horizontal dotted line indicates the path taken by the sample if the plug is formed at stem:[3.38 " MPa"].
+image::guide-plts-2000_supp_info/fig5.png[]
+
+
+SHH and EDA both note that a filling pressure of about stem:[3.37 " MPa"] (which generates solid below stem:[0.73 " K"]) can be used to observe the minimum correctly and also the low temperature fixed points, but this can only be done if the open volume of the cell is stem:[55" "%] or more. In practice they prefer to have more sinter, in order to ensure good contact between the liquid and the cell, and hence good response at the lowest temperatures. In this case a lower-pressure filling is needed to observe the minimum, after which the pressure is reset at the higher value for operation at lower temperatures.
+
+The melting pressure of helium in confined geometries is higher than in the bulk^20^, with the result that when the open volume becomes completely full of solid, on further cooling the pressure no longer follows the melting curve but remains approximately constant, and the temperatures calculated from the thermometer are anomalously high. An example of the effect of solid penetration into the sinter is shown in <<fig6>>, from SHH. Starting from about stem:[1 " K"], the cell followed the melting curve down to about stem:[0.75 " K"], after which it deviated strongly because the open volume was full of solid. Thereafter the temperature deviations steadily increased until just below stem:[0.6 " K"], when even the sinter volume was full of solid and there was no longer a melting transition.
+
+
+[[fig6]]
+.Example of temperature deviations when solid ^3^He is forced to grow into thesinter, from SHH (Figure 14). stem:[T] is the difference between the indications of the melting pressure sensor and a reference thermometer on the cell, during cool-down.
+image::guide-plts-2000_supp_info/fig6.png[]
+
+
+The formation of the plug of solid ^3^He in the filling capillary, which isolates the cell from the external system, also has other implications for procedure. Once the chosen initial pressure has been set, it is essential that no more ^3^He enters the cell, or extra solid will form. Therefore some point on the capillary should be colder than the cell (above the minimum) or warmer than the cell (below the minimum). Neither condition is difficult to achieve (see, for example, EDA), but 'plug slip' can be a problem in traversing the minimum. Unwanted growth of the solid should not be excessive if the initial pressure was low enough and the capillary inlet valve is kept closed, in which case repeated cooling and warming through the minimum should lead to repeatable behaviour.
+
+<<fig7>> shows pressure traces as the SHH cell is taken through the minimum and back again in steps of stem:[0.5 " mK"], after correct and incorrect filling. The authors state that 'any weak, sluggish or asymmetric response' indicates that there is solid in the sinter leading to a high melting pressure.
+
+A series of more rapid passes through the minimum over a period of 19 hours showed evidence of modest drift in stem:[p_{"min"}], at an acceptable level of stem:[3 " Pa"]. This is ascribed to redistribution of solid in the sample, which also occurs after any change in temperature. In general, thermal problems in the operation of the melting-pressure sensor are indicated by poor response and long equilibration times at a steady temperature.
+
+
+[[fig7]]
+.Realizations of the melting pressure minimum with correct (above) and incorrect (below) initial pressures, from SHH (Figure 15).
+image::guide-plts-2000_supp_info/fig7.png[]
+
+
+[[cls_5]]
+== Pressure and capacitance measurement
+
+Conventionally the melting-pressure transducer is calibrated relative to an external reference standard, such as a pressure balance or a gauge with a traceable calibration. Since the transducer is not repeatable on cycling to low temperatures, this must be done on each cool-down, and corrections must be applied for the significant pressure gradients; _i.e._ for the hydrostatic pressure head of liquid and gaseous ^3^He in the capillary. The purpose of the calibration is to determine the relationship between the measured capacitance, stem:[C], and the pressure, stem:[p]. This should be approximately linear with (stem:[1//C]), but in practice SHH and CFS use least-squares fits of the form stem:[p = f (1//C)], with two or more terms to allow for non-linearities.
+
+The fundamental approach is to use the pressure balance or gauge to measure the pressures absolutely throughout the range, making corrections for the hydrostatic head in the capillary. This was done by CFS and SHH, and others, in the experiments which led to the derivation of the PLTS-2000.
+
+However, for a _realization_ of the PLTS-2000 use is made of the ^3^He features, as specified, to simplify the calibration. In particular, normalizing the calibration to the pressure minimum avoids the need to evaluate the hydrostatic head. If the features at lower temperatures can also be reached, then the pressure measurement in the range stem:[2.93 " MPa"] to stem:[3.43 " MPa"] is essentially an interpolation, and only non-linearities need be assessed. The various options are discussed below.
+
+A detailed description of the use of a pressure balance (piston gauge) is beyond the scope of this document. It suffices to say that the balance is used to generate pressures according to the ratio of the weight of the loaded piston to its cross-sectional area (the axis being vertical). The pressures may be constant and repeatable to about 1 part in stem:[10^6], and uncertain, with a traceable calibration at the highest level, to about 1 part in stem:[10^5]. Uncertainties in the weights used should be significantly smaller. The generated pressure can communicate directly with the sample in the cell, above the minimum, provided that the ^3^He is used as the working gas in the balance and the inevitable gradual loss of gas through the piston-cylinder assembly is accepted. This was the method adopted by CFS. Otherwise an oil-lubricated pressure balance may be used [<<Bremer1992,Bremer 1992>>], or a differential gauge (such as a capacitance diaphragm gauge) can be used to separate the sample and the balance, but with additional complexities and uncertainties. The calibration process requires a series of pressures to be generated in the range of interest, by changing the load, and associating them with the corresponding capacitances of the transducer.
+
+To avoid the possible contamination of the ^3^He sample, SHH preferred a two-stage process in which a secondary quartz-oscillator pressure gauge was first calibrated against a pressure balance, and then used to calibrate the melting-pressure transducer. Pitre _et al._ [<<Pitre2003,2003>>] followed a similar procedure, and EDA also used a calibrated quartz-oscillator transducer (see below). The pressure must be held steady during the calibration and this can be done by controlling the temperature of the cell on the melting curve itself, above the minimum. However, it is usually more convenient to carry out the complete calibration while the cell is at a steady temperature near stem:[1.2 " K"], adjusting and regulating the pressure rather than the temperature.
+
+SHH have used this technique, and describe an additional cryogenic pressure-control cell which can be connected in the sensing line to act as a small ^3^He buffer volume. By varying the temperature of this cell, pressure variations over a range of stem:[50 " kPa"] can be induced, sufficient for control purposes. With the quartz-oscillator pressure gauge in the control loop, the residual pressure fluctuations remain below stem:[10 " Pa"]. Ihas and Pobell [<<Ihas1974,1974>>] describe a similar system, and EDA suggests observing the output of the quartz gauge and manually adjusting the external pressure while the readings are taken. Pitre _et al._ found that if the flow impedance between the cell and the pressure gauge is small andthe conditions are steady enough, there was no need to actively control the pressure, even though normal changes occurred along the filling line and at room temperature.
+
+As noted earlier, an ideal transducer would have a linear response to pressure, but in practice this is only approximately observed. <<fig8>> shows the deviations from linearity which SHH found for five transducers in the range stem:[2.93 " MPa"] to stem:[3.43 " MPa"] (_i.e._ for the temperature range up to stem:[0.76 " K"]). In all but one case the maximum effect is equivalent to less than stem:[0.1 " mK"], and all were well-fitted by quadratic equations. Bremer [<<Bremer1992,1992>>] found a similar behaviour, but with a somewhat larger amplitude over this range. Pitre _et al._, who used a PTB sensor, preferred a cubic fit but do not state the non-linearity.
+
+
+[[fig8]]
+.Non-linearity of five melting-pressure transducers, from SHH (Figure 21).
+image::guide-plts-2000_supp_info/fig8.png[]
+
+
+A further effect is hysteresis in the transducer. SHH show this for one of their sensors, see <<fig9>>. The effect clearly depends on the pressure range covered, being
+
+* stem:[100 " Pa"] for the full range, stem:[2.93 " MPa"] to stem:[4 " MPa"], but only about stem:[pm 20 " Pa"] for the range up to stem:[3.43 " MPa"]. The latter is hardly significant, but it is desirable to train the transducer in the range over which it is to be used. If necessary, for the wider range, the effect could be mitigated by using different calibrations for increasing and decreasing pressures.
+
+SHH note that, in contrast to the calibration itself, the non-linearity and hysteresis of a transducer are repeatable after cycling to room temperature and back, and therefore that two points may be sufficient for a recalibration. However, Pitre _et al._ found a hysteresis in the first run they report of about stem:[0.16 " mK"] (stem:[330 " Pa"]) at stem:[0.78 " K"], but no hysteresis was detected in later runs. All new sensors must be fully investigated.
+
+It is also necessary to check that the calibration of the transducer is independent of temperature. This can be done by cooling the cell at a constant pressure, below stem:[p_{"min"}], and observing any changes in output. SHH found that the effect in their transducer was less than stem:[pm 20 " Pa"].
+
+
+[[fig9]]
+.Pressure deviations due to sensor hysteresis, from SHH (Figure 22).
+image::guide-plts-2000_supp_info/fig9.png[]
+
+
+Both CFS and SHH made corrections for the hydrostatic pressure head, and these are the experiments which led to the absolute determinations of stem:[p_{"min"}] in deriving the PLTS-2000. The authors describe their systems, and the method of determining the correction. Essentially this requires knowledge of the temperature profile along the capillary, in order to integrate the density of the fluid over the vertical head. CFS refer to Appendix 10 of Reference 24 for the density in the liquid phase and Bogayavlenskii _et al._ [<<Bogayavlenskii1978,1978>>] for the vapour phase. To simplify the calculation, in both experiments the temperature was arranged to be constant along vertical sections of the capillary. In both cryostats the magnitude of the correction was in the region of stem:[650 " Pa"] to stem:[770 " Pa"], and the uncertainties were approximately stem:[10 " Pa"] (CFS, SHH, see also [<<Fellmuth2003,Fellmuth 2003>>]). There is in addition a small pressure dependence amounting to about stem:[25 " Pa"] between stem:[2.9 " MPa"] and stem:[3.4 " MPa"], _i.e._ about stem:[0.01 " mK"] (stem:[1" "%] of stem:[T]) at stem:[1 " mK"] (SHH).
+
+In principle, all measurements of the pressure using external references must take account of the hydrostatic pressure head, but for a realization of the PLTS-2000, it is sufficient (in fact necessary) to normalize the pressure to the specified value at the minimum and, if possible, at one of the other feature temperatures. In so doing, the need for a hydrostatic head correction can be avoided.
+
+If the ^3^He superfluid or Néel temperatures can be reached (which requires a nuclear cooling stage), the given pressure values can be used to fix the calibration near stem:[3.4 " MPa"], and the transducer is then essentially a pressure interpolation device, required only to be linear (see above). For operation in this range, normalization at one of these features is highly desirable, and EDA recommends stem:[T_{"N"}], for practical reasons. It can be observed as a distinct change in the derivative stem:["d"p_m // "d"T], which is sharp enough to locate the transition precisely. A slight difference between the point seen on warming and cooling may limit the precision to about stem:[pm 3 " Pa"]. The A-transition is second-order with a significant step-increase in heat capacity below stem:[T_{"A"}]. It can be detected dynamically as a change in pressure drift rate as the temperature sweeps through the transition at a constant rate, either warming or cooling. A compromise has to be made between detectability and the rate of sweep, but SHH find that a detection uncertainty of this transition can also be stem:[pm 3 " Pa"]. By contrast, the A-B transition is first-order with an undercool such that it can only be reliably detected on warming, and it is less suitable for use as a fixed point.
+
+If these points are not accessible, a superconductive transition temperature can be used, for example that of tungsten near stem:[15 " mK"] (where the melting pressure is about stem:[3.38 " MPa"]). Other possibilities are beryllium (stem:[23 " mK"], stem:[3.35 " MPa"]), or iridium (stem:[99 " mK"], stem:[3.13 " MPa"]), though the latter pressure is rather close to the minimum. At higher temperatures the transitions in cadmium (stem:[0.52 " K"], stem:[3.06 " MPa"]) or, more usefully, zinc (stem:[0.85 " K"], stem:[3.62 " MPa"]) or molybdenum (stem:[0.92 " K"], stem:[3.79 " MPa"]) can be used, or a calibration can be carried out using a sensor traceable to the ITS-90 (but see <<cls_7>>). Defined transition temperatures have not been established because of variations between samples, and each sample must therefore be individually calibrated. Hence this method involves traceability to an external source.
+
+The capacitance of the transducer is generally measured by ratio to a reference capacitor which may either be within a bridge, or in an external temperature-stabilized enclosure (CFS), or in the cryostat (EDA). In the latter case it can be constructed as part of the cell (SHH), which gives the advantage of similarity of the connections to the sensing and reference capacitors. An alternative technique is to use resonance detection in an LC oscillator [<<Adams1993,Adams 1993>>, <<Van1975,Van Degrift 1975>>].
+
+The SHH capacitance ranged from stem:[23 " pF"] to stem:[40 " pF"], with a sensitivity of about stem:[5 " pF/MPa"], and their three-terminal bridge was operated at stem:[0.5 " V"] and stem:[175 " Hz"], which gave a heat load of stem:[0.2 " nW"]. The measurement scatter, integrated over 1 minute, was about stem:[0.3" "mu"K"]. SHH conducted trials of various voltage and frequency excitations, and connection options, and selected an arrangement which gave self-heating of less than stem:[0.14" "mu"K"] at the lowest temperatures. This was then applied throughout the range, to avoid corrections due to the voltage dependence of the dielectric materials.
+
+CFS balanced the voltage across the capacitor against that of a stem:[100 " pF"] reference capacitor using a ratio transformer. At stem:[2" "V_{"rms"}] and stem:[1392 " Hz"] excitation the sensitivity was 1 part in stem:[10^6], and no apparent heating of the melting pressure sensor was detected in their experiments down to stem:[7 " mK"]. EDA emphasizes the need to use 3-terminal connection to the cell capacitor because the resolution required is small compared with the capacitance of the coaxial connecting lines: each plate of the capacitor is connected to a separate coaxial line, with the third terminal being the ground. If the reference capacitor is mounted on the cell, the third coax line goes to the common plate.
+
+Further details of the measurement and connection techniques are given in several references, _e.g._ [<<Mikheev1994,Mikheev _et al._ 1994>>, <<Schuster1986,Schuster and Wolber 1986>>]. Clearly the performance of the bridge, and the design and pressure sensitivity of the capacitor, both have a direct bearing on the resolution and accuracy of the measurement. Commercial bridges are available with high specification, and are likely to be suitable for many applications. The performance achieved may in practice be limited by the connecting lines and the use of an internal reference capacitor.
+
+
+== Uncertainties
+
+The standard uncertainty in the PLTS-2000 in thermodynamic terms was estimated in [<<Rusby2002,Rusby _et al._ 2002>>] to be stem:[0.5 " mK"] down to stem:[0.5 " K"], decreasing linearly to stem:[0.2 " mK"] at stem:[0.1 " K"]. It decreases further with falling temperature, but in percentage terms it increases to stem:[0.3" "%] of stem:[T] at stem:[25 " mK"] and about stem:[2" "%] of stem:[T] at stem:[0.9 " mK"].
+
+The components of uncertainty in a realization of the PLTS-2000 are due to the ^3^He sample purity, the thermal conditions and the measurement of pressure and capacitance. Other uncertainties will be associated with measurements of the devices and thermometers under calibration.
+
+The sample, as supplied, should contain no more than 1 part in stem:[10^5] of ^4^He. In that case, if there is no additional contamination from ^4^He in the system, the effects on the melting curve will be very small. Moreover, as Bremer [<<Bremer1992,1992>>] points out, ^4^He is expected to be preferentially adsorbed on the walls of the cell, or on the sinter, and below stem:[50 " mK"] the impurity effect should be unobservable as the solubility of ^4^He in liquid or solid ^3^He is less than stem:[1 " ppm"]. On the other hand, investigations of the melting pressure of ^3^He contaminated with stem:[2.1" "%] of ^4^He [<<Ganshin2001,Ganshin _et al._ 2001>>] showed that the melting-pressure minimum was depressed by about stem:[10 " kPa"] and shifted stem:[18 " mK"] to higher temperatures. There was also a change in the slope of the melting curve above and below the minimum, and the results obtained on cooling differed appreciably from warming because the melting pressure in a solution does not coincide with the freezing pressure. The relative temperature errors are larger at lower temperatures, and were as much as stem:[15" "%] (stem:[~10 " mK"]) at stem:[60 " mK"].
+
+At lower concentrations, Schuster _et al_. [1990] reported no change in the temperature of the minimum within stem:[pm 0.3 " mK"], for stem:[0.1" "%] of ^4^He in ^3^He, but Bremer estimates, from considering the entropy of mixing, that for stem:[10 " ppm"] of ^4^He the melting pressure will decrease by about stem:[0.03 " k"]Pa at stem:[0.4 " K"] (equivalent to about stem:[0.06 " mK"] or stem:[0.015" "%] of stem:[T]), and that the pressure and temperature of the minimum will shift by about stem:[-2 " kPa"] and stem:[+0.9 " mK"] for stem:[0.1" "%] of ^4^He in ^3^He. The temperature effect is consistent with the results of Ganshin _et al_. [2001], but the pressure effect is larger.
+
+Although ^4^He impurity in small amounts is expected to be adsorbed at low temperatures, the impurity effect in the calibration of the transducer at the minimum leads to measurement uncertainties at lower temperatures. However, calibration of the transducer at a low-temperature feature pressure, if achievable, will limit this uncertainty.
+
+The thermal contact between the sample and the experimental platform must be sufficiently good that no significant temperature gradients arise and to ensure that the thermometer responds fast enough to temperature changes. The use of sintered silver powder in the cell and metal-to-metal contact with the experimental platform, preferably gold plated, should ensure that the cell tracks the platform temperature if the measurement dissipation is not excessive. This can be investigated experimentally.
+
+
+[[table2]]
+.Uncertainty budget for the realization of the PLTS-2000 at PTB, with values in mK. MPS stands for melting-pressure sensor
+[cols="7*"]
+|===
+| Temperature / K | | 0.001 | 0.015 | 0.25 | 0.65 | 1
+
+h| Uncertainty +
+components Type B h| Source of uncertainty | | | | |
+
+| stem:[u (delta C_1)] | Correction for the nonlinearity of the MPS | 0.001 | 0.003 | 0.021 | 0.006 | 0.004
+| stem:[u (delta C_2)] | Mechanical stability of the MPS | 0.001 | 0.004 | 0.032 | 0.009 | 0.006
+| stem:[u (delta C_3)] | Pressure calibration at the fixed points | 0.001 | 0.001 | 0.021 | 0.010 | 0.011
+| stem:[u (delta C_4)] | Calibration against the quartz-oscillator pressure transducer and pressure balance | 0.001 | 0.006 | 0.043 | 0.014 | 0.011
+| stem:[u (delta C_5)] | Instability of pressure control during calibration | 0.001 | 0.003 | 0.021 | 0.006 | 0.004
+| stem:[u (delta C_6)] | Change of the head correction by temperature variation during calibration | 0.001 | 0.001 | 0.004 | 0.001 | 0.001
+| stem:[u (delta C_7)] | Heating of the MPS by the excitation voltage | 0.001 | 0.015 | 0.015 | 0.015 | 0.015
+| stem:[u (delta C_8)] | Temperature dependence of the dielectric susceptibility of the epoxy of the MPS | 0.001 | 0.005 | 0.042 | 0.012 | 0.007
+|  stem:[u (delta C_9)] | Capacitance bridge | 0.003 | 0.003 | 0.021 | 0.006 | 0.004
+|  stem:[u (delta C_{10})] | Temperature dependence of the pressure calibration | 0.001 | 0.005 | 0.042 | 0.012 | 0.011
+|  stem:[u (delta C_{11})] | ^4^He impurities | 0.010 | 0.010 | 0.010 | 0.010 | 0.010
+| stem:[u (delta T_1)] | Temperature differences between the experiment platform and the temperature sensor | 0.005 | 0.005 | 0.005 | 0.005 | 0.005
+| stem:[u (delta T_2)] | Drift correction | 0.005 | 0.005 | 0.005 | 0.005 | 0.005
+| stem:[u (delta T_3)] | Temperature differences between the experiment platform and the MPS | 0.005 | 0.005 | 0.005 | 0.005 | 0.005
+| stem:[u (delta T_4)] | Temperature differences in the experiment platform | 0.005 | 0.005 | 0.005 | 0.005 | 0.005
+| *Type B components 1 to 10 combined* | | *0.005* | *0.019* | *0.092* | *0.032* | *0.027*
+| *Type B components all combined* | | *0.015* | *0.023* | *0.093* | *0.035* | *0.030*
+| *Type A uncertainty component* | | *0.005* | *0.005* | *0.005* | *0.005* | *0.005*
+| *Combined standard uncertainty stem:[(k = 1)]* | | *0.016* | *0.024* | *0.093* | *0.036* | *0.031*
+| *Expanded uncertainty stem:[(k = 2)]* | | *0.031* | *0.048* | *0.186* | *0.071* | *0.061*
+|===
+
+
+Many aspects of the pressure measurement have already been covered. With careful design and a good measuring system, the pressure sensitivity of the transducer can be about 1 part in stem:[10^6], and the calibration can give an uncertainty of about stem:[pm 50 " Pa"] (SHH, CFS). To achieve overall uncertainties of this order also requires proper estimation of the hydrostatic pressure head. The uncertainty of using a secondary gauge depends on the uncertainty of its calibration and on its stability, and is unlikely to be better than stem:[pm 100 " Pa"]. As was discussed in the previous section, an absolute calibration of the transducer is not needed if it is normalized against the ^3^He features, as specified in the PLTS-2000, and there is also no need to correct for the hydrostatic pressure head effect. Only the linearity, hysteresis and reproducibility remain, and the resulting pressure uncertainties can be of the order of stem:[pm 10 " Pa"].
+
+As an example, <<table2>> is the complete uncertainty budget for the realization of the PLTS-2000 over the whole range at PTB [<<Schuster1990,Schuster _et al._ 1990>>], with values given at selected temperatures. It is based on the cell and measurement system described in SHH, and applies to the case where the transducer is calibrated against a quartz-oscillator pressure gauge which is traceable to a pressure balance. However, to conform with the PLTS-2000, the transducer calibration is normalized at the low-temperature features and at the pressure minimum, to give the required values at these points, and to obviate the need for absolute accuracy or to correct for the hydrostatic pressure effect, apart from its small temperature dependence. There are ten Type B components of uncertainty related to capacitance or pressure measurement, one for ^3^He purity, and four for thermal effects in the melting-pressure sensor (MPS) and the experiment platform.
+
+
+[[cls_7]]
+== Relationship with the ITS-90
+
+In the range stem:[0.65 " K"] to stem:[1 " K"] the PLTS-2000 overlaps the ITS-90 and there is the potential for non-uniqueness between the two scales; that is, between the equation for ^3^He vapour pressures specified in the ITS-90 and that for ^3^He melting pressures in the PLTS-2000. In fact it has for some time been suspected that the ITS-90 vapour-pressure equation deviates from thermodynamic temperature below stem:[1 " K"] [<<Fogle1992,Fogle _et al._ 1992>>, <<Schuster1992,Schuster and Hechtfischer 1992>>, <<Fellmuth1992,Fellmuth and Schuster 1992>>]. In this region the PLTS-2000 melting pressure equation was derived from CMN magnetic thermometry at NIST and PTB, linked to the ITS-90 in the range above stem:[1.2 " K"] and supported by noise thermometry at both institutes, and therefore it would not be affected by errors in the ITS-90 at lower temperatures.
+
+Comparisons of ^3^He vapour pressures and melting pressures have now been performed at PTB [<<Engert2007,Engert _et al._ 2007>>], and <<fig10>> shows that the differences between the two scales rise from about stem:[0.6 " mK"] at stem:[1 " K"] to stem:[1.5 " mK"] at stem:[0.65 " K"]. The uncertainties, plotted at stem:[k = 1], are those in the comparisons, see Table 5 of Reference 35, and do not include the thermodynamic uncertainties of the PLTS-2000.
+
+In view of these differences, it is recommended that the melting pressure (PLTS-2000) should be used for preference, on the grounds both of better thermodynamic accuracy and the potential for lower uncertainty of realization. Where it is desired to use vapour pressures, the new more accurate equations of [<<Engert2007,Engert _et al._ 2007>>] are now available as alternatives to the equation specified in the ITS-90.
+
+
+[[fig10]]
+.Differences stem:[(T_{90} - T_{2000})] obtained at PTB from comparisons of ^3^He vapourpressures and melting pressures, using rhodium-iron resistance thermometers as intermediaries [<<Engert2007,Engert _et al._ 2007>>]. Uncertainty bars for the scale comparisons are shown at stem:[k = 1].
+image::guide-plts-2000_supp_info/fig10.png[]
+
+
+[bibliography]
+== References
+
+* [[[Adams1993,1]]] Adams E D 1993 High‐resolution capacitive pressure gauges _Rev. Sci. Instrum_. *64* 601-611
+
+* [[[Adams2005,1]]] Adams E D 2005 _Progress in Low Temperature Physics_ Vol. 15, Chapter 4, edited by W Halperin, Elsevier B. V. See also _Temperature, its Measurement and Control in Science and Industry,_ 2003 vol. 7 (edited by D C Ripple), AIP ConferenceProceedings, Melville, New York, pp. 107-112
+
+* [[[Betts1976,1]]] Betts D S 1976 _Refrigeration and Thermometry below 1 K_, Sussex University Press
+
+* [[[Bittner1994,1]]] Bittner D N and Adams E D 1994 Solidification of helium in confined geometries _J. Low Temp. Phys_. *97* 519-535
+
+* [[[Bogayavlenskii1978,1]]] Bogayavlenskii I V, Karnatsevich L V and Konareva V G 1978 _Soviet J. Low Temp. Phys_. *4* (5) 265
+
+* [[[Bremer1992,1]]] Bremer J 1992 _Noise Thermometry and the ^3^He Melting Curve below 1 K_, Thesis, Leiden University
+
+* [[[BremerDurieux1992,1]]] Bremer J and Durieux M 1992 _Temperature, its Measurement and Control in Science and Industry_ vol. 6 (edited by J. F. Schooley), American Institute of Physics, New York,pp. 15-20
+
+* [[[Colwell1992,1]]] Colwell J H, Fogle W E and Soulen R J 1992 _Temperature, its Measurement and Control in Science and Industry,_ vol. 6 (edited by J. F. Schooley), American Institute ofPhysics, New York, pp. 101-106
+
+* [[[Durieux1999,1]]] Durieux M and Reesink A L 1999 7^th^ International Symposium on _Temperature and Thermal Measurements in Industry and Science_, edited by J. Dubbeldam and M. deGroot pp. 19-26
+
+* [[[Engert2002,1]]] Engert J, Fellmuth B and Jousten K 2002 A new ^3^He vapour-pressure based temperature scale from 0.65K to 3.2K consistent with the PLTS-2000 _Metrologia_ *44* 40-52
+
+* [[[Engert2003,1]]] Engert J, Fellmuth B and Hoffmann A 2003 _2^nd^ International Symposium on Low temperature Thermometry_, Wrocław,pp. 13-18, and Document CCT/03-09, http://www.bipm.org/[www.bipm.org,]BIPM
+
+* [[[Fellmuth1992,1]]] Fellmuth B and Schuster G 1992 Thermodynamic Inconsistency of the ITS-90 Below stem:[1.5 " K"] _Metrologia_ *29* 415-423
+
+* [[[Fellmuth2003,1]]] Fellmuth B, Hechtfischer D and Hoffmann A 2003 _Temperature, its Measurement and Control in Science and Industry,_ vol. 7 (edited by D C Ripple), AIP ConferenceProceedings, Melville, New York, pp. 71-76
+
+* [[[Fogle1992,1]]] Fogle W E, Soulen R J and Colwell J H 1992 _Temperature, its Measurement and Control in Science and Industry,_ vol. 6 (edited by J F Schooley), American Institute of Physics,New York, pp. 85-90
+
+* [[[Ganshin2001,1]]] Ganshin A N, Grigor'ev V N, Maidanov V A, Penzev A, Rudavskii E, Rybalko A and Syrnikov E V 2001 On the influence of low ^4^He impurity content on the melting curve of ^3^He _Low Temperature Physics (Russia)_ *27* N6 509-510
+
+* [[[Greywall1982,1]]] Greywall D S and Busch P A 1982 ^3^He-melting-curve thermometry _J. Low Temp. Phys_. *46* 451-465
+
+* [[[Hudson1975,1]]] Hudson R P,Marshak H, Soulen R J and Utton D B 1975 Recent advances in thermometry below stem:[300 " mK"] _J. Low Temp. Phys_. *20* 1-103
+
+* [[[Ihas1974,1]]] Ihas G G and Pobell F 1974 Correlation length, finite-geometry effects, and universality in pressurized superfluid helium near stem:[T_{lambda}] _Phys. Rev. A_ *9* 1278-1296
+
+* [[[Jarvis1968,1]]] Jarvis J F, Ramm D and Meyer H 1968 Measurement of () and Related Properties inSolidified Gases. I. Solid He^4^ _Phys. Rev_. *170* 320-327
+
+* [[[Lounasmaa1974,1]]] Lounasmaa O V 1974 _Experimental Principles and Methods below 1 K_, Academic Press
+
+* [[[Mikheev1994,1]]] Mikheev V A, Masuhara M, Wagner T, Eska G, Mohandas P and Saunders J 1994 Cylindrical pressure gauge _Cryogenics_ *34* 167-168.
+
+* [[[Pitre2003,1]]] Pitre L, HermierY and Bonnier G 2003 _Temperature, its Measurement and Control in Science and Industry,_ vol 7 (edited by D C Ripple), AIP Conference Proceedings,Melville, New York, pp. 95-100
+
+* [[[Pobell1996,1]]] Pobell F 1996 _Matter and Methods at Low Temperatures_, Springer Verlag, 2nd Edition.
+
+* [[[Richardson1988,1]]] Richardson R C and Smith E N 1988 _Experimental Techniques in Condensed Matter, Physics at LowTemperatures_, Addison-Wesley
+
+* [[[Rusby2002,1]]] Rusby R L, Durieux M, Reesink A L, Hudson R P, Schuster G, Kühne M, Fogle W E, Soulen R J and Adams E D 2002 The Provisional Low Temperature Scale from stem:[0.9 " mK"] to 1 K, PLTS-2000 _J. Low Temp. Physics_ *126* 633-642. See also _Temperature, its Measurement and Control in Science and Industry_ 2003 vol. 7 (edited by D C Ripple),AIP Conference Proceedings, Melville, New York, pp. 77-82
+
+* [[[Rusby2007,1]]] Rusby R L, Fellmuth B, Engert J, Fogle W E, Adams E D, Pitre L and Durieux M 2007 Realization of the ^3^He Melting Pressure Scale, PLTS-2000 _J. Low Temp.Physics_ *149* 156-175
+
+* [[[Scribner1970,1]]] Scribner R A and Adams E D 1970 Use of the ^3^He Melting Curve for Low Temperature Thermometry _Rev. Sci. Instrum_. *41* 287-288
+
+* [[[Schuster1986,1]]] Schuster G and Wolber L 1986 Automated 3He melting curve thermometer _J Phys. E: Sci Instrum._ *19* 701-705
+
+* [[[Schuster1990,1]]] Schuster G, Hechtfischer D, Buck W and Hoffmann A 1990 _Proceedings of the 19th International Conference on Low Temperature Physics_, _Physica_ B165 & 166 pp. 31-32
+
+* [[[Schuster1992,1]]] Schuster G and Hechtfischer D 1992 _Temperature, its Measurement and Control in Science and Industry_ vol. 6 (edited by J F Schooley), American Institute of Physics,New York, pp. 97-100
+
+* [[[Schuster1994,1]]] Schuster G, Hechtfischer D and Fellmuth B 1994 Thermometry below stem:[1 " K"] _Rep. Prog. Phys_. *57* 187-230
+
+* [[[Schuster2001,1]]] Schuster G, Hoffmann A and Hechtfischer D 2001 _Realisation of the temperature scale PLTS-2000 at PTB_, PTB, Braunschweig, PTB-ThEx-21, 29pp, available throughwww.ptb.de.
+
+* [[[Straty1969,1]]] Straty G C and Adams E D 1969 Highly Sensitive Capacitive Pressure Gauge _Rev. Sci. Instrum_. *40* 1393-1397
+
+* [[[Van1975,1]]] Van Degrift C T 1975 Tunnel diode oscillator for stem:[0.001 " ppm"] measurements at low temperatures _Rev. Sci. Instrum_. *46* 599-607
+
+* [[[Wilks1967,1]]] Wilks J 1967 _Liquid and Solid Helium_, Clarendon Press, Oxford. See also Sherman R H and Edeskuty F J 1960 _Ann. Phys_. *9* 522, and Grilly E R and Hammel E F 1961 _Prog. Low Temp. Phys_. *3*, ed Gorter, North Holland, p. 122
+
+
+[appendix]
+== Tables of melting pressures and temperatures
+
+
+[[tablea1]]
+.Values of melting pressure, stem:[p_m//"MPa"], and stem:["d"p_m//"d"T_{2000}] in stem:["MPa"//"K"], at intervals of stem:[0.1 " mK"] up to stem:[2.9 " mK"].
+[cols="11*"]
+|===
+| stem:[T_{2000}//"mK"] | 0.0 | 0.1 | 0.2 | 0.3 | 0.4 | 0.5 | 0.6 | 0.7 | 0.8 | 0.9
+
+| 1 | 3.439068 +
+-2.89860 | 3.438769 +
+-3.06549 | 3.438457 +
+-3.17469 | 3.438135 +
+-3.25711 | 3.437806 +
+-3.32587 | 3.437470 +
+-3.38665 | 3.437129 +
+-3.44196 | 3.436782 +
+-3.49297 | 3.436430 +
+-3.54023 | 3.436074 +
+-3.58409
+
+| 2 | 3.435714 +
+-3.62477 | 3.435349 +
+-3.66246 | 3.434981 +
+-3.69736 | 3.434610 +
+-3.72964 | 3.434235 +
+-3.75948 | 3.433858 +
+-3.78705 | 3.433478 +
+-3.81252 | 3.433096 +
+-3.83603 | 3.432711 +
+-3.85775 | 3.432324 +
+-3.87781
+|===
+
+
+[[tablea2]]
+.Values of melting pressure, stem:[p_m//"MPa"], and stem:["d" p_m //"d" T_{2000}] in stem:["MPa"//"K"], at intervals of stem:[1 " mK"] up to stem:[109 " mK"].
+[cols="11*^.^"]
+|===
+| stem:[T_{2000}//"mK"] | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+
+| 0 | | 3.439068 +
+-2.89860 | 3.435714 +
+-3.62477 | 3.431935 +
+-3.89634 | 3.427970 +
+-4.01944 | 3.423919 +
+-4.07464 | 3.419831 +
+-4.09644 | 3.415732 +
+-4.10031 | 3.411634 +
+-4.09380 | 3.407546 +
+-4.08094
+
+| 10 
+| 3.403473 +
+-4.06402 | 3.399419 +
+-4.04439 | 3.395385 +
+-4.02293 | 3.391374 +
+-4.00020 | 3.387385 +
+-3.97657 | 3.383421 +
+-3.95232 | 3.379481 +
+-3.92763 | 3.375566 +
+-3.90263 | 3.371676 +
+-3.87743 | 3.367811 +
+-3.85209
+
+| 20 | 3.363971 +
+-3.82669 | 3.360157 +
+-3.80126 | 3.356369 +
+-3.77584 | 3.352606 +
+-3.75046 | 3.348868 +
+-3.72513 | 3.345155 +
+-3.69987 | 3.341468 +
+-3.67470 | 3.337806 +
+-3.64963 | 3.334169 +
+-3.62467 | 3.330557 +
+-3.59982
+
+| 30 | 3.326969 +
+-3.57509 | 3.323406 +
+-3.55048 | 3.319868 +
+-3.52601 | 3.316354 +
+-3.50167 | 3.312865 +
+-3.47746 | 3.309399 +
+-3.45339 | 3.305958 +
+-3.42945 | 3.302540 +
+-3.40566 | 3.299147 +
+-3.38201 | 3.295776 +
+-3.35849
+
+| 40 | 3.292430 +
+-3.33512 | 3.289106 +
+-3.31189 | 3.285806 +
+-3.28880 | 3.282528 +
+-3.26585 | 3.279274 +
+-3.24304 | 3.276042 +
+-3.22038 | 3.272833 +
+-3.19785 | 3.269647 +
+-3.17546 | 3.266482 +
+-3.15321 | 3.263340 +
+-3.13111
+
+| 50 | 3.260220 +
+-3.10913 | 3.257122 +
+-3.08730 | 3.254045 +
+-3.06560 | 3.250990 +
+-3.04404 | 3.247957 +
+-3.02261 | 3.244945 +
+-3.00132 | 3.241954 +
+-2.98016 | 3.238985 +
+-2.95913 | 3.236036 +
+-2.93824 | 3.233108 +
+-2.91747
+
+| 60 | 3.230201 +
+-2.89684 | 3.227315 +
+-2.87633 | 3.224448 +
+-2.85595 | 3.221603 +
+-2.83570 | 3.218777 +
+-2.81558 | 3.215971 +
+-2.79558 | 3.213186 +
+-2.77570 | 3.210420 +
+-2.75595 | 3.207674 +
+-2.73632 | 3.204947 +
+-2.71681
+
+| 70 | 3.202240 +
+-2.69743 | 3.199552 +
+-2.67816 | 3.196884 +
+-2.65901 | 3.194234 +
+-2.63998 | 3.191604 +
+-2.62106 | 3.188992 +
+-2.60227 | 3.186399 +
+-2.58358 | 3.183825 +
+-2.56501 | 3.181269 +
+-2.54656 | 3.178732 +
+-2.52821
+
+| 80 | 3.176213 +
+-2.50998 | 3.173712 +
+-2.49186 | 3.171229 +
+-2.47385 | 3.168764 +
+-2.45595 | 3.166317 +
+-2.43816 | 3.163888 +
+-2.42047 | 3.161476 +
+-2.40289 | 3.159082 +
+-2.38541 | 3.156705 +
+-2.36804 | 3.154346 +
+-2.35077
+
+| 90 | 3.152004 +
+-2.33361 | 3.149679 +
+-2.31655 | 3.147371 +
+-2.29959 | 3.145079 +
+-2.28273 | 3.142805 +
+-2.26597 | 3.140547 +
+-2.24930 | 3.138306 +
+-2.23274 | 3.136082 +
+-2.21627 | 3.133874 +
+-2.19990 | 3.131682 +
+-2.18363
+
+| 100 | 3.129507 +
+-2.16745 | 3.127347 +
+-2.15136 | 3.125204 +
+-2.13537 | 3.123076 +
+-2.11947 | 3.120965 +
+-2.10366 | 3.118869 +
+-2.08794 | 3.116789 +
+-2.07231 | 3.114724 +
+-2.05677 | 3.112675 +
+-2.04132 | 3.110642 +
+-2.02596
+|===
+
+
+[[tablea3]]
+.Values of melting pressure, stem:[p_m//"MPa"], and stem:["d" p_m//"d"T_{2000}] in stem:["MPa"//"K"], at intervals of stem:[10 " mK"] from stem:[0.1 " K"] to stem:[1 " K"].
+[cols="11*^.^"]
+|===
+| stem:[T_{2000}//"mK"] | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+
+| 100 | 3.129507 +
+-2.16745 | 3.108623 +
+-2.01069 | 3.089264 +
+-1.86258 | 3.071345 +
+-1.72245 | 3.054791 +
+-1.58964 | 3.039530 +
+-1.46358 | 3.025498 +
+-1.34371 | 3.012637 +
+-1.22956 | 3.000890 +
+-1.12065 | 2.990207 +
+-1.01659
+
+| 200 | 2.980543 +
+-0.91698 | 2.971854 +
+-0.82149 | 2.964101 +
+-0.72979 | 2.957247 +
+-0.64159 | 2.951258 +
+-0.55663 | 2.946104 +
+-0.47467 | 2.941756 +
+-0.39549 | 2.938186 +
+-0.31889 | 2.935370 +
+-0.24468 | 2.933285 +
+-0.17271
+
+| 300 | 2.931909 +
+-0.10282 | 2.931222 +
+-0.03487 | 2.931205 +
+0.03126 | 2.931841 +
+0.09569 | 2.933114 +
+0.15852 | 2.935007 +
+0.21985 | 2.937506 +
+0.27976 | 2.940597 +
+0.33833 | 2.944268 +
+0.39564 | 2.948506 +
+0.45176
+
+| 400 | 2.953300 +
+0.50673 | 2.958637 +
+0.56063 | 2.964509 +
+0.61351 | 2.970904 +
+0.66540 | 2.977814 +
+0.71637 | 2.985229 +
+0.76644 | 2.993140 +
+0.81566 | 3.001539 +
+0.86406 | 3.010418 +
+0.91168 | 3.019770 +
+0.95855
+
+| 500 | 3.029587 +
+1.00469 | 3.039862 +
+1.05014 | 3.050587 +
+1.09492 | 3.061758 +
+1.13905 | 3.073366 +
+1.18256 | 3.085407 +
+1.22546 | 3.097874 +
+1.26779 | 3.110761 +
+1.30954 | 3.124063 +
+1.35075 | 3.137774 +
+1.39143
+
+| 600 | 3.151890 +
+1.43159 | 3.166404 +
+1.47125 | 3.181313 +
+1.51042 | 3.196611 +
+1.54911 | 3.212294 +
+1.58733 | 3.228356 +
+1.62509 | 3.244794 +
+1.66241 | 3.261603 +
+1.69929 | 3.278778 +
+1.73574 | 3.296316 +
+1.77176
+
+| 700 | 3.314212 +
+1.80737 | 3.332462 +
+1.84257 | 3.351062 +
+1.87737 | 3.370008 +
+1.91177 | 3.389296 +
+1.94578 | 3.408923 +
+1.97940 | 3.428883 +
+2.01265 | 3.449174 +
+2.04552 | 3.469792 +
+2.07802 | 3.490733 +
+2.11015
+
+| 800 | 3.511994 +
+2.14193 | 3.533571 +
+2.17335 | 3.555460 +
+2.20442 | 3.577658 +
+2.23515 | 3.600162 +
+2.26554 | 3.622968 +
+2.29560 | 3.646073 +
+2.32533 | 3.669473 +
+2.35474 | 3.693167 +
+2.38383 | 3.717149 +
+2.41260
+
+| 900 | 3.741418 +
+2.44106 | 3.765969 +
+2.46920 | 3.790801 +
+2.49704 | 3.815909 +
+2.52456 | 3.841291 +
+2.55177 | 3.866943 +
+2.57865 | 3.892863 +
+2.60519 | 3.919046 +
+2.63139 | 3.945489 +
+2.65723 | 3.972189 +
+2.68267
+
+| 1000 | 3.999141 +
+2.70770 | | | | | | | | |
+
+|===
+
+
