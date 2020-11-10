@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
 bundle exec metanorma -x xml brochure-its90-fr.adoc
 bundle exec metanorma -x xml brochure-its90-en.adoc
