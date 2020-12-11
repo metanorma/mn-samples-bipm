@@ -1,0 +1,24 @@
+
+== Stages of uncertainty evaluation
+
+=== {blank}
+
+The main stages of uncertainty evaluation constitute formulation and calculation, the latter consisting of propagation and summarizing.
+
+
+=== {blank}
+
+The formulation stage (see <<cls_6>>) constitutes
+
+. defining the output quantity stem:[ii(Y)] (the measurand),
+. identifying the input quantities on which stem:[ii(Y)] depends,
+. developing a measurement model relating stem:[ii(Y)] to the input quantities, and
+. on the basis of available knowledge, assigning probability distributions -- Gaussian, rectangular, etc. -- to the input quantities (or a joint probability distribution to those input quantities that are not independent).
+
+
+=== {blank}
+
+The calculation stage (see <<cls_7>>) consists of propagating the probability distributions for the input quantities through the measurement model to obtain the probability distribution for the output quantity stem:[ii(Y)], and summarizing by using this distribution to obtain
+
+. the expectation of stem:[ii(Y)], taken as an estimate y of stem:[ii(Y)],
+. the standard deviation of stem:[ii(Y)], taken as the standard uncertainty stem:[u(y)] associated with stem:[y] <<JCGM1002008,clause=(GUM) E.3.2>>, and, a coverage interval containing stem:[ii(Y)] with a specified coverage probability.
