@@ -1,0 +1,39 @@
+
+
+== Applications of the least-squares method
+
+[[scls_9-1]]
+=== {blank}
+
+Guidance on the application of the least-squares method (also known as least-squares adjustment) to data evaluation problems in metrology is provided in JCGM 107 <<bipm_app>>. In such problems there is often an underlying theoretical relationship between an independent variable and a dependent variable. This relationship constitutes the basis of a parameter adjustment or curve-fitting problem. The input quantities in the related measurement model are the quantities of which the measured values of the independent and dependent variables are outcomes. The output quantities are the quantities representing the required parameters. The manner in which the output quantities are obtained from the input quantities by means of a least-squares procedure defines the measurement model.
+
+
+=== {blank}
+
+In calibration terminology (see <<scls_6-8>>), a measured quantity value of an independent variable would typically be that of a measurement standard. The value of the dependent variable would be an indication value returned by the measuring system for the corresponding value of the independent variable. In the curve-fitting context, which includes calibration as a special case, the adjustment procedure used in JCGM 107 is a generalized version of the usual least-squares procedure.
+
+
+=== {blank}
+
+The task is to estimate the parameters (and sometimes even their number) from pairs of measured quantity values and the corresponding indication values. These pairs, together with the associated standard uncertainties and, when appropriate, covariances, constitute the input data to the adjustment.
+
+
+[[scls_9-4]]
+=== {blank}
+
+Typical measurement problems to which JCGM 107 can be applied include (a) linear or non-linear curve-fitting problems, including the case of imperfectly known values of the independent variable, and (b) fitting of general models to estimate parameters in a physical process. The application of JCGM 107 is not restricted to curve-fitting problems in the strictest sense. It can also be used to treat, for instance, convolution problems <<Korczynski>>, the adjustment of fundamental constants <<Mohr>>, and key comparison data evaluation <<Cox2002>>.
+
+
+=== {blank}
+
+For problems of type (a) in <<scls_9-4>>, once the least-squares method has been used to estimate the parameters of a calibration function and evaluate the associated standard uncertainties and covariances, the measuring system will subsequently be used for measurement. The estimates of the parameters of the calibration function, together with a particular indication value, are then used to estimate the corresponding quantity. The standard uncertainty associated with this estimate is evaluated using the standard uncertainties and covariances associated with the parameter estimates and the standard uncertainty associated with the indication value.
+
+
+=== {blank}
+
+It is emphasized in JCGM 107 that the _uncertainty structure_ should be taken fully into account when formulating and solving the least-squares problem. 'Uncertainty structure' refers to the standard uncertainties associated with the measured quantity values and indication values and any covariances associated with pairs of these values.
+
+
+=== {blank}
+
+For problems of type (b) in <<scls_9-4>>, or in terms of determining the parameters in problems of type (a), the adjustment problem is rarely a problem in only one output quantity. Rather, the problem involves a number of output quantities in which the mathematical formulation can conveniently be expressed in terms of matrices. JCGM 107 makes extensive use of matrix formalism, which is well adapted to numerical solution using a computer, as usually required in practice (also see <<scls_7-5>>).

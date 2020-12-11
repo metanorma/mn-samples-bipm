@@ -1,0 +1,133 @@
+
+== Concepts and basic principles
+
+[[scls_4-1]]
+=== {blank}
+
+Further to those in <<cls_3>>, fundamental concepts and principles of probability theory that underlie the approach advocated for the evaluation and expression of measurement uncertainty are provided in JCGM 105:2008 <<bipm_concepts>>.
+
+
+=== {blank}
+
+Measurement uncertainty is defined <<JCGM2002008,clause=(VIM) 2.26>> as
+
+____
+non-negative parameter characterizing the dispersion of the quantity values being attributed to a measurand, based on the information used.
+____
+
+This definition is consistent with the considerations of <<scls_3-8>> and <<scls_3-17>> to <<scls_3-20>>.
+
+
+=== {blank}
+
+Two representations of a probability distribution [<<JCGM1012008,clause=3.1>>], <<ISO_3534-1,clause=2.11>> for a random variable stem:[ii(X)] are used in uncertainty evaluation:
+
+* the _distribution function_ <<JCGM1012008,clause=3.2>>, <<ISO_3534-1,clause=2.7>>, a function giving, for every value of its argument, the probability that stem:[ii(X)] be less than or equal to that value, and
+* the _probability density function_ <<JCGM1012008,clause=3.3>>, <<ISO_3534-1,clause=2.26>>, the derivative of the distribution function.
+
+
+=== {blank}
+
+Knowledge of each input quantity stem:[ii(X)_i] in a measurement model is often summarized by the best estimate stem:[x_i] and the associated standard uncertainty stem:[u(x_i)] (see <<scls_3-18>>). If, for any stem:[i] and stem:[j], stem:[ii(X)_i] and stem:[ii(X)_j] are related (dependent), the summarizing information will also include a measure of the strength of this relationship, specified as a covariance <<ISO_3534-1,clause=2.43>> or a correlation. If stem:[ii(X)_i] and stem:[ii(X)_j] are unrelated (independent), their covariance is zero.
+
+
+=== {blank}
+
+The _evaluation of measurement data_, in the context of the measurement model <<eq1,(1)>> or <<eq2,(2)>>, is the use of available knowledge concerning the input quantities stem:[ii(X)_1,..., ii(X)_{ii(N)}], as represented by the probability distributions used to characterize them, to deduce the corresponding distribution that characterizes the output quantity stem:[ii(Y)]. The evaluation of measurement data might entail determining only a summarizing description of the latter distribution.
+
+
+=== {blank}
+
+Knowledge about an input quantity stem:[ii(X)_i] is inferred from repeated indication values (_Type A evaluation of uncertainty_) <<JCGM1002008,clause=(GUM) 4.2>>, <<JCGM2002008,clause=(VIM) 2.28>>, or scientific judgement or other information concerning the possible values of the quantity (_Type B evaluation of uncertainty_) <<JCGM1002008,clause=(GUM) 4.3>>, <<JCGM2002008,clause=(VIM) 2.29>>.
+
+
+=== {blank}
+
+In Type A evaluations of measurement uncertainty <<JCGM2002008,clause=(VIM) 2.28>>, the assumption is often made that the distribution best describing an input quantity stem:[ii(X)] given repeated indication values of it (obtained independently) is a Gaussian distribution <<ISO_3534-1,clause=2.50>>. stem:[ii(X)] then has expectation equal to the average indication value and standard deviation equal to the standard deviation of the average. When the uncertainty is evaluated from a small number of indication values (regarded as instances of an indication quantity characterized by a Gaussian distribution), the corresponding distribution can be taken as a stem:[t]-distribution <<ISO_3534-1,clause=2.53>>. <<fig1>> shows a Gaussian distribution and (broken curve) a stem:[t]-distribution with four degrees of freedom. Other considerations apply when the indication values are not obtained independently.
+
+
+[[scls_4-8]]
+=== {blank}
+
+For a Type B evaluation of uncertainty <<JCGM2002008,clause=(VIM) 2.29>>, often the only available information is that stem:[ii(X)] lies in a specified interval [stem:[a," "b]. In such a case, knowledge of the quantity can be characterized by a rectangular probability distribution <<JCGM1002008,clause=(GUM) 4.3.7>>, <<ISO_3534-1,clause=2.60>> with limits stem:[a] and stem:[b] (<<fig2>>). If different information were available, a probability distribution consistent with that information would be used <<Weise1992>>.
+
+
+=== {blank}
+
+Once the input quantities stem:[ii(X)_1,..., ii(X)_{ii(N)}] have been characterized by appropriate probability distributions, and the measurement model has been developed, the probability distribution for the measurand stem:[ii(Y)] is fully specified in terms of this information (also see <<scls_3-19>>). In particular, the expectation of stem:[ii(Y)] is used as the estimate of stem:[ii(Y)], and the standard deviation of stem:[ii(Y)] as the standard uncertainty associated with this estimate.
+
+
+=== {blank}
+
+<<fig3>> depicts the additive measurement function stem:[ii(Y) = ii(X)_1 + ii(X)_2] in the case where stem:[ii(X)_1] and stem:[ii(X)_2] are each characterized by a (different) rectangular probability distribution. stem:[ii(Y)] has a symmetric trapezoidal probability distribution in this case.
+
+[[fig1]]
+.A Gaussian distribution (continuous black curve) and a stem:[t]-distribution with four degrees of freedom (broken red curve) ('unit' denotes any unit)
+image::figure1.png[]
+
+[[fig2]]
+.Rectangular probability distribution with limits stem:[-0.1] unit and stem:[0.1] unit ('unit' denotes any unit)
+image::figure2.png[]
+
+[[fig3]]
+.An additive measurement function with two input quantities stem:[ii(X)_1] and stem:[ii(X)_2] characterized by rectangular probability distributions
+image::figure3.png[]
+
+
+=== {blank}
+
+Often an interval containing stem:[ii(Y)] with a specified probability is required. Such an interval, a coverage interval <<JCGM2002008,clause=(VIM) 2.36>>, can be deduced from the probability distribution for stem:[ii(Y)]. The specified probability is known as the _coverage probability_ <<JCGM2002008,clause=(VIM) 2.37>>.
+
+
+=== {blank}
+
+For a given coverage probability, there is more than one coverage interval,
+
+. the _probabilistically symmetric coverage interval_ <<JCGM1012008,clause=3.15>>, for which the probabilities (summing to one minus the coverage probability) of a value to the left and the right of the interval are equal, and
+. the _shortest coverage interval_ <<JCGM1012008,clause=3.16>>, for which the length is least over all coverage intervals having the same coverage probability.
+
+
+=== {blank}
+
+<<fig4>> shows a probability distribution (a truncated and scaled Gaussian distribution, indicated by the decreasing curve) with the endpoints of the shortest (continuous blue vertical lines) and those of the probabilistically symmetric (broken red vertical lines) 95 % coverage intervals for a quantity characterized by this distribution. The distribution is asymmetric and the two coverage intervals are different (most notably their right-hand endpoints). The shortest coverage interval has its left-hand endpoint at zero, the smallest possible value for the quantity. The probabilistically symmetric coverage interval in this case is 15 % longer than the shortest coverage interval.
+
+
+[[scls_4-14]]
+=== {blank}
+
+_Sensitivity coefficients_ stem:[c_1,..., c_{ii(N)}] <<JCGM1002008,clause=(GUM) 5.1.3>> describe how the estimate stem:[y] of stem:[ii(Y)] would be influenced by small changes in the estimates stem:[x_1,..., x_{ii(N)}] of the input quantities stem:[ii(X)_1,..., ii(X)_{ii(N)}]. For the measurement function <<eq1,(1)>>, stem:[c_i] equals the partial derivative of first order of stem:[f] with respect to stem:[ii(X)_i] evaluated at stem:[ii(X)_1 = x_1; ii(X)_2 = x_2], etc. For the linear measurement function
+
+
+[[eq3]]
+[stem]
+++++
+ii(Y) = c_1 ii(X)_1 + cdots + c_{ii(N)} ii(X)_{ii(N)},
+++++
+
+
+with stem:[ii(X)_1,..., ii(X)_{ii(N)}] independent, a change in stem:[x_i] equal to stem:[u(x_i)] would give a change stem:[c_iu(x_i)] in y. This statement would generally be approximate for the measurement models <<eq1,(1)>> and <<eq2,(2)>> (see <<scls_7-2-4>>). The relative magnitudes of the terms stem:[|c_i| u(x_i)] are useful in assessing the respective contributions from the input quantities to the standard uncertainty stem:[u(y)] associated with stem:[y].
+
+
+=== {blank}
+
+The standard uncertainty stem:[u(y)] associated with the estimate stem:[y] of the output quantity stem:[ii(Y)] is not given by the sum of the stem:[|c_i| u(x_i)], but these terms combined in quadrature <<JCGM1002008,clause=(GUM) 5.1.3>>, namely by (an expression that is generally approximate for the measurement models <<eq1,(1)>> and <<eq2,(2)>>)
+
+[stem]
+++++
+u^2 (y) = c_1^2 u^2 (x_1) + cdots + c_{ii(N)}^2 u^2(x_{ii(N)}).
+++++
+
+
+=== {blank}
+
+When the input quantities stem:[ii(X)_i] contain dependencies, formula <<eq4,(4)>> is augmented by terms containing covariances <<JCGM1002008,clause=(GUM) 5.2.2>>, which may increase or decrease stem:[u(y)].
+
+
+=== {blank}
+
+According to Resolution 10 of the 22nd CGPM (2003) "`...the symbol for the decimal marker shall be either the point on the line or the comma on the line...`". The JCGM has decided to adopt, in its documents in English, the point on the line.
+
+
+[[fig4]]
+.Shortest 95 % coverage interval (endpoints shown by continuous blue vertical lines) and probabilistically symmetric 95 % coverage interval (broken red) for a quantity characterized by a truncated and scaled Gaussian distribution ('unit' denotes any unit)
+image::figure4.png[]
