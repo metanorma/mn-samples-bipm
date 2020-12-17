@@ -169,11 +169,14 @@ where stem:[x = (a + b)//2] and stem:[w = (b - a)//2] are, respectively, the mid
 
 | Lower and upper limits stem:[a," "b]
 | Rectangular: stem:[R(a, b)]
-|
+a| image::figure-table1-1.png[]
 | <<scls_6-4-2>>
 
 
-| Inexact lower and upper limits stem:[a +- d], stem:[b +- d] | Curvilinear trapezoid: stem:["CTrap"(a, b, d)] | | <<scls_6-4-3>>
+| Inexact lower and upper limits stem:[a +- d], stem:[b +- d]
+| Curvilinear trapezoid: stem:["CTrap"(a, b, d)]
+a| image::figure-table1-2.png[]
+| <<scls_6-4-3>>
 
 
 | Sum of two quantities assigned rectangular distributions with lower and upper limits stem:[a_1], stem:[b_1] and stem:[a_2], stem:[b_2]
@@ -181,32 +184,32 @@ a| Trapezoidal: +
 stem:["Trap"(a, b, beta)] with stem:[a = a_1 + a_2], +
 stem:[b = b_1 + b_2], +
 stem:[beta = \|(b_1 - a_1) - (b_2 - a_2)\|//(b - a)]
-|
+a| image::figure-table1-3.png[]
 | <<scls_6-4-4>>
 
 
 | Sum of two quantities assigned rectangular distributions with lower and upper limits stem:[a_1], stem:[b_1] and stem:[a_2], stem:[b_2] and the same semi-width (stem:[b_1 - a_1 = b_2 - a_2])
 a| Triangular: +
 stem:[T(a, b)] with stem:[a = a_1 + a_2, b = b_1 + b_2]
-|
+a| image::figure-table1-4.png[]
 | <<scls_6-4-5>>
 
 
 | Sinusoidal cycling between lower and upper limits a, b
 a| Arc sine (U-shaped): +
 stem:[U(a, b)]
-|
+a| image::figure-table1-5.png[]
 | <<scls_6-4-6>>
 
 
 | Best estimate stem:[x] and associated standard uncertainty stem:[u(x)]
 | Gaussian: +
 stem:[N(x, u^2(x))]
-|
+a| image::figure-table1-6.png[]
 | <<scls_6-4-7>>
 
 
-| Best estimate stem:[x] of vector quantity and associated uncertainty matrix stem:[bb(U_x)]
+| Best estimate stem:[bb(x)] of vector quantity and associated uncertainty matrix stem:[bb(U_x)]
 | Multivariate Gaussian: +
 stem:[N(bb(x), bb(U_x))]
 |
@@ -216,27 +219,27 @@ stem:[N(bb(x), bb(U_x))]
 a| Scaled and shifted stem:[t]: +
 stem:[t_{n-1}(hat(x),s^2//n)] with hat(x) = sum_{i=1}^n x_i//n, +
 s^2 = sum_{i=1}^n (x_i hat(x))^2//(n-1)
-|
+a| image::figure-table1-7.png[]
 | <<scls_6-4-9-2>>
 
 | Best estimate stem:[x], expanded uncertainty stem:[U_{"p"}], coverage factor stem:[k_{"p"}] and effective degrees of freedom stem:[nu_{"eff"}]
 a| Scaled and shifted stem:[t]: +
 stem:[t_{nu_{"eff"}}(x,(U_{"p"}//k_{"p"})^2)]
-|
+a| image::figure-table1-8.png[]
 | <<scls_6-4-9-7>>
 
 
 | Best estimate stem:[x] of non-negative quantity
 | Exponential: +
 stem:[Ex(1/x)]
-|
+a| image::figure-table1-9.png[]
 | <<scls_6-4-10>>
 
 
 | Number stem:[q] of objects counted
 | Gamma: +
 stem:[G(q + 1, 1)]
-|
+a| image::figure-table1-10.png[]
 | <<scls_6-4-11>>
 |===
 
