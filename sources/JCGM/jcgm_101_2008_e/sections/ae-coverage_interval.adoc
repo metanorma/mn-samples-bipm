@@ -1,0 +1,89 @@
+
+[[annexE]]
+[appendix]
+== Coverage interval for the four-fold convolution of a rectangular distribution
+
+=== {blank}
+
+In <<scls_9-2-3-2>>, the analytic solution
+
+[[eqe1]]
+[stem]
+++++
++-2 sqrt(3) [2 - (3//5)^{1//4}] ~~ +- 3.88
+++++
+
+is stated. It constitutes the endpoints of the probabilistically symmetric 95 % coverage interval for the output quantity stem:[ii(Y)] in an additive model having four input quantities with expectations of zero and standard deviations of unity, the PDFs for which are identical rectangular distributions. This result is established in this annex.
+
+
+=== {blank}
+
+The rectangular distribution stem:[R(a, b)] (see <<scls_6-4-2>>) takes the constant value stem:[(b - a)^{-1}] for stem:[a <= rho <= b] and is zero otherwise. The stem:[n]-fold convolution of stem:[R(0, 1)] is the B-spline stem:[B_n(rho)] of order stem:[n] (degree stem:[n - 1]) with knots stem:[0,...,n] <<Schoenberg1969>>. An explicit expression is <<Cox1972>>
+
+[stem%unnumbered]
+++++
+B_n(rho) = 1/{(n - 1)!} sum_{r=0}^n ""^n C_r (-1)^r (rho - r)_{+}^{n-1}
+++++
+
+where
+
+[stem%unnumbered]
+++++
+""^n C_r = {n!} / {r!(n - r)!}, " " z_{+} = max(z,0)
+++++
+
+
+In particular,
+
+[stem%unnumbered]
+++++
+B_4 (rho) = 1/6 rho^3, " " " " 0 <= rho <= 1
+++++
+
+(with different cubic polynomial expressions for stem:[B_4(rho)] in other intervals between adjacent knots), and hence
+
+[stem%unnumbered]
+++++
+int_o^1 B_4 (rho) "d"rho = [1/24 rho^4]_0^{1} = 1/24 ~~ 0.0417
+++++
+
+
+=== {blank}
+
+The left-hand endpoint stem:[y_{"low"}] of the probabilistically symmetric 95 % coverage interval lies between zero and one, since
+
+[stem%unnumbered]
+++++
+0.025 = 1/40 < 1/24
+++++
+
+of the area under the PDF lies to the left of stem:[y_{"low"}], which is therefore given by
+
+[stem%unnumbered]
+++++
+int_{0}^{y_{"low"}} B_4 (rho) "d"rho = 1/24 y_{"low"}^4 = 1/40,
+++++
+
+i.e.
+
+[stem%unnumbered]
+++++
+y_{"low"} = (3/5)^{1//4}.
+++++
+
+By symmetry, the right-hand endpoint is
+
+[stem%unnumbered]
+++++
+y_{"high"} = 4 - (3/5)^{1//4}.
+++++
+
+
+Thus, the probabilistically symmetric 95 % coverage interval is
+
+[stem%unnumbered]
+++++
+[(3//5)^{1//4}, 4 - (3//5)^{1//4}] -= 2 +- (2 - (3//5)^(1//4)).
+++++
+
+The corresponding coverage interval for the four-fold convolution of the rectangular PDF stem:[R(-sqrt(3),sqrt(3))] (which has zero expectation and unit standard deviation) is given by shifting this result by two units and scaling it by stem:[2 sqrt(3)] units, yielding expression <<eqe1>>.

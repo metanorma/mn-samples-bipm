@@ -1,0 +1,220 @@
+
+[[annexG]]
+[appendix]
+== Glossary of principal symbols
+
+stem:[A]:: random variable representing the lower limit of a rectangular distribution with inexactly prescribed limits
+
+stem:[a]:: lower limit of the interval in which a random variable is known to lie
+
+stem:[a]:: midpoint of the interval in which the lower limit A of a rectangular distribution with inexactly pre-scribed limits is known to lie
+
+stem:[B]:: random variable representing the upper limit of a rectangular distribution with inexactly prescribed limits
+
+stem:[b]:: upper limit of the interval in which a random variable is known to lie
+
+stem:[b]:: midpoint of the interval in which the upper limit B of a rectangular distribution with inexactly prescribed limits is known to lie
+
+stem:["CTrap"(a, b, d)]:: rectangular distribution with inexactly prescribed limits (curvilinear trapezoid distribution) with parameters stem:[a], stem:[b], and stem:[d]
+
+stem:[Cov(ii(X)_i,ii(X)_j)]:: covariance for two random variables stem:[ii(X)_i] and stem:[ii(X)_j]
+
+stem:[c]:: stem:[n_{"dig"}]-decimal digit integer
+
+stem:[c_i]:: __i__th sensitivity coefficient, obtained as the partial derivative of the model stem:[f] for the measurement with respect to the __i__th input quantity stem:[ii(X)_i] evaluated at the vector estimate stem:[x] of the vector input quantity stem:[ii(X)]
+
+stem:[d]:: semi-width of the intervals in which the lower and upper limits A and B of a rectangular distribution with inexactly prescribed limits are known to lie
+
+stem:[d_{"high"}]:: absolute value of the difference between the right-hand endpoints of the coverage intervals provided by the GUM uncertainty framework and a Monte Carlo method
+
+stem:[d_{"low"}]:: absolute value of the difference between the left-hand endpoints of the coverage intervals provided by the GUM uncertainty framework and a Monte Carlo method
+
+stem:[e]:: base of the natural logarithm
+
+stem:[ii(E)(ii(X))]:: expectation of a random variable stem:[ii(X)]
+
+stem:[E(bb(X))]:: vector expectation of a vector random variable stem:[bb(X)]
+
+stem:[E(X^r)]:: __r__th moment of a random variable stem:[ii(X)]
+
+stem:["Ex"(lambda)]:: exponential distribution with parameter stem:[lambda]
+
+stem:[f]:: mathematical model of measurement, expressed as a functional relationship between an output quan-tity stem:[ii(Y)] and the input quantities stem:[X_1,...,X_N] on which stem:[ii(Y)] depends
+
+stem:[bb(G)]:: discrete representation of the distribution function stem:[G_Y(eta)] for the output quantity stem:[ii(Y)] from a Monte Carlo procedure
+
+stem:[G(alpha,beta)]:: gamma distribution with parameters stem:[alpha] and stem:[beta]
+
+stem:[g_X (xi)]::  probability density function with variable stem:[xi] for the input quantity stem:[ii(X)]
+
+stem:[g_{bb(X)} (bb(xi))]::  joint (multivariate) probability density function with vector variable stem:[xi] for the vector input quantity stem:[ii(X)]
+
+stem:[g_{X_i}(xi_i)]:: probability density function with variable stem:[xi_i] for the input quantity stem:[ii(X)_i]
+
+stem:[G_Y (eta)]:: distribution function with variable stem:[eta] for the output quantity stem:[ii(Y)]
+
+stem:[G_Y (eta)]:: continuous approximation to the distribution function stem:[G_Y (eta)] for the output quantity stem:[ii(Y)]
+
+stem:[tilde(g)_Y (eta)]:: probability density function with variable stem:[eta] for the output quantity stem:[ii(Y)]
+
+stem:[tilde(g)_Y (eta)]:: derivative of stem:[G_Y (eta)] with respect to stem:[eta], providing a numerical approximation to the probability density function stem:[g_Y(eta)] for the output quantity stem:[ii(Y)]
+
+stem:[J]:: smallest integer greater than or equal to stem:[100//(1 - p)]
+
+stem:[k_p]:: coverage factor corresponding to the coverage probability stem:[p]
+
+stem:[cc(l)]:: integer in the representation stem:[c xx 10^{cc(l)}] of a numerical value, where stem:[c] is an stem:[n_{"dig"}]-decimal digit integer
+
+stem:[M]:: number of Monte Carlo trials
+
+stem:[N]:: number of input quantities stem:[ii(X)_1,..., ii(X)_N]
+
+stem:[N(0, 1)]:: standard Gaussian distribution
+
+stem:["N"(mu,sigma^2)]:: Gaussian distribution with parameters stem:[mu] and stem:[sigma^2]
+
+stem:["N"(bb(mu),bb(V))]:: multivariate Gaussian distribution with parameters stem:[bb(mu)] and stem:[bb(V)]
+
+stem:[n]:: number of indications in a series
+
+stem:[n_{"dig"}]:: number of significant decimal digits regarded as meaningful in a numerical value
+
+stem:[Pr(z)]:: probability of the event stem:[z]
+
+stem:[p]:: coverage probability
+
+stem:[p]:: integer part of stem:[pM + 1//2]
+
+stem:[q]:: number of objects counted in a sample of specified size
+
+stem:[bb(R)]:: upper triangular matrix
+
+stem:[R(0,1)]:: standard rectangular distribution over the interval stem:[[0,1\]]
+
+stem:[R(a,b)]:: rectangular distribution over the interval stem:[[a,b\]]
+
+stem:[r(x_i,x_j)]:: correlation coefficient associated with the estimates stem:[x_i] and stem:[x_j] of the input quantities stem:[ii(X)_i] and stem:[ii(X)_j]
+
+stem:[s]:: standard deviation of a series of stem:[n] indications stem:[x_1,..., x_n]
+
+stem:[s_p]:: pooled standard deviation obtained from several series of indications
+
+stem:[T]:: superscript denoting matrix transpose
+
+stem:[s_z]:: standard deviation associated with the average stem:[z] of the values stem:[z^{(1)},..., z^{(h)}] in an adaptive Monte Carlo procedure, where stem:[z] may denote an estimate stem:[y] of the output quantity stem:[ii(Y)], the standard uncertainty stem:[u(y)] associated with stem:[y], or the left-hand endpoint stem:[y_{"low"}] or right-hand endpoint stem:[y_{"high"}] of a coverage interval for stem:[ii(Y)]
+
+stem:[T(a, b)]:: triangular distribution over the interval stem:[[a,b\]]
+
+stem:["Trap"(a,b,beta)]:: trapezoidal distribution over the interval stem:[[a,b\]] with parameter stem:[beta]
+
+stem:[t_{nu}]:: central stem:[t]-distribution with stem:[nu] degrees of freedom
+
+stem:[t_{nu} (mu, sigma^2)]:: scaled and shifted stem:[t]-distribution with parameters stem:[mu] and stem:[sigma^2], and stem:[nu] degrees of freedom
+
+stem:[U(0,1)]:: standard arc sine (U-shaped) distribution over the interval stem:[[0,1\]]
+
+stem:[U(a,b)]:: arc sine (U-shaped) distribution over the interval stem:[[a,b\]]
+
+stem:[U_p]:: expanded uncertainty corresponding to a coverage probability stem:[p]
+
+stem:[bb(U_x)]:: uncertainty matrix associated with the vector estimate stem:[x] of the vector input quantity stem:[ii(X)]
+
+stem:[bb(u(x))]:: vector stem:[(u(x_1),..., u(x_N))^{sf(T)}] of standard uncertainties associated with the vector estimate stem:[x] of the vector input quantity stem:[ii(X)]
+
+stem:[u(x_i)]:: standard uncertainty associated with the estimate stem:[x_i] of the input quantity stem:[ii(X)_i]
+
+stem:[u(x_i,x_j)]:: covariance associated with the estimates stem:[x_i] and stem:[x_j] of the input quantities stem:[ii(X)_i] and stem:[ii(X)_j]
+
+stem:[u(y)]:: standard uncertainty associated with the estimate stem:[y] of the output quantity stem:[ii(Y)]
+
+stem:[u(tilde(y)]:: standard uncertainty associated with stem:[tilde(y)]
+
+stem:[u_c(y)]:: combined standard uncertainty associated with the estimate stem:[y] of the output quantity stem:[ii(Y)]
+
+stem:[u_i(y)]:: __i__th uncertainty component of the standard uncertainty stem:[u(y)] associated with the estimate stem:[y] of the output quantity stem:[ii(Y)]
+
+stem:[bb(V)]:: covariance (variance-covariance) matrix
+
+stem:[ii(V)(ii(X))]:: variance of a random variable stem:[ii(X)]
+
+stem:[bb(V(X))]:: covariance matrix for the vector random variable stem:[ii(X)]
+
+stem:[w]:: semi-width stem:[(b - a)//2] of an interval stem:[[a,b\]]
+
+stem:[ii(X)]:: input quantity, regarded as a random variable
+
+stem:[ii(X)]:: vector stem:[(X_1,..., X_N )^T] of input quantities, regarded as random variables, on which the output quantity stem:[ii(Y)] depends
+
+stem:[X_i]:: __i__th input quantity, regarded as a random variable, on which the output quantity stem:[ii(Y)] depends
+
+stem:[x]:: estimate (expectation) of stem:[ii(X)]
+
+stem:[bb(x)]:: vector estimate (vector expectation) stem:[(x_1,...,x_N)^{sf(T)}] of stem:[bb(X)]
+
+stem:[hat(x)]:: average of a series of stem:[n] indications stem:[x_1,..., x_n]
+
+stem:[x_i]:: estimate (expectation) of stem:[ii(X)_i]
+
+stem:[x_i]:: __i__th indication in a series
+
+stem:[x_{i,r}]:: __r__th Monte Carlo draw from the probability density function for stem:[ii(X)_i]
+
+stem:[bb(x)_r]:: __r__th Monte Carlo draw, containing values stem:[x_{1,r},..., x_{N,r}], drawn from the probability density functions for the N input quantities stem:[ii(X)_1,..., ii(X)_N] or from the joint probability density function for stem:[ii(X)]
+
+stem:[ii(Y)]:: (scalar) output quantity, regarded as a random variable
+
+stem:[y]:: estimate (expectation) of stem:[ii(Y)]
+
+stem:[tilde(y)]:: estimate of stem:[ii(Y)], obtained as the average of the stem:[ii(M)] model values stem:[y_r] from a Monte Carlo run or as the expectation of stem:[ii(Y)] characterized by the probability density function stem:[g_Y (eta)]
+
+stem:[y_{"high"}]:: right-hand endpoint of a coverage interval for stem:[ii(Y)]
+
+stem:[y_{"low"}]:: left-hand endpoint of a coverage interval for stem:[ii(Y)]
+
+stem:[y_r]:: __r__th model value stem:[f(bb(x)_r)]
+
+stem:[y_{(r)}]:: __r__th model value after sorting the stem:[y_r] into increasing order
+
+stem:[z^{(h)}]:: __h__th value in an adaptive Monte Carlo procedure, where stem:[z] may denote an estimate stem:[y] of the output quantity stem:[ii(Y)], the standard uncertainty stem:[u(y)] associated with stem:[y], or the left-hand endpoint stem:[y_{"low"}] or right-hand endpoint stem:[y_{"high"}] of a coverage interval for stem:[ii(Y)]
+
+stem:[alpha]:: probability value
+
+stem:[alpha]:: parameter of a gamma distribution
+
+stem:[beta]:: parameter of a trapezoidal distribution equal to the ratio of the semi-width of the top of the trapezoid to that of the base
+
+stem:[beta]:: parameter of a gamma distribution
+
+stem:[Gamma(z)]:: function with variable stem:[z]
+
+stem:[delta]:: numerical tolerance associated with a numerical value
+
+stem:[delta(z)]:: Dirac delta function with variable stem:[z]
+
+stem:[eta]:: variable describing the possible values of the output quantity stem:[ii(Y)]
+
+stem:[lambda_1]:: top semi-width of the trapezoid for a trapezoidal distribution
+
+stem:[lambda_2]:: base semi-width of the trapezoid for a trapezoidal distribution
+
+stem:[mu]:: expectation of a quantity characterized by a probability distribution
+
+stem:[nu]:: degrees of freedom of a stem:[t]-distribution or a chi-squared distribution
+
+stem:[nu_{"eff"}]:: effective degrees of freedom associated with the standard uncertainty stem:[u(y)]
+
+stem:[nu_{"p"}]:: degrees of freedom associated with a pooled standard deviation s_p obtained from several series of indications
+
+stem:[xi]:: variable describing the possible values of the random variable stem:[ii(X)]
+
+stem:[bb(xi)]:: vector variable stem:[(xi_1,..., xi_N )^{sf(T)}] describing the possible values of the vector input quantity stem:[bb(X)]
+
+stem:[xi_i]:: variable describing the possible values of the input quantity stem:[ii(X)_i]
+
+stem:[sigma]:: standard deviation of a quantity characterized by a probability distribution
+
+stem:[sigma^2]:: variance (squared standard deviation) of a quantity characterized by a probability distribution
+
+stem:[Phi]:: phase of a quantity that cycles sinusoidally
+
+stem:[χ_{nu}^2]:: chi-squared distribution with stem:[nu] degrees of freedom
