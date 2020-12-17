@@ -1,0 +1,449 @@
+
+== Basic principles
+
+=== Main stages of uncertainty evaluation
+
+[[scls_5-1-1]]
+==== {blank}
+
+The main stages of uncertainty evaluation constitute formulation, propagation, and summarizing:
+
+. [[item_5-1-1a]]_Formulation_:
+.. define the output quantity stem:[ii(Y)], the quantity intended to be measured (the measurand);
+.. determine the input quantities stem:[bb(X) = (X_1,..., X_N )^{sf(T)}] upon which stem:[ii(Y)] depends;
+.. develop a model relating stem:[ii(Y)] and stem:[ii(X)];
+.. on the basis of available knowledge assign PDFs—Gaussian (normal), rectangular (uniform), etc.—to the stem:[ii(X)_i]. Assign instead a joint PDF to those stem:[ii(X)_i] that are not independent;
+
+. [[item_5-1-1b]]_Propagation_: propagate the PDFs for the stem:[ii(X)_i] through the model to obtain the PDF for stem:[ii(Y)];
+
+. [[item_5-1-1c]]_Summarizing_: use the PDF for stem:[ii(Y)] to obtain
+.. the expectation of stem:[ii(Y)], taken as an estimate stem:[y] of the quantity,
+.. the standard deviation of stem:[ii(Y)], taken as the standard uncertainty stem:[u(y)] associated with stem:[y] <<JCGM-100,clause=E.3.2>>, and
+.. a coverage interval containing stem:[ii(Y)] with a specified probability (the coverage probability).
+
+NOTE: The expectation may not be appropriate for all applications (cf. <<JCGM-100,clause=4.1.4>>).
+
+NOTE: The quantities described by some distributions, such as the Cauchy distribution, have no expectation or standard deviation. A coverage interval for the output quantity can always be obtained, however.
+
+
+[[scls_5-1-2]]
+==== {blank}
+
+The GUM uncertainty framework does not explicitly refer to the assignment of PDFs to the input quantities. However <<JCGM-100,clause=3.3.5>>, "... a Type A standard uncertainty is obtained from a probability density function... derived from an observed frequency distribution..., while a Type B standard uncertainty is obtained from an assumed probability density function based on the degree of belief that an event will occur.... Both approaches employ recognized interpretations of probability."
+
+NOTE: The use of probability distributions in a Type B evaluation of uncertainty is a feature of Bayesian inference <<Gleser1998>>, <<Kacker2003>>. Research continues <<Hall2001>> on the boundaries of validity for the assignment of degrees of freedom to a standard uncertainty based on the Welch-Satterthwaite formula.
+
+
+==== {blank}
+
+The steps in the formulation stage are carried out by the metrologist, perhaps with expert support. Guidance on the assignment of PDFs (step 4) of stage <<item_5-1-1a>> in <<scls_5-1-1>>) is given in this Supplement for some common cases (see <<scls_6-4>>). The propagation and summarizing stages, <<item_5-1-1b>> and <<item_5-1-1c>> in <<scls_5-1-1>>, for which detailed guidance is provided here, require no further metrological information, and in principle can be carried out to any required numerical tolerance for the problem specified in the formulation stage.
+
+NOTE: Once the formulation stage <<item_5-1-1a>> in <<scls_5-1-1>> has been carried out, the PDF for the output quantity is completely specified mathematically, but generally the calculation of the expectation, standard deviation and coverage intervals requires numerical methods that involve a degree of approximation.
+
+
+=== Propagation of distributions
+
+In this Supplement a generally efficient approach for determining (a numerical approximation to) the distribution function
+
+[stem%unnumbered]
+++++
+G_Y (eta) = int_{-oo}^{eta} g_Y (z) " d"z
+++++
+
+for stem:[ii(Y)] is considered. It is based on applying a Monte Carlo method (MCM) as an implementation of the propagation of distributions (see <<scls_5-9>>).
+
+
+[NOTE]
+====
+A formal definition <<Cox2006>> for the PDF for stem:[ii(Y)] is
+
+[stem%unnumbered]
+++++
+g_Y (eta) = int_{-oo}^{oo} ... int_{-oo}^{oo} g_{bb(X)} (bb(xi)) delta(eta - f(bb(xi))) " d"xi_N... "d"xi_1,
+++++
+
+where stem:[delta(cdot)] denotes the Dirac delta function. This multiple integral cannot generally be evaluated analytically. A numerical integration rule can be applied to provide an approximation to stem:[g_Y (eta)], but this is not an efficient approach.
+====
+
+
+=== Obtaining summary information
+
+==== {blank}
+
+An estimate stem:[y] of stem:[ii(Y)] is the expectation stem:[ii(E)(ii(Y)]. The standard uncertainty stem:[u(y)] associated with stem:[y] is given by the standard deviation of stem:[ii(Y)], the positive square root of the variance V (Y ) of stem:[ii(Y)].
+
+
+[[scls_5-3-2]]
+==== {blank}
+
+A coverage interval for stem:[ii(Y)] can be determined from stem:[G_Y (eta)]. Let stem:[alpha] denote any numerical value between zero and stem:[1 - p], where stem:[p] is the required coverage probability. The endpoints of a stem:[100p " %"] coverage interval for stem:[ii(Y)] are stem:[G_Y^{-1}(alpha)] and stem:[G_Y^{-1} (p + alpha)], i.e. the stem:[alpha]- and stem:[(p + alpha)]-quantiles of stem:[G_Y (eta)].
+
+
+[[scls_5-3-3]]
+==== {blank}
+
+The choice stem:[alpha = (1 - p)//2] gives the coverage interval defined by the stem:[(1 - p)//2]- and stem:[(1 + p)//2]-quantiles, providing a probabilistically symmetric stem:[100p " %"] coverage interval.
+
+NOTE: When the PDF for stem:[ii(Y)] is symmetric about the estimate stem:[y], the coverage interval obtained would be identical to stem:[y +- U_p], where the expanded uncertainty <<JCGM-100,clause=2.3.5>> stem:[U_p] is given by the product of the standard uncertainty stem:[u(y)] and the coverage factor that is appropriate for that PDF. This PDF is generally not known analytically.
+
+
+[[scls_5-3-4]]
+==== {blank}
+
+A numerical value of stem:[alpha] different from stem:[(1 - p)//2] may be more appropriate if the PDF is asymmetric. The shortest stem:[100p " %"] coverage interval can be used in this case. It has the property that, for a unimodal (single-peaked) PDF, it contains the mode, the most probable value of stem:[ii(Y)]. It is given by the numerical value of stem:[alpha] satisfying stem:[g_Y (G_Y^{-1}(alpha)) = g_Y (G_Y^{-1} (p + alpha))], if stem:[g_Y (eta)] is unimodal, and in general by the numerical value of stem:[alpha] such that stem:[G_Y^{-1}(p + alpha) - G_Y^{-1}(alpha)] is a minimum.
+
+
+==== {blank}
+
+The probabilistically symmetric stem:[100p " %"] coverage interval and the shortest stem:[100p " %"] coverage interval are identical for a symmetric PDF, such as the Gaussian and scaled and shifted stem:[t]-distribution used within the GUM uncertainty framework. Therefore, in comparing the GUM uncertainty framework with other approaches, either of these intervals can be used.
+
+
+[[scls_5-3-6]]
+==== {blank}
+
+<<fig1>> shows the distribution function stem:[G_Y (eta)] corresponding to an asymmetric PDF. Broken vertical lines mark the endpoints of the probabilistically symmetric 95 % coverage interval and broken horizontal lines the corresponding probability points, viz. 0.025 and 0.975. Continuous lines mark the endpoints of the shortest 95 % coverage interval and the corresponding probability points, which are 0.006 and 0.956 in this case. The lengths of the 95 % coverage intervals in the two cases are 1.76 unit and 1.69 unit, respectively.
+
+
+[[fig1]]
+.A distribution function stem:[G_Y (eta)] corresponding to an asymmetric PDF and the probabilistically symmetric and shortest 95 % coverage intervals (<<scls_5-3-6>>). "Unit" denotes any unit
+image::figure1.png[]
+
+
+=== Implementations of the propagation of distributions
+
+==== {blank}
+
+The propagation of distributions can be implemented in several ways:
+
+. analytical methods, i.e. methods that provide a mathematical representation of the PDF for stem:[ii(Y)];
+. [[item_5-4-1b]]uncertaintypropagation based on replacing the model by a first-order Taylor series approximation <<JCGM-100,clause=5.1.2>> — the law of propagation of uncertainty;
+. as <<item_5-4-1b>>, except that contributions derived from higher-order terms in the Taylor series approximation are included <<JCGM-100,clause=5.1.2 note>>;
+. numerical methods <<JCGM-100,clause=G.1.5>> that implement the propagation of distributions, specifically using MCM (see <<scls_5-9>>).
+
+NOTE: Analytical methods are ideal in that they do not introduce any approximation. They are applicable in simple cases only, however. A treatment and examples are available <<Cox-Harris2006>>, <<Dietrich1991>>. These methods are not considered further in this Supplement, apart from in the examples (<<cls_9>>) for comparison purposes.
+
+NOTE: MCM as considered here is regarded as a means for providing a numerical representation of the distribution for the output quantity, rather than a simulation method per se. In the context of the propagation stage of uncertainty evaluation, the problem to be solved is deterministic, there being no random physical process to be simulated.
+
+
+==== {blank}
+
+Approaches to uncertainty evaluation other than the GUM uncertainty framework are permitted by the GUM <<JCGM-100,clause=G.1.5>>. The approach advocated in this Supplement, based on the propagation of distributions, is general. For linear or linearized models and input quantities for which the PDFs are Gaussian, the approach yields results consistent with the GUM uncertainty framework. However, in cases where the conditions for the GUM uncertainty framework to be applied (see <<scls_5-7>> and <<scls_5-8>>) do not hold, the approach of this Supplement can generally be expected to lead to a valid uncertainty statement.
+
+
+==== {blank}
+
+An appropriate method has to be chosen for the propagation stage. If it can be demonstrated that the conditions necessary for the GUM uncertainty framework to give valid results hold, then that approach can be used. If there are indications that the GUM uncertainty framework is likely to be invalid, then another approach should be employed. A third situation can arise in which it is difficult to assess whether or not the GUM uncertainty framework will be valid. In all three cases, MCM provides a practical (alternative) method. In the first case, MCM may sometimes be easier to apply due to difficulties in calculating sensitivity coefficients <<JCGM-100,clause=5.1.3>>, for example. In the second, MCM can generally be expected to give valid results, since it does not make approximating assumptions. In the third, MCM can be applied either to determine the results directly or to assess the quality of those provided by the GUM uncertainty framework.
+
+
+[[scls_5-4-4]]
+==== {blank}
+
+The propagation of the PDFs stem:[g_{X_i} (xi_i)], stem:[i = 1,..., N], for the input quantities stem:[ii(X)_i] through the model to provide the PDF stem:[g_Y (eta)] for the output quantity stem:[ii(Y)] is illustrated in <<fig2>> for stem:[N = 3] independent stem:[ii(X)_i]. <<fig2>> may be compared to <<fig3>> for the law of propagation of uncertainty. In <<fig2>>, the stem:[g_{X_i} (xi_i)], stem:[i = 1, 2, 3], are Gaussian, triangular, and Gaussian, respectively. stem:[g_Y(eta)] is indicated as being asymmetric, as generally arises for non-linear models or asymmetric stem:[g_{X_i} (xi_i)].
+
+
+[[fig2]]
+.Illustration of the propagation of distributions for N = 3 independent input quantities (<<scls_5-4-4>>)
+image::figure2.png[]
+
+
+==== {blank}
+
+In practice, only for simple cases can the propagation of distributions be implemented without making approximations. The GUM uncertainty framework implements one approximate method, and MCM another. For a small but important subset of problems, the GUM uncertainty framework is exact. MCM is never exact, but is more valid than the GUM uncertainty framework for a large class of problems.
+
+
+[[scls_5-5]]
+=== Reporting the results
+
+==== The following items would typically be reported following the use of the propagation of distributions:
+
+. an estimate stem:[y] of the output quantity stem:[ii(Y)];
+. the standard uncertainty stem:[u(y)] associated with stem:[y];
+. the stipulated coverage probability stem:[100p " %"] (e.g. 95 %);
+. the endpoints of the selected stem:[100p " %"] coverage interval (e.g. 95 % coverage interval) for stem:[ii(Y)];
+. any other relevant information, such as whether the coverage interval is a probabilistically symmetric coverage interval or a shortest coverage interval.
+
+
+==== {blank}
+
+stem:[y], stem:[u(y)] and the endpoints of a stem:[100p " %"] coverage interval for stem:[ii(Y)] should be reported to a number of decimal digits such that the least significant decimal digit is in the same position with respect to the decimal point as that for stem:[u(y)] <<JCGM-100,clause=7.2.6>>. One or two significant decimal digits would usually be adequate to represent stem:[u(y)].
+
+
+NOTE: Each reported numerical value would typically be obtained by rounding a numerical value expressed to a greater number of significant decimal digits.
+
+NOTE: A factor influencing the choice of one or two significant decimal digits is the leading significant decimal digit of stem:[u(y)]. If this digit is 1 or 2, the deviation of the reported numerical value of stem:[u(y)] from its numerical value before rounding is large relative to the latter numerical value. If the leading significant decimal digit is 9, the deviation is relatively smaller.
+
+NOTE: If the results are to be used within further calculations, consideration should be given to whether additional decimal digits should be retained.
+
+[example]
+Reported results corresponding to declaring two significant decimal digits in stem:[u(y)], for a case in which the coverage interval is asymmetric with respect to stem:[y], are
+
+[stem%unnumbered]
+++++
+{:({:y = 1.024 " "rm(V)," "u(y) = 0.028 " "rm(V),:}),("shortest 95 % coverage interval" = [0.983, 1.088] " "rm(V).):}
+++++
+
+The same results reported to one significant decimal digit in stem:[u(y)] would be
+
+[stem%unnumbered]
+++++
+{:({:y = 1.02 " "rm(V), u(y) = 0.03 " "rm(V),:}),("shortest 95 % coverage interval" = [0.98, 1.09] " "rm(V).):}
+++++
+
+
+[[scls_5-6]]
+=== GUM uncertainty framework
+
+==== {blank}
+
+The GUM provides general guidance on many aspects of the stages of uncertainty evaluation presented in <<scls_5-1-1>>. It also provides the GUM uncertainty framework for the propagation and summarizing stages of uncertainty evaluation. The GUM uncertainty framework has been adopted by many organizations, is widely used, and has been implemented in standards and guides on measurement uncertainty and also in software.
+
+
+==== {blank}
+
+The GUM uncertainty framework comprises the following stages. Each model input quantity stem:[ii(X)_i] is summarized by its expectation and standard deviation, as given by the PDF for that quantity <<JCGM-100,clause=4.1.6>>. The expectation is taken as the best estimate stem:[x_i] of stem:[ii(X)_i] and the standard deviation as the standard uncertainty stem:[u(x_i)] associated with stem:[x_i]. This information is propagated, using the law of propagation of uncertainty <<JCGM-100,clause=5.1.2>>, through a first- or higher-order Taylor series approximation to the model to provide
+
+. an estimate stem:[y] of the output quantity stem:[ii(Y)], and
+. the standard uncertainty stem:[u(y)] associated with stem:[y].
+
+The estimate stem:[y] is given by evaluating the model at the stem:[x_i]. A coverage interval for stem:[ii(Y)] is provided based on taking the PDF for stem:[ii(Y)] as Gaussian or, if the degrees of freedom associated with stem:[u(y)] is finite <<JCGM-100,clause=G>>, as a scaled and shifted stem:[t]-distribution.
+
+NOTE: The summaries of the stem:[ii(X)_i] also include, where appropriate, the degrees of freedom associated with the stem:[u(x_i)] <<JCGM-100,clause=4.2.6>>. They also include, where appropriate, covariances associated with pairs of stem:[x_i] <<JCGM-100,clause=5.2.5>>.
+
+
+[[scls_5-6-3]]
+==== {blank}
+
+The propagation and summarizing stages of the GUM uncertainty framework (stages <<item_5-1-1b>> and <<item_5-1-1c>> in <<scls_5-1-1>>) constitute the following computational steps. Also see <<fig3>>, which illustrates the law of propagation of uncertainty for a model having stem:[N = 3] independent input quantities stem:[X = (X_1, X_2, X_3)^{sf(T)}], which are estimated by stem:[x_i] with associated standard uncertainties stem:[u(x_i)], stem:[i = 1, 2, 3]. The output quantity stem:[ii(Y)] is estimated by stem:[y], with associated standard uncertainty stem:[u(y)].
+
+. Obtain from the PDFs for the input quantities stem:[bb(X) = (X_1,..., X_N)^{sf(T)}] the expectations stem:[x = (x_1,..., x_N)^{sf(T)}] and the standard deviations (standard uncertainties) stem:[u(x) = [u(x_1),..., u(x_N )\]^{sf(T)}]. Use instead the joint PDF for stem:[ii(X)] if pairs of the stem:[ii(X)_i] are not independent (in which case they have non-zero covariance).
+. Set the degrees of freedom (infinite or finite) associated with each stem:[u(x_i)].
+. For each pair stem:[i], stem:[j] for which stem:[ii(X)_i] and stem:[ii(X)_j] are not independent, obtain from the joint PDF for stem:[ii(X)_i] and stem:[ii(X)_j] the covariance (mutual uncertainty) stem:[u(x_i, x_j)] associated with stem:[x_i] and stem:[x_j] .
+. Form the partial derivatives of first order of stem:[f(bb(X))] with respect to stem:[bb(X)].
+. Calculate stem:[y], the model evaluated at stem:[ii(X)] equal to stem:[x].
+. Calculate the model sensitivity coefficients <<JCGM-100,clause=5.1.3>> as the above partial derivatives evaluated at stem:[x].
+. Calculate the standard uncertainty stem:[u(y)] by combining stem:[u(x)], the stem:[u(x_i, x_j)], and the model sensitivity coefficients <<JCGM-100,clause=formulae (10), (13)>>.
+. Calculate stem:[nu_{"eff"}], the effective degrees of freedom associated with stem:[u(y)], using the Welch-Satterthwaite for-mula <<JCGM-100,clause=formula (G.2b)>>.
+. Calculate the expanded uncertainty stem:[U_p], and hence a coverage interval (for a stipulated coverage probability stem:[p]) for stem:[ii(Y)], regarded as a random variable, by forming the appropriate multiple of stem:[u(y)] through taking the probability distribution of stem:[(Y - y)//u(y)] as a standard Gaussian distribution (stem:[nu_{"eff"} = oo]) or stem:[t]-distribution (stem:[nu_{"eff"} < oo]).
+
+
+[[fig3]]
+.Illustration of the law of propagation of uncertainty for stem:[N = 3] independent input quantities (<<scls_5-4-4>>, <<scls_5-6-3>>)
+image::figure3.png[]
+
+
+[[scls_5-7]]
+=== Conditions for valid application of the GUM uncertainty framework for linear models
+
+==== {blank}
+
+No condition is necessary for the valid application of the law of propagation of uncertainty to linear models (models that are linear in the stem:[ii(X)_i]).
+
+
+[[scls_5-7-2]]
+==== {blank}
+
+A coverage interval can be determined, in terms of the information provided in the GUM, under the following conditions:
+
+. [[item_5-7-2a]]the Welch-Satterthwaite formula is adequate for calculating the effective degrees of freedom associated with stem:[u(y)] <<JCGM-100,clause=G.4.1>>, when one or more of the stem:[u(x_i)] has an associated degrees of freedom that is finite;
+. [[item_5-7-2b]]the stem:[ii(X)_i] are independent when the degrees of freedom associated with the stem:[u(x_i)] are finite;
+. [[item_5-7-2c]]the PDF for stem:[ii(Y)] can adequately be approximated by a Gaussian distribution or a scaled and shifted stem:[t]-distribution.
+
+NOTE: Condition <<item_5-7-2a>> is required in order that stem:[ii(Y)] can be characterized by an appropriate scaled and shifted stem:[t]-distribution.
+
+NOTE: Condition <<item_5-7-2b>> is required because the GUM does not treat stem:[ii(X)_i] that are not independent in conjunction with finite degrees of freedom.
+
+NOTE: Condition <<item_5-7-2c>> is satisfied when each stem:[ii(X)_i] is assigned a Gaussian distribution. It is also satisfied when the conditions for the central limit theorem <<JCGM-100,clause=G.2>> hold.
+
+NOTE: The GUM uncertainty framework may not validly be applicable when there is an stem:[ii(X)_i] whose assigned distribution is non-Gaussian and the corresponding contribution to stem:[u(y)] is dominant.
+
+
+==== {blank}
+
+When the conditions in <<scls_5-7-2>> hold, the results from the application of the GUM uncertainty framework can be expected to be valid for linear models. These conditions apply in many circumstances.
+
+
+[[scls_5-8]]
+=== Conditions for valid application of the GUM uncertainty framework for non-linear models
+
+[[scls_5-8-1]]
+==== {blank}
+
+The law of propagation of uncertainty can validly be applied for non-linear models under the following conditions:
+
+
+. [[item_5-8-1a]]stem:[f] is continuously differentiable with respect to the elements stem:[ii(X)_i] of stem:[ii(X)] in the neighbourhood of the best estimates stem:[x_i] of the stem:[ii(X)_i];
+
+. [[item_5-8-1b]]condition <<item_5-8-1a>> applies for all derivatives up to the appropriate order;
+
+. [[item_5-8-1c]]the stem:[ii(X)_i] involved in significant higher-order terms of a Taylor series approximation to stem:[f(bb(X))] are independent;
+
+. [[item_5-8-1d]]the PDFs assigned to stem:[ii(X)_i] involved in higher-order terms of a Taylor series approximation to stem:[f(bb(X))] are Gaussian;
+
+. [[item_5-8-1e]]higher-order terms that are not included in the Taylor series approximation to stem:[f(bb(X))] are negligible.
+
+
+NOTE: Condition <<item_5-8-1a>> is necessary for the applicability of the law of propagation of uncertainty based on a first-order Taylor series approximation to stem:[f(bb(X))] when the non-linearity of stem:[f] is insignificant <<JCGM-100,clause=5.1.2>>.
+
+NOTE: Condition <<item_5-8-1b>> is necessary for the application of the law of propagation of uncertainty based on a higher-order Taylor series approximation to stem:[f(bb(X))] <<JCGM-100,clause=5.1.2>>. An expression for the most important terms of next highest order to be included are given in the GUM <<JCGM-100,clause=5.1.2 note>>.
+
+NOTE: Condition <<item_5-8-1c>> relates to the statement in the GUM <<JCGM-100,clause=5.1.2 note>> concerning significant model non-linearity in the case of independent stem:[ii(X)_i]. The GUM does not consider stem:[ii(X)_i] that are not independent in this context.
+
+NOTE: Condition <<item_5-8-1d>> constitutes a correction to the statement in the GUM <<JCGM-100,clause=5.1.2 note>> that the version of the law of propagation of uncertainty using higher-order terms is based on the symmetry of the PDFs for the stem:[ii(X)_i] <<Frenkel2002>>, <<Kacker2003>>.
+
+NOTE: If the analytical determination of the higher derivatives, required when the non-linearity of the model is significant, is difficult or error-prone, suitable software for automatic differentiation can be used. Alternatively, these derivatives can be approximated numerically using finite differences <<Conte1972>>. (The GUM provides a finite-difference formula for partial derivatives of first order <<JCGM-100,clause=5.1.3 note 2>>.) Care should be taken, however, because of the effects of subtractive cancellation when forming differences between numerically close model values.
+
+
+[[scls_5-8-2]]
+==== {blank}
+
+A coverage interval can be determined, in terms of the information provided in the GUM, when conditions <<item_5-7-2a>>, <<item_5-7-2b>> and <<item_5-7-2c>> in <<scls_5-7-2>> apply, with the exception that the content of note 3 in that subclause is replaced by "Condition c) is required in order that coverage intervals can be determined from these distributions."
+
+
+==== {blank}
+
+When the conditions in <<scls_5-8-1>> and <<scls_5-8-2>> hold, the results from the application of the GUM uncertainty framework can be expected to be valid for non-linear models. These conditions apply in many circumstances.
+
+
+[[scls_5-9]]
+=== Monte Carlo approach to the propagation and summarizing stages
+
+==== {blank}
+
+MCM provides a general approach to obtain an approximate numerical representation stem:[bb(G)], say, of the distribution function stem:[G_Y(eta)] for stem:[ii(Y)] <<Lira2002,page=75>>. The heart of the approach is repeated sampling from the PDFs for the stem:[ii(X)_i] and the evaluation of the model in each case.
+
+
+==== {blank}
+
+Since stem:[G_Y (eta)] encodes all the information known about stem:[ii(Y)], any property of stem:[ii(Y)] such as expectation, variance and coverage intervals can be approximated using G. The quality of these calculated results improves as the number of times the PDFs are sampled increases.
+
+
+==== {blank}
+
+Expectations and variances (and higher moments) can be determined directly from the set of model values obtained. The determination of coverage intervals requires these model values to be ordered.
+
+
+==== {blank}
+
+If stem:[y_r], for stem:[r = 1,..., ii(M)], represent stem:[ii(M)] model values sampled independently from a probability distribution for stem:[ii(Y)], then the expectation stem:[ii(E)(ii(Y)] and variance stem:[V (Y)] can be approximated using the stem:[y_r]. In general, the moments of stem:[ii(Y)] (including stem:[ii(E)(ii(Y)] and stem:[V(Y)]) are approximated by those of the sampled model values. Let stem:[ii(M)_{y_0}] denote the number of stem:[y_r] that are no greater than stem:[y_0], any prescribed number. The probability stem:["Pr"(Y <= y_0)] is approximated by stem:[M_{y_0}//ii(M)]. In this way, the stem:[y_r] provide a step function (histogram-like) approximation to the distribution function stem:[G_Y (eta)].
+
+
+==== {blank}
+
+Each stem:[y_r] is obtained by sampling at random from each of the PDFs for the stem:[ii(X)_i] and evaluating the model at the sampled values so obtained. G, the primary output from MCM, constitutes the stem:[y_r] arranged in strictly increasing order.
+
+NOTE: It is remotely possible that equalities exist amongst the stem:[y_r], in which case suitable minute perturbations made to the stem:[y_r] would enable the stem:[y_r] to be arranged in strictly increasing order. See <<scls_7-5-1>>.
+
+
+[[scls_5-9-6]]
+==== {blank}
+
+MCM as an implementation of the propagation of distributions is shown diagrammatically in <<fig4>> for stem:[ii(M)] provided in advance (see <<scls_7-9>> otherwise). MCM can be stated as a step-by-step procedure:
+
+. select the number stem:[ii(M)] of Monte Carlo trials to be made. See <<scls_7-2>>;
+. generate stem:[ii(M)] vectors, by sampling from the assigned PDFs, as realizations of the (set of N) input quantities stem:[ii(X)_i]. See <<scls_7-3>>;
+. for each such vector, form the corresponding model value of stem:[ii(Y)], yielding stem:[ii(M)] model values. See <<scls_7-4>>;
+. sort these stem:[ii(M)] model values into strictly increasing order, using the sorted model values to provide G. See <<scls_7-5>>;
+. [[item_5-9-6e]]use stem:[bb(G)] to form an estimate stem:[y] of stem:[ii(Y)] and the standard uncertainty stem:[u(y)] associated with stem:[y]. See <<scls_7-6>>;
+. [[item_5-9-6f]]use stem:[bb(G)] to form an appropriate coverage interval for stem:[ii(Y)], for a stipulated coverage probability stem:[p]. See <<scls_7-7>>.
+
+
+NOTE: Subclause <<scls_6-4>> and <<annexC>> provide information on sampling from probability distributions.
+
+[[note2_5-9-6]]
+NOTE: Mathematically, the average of the stem:[ii(M)] model values is a realization of a random variable with expectation stem:[ii(E)(ii(Y)] and variance stem:[V(Y)//ii(M)]. Thus, the closeness of agreement between this average and stem:[ii(E)(ii(Y)] can be expected to be proportional to stem:[ii(M)^{-1//2}].
+
+NOTE: Step <<item_5-9-6e>> can equally be carried out by using the stem:[ii(M)] model values of stem:[ii(Y)] unsorted. It is necessary to sort these model values to determine the coverage interval in step <<item_5-9-6f>>.
+
+
+==== {blank}
+
+The effectiveness of MCM to determine stem:[y], stem:[u(y)] and a coverage interval for stem:[ii(Y)] depends on the use of an adequately large value of stem:[ii(M)] (step a) in <<scls_5-9-6>>). Guidance on obtaining such a value and generally on implementing MCM is available <<Cox2006>>. Also see <<scls_7-2>> and <<scls_7-9>>.
+
+
+=== Conditions for the valid application of the described Monte Carlo method
+
+[[scls_5-10-1]]
+==== {blank}
+
+The propagation of distributions implemented using MCM can validly be applied, and the required summary information subsequently determined, using the approach provided in this Supplement, under the following conditions:
+
+. [[item_5-10-1a]]stem:[f] is continuous with respect to the elements stem:[ii(X)_i] of stem:[bb(X)] in the neighbourhood of the best estimates stem:[x_i] of the stem:[ii(X)_i];
++
+--
+[[fig4]]
+.The propagation and summarizing stages of uncertainty evaluation using MCM to implement the propagation of distributions (<<scls_5-9-6>>, <<scls_7-1>>)
+image::figure4.png[]
+--
+
+. [[item_5-10-1b]]the distribution function for stem:[ii(Y)] is continuous and strictly increasing;
+
+. [[item_5-10-1c]]the PDF for stem:[ii(Y)] is
+.. continuous over the interval for which this PDF is strictly positive,
+.. unimodal (single-peaked), and
+.. [[item_5-10-1c3]]strictly increasing (or zero) to the left of the mode and strictly decreasing (or zero) to the right of the mode;
+
+. [[item_5-10-1d]]stem:[E(Y)] and stem:[V(Y)] exist;
+
+. [[item_5-10-1e]]a sufficiently large value of stem:[M] is used.
+
+
+NOTE: Regarding condition <<item_5-10-1a>>, no condition on the derivatives of stem:[f] is required.
+
+NOTE: Conditions <<item_5-10-1a>> and <<item_5-10-1b>> are necessary to ensure that the inverse of the distribution function is unique and hence coverage intervals can be determined. Only condition <<item_5-10-1a>> is needed if a coverage interval is not required.
+
+NOTE: Condition <<item_5-10-1c>> is needed only if the shortest coverage interval is to be determined. In that case, the condition is necessary to ensure that the shortest coverage interval corresponding to a stipulated coverage probability is unique. The mode may occur at an endpoint of the interval over which this PDF is strictly positive, in which case one of the two conditions in <<item_5-10-1c3>> is vacuous.
+
+NOTE: Condition <<item_5-10-1d>> is needed for (stochastic) convergence of MCM as the number stem:[M] of trials (see <<scls_7-2>>) increases.
+
+NOTE: Condition <<item_5-10-1e>> is necessary to ensure that the summarizing information is reliable. See <<scls_8-2>>.
+
+
+==== {blank}
+
+When the conditions in <<scls_5-10-1>> hold, the results from the application of the propagation of distributions implemented in terms of MCM can be expected to be valid. These conditions are less restrictive than those (see <<scls_5-7>> and <<scls_5-8>>) for the application of the GUM uncertainty framework.
+
+
+=== Comparison of the GUM uncertainty framework and the described Monte Carlo method
+
+==== {blank}
+
+The intention of this subclause is to compare the principles on which the GUM uncertainty framework and MCM as an implementation of the propagation of distributions are based. This subclause also provides some motivation for the use of MCM in circumstances where it is questionable whether the application of the GUM uncertainty framework is valid.
+
+
+==== {blank}
+
+For the purposes of comparing the GUM uncertainty framework and MCM, it is helpful to review the considerations in the GUM regarding Type A and Type B evaluations of uncertainty. For Type A evaluation, the GUM provides guidance on obtaining a best estimate of a quantity and the associated standard uncertainty from the average and the associated standard deviation of a set of indications of the quantity, obtained independently. For Type B evaluation, prior knowledge concerning the quantity is used to characterize the quantity by a PDF, from which a best estimate of the quantity and the standard uncertainty associated with that estimate are determined. The GUM states that both types of evaluation are based on probability distributions <<JCGM-100,clause=3.3.4>>, and that both approaches employ recognized interpretations of probability <<JCGM-100,clause=3.3.5>>. The GUM considers PDFs as underpinning uncertainty evaluation: in the context of the law of propagation of uncertainty, it refers explicitly to input and output quantities as being describable or characterized by probability distributions <<JCGM-100,clause=G.6.6>>. Also see <<scls_5-1-2>>.
+
+
+==== {blank}
+
+The GUM uncertainty framework does not explicitly determine a PDF for the output quantity. However, the probability distribution used by that framework to characterize the output quantity is sometimes referred to in this Supplement as "provided by" or "resulting from" the GUM uncertainty framework.
+
+
+==== {blank}
+
+This Supplement attempts to provide an approach that is as consistent with the GUM as possible, especially relating to the use of PDFs for all quantities, but departs from it in a clearly identified way where appropriate. These departures are:
+
+. PDFs are explicitly assigned to all input quantities stem:[ii(X)_i] (rather than associating standard uncertainties with estimates stem:[x_i] of stem:[ii(X)_i]) based on information concerning these quantities. The classification into Type A and Type B evaluations of uncertainty is not needed;
+
+. sensitivity coefficients <<JCGM-100,clause=5.1.3>> are not an inherent part of the approach, and hence the calculation or numerical approximation of the partial derivatives of the model with respect to the stem:[ii(X)_i] is not required. Approximations to sensitivity coefficients can, however, be provided that correspond to taking all higher-order terms in the Taylor series expansion of the model into account (<<annexB>>);
+
+. a numerical representation of the distribution function for stem:[ii(Y)] is obtained that is defined completely by the model and the PDFs for the stem:[ii(X)_i], and not restricted to a Gaussian distribution or scaled and shifted stem:[t]-distribution;
+
+. since the PDF for stem:[ii(Y)] is not in general symmetric, a coverage interval for stem:[ii(Y)] is not necessarily centred on the estimate of stem:[ii(Y)] . Consideration therefore needs to be given to the choice of coverage interval corresponding to a specified coverage probability.
+
+
+==== {blank}
+
+Since the GUM uncertainty framework explicitly uses only best estimates stem:[x_i] and the associated uncertainties (and covariances and degrees of freedom where appropriate), it is restricted in the information it can provide about stem:[ii(Y)]. Essentially it is limited to providing an estimate stem:[y] of stem:[ii(Y)] and the standard uncertainty stem:[u(y)] associated with stem:[y], and perhaps the related (effective) degrees of freedom. stem:[y] and stem:[u(y)] will be valid for a model that is linear in stem:[ii(X)]. Any other information about stem:[ii(Y)], e.g. coverage intervals, is derived using additional assumptions, e.g. that the distribution for stem:[ii(Y)] is Gaussian or a scaled and shifted stem:[t]-distribution.
+
+
+==== {blank}
+
+Some features of MCM are
+
+. reduction in the analysis effort required for complicated or non-linear models, especially since the partial derivatives of first- or higher-order used in providing sensitivity coefficients for the law of propagation of uncertainty are not needed,
+. generally improved estimate of stem:[ii(Y)] for non-linear models (cf. <<JCGM-100,clause=4.1.4>>),
+. improved standard uncertainty associated with the estimate of stem:[ii(Y)] for non-linear models, especially when the stem:[X_i] are assigned non-Gaussian (e.g. asymmetric) PDFs, without the need to provide derivatives of higher order <<JCGM-100,clause=5.1.2 note>>,
+. provision of a coverage interval corresponding to a stipulated coverage probability when the PDF for stem:[ii(Y)] cannot adequately be approximated by a Gaussian distribution or a scaled and shifted stem:[t]-distribution, i.e. when the central limit theorem does not apply <<JCGM-100,clause=G.2.1, G.6.6>>. Such an inadequate approximation can arise when (1) the PDF assigned to a dominant stem:[X_i] is not a Gaussian distribution or a scaled and shifted stem:[t]-distribution, (2) the model is non-linear, or (3) the approximation error incurred in using the Welch-Satterthwaite formula for effective degrees of freedom is not negligible, and
+. a coverage factor <<JCGM-100,clause=2.3.6>> is not required when determining a coverage interval.

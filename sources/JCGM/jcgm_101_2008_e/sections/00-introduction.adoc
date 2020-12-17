@@ -1,0 +1,43 @@
+
+[.preface]
+== Introduction
+
+This Supplement to the "Guide to the expression of uncertainty in measurement" (GUM) is concerned with the propagation of probability distributions through a mathematical model of measurement <<JCGM-100,clause=3.1.6>> as a basis for the evaluation of uncertainty of measurement, and its implementation by a Monte Carlo method. The treatment applies to a model having any number of input quantities, and a single output quantity.
+
+The described Monte Carlo method is a practical alternative to the GUM uncertainty framework <<JCGM-100,clause=3.4.8>>. It has value when
+
+. [[item_intro-a]]linearization of the model provides an inadequate representation, or
+. [[item_intro-b]]the probability density function (PDF) for the output quantity departs appreciably from a Gaussian distribution or a scaled and shifted stem:[t]-distribution, e.g. due to marked asymmetry.
+
+In case <<item_intro-a>>, the estimate of the output quantity and the associated standard uncertainty provided by the GUM un-certainty framework might be unreliable. In case <<item_intro-b>>, unrealistic coverage intervals (a generalization of "expanded uncertainty" in the GUM uncertainty framework) might be the outcome.
+
+The GUM <<JCGM-100,clause=3.4.8>> "...provides a framework for assessing uncertainty...", based on the law of propagation of uncertainty <<JCGM-100,clause=5>> and the characterization of the output quantity by a Gaussian distribution or a scaled and shifted stem:[t]-distribution <<JCGM-100,clause=G.6.2, G.6.4>>. Within that framework, the law of propagation of uncertainty provides a means for propagating uncertainties through the model. Specifically, it evaluates the standard uncertainty associated with an estimate of the output quantity, given
+
+. best estimates of the input quantities,
+. the standard uncertainties associated with these estimates, and, where appropriate,
+. degrees of freedom associated with these standard uncertainties, and
+. any non-zero covariances associated with pairs of these estimates.
+
+Also within the framework, the PDF taken to characterize the output quantity is used to provide a coverage interval, for a stipulated coverage probability, for that quantity.
+
+The best estimates, standard uncertainties, covariances and degrees of freedom summarize the information available concerning the input quantities. With the approach considered here, the available information is encoded in terms of PDFs for the input quantities. The approach operates with these PDFs in order to determine the PDF for the output quantity.
+
+Whereas there are some limitations to the GUM uncertainty framework, the propagation of distributions will always provide a PDF for the output quantity that is consistent with the model of the measurement and the PDFs for the input quantities. This PDF for the output quantity describes the knowledge of that quantity, based on the knowledge of the input quantities, as described by the PDFs assigned to them. Once the PDF for the output quantity is available, that quantity can be summarized by its expectation, taken as an estimate of the quantity, and its standard deviation, taken as the standard uncertainty associated with the estimate. Further, the PDF can be used to obtain a coverage interval, corresponding to a stipulated coverage probability, for the output quantity.
+
+The use of PDFs as described in this Supplement is generally consistent with the concepts underlying the GUM. The PDF for a quantity expresses the state of knowledge about the quantity, i.e. it quantifies the degree of belief about the values that can be assigned to the quantity based on the available information. The information usually consists of raw statistical data, results of measurement, or other relevant scientific statements, as well as professional judgement.
+
+In order to construct a PDF for a quantity, on the basis of a series of indications, Bayes' theorem can be applied <<Kacker2003>>, <<Lira1179>>. When appropriate information is available concerning systematic effects, the principle of maximum entropy can be used to assign a suitable PDF <<Weise1992>>, <<Woger1987>>.
+
+The propagation of distributions has wider application than the GUM uncertainty framework. It works with richer information than that conveyed by best estimates and the associated standard uncertainties (and degrees of freedom and covariances when appropriate).
+
+An historical perspective is given in <<annexA>>.
+
+NOTE: Citations of the form <<JCGM-100,clause=3.1.6>> are to the indicated (sub)clauses of the GUM.
+
+NOTE: The GUM provides an approach when linearization is inadequate <<JCGM-100,clause=5.1.2 note>>. The approach has limi-tations: only the leading non-linear terms in the Taylor series expansion of the model are used, and the PDFs for the input quantities are regarded as Gaussian.
+
+NOTE: Strictly, the GUM characterizes the variable stem:[(ii(Y) - y)//u(y)] by a stem:[t]-distribution, where stem:[ii(Y)] is the output quantity, stem:[y] an estimate of stem:[ii(Y)], and stem:[u(y)] the standard uncertainty associated with stem:[y] <<JCGM-100,clause=G.3.1>>. This characterization is also used in this Supplement. (The GUM in fact refers to the variable stem:[(y - ii(Y))//u(y)].)
+
+NOTE: A PDF for a quantity is not to be understood as a frequency density.
+
+NOTE: "The evaluation of uncertainty is neither a routine task nor a purely mathematical one; it depends on detailed knowledge of the nature of the measurand and of the measurement method and procedure used. The quality and utility of the uncertainty quoted for the result of a measurement therefore ultimately depends on the understanding, critical analysis, and integrity of those who contribute to the assignment of its value." <<EURACHEM2000>>.
