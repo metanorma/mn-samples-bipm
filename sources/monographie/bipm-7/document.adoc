@@ -1,0 +1,1701 @@
+= Measurement modelling of the International Reference System (SIR) for gamma emitting radionuclides
+:edition: 1
+:copyright-year: 2007
+:revdate: 2007-12-19
+:language: en
+:docnumber: BIPM-7
+:title-en: Measurement modelling of the International Reference System (SIR) for gamma emitting radionuclides
+:title-fr:
+:doctype: monographie
+:fullname: Maurice G. Cox
+:affiliation: National Physical Laboratory
+:affiliation_abbrev: NPL
+:address: Teddington, Middlesex TW11 0LW, UK
+:fullname_2: Carine Michotte
+:affiliation_2: Bureau International des Poids et Mesures
+:affiliation_abbrev_2: BIPM
+:address_2: Pavillon de Breteuil, F-92312 Sèvres Cedex, France
+:fullname_3: Andy K. Pearce
+:affiliation_3: National Physical Laboratory
+:affiliation_abbrev_3: NPL
+:address_3: Teddington, Middlesex TW11 0LW, UK
+:committee-en:
+:committee-fr:
+:committee-acronym:
+:supersedes-date:
+:supersedes-draft:
+:docstage: in-force
+:docsubstage: 60
+:imagesdir: images
+:mn-document-class: bipm
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+
+.Preface
+
+This monograph is one of a series published by the Bureau International des Poids et Mesures (BIPM) on behalf of the _Comité Consultatif des Rayonnements Ionisants_ (CCRI). The aim of this series of publications is to review topics that are of importance for the measurement of ionizing radiation and especially of radioactivity, in particular those techniques normally used by participants in international comparisons. It is hoped that these publications will prove to be useful reference volumes both for those who are already engaged in this field and for those who are approaching such measurements for the first time.
+
+The purpose of this monograph, number 7 in the series, is to present a mathematically compact and elegant way of modelling the photon and electron efficiency curves of ionization chambers, developed specifically for the International Reference System for gamma-ray activity comparisons (SIR). Corrections for impurities are taken into account in a manner that is consistent with the modelling of the photon and electron response of the chamber. A comprehensive scheme for determining the uncertainties is provided. The model also provides reliable and robust values for radionuclides measured in the SIR for the first time.
+
+Although the computer code has been developed for the SIR, the method is generally applicable to all well-type ionization chambers. Consequently, the computer code will be made available to National Metrology Institutes together with a protocol to explain its detailed application.
+
+[%unnumbered]
+[cols="^,^"]
+|===
+a| G.&nbsp;Moscati +
+President of the CCRI a| A.J.&nbsp;Wallard +
+Director of the BIPM
+|===
+
+
+[abstract]
+== Abstract
+
+NOTE: Work supported by the National Measurement Directorate of the UK Department of Trade and Industry as part of its NMS Ionizing Radiation Metrology and Software Support for Metrology programmes and by the BIPM.
+
+The photon and electron efficiency curves of an ionization chamber, as part of the SIR (International Reference System for activity measurements of stem:[gamma]-ray emitting radionuclides), have historically been determined using an iterative approach. That approach accounts for the influence of stem:[gamma]-ray-emitting impurities on the SIR measurement data based on experimental knowledge of the contributing effects or using the efficiency curves during the iterative process. Extrapolation of the curves is needed at the ends of the energy range to cover all photon and electron energies of interest.
+
+The approach described here is based on a model that at the outset accounts for all available information, including impurity corrections and beta spectrum shapes. It also accounts for the uncertainties and known correlations associated with the SIR measurement data, the nuclear reference data and other effects. The only empirical parts of the model are the mathematical forms selected for the efficiency curves. Rather than using conventional functions such as polynomials, the approach works with the exponentials of polynomials. These forms are capable of exhibiting physically possible behaviour throughout the energy range, even though there is relatively sparse radionuclide data available at high energies.
+
+Rather than correcting the measurement data for impurities, as is conventional in this area, the model itself is adjusted. The benefit of this approach is that the polynomial coefficients can be determined using generalized non-linear least-squares minimization. The adjusted model matches the SIR measurement data as closely as possible, taking account of the uncertainties and correlations indicated above. Although the solution to this least-squares formulation requires iterative solution algorithmically, it is not iterative in the sense of previous methods.
+
+This process provides estimates of the efficiency values of the ionization chamber, and the associated uncertainties, at any photon or electron energy. The uncertainties associated with the response of the ionization chamber for all radionuclides of interest are also evaluated.
+
+[preface]
+== Executive summary
+
+. The SIR ionization chamber at the BIPM is used to establish equivalence of radioactivity measurements made by the national metrology institutes (NMIs) of the signatory members of the Metre Convention.
+. To this end each NMI submits to the BIPM samples of solutions of radionuclides and their measured values of the activity of these solutions. Each NMI also provides information on any radionuclidic impurities that may be present. The BIPM measures these samples in the ionization chamber, comparing the current produced with that produced by a radium reference source.
+. The so-called equivalent activity is derived from the ratio of the currents and the NMI-supplied activity, with corrections for radioactive decay and impurities.
+. The correction for impurities requires that any impurities present have previously been measured and their equivalent activities known. Unfortunately this knowledge is frequently not available. A model is therefore required to predict the responses for such radionuclides.
+. The ionization chamber efficiency curves are modelled empirically by exponentials of polynomials, the polynomial coefficients being determined by a generalized non-linear least-squares fit. The least-squares procedure takes as input the photon and electron emission spectra and known equivalent activities and produces as output the best estimate of the polynomial coefficients for the efficiency curves.
+. The photon emission spectra are generally well known and there is evaluated and published data of good quality for most of the radionuclides of interest. However, the beta spectra are less well known (being considerably more difficult to measure) and a calculation from first principles is required.
+. The radionuclides ^177^Lu, ^182^Ta and ^99^Mo are used as test cases following the least-squares fit. The model successfully predicts equivalent activities for these radionuclides.
+. By comparing modelled and measured equivalent activities it is possible to identify radionuclides for which there may be inconsistencies in the published photon emission data. This is the case for ^201^Tl and ^65^Zn <<mic2006>>.
+
+[[intro]]
+== Introduction and overview of approach
+
+=== General
+
+The SIR (International Reference System for activity measurements of stem:[gamma]-ray emitting radionuclides) was established in 1976 at the Bureau International des Poids et Mesures (BIPM) to complement the international comparisons of activity measurements organized by Section II of the CCRI (Comité Consultatif des Rayonnements Ionizants). Participating laboratories submit SIR glass ampoules containing their standardized solutions of radionuclides to the BIPM, where the current produced by these samples in a stem:[4pi]-ionization well chamber (ionization chamber) is compared with the current obtained with a ^226^Ra reference source <<ryt1983>>. The simplicity and rapidity of the measurement as well as the long-term stability of the ionization chamber has allowed the comparison over 30 years of hundreds of radioactive solutions for a total of about 60 radionuclides.
+
+Some of the radionuclides considered are also beta emitters. The consequent _bremsstrahlung_ (radiation emitted by charged particles under deceleration) produced mainly in the wall of the ionization chamber contributes to the measured ionization current and must be taken into account.
+
+The detection efficiency of the SIR ionization chamber for a given photon of energy stem:[ii(E)] or electron of energy stem:[ii(W)] is the ionization current produced in the ionization chamber by a source emitting 10^3^ such radiations per second, expressed relative to the ionization current produced in the ionization chamber by the BIPM ^226^Ra reference source stem:[ii(I)_("Ra",5)].
+
+Similarly, the detection efficiency stem:[epsilon] of the SIR ionization chamber for a given radionuclide is the ratio of (a) the ionization current stem:[ii(I)] produced in the ionization chamber per activity stem:[ii(A)] of that radionuclide measured by a laboratory in kBq and (b) the ionization current stem:[ii(I)_("Ra",5)].
+
+Efficiency curves (detection efficiency versus photon energy and detection efficiency versus electron energy) are required for the calculation of the response of the ionization chamber for radionuclides not previously measured in the SIR. They are needed to evaluate the correction for a photon-emitting impurity present in an ampoule when the efficiency for this impurity is not known experimentally <<mic2000>>, or to give a point of comparison when a radionuclide is measured in the SIR for the first time. Each SIR measurement can be considered as a determination of the efficiency of the ionization chamber for a given radionuclide <<pea2007>>, <<reh1998>>. In consequence the whole set of SIR measurement data can be used, in principle, to establish the required efficiency curve.
+
+However, in order to obtain reliable efficiency curves, a selection of the data is made: only the results based on NMI primary standardizations are used, which are those retained for the calculation of the key comparison reference values (KCRVs) of the CIPM MRA <<bipm-mut>>. In addition, for physical reasons, gaseous radionuclides and strong stem:[beta^+] emitters are excluded. Further, for low-energy photon emitters and strong stem:[beta] emitters, radioactive solutions of low acid and carrier concentrations are selected in order to minimize the influence of self-attenuation.
+
+Since physical models for the efficiency curves are not available, previous methods have used empirical representations of these curves in the form of polynomials, exponentials, and products of polynomials and exponentials. The adjustable parameters (e.g., polynomial coefficients) in the representations are determined by iteration. This is to account for the influence of gamma-ray-emitting impurities and also to deal with the multi-photon emitters, the efficiency for one photon being deduced from the measured equivalent activity by subtracting the contribution of all other photons as estimated from the previous iteration <<mic2002>>, <<sch1997>>, <<sch2000>>. The iterative schemes have been based on a physical knowledge of the relative magnitudes of the contributory effects. Least-squares minimizations were also applied by several authors <<dry1986>>, <<sch2004>>, <<sve2002>>. However, corrections for impurities were not included in the model equations and the associated uncertainty evaluation was not fully treated.
+
+The approach considered here is different. A least-squares formulation is used that accounts for available physical information and measurement uncertainties (<<model_building>>). The formulation, as in the above cited references, allows for the presence of radioactive impurities <<mic2000>>. Families of empirical functions are used within this formulation to represent the efficiency curves (<<rep_phot_and_elect_eff_fn>>). Although as in previous approaches these functions are empirical in nature, they are chosen to take a form that ensures they are capable of possessing physically possible behaviour.
+
+In the context of data modelling, the nature of the problem is unconventional. The measurement data would not be expected to lie on the desired model curve, even if it were possible to make each measurement perfectly and correct it precisely for the respective radioactive decays and any impurity content. Such a ‘perfectly adjusted’ measured value of a radionuclide in solution would only lie on the curve if it decayed by a single energy photon emission. The model curve is a continuous function of energy, whereas each radionuclide has a number of discrete energy emissions and so cannot be represented by a single energy.
+
+The use of appropriate least-squares modelling principles permits a statistically valid solution to be obtained. Such a solution would not be obtainable were some of the data inconsistent with the model, for example as a consequence of an incorrectly recorded measured value or the stipulation of too small an uncertainty associated with a measured value. The approach _simultaneously_ provides the required efficiency curves and corrects the measurements for impurities (<<model_param_determination>>).
+
+The parameters of the empirical functions occur non-linearly within the overall model. Accordingly, recognized, high-quality algorithms for solving generalized non-linear least-squares problems are applied <<bar2004>>. In particular, the uncertainties associated with the various physical quantities involved are properly taken into account <<cox2004-2>>.
+
+The resulting efficiency functions enable efficiency values to be provided for any radionuclide with known nuclear reference data, _whether previously measured in the SIR or not_, together with the associated uncertainties.
+
+Validation procedures (<<validation>>) (a) permit the selection of appropriate members of the families of empirical functions considered, (b) check the adequacy of the numerical quadrature rule used when evaluating the model, (c) provide an assessment of the consistency of the model and the data and the uncertainties associated with the data, and (d) consider the physical feasibility of the computed model.
+
+The formulation caters for the uncertainties associated with the measured values of radionuclide activity provided by the laboratories. The uncertainties associated with the estimates of the model parameters can be formed from the information provided by the algorithm used to solve the generalized non-linear least-squares problem. In turn, these uncertainties are propagated through the models for a given energy to obtain the uncertainties associated with the corresponding efficiency values. There are further uncertainty sources that are taken into account and that influence the uncertainties associated with these efficiency values. These sources relate to the tabular values of the nuclear reference data used in the model for photon and beta-transition energies and the corresponding probabilities. They also relate to the relative impurity activities. The uncertainties associated with these sources are propagated through the model, and combined with the above-mentioned uncertainties.
+
+In this work, a distinction is made between (a) quantities themselves and (b) estimates of quantities or data values of quantities. Quantities are regarded as random variables in that they are not known exactly. Knowledge of a quantity is characterized by a probability distribution. A best estimate of that quantity is then the expectation of that quantity so characterized, and the standard uncertainty associated with that estimate is the standard deviation of the quantity. An example of a quantity is a parameter in a model, such as the gradient of a straight-line calibration function. An estimate of that quantity would generally be obtained by fitting that function to calibration data. Another example of a quantity is the emission probability of a photon. A data value of the quantity would be provided in nuclear reference data tables. These considerations are consistent with those of the GUM <<bipm-gui>>.
+
+<<annexA>> contains a glossary of symbols used.
+
+A distillation of the detailed exposition here is available <<mic2006>>, <<pea2007>>.
+
+[[overview]]
+=== Overview of approach
+
+The starting point of the approach is the consideration of the data that is available relating to the problem of concern and the physical quantities of which this data constitutes particular values (section 2). There are four categories of data:
+
+. [[st1-2-1]] data vector stem:[hat (ii(bb R))], regarded as a best estimate of stem:[ii(bb R)], the vector representing the relative impurity activities (<<data_rel_impurity_act>>);
+. data vector stem:[hat (ii(bb D))], regarded as a best estimate of stem:[ii(bb D)], the vector of equivalent activity measurement quantities for the radionuclides and laboratories of concern (<<eq_act_meas_data>>);
+. data vector stem:[hat (ii(bb N))], regarded as a best estimate of stem:[ii(bb N)], the vector representing nuclear reference data quantities (<<nuclear_ref_data>>);
+. [[st1-2-4]] data vector stem:[hat (ii(bb K))], regarded as a best estimate of stem:[ii(bb K)], the vector representing those KCRVs available for the radionuclides of concern (<<key_comparison>>).
+
+Associated with each of these data vectors is an uncertainty matrix (covariance matrix). The uncertainty matrix associated with stem:[hat (ii(bb R))] is denoted by stem:[ii(bb V)_(hat(ii(bb R)))], with a similar notation for the other uncertainty matrices. Mostly, these uncertainty matrices are diagonal, with the diagonal elements containing the squares of the standard uncertainties associated with the individual data items or estimates. When a covariance associated with a pair of data items, the stem:[i]th and stem:[j]th, say, is available, it is included as elements (stem:[i], stem:[j]) and (stem:[j], stem:[i]) of the corresponding uncertainty matrix.
+
+Account is not taken here of the uncertainties associated with the elements of stem:[hat (ii(bb K))], since their influence compared with those of stem:[hat (ii(bb D))], stem:[hat (ii(bb N))] and stem:[hat (ii(bb R))] would be expected to be small. See <<conclusions>>.
+
+It is necessary to incorporate correction factors that compensate for the fact that a solution containing a particular radionuclide measured by a laboratory may contain impurities (<<eq_act_meas_data>>). Such correction is not necessarily purely numerical because in general it depends on the vector stem:[ii(bb B)] of parameters of the efficiency curves that is to be determined and also on stem:[ii(bb R)] and stem:[ii(bb N)]. The manner in which this aspect is handled is covered in the approach used for the modelling (<<accounting>>).
+
+An established generic form for the model <<mic2002>> for the efficiency (the reciprocal of equivalent activity) stem:[epsilon_i] of the ionization chamber for radionuclide stem:[i] is used (<<generic_form>>). Letting stem:[ii(E)] denote photon energy and stem:[ii(W)] electron energy, this model is expressed in terms of the photon efficiency function stem:[epsilon(ii(E))] and the electron efficiency function stem:[epsilon_beta(ii(W))]. Since functional forms for the photon and electron efficiency functions are not available from physical considerations, they are modelled empirically in terms of appropriate functions involving unknown parameter vectors stem:[ii(bb B)^((1))] and stem:[ii(bb B)^((2))], respectively, constituting the (combined) parameter vector stem:[ii(bb B)] (<<physically_possible_models>>).
+
+The empirical modelling functions used are transformed polynomial functions having the properties that they exhibit physically possible behaviour, namely they are positive for all energy values and they tend to zero at low energy. To ensure numerical stability of the consequent computation, these polynomials are expressed in Chebyshev form (<<polynomial_repres>>).
+
+To account for impurities, a functional form for impurity correction based on the considerations of <<eq_act_meas_data>> is used that depends on stem:[ii(bb B)], stem:[ii(bb N)] and stem:[ii(bb R)] (<<accounting>>). This form is generalized through the use of a mixing ratio to reflect the use of previously evaluated but not totally reliable equivalent activity values. This use also results in a simplification of the formulae subsequently required in the uncertainty evaluation.
+
+In order to estimate the parameter vector stem:[ii(bb B)], an appropriate measure of match of modelled and measured values of equivalent activity is minimized. A measure based directly on the considerations so far would give rise to an unconventional formulation because of the dependence of the ‘measured’ equivalent activities on stem:[ii(bb B)] through the modelled correction for impurities. It is shown, however (<<matching>>), that a simple transformation of the problem results in a formulation in conventional form, in which a model consisting of the quotient of modelled equivalent activity and impurity correction factor is matched to stem:[ii(bb D)]. The resulting measure is discussed (<<full_formulation>>) in the context of a formulation that incorporates the given uncertainty information. Minimization of this measure constitutes solving a _generalized non-linear least-squares problem_.
+
+In the full formulation of this problem, stem:[ii(bb D)], stem:[ii(bb B)], stem:[ii(bb N)] and stem:[ii(bb R)] are estimated to provide _posterior estimates_ given _prior estimates_ stem:[hat(ii(bb D))] (laboratories’ measured equivalent activity values not corrected for impurities), stem:[hat(ii(bb B))] (e.g. from previous work on determining efficiency curves), stem:[hat(ii(bb N))] (published nuclear reference data), and stem:[hat(ii(bb R))] (relative impurity activity data). Any evidence of a mis-match of posterior and prior estimates could be used to propose a consequent adjustment to the nuclear data but in practice would be used to focus the radionuclide community on making appropriate investigations. Moreover, this full formulation, although appropriate for the problem, gives rise to computational difficulties because of the large number of quantities and hence the large matrices involved. Instead, therefore, a partial formulation is given that avoids these difficulties, which has good rather than near-optimal statistical properties (<<partial_formulation>>). All quantities are fixed at their prior estimates apart from the curve parameters stem:[ii(bb B)]. Solution of this formulation also constitutes solving a _generalized non-linear least-squares problem_, but of much smaller size. Although they are not needed in solving this least-squares problem, equations characterizing the resulting solution (<<eq_characterizing_the_solution>>) are given. They are required subsequently in order to evaluate the uncertainty matrix associated with the estimate stem:[ii(bb B)^(**)] of stem:[ii(bb B)] (<<uncertainties>>).
+
+The algorithm recommended for solving generalized non-linear least-squares problems is iterative in nature, at each iteration producing what is generally an improved approximation to the solution. For each approximation to stem:[ii(bb B)^(**)], the algorithm requires the values of the partial derivatives of first order of the impurity-corrected equivalent activity model. Expressions are derived for these derivatives (<<first_order_derivative_eval>> and <<appendixB>>). The use of a generalized non-linear least-squares solver (<<use_of_nlls_solver>>) and the determination of initial approximations to the model parameters (<<init_approx_to_the_model_params>>), required for iterative solution, are considered.
+
+Were the solution of the full formulation feasible, the uncertainty matrix stem:[ii(bb V)_(ii(bb B)^(**))] associated with the estimate stem:[ii(bb B)^(**)] of the model parameter vector stem:[ii(bb B)] would be available as a by-product of the least-squares procedure. This uncertainty matrix would reflect the uncertainties associated with stem:[hat(ii(bb D))], stem:[hat(ii(bb N))] and stem:[hat(ii(bb R))]. For the partial formulation, the stem:[ii(bb V)_(ii(bb B)^(**))] provided would account only for the uncertainties associated with stem:[hat(ii(bb D))], and take the form <<mar1979>>
+
+[stem%unnumbered]
+++++
+ii(V)_(ii(bb B)^(**)) = (ii(bb J)_(bb s)^("T")(ii(bb B)) ii(bb V)_(hat(ii(bb D)))^(-1) ii(bb J)_(bb s)(ii(bb B)))^(-1),
+++++
+
+where stem:[ii(bb J)_(bb s)(ii(bb B))] is the (Jacobian) matrix containing the partial derivatives of first order of the model residual deviations stem:[bb s] with respect to the model parameters.
+
+The further sources of uncertainty to be taken into account, associated with the estimates stem:[hat(ii(bb N))] of stem:[ii(bb N)] and stem:[hat(ii(bb R))] of stem:[ii(bb R)], are propagated through the least-squares solution, to be combined with the above-mentioned uncertainties. These further uncertainties are taken into account using a generalization of the GUM uncertainty framework.
+
+The solution obtained as described corresponds to the use of estimates regarded as the expectations of distributions for the corresponding quantities. On the basis of the principles of GUM Supplement 1 <<bipm-eva>>, such distributions would be assigned to be Gaussian with expectations equal to the estimates and standard deviations equal to the standard uncertainties associated with these estimates.
+
+At the solution to the generalized non-linear least-squares problem, the partial derivatives with respect to the adjustable quantities stem:[ii(bb B)] are zero. The resulting expressions provide a measurement model relating input quantities stem:[ii(bb D)], stem:[ii(bb R)] and stem:[ii(bb N)] to output quantities stem:[ii(bb B)] that can be used as the basis for applying the GUM uncertainty framework. In terms of a classification of measurement models <<cox2006>>, this model is categorized as (a) _multivariate_ (having a number of output quantities), (b) _implicit_ (being defined in such a way that stem:[ii(bb B)] cannot be expressed directly in terms of stem:[ii(bb D)], stem:[ii(bb R)] and stem:[ii(bb N)]), and (c) _real_ (not involving complex quantities).
+
+== Input data, associated uncertainties and data corrections
+
+This section discusses the various data items and the quantities of which these data items constitute realizations that are used in the modelling, namely those indicated in <<st1-2-1>>-<<st1-2-4>>. It also considers the available uncertainties associated with these data items. It further considers the correction factors that compensate for the presence of impurities in the radioactive solutions.
+
+[[eq_act_meas_data]]
+=== Equivalent activity measurement data
+
+Equivalent activity measurement data are derived from more fundamental measurement data. Consider an SIR measurement of a radioactive solution, in a glass ampoule, containing a radionuclide, generally with impurities. Let stem:[ii(A)] denote the _activity_ of the solution at a reference date stem:[t_"r"], that is when the measurement was made by a participating laboratory.
+
+The _equivalent activity_ stem:[ii(A)_"e"] is the activity of the solution that would produce the same ionization current as the reference ^226^Ra source number 5 at the fixed SIR reference date stem:[t_0].
+
+Let stem:[ii(I)_"Ra,s"] and stem:[ii(I)] denote the ionization currents produced by the ^226^Ra source number s and the ampoule, respectively. Let stem:[ii(I)_f] denote the background current. There will be a value for each of these three currents corresponding to each laboratory’s measurement.
+
+Let stem:[t_"m"] be the date of the SIR measurement of the solution, and stem:[lambda_"Ra"] and stem:[lambda_i] the decay constants of ^226^Ra and a measured radionuclide stem:[i], respectively.
+
+Three multiplicative factors are used to transform stem:[ii(A)] to stem:[ii(A)_"e"] <<mic2000>>:
+
+. The product of the quotient
++
+--
+[stem%unnumbered]
+++++
+(ii(I)_("Ra,s") - ii(I)_f)/(ii(I) - ii(I)_f)
+++++
+
+of the respective ionization currents, allowing for the background current, and a factor stem:[ii(F)_s] that is the quotient of currents of radium source numbers 5 and stem:[s].
+--
+
+. The decay-correction factor
++
+--
+[stem%unnumbered]
+++++
+("exp"(−lambda_i(t_m − t_r)))/("exp"(−lambda_"Ra"(t_m − t_0)))
+++++
+
+due to the respective decay constants and the times elapsed to the date of the SIR measurement. footnote:[This factor is not applicable to short-lived radionuclides for which the decay is significant during measurement and the decay correction is evaluated by integrating the numerator over measurement time.]
+--
+
+. An impurity correction factor stem:[ii(C)] that accounts for the impurities in the solution.
+
+Thus <<mic2000>>,
+
+[[eq1]]
+[stem]
+++++
+ii(A)_"e" = ii(AMC),
+++++
+
+where
+
+[stem%unnumbered]
+++++
+ii(M) = ii(F)_s (ii(I)_("Ra,s") − ii(I)_f)/(ii(I) − ii(I)_f) ("exp"(−lambda(t_m − t_r)))/("exp"(−lambda_("Ra")(t_m − t_0)))
+++++
+
+and stem:[ii(C)] is considered below. The stem:[ii(A)] and stem:[ii(M)] are combined to form the current- and decay-corrected measurement quantity
+
+[stem%unnumbered]
+++++
+ii(D) = ii(AM) = ii(AF)_s (ii(I)_("Ra,s") − ii(I)_f)/(ii(I) − ii(I)_f) ("exp"(−lambda(t_m − t_r)))/("exp"(−lambda_"Ra"(t_m − t_0))).
+++++
+
+<<eq1>> corresponds to the equivalent activity _per se_ that is current-, decay- and impurity-corrected.
+
+The above notation is qualified as follows when a measurement is made of radionuclide stem:[i] by a laboratory (indexed by) stem:[cc(l)]:
+
+[[eq2]]
+[stem]
+++++
+(ii(A)_"e")_(i,cc(l))^"meas" = ii(D)_(i,cc(l))ii(C)_(i,cc(l)),
+++++
+
+where
+
+[[eq3]]
+[stem]
+++++
+ii(D)_(i,cc(l)) = ii(A)_(i,cc(l))ii(M)_(i,cc(l)).
+++++
+
+The superscript in stem:[(ii(A)_"e")_(i,cc(l))^"meas"] is used to emphasize that equivalent activity is based on _measurement_. (Subsequently, another superscript will indicate when equivalent activity is based on a _model_.) The stem:[ii(A)_(i,cc(l))] denotes the measured value for the activity of radionuclide stem:[i] provided by laboratory stem:[cc(l)]. The stem:[ii(M)_(i,cc(l))] denotes the value of stem:[ii(M)] in <<eq1>> relevant to radionuclide stem:[i] and laboratory stem:[cc(l)], namely,
+
+[[eq4]]
+[stem]
+++++
+ii(M)_(i,cc(l)) = ii(F)_s ((ii(I)_("Ra,s"))_(i,cc(l)) − (ii(I)_f)_(i,cc(l)))/(ii(I)_(i,cc(l)) − (ii(I)_f)_(i,cc(l))) ("exp"(−lambda_i((t_m)_(i,cc(l)) − (t_r)_(i,cc(l)))))/("exp"(−lambda_"Ra"((t_m)_(i,cc(l)) − t_0))).
+++++
+
+The stem:[ii(C)_(i,cc(l))] is the correction factor that compensates for the fact that the solution containing radionuclide stem:[i] that is measured by laboratory stem:[cc(l)] may contain impurities, and is given <<mic2000>> by
+
+[[eq5]]
+[stem]
+++++
+ii(C)_(i,cc(l)) = 1 + sum_(k in K_(i,cc(l))) R_(i,cc(l),k) ((ii(A)_e)_i)/((ii(A)_e)_k)
+++++
+
+(see <<data_rel_impurity_act>>).
+
+Let stem:[ii(bb D)] denote the vector of values of the stem:[ii(D)_(i,cc(l))]. It constitutes the set of current- and decay-corrected measurement quantities, or in brief the _data quantity vector_.
+
+The modelling approach described here utilizes the stem:[ii(D)_(i,cc(l))] and therefore requires the standard uncertainties stem:[u(ii(hat D)_(i,cc(l)))] associated with estimates stem:[ii(hat D)_(i,cc(l))] of the stem:[ii(D)_(i,cc(l))] given by
+
+[stem%unnumbered]
+++++
+ii(hat D)_(i,cc(l)) = ii(hat A)_(i,cc(l))ii(hat M)_(i,cc(l)),
+++++
+
+using <<eq3>>, where stem:[ii(hat A)_(i,cc(l))] is the measured value provided by laboratory stem:[cc(l)] of the activity of radionuclide stem:[i] and stem:[ii(hat M)_(i,cc(l))] is the value of stem:[ii(M)_(i,cc(l))] given by substituting measured values for the various quantities in the right-hand side of <<eq4>>.
+
+These uncertainties are given by applying the law of propagation of uncertainty to <<eq3>>, under the assumption that the quantities involved are mutually independent, to give
+
+[[eq6]]
+[stem]
+++++
+(u^2(ii(hat D)_(i,cc(l))))/(ii(hat D)_(i,cc(l))^2) = (u^2(ii(hat A)_(i,cc(l))))/(ii(hat A)_(i,cc(l))^2) + (u^2(ii(hat M)_(i,cc(l))))/(ii(hat M)_(i,cc(l))),
+++++
+
+where stem:[u(ii(hat A)_(i,cc(l)))] is the standard uncertainty associated with stem:[ii(hat A)_(i,cc(l))] as declared by laboratory stem:[cc(l)], and stem:[u(ii(hat M)_(i,cc(l)))] that associated with stem:[ii(hat M)_(i,cc(l))]. The stem:[u(ii(hat M)_(i,cc(l)))] is obtained by applying the law of propagation of uncertainty to <<eq4>>, given the standard uncertainties associated with the measured values of the quantities involved.
+
+Generally the stem:[ii(C)_(i,cc(l))] in <<eq5>> will depend on the model parameters stem:[ii(bb B)], say, which are to be determined. They also depend on stem:[ii(bb N)] and stem:[ii(bb R)], estimates of which, with associated standard uncertainties, are available (see <<accounting>>).
+
+[[data_rel_impurity_act]]
+=== Data relating to relative impurity activities
+
+Consider the activity ratio quantities stem:[overset(~)(ii(R))_(i,cc(l),k)], stem:[k in ii(K)_(i,cc(l))] corresponding to the activities at the reference date of impurity stem:[k] in a solution of radionuclide stem:[i] for laboratory stem:[cc(l)], for all relevant stem:[i], stem:[cc(l)] and stem:[k]. The stem:[ii(K)_(i,cc(l))] denotes the index set relating to impurities associated with that solution. Let stem:[ii(bb R)] denote the vector of decay-corrected quantities stem:[ii(R)_(i,cc(l),k)] for relevant stem:[i], stem:[cc(l)] and stem:[k]. Data constituting a best estimate stem:[hat(ii(bb R))] of stem:[ii(bb R)] is available, as are the associated standard uncertainties.
+
+The stem:[ii(R)_(i,cc(l),k)] is given by
+
+[stem%unnumbered]
+++++
+ii(R)_(i,cc(l),k) = overset(~)(ii(R))_(i,cc(l),k) ii(H)_(i,cc(l),k),
+++++
+
+where
+
+[stem%unnumbered]
+++++
+ii(H)_(i,cc(l),k) = "exp"(-(lambda_k - lambda_i)((t_m)_(i,cc(l))-(t_r)_(i,cc(l))))
+++++
+
+is the appropriate decay correction.
+
+Consider the correction factors stem:[ii(C)_(i,cc(l))] in <<eq5>>. The value provided by laboratory stem:[cc(l)] in its measurement of a solution containing radionuclide stem:[i] will fall into one of three categories, corresponding to the measurement of a radionuclide
+
+. that is pure, in which case stem:[ii(C)_(i,cc(l)) = 1],
+. together with impurities that have all previously been well characterized in terms of reliable measurement, meaning that KCRVs for the equivalent activities stem:[(ii(A)_e)_i] and stem:[(ii(A)_e)_k] in <<eq5>> would be available, and hence a numerical value for stem:[ii(C)_(i,cc(l))] could be determined, and
+. together with impurities not all of which have previously been well characterized. For the well-characterized impurities, KCRVs for the stem:[(ii(A)_e)_k] in <<eq5>> would again be available, but the efficiency model is used to estimate the remaining impurities.
+
+[[nuclear_ref_data]]
+=== Nuclear reference data
+
+For a radionuclide (indexed by) stem:[i] let
+
+stem:[ii(J)_i]:: denote the set of indices of the photons associated with this radionuclide,
+stem:[""_beta ii(J)_i]:: the set of indices of the beta transitions associated with this radionuclide,
+stem:[ii(E)_(i,j)]:: the energy associated with the stem:[j]th photon,
+stem:[ii(P)_(i,j)]:: the emission probability for the stem:[j]th photon footnote:[The ‘emission probability’ stem:[ii(P)_(i,j)] of a given particle or photon is the mean number of such particles or photons emitted per decay. For stem:[beta +-] and stem:[gamma] emissions the stem:[ii(P)_(i,j)] are physically constrained to stem:[0 <= ii(P)_(i,j) <= 1] and equate to the probabilities of emission following decay. For X-rays or annihilation radiation there may be more than one photon emitted per decay and the stem:[ii(P)_(i,j)] no longer represent probabilities _per se_. However, the stem:[ii(P)_(i,j)] are conventionally referred to as ‘emission probabilities’ regardless of the physical process.],
+stem:[ii(W)_(i,j)]:: the maximum energy associated with the stem:[j]th beta-transition,
+stem:[""_beta ii(P)_(i,j)]:: the emission probability for the stem:[j]th beta-transition,
+stem:[ii(S)_(i,j)(ii(W))]:: the energy distribution function for the spectrum corresponding to the stem:[j]th beta-transition, normalized such that
+
+[stem%unnumbered]
+++++
+int_1^(oo) ii(S)_(i,j)(ii(W))d ii(W) = 1,
+++++
+
+where stem:[ii(W) = ii(E)//(m_ec^2) + 1] is the reduced total electron energy, stem:[m_e] being the rest mass of the electron and stem:[c] the speed of light.
+
+Values of the quantities stem:[{ii(E)_(i,j) : j in ii(J)_i}], stem:[{ii(P)_(i,j) : j in ii(J)_i}], stem:[{ii(W)_(i,j) : j in ""_beta ii(J)_i}] and stem:[{""_beta ii(P)_(i,j) : j in ""_beta ii(J)_i}] are available as published _nuclear reference data_, together with associated standard uncertainties (see e.g. <<be2004>>). These published energies and probabilities are regarded as best-available estimates stem:[hat(ii(bb N))] of quantities collectively labelled stem:[ii(bb N)]. In general, only a subset of the nuclear reference data is used and stem:[ii(bb N)] and stem:[hat(ii(bb N))] are interpreted accordingly.
+
+For the problem here most of the quantities concerned are independent and hence stem:[ii(bb V)_(hat (ii(bb N)))] is predominantly diagonal. However, there are some correlation effects associated with (a) the nuclear reference data relating to the normalization of the relative emission probabilities footnote:[For a particular radionuclide stem:[i], the stem:[ii(P)_(i,j)] are obtained as stem:[ii(P)_(i,j) = eta_i ii(I)_(i,j)], where stem:[ii(I)_(i,j)] is the relative emission probability for the stem:[j]th photon for radionuclide stem:[i] and stem:[eta_i] is a normalization factor for that radionuclide. Standard uncertainties are available for the stem:[eta_i] and the stem:[ii(I)_(i,j)]. The stem:[ii(P)_(i,j)] so obtained are correlated. Specifically, applying the law of propagation of uncertainty, stem:[u^2(ii(P)_(i,j)) = ii(I)_(i,j)^2 u^2(eta_i) + eta_i^2 u^2(ii(I)_(i,j))] and stem:[u(ii(P)_(i,j), ii(P)_(i,j')) = ii(I)_(i,j) ii(I)_(i,j') u^2(eta_i)].], and (b) an emission probability in the case where two laboratories provide activity estimates having small associated uncertainties. The stem:[ii(bb V)_(hat (ii(bb N)))] will consequently contain some off-diagonal non-zero elements.
+
+The beta energy distribution function stem:[ii(S)_(i,j)], for the stem:[j]th beta transition, is calculated as in the publications of Wilkinson <<wil1989>>, <<wil1990>>, <<wil1995>>, <<wil1997>>, <<wil1998>>. The first- and second-forbidden non-unique decays are approximated by allowed and first-forbidden unique decays, respectively. The required values of the Coulomb functions stem:[lambda_n] are approximated as independent of energy and estimated from the tables of Behrens and Jänecke <<beh1969>>. The ‘finite nuclear radius’ is estimated by the relation given in Grau Malonda <<gra1999>>. The electron shielding correction is calculated by the method of Rose <<ros1936>>, where the total positron/electron energy in the Fermi function is shifted by a screening potential stem:[+- ii(V)_s].
+
+The emission of conversion electrons of energy stem:[ii(W)_c] is taken into account by defining a special case of energy distribution: stem:[ii(S)_(i,j) = delta(ii(W) − ii(W)_c)].
+
+[[key_comparison]]
+=== Key comparison reference values
+
+Let stem:[(ii(A)_e)_i^("KCRV")] denote a key comparison reference value (KCRV) for radionuclide stem:[i]. For many of the radionuclides, such a KCRV is published in the BIPM Key Comparison Database (KCDB) <<bipm-key>> and is considered to be a best estimate, together with an associated standard uncertainty, of the equivalent activity. The model may be used ultimately to derive KCRVs for other radionuclides <<rat2004>>. The set of such KCRVs is denoted by stem:[hat(ii(bb K))] and the vector of quantities of which stem:[hat(ii(bb K))] is a realization is denoted by stem:[ii(bb K)].
+
+Account is not taken here of the uncertainties associated with the elements of stem:[hat(ii(bb K))], since their influence compared with those of stem:[hat(ii(bb D))], stem:[hat(ii(bb N))] and stem:[hat(ii(bb R))] would be expected to be small. See <<conclusions>>.
+
+[[model_building]]
+== Model building
+
+[[generic_form]]
+=== Generic form for the efficiency function of the ionization chamber
+
+Denote by stem:[epsilon(ii(E))] the efficiency of the ionization chamber for photons of energy stem:[ii(E)], and by stem:[""_(epsilon beta) (ii(W))] its efficiency for electrons of energy stem:[ii(W)]. The function stem:[epsilon(ii(E))] is known as the _photon efficiency function or photon efficiency curve_ and stem:[""_(epsilon beta)(ii(W))] as the _electron efficiency function_ or curve. Since analytical forms for these functions derived from _physical principles_ are not available, stem:[epsilon(ii(E))] is modelled by an appropriate _empirical_ function stem:[ii(F)(ii(bb B)^((1)),ii(E))] and stem:[""_(epsilon beta)(ii(W))] by stem:[ii(G)(ii(bb B)^((2)),ii(W))]. The stem:[ii(bb B)^((1))] and stem:[ii(bb B)^((2))] denote sets of adjustable model parameters, with stem:[ii(bb B) = ((ii(bb B)^((1)))^(TT)], stem:[(ii(bb B)^((2)))^(TT))^(TT)], that is
+
+[stem%unnumbered]
+++++
+ii(bb B) = [[ii(bb B)^((1))],[ii(bb B)^((2))]],
+++++
+
+representing the aggregated set of adjustable model parameters.
+
+The model for the efficiency of the chamber for radionuclide stem:[i] is given <<mic2002>> by
+
+[[eq7]]
+[stem]
+++++
+epsilon_i = sum_(j in ii(J)_i) ii(P)_(i,j) ii(F) (ii(bb B)^((1)), ii(E)_(i,j)) + sum_(j in_beta ii(J)_i) ""_beta ii(P)_(i,j) int_1^(ii(W)_(i,j)) ii(S)_(i,j)(ii(W)) ii(G)(ii(bb B)^((2)), ii(W)) d ii(W).
+++++
+
+The corresponding model for the equivalent activity <<mic2002>>, <<reh1998>>, <<sch1997>> of radionuclide stem:[i], indicating explicitly that it depends on stem:[ii(bb B)] and stem:[ii(bb N)], is
+
+[[eq8]]
+[stem]
+++++
+(ii(A)_e)_i^("model")(ii(bb B),ii(bb N)) = epsilon_i^(-1) = [sum_(j in ii(J)_i) ii(P)_(i,j) ii(F) (ii(bb B)^((1)), ii(E)_(i,j)) + sum_(j in_beta ii(J)_i) ""_beta ii(P)_(i,j) int_1^(ii(W)_(i,j)) ii(S)_(i,j)(ii(W)) ii(G) (ii(bb B)^((2)),ii(W))d ii(W)]^(-1).
+++++
+
+This quantity is the model value for the equivalent activity of radionuclide stem:[i].
+
+[[rep_phot_and_elect_eff_fn]]
+=== Representation of the photon and electron efficiency functions
+
+[[physically_possible_models]]
+==== Physically possible empirical models
+
+Although the _form_ of the efficiency functions stem:[ii(F)(ii(bb B)^((1)),ii(E))] and stem:[ii(G)(ii(bb B)^((2)),ii(W))] is not known analytically, they are expected to vary smoothly with energy, reasons for which have been given <<ryt1983>>. Hence, appropriate smooth empirical functions containing adjustable parameters are required. Because of the arbitrariness of choice, it is important that the functions used are validated by confirming that there is no lack of consistency of model and data. This aspect is addressed in <<validation>>, and also mentioned later in this section.
+
+Consider first models of the form
+
+[[eq9]]
+[stem]
+++++
+ii(F)(ii(bb B)^((1)),ii(E)) = sum_(h=1)^n ii(B)_h^((1)) ii(phi)_h(ii(E)),
+++++
+
+[stem%unnumbered]
+++++
+ii(G)(ii(bb B)^((2)), ii(W)) = sum_(h=1)^(n beta) ii(B)_h^((2)) ii(psi)_h(ii(W)),
+++++
+
+where stem:[(ii(B)^((1)), ... , ii(B)_n^((1)))] are the elements of stem:[ii(bb B)^((1))] and  stem:[(ii(B)_1^((2)), ... , ii(B)_(n beta)^((2)))] those of stem:[ii(bb B)^((2))], and the stem:[ii(phi)_h(ii(E))] and  stem:[ii(psi)_h(ii(W))] are suitable sets of basis functions. Possible basis functions are powers of stem:[ii(E)] or stem:[ii(W)] (making stem:[ii(F)(ii(bb B)^((1)),ii(E))] or stem:[G(ii(bb B)^((2)),ii(W))] a polynomial in stem:[ii(E)] or stem:[ii(W)]) and B-splines for a prescribed set of knots (making stem:[ii(F)(ii(bb B)^((1)),ii(E))] or stem:[ii(G)(ii(bb B)^((2)),ii(W))] a spline with these knots). Appropriately transformed polynomials were used for this application. A suitable representation of polynomials (<<polynomial_repres>>) is used for numerical purposes.
+
+Appropriate orders of the polynomials are required to ensure that the model is consistent with the data, accounting for the uncertainties. Generally, unless adequate data are available, a polynomial might exhibit oscillations in order to be ‘close’ to the data in the above sense. Such oscillations would be regarded as spurious in a representation of an efficiency curve, since they would result in violation of the required smoothness indicated above.
+
+A polynomial might even take negative values in part of the range of interest. A polynomial that took such values at meaningful energies would not provide a physically possible representation of an efficiency curve. In particular, it could not be used for predictive purposes at such energies.
+
+Both oscillations and negative values indeed occurred when using a prototype version of a software implementation based on ‘pure polynomials’.
+
+Two modifications were made to address this aspect. They were based on studying the ‘shape’ of the SIR photon efficiency curve, which is often plotted as stem:[ii(F)(ii(bb B)^((1)),ii(E))//ii(E)] against stem:[ii(E)] in order to display more clearly the deviations of the efficiency curve from linearity.
+
+First, a polynomial with argument stem:["ln" ii(E)] rather than stem:[ii(E)] was used in modelling the photon efficiency curve, because the interval of values of stem:[ii(E)] covers three orders of magnitude and the shape of this curve is more polynomial-like when expressed in terms of stem:["ln" ii(E)]. The use of this argument helped to overcome problems with spurious oscillations when applied to the measurement data of concern. The principal reason for the improvement is the changes made to the spacing between the relatively sparse radionuclide data available at high energies.
+
+The interval of values of stem:[ii(W)] was such that a logarithmic transformation was not necessary in modelling the electron efficiency curve.
+
+Second, to ensure that a mathematical representation of an efficiency curve could never take a negative value, and therefore remained physically possible, each of the models for stem:[ii(F)(ii(bb B)^((1)),ii(E))//ii(E)] and stem:[ii(G)(ii(bb B)^((2)),ii(W))//ii(W)] was expressed as the _exponential of a polynomial_ rather than a pure polynomial. footnote:[A class of models consisting of ‘exponentials of polynomials’ has been used in spectral characteristic modelling <<cox2003>>, behaving like a Gaussian function in a log variable (a ‘log-normal’) for polynomial order three (degree two or quadratic), and providing greater approximation power for higher orders.] Such a form is positive everywhere for any polynomial. In fact, this is equivalent to plotting the photon efficiency curve on a log-log scale. The use of the exponential of a polynomial has a further advantage. For the SIR, the graph of stem:[ii(F)(ii(bb B)^((1)),ii(E))//ii(E)] constitutes a ‘peak’. In areas such as spectroscopy, peaks are often represented by a Gaussian function or a variant of such a function. A Gaussian function can be written as the exponential of a polynomial of order three. footnote:[The exponential of a polynomial of order three can be expressed in at least two ways, namely, stem:[p_1" exp"(−p_2(ii(E) − p_3)^2)] and stem:["exp"(q_1 + q_2 ii(E) + q_3 ii(E)^2)]. The first form is a scaled Gaussian function and the second the exponential of a quadratic polynomial. For any value of the Gaussian parameters stem:[p_1], stem:[p_2] and stem:[p_3], the polynomial coefficients stem:[q_1], stem:[q_2] and stem:[q_3] can be formed in terms of them. Conversely, for any polynomial coefficients stem:[q_1], stem:[q_2] and stem:[q_3], with stem:[q_3 < 0], the Gaussian parameters stem:[p_1], stem:[p_2] and stem:[p_3] can be formed from them. The condition stem:[q_3 < 0] implies that the function is a ‘peak’, as opposed to a ‘valley’.] For exponentials of polynomials of order greater than three, various degrees of asymmetry, bulbousness, etc. can be reproduced. This should give the model sufficient flexibility to reproduce the shape of efficiency curves for an ionization chamber different from those of the SIR (see <<app_to_oth_ionitation_chambers>>).
+
+The variants of <<eq9>> used are thus
+
+[[eq10]]
+[stem]
+++++
+ii(F) (ii(bb B)^((1)), ii(E)) = ii(E) "exp" (sum_(h=1)^n ii(B)_h^((1)) ii(phi)_h("ln" ii(E))),
+++++
+
+[stem%unnumbered]
+++++
+ii(G)(ii(bb B)^((2)), ii(W)) = ii(W) "exp" (sum_(h=1)^(n beta) ii(B)_h^((2)) ii(psi)_h(ii(W))).
+++++
+
+Now consider how estimates of stem:[ii(bb B)^((1))] and stem:[ii(bb B)^((2))] in the <<eq10>> can be determined. If these models adequately describe the efficiency curves, that is the approximation errors committed by their use are negligible compared with the uncertainties associated with stem:[hat(ii(bb D))], stem:[hat(ii(bb N))] and stem:[hat(ii(bb R))] (an aspect addressed in <<validation>>), <<eq10>> can be substituted into the <<eq8>>, and the resulting expression employed. Thus,
+
+[[eq11]]
+[stem]
+++++
+(ii(A)_e)_i^("model")(ii(bb B),ii(bb N)) = [sum_(j in ii(J)_i) ii(P)_(i,j) ii(E)_(i,j) "exp" (sum_(h=1)^n ii(B)_h^((1)) ii(phi)_h ("ln" ii(E)_(i,j)))
+++++
+
+[stem%unnumbered]
+++++
++ sum_(j in_beta ii(J)_i) ""_beta ii(P)_(i,j) int_1^(ii(W)_(i,j)) ii(W) ii(S)_(i,j)(ii(W)) "exp" (sum_(h=1)^(n beta) ii(B)_h^((2)) ii(psi)_h (ii(W))) d ii(W)]^(-1),
+++++
+
+the form for the model that is used henceforth.
+
+[[polynomial_repres]]
+==== Polynomial representation
+
+For purposes of numerical stability <<cox1996>>, essential here to avoid unnecessary loss of numerical precision for polynomials of arbitrary order, stem:[ii(phi)_h("ln" ii(E))] in <<eq10>> is represented as
+
+[[eq12]]
+[stem]
+++++
+ii(phi)_h ("ln" ii(E)) = ii(T)_(h-1)(x),
+++++
+
+where stem:[ii(T)_j(x)] is the Chebyshev polynomial of the first kind of degree stem:[j] in the normalized variable
+
+[[eq13]]
+[stem]
+++++
+x = (("ln" ii(E) - "ln" ii(E)_"min")-("ln" ii(E)_"max" - "ln" ii(E)))/("ln" ii(E_"max") - "ln" ii(E)_"min"),
+++++
+
+and [stem:[ii(E)_"min"," "ii(E)_"max"]] is the energy range over which the modelling is to be carried out. It is recommended that the values
+
+[[eq14]]
+[stem]
+++++
+ii(E)_"min" = min_(j in ii(J)_i, i in ii(I)) ii(E)_(i,j),
+++++
+
+[stem%unnumbered]
+++++
+ii(E)_"max" = max_(j in ii(J)_i, i in ii(I)) ii(E)_(i,j)
+++++
+
+are taken. Reasons for the specific <<eq13>> of the linear transformation formula have been given <<cox1986>>.
+
+The stem:[ii(G)(ii(bb B)^((2)),ii(W))] is treated similarly:  stem:[ii(psi)_h(ii(W))] in <<eq10>> is represented as
+
+[[eq15]]
+[stem]
+++++
+ii(psi)_h(ii(W)) = ii(T)_(h-1)(x),
+++++
+
+where
+
+[[eq16]]
+[stem]
+++++
+x = ((ii(W)-ii(W)_"min")-(ii(W)_"max"-ii(W)))/(ii(W)_"max"-ii(W)_"min"),
+++++
+
+with
+
+[[eq17]]
+[stem]
+++++
+ii(W)_"min" = 1,
+++++
+
+[stem%unnumbered]
+++++
+ii(W)_"max" = max_(j in_beta ii(J)_i, i in ii(I)) ii(W)_(i,j).
+++++
+
+[[accounting]]
+=== Accounting for impurity corrections
+
+Any particular correction stem:[ii(C)_(i,cc(l))] (<<eq_act_meas_data>>) is either known or depends on stem:[ii(bb B)], stem:[ii(bb N)] and stem:[ii(bb R)], and can thus generally be represented by stem:[ii(C)_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R))].
+
+To account for the categories of correction factor considered in <<eq_act_meas_data>>, and in order to generalize the treatment, a _mixing ratio_ stem:[ii(theta)_i] relating to each radionuclide of concern is introduced. This ratio is taken as unity or zero according to whether or not radionuclide i had previously been well-characterized, that is whether or not a reliable value stem:[(ii(A)_"e")_i^"KCRV"] for the equivalent activity stem:[(ii(A)_"e")_i] is available. Then, <<eq5>> can be interpreted as
+
+[[eq18]]
+[stem]
+++++
+ii(C)_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R)) = 1 + sum_(k in ii(K)_(i, cc(l))) ii(R)_(i, cc(l), k) ii(Q)_(i,k) (ii(bb B), ii(bb N)),
+++++
+
+where
+
+[[eq19]]
+[stem]
+++++
+ii(Q)_(i,k) (ii(bb B),ii(bb N)) = ((ii(A)_"e")_i^"cmptd"(ii(bb B),ii(bb N)))/((ii(A)_"e")_k^"cmptd"(ii(bb B),ii(bb N))),
+++++
+
+and, with the superscript cmptd denoting ‘computed’,
+
+[[eq20]]
+[stem]
+++++
+(ii(A)_"e")_i^"cmptd"(ii(bb B),ii(bb N)) = ii(theta)_i (ii(A)_"e")_i^"KCRV" + (1 - ii(theta)_i) (ii(A)_"e")_i^"model" (ii(bb B),ii(bb N)).
+++++
+
+This approach has the property that a value of stem:[ii(theta)_i] between zero and one can be chosen to reflect the use of a previously evaluated but not totally reliable value of stem:[(ii(A)_"e")_i]. The use of stem:[theta_i] also results in a simplification of the formulae used for derivatives when solving the generalized non-linear least-squares problem and in the uncertainty evaluation (<<appendixB>>).
+
+== Solution characterization
+
+[[matching]]
+=== Matching modelled and measured values
+
+Let stem:[ii(I)] denote the set of indices of all radionuclides of concern and stem:[ii(L)_i] the set of indices representing the laboratories that have measured radionuclide stem:[i].
+
+The current-, decay- and impurity-corrected quantity (<<eq2>>) is expressed as
+
+[[eq21]]
+[stem]
+++++
+(ii(A)_"e")_(i,cc(l))^"meas"(ii(bb B),ii(bb D),ii(bb N),ii(bb R)) = ii(D)_(i,cc(l)) ii(C)_(i,cc(l)) (ii(bb B),ii(bb N),ii(bb R)). 
+++++
+
+The requirement is to match in some sense the <<eq8>> and <<eq21>>. Both the ‘measured’ and modelled equivalent activities over all relevant radionuclides stem:[i] and laboratories stem:[cc(l)] generally depend on stem:[ii(bb B)], stem:[ii(bb N)] and stem:[ii(bb R)]. The latter activities (<<eq21>>) also depend on stem:[ii(bb D)]. Matching is achieved by estimating stem:[ii(bb B)] in such a way that a suitable measure of closeness of the two expressions (<<measure_of_deviation>>) is as small as possible. However, the form of the problem is unconventional as a consequence of the ‘measured’ equivalent activities depending on the unknown parameters stem:[ii(bb B)] rather than being fixed. The problem can, however, be transformed as follows.
+
+Divide the right-hand sides of <<eq8>> and <<eq21>> by stem:[ii(C)_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R))]. The advantage of this simple problem transformation is that the stem:[f_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R))] given by
+
+[[eq22]]
+[stem]
+++++
+f_(i,cc(l)) (ii(bb B),ii(bb N),ii(bb R)) = ((ii(A)_"e")_i^"model"(ii(bb B),ii(bb N)))/(ii(C)_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R)))," " i in ii(I), " " cc(l) in ii(L)_i,
+++++
+
+which depend on stem:[ii(bb B)], stem:[ii(bb N)] and stem:[ii(bb R)], can then be matched to the stem:[ii(D)_(i,cc(l))], which depend only on stem:[ii(bb D)].
+
+The function stem:[f_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R))] will be known as the _equivalent activity model_ for radionuclide stem:[i] and laboratory stem:[cc(l)]. The vector of the stem:[f_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R))] will be denoted by stem:[f(ii(bb B),ii(bb N),ii(bb R))] and known as the _equivalent activity model vector_.
+
+To reiterate, the information available for use in the determination of a match includes
+
+. [[st1]] the vector estimate stem:[hat(ii(bb D))] of stem:[ii(bb D)] provided by the laboratories’ measured values of the activities of the radionuclides and by the ionization current measurements in the SIR,
+. a vector estimate stem:[hat(ii(bb B))] of the efficiency curve parameters stem:[ii(bb B)], e.g. from previous work on determining efficiency curves (see <<init_approx_to_the_model_params>>),
+. a vector estimate stem:[hat(ii(bb N))] of stem:[ii(bb N)] from published nuclear reference data,
+. [[st4]] a vector estimate stem:[hat(ii(bb R))], the elements of which are provided by the laboratories, of the relative impurity activities stem:[ii(bb R)], and
+. the uncertainty matrices associated with the vector estimates in <<st1>>-<<st4>>.
+
+Denote by stem:[ii(bb Z)] the composite vector of quantities stem:[ii(bb B)], stem:[ii(bb N)] and stem:[ii(bb R)]:
+
+[stem%unnumbered]
+++++
+ii(bb Z)^TT = [ii(bb B)^TT, ii(bb N)^TT, ii(bb R)^TT].
+++++
+
+It is taken that stem:[ii(bb D)] and stem:[ii(bb Z)] are mutually independent.
+
+[[measure_of_deviation]]
+=== Measure of deviation of model from data
+
+[[full_formulation]]
+==== Full formulation
+
+If all the estimates stem:[hat(ii(bb D))], stem:[hat(ii(bb B))], stem:[hat(ii(bb N))] and stem:[hat(ii(bb R))] and their associated uncertainty matrices, discussed in <<matching>>, are to be used within the generalized non-linear least-squares regression, these estimates can be regarded as _prior_ values of the corresponding quantities, and the results of the analysis would furnish _posterior_ estimates of these quantities. In this context, denote by stem:[hat(ii(bb Z))] the corresponding prior estimate of stem:[ii(bb Z)],
+
+[stem%unnumbered]
+++++
+hat(ii(bb Z))^TT = [hat(ii(bb B))^TT, hat(ii(bb N))^TT, hat(ii(bb R))^TT],
+++++
+
+and by stem:[ii(bb V)_(hat(ii(bb Z))) = "diag" (ii(bb V)_(hat(ii(bb B))), ii(bb V)_(hat (ii(bb N))), ii(bb V)_(hat(ii(bb R))))] the uncertainty matrix associated with stem:[hat(ii(bb Z))].
+
+A measure of the deviation of stem:[ii(bb D)] and stem:[ii(bb Z)] from their prior estimates that accounts for the provided uncertainty information is
+
+[stem%unnumbered]
+++++
+(hat(ii(bb D)) − ii(bb D))^TT ii(bb V)_(hat (ii(bb D)))^(−1) (hat(ii(bb D)) - ii(bb D)) + (hat(ii(bb Z)) − ii(bb Z))^TT ii(bb V)_(hat(ii(bb Z)))^(-1) (hat(ii(bb Z)) − ii(bb Z)).
+++++
+
+This formulation constitutes a non-linear counterpart of a Gauss-Markov measure <<bar2004>>.
+
+Since the posterior estimate of stem:[ii(bb D)] is to be equal to that of the model vector stem:[f(ii(bb B),ii(bb N),ii(bb R)) -= f(ii(bb Z))], this measure can be expressed as
+
+[[eq23]]
+[stem]
+++++
+ii(S)_"full"(ii(bb Z)) = [hat(ii(bb D)) − f(ii(bb Z))]^TT ii(bb V)_(hat(ii(bb D)))^(−1) [hat(ii(bb D)) − f(ii(bb Z))] + (hat(ii(bb Z)) − ii(bb Z))^TT ii(bb V)_(hat(ii(bb Z)))^(-1) (hat(ii(bb Z)) − ii(bb Z)).
+++++
+
+A statistically valid match of model and data would be achieved by minimizing stem:[ii(S)_"full"(ii(bb Z))] with respect to stem:[ii(bb Z)] to obtain the posterior vector estimate stem:[ii(bb Z)^**], say, of this quantity. The uncertainty matrix stem:[ii(bb V)_(ii(bb Z)^**)] associated with stem:[ii(bb Z)^**] could also be obtained as a by-product of the minimization algorithm, from which the required uncertainty matrix stem:[ii(bb V)_(ii(bb B)^(**))] associated with stem:[ii(bb B)^(**)], the posterior estimate of stem:[ii(bb B)], could be extracted.
+
+Were the model linear in the parameters, the corresponding (linear least-squares) estimator would be the most efficient (that is, having minimum variance) of all unbiased estimators that can be expressed in terms of linear functions of the data (from Gauss-Markov theory). For a model that is non-linear in the parameters, as here, that result would apply only approximately. There may exist another estimator that is more efficient, but obtaining such an estimator would be a challenging task.
+
+There are two difficulties associated with the <<eq23>>, relating to (a) the appreciable amount of computation that would be required to minimize it, and (b) the interpretation and repercussions of the results, leading to several consequences, as indicated in the following paragraph.
+
+The approach formulates _a priori_ the problem in a manner that respects the knowledge of the uncertainties associated with all relevant effects. The function stem:[ii(S)_"full"(ii(bb Z))] in <<eq23>> is minimized with respect to stem:[ii(bb Z) = [ii(bb B)^TT, ii(bb N)^TT, ii(bb R)^TT\]^TT] to give estimates stem:[ii(bb B)^(**)] of stem:[ii(bb B)], stem:[ii(bb N)^**] of stem:[ii(bb N)], and stem:[ii(bb R)^**] of stem:[ii(bb R)]. If all these estimates were to be ‘accepted’ in some sense, assuming that statistical tests of the model were satisfied, stem:[ii(bb B)^(**)] _would_ provide an improved definition of the efficiency curves. Moreover, stem:[ii(bb N)^**] could arguably be used as replacements for the tabulated nuclear reference data. The rationale for this statement is that further information (the SIR measurement data) has been used, the statistical tests were satisfied (meaning there is no reason to suspect any inconsistency), and hence the adjusted values should constitute improvements. However, it would be unreasonable to expect that the tables of the transition energies and probabilities would be updated on every occasion a statistically consistent model fit was made. Therefore, one approach could be to use the energy curve parameters stem:[ii(bb B)^(**)] so provided, but not explicitly to propose change to the tables of nuclear reference data (although the relevant authors could be informed). Should the model fit be statistically inconsistent with the data, an intriguing possibility is raised. It is recommended in <<choice_of_models>> that following a failure of the consistency check, the model residuals are used to identify radionuclide measurement data regarded as discrepant. This check would naturally also include the nuclear reference data. As a consequence, possible erroneous values for some transition energies and probabilities could be identified.
+
+Similar approaches have been used to determine some nuclear data, such as atomic masses <<aud2003>>.
+
+The full formulation generates a demanding problem computationally. It would appear there is no available software for such problems. footnote:[It constitutes a generalized non-linear least-squares problem with a number of adjustable parameters equal not just to the dimension of stem:[ii(bb B)] (of order 10), but to the dimension of stem:[ii(bb Z) = [ii(bb B)^TT," "ii(bb N)^TT," "ii(bb R)^TT\]^TT] (of order 1000). Such problems can be solved on today’s computers, especially if advantage is taken of the structure of the matrices that arises in their formulation. For the problem of concern here, the Jacobian matrix (<<overview>>) would be bordered (or augmented band) <<cox1981>> and the uncertainty matrix block-diagonal. Algorithms and software already exist <<cox1981>>, <<cox1987>> for problems with a bordered Jacobian and a diagonal uncertainty matrix. For the problem here, with a bordered Jacobian and a block-diagonal uncertainty matrix, it seems that software is not available for such a computation, although the technology exists for developing an implementation.]
+
+[[partial_formulation]]
+==== Partial formulation
+
+Instead, therefore, an approach is used that avoids this difficulty, which has good rather than near-optimal statistical properties. The approach does not provide stem:[ii(bb V)_(ii(bb Z)^**)] directly. Rather, this uncertainty matrix is obtained by a stage of uncertainty propagation once stem:[ii(bb B)^(**)] has been determined (<<uncertainties>>).
+
+The <<eq23>> is adapted as follows. First, the vector components stem:[ii(bb N)] and stem:[ii(bb R)] of stem:[ii(bb Z)] are not regarded as quantities for which posterior estimates are to be determined. Rather they are set to the prior estimates stem:[hat(ii(bb N))] and stem:[hat(ii(bb R))] and kept fixed at these values. Second, no prior estimate of stem:[ii(bb B)] is used. (Such an estimate is used, however, as an initial approximation to stem:[ii(bb B)] when solving iteratively the problem formulated below.) Consequently, instead of the <<eq23>>, the measure
+
+[[eq24]]
+[stem]
+++++
+ii(S)_"part"(ii(bb B)) = [hat(ii(bb D)) − f(ii(bb B), hat(ii(bb N)), hat(ii(bb R)))]^TT ii(bb V)_(hat(ii(bb D)))^(-1) − f(ii(bb B), hat(ii(bb N)), hat(ii(bb R)))].
+++++
+
+is used. This measure, a function of stem:[ii(bb B)] only, is minimized with respect to stem:[ii(bb B)] using a reliable generalized non-linear least-squares algorithm <<bar2004>>. The resulting uncertainty matrix associated with the estimate stem:[ii(bb B)^(**)] so determined does not, however, account for the effects of the uncertainty matrices associated with stem:[hat(ii(bb N))] and stem:[hat(ii(bb R))]. The manner in which such account can be taken is considered in <<uncertainties>>.
+
+In consistent cases this approach based on a partial formulation can be expected to yield only slightly different estimates stem:[ii(bb N)^**] from those provided by the full least-squares formulation in <<full_formulation>>.
+
+[[eq_characterizing_the_solution]]
+=== Equation characterizing the solution
+
+Specifically, stem:[ii(bb B)^(**)] is the stem:[ii(bb B)] that minimizes the <<eq24>>. At the solution, the partial derivatives of the measure with respect to stem:[ii(bb B)] are zero. The solution hence satisfies <<gil1981>>
+
+[[eq25]]
+[stem]
+++++
+h(ii(bb B),hat(ii(bb D)), hat(ii(bb N)),hat(ii(bb R))) -= ((del f(ii(bb B),hat(ii(bb N)),hat(ii(bb R))))/(del ii(bb B)))^TT ii(bb V)_(hat(ii(bb D)))^(-1) [hat(ii(bb D)) - f(ii(bb B),hat(ii(bb N)),hat(ii(bb R)))] = 0,
+++++
+
+where
+
+[stem%unnumbered]
+++++
+(del f(ii(bb B),hat(ii(bb N)),hat(ii(bb R))))/(del ii(bb B)) = [[delf_1//del ii(B)_1, . . ., del f_1//del ii(B)_(ii(N))],[vdots, ddots, vdots],[del f_m//del ii(B)_1, . . ., del f_m // del ii(B)_(ii(N))]].
+++++
+
+Vector equation <<eq25>>, constituting a system of non-linear algebraic equations, is not generally solved as such for stem:[ii(bb B) = ii(bb B)^(**)], but stem:[ii(S)_"part"(ii(bb B))] in <<eq24>> is minimized using a generalized nonlinear least-squares algorithm to provide stem:[ii(bb B)^(**)]. <<eq25>> is, however, important regarding uncertainty evaluation for the solution of the problem (<<uncertainties>>).
+
+[[model_param_determination]]
+== Model parameter determination
+
+=== General
+
+The generalized non-linear least-squares algorithm mentioned in <<measure_of_deviation>> is iterative. Starting with an initial approximation to stem:[ii(bb B)], at each iteration it constructs what is generally an improved approximation. The sequence of approximations ultimately converge to stem:[ii(bb B)^(**)]. At each iteration, the model deviation
+
+[[eq26]]
+[stem]
+++++
+s(ii(bb B),ii(bb D),ii(bb N),ii(bb R)) = ii(bb D) − f(ii(bb B),ii(bb N),ii(bb R))
+++++
+
+and the partial derivatives of that deviation with respect to stem:[ii(bb B)] are evaluated for the current value of stem:[ii(bb B)], with
+
+[stem%unnumbered]
+++++
+ii(bb D) = hat(ii(bb D)),
+++++
+
+[stem%unnumbered]
+++++
+ii(bb N) = hat(ii(bb N)),
+++++
+
+[stem%unnumbered]
+++++
+ii(bb R) = hat(ii(bb R)).
+++++
+
+[[first_order_derivative_eval]]
+=== First-order derivative evaluation
+
+These derivatives constitute the Jacobian matrix
+
+[stem%unnumbered]
+++++
+ii(bb J)(ii(bb B)) = (del s(ii(bb B),hat(ii(bb D)), hat(ii(bb N)), hat(ii(bb R))))/(del ii(bb B)) = − (del f(ii(bb B),hat(ii(bb D)), hat(ii(bb N)), hat(ii(bb R))))/(del ii(bb B)).
+++++
+
+The model vector stem:[f(ii(bb B),ii(bb N),ii(bb R))] has components stem:[f_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R))] and the model deviation vector stem:[s(ii(bb B),ii(bb D),ii(bb N),ii(bb R))] has component deviations stem:[s_(i,cc(l))(ii(bb B),ii(bb D),ii(bb N),ii(bb R))], with respect to the elements of the efficiency curve parameter vector stem:[ii(bb B)], the decay-corrected measurement vector stem:[ii(bb D)], the nuclear reference data vector stem:[ii(bb N)], and the relative impurity activities vector stem:[ii(bb R)]. The components are related by
+
+[[eq27]]
+[stem]
+++++
+s_(i,cc(l))(ii(bb B),ii(bb D),ii(bb N),ii(bb R)) = ii(D)_(i,cc(l)) − f_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R))
+++++
+
+where, to recapitulate, stem:[ii(D)_(i,cc(l))] is an element of stem:[ii(bb D)], and stem:[f_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R))] is equal to the quotient of the model function stem:[(ii(A)_"e")_i^"model" (ii(bb B),ii(bb N))] and the parametrized correction term stem:[ii(C)_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R))]. The first set of such derivatives is needed when using an algorithm to solve the generalized non-linear least-squares problem to determine a vector estimate stem:[ii(bb B)^(**)] of stem:[ii(bb B)] when the quantities stem:[ii(bb D)], stem:[ii(bb N)] and stem:[ii(bb R)] are set to their best prior estimates (<<partial_formulation>>). All these derivatives are needed as part of the evaluation of the uncertainties associated with stem:[ii(bb B)^(**)].
+
+The various first-order derivatives are given in <<appendixB>>.
+
+[[use_of_nlls_solver]]
+=== Use of a generalized non-linear least-squares solver
+
+The solution of the generalized non-linear least-squares formulation of <<partial_formulation>> is carried out using a high-quality library software implementation <<for1979>> of a recognized algorithm for such problems.
+
+Such an algorithm requires for its operation:
+
+. A procedure for calculating the residual deviations stem:[s(ii(bb B),ii(bb D),ii(bb N),ii(bb R))] given stem:[ii(bb B)], stem:[ii(bb D)], stem:[ii(bb N)] and stem:[ii(bb R)]. This procedure is based on <<eq27>>, <<eq22>>, <<eq12>>–<<eq17>>, <<eq18>>–<<eq20>>;
+. A procedure for calculating the first-order partial derivatives of these deviations with respect to the elements of stem:[ii(bb B)]. <<appendixB>> gives details.
+. An approximation to the required estimate of stem:[ii(bb B)], to initialize the iterative solution procedure used by the algorithm. <<init_approx_to_the_model_params>> gives details.
+
+Let stem:[(ii(bb B)^((1)))^**] denote the estimate of stem:[ii(bb B)^((1))], and stem:[(ii(bb B)^((2)))^**] that of stem:[ii(bb B)^((2))], given by minimizing stem:[ii(S)_"part"(ii(bb B))] in <<eq24>>. Let stem:[ii(bb B)^(**) = {[(ii(bb B)^((1)))^**\]^TT," "[(ii(bb B)^((2)))^**\]^TT}^TT].
+
+The generalized non-linear least-squares software also provides the uncertainty matrix stem:[ii(bb V)_(ii(bb B)^(**))] associated with stem:[ii(bb B)^(**)]. This uncertainty matrix accounts only for stem:[ii(bb V)_(hat(ii(bb D)))], and not stem:[ii(bb V)_(hat (ii(bb N)))] and stem:[ii(bb V)_(hat(ii(bb R)))].
+
+[[init_approx_to_the_model_params]]
+=== Initial approximations to the model parameters
+
+The following approach is used to provide initial approximations to the model parameters stem:[ii(bb B)]:
+
+. Provide a set of points stem:[(ii(E)_s, epsilon_s)," "s = 1, . . . , q], adequately covering the energy spectrum of concern. Previously published curves or preliminary results of Monte Carlo simulations or points derived from single photon emitters may be used for this purpose.
+. Solve the (unweighted) linear least-squares problems of fitting the function
++
+--
+[stem%unnumbered]
+++++
+sum_(h=1)^n ii(B)_h^((1)) ii(phi)_h ("ln" ii(E))
+++++
+
+to the data stem:[(ii(E)_s, "ln"(epsilon_s//ii(E)_s))," "s = 1, . . . , q], to obtain approximations to the values of the stem:[ii(B)_h^((1))]. In carrying out this step, use the approach described in <<choice_of_models>> to provide an appropriate value for stem:[n].
+--
+. Carry out the counterpart of Steps 1 and 2 for the electron efficiency curve to obtain approximations to the values of the stem:[ii(B)_h^((2))].
+
+[[uncertainties]]
+== Model parameter uncertainties
+
+=== General
+
+This section is concerned with the evaluation of the uncertainty matrix stem:[ii(bb V)_(ii(bb B)^(**))] associated with the vector estimate stem:[ii(bb B)^(**)] of the model parameter vector stem:[ii(bb B)]. The evaluation constitutes the propagation of the uncertainties associated with all the data used in the least-squares modelling, namely, the vector stem:[hat(ii(bb D))] containing the set of the laboratories and SIR decay-corrected measurement data used, the vector stem:[hat(ii(bb N))] of relevant published values of the nuclear reference data stem:[ii(bb N)] used, and the estimate stem:[hat(ii(bb R))] of the relative impurity activities vector stem:[ii(bb R)] used. For this purpose, the vector estimates stem:[hat(ii(bb D))], stem:[hat(ii(bb N))] and stem:[hat(ii(bb R))] are available, as are the associated uncertainty matrices stem:[ii(bb V)_(hat (ii(bb D)))], stem:[ii(bb V)_(hat (ii(bb N)))] and stem:[ii(bb V)_(hat(ii(bb R)))]. footnote:[The elements of stem:[ii(bb D)] may not be independent of those of stem:[ii(bb N)], but information on the correlations is not readily available, other than that the effects would be expected to be small. Therefore, consideration is not given to this form of correlation, although an extension of the analysis here is possible should they be quantifiable.]
+
+=== Implicit model
+
+The contribution to stem:[ii(bb V)_(ii(bb B)^(**))] from stem:[ii(bb V)_(hat (ii(bb D)))] is already provided as part of the least-squares solution process (<<use_of_nlls_solver>>). That contribution is identical to that obtained by uncertainty propagation as considered here applied to stem:[ii(bb V)_(hat (ii(bb D)))] alone.
+
+Since stem:[ii(bb B)] is related to stem:[ii(bb D)], stem:[ii(bb N)] and stem:[ii(bb R)] through a least-squares minimization process, rather than there being an _explicit_ expression for stem:[ii(bb B)] in terms of these quantities, stem:[ii(bb B)] satisfies an _implicit_ vector function
+
+[[eq28]]
+[stem]
+++++
+h(ii(bb B),ii(bb D),ii(bb N),ii(bb R)) = 0,
+++++
+
+given by differentiating with respect to stem:[ii(bb B)] the function to be minimized and equating the result to 0.
+
+The solution stem:[ii(bb B)^(**)] is the stem:[ii(bb B)] satisfying <<eq28>> after setting stem:[ii(bb D)], stem:[ii(bb N)] and stem:[ii(bb R)] to their best prior estimates.
+
+The form of the vector function stem:[h] is identical to that in <<eq25>> except that the quantities stem:[ii(bb D)], stem:[ii(bb N)] and stem:[ii(bb R)] rather than the estimates stem:[hat(ii(bb D))], stem:[hat(ii(bb N))] and stem:[hat(ii(bb R))] are involved, but the uncertainty matrix stem:[ii(bb V)_(hat(ii(bb D)))] associated with stem:[hat(ii(bb D))] is retained:
+
+[stem%unnumbered]
+++++
+h(ii(bb B),ii(bb D),ii(bb N),ii(bb R)) -= ((del f(ii(bb B),ii(bb N),ii(bb R)))/(del ii(bb B)))^TT ii(bb V)_(hat(ii(bb D)))^(-1) [ii(bb D)-f(ii(bb B),ii(bb N),ii(bb R))]=0.
+++++
+
+The least-squares solution stem:[ii(bb B)^(**)] satisfies <<eq25>> _per se_, and stem:[ii(bb V)_(ii(bb B)^(**))] satisfies the matrix equation footnoteblock:[fn8]
+
+[[eq29]]
+[stem]
+++++
+[ii(bb H)_(ii(bb B)) ii(bb V)_(ii(bb B^**)) ii(bb H)_(ii(bb B))^TT - sum_(bb alpha = ii(bb D),ii(bb N),ii(bb R)) ii(bb H)_(bb alpha) ii(bb V)_(hat(bb alpha)) ii(bb H)_(bb alpha)^TT] |_(ii(bb B)=ii(bb B)^**, ii(bb D) = hat(ii(bb D)), ii(bb N)=hat(ii(bb N)),ii(bb R)=hat(ii(bb R))) = 0,
+++++
+
+where the _Hessian matrices_ stem:[ii(H)_(ii(B))] and stem:[ii(H)_(bb alpha)]
+
+[stem%unnumbered]
+++++
+ii(bb H)_(ii(bb B)) = (del h)/(del ii(bb B)),
+++++
+
+[stem%unnumbered]
+++++
+ii(bb H)_(bb alpha) = (del h)/(del bb alpha).
+++++
+
+Expressions for stem:[ii(bb H)_(ii(bb B))] and the stem:[ii(bb H)_(bb alpha)] are given in <<appendixC>>.
+
+[[validation]]
+== Validation of model and uncertainty evaluation
+
+Unless the model itself and aspects relating to the model are validated, the results produced may not be reliable. Therefore, attention is paid to the following issues:
+
+. The choice of models from families of (e.g. polynomial or spline) models;
+. Consistency of model and data;
+. Uncertainty evaluation;
+. Adequacy of quadrature rules (needed in forming the integrals in <<eq11>>).
+
+[[fn8]]
+[NOTE]
+--
+<<eq29>> is obtained by applying the treatment of real implicit multivariate models in a best-practice guide on uncertainty evaluation <<cox2004>>. In the notation of that guide, the model is 
+
+[stem%unnumbered]
+++++
+h(ii(bb Y),ii(bb X)) = 0,
+++++
+
+where stem:[ii(bb X)] is a vector input quantity and stem:[ii(bb Y)] a vector output quantity. Given an estimate stem:[hat(ii(bb X))] of stem:[ii(bb X)], the estimate stem:[hat(ii(bb Y))] of stem:[ii(bb Y)] is given by solving
+
+[stem%unnumbered]
+++++
+h(hat(ii(bb Y)), hat(ii(bb X))) = 0.
+++++
+
+In terms of the Jacobian matrices (Jacobians with respect to stem:[h], but Hessians with respect to stem:[f]),
+
+[stem%unnumbered]
+++++
+ii(bb J) (hat(ii(bb X))) = (del h)/(del ii(bb X)),
+++++
+
+[stem%unnumbered]
+++++
+ii(bb J) (hat(ii(bb Y))) = (del h)/(del ii(bb Y)),
+++++
+
+the uncertainty matrix stem:[ii(bb V)_(hat(ii(bb Y)))] associated with stem:[hat(ii(bb Y))] is related to that, stem:[ii(bb V)_(hat(ii(bb X)))], associated with stem:[hat(ii(bb X))], by
+
+[stem%unnumbered]
+++++
+ii(bb J)( hat(ii(bb Y)) ) ii(bb V)_(hat(ii(bb Y))) ii(bb J)^TT( hat(ii(bb Y)) ) = ii(bb J)(hat(ii(bb X)) ) ii(bb V)_(hat(ii(bb X))) ii(bb J)^TT(hat(ii(bb X))),
+++++
+
+a system of linear equations that is solved for stem:[ii(bb V)_(hat(ii(bb Y)))]. The extension of this result when stem:[ii(bb X)] corresponds to the set of mutually independent vector quantities stem:[ii(bb D)], stem:[ii(bb N)] and stem:[ii(bb R)], and stem:[ii(bb Y)] to stem:[ii(bb B)], constitutes <<eq29>>. A numerical procedure for solving <<eq29>> for stem:[ii(bb V)_(ii(bb B)^(**))] is given in <<appendixD>>.
+--
+
+[[choice_of_models]]
+=== Choice of models from model families
+
+The problem as posed requires choices for the values of stem:[n] and stem:[n_beta], the orders (numbers of coefficients) in the <<eq10>>. It is necessary to deduce suitable orders to generate a model that is consistent with the data.
+
+For problems in fields where there is just one model curve (strictly a family of models) containing a number of coefficients to be determined, a common approach <<cox1994>> is to fit the model a number of times, with increasing order of model, namely with 1, 2, ... coefficients. For each model order, the _chi-squared ratio_, defined as the ratio of the observed chi-squared value and a critical value of the chi-squared distribution is formed. The observed chi-squared value is the value stem:[ii(S)_"full"(ii(bb Z))] in <<eq23>> evaluated at the solution stem:[ii(bb Z)^** = ((ii(bb B)^(**))^TT, (hat(ii(bb N)))^TT, (hat(ii(bb R)))^TT)^TT]. footnote:[It is essential to use stem:[ii(S)_"full"(ii(bb Z))] rather than stem:[ii(S)_"part"(ii(bb B))] in <<eq24>>. The latter only takes uncertainties associated with stem:[hat(ii(bb D))] into account, whereas the former also accounts for those associated with stem:[hat(ii(bb N))] and stem:[hat(ii(bb R))].] The chi-squared distribution used is that for a degrees of freedom equal to the number of data less the number of model parameters. The critical point of the chi-squared distribution is that corresponding to an appropriate percentile of that distribution. If the family of models is appropriate for the data and the associated uncertainties, it can be expected that, for a sufficiently high order, the chi-squared ratio will saturate to a value approximately equal to unity. The model of lowest order corresponding to this saturation level can be taken as the required model.
+
+For the models in <<eq11>>, a different strategy is required, because a choice of two model orders is to be made. The following approach is used. Select provisional values stem:[n^"max"] and stem:[n_beta^"max"] for the largest plausible values of stem:[n] and stem:[n_beta] to be considered, for example, based on previous work on obtaining efficiency curves. There are stem:[n^"max" xx n_beta^"max"] pairs of values in all. For each possible pair from the stem:[n^"max" xx n_beta^"max"] pairs, fit the corresponding model and form the chi-squared ratio. Arrange these values into a rectangular array of dimensions stem:[n^"max" xx n_beta^"max"]. If the chi-squared ratio saturates to unity within the body of the array, the provisional maximum orders can be regarded as sufficient. Otherwise, choose one or two larger orders, as appropriate, and carry out  the necessary additional computations to complete the larger array.
+
+Once an array containing saturation has been obtained, select appropriate orders. The strategy for this selection evolves as experience is gained with the use of the models. Since the electron efficiency curve is simpler in form, a polynomial of low order, such as three, would be expected to suffice in this case. A polynomial of higher order would be required in the modelling of the photon efficiency curve. This information helps to inform the decision regarding choices of model order.
+
+In practice, this statistical approach to model selection was not implemented in the software presented in <<summary>>, since it was straightforward to handle this aspect manually.
+
+=== Consistency of model and data
+
+This section provides a test, under the assumption of normality of the various quantities involved, for the consistency of the model and the data.
+
+Form the value of the <<eq23>> at the solution stem:[ii(bb B)=ii(bb B)^(**)]. This value is a computed value of chi-squared for stem:[ii(nu) = m − n − n_beta] degrees of freedom, the number of measured data (the dimension of stem:[ii(bb D)]) less the number of model parameters. If the probability of the value of the chi-squared distribution for stem:[ii(nu)] degrees of freedom exceeding this computed chi-squared value is less than 0.0001, the consistency check is regarded as failed. The use of this probability corresponds to four standard deviations under a normality assumption. This check is actually less stringent than that often recommended in the context of key comparison data evaluation <<cox2002>>, <<nie2002>>.
+
+[[determining_subset]]
+=== Determining a consistent subset
+
+A normalized deviation is defined as a model deviation in <<eq26>> normalized by the standard uncertainty associated with this deviation. The corresponding component of stem:[hat(ii(bb D))] is classified as discrepant if the magnitude of this normalized deviation exceeds 4. This threshold has been adopted by the Section II of the Consultative Committee for Ionizing Radiation <<mic2003>>.
+
+Approaches have been used in key comparison data evaluation <<cox2005>>, <<nie2002>> for determining a consistent subset based on a successive exclusion strategy. Such a strategy involves excluding one by one those measurement results judged to be discrepant until a consistent subset is obtained. For the present problem, a variant of that procedure is used:
+
+. [[st7-3-1]] Set the current subset stem:[ii(bb I)_(ii(bb D))] to the set of indices relating to the vector stem:[ii(bb D)] of equivalent activity measurement quantities for the radionuclides and laboratories of concern;
+. [[st7-3-2]] Fit the model to the data identified by stem:[ii(bb I)_(ii(bb D))];
+. Carry out the consistency test described in <<choice_of_models>> for this data;
+. Finish if the test is satisfied, accepting stem:[ii(bb I)_(ii(bb D))] as identifying a subset of consistent data and the corresponding stem:[ii(bb B)^(**)] as estimates of the parameters of the efficiency curves;
+. [[st7-3-5]] Identify the most discrepant components of stem:[hat(ii(bb D))] in the subset, namely those for which the magnitude of the normalized deviation exceeds four;
+. Exclude these measurement components from further consideration: remove the index of these results from stem:[ii(bb I)_(ii(bb D))];
+. Return to <<st7-3-2>>.
+
+Normally, this procedure is cycled once or twice. In the software implementation SIRIC (<<summary>>), the user has the option to perform just one cycle, in which case a computed chi-squared value for the whole data set is provided, together with a list of discrepant components of stem:[hat(ii(bb D))]. This option corresponds to steps <<st7-3-1>>–<<st7-3-5>> (executed once).
+
+[[uncertainty_check]]
+=== Uncertainty check by Monte Carlo calculation
+
+Arguably the simplest form of validation of the uncertainties provided by direct evaluation is the use of the propagation of distributions, implemented using a Monte Carlo method (MCM). To apply MCM, first a joint probability density function (PDF) is assigned to the input quantity stem:[ii(bb N)]. Invoking the maximum entropy principle implies that a Gaussian PDF should be so assigned. This Gaussian PDF has vector expectation stem:[hat(ii(bb N))] and covariance matrix stem:[ii(bb V)_(hat (ii(bb N)))]. Also, on a similar basis, assign PDFs to the vector quantities stem:[ii(bb R)] of relative radioactive impurities and stem:[ii(bb D)] of the decay-corrected measurement quantities.
+
+The Monte Carlo calculation consists of a large number stem:[ii(N)_"MC"] of trials. Each trial comprises the determination of a realization of the vector quantity stem:[ii(bb B)] given a realization of the vector values of stem:[ii(bb N)], stem:[ii(bb R)] and stem:[ii(bb D)]. Each realization of the vector quantities stem:[ii(bb N)], stem:[ii(bb R)] and stem:[ii(bb D)] is given by sampling randomly from the above joint PDFs. The stem:[ii(N)_"MC"] realizations of the vector value of stem:[ii(bb B)] are assembled into an stem:[(n + n_beta) xx N_"MC"] matrix. Let stem:[ii(bb B)_"MC"] denote this matrix after correcting each row by its arithmetic mean. Then, stem:[ii(bb B)_"MC"(ii(bb B)_"MC")^TT] provides an approximation to stem:[ii(bb V)_(hat(ii(bb B)))], which is compared with stem:[ii(bb V)_(hat(ii(bb B)))] as provided.
+
+If the comparison is favourable, it may reasonably be concluded that the software implementation is sound. There may be two reasons for an unfavourable comparison. One, the software implementation is inadequate. Two, the extent of the non-linearity of the model is such that the above approximation to stem:[ii(bb V)_(hat(ii(bb B)))] is better than stem:[ii(bb V)_(hat(ii(bb B)))] itself because of the non-linearity of the model. (The law of propagation of uncertainty is based on a linear approximation.) See <<conclusions>>.
+
+=== Adequacy of quadrature rule
+
+Consider the use of a quadrature rule for carrying out the integrations required when evaluating stem:[(ii(A)_"e")_i^"model" (ii(bb B),ii(bb N))] for any particular values of stem:[ii(bb B))] in <<eq11>>. The results of the overall computation can subsequently be confirmed, or re-determined, as appropriate, using a rule with a larger number of quadrature rule nodes. The extent of the agreement that should be sought would be a numerical precision that is at least an order of magnitude smaller than the uncertainties associated with the corresponding results.
+
+The manner in which the integrals in <<eq11>> are evaluated numerically would ideally take into account the nature of the integrands and how the energy distribution functions stem:[ii(S)_(i,j)(ii(W))] are specified. However, to avoid the potential difficulties footnote:[Difficulties arise because an adaptive quadrature rule induces discontinuities in the function that can adversely affect the behaviour of the optimization algorithm used to determine the model parameters. Each evaluation of the function would be influenced by the numerical precision, stem:[delta_q], say, prescribed for the quadrature scheme. Each function value will be accurate to within a quantity depending on stem:[delta_q], and thus not be smooth, with a deleterious effect on convergence (the convergence proofs for the method would no longer apply), and even introduce spurious local minima in the neighbourhood of the required global solution.] associated with the choice of an adaptive quadrature rule, a fixed-point rule, e.g. the trapezoidal rule, with a large number of nodes, could be used.
+
+== Determination of the required quantities and the associated uncertainty evaluation
+
+The primary quantities of interest are
+
+* parameters of the photon and electron efficiency curves,
+* corrected measured equivalent activities, and
+* modelled equivalent activities.
+
+This section provides the method used to obtain the estimates and associated standard uncertainties of these quantities. All this information can be obtained once parameter vector stem:[ii(bb B)] of the efficiency curves has been estimated and the associated uncertainty matrix evaluated.
+
+=== Parameters of the photon and electron efficiency curves
+
+The solution provided by the generalized non-linear least-squares algorithm constitutes an estimate stem:[ii(bb B)^(**)] of the efficiency curve parameter vector stem:[ii(bb B)]. This estimate can be used to obtain estimates of quantities that depend on stem:[ii(bb B)] such as the modelled equivalent activities (<<modelled_act>>).
+
+The generalized non-linear least-squares algorithm provides the contribution from the uncertainty matrix stem:[ii(bb V)_(ii(bb D))] associated with stem:[hat(ii(bb D))], to the uncertainty matrix stem:[ii(bb V)_(ii(bb B)^(**))] associated with stem:[ii(bb B)^(**)].
+
+<<uncertainties>> describes the manner in which the contributions from the uncertainty matrices stem:[ii(bb V)_(hat (ii(bb N)))] and stem:[ii(bb V)_(hat(ii(bb R)))] associated with stem:[hat(ii(bb N))] and stem:[hat(ii(bb R))] can also be taken into account following the determination of the least-squares solution.
+
+[[corr_activity]]
+=== Corrected measured equivalent activity
+
+<<eq21>> is used for each radionuclide considered and each laboratory concerned to provide corrected measured equivalent activities based on the laboratory and SIR measured values and the modelled correction factor. The estimate provided by <<eq21>> based on measurement and modelled correction factors for radionuclide stem:[i] and laboratory stem:[cc(l)] is
+
+[[eq30]]
+[stem]
+++++
+(hat(ii(A))_"e")_(i,cc(l))^"meas" = hat(ii(D))_(i,cc(l)) ii(C)_(i,cc(l)) (ii(bb B^**), hat(ii(bb N)), hat(ii(bb R))).
+++++
+
+The application of the law of propagation of uncertainty to <<eq21>> yields the standard uncertainty stem:[u((hat(ii(A))_"e")_(i,cc(l))^"meas")] given by
+
+[[eq31]]
+[stem]
+++++
+u^2((hat(ii(A))_"e")_(i,cc(l))^"meas") = ii(C)_(i,cc(l))^2(ii(bb B^**),hat(ii(bb N)), hat(ii(bb R))) u^2 (hat(ii(D))_(i,cc(l))) + hat(ii(D))_(i,cc(l))^2 [((del ii(C)_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R)))/(del ii(bb Z)))^TT ii(bb V)_(ii(bb Z^**)) (del ii(C)_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R)))/(del ii(bb Z))] |_(ii(bb Z) = ii(bb Z^**))
+++++
+
+where here
+
+[stem%unnumbered]
+++++
+ii(bb Z) = (ii(bb B)^TT, ii(bb N)^TT, ii(bb R)^TT)^TT,
+++++
+
+[stem%unnumbered]
+++++
+ii(bb Z^**) = ((ii(bb B^**))^TT,hat(ii(bb N))^TT, hat(ii(bb R))^TT)^TT.
+++++
+
+The partial derivatives required in <<eq31>> are given in <<appendixB-2-1>>.
+
+[[modelled_act]]
+=== Modelled equivalent activity
+
+Estimates of modelled equivalent activities are provided by <<eq8>>. For radionuclide stem:[i],
+
+[[eq32]]
+[stem]
+++++
+(hat(ii(A))_"e")_i^"model" = (ii(A)_"e")_i^"model" (ii(bb B^**),hat(ii(bb N))).
+++++
+
+The application of the law of propagation of uncertainty to <<eq8>> yields the standard
+uncertainty stem:[u((hat(ii(A))_"e")_i^"model")] given by
+
+[[eq33]]
+[stem]
+++++
+u((hat(ii(A))_"e")_i^"model") = [((del(ii(A)_"e")_i^"model"(ii(bb B),ii(bb N)))/(del ii(bb Z)))^TT ii(bb V)_(ii(bb Z^**)) ((del (ii(A)_"e")_i^"model"(ii(bb B),ii(bb N)))/(del ii(bb Z)))] |_(ii(bb Z) = ii(bb Z^**)),
+++++
+
+where here
+
+[stem%unnumbered]
+++++
+ii(bb Z) = (ii(bb B)^TT, ii(bb N)^TT)^TT,
+++++
+
+[stem%unnumbered]
+++++
+ii(bb Z^**) = ((ii(bb B^**))^TT, hat(ii(bb N))^TT)^TT.
+++++
+
+The partial derivatives required in <<eq33>> are given in <<appendixB-2-2>> and <<appendixB-2-3>>.
+
+[[summary]]
+== Summary of computational procedure
+
+This section describes the computational procedure, relating its elements to the various sections and formulations in this work. This procedure has been implemented as software known as SIRIC <<mic2006>>, using the Fortran 95 language and the NAG Library(http://www.nag.co.uk/). There are some differences between this implementation and the described approach, as indicated in <<conclusions>>.
+
+Overall, the procedure constitutes the steps:
+
+. Data input;
+. Efficiency curve generation;
+. Uncertainty evaluation for the efficiency curve parameters;
+. Model-data consistency testing and data exclusion;
+. Efficiency curve interpolation and associated uncertainty evaluation;
+. Results output.
+
+The first five of these steps are subdivided into action points as follows.
+
+*Data input*
+
+. Read the control data corresponding to items such as the names of the data files holding the activity measurement data and the nuclear reference data, and also the maximum orders of polynomial to be used in the model.
+. Read nuclear reference data constituting stem:[{ii(E)_(i,j) : j in ii(J)_i}], stem:[{ii(P)_(i,j) : j in ii(J)_i}], stem:[{ii(W)_(i,j) : j in ""_beta ii(J)_i}] and stem:[{""_beta ii(P)_(i,j) : j in ""_beta ii(J)_i}], for all relevant radionclides stem:[i], the associated standard uncertainties, and other relevant items (<<eq_act_meas_data>>).
+. Read measurement data constituting the decay-corrected measurement data stem:[ii(D)_(i,cc(l))] corresponding to the activity measurement data stem:[ii(A)_(i,cc(l))] provided by the laboratories multiplied by the SIR measurement value stem:[ii(M)_(i,cc(l))], and the associated standard uncertainties stem:[u(ii(D)_(i,cc(l)))] (<<eq_act_meas_data>>). Also read the impurity activities and their associated standard uncertainties and the relevant radionuclide and impurity names.
+. Read key comparison reference data, namely, the KCRVs for the radionuclides of concern and their associated uncertainties (<<key_comparison>>). Also read the mixing ratios stem:[ii(theta)_i] (<<accounting>>), usually equal to zero or one.
+. Read initial efficiency values stem:[(ii(E)_s, epsilon_s)] needed to start the non-linear least-squares minimization. See <<init_approx_to_the_model_params>>.
+. Perform other operations including the determination of atomic number and mass for the relevant radionuclides, which are needed for the evaluation of the shapes of the beta spectra stem:[ii(S)_(i,j)].
+
+*Efficiency curve generation*
+
+. Transform the data, namely (a) transform the gamma energies to logarithmic units, (b) transform the electron energies to natural units, and (c) normalize both transformed energies to forms suitable for polynomial approximation based on a Chebyshev representation (<<polynomial_repres>>).
+. Link the nuclear reference data to the decay-corrected measurement data, and the nuclear reference data and the KCRV data to the impurity data for each measurement.
+. Provide initial approximations to the efficiency curve parameters by applying the method of <<init_approx_to_the_model_params>>.
+. Solve a generalized non-linear least-squares problem to provide estimates of the efficiency curve parameters (<<use_of_nlls_solver>>), using the initial approximations as a starting point.
+
+*Uncertainty evaluation for the efficiency curve parameters*
+
+. Evaluate, at the solution of the generalized non-linear least-squares problem, the Jacobian matrices associated with the model equations for each of the input quantities having an associated uncertainty (<<appendixB>>).
+. Propagate the uncertainty matrices associated with the relative activity impurities and the nuclear reference data, using the evaluated Jacobian matrices, through the generalized non-linear least-squares model to provide the uncertainty matrix associated with the efficiency curve parameters (<<uncertainties>>). This propagation, together with the action above, constitutes an implementation of the partial formulation (<<partial_formulation>>).
+
+*Model-data consistency and determination of a consistent data subset*
+
+. Test for consistency of the fitted model and the data (<<choice_of_models>>).
+. Determine a consistent subset of the data by employing a data exclusion strategy (<<determining_subset>>).
+
+*Efficiency curve interpolation and associated uncertainty evaluation*
+
+. Produce the efficiency curves defined by the parameter estimates stem:[ii(bb B)^(**)] (<<physically_possible_models>>).
+. Determine the modelled equivalent activity corresponding to each radionuclide and evaluate the associated standard uncertainty (<<modelled_act>>).
+. Determine the measured equivalent activity corrected for impurities corresponding to each data value and evaluate the associated standard uncertainty (<<corr_activity>>).
+
+== Results
+
+=== Application of the procedure to the SIR
+
+The SIRIC software, which applies the procedure described in this monograph, was used to produce the efficiency curves of the SIR. About 275 input stem:[ii(A)_"e"^"meas"] values covering 40 different radionuclides, including four pure beta emitters, were used. Radionuclides for which fewer than two SIR results based on primary standardizations are available were excluded from the minimization, but were used to test the predictive capabilities of SIRIC. The radionuclides ^65^Zn, ^67^Ga, ^99^Mo, ^153^Gd, ^169^Yb, ^177^Lu and ^201^Tl were excluded because either the SIR values or the nuclear data were not considered sufficiently robust. On the other hand, the ^125^I SIR results are essential to constrain the photon efficiency curve at low energy, even though these results were not considered sufficiently reliable to establish the ^125^I KCRV. Similarly, the ^124^Sb SIR data are used in the minimization to constrain better the high energy part of the photon curve, despite these data exhibiting discrepancies that are perhaps related to the different standardization methods. As the ionization chamber response is not expected to be the same for gases and stem:[beta^+] emitters, those radionuclides were also excluded, except ^56^Co that is needed to constrain the photon efficiency curve at high energy.
+
+The nuclear data used were taken from the first two volumes of Monographie BIPM-5 <<be2004>>, the Decay Data Evaluation Project 2004 database <<cea2004>> and, when not otherwise available, from the 2004 Evaluated Nuclear Structure Data File <<nat2004>>. In order to speed up the execution of the software, a 20 keV cut-off for photon energy, a 10^−5^ cut-off for photon intensities and 10^−3^ cut-off for beta emission probabilities were applied. Indeed, these choices of cut-off values enable a saving of time that would otherwise be spent in handling radiations that would anyway have a negligible effect on the results.
+
+The chosen cut-off values should be optimized for each type of ionization chamber. In the case of the SIR, the cut-off should not be higher than 20 keV in order to include the ^109^Cd x-rays. A run of SIRIC with one preliminary cycle to exclude discrepant data (see <<determining_subset>>) takes about two hours with a Pentium 4 (2 GHz) processor, most of this time being dedicated to the uncertainty calculation related to the nuclear data due to the volume of data involved.
+
+As indicated in <<init_approx_to_the_model_params>>, initial efficiency values are needed to start the least-squares minimization. The values used for the photon efficiency curve of the SIR are given in <<table1>> and are based on quasi-monoenergetic photon emitters. Indeed, for such radionuclides, the efficiency value stem:[epsilon_s] at energy stem:[ii(E)_s] can easily be calculated from stem:[epsilon_s = 1//((ii(A)_"e")_i^"meas" ii(P)_s)], with stem:[ii(E)_s = ii(E)_(i,j)] and stem:[ii(P)_s = ii(P)_(i,j)]. For a radionuclide such as ^60^Co, emitting only two photons with close energies stem:[ii(E)_1] and stem:[ii(E)_2] and intensities stem:[ii(P)_1] and stem:[ii(P)_2],
+
+[stem%unnumbered]
+++++
+ii(E)_s = (ii(E)_1ii(P)_1 + ii(E)_2ii(P)_2)/(ii(P)_1 + ii(P)_2)
+++++
+
+and
+
+[stem%unnumbered]
+++++
+ii(P)_s = ii(P)_1 + ii(P)_2.
+++++
+
+[[table1]]
+[cols="^,>,^"]
+.Initial values used for the photon efficiency curve.
+|===
+| Radionuclide ^| stem:[ii(E)_s // rm(keV)] | stem:[epsilon_s]
+| — | 30.0 | stem:[1.00 xx 10^(−8)]
+| ^241^Am | 59.5 | stem:[1.35 xx 10^(−6)]
+| ^109^Cd | 88.0 | stem:[3.39 xx 10^(−6)]
+| ^57^Co | 123.7 | stem:[6.16 xx 10^(−6)]
+| ^99^Tc^m^ | 140.5 | stem:[7.34 xx 10^(−6)]
+| ^47^Sc | 159.4 | stem:[8.95 xx 10^(−6)]
+| ^111^In | 209.0 | stem:[1.26 xx 10^(−5)]
+| ^51^Cr | 320.1 | stem:[2.08 xx 10^(−5)]
+| ^85^Sr | 514.0 | stem:[3.40 xx 10^(−5)]
+| ^137^Cs | 661.7 | stem:[4.27 xx 10^(−5)]
+| ^95^Nb | 765.8 | stem:[4.84 xx 10^(−5)]
+| ^54^Mn | 834.8 | stem:[5.20 xx 10^(−5)]
+| ^46^Sc | 1 004.9 | stem:[6.01 xx 10^(−5)]
+| ^60^Co | 1 252.9 | stem:[7.09 xx 10^(−5)]
+| ^88^Y | 1 380.0 | stem:[7.50 xx 10^(−5)]
+| ^24^Na | 2 061.3 | stem:[1.01 xx 10^(−4)]
+|===
+
+For the electron efficiency curve, the initial values were taken from the curve obtained by the iterative method <<mic2002>>. Although in the iterative method, beta spectra were replaced by delta functions at the mean beta energy, the resulting efficiency values were found satisfactory as initial values for SIRIC.
+
+The choice of orders for the ‘photon polynomial’ and the ‘electron polynomial’ in the model was based on the chi-squared ratio
+
+[stem%unnumbered]
+++++
+(ii(chi)_"obs"^2)/(ii(chi)_"crit"^2),
+++++
+
+where stem:[ii(chi)_"obs"^2] is the observed chi-squared value and stem:[ii(chi)_"crit"^2] is the critical value of the chi-squared distribution for the appropriate degrees of freedom stem:[ii(nu)] (<<choice_of_models>>). Relevant results for appropriate polynomial orders that led to the orders selected are shown in <<table2>>. The different values for the degrees of freedom stem:[ii(nu)] are due to different numbers of measurement results excluded at the end of the first cycle of SIRIC (<<determining_subset>>).
+
+[[table2]]
+[cols="^,^,^,^,^"]
+.Chi-squared values, chi-squared ratios and degrees of freedom for relevant orders stem:[n] and stem:[n_beta], respectively, of the ‘photon polynomial’ and the ‘electron polynomial’ in the model.
+|===
+| Polynomial orders | | stem:[n_beta = 4] | stem:[n_beta = 5] | stem:[n_beta = 6]
+.4+| stem:[n = 8] | stem:[ii(chi)_"obs"^2] | 400 | 399 | 383
+| stem:[ii(nu)] | 234 | 234 | 233
+| stem:[ii(chi)_"crit"^2] | 323 | 323 | 322
+| stem:[ii(chi)^2] ratio | 1.24 | 1.24 | 1.19
+.4+| stem:[n = 9] | stem:[ii(chi)_"obs"^2] | 366 | 367 | 350
+| stem:[ii(nu)] | 234 | 234 | 230
+| stem:[ii(chi)_"crit"^2] | 323 | 323 | 318
+| stem:[ii(chi)^2] ratio | 1.13 | 1.14 | 1.10
+.4+| stem:[n = 10] | stem:[ii(chi)_"obs"^2] | 366 | 367 | 350
+| stem:[ii(nu)] | 233 | 233 | 229
+| stem:[ii(chi)_"crit"^2] | 322 | 322 | 317
+| stem:[ii(chi)^2] ratio | 1.14 | 1.14 | 1.10
+|===
+
+The cases stem:[n_beta = 6] with stem:[n = 9] and stem:[10] were excluded from further consideration because the corresponding electron efficiency curves diverge at high energy. Since order 10 for the photon polynomial does not improve the chi-squared ratio, stem:[n = 9] is selected. For the electron polynomial, stem:[n_beta = 5] is preferred to stem:[n_beta = 4] since the corresponding fifth-order electron efficiency curve displays a behaviour closer to preliminary Monte Carlo simulation results <<mic2006>>.
+
+The values of the parameter vector stem:[ii(bb B)^(**)] obtained with stem:[n = 9] and stem:[n_beta = 5] are listed in <<table3>>. The uncertainty values given are the square root of the diagonal elements of the uncertainty matrix stem:[ii(V)_ii(B)^(**)]. The corresponding photon efficiency curve stem:[ii(F)((ii(bb B)^((1)))^**,ii(E))] and electron efficiency curve stem:[ii(G)((ii(bb B)^((2)))^**,ii(W))] (cf. <<physically_possible_models>>) are shown in <<fig1>> and <<fig3>>. The energy ranges covered are [20 keV, 3 866.14 keV] and [1, 7.93] for the photon energy stem:[ii(E)] and the reduced total electron energy stem:[ii(W)] respectively.
+
+[[table3]]
+.Values and uncertainties of the efficiency curve parameters stem:[(ii(B)_h^((1)))^**] and stem:[(ii(B)_h^((2)))^**] obtained with stem:[n = 9] and stem:[n_beta = 5].
+|===
+| 2+a| Photon efficiency curve 2+a| Electron efficiency curve
+| stem:[h] | stem:[(ii(B)_h^((1)))^**] | stem:[u((ii(B)_h^((1)))^**)] | stem:[(ii(B)_h^((2)))^**] | stem:[u((ii(B)_h^((2)))^**)] 
+| 1 | −37.84 | 0.05 | −30.2 | 0.3
+| 2 | 3.91 | 0.04 | 4.76 | 0.18
+| 3 | −3.33 | 0.05 | −0.6 | 0.2
+| 4 | 2.07 | 0.04 | 0.61 | 0.10
+| 5 | −1.28 | 0.04 | −0.62 | 0.09
+| 6 | 0.71 | 0.02 | |
+| 7 | −0.35 | 0.02 | |
+| 8 | 0.128 | 0.009 | |
+| 9 | −0.049 | 0.006 | |
+|===
+
+[[fig1]]
+.SIR photon efficiency curve.
+image::img01.png[]
+
+It should be noted that these results were obtained after data exclusion carried out automatically by SIRIC following procedure <<determining_subset>>. At the end of the first cycle, the observed chi-squared value was 502 with stem:[ii(nu) = 240] and SIRIC identified 6 SIR results to be excluded (one result for each of the following radionuclides: ^111^In, ^124^Sb, ^134^Cs, ^137^Cs, ^106^Ru, ^204^Tl).
+
+The photon efficiency function obtained, scaled by stem:[6 xx 10^(−8)ii(E)], that is stem:[ii(F)((ii(bb B)^((1)))^**,ii(E))//6 xx 10^(−8)ii(E)], is shown in <<fig2>> (upper) (cf. <<physically_possible_models>>). The relative standard uncertainty associated with the curve is shown with the ordinate on the right-hand side.
+
+[[fig2]]
+.SIR photon efficiency curve: comparison of the curve obtained applying the present procedure (SIRIC software) with the curve published in 2002 based on the iterative method <<mic2002>>.
+image::img02.png[]
+
+<<fig2>> (upper) also shows, for comparison, the curve obtained by the iterative method (<<intro>>) <<mic2002>>. <<fig2>> (lower) shows the ratio of both curves and their combined standard uncertainty. Both curves agree within one standard uncertainty except at high energy, where the SIRIC curve seems to display inappropriate behaviour due to the lack of data to constrain the minimization at high energy. It should be noted that the SIRIC curve behaves satisfactorily at low energy, as opposed to the 2002 curve that was negative below 30 keV.
+
+[[fig3]]
+.SIR electron efficiency curve.
+image::img03.png[]
+
+The electron efficiency curve (<<fig3>>) displays a slight decrease at high-energies that is nonphysical. This decrease could be related to the approximate beta spectrum shapes used for non-unique transitions (see <<scope_for_further_work>> and reference <<mic2006>>).
+
+<<fig4>> compares modelled equivalent activity values and measurement results. The reasons for discrepancies between modelled and measured equivalent activities can be problems in the SIR results, in the nuclear data or in the modelled efficiency curves. The larger spread observed in <<fig4>> for strong beta emitters (open squares) is related to the lack of SIR data for pure beta emitters, and consequently, the large uncertainty associated with values of the modelled electron efficiency curve. The results for all other radionuclides used in the minimization are in agreement within one or two standard uncertainties.
+
+It is interesting to note that the modelled equivalent activities for ^103^Ru, ^85^Sr, ^134^Cs, ^137^Cs and ^95^Nb, which all emit photons mainly between 490 keV and 770 keV, seem to be slightly overestimated. This systematic behaviour, which was already present in <<mic2002>>, is difficult to understand.
+
+<<fig4>> also shows that SIRIC does not reproduce the SIR results for strong stem:[beta^+] emitters, as expected, due to the extended source effect. Discrepancies observed between the predictions of SIRIC and the measured equivalent activities are discussed below (see also reference <<mic2006>>):
+
+. For ^56^Mn, ^140^Ba and ^243^Am the problem may come from the measurement results or the nuclear decay data. As there is only a single SIR result for each of these radionuclides, it is difficult to draw a conclusion;
+. The discrepancy observed for ^65^Zn is due to the nuclear data. Indeed a new SIRIC prediction based on a more recent evaluation of ^65^Zn decay data <<be2006>> is in perfect agreement with the SIR measurement results (circle in <<fig4>>);
+. The discrepancy for ^153^Gd is probably due to the nuclear data. This view is supported by the fact that for ^153^Sm, which presents a similar photon emission, no discrepancy is observed. The efficiency curve therefore provides motivation to investigate the decay data of that radionuclide;
+. For ^177^Lu the two SIR results available do not agree with each other. The SIRIC prediction is in excellent agreement with one of those results;
+. The case of ^201^Tl is complex and discussed in reference <<mic2006>>.
+
+[[fig4]]
+.Comparison of modelled equivalent activity values and measurement results (the KCRV when available). Each bar represents stem:[pm 1] standard uncertainty associated with the indicated value at the centre of the bar. Radionuclides used as input to the minimization process are indicated by squares, with (a) open squares denoting pure stem:[beta] emitters or radionuclides with a contribution of the beta emission to the ionization current larger than 15 %, and (b) solid squares denoting the remainder (the bulk) of the radionuclides used as input. Predictions of the SIRIC program for other radionuclides are indicated by asterisks or triangles for strong stem:[beta^+] emitters. The circle indicates a second prediction for ^65^Zn using a recent re-evaluation of its decay-scheme parameters.
+image::img04.png[]
+
+[[app_to_oth_ionitation_chambers]]
+=== Application of the procedure to other ionization chambers
+
+The SIRIC software has also been applied successfully to an ionization chamber similar to that of the SIR, but filled with argon rather than nitrogen. Although the shape of the photon efficiency curve was very different, particularly at low energy, SIRIC succeeded in reproducing the measurement data using a polynomial of order 8 (<<mic2006>>, and paper in preparation).
+
+This further application demonstrates the flexibility of the software, which is related to the fact that any ionization chamber is expected to show a linear dependence at high photon energy so that the SIRIC model for photon efficiency curve should be appropriate. Nevertheless, tests of SIRIC for various types of ionization chambers would be welcomed. It cannot be excluded that in some cases a different model could enable an adjustment to the data to be made using fewer parameters.
+
+Finally, it has been shown in the literature <<vis2003>> that ionization chambers with thin outer walls and surrounded by lead shielding may show a discontinuity in the photon efficiency curve at the level of the Pb x-rays K-edge energy. In such a case, the model in SIRIC should be modified but this would have no fundamental consequence on the formulation of the problem to be solved and thus on the procedure applied to find the solution.
+
+[[conclusions]]
+== Conclusions
+
+=== Problem formulation
+
+The problem of modelling the photon and electron efficiency curves of an ionization chamber, as part of the SIR (International Reference System for activity measurements of stem:[gamma]-ray emitting radionuclides), has historically been solved using an iterative approach. The approach is iterative in order to deal with the multi-photon emitters. The iteration also relates to adjusting the measured equivalent activities to account for impurities, so that a match can be made with a model depending on the parameters of the efficiency curves by, in turn, adjusting these parameters. In this work, the measured data are not adjusted, but the model itself incorporates the reciprocal of the adjustment. The efficiency curves are expressed empirically, since no physical forms are available. However, they are represented in a way that ensures that whatever the values of the adjustable parameters defining them may be, they remain physically possible (positive and tending to zero at low energy).
+
+=== Problem solution
+
+The nature of the formulation means that the efficiency curve parameters can be estimated using a conventional mathematical algorithm for generalized non-linear least-squares minimization, and, moreover, the uncertainty matrix associated with these estimates can be evaluated. However, treating the full formulation of the problem would be computationally prohibitive, since it involves solving not only for the efficiency curve parameters but also for improved estimates of the nuclear data and other quantities. Therefore, a partial formulation is used that can be expected to provide good estimates of the efficiency curve parameters. It is, however, only directly capable of providing estimates of the efficiency curve parameters, and the associated uncertainties that are a consequence of the uncertainties associated with SIR equivalent activity data. Therefore, the law of propagation is applied to the measurement model defined by the generalized non-linear least-squares minimization to obtain the contributions from the uncertainties associated with the nuclear data and other input quantities.
+
+[[scope_for_further_work]]
+=== Scope for further work
+
+The account here does not describe the propagation of the uncertainties associated with the elements of stem:[hat(ii(bb K))] as their influence is small compared with those of stem:[hat(ii(bb D))], stem:[hat(ii(bb N))] and stem:[hat(ii(bb R))]. However, SIRIC actually carries out this propagation although the analysis is not included here.
+
+The emission probabilities stem:[ii(P)_(i,j)] for a given radionuclide stem:[i] are regarded here as independent. However, SIRIC takes account of the correlation associated with the normalization factor when  emission probabilities are expressed in relative terms ( stem:[ii(P)_(i,j) = eta_i ii(I)_(i,j)] ). The real situation is considerably more complicated and in general there will be other appreciable unquantified correlations present. Should information on these correlations be published, the model could be refined to take account of this new data.
+
+It would also be appropriate to consider further correlations that are expected to be present in some cases. Although there is negligible correlation associated with the elements of stem:[hat(ii(bb D))] for the SIR, correlation effects could be appreciable for a NMI where all primary measured values are obtained using the same method, the same balance, etc. A similar comment applies to correlations associated with the elements of stem:[hat(ii(bb D))] and stem:[hat(ii(bb N))], an individual correlation being associated with an element of stem:[hat(ii(bb D))] and an element of stem:[hat(ii(bb N))]; indeed, an NMI could use nuclear data that it itself measured using the same primary measured values as those included in stem:[hat(ii(bb D))].
+
+In some cases the use of the beta energy distribution functions (<<nuclear_ref_data>>) provided in tabular form may be preferred. In these cases, either the tabular data can be represented by a suitable mathematical function or an appropriate quadrature rule applied to carry out the integration numerically <<cox2007>> required in evaluating the <<eq11>> in <<physically_possible_models>>.
+
+The formulae in appendix B for certain derivatives are implemented using (central) finite-difference formulae. Since this aspect accounts for almost all the computer time required to run the software, replacement of the finite-difference formulae by analytical expressions would give an appreciable improvement in this regard. This aspect would be a useful future development.
+
+The uncertainty calculation described here is complicated, involving applying a generalization of the law of propagation of uncertainty to a vector measurand defined by a generalized non-linear least-squares solution. An implementation of the uncertainty check by Monte Carlo calculation (<<uncertainty_check>>) would be valuable in validating this aspect of the work.
+
+[bibliography]
+== References
+
+* [[[aud2003,1]]], G. Audi and et al. The NUBASE evaluation of nuclear and decay properties. _Nucl. Phys._, A729:3–128, 2003.
+
+* [[[bar2004,2]]], R. M. Barker, M. G. Cox, A. B. Forbes, and P. M. Harris. SS__f__M Best Practice Guide No. 4. Discrete modelling and experimental data analysis. Technical report, National Physical Laboratory, Teddington, UK, 2004.
+
+* [[[be2006,3]]], M.-M. Bé. Activity measurements and determination of gamma-ray emission intensities in the decay of ^65^Zn. _Appl. Radiat. Isot._, 64:1396–1402, 2006.
+
+* [[[be2004,4]]], M.-M. Bé et al. Table of radionuclides. Monographie BIPM-5, Bureau International des Poids et Mesures, Pavillon de Breteuil, F-92312 Sèvres Cedex, France, 2004. http://www.bipm.org/fr/publications/monographies-ri.html.
+
+* [[[beh1969,5]]], H. Behrens and J. Jänecke. _Landolt-Börnstein Tables, Gruppe I, Band 4_. Springer, Berlin, 1969.
+
+* [[[bipm-key,6]]], BIPM. BIPM Key Comparison Database. www.bipm.org/kcdb.
+
+* [[[bipm-mut,7]]], BIPM. Mutual recognition of national measurement standards and of calibration and measurement certificates issued by national metrology institutes. International Committee for Weights and Measure, 45 pp., 14 October 1999. Available from the BIPM website: http://www.bipm.org/pdf/mra.pdf.
+
+* [[[bipm-eva,8]]], BIPM, IEC, IFCC, ILAC, ISO, IUPAC, IUPAP, and OIML. Evaluation of measurement data — Supplement 1 to the “Guide to the expression of uncertainty in measurement” — Propagation of distributions using a Monte Carlo method. Joint Committee for Guides in Metrology, Bureau International des Poids et Mesures, JCGM 101, to appear.
+
+* [[[bipm-gui,9]]], BIPM, IEC, IFCC, ISO, IUPAC, IUPAP, and OIML. Guide to the expression of uncertainty in measurement. International Organisation for Standardisation, Geneva, Switzerland, 1995. ISBN 92-67-10188-9. Corrected and reprinted.
+
+* [[[cox1981,10]]], M. G. Cox. The least squares solution of overdetermined linear equations having band or augmented band structure. _IMA J. Numer. Anal._, 1:3–22, 1981.
+
+* [[[cox1986,11]]], M. G. Cox. Piecewise Chebyshev series. _Bull. Inst. Math. Appl._, 22:163–166, 1986.
+
+* [[[cox1987,12]]], M. G. Cox. The NPL Data Approximation Subroutine Library: current and planned facilities. _NAG Newsletter_, 2/87:3–16, 1987.
+
+* [[[cox1994,13]]], M. G. Cox. Survey of numerical methods and metrology applications: discrete processes. In P. Ciarlini, M. G. Cox, R. Monaco, and F. Pavese, editors, _Advanced Mathematical Tools in Metrology_, pages 1–21, Singapore, 1994. World Scientific.
+
+* [[[cox1996,14]]], M. G. Cox. Constructing and solving mathematical models of measurement. In P. Ciarlini, M. G. Cox, F. Pavese, and D. Richter, editors, _Advanced Mathematical Tools in Metrology II_, pages 7–21, Singapore, 1996. World Scientific.
+
+* [[[cox2002,15]]], M. G. Cox. The evaluation of key comparison data. _Metrologia_, 39:589–595, 2002.
+
+* [[[cox2007,16]]], M. G. Cox. The area under a curve specified by measured values. _Metrologia_, 44:365–378, 2007.
+
+* [[[cox2004,17]]], M. G. Cox and P. M. Harris. Software specifications for uncertainty evaluation. Technical Report CMSC 40/04, National Physical Laboratory, Teddington, UK, 2004.
+
+* [[[cox2004-2,18]]], M. G. Cox and P. M. Harris. SS__f__M Best Practice Guide No. 6, Uncertainty evaluation. Technical report, National Physical Laboratory, Teddington, UK, 2004.
+
+* [[[cox2006,19]]], M. G. Cox and P. M. Harris. SS__f__M Best Practice Guide No. 6, Uncertainty evaluation. Technical Report DEM-ES-011, National Physical Laboratory, Teddington, UK, 2006.
+
+* [[[cox2003,20]]], M. G. Cox, P. M. Harris, P. D. Kenward, and Emma Woolliams. Spectral characteristic modelling. Technical Report CMSC 27/03, National Physical Laboratory, Teddington, UK, 2003.
+
+* [[[cox2005,21]]], M. G. Cox, P. M. Harris, and Emma R. Woolliams. Data evaluation of key comparisons involving linked bilateral measurements and multiple artefacts. In _NCSL International Workshop and Symposium_, Washington, USA, 2005.
+
+* [[[vis2003,22]]], A. de Vismes and M.-N. Amiot. Towards absolute activity measurements by ionisation chambers using the penelope monte-carlo code. _Appl. Radiat. and Isot._, 59:267–272, 2003.
+
+* [[[dry1986,23]]], P. Dryák and L. Dvořák. Measurement of the energy response functions of the ÚVVVR and SIR stem:[4pi gamma] ionization chambers. _Appl. Radiat. Isot._, 37:1071–1073, 1986.
+
+* [[[for1979,24]]], B. Ford, J. Bentley, J. J. du Croz, and S. J. Hague. The NAG Library ‘machine’. _Software – Practice and Experience_, 9:56–72, 1979.
+
+* [[[cea2004,25]]], CEA/LNHB (France), PTB (Germany), INEEL (USA), KRI (Russia), LBNL (USA), NPL (UK), and CIEMAT (Spain). DDEP, Decay Data Evaluation Project, 2004. http://www.nucleide.org/DDEP.htm.
+
+* [[[gil1981,26]]], P. E. Gill, W. Murray, and M. H. Wright. _Practical Optimization_. Academic Press, London, 1981.
+
+* [[[gol1996,27]]], G. H. Golub and C. F. Van Loan. _Matrix Computations_. John Hopkins University Press, Baltimore, MD, USA, 1996. Third edition.
+
+* [[[gra1999,28]]], A. Grau Malonda. Free parameter models in liquid scintillation counting. In _Colección Documentos Ciemat_, Madrid, 1999.
+
+* [[[mar1979,29]]], K. V. Mardia, J. T. Kent, and J. M. Bibby. _Multivariate Analysis_. Academic Press, London, 1979.
+
+* [[[mic2000,30]]], C. Michotte. Influence of radioactive impurities on SIR measurements. _Appl. Radiat. Isot._, 52:319–323, 2000.
+
+* [[[mic2002,31]]], C. Michotte. Efficiency curve of the ionization chamber of the SIR. _Appl. Radiat. Isot._, 56:15–20, 2002.
+
+* [[[mic2006,32]]], C. Michotte, A. K. Pearce, M. G. Cox, and J.-J. Gostely. An approach based on the SIR measurement model for determining ionization chamber efficiency curves, and a study of ^65^Zn and ^201^Tl photon emission intensities. _Appl. Radiat. and Isot._, 64:1147–1155, 2006.
+
+* [[[mic2003,33]]], C. Michotte and G. Ratel. Key comparison results and the determination of the KCRV, CCRI(II)/03-28. Technical report, BIPM, 2003. http://www.bipm.org/cc/CCRI(II)/Allowed/17/CCRI(II)03-28.pdf.
+
+* [[[nie2002,34]]], L. Nielsen. Identification and handling of discrepant measurements in key comparisons. Technical Report DFM-02-R28, Danish Institute of Fundamental Metrology, Denmark, 2002.
+
+* [[[nat2004,35]]], National Nuclear Data Center. ENSDF, Evaluated Nuclear Structure Data File, 2004.
+
+* [[[pea2007,36]]], A. K. Pearce, C. Michotte, and Y. Hino. Ionization chamber efficiency curves. _Metrologia_, 44:S67–S70, 2007.
+
+* [[[rat2004,37]]], G. Ratel and C. Michotte. BIPM comparison BIPM.RI(II)-K1.Yb-169 of activity measurements of the radionuclide ^169^Yb and links for the 1997 regional comparison EUROMET.RI(II)-K2.Yb-169. _Metrologia_, 41:06017, 2004.
+
+* [[[reh1998,38]]], D. F. G. Reher, M. J. Woods, B. R. S. Simpson, and G. Ratel. Portability of the calibration of SIR of BIPM to other ionization chambers for radioactivity measurements. _Appl. Radiat. Isot._, 49:1417–1419, 1998.
+
+* [[[ros1936,39]]], M. E. Rose. _Phys. Rev. Lett._, 49:727–729, 1936.
+
+* [[[ryt1983,40]]], A. Rytz. The international reference system for activity measurements of stem:[gamma]-ray emitting nuclides. _Appl. Radiat. Isot_, 34:1047–1056, 1983.
+
+* [[[sch1997,41]]], H. Schrader. Activity measurements with ionization chambers. Monographie BIPM-4, Bureau International des Poids et Mesures, Pavillon de Breteuil, F-92312 Sèvres Cedex, France, 1997.
+
+* [[[sch2000,42]]], H. Schrader. Calibration and consistency of results of an ionization-chamber secondary standard measuring system for activity. _Appl. Radiat. Isot._, 52:325–334, 2000.
+
+* [[[sch2004,43]]], H. Schrader and A. Švec. Comparison of ionization chamber efficiencies for activity measurements. _Appl. Radiat. Isot._, 60:369–378, 2004.
+
+* [[[sve2002,44]]], A. Švec and H. Schrader. Fitting methods for constructing energy-dependent efficiency curves and their application to ionization chamber measurements. _Appl. Radiat. Isot._, 56:237–243, 2002.
+
+* [[[wil1989,45]]], D. H. Wilkinson. Evaluation of beta-decay. Part I. The traditional phase space factors. _Nucl. Instrum. Methods Phys. Res._, A275:378–386, 1989.
+
+* [[[wil1990,46]]], D. H. Wilkinson. Evaluation of beta-decay. Part II. Finite mass and size effects. _Nucl. Instrum. Methods Phys. Res._, A290:509–515, 1990.
+
+* [[[wil1995,47]]], D. H. Wilkinson. Evaluation of beta-decay. Part V. The Z-independent outer radiative corrections for allowed decay. _Nucl. Instrum. Methods Phys. Res._, A365:497–507, 1995.
+
+* [[[wil1997,48]]], D. H. Wilkinson. Evaluation of beta-decay. Part VI. The Z-dependent outer radiative corrections for allowed decay. _Nucl. Instrum. Methods Phys. Res._, A401:275–280, 1997.
+
+* [[[wil1998,49]]], D. H. Wilkinson. Evaluation of beta-decay. Part VII. The Z-independent outer radiative corrections for unique-forbidden decay. _Nucl. Instrum. Methods Phys. Res._, A406:89–92, 1998.
+
+[[annexA]]
+[appendix,obligation=normative]
+== Glossary
+
+Symbol:: Definition
+
+stem:[ii(A)]:: activity of solution at reference date
+stem:[ii(A)_(i,cc(l))]:: measured value for activity of radionuclide stem:[i] provided by laboratory stem:[cc(l)]
+stem:[ii(hat A)_(i,cc(l))]:: estimate of stem:[ii(A)_(i,cc(l))]
+stem:[ii(A)_"e"]:: generic equivalent activity (i.e. current-, decay- and impurity-corrected) of solution at reference date
+stem:[(ii(A)_"e")_i]:: equivalent activity (i.e. current-, decay- and impurity-corrected) for radionuclide stem:[i]
+stem:[(ii(A)_"e")_i^"cmptd"(ii(bb B),ii(bb N))]:: computed parameter-dependent equivalent activity (i.e. current-, decay- and impurity-corrected) for radionuclide stem:[i] given by stem:[(ii(A)_"e")_i^"cmptd" (ii(bb B),ii(bb N)) = ii(theta)_i(ii(A)_"e")_i^"KCRV" + (1 − ii(theta)_i)(ii(A)_"e")_i^"model" (ii(bb B),ii(bb N))]
+stem:[(ii(A)_"e")_(i,cc(l))^"meas"]:: equivalent activity (i.e. current-, decay- and impurity-corrected) corresponding to measured value stem:[ii(A)_(i,cc(l))]
+stem:[(hat(ii(A))_"e")_(i,cc(l))^"meas"]:: estimate of stem:[(ii(A)_"e")_(i,cc(l))^"meas"] equal to stem:[(ii(A)_"e")_(i,cc(l))^"meas" (ii(bb B)^(**),hat(ii(bb D)), hat(ii(bb N)), hat(ii(bb R)))]
+stem:[(ii(A)_"e")_(i,cc(l))^"meas" (ii(bb B),hat(ii(bb D)), hat(ii(bb N)), hat(ii(bb R)))]:: quantity-dependent equivalent activity corresponding to measured value stem:[ii(A)_(i,cc(l))]
+stem:[(ii(A)_"e")_i^"model" (ii(bb B),ii(bb N))]:: quantity-dependent model value for equivalent activity of radionuclide stem:[i]
+stem:[(hat(ii(A))_"e")_i^"model"]:: estimate of stem:[(ii(A)_"e")_i^"model" (ii(bb B),ii(bb N))] equal to stem:[(ii(A)_"e")_i^"model" (ii(bb B^**),hat(ii(bb N)))]
+stem:[(ii(A)_"e")_i^"KCRV"]:: published KCRV for equivalent activity of radionuclide stem:[i]
+stem:[ii(bb B)]:: column vector stem:[((ii(bb B)^((1)))^TT], stem:[(ii(bb B)^((2)))^TT)^TT] of adjustable parameters
+stem:[ii(bb B)^((1))]:: column vector of adjustable parameters in empirical model for photon efficiency function
+stem:[ii(bb B)^((2))]::  column vector of adjustable parameters in empirical model for electron efficiency function
+stem:[ii(B)_h^((1))]:: element of stem:[ii(bb B)^((1))]
+stem:[ii(B)_h^((2))]:: element of stem:[ii(bb B)^((2))]
+stem:[hat(ii(bb B))]:: prior estimate of stem:[ii(bb B)]
+stem:[ii(bb B)^(**)]:: posterior estimate of stem:[ii(bb B)]
+stem:[(ii(bb B)^((1)))^**]:: posterior estimate of stem:[ii(bb B)^((1))]
+stem:[(ii(bb B)^((2)))^**]:: posterior estimate of stem:[ii(bb B)^((2))]
+stem:[ii(C)]:: generic impurity correction factor
+stem:[ii(C)_(i,cc(l))]:: impurity correction factor for radionuclide stem:[i] and laboratory stem:[cc(l)]
+stem:[hat(ii(C))_(i,cc(l))]:: estimate of stem:[ii(C)_(i,cc(l))]
+stem:[ii(C)_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R))]:: quantity-dependent impurity correction factor for radionuclide stem:[i] and laboratory stem:[cc(l)]
+stem:[c]:: speed of light
+stem:[ii(D)]:: generic current- and decay-corrected measurement quantity, i.e., equivalent activity not corrected for impurities
+stem:[ii(bb D)]:: vector of the stem:[ii(D)_(i,cc(l))] for relevant stem:[i,cc(l)]
+stem:[hat(ii(bb D))]:: estimate of stem:[ii(bb D)]
+stem:[ii(D)_(i,cc(l))]:: value of stem:[ii(D)] for radionuclide stem:[i] and laboratory stem:[cc(l)]
+stem:[hat(ii(D)_(i,cc(l)))]:: estimate of stem:[ii(D)_(i,cc(l))]
+stem:[ii(E)]:: energy of photon
+stem:[ii(E)_(i,j)]:: energy associated with photon stem:[j] for radionuclide stem:[i]
+stem:[ii(E)_"max"]:: right-hand endpoint of photon energy range over which modelling is carried out
+stem:[ii(E)_"min"]:: left-hand endpoint of photon energy range over which modelling is carried out
+stem:[ii(E)_s]:: stem:[s]th initial photon energy value
+stem:[ii(F)_s]:: quotient of ionization currents of radium source numbers 5 and stem:[s]
+stem:[ii(F)(ii(bb B)^((1)),ii(E))]:: empirical model for photon efficiency function
+stem:[f(ii(bb B),ii(bb N),ii(bb R))]:: equivalent activity model vector given by the vector of the stem:[f_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R))] for relevant radionuclides stem:[i] and laboratories stem:[cc(l)]
+stem:[f_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R))]:: so-called equivalent activity model for radionuclide stem:[i] and laboratory stem:[cc(l)]
+stem:[ii(G)(ii(bb B)^((2)),ii(E))]:: empirical model for electron efficiency function
+stem:[ii(H)_(i,cc(l),k)]:: stem:["exp"(−(lambda_k − lambda_i)((t_m)_(i,cc(l)) − (t_r)_(i,cc(l))))], the decay correction applied in the correction for impurities
+stem:[h]:: index for model basis functions
+stem:[h(ii(bb B),ii(bb D),ii(bb N),ii(bb R))]:: implicit function
+stem:[h(ii(bb Y),ii(bb X))]:: generic implicit function relating input quantities stem:[ii(bb X)] and output quantities stem:[ii(bb Y)]
+stem:[ii(bb I)]:: identity matrix
+stem:[ii(I)]:: set of indices of radionuclides of concern
+stem:[ii(I)]:: ionization current produced by generic ampoule
+stem:[ii(I)_(ii(bb D))]:: subset of indices relating to the vector stem:[ii(bb D)] of equivalent activity measurement quantities for the radionuclides and laboratories of concern
+stem:[ii(I)_f]:: background current
+stem:[ii(I)_(i,j)]:: relative emission probability for stem:[j]th photon for radionuclide stem:[i]
+stem:[ii(I)_("Ra,s")]:: ionization current produced by ^226^Ra source number stem:[s], stem:[s = 1, . . . , 5]
+stem:[i]:: index for radionuclide
+stem:[ii(J)_i]:: set of indices of photons associated with radionuclide stem:[i]
+stem:[""_beta ii(J)_i]:: set of indices of beta transitions associated with radionuclide stem:[i]
+stem:[j]:: index for photon or beta transition
+stem:[j']:: index for photon or beta transition
+stem:[ii(bb K)]:: vector of KCRV quantities
+stem:[hat(ii(bb K))]:: vector estimate of stem:[ii(bb K)] (KCRVs) containing the stem:[(ii(A)_"e")_i^"KCRV"]
+stem:[ii(K)_(i,cc(l))]:: index set for impurities associated with radionuclide stem:[i] provided by laboratory stem:[cc(l)]
+stem:[k]:: index for radionuclide
+stem:[ii(L)_i]:: set of indices of laboratories that measured radionuclide stem:[i]
+stem:[cc(l)]:: index for laboratory
+stem:[ii(M)]:: generic quantity equal to stem:[ii(F)_s (ii(I)_"Ra,s"-ii(I)_f)/(ii(I)-ii(I)_f) ("exp"(-lambda (t_m - (t_r))))/("exp"(-lambda_"Ra"(t_m-t_0)))]
+stem:[ii(M)_(i,cc(l))]:: value of stem:[ii(M)] for radionuclide stem:[i] and laboratory stem:[cc(l)]
+stem:[ii(hat M)_(i,cc(l))]:: measured value of stem:[ii(M)_(i,cc(l))]
+stem:[ii(M)_k]:: general matrix, stem:[k = 1, 2, . . .]
+stem:[m]:: number of actually measured data values
+stem:[m_"e"]:: rest mass of electron
+stem:[ii(bb N)]:: set of quantities constituting the nuclear reference data of which tabulated energies and probabilities stem:[{ii(E)_(i,j) : j in ii(J)_i}], stem:[{ii(P)_(i,j) : j in ii(J)_i}], stem:[{ii(W)_(i,j) : j in ""_beta ii(J)_i}] and stem:[{""_beta ii(P)_(i,j) : j in ""_beta ii(J)_i}] constitute estimates
+stem:[hat(ii(bb N))]:: prior (tabular) estimate of stem:[ii(bb N)]
+stem:[ii(bb N^**)]:: posterior estimate of stem:[ii(bb N)]
+stem:[n]:: number of basis functions in empirical model for photon efficiency function
+stem:[n^"max"]:: largest value of stem:[n] to be considered
+stem:[n_beta]:: number of basis functions in empirical model for electron efficiency function
+stem:[n_beta^"max"]:: largest value of stem:[n_beta] to be considered
+stem:[ii(P)_(i,j)]:: emission probability for stem:[j]th photon for radionuclide stem:[i]
+stem:[""_beta ii(P)_(i,j)]:: emission probability for stem:[j]th beta transition for radionuclide stem:[i]
+stem:[ii(bb Q)(* * *)]:: orthogonal matrix
+stem:[ii(Q)_(i,k)(ii(bb B),ii(bb N))]:: the quotient stem:[(ii(A)_"e")_i^"cmptd" (ii(bb B),ii(bb N))//(ii(A)_"e")_k^"cmptd" (ii(bb B),ii(bb N))]
+stem:[q]:: generic number of measurement data
+stem:[ii(bb R)]:: vector of quantities stem:[ii(R)_(i,cc(l),k)] for relevant stem:[i, cc(l)] and stem:[k]
+stem:[hat(ii(bb R))]:: prior estimate of stem:[ii(bb R)]
+stem:[ii(bb R^**)]:: posterior estimate of stem:[ii(bb R)]
+stem:[ii(R)_(i,cc(l),k)]:: decay-corrected activity of impurity stem:[k] relative to activity of radionuclide stem:[i] provided by laboratory stem:[cc(l)]
+stem:[overset(~)(ii(R))_(i,cc(l),k)]:: uncorrected counterpart of stem:[ii(R)_(i,cc(l),k)]
+stem:[r]:: generic index
+stem:[ii(S)_"part"(ii(bb B))]:: function of adjustable parameters constituting least-squares measure of fit
+stem:[ii(S)_"full"(ii(bb Z))]:: full least-squares objective function
+stem:[ii(S)_(i,j)(ii(bb W))]:: normalized energy distribution function for spectrum corresponding to stem:[j]th beta transition for radionuclide stem:[i]
+stem:[s(ii(bb B),ii(bb D),ii(bb N),ii(bb R))]:: vector of model deviations stem:[s_(i,cc(l))(ii(bb B),ii(bb D),ii(bb N),ii(bb R))] arranged according to a prescribed ordering
+stem:[s_(i,cc(l))(ii(bb B),ii(bb D),ii(bb N),ii(bb R))]:: model deviation for radionuclide stem:[i] and laboratory stem:[cc(l)]
+stem:[TT]:: matrix transpose
+stem:[ii(T)_h(x)]:: Chebyshev polynomial of first kind of degree stem:[h] (order stem:[h + 1]) in stem:[x]
+stem:[t_0]:: fixed SIR reference date
+stem:[t_m]:: SIR measurement date
+stem:[t_r]:: reference date
+stem:[u(*)]:: standard uncertainty associated with argument
+stem:[u(*, *)]:: covariance associated with arguments
+stem:[ii(bb V)(*)]:: uncertainty matrix (covariance matrix) associated with argument
+stem:[ii(bb V)^((k))(*)]:: uncertainty matrix (covariance matrix) associated with argument, stem:[k = 1, 2, . . .]
+stem:[ii(V)_s]:: screening potential
+stem:[ii(W)]: total energy of electron
+stem:[ii(W)_c]:: total energy of conversion electron
+stem:[ii(W)_(i,j)]:: maximum total energy associated with stem:[j]th beta-transition for radionuclide stem:[i]
+stem:[ii(W)_"max"]:: right-hand endpoint of electron energy range over which modelling is carried out
+stem:[ii(W)_"min"]:: left-hand endpoint of electron energy range over which modelling is carried out
+stem:[ii(bb X)]:: generic vector of input quantities
+stem:[hat(ii(bb X))]:: estimate of stem:[ii(bb X)]
+stem:[x]:: argument of Chebyshev polynomial
+stem:[ii(bb Y)]:: generic vector of output quantities
+stem:[hat(ii(bb Y))]:: estimate of stem:[ii(bb Y)]
+stem:[ii(bb Z)]:: stem:[(ii(bb B)^TT,ii(bb N)^TT)^TT] or stem:[(ii(bb B)^TT,ii(bb N)^TT,ii(bb R)^TT)^TT] as appropriate, according to textual context
+stem:[hat(ii(bb Z))]:: estimate of stem:[ii(bb Z)]
+stem:[ii(bb Z^**)]:: posterior estimate of stem:[ii(bb Z)]
+stem:[alpha]:: generic element of stem:[ii(bb D)], stem:[ii(bb N)], stem:[ii(bb B)] or stem:[ii(bb R)] as appropriate, according to textual context
+stem:[bb alpha]:: vector representing stem:[ii(bb N)], stem:[ii(bb D)] or stem:[ii(bb R)]
+stem:[epsilon]:: generic detection efficiency of ionization chamber
+stem:[epsilon_i]:: detection efficiency of ionization chamber for radionuclide stem:[i]
+stem:[epsilon(ii(E))]:: efficiency function or curve for ionization chamber for photons of energy stem:[ii(E)]
+stem:[epsilon_s]:: stem:[s]th efficiency value
+stem:[epsilon_beta(ii(W))]:: efficiency function or curve for ionization chamber for electrons of energy stem:[ii(W)]
+stem:[eta_i]:: normalization factor for photon emission probabilities of radionuclide stem:[i]
+stem:[ii(theta)_i]:: mixing ratio associated with radionuclide stem:[i] parameter lying between zero and one
+stem:[lambda_i]:: decay constant for radionuclide stem:[i]
+stem:[lambda_n]:: Coulomb function
+stem:[lambda_"Ra"]:: decay constant for radionuclide ^226^Ra
+stem:[ii(nu)]:: degrees of freedom
+stem:[ii(phi)_h(ii(E))]:: basis function in empirical model for photon efficiency function
+stem:[ii(psi)_h(ii(W))]:: basis function in empirical model for electron efficiency function
+
+[[appendixB]]
+[appendix,obligation=informative]
+== Derivatives required by the generalized non-linear least-squares algorithm and in the evaluation of uncertainties
+
+This appendix provides expressions for the derivatives required by the generalized non-linear least-squares algorithm and in the evaluation of uncertainties associated with estimates of the efficiency curve parameters (<<first_order_derivative_eval>>).
+
+=== Derivatives with respect to decay-corrected measurement quantities
+
+Let stem:[alpha] denote any element of stem:[ii(bb D)]. Since stem:[f_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R))] does not depend on stem:[ii(bb D)],
+
+[stem%unnumbered]
+++++
+del f_(i, cc(l))(ii(bb B),ii(bb N),ii(bb R))//del alpha = 0," all "i, cc(l).
+++++
+
+From <<eq27>> and <<eq22>>,
+
+[[eq34]]
+[stem]
+++++
+(del s_(i,cc(l))(ii(bb B),ii(bb D),ii(bb N),ii(bb R)))/(del alpha) = {(1,alpha -= ii(D)_(i,cc(l))","),(0, "otherwise."):}
+++++
+
+=== Derivatives with respect to the remaining quantities
+
+[[appendixB-2-1]]
+==== General
+
+Let stem:[alpha] denote any element of stem:[ii(bb B)], stem:[ii(bb N)] or stem:[ii(bb R)]. From <<eq27>>,
+
+[stem%unnumbered]
+++++
+(del s_(i,cc(l))(ii(bb B),ii(bb D),ii(bb N),ii(bb R)))/(del alpha) = (del f_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R)))/(del alpha),
+++++
+
+and hence the derivatives of the model values stem:[f_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R))] are considered. From <<eq22>>,
+
+[[eq35]]
+[stem]
+++++
+(del f_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R)))/(del alpha) = 1/(ii(C)_(i,cc(l))^2(ii(bb B),ii(bb N),ii(bb R))) (ii(C)_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R)) (del(ii(A)_"e")_i^"cmptd"(ii(bb B),ii(bb N)))/(del alpha)
+++++
+
+[stem%unnumbered]
+++++
+- (ii(A)_"e")_i^"cmptd" (ii(bb B),ii(bb N)) (del ii(C)_(i,cc(l)(ii(bb B),ii(bb N),ii(bb R))))/(del alpha)).
+++++
+
+From <<eq18>> for the correction factor,
+
+[[eq36]]
+[stem]
+++++
+(del ii(C)_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R)))/(del alpha) = sum_(k in ii(K)_(i,cc(l))) [ii(R)_(i,cc(l),k) (del ii(Q)_(i,k)(ii(bb B),ii(bb N)))/(del alpha) + ii(Q)_(i,k)(ii(bb B),ii(bb N)) (del ii(R)_(i,cc(l),k))/(del alpha)],
+++++
+
+with
+
+[[eq37]]
+[stem]
+++++
+(del ii(Q)_(i,k)(ii(bb B),ii(bb N)))/(del alpha) = 1/((ii(A)_"e")_k^"cmptd"(ii(bb B),ii(bb N))) [(del (ii(A)_"e")_i^"cmptd"(ii(bb B),ii(bb N)))/(del alpha) - ii(Q)_(i,k)(ii(bb B),ii(bb N))(del(ii(A)_"e")_k^"cmptd"(ii(bb B),ii(bb N)))/(del alpha)],
+++++
+
+and
+
+[stem%unnumbered]
+++++
+(del ii(R)_(i,cc(l),k))/(del alpha) = {(1, alpha -= ii(R)_(i,cc(l),k)","),(0, "otherwise."):}
+++++
+
+Then, from <<eq20>>, since stem:[(ii(A)_"e")_i^"KCRV"] is a constant,
+
+[[eq38]]
+[stem]
+++++
+(del (ii(A)_"e")_i^"cmptd"(ii(bb B),ii(bb N)))/(del alpha) = (1 - ii(theta)_i) (del(ii(A)_"e")_i^"model"(ii(bb B),ii(bb N)))/(del alpha).
+++++
+
+Thus, the derivatives stem:[del ii(C)_(i,cc(l))(ii(bb B),ii(bb N),ii(bb R))//del alpha] are expressed in terms of
+
+. stem:[ii(Q)_(i,k)(ii(bb B),ii(bb N))], which in turn is expressed in terms of stem:[(ii(A)_"e")_i^"cmptd" (ii(bb B),ii(bb N))],
+. stem:[(ii(A)_"e")_i^"cmptd" (ii(bb B),ii(bb N))], which in turn is expressed in terms of stem:[(ii(A)_"e")_i^"model"(ii(bb B),ii(bb N))],
+. stem:[del(ii(A)_"e")_i^"cmptd" (ii(bb B),ii(bb N))//del alpha], which in turn is expressed in terms of stem:[del(ii(A)_"e")_i^"model"(ii(bb B),ii(bb N))//del alpha], and
+. stem:[ii(bb R)].
+
+It follows that the provision of stem:[(ii(A)_"e")_i^"model" (ii(bb B),ii(bb N))] and derivatives stem:[del(ii(A)_"e")_i^"model" (ii(bb B),ii(bb N))//del alpha] for stem:[alpha] corresponding to all particular elements of stem:[ii(bb B)] and stem:[ii(bb N)] will permit all relevant derivatives to be formed. The following two sections give expressions for the derivatives of stem:[(ii(A)_"e")_i^"model" (ii(bb B),ii(bb N))] with respect to elements of stem:[ii(bb B)], stem:[ii(bb N)] and stem:[ii(bb R)], thus, together with <<eq34>>, permitting all derivatives of stem:[s_(i,cc(l))(ii(bb B),ii(bb D),ii(bb N),ii(bb R))] with respect to the elements of stem:[ii(bb B)], stem:[ii(bb D)], stem:[ii(bb N)] and stem:[ii(bb R)] to be determined.
+
+[[appendixB-2-2]]
+==== Derivatives with respect to efficiency curve parameters
+
+From the use of <<eq8>>,
+
+[stem%unnumbered]
+++++
+(del(ii(A)_"e")_i^"model"(ii(bb B),ii(bb N)))/(del ii(B)_h^((1))) = - 1/((ii(A)_"e")_i^"model"(ii(bb B),ii(bb N))^2) sum_(j in ii(J)_i) ii(P)_(i,j) (del ii(F) (ii(bb B)^((1)),ii(E)_(i,j))/(del ii(B)_h^((1))), 
+++++
+
+[stem%unnumbered]
+++++
+(del(ii(A)_"e")_i^"model"(ii(bb B),ii(bb N)))/(del ii(B)_h^((2))) = -1/(((ii(A)_"e")_i^"model"(ii(bb B),ii(bb N)))^2) sum_(j in_beta ii(J)_i) ""_beta ii(P)_(i,j) int_i^(ii(W_(i,j))) ii(S)_(i,j) (ii(W)) (del ii(G) (ii(bb B)^((2))),ii(W))/(del ii(B)_h^((2))) d ii(W),
+++++
+
+where, using <<eq10>>,
+
+[stem%unnumbered]
+++++
+(del ii(F)(ii(bb B)^((1)),ii(E)))/(del ii(B)_h^((1))) = ii(phi)_h ("ln" ii(E)) ii(F) (ii(bb B)^((1)), ii(E)),
+++++
+
+[stem%unnumbered]
+++++
+(del ii(G)(ii(bb B)^((2)),ii(W)))/(del ii(B)_h^((2))) = ii(psi)_h (ii(W)) ii(G)(ii(bb B)^((2)),ii(W)).
+++++
+
+[[appendixB-2-3]]
+==== Derivatives with respect to nuclear reference data quantities
+
+The use of <<eq8>> gives
+
+[stem%unnumbered]
+++++
+(del(ii(A)_"e")_i^"model"(ii(bb B),ii(bb N)))/(del ii(E)_(i,j)) = - 1/(ii(P)_(i,j)[(ii(A)_"e")_i^"model"(ii(bb B),ii(bb N))]^2) (del ii(F)(ii(bb B)^((1)),ii(E)_(i,j)))/(del ii(E)_(i,j)),
+++++
+
+[stem%unnumbered]
+++++
+(del(ii(A)_"e")_i^"model"(ii(bb B),ii(bb N)))/(del ii(P)_(i,j)) = -1/([(ii(A)_"e")_i^"model"(ii(bb B),ii(bb N))]^2) ii(F)(ii(bb B)^((1)),ii(E)_(i,j)),
+++++
+
+[stem%unnumbered]
+++++
+(del(ii(A)_"e")_i^"model"(ii(bb B),ii(bb N)))/(del ii(W)_(i,j)) = -_beta ii(P)_(i,j) ii(S)_(i,j) (ii(W)_(i,j)) 1/([(ii(A)_"e")_i^"model"(ii(bb B),ii(bb N))]^2) ii(G) (ii(bb B)^((2)),ii(W)_(i,j)),
+++++
+
+[stem%unnumbered]
+++++
+(del(ii(A)_"e")_i^"model"(ii(bb B),ii(bb N)))/(del (""_beta ii(P)_(i,j))) = 1/([(ii(A)_"e")_i^"model"(ii(bb B),ii(bb N))]^2) int_1^(ii(W)_(i,j)) ii(S)_(i,j) (ii(W)) ii(G) (ii(bb B)^((2)),ii(W)) d ii(W),
+++++
+
+where, from <<eq10>>,
+
+[stem%unnumbered]
+++++
+(del ii(F) (ii(bb B)^((1)),ii(E)_(i,j)))/(del ii(E)_(i,j)) = ii(F) (ii(bb B)^((1)),ii(E)_(i,j)) (1/(ii(E_(i,j))) + sum_(h=1)^n ii(B)_h^((1)) ii(phi)_h' ("ln" ii(E)_(i,j)) ).
+++++
+
+[[appendixB-2-4]]
+==== Derivatives with respect to relative impurity activities
+
+The partial derivatives relating to the relative impurity activities are zero:
+
+[stem%unnumbered]
+++++
+(del(ii(A)_"e")_i^"model"(ii(bb B), ii(bb N)))/(del ii(R)_(i,cc(l),k)) = 0," all " i,cc(l),k
+++++
+
+[[appendixC]]
+[appendix,obligation=informative]
+== Hessian matrices
+
+This appendix provides the Hessian matrices, stem:[ii(bb H)_(ii(bb B))] and the stem:[ii(bb H)_(bb alpha)], required to implement <<eq29>>. The Hessian matrices require both first derivatives, as given in <<appendixB>> in the context of the solution of the generalized non-linear least-squares problem, and second derivatives, as indicated.
+
+Expressions for the matrices stem:[ii(bb H)_(ii(bb B))] and the stem:[ii(bb H)_(bb alpha)] in matrix <<eq29>> in terms of stem:[s], the vector of model deviations, obtained from <<eq25>>, are
+
+[stem%unnumbered]
+++++
+ii(bb H)_(ii(bb B)) = ((del s)/(del (ii(bb B))))^TT ii(bb V)_(hat(ii(bb(D))))^(-1) (del s)/(del ii(bb B)) + ((del^2s)/(del ii(bb B)^2))^TT ii(bb V)_(hat(ii(bb(D))))^(-1) s(ii(bb B),ii(bb D),ii(bb N),ii(bb R)),
+++++
+
+[stem%unnumbered]
+++++
+ii(bb H)_(ii(bb D)) = ((del s)/(del (ii(bb B))))^TT ii(bb V)_(hat(ii(bb(D))))^(-1) (del s)/(del ii(bb D)) + ((del^2s)/(del ii(bb B) del ii(bb D)))^TT ii(bb V)_(hat(ii(bb(D))))^(-1) s(ii(bb B),ii(bb D),ii(bb N),ii(bb R)),
+++++
+
+[stem%unnumbered]
+++++
+ii(bb H)_(ii(bb N)) = ((del s)/(del (ii(bb B))))^TT ii(bb V)_(hat(ii(bb(D))))^(-1) (del s)/(del ii(bb N)) + ((del^2s)/(del ii(bb B) del ii(bb N)))^TT ii(bb V)_(hat(ii(bb(D))))^(-1) s(ii(bb B),ii(bb D),ii(bb N),ii(bb R)),
+++++
+
+[stem%unnumbered]
+++++
+ii(bb H)_(ii(bb R)) = ((del s)/(del (ii(bb B))))^TT ii(bb V)_(hat(ii(bb(D))))^(-1) (del s)/(del ii(bb R)) + ((del^2s)/(del ii(bb B) del ii(bb R)))^TT ii(bb V)_(hat(ii(bb(D))))^(-1) s(ii(bb B),ii(bb D),ii(bb N),ii(bb R)).
+++++
+
+Expressions for the derivatives of the components of stem:[s] with respect to the components of stem:[ii(bb B)], stem:[ii(bb D)], stem:[ii(bb N)] and stem:[ii(bb R)] are given in <<appendixB>>.
+
+The above four formulae are implemented using (central) finite-difference formulae. Also see <<scope_for_further_work>>.
+
+[[appendixD]]
+[appendix,obligation=informative]
+== Implicit multivariate model
+
+Consider the implicit multivariate model
+
+[stem%unnumbered]
+++++
+h(ii(bb Y) ,ii(bb X)) = 0,
+++++
+
+where stem:[ii(bb X)] is a vector input quantity comprising mutually independent vector quantities stem:[ii(bb X)_1, . . . ,ii(bb X)_(ii(Q))], i.e. stem:[ii(bb X) = [ii(bb X)_1^TT , . . . , ii(bb X)_(ii(Q))^TT\]^TT], and stem:[ii(bb Y)] a vector output quantity. Suppose that, for stem:[r = 1, . . . ,ii(Q)], vector estimates stem:[hat(ii(bb X))_r] of the stem:[ii(bb X)_r] are given, as are the associated uncertainty matrices stem:[ii(bb V)_(hat(ii(bb X))_r)]. Suppose that the Jacobian matrices
+
+[stem%unnumbered]
+++++
+ii(bb J)(ii(bb X)_r) = (del h)/(del ii(bb X)_r)," "r = 1, . . ., ii(Q),
+++++
+
+[stem%unnumbered]
+++++
+ii(bb J)(ii(bb Y)) = (del h)/(del ii(bb Y))
+++++
+
+are available. The stem:[ii(bb J)(ii(bb X)_r)] are generally rectangular and stem:[ii(bb J)(ii(bb Y))] is square. An estimate stem:[hat(ii(bb Y))] of stem:[ii(bb Y)] is obtained by solving
+
+[[eq39]]
+[stem]
+++++
+h(hat(ii(bb Y)),hat(ii(bb X))) = 0,
+++++
+
+and the uncertainty matrix stem:[ii(bb V)_(hat(ii(bb Y)))] associated with stem:[hat(ii(bb Y))] satisfies
+
+[[eq40]]
+[stem]
+++++
+ii(bb J)(hat(ii(bb Y))) ii(bb V)_(hat(ii(bb Y))) ii(bb J)^TT (hat(ii(bb Y))) = sum_(r=1)^(ii(Q)) ii(bb J) (hat(ii(bb X))_r) ii(bb V)_(ii(bb X)_r) ii(bb J)^TT (hat(ii(bb X))_r).
+++++
+
+Since
+
+[stem%unnumbered]
+++++
+ii(bb V)_(hat(ii(bb X))) = "diag"[ii(bb V)_(hat(ii(bb X))_1), . . ., ii(bb V)_(hat(ii(bb X)_(ii(Q))))],
+++++
+
+[stem%unnumbered]
+++++
+ii(bb J)(ii(bb X)) = [ii(bb J)(ii(bb X)_1), . . ., ii(bb J)(ii(bb X)_(ii(Q)))],
+++++
+
+<<eq40>> can be written as
+
+[stem%unnumbered]
+++++
+ii(bb J)(hat(ii(bb Y))) ii(bb V)_(hat(ii(bb Y))) ii(bb J)^TT (hat(ii(bb Y))) = ii(bb J) (hat(ii(bb X))) ii(bb V)_(hat(ii(bb X))) ii(bb J)^TT (hat(ii(bb X))),
+++++
+
+a system that can be solved for stem:[ii(bb V)_(hat(ii(bb Y)))].
+
+Using recognized concepts from numerical linear algebra <<gol1996>>, a numerically stable way to form stem:[ii(bb V)_(hat(ii(bb Y)))], which accounts for the fact that stem:[ii(bb J)(ii(bb X))] is a rectangular matrix and stem:[ii(bb J)(ii(bb Y))] a square matrix, is as follows <<cox2006>>:
+
+. Form the Cholesky factor stem:[ii(bb U)(hat(ii(bb X)))] of stem:[ii(bb V)_(hat(ii(bb X)))]. This factor is the upper triangular matrix such that stem:[ii(bb U)^TT (hat(ii(bb X))) ii(bb U) (hat(ii(bb X))) = ii(bb V)_(hat(ii(bb V)))];
+. Factorize stem:[ii(bb J)(hat(ii(bb Y)))] as the product stem:[ii(bb J)(hat(ii(bb Y))) = ii(bb Q)(hat(ii(bb X))) overset(~)(ii(bb U)) (hat(ii(bb X)))], where stem:[ii(bb Q)(hat(ii(bb X)))] is an orthogonal matrix and stem:[overset(~)(ii(bb U))(hat(ii(bb X)))] is upper triangular;
+. Factorize stem:[ii(bb J)(hat(ii(bb Y)))] as the product stem:[ii(bb J)(hat(ii(bb Y))) = ii(bb L)(hat(ii(bb Y)))overset(~)(ii(bb U))(hat(ii(bb Y)))], where stem:[ii(bb L)(hat(ii(bb Y)))] is lower triangular and stem:[overset(~)(ii(bb U)) (hat(ii(bb Y)))] is upper triangular;
+. Solve the matrix equation stem:[overset(~)(ii(bb U))^TT (hat(ii(bb Y))) ii(bb M)_1 = ii(bb I)] for stem:[ii(bb M)_1];
+. Solve stem:[ii(bb L)^TT(hat(ii(bb Y)))ii(bb M)_2 = ii(bb M)_1] for stem:[ii(bb M)_2];
+. Form stem:[ii(bb M)_3 = ii(bb Q)^TT(hat(ii(bb X)))ii(M)_2];
+. Form stem:[ii(bb M)_4 = ii(bb U)^TT(hat(ii(bb X)))ii(M)_3];
+. Form stem:[ii(bb M) = overset(~)(ii(bb U))(hat(ii(bb X)))ii(bb M)_4];
+. Orthogonally triangularize stem:[ii(bb M)] to give the upper triangular matrix stem:[ii(bb U^**)].
+. Form stem:[ii(bb V)_(hat(ii(bb Y))) = (ii(bb U^**)^TT ii(bb U)^**)].
+
+This procedure was verified using elementary matrix algebra and tested.

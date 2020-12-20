@@ -1,0 +1,1035 @@
+= The Detection and Estimation of Spurious Pulses
+:edition: 1
+:copyright-year: 1976
+:revdate: 1976
+:language: en
+:docnumber: BIPM-2
+:title-en: The Detection and Estimation of Spurious Pulses
+:title-fr:
+:doctype: monographie
+:fullname:
+:committee-en:
+:committee-fr:
+:committee-acronym:
+:supersedes-date:
+:supersedes-draft:
+:docstage: in-force
+:docsubstage: 60
+:imagesdir: images
+:mn-document-class: bipm
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Preface
+
+This monograph is one of several to be published by the Bureau International
+des Poids et Mesures (BIPM) on behalf of the Comité Consultatif pour les
+Etalons de Mesure des Rayonnements lonisants (CCEMRI). The aim of this
+series of publications is to review various topics which are of importance
+for the measurement of ionizing radiation and radioactivity, in particular
+those techniques normally used by participants in international comparisons.
+It is hoped that these publications will prove to be useful reference volumes
+both for those who are already engaged in this field and for those who are
+approaching such measurements for the first time.
+
+This volume is concerned with the problem of establishing an acceptably
+low upper limit to the presence of spurious pulses in radiation detectors
+used for the metrology of radionuclides; it was prepared for publication
+by P.J. Campion.
+
+[%unnumbered]
+[cols="^,^"]
+|===
+a| [%unnumbered]
+image::img01.png[] a| [%unnumbered]
+image::img02.png[]
+a| E.&nbsp;Ambler +
+Chairman of the CCEMRI  a| J.&nbsp;Terrien +
+Director af the BIPM
+|===
+
+== Introduction
+
+This monograph is concerned with the methods available for the detection
+and quantitative estimation of spurious pulses, the relevance of which
+to the metrology of radionuclides need hardly be stressed. Spurious pulses
+are regarded in this context as those resulting from the operation of the
+detector itself in the process of recording a genuine event, the latter
+being defined as the passage of an ionizing particle through the sensitive
+volume of the detector. Such an event may give rise to a genuine pulse
+at the output of the amplifier. All pulses which are not genuine in this
+sense are spurious, but in the present paper only those spurious pulses
+which occur as a result of a genuine event are considered. Thus pulses
+due to breakdown across insulators, malfunctioning of ancillary electronic
+equipment or the pick-up of extraneous signals are not considered here;
+they are also present if there are no ionizing particles and can usually be
+avoided by proper arrangement of the electronic circuits or, if reproducible,
+be subtracted as background.
+
+In the metrology of radionuclides two closely related situations concerning
+spurious pulses are often encountered. Thus an attempt is made in this
+monograph to distinguish between, on the one hand, the *detection* of the
+point of onset of spurious pulses as a function of some parameter, for
+example counter voltage, and, on the other hand, the *estimation*, that is
+the quantitative measurement of a non-negligible component of spurious
+pulses in a given pulse train. Since the techniques used for the two situations
+are basically similar, and indeed may be identical, it is not always possible
+to rigidly maintain such a semantic distinction. The techniques to be
+described are, in general, applicable to all pulse detectors but, since
+proportional and scintillation counters are the most commonly used
+instruments in stem:[4pi] and stem:[4pi]-coincidence counting at the present time,
+the techniques are illustrated by reference to these detectors. The cause
+of spurious pulses is, in some cases, not well understood and is a field of
+investigation in its own right. For this reason there is little discussion of
+the possible mechanisms for the production of such pulses except where
+the mechanism seems to be well established; a review of the time-interval
+distributions of spurious pulses observed in proportional counters has been
+recently published <<campion1>>, while those obtained in scintillation detectors
+have been discussed by Williams and Smith <<<williams>>.
+
+The total probability for the production of a spurious pulse, or pulses,
+per genuine pulse is usually denoted by stem:[theta] and, as so defined, is independent
+of the time-interval distribution of spurious pulses. However, only those
+spurious pulses which can be detected are of any practical significance,
+i.e. only those which occur beyond the end of the dead time {which is
+assumed to be non-extendable} and which trigger the discriminator of
+the recording system; thus the measurement of the spurious pulses in any
+practical situation yields a probability stem:[theta'] which depends on the dead time
+{and hence on the shape of the time-interval distribution} and the discrimination
+level. In this monograph stem:[theta'] will be tacitly equated with stem:[theta], but
+the difference should be noted when comparing measurements of spurious
+pulses using different amplifier-discriminator systems.
+
+== Techniques
+
+A simple way to detect the presence of spurious pulses is the method of
+plotting the count rate obtained from a detector as a function of the
+discriminator bias at a fixed counter voltage or, more usually, as the
+voltage is varied for a fixed bias. The length and slope of the resultant
+"plateau" are frequently taken to be indicative of satisfactory operation
+of detectors, particularly of proportional counters. The length of a plateau
+of such a counter is often expressed in terms of the difference in the voltage
+applied to the counter at the end and at the beginning of the plateau,
+while the slope is described as the percentage rise per unit voltage difference.
+These are poor indices of merit since the length expressed in this
+way depends on the counter dimensions and particularly on the anode
+diameter. A plateau can be readily "lengthened" by increasing the anode
+diameter and thus reducing the change in gas gain per unit increase of
+counter voltage. A more satisfactory way of expressing the quality of
+a plateau is in terms of the ratio of the gas gain at the end of the plateau
+to that at the beginning. Yet, in whatever way it is characterized, the "end"
+of the plateau is normally taken to indicate the onset of spurious pulses.
+This may be a rather naive view since the slope of a plateau could also be
+due to spurious pulses as has been demonstrated in the case of Geiger
+counters. On the other hand, the slope could result from a genuine increase
+in efficiency of the detector. Another elementary method is the visual
+observation of an oscilloscope screen but, unless the spurious pulses are
+produced with near-constant time intervals relative to the initiating pulse,
+it is difficult to detect their presence when stem:[theta] is less than about 0.1.
+
+With the possible exceptions of pulses occurring in Geiger counters and
+some pulses in photomultipliers, spurious events in radiation detectors give
+rise to very small pulses compared with those due to the majority of genuine
+counts from radioactive sources. This, together with the fact that genuine
+events normally have a continuous distribution of pulse heights, makes
+pulse-height analysis by itself a rather unsatisfactory technique for the
+detection and estimation of spurious pulses, especially when one is attempting
+to establish the presence or the absence of a very small number of
+spurious events. However, there is a notable exception to this generalization.
+
+In the case of stem:[2pi] and stem:[4pi]-proportional counters it has been shown <<lovborg>>
+that the observed pulse-height spectrum due to stem:[beta]-particles usually consists
+of a broad peak having a high-energy tail and a valley on the low-energy
+side as shown in <<fig1>>. This valley arises from, on the one hand, the
+natural fall off in the distribution of the number of events with event size
+and, on the other hand, the incidence of spurious pulses footnote:[It should be noted that the dead time of the pulse-height analyser may distort the number of spurious pulses in the observed spectrum relative to that of genuine pulses (see <<appendix1>>).]. This fact is the
+basis of a technique for detecting spurious pulses which is applicable both
+to stem:[4pi]-proportional counters and to Nal(Tl) scintillation detectors used
+to assay stem:[beta]-emitters <<houtermans4>>. The count rate from a single-channel pulse-height
+analyser, with a window set just above the threshold of the integral discriminator
+normally used to obtain a conventional plateau, is observed as
+the voltage across the counter is raised. A typical result, obtained for a
+^60^Co source in a proportional counter, is shown in <<fig2>> and is compared
+with a conventional plateau. The minimum of this pulse-height analyser
+curve corresponds to the position of the valley shown in <<fig1>>; at this
+point a few spurious pulses are being detected as indicated in <<fig3>>.
+This technique is basically more suited to the detection rather than the
+estimation of spurious pulses, since any quantitative measurement of the
+ratio of spurious to genuine pulses at a given discriminator setting must be
+made by extrapolating the component curves, as has been done in <<fig3>>,
+and integrating over the appropriate areas; hence the uncertainties of extrapolation
+are introduced into the estimation.
+
+Besides pulse height two other closely related properties of spurious pulses
+may be invoked in order to detect them. The first is their time relationship
+with genuine pulses while the second, in its simplest form, is based on the
+fact that most correlated events occur in pairs, i.e. a genuine pulse is
+followed by a spurious pulse. It is convenient to subdivide the methods
+based on the first property, i.e. the time relationship, into direct techniques,
+in which the time-interval distributions are actually recorded, and gating
+techniques in which the presence of spurious pulses is inferred from an
+analysis of the count rates in suitable intervals of time determined by
+electronic gating circuits. Because of the (normally) large difference in
+pulse heights between genuine and spurious events, the spurious-to-genuine
+sensitivity in most of the techniques described below can be considerably
+improved by using appropriate pulse-height selection, but the penalty
+incurred by doing so is that it is difficult to make quantitative measurements
+of stem:[theta]. However, if it is merely desired to detect the point of onset of
+spurious pulses, as a function of detector voltage for example, the combination
+of pulse-height analysis with time analysis can be used with
+advantage.
+
+[[fig1]]
+.Pulse height spectra for ^91^Y and ^35^S in a stem:[2pi] proportional counter using argon plus 2% methane. (Note: the external amplification was different for the two spectra) (from <<lovborg>>, courtesy IAEA, Vienna).
+image::img03.png[]
+
+[[fig2]]
+.A plateau plot (left-hand ordinate) together with the output from a single-channel analyser with a fixed window (right-hand ordinate) for a ^60^Co source in a methane filled proportional counter (from <<houtermans4>>, courtesy IAEA, Vienna).
+image::img04.png[]
+
+[[fig3]]
+.First part of the pulse-height spectrum of a ^137^Cs source in a stem:[4pi] proportional counter (from <<houtermans4>>, courtesy IAEA, Vienna).
+image::img05.png[]
+
+=== Direct techniques
+
+In the original method of delayed coincidences <<putman>> one input of a coincidence
+circuit is connected directly to a pulse train from a single detector-amplifier
+system while the other input is connected to the same pulse train
+through a variable de lay. This requires very simple electronic equipment
+but is time consuming in operation and hence the statistical precision that
+can be achieved is limited. The method can be made more rapid by the use
+of a multichannel analyser in the time mode <<genz6>>, <<campion7>>. In this technique
+a suitable pulse from the amplifier-discriminator system is used to start
+the {internal} clock of the multichannel analyser and all subsequent pulses
+are recorded in channels whose addresses are proportional to the time
+e lapsed from the start pulse. Thus stem:[theta] is given by the number of correlated
+pulses divided by the number of start pulses. The first number is obtained
+from the total number of pulses recorded in the relevant channels less the
+number of genuine pulses which may be estimated from the (statistically)
+flat distribution beyond the end of the time-interval distribution of spurious
+pulses. A correction to this procedure may be necessary, depending on
+circumstances, to allow for the time interval between adjacent channels,
+the so-called "switching time". Some multichannel analysers are completely
+insensitive during this time while others allow one, and only one, pulse
+to be stored in this period; it is then recorded in the next channel. It is
+thus necessary to know the switching time interval and how the analyser
+functions. Another correction may be necessary to the second number
+(i.e. thd number of start pulses) to take account of those time sweeps
+started by spurious pulses (see <<appendix1>>).
+
+The chief disadvantage of the time-mode analyser technique is that most
+commercially available multichannel analysers have a channel dwell time
+plus switching time of the order of stem:[10" "mu rm(s)] or more, and hence the method
+is unsatisfactory for investigating time intervals of less than a few tens of
+microseconds. For such situations a time-to-amplitude converter (TAC)
+may be used together with a multichannel analyser in the pulse-height mode.
+In order to observe time-interval distributions of pulses from a single
+detector, it is necessary to feed the same pulse train to both the "start"
+and "stop" inputs of the TAC. Hence, in order to avoid the unit starting
+and stopping on the *same* pulse, the start pulse must be delayed; the
+necessary delay can be found by experiment and is normally less than
+a microsecond. Alternatively, a suitable gating system can be arranged.
+It must be noted that the TAC system is inherently different from the
+previous technique in that random pulses produce an exponential time-interval
+distribution because only the first pulse (after a start pulse) is
+registered, while the time-mode analyser technique yields a statistically
+uniform distribution, neglecting dead-time effects <<muller8>>. However, for
+a sufficiently low count rate, the corresponding exponential function
+can be regarded as flat over a limited time range. A correction to allow
+for the distortion of the observed time-interval distribution of both Poisson
+and correlated events, when a time-to-amplitude converter is used at
+high rates of data collection, has been described by Coates <<coates9>>, <<coates10>>.
+An extension of this technique in which, by means of a second measurement
+involving a pulse generator, the corrected time-interval distribution
+of the correlated pulses only may be obtained, has been proposed
+by Houtermans <<houtermans11>>. The theory, of this technique, as outlined by Houtermans
+and modified by Smith <<smith>>, is given in <<appendix2>>. However,
+it should be noted that if two or more spurious pulses arise from a single
+event then, neglecting genuine pulses, the TAC system will record only
+the first spurious pulse and no information can be obtained about the time-interval
+distribution of the subsequent spurious pulses without further experimentation;
+this is true even for the situation where the overall value of stem:[theta]
+is considerably less than unity.
+
+Direct techniques can be used for both detection and estimation but, as
+mentioned above, the sensitivity for the former operation can be enhanced
+under certain circumstances by the use of pulse-height selection. For
+example, by making use of the fact that spurious pulses in proportional
+counters are normally much smaller than most pulses due to genuine events,
+a pulse-height selector in the "stop" channel will considerably improve
+the spurious-to-genuine sensitivity. Alternatively, or additionally, a pulse-height
+selector in the start channel will enable time-interval distributions
+of spurious pulses following genuine pulses of different heights to be compared.
+
+=== Gating techniques
+
+Gating techniques give no direct information regarding the shape of the
+time-interval distribution but serve to quantify the presence or the absence
+of spurious pulses from detectors for which the distribution has been assumed
+or established by the direct techniques described above. There are at least
+three variants of this general method which, for convenience, will be
+referred to as gating techniques 1 to 3 in what follows.
+
+==== Subtraction technique
+
+A simple gating technique <<campion13>> consists of counting only those pulses
+which occur in an interval of time following a genuine pulse, the electronic
+circuits being so arranged that the genuine pulse is not counted within the
+gate. The number of counts in such gating intervals may· be measured as
+a function of the voltage across the detector. Since at the centres of most
+plateaux of proportional counters, for example, the probability of spurious
+counts occurring is very small (but see below), the gated count taken
+on a plateau will be due to the random events from the radioactive source,
+but as soon as the counter voltage is increased to the point where spurious
+counts occur, the gated count will increase. A typical example of the use
+of this method as applied to a proportional counter is given in <<fig4>> where
+the gated count is compared with a conventional plateau plot, using
+a gating interval of stem:[25" "mu rm(s)]. A simple calculation shows that the method
+can be several orders of magnitude more sensitive in detecting the point
+of onset of spurious pulses compared with the normal plateau plot. It will
+be seen that this method is the time analogue of the pulse-height technique
+of Houtermans et al. <<houtermans4>> described above. A combination of the two
+methods, in which only those pulses that fall into both the time interval
+and the pulse-height interval are recorded, would undoubtedly make
+a powerful technique for the detection of spurious pulses.
+
+[[fig4]]
+.A plateau plot {solid circles, left-hand ordinate} and the gated counts as described in the text (open circles, right-hand ordinate) (from <<campion13>>, courtesy Institute of Physics, London).
+image::img06.png[]
+
+As described above the method compares the number of counts in a gating
+interval obtained when the detector voltage is set just beyond the plateau
+with the number obtained when the voltage is set just on the plateau and
+hence is particularly useful for establishing the "end" of a plateau in
+a proportional counter. It is not necessary to know the exact length of
+the gating interval, the only requirement being that it should remain
+constant. However, instead of observing the increase in gated counts as
+the voltage is raised, the component of the gated counts due to genuine
+pulses can be calculated and subtracted from the observed gated counts
+to yield the spurious events. Thus
+
+[stem%unnumbered]
+++++
+theta = (n_g - <n_g>)//n_o,
+++++
+
+where stem:[n_g] is the total number of gated counts recorded in a counting
+interval stem:[T], using a gate of length stem:[tau] (which must be longer than the
+maximum time interval stem:[tau_s] between a genuine pulse and its associated
+spurious pulse(s) ). The expected number of counts due to random events
+is stem:[<n_g>] and stem:[n_o] is the total number of times the gate opens in the time
+interval stem:[T]. Further, let stem:[n] be the total number of genuine counts in this
+interval. If stem:[tau_D] is the minimum time between pulses which can actuate
+the gate, then, assuming that all such pulses are due to genuine events,
+
+[stem%unnumbered]
+++++
+<n_g> = n_o^2 tau // [T(1-n_o tau_D//T)].
+++++
+
+For the case that stem:[tau_D = tau],
+
+[stem%unnumbered]
+++++
+<n_g> = n_o^2tau // [T(1-n_o tau//T)];
+++++
+
+but for the latter situation
+
+[stem%unnumbered]
+++++
+n_g + n_o = n(1+theta)
+++++
+
+and
+
+[stem%unnumbered]
+++++
+<n_g> = n_o n tau //T = n_o (n_g + n_o) tau // [T(1+theta)].
+++++
+
+Equating these two estimates for stem:[<n_g>] gives
+
+[stem%unnumbered]
+++++
+theta = n_g // n_o - tau(n_g + n_o) // T.
+++++
+
+The assumption that stem:[n_o] includes only genuine events is discussed in
+<<appendix1>> and is valid if stem:[n tau_s theta//T] is small compared with unity. Thus
+the method can be used for the quantitative estimation of stem:[theta] whether
+or not the detector gives rise to a plateau. For both techniques it is
+essential that the gate width is sufficient to include all the spurious pulses,
+although for *detection* a better spurious-to-genuine sensitivity may
+sometimes be obtained by selecting a gating interval which excludes
+some spurious pulses. In certain circumstances (e. g. for some proportional
+counters filled with argon-methane, where most spurious pulses fall in
+a peak several hundred microseconds after the initiating pulse) it is
+advantageous to use a delayed gating interval.
+
+A variation of this method is to record the pulses from a detector-amplifier-
+discriminator system in two scalers, one of which has an appreciably
+longer dead time than that in the other channel. Thus, for low
+count rates, the difference in the accumulated counts in the two scalers
+will be the number of counts that would have been recorded in a gating
+interval of length equal to the difference in the two dead times.
+
+==== Correlation technique
+
+A further gating technique involves the principle of correlation counting
+<<lewis>> in which any departure from a strictly Poisson distribution of events,
+due to the presence of time-correlated spurious counts, can be detected
+by a statistical analysis of the counts recorded in gating intervals taken
+at random with respect to the pulse train. If measurements are made for
+a large number stem:[n_o] of counting intervals each of length stem:[tau], and if stem:[p_i]
+genuine pulses and stem:[d_i] spurious pulses occur in the stem:[i]th interval, then
+the mean number of observed counts per interval will be
+
+[stem%unnumbered]
+++++
+m = (n_g)/(n_o) = 1/(n_o) sum_(i=1)^(n_o) (p_i + d_i) = bar(p) + bar(d) = bar(p) (1+theta).
+++++
+
+Separating those genuine pulses which do not have associated pulses in
+the same interval from those which do, gives
+
+[stem%unnumbered]
+++++
+p_i = x_i + c_i,
+++++
+
+[stem%unnumbered]
+++++
+d_i = y_i + c_i,
+++++
+
+where stem:[x_i] and stem:[y_i] are uncorrelated pulses, and stem:[c_i] is the number of correlated
+pairs of pulses footnote:[The numbers stem:[x_i] and stem:[y_i] are only strictly uncorrelated in the absence of dead times.]. Hence the number of pulses in this interval can be written
+as stem:[x_i + y_i + 2 c_i]. The expectation value of the variance stem:[v] on the number
+of counts per interval, for stem:[n_o] large, is
+
+[stem%unnumbered]
+++++
+E[v] = v = E[(x_i+y_i+2c_i)^2] - {E[x_i+y_i+2c_i]}^2
+++++
+
+[stem%unnumbered]
+++++
+= E[(x_i+y_i)^2] - {E[x_i + y_i]}^2 + 4E [c_i^2] - 4{E[c_i]}^2
+++++
+
+[stem%unnumbered]
+++++
+= m + 2bar(c),
+++++
+
+if stem:[x_i], stem:[x_i] and stem:[c_i] are Poisson distributed.
+
+Here stem:[bar c] represents the mean number of genuine events producing spurious
+pulses in the same interval, and it may be expressed
+
+[stem%unnumbered]
+++++
+bar(c) = bar(p) theta f(lambda, tau),
+++++
+
+where stem:[lambda] is some characteristic time constant. As stem:[lambda tau] becomes very large,
+stem:[f(lambda, tau)] tends to unity and
+
+[stem%unnumbered]
+++++
+bar(c) = 1/2 (v-m) = bar(p) theta = m theta //(1+theta);
+++++
+
+thus
+
+[stem%unnumbered]
+++++
+theta = (v-m)/(3m-v).
+++++
+
+
+Although the method requires rather sophisticated electronics, it has
+applications outside the investigation of spurious pulses (for example,
+in the activity measurement of parent-daughter radionuclides) and hence,
+for laboratories concerned with radionuclide metrology, the equipment
+may be available. However, the method is sensitive to dead-time effects
+and to any extraneous fluctuations in the count rate which affect the
+observed variance and, further, its practical application is limited to
+those situations in which no more than one spurious pulse is associated
+with a genuine pulse <<lewis>>.
+
+==== Pulsed source technique
+
+A powerful variant of the general gating technique is to use a pulsed source
+of radiation instead of a radioactive source to actuate the detector. The
+radiation pulse can be provided by a suitable accelerator, but a much
+simpler method is to actuate the detector by means of a discharge lamp.
+A small spark discharge in air will produce sufficient ultra-violet
+radiation to extract up to several hundred photoelectrons from the cathode
+of a proportional counter provided that an appropriately transparent window
+can be furnished. The spark is, of course, more than sufficient to actuate
+the phototube of a scintillation detector. However, although most spurious
+pulses appear to be generated in the phototube, a pulsed accelerator would
+test both scintillator and phototube. In its simplest form the method would
+involve the recording of the number of pulses produced by the accelerator
+or discharge lamp and comparing this with the number of recorded events
+from the detector suitably corrected for background due to cosmic rays, etc.
+Any excess of the latter number over the former would represent spurious
+pulses which were generated in the detector. While pulsed discharge lamps
+have been used to examine the shapes of time-interval distributions of
+spurious pulses (principally in phototubes), the application of this
+technique on a quantitative basis has not been reported, as far as we know.
+In the case of the discharge lamp the difficulty lies in demonstrating that
+a spark has no inherent spurious radiation at the single-photon level.
+However, in principle, the method is by far the most sensitive technique
+for detecting the presence of spurious pulses (see below) and, moreover,
+the sensitivity is less dependent on the time scale on which spurious pulses
+are produced than in the other methods. Solid state gallium arsenide
+emitters are reputedly free from inherent after-pulses and are suitable for
+testing phototube systems, but it is doubtful whether the wavelength of
+the radiation emitted from such devices is sufficiently short to extract
+electrons from a proportional counter cathode unless the latter were to be
+specially sensitized.
+
+=== Modulo counting technique
+
+A recent technique for the detection of spurious pulses is based on the
+fact that most correlated events occur in pairs, i.e. a genuine pulse
+is followed by a spurious pulse <<muller15>>, <<muller16>>. Therefore, the total number stem:[n]
+of events observed in a given counting interval stem:[tau] can always be decomposed
+into pairs and single pulses; thus
+
+[stem%unnumbered]
+++++
+n = 2 n_("pair") + n_("sing").
+++++
+
+As the quality of stem:[n] being even or odd depends exclusively on stem:[n_("sing")],
+any measuring method based on "modulo two" counting will only "see"
+the unpaired events, permitting the statistical separation of them from
+the pulses arriving in pairs. Both stem:[n_("pair")] and stem:[n_("sing")] always form Poisson
+processes (with mean rates stem:[N_("pair")] and stem:[N_("sing")], respectively), provided
+this was the case for the series of original (parent) events. In general,
+the count rates depend on the distribution of the parent-daughter time
+intervals. If this is assumed to be exponential with mean stem:[lambda^(-1)], it is found
+that
+
+[stem%unnumbered]
+++++
+N_("pair") = N epsilon_p epsilon_d theta [1- 1/(lambda tau) (1-e^(-lambda tau))]
+++++
+
+and
+
+[stem%unnumbered]
+++++
+N_("sing") = N{epsilon_p + epsilon_d theta - 2 epsilon_p epsilon_d theta [1- 1/(lambda tau) (1- e^(-lambda tau))]}.
+++++
+
+Here stem:[epsilon_p(epsilon_d)] is the detection efficiency for a parent (daughter) pulse, and
+stem:[theta] denotes the probability of a spurious pulse being generated.
+
+However, if stem:[lambda tau > > 1], i.e. for sufficiently long counting intervals, the exact
+form of the parent-daughter time-interval distribution is irrelevant since
+the rates then approach the limiting values
+
+[stem%unnumbered]
+++++
+N_("pair") = N epsilon_p epsilon_d theta
+++++
+
+and
+
+[stem%unnumbered]
+++++
+N_("sing") = N(epsilon_p + epsilon_d theta - 2 epsilon_p epsilon_d theta).
+++++
+
+A convenient way for determining experimentally the probability for stem:[n]
+being even or odd as a function of stem:[tau] consists in using a correlator of the
+type first applied by Landaud and Mabboux <<landaud>> for measuring life-times.
+As the parity of stem:[n] does not depend on the number of pairs, such a
+measurement yields directly stem:[N_("sing")], and for a Poisson distribution:
+
+[stem%unnumbered]
+++++
+"Prob ("n" even") = 1/2 [1+"exp" (-2 N_("sing")tau)].
+++++
+
+On the other hand, a simple direct counting of the total pulse train gives
+
+[stem%unnumbered]
+++++
+N_("tot") = N (epsilon_p + epsilon_d theta) = N_("sing") + 2N_("pair").
+++++
+
+Therefore, any significant difference between stem:[N_("tot")] and stem:[N_("sing")] as deduced
+from the correlation measurement allows one to determine stem:[N_("pair")], i.e.
+the spurious pulse count rate.
+
+The feasibility of this new method has been shown by various checks with
+artificial pulse trains <<muller8>>. It can be seen from <<fig5>> how the presence
+of spurious pulses modifies the logarithmic plot of the correlation function
+stem:[R(tau)], which is here defined as
+
+[stem%unnumbered]
+++++
+R(tau) = "Prob ("n" even") - "Prob ("n" odd"),
+++++
+
+giving
+
+[stem%unnumbered]
+++++
+R(tau) = { ("exp"[-2 N_("tot")tau],"for "tau < < lambda^(-1)),("exp"[-2(N_("tot")-2N_("pair")tau)],"'' "tau > > lambda^(-1).) :}
+++++
+
+In particular, for a fixed delay between parent and daughter pulses, this
+change in the exponent occurs suddenly at stem:[tau = lambda^(-1)]. The experiments
+suggest that even for a ratio stem:[N_("pair")//N_("tot")] as low as 0.005 the presence
+of spurious pulses can still be readily established.
+
+It is also possible to generalize this approach to multiple spurious pulses
+<<muller18>>, but for this and for all further details the references indicated
+should be consulted.
+
+=== Comparison of techniques
+
+In order to compare the sensitivities of the gating methods 1, 2 and 3 and
+the modulo counting technique outlined above, the variance on the
+estimate of stem:[theta] for each technique is given in <<table1>> for a counting time stem:[T]
+and a genuine pulse rate stem:[N]. These variances are all to some extent
+approximate since implicit in their calculation is the assumption that
+spurious pulses obey Poisson statistics. Nevertheless, they give a useful
+guide for comparison purposes. In <<table1>> two further approximations are
+given for the variance depending on whether stem:[theta] is large or small compared
+to stem:[Ntau], or its equivalent in the case of method 3. The variance estimate
+for the modulo counting technique is taken from <<muller16>>. The requirement
+which is often encountered in radionuclide metrology is to establish the
+presence or absence of a very small stem:[theta], i.e. stem:[theta < < N tau].
+
+[[fig5]]
+.Measurement of the correlation function stem:[R(tau)], for the approximate parameters stem:[N_("sing") = 2 500" "rm(s)^(-1)], stem:[N_("pair") = 0] or stem:[900" "rm(s)^(-1)] and stem:[lambda^(-1) -= tau_o = 10 mu rm(s)]. 
+image::img07.png[]
+
+[NOTE]
+====
+[align=left]
+The theoretical curves given for comparison are +
+A - without pairs: stem:[-"ln" R = 2N_("sing")tau] +
+B - with pairs: stem:[-"ln" R = { (2N_("tot")tau,"for "tau < tau_o),(2N_("tot")tau - 4 N_("pair")(tau-tau_o),"'' "tau>tau_o) :}] +
+(from <<muller8>>).
+====
+
+For method 1 two expressions are given for the variance on stem:[theta] corresponding
+to the two techniques for handling the data. In calculating the variance for
+the first technique (which, as pointed out above, is perhaps more useful
+for determining the "end" of a plateau rather than measuring stem:[theta] quantitatively)
+it is assumed that the counting time is divided between two readings as
+opposed to one reading for the second technique. In practice, of course,
+a number of points would be taken along the plateau as shown in <<fig4>>.
+
+[[table1]]
+[cols="^,^,^,^,<"]
+.A comparison of methods for measuring stem:[theta], the probability for producing a spurious pulse
+|===
+.2+| Method .2+| Variance on stem:[theta] 2+^| Variance on stem:[theta] for .2+^| Comments
+a| stem:[theta < < N tau] +
+or equivalent a| stem:[theta > >N tau] +
+or equivalent
+
+a| *Direct technique* +
+(Plateau technique) | stem:[2(2N tau + theta)//NT] | stem:[4tau//T] | stem:[2theta // NT] a| Minimum of two readings required. Calculation assumes total time is stem:[T] footnote:[Valid for multiple spurious pulses].
+| *Gating techniques* | | | |
+| 1. Subtraction technique | stem:[(Ntau + theta)//NT] | stem:[tau//T] | stem:[theta//NT] a| stem:[tau] must be known. Calculation assumes stem:[tau_D = tau] footnote:[Valid for multiple spurious pulses].
+| 2. Correlation technique | stem:[(Ntau + 2theta)//NT] | stem:[tau//T] | stem:[2theta//NT] a| Unnecessary to know stem:[tau], but it must be constant. Application to multiple spurious pulses requires knowledge of number distribution.
+| 3. Pulsed source technique | stem:[([N_b^(1//2) + (N_s theta + N_b)^(1//2) \]^2)/(N_s^2T)] a| stem:[4N_b//N_s^2T] stem:[(theta< < N_b//N_s)] a| stem:[theta//N_sT] stem:[(theta < < N_b // N_s)] a| stem:[N_s] is accelerator/spark rate and stem:[N_b] background rate. Calculation assumes optimum division of total time stem:[T] between background and source plus background measurements.
+| *Modulo counting technique* | | stem:[2//NT] | a| Calculation assumes absence of multiple spurious pulses. stem:[N tau] should be in the range 0.1 to 1.0; therefore the method is not applicable to the case stem:[theta > > N tau]. For details see <<muller16>>.
+|===
+
+For small stem:[theta] values, method 3 (pulsed source technique) is the most sensitive
+since the effect of the random nature of the pulses used in the other methods
+has been removed. However, considering methods 1 (subtraction technique)
+and 2 {correlation technique} alone, it is seen that the variances are comparable,
+there being no difference for the case that stem:[theta < < N tau], while for
+stem:[theta > >N tau] the variance of method 1 is a factor of 2 smaller. The variance
+of both the subtraction and correlation techniques is somewhat smaller than
+that of the modulo counting technique because of the restriction on the
+value stem:[N tau] in the latter method <<muller16>>.
+
+== Results
+
+=== Proportional counters
+
+Since the subject of time-interval distributions obtained in proportional
+counters has been reviewed recently <<campion1>>, only a very brief summary will
+be given here. The review has drawn attention to the fact that there is
+a wide variation in the shapes of the time-interval distributions as between
+one counting gas and another, and, for a given gas, as a function of
+pressure and also, in some cases, anode diameter. Further, only two features
+of these distributions can be related with any certainty to physical phenomena
+known to create free electrons. The first of these is the cathode photoelectric
+process; it is of little practical significance since the electronically
+imposed dead time is normally sufficient to mask any spurious pulses due
+to this effect. However, such pulses may be encountered in situations where
+the electron transit time is considerable as, for example, in large high-pressure
+proportional counters. The second phenomenon is the ion-cathode
+effect; again this is not observed very often, due, in this case, to the fact
+that there is, apparently, a relatively low probability associated with this
+phenomenon. Thus the majority of spurious pulses are produced by as yet
+unidentified processes.
+
+Apart from the photoelectric effect in cylindrical counters, the pulse heights
+of spurious pulses correspond to those of single electrons and become apparent
+towards the end of a plateau when the latter is obtained for a typical
+stem:[beta]-emitter. Hence the few measurements that have been made at the centres
+of plateau show no evidence for spurious pulses. However, the generalization
+of this statement to all plateaux should be made with a certain amount of
+caution for the following reasons. Firstly, the "centre" of a plateau is not
+a well defined point. Secondly, the length of a plateau region is dependent
+to some extent on the energy of the stem:[beta]-radiation. Starting with the count-rate
+characteristic due to a single electron, the "plateau" will lengthen
+as the number of primary electrons increases, i.e. as the energy of the
+incident ~-particles increases, until their energy is such that most tracks
+cross the counter. Any further increase in the stem:[beta]-particle energy will have
+little effect on the length of the plateau. Thus it will depend on how
+close the "centre" of the plateau is to the point at which single electrons
+can be detected as to whether significant numbers of spurious pulses will
+be recorded. In this respect the response of the proportional counter
+to single electrons should be considered. The pulse-height spectrum for
+single electrons varies between an exponential for low gas gains and a
+distribution having a more or less pronounced peak for high gas gains.
+The shape of single-electron spectra varies considerably with experimental
+conditions (see, for example, the recent review by Genz <<genz19>> and
+<<fig6>> compares the exponential distribution
+
+[stem%unnumbered]
+++++
+f_e(E) = 1/m e^(-E//m)
+++++
+
+with a strongly peaked Pólya-type distribution
+
+[stem%unnumbered]
+++++
+f_p(E) = (4E)/(m^2) e^(-2E//m),
+++++
+
+where stem:[m] is the mean of the distribution in both cases. In practice most
+single-electron spectra will lie somewhere between these two distributions.
+
+[[fig6]]
+.Theoretical single-electron pulse-height distributions. The mean of both distributions is stem:[m].
+image::img08.png[]
+
+<<fig6>> shows that, for a discriminator set at a level corresponding to
+about two or more electrons, fewer single electrons, and hence fewer
+spurious pulses, will be recorded if the second rather than the first
+distribution is applicable. Some recent work <<campion20>> has indicated that for
+many counting gases it may not be possible to detect single electrons without
+incurring some spurious pulses, the number varying considerably with the
+gas and, further, that there is a significant probability that some events
+produce more than one spurious pulse even although the mean stem:[theta] may be
+considerably less than unity.
+
+=== Scintillation counters
+
+A review of spurious pulses in scintillation counters has been given by
+Williams and Smith <<williams>>. In such detectors, spurious pulses may arise either
+in the phototube and its envelope or in the scintillator and its container;
+the relative importance of these two sources evidently varies between
+detector systems <<williams>>, <<houtermans21>>.
+
+The time-interval distribution of spurious pulses generated in the phototube
+depends to a certain extent on the design of the tube. Two examples of
+observed distributions are shown in <<fig7>> and <<fig8>>. The structure at short
+time intervals in these distributions is due to ions of residual gas molecules
+striking the photocathode <<morton>>. These ions are created in the space between
+the cathode and first dynode and, owing to the nature of the electric field
+in this region, the transit time is almost independent of the point of origin
+of the ions. Ions may be created in other parts of the phototube <<coates23>> but
+these have considerably less chance of reaching the photocathode and, if
+the interaction of such ions with a dynode surface should produce an
+electron, the effect is progressively less significant the further down the
+dynode chain the interaction takes place. Some ions, notably H~2~^\+^ and He^+^,
+may cause the simultaneous release of up to 20 electrons per incident ion
+on the photocathode. Thus spurious pulses due to this effect may be larger
+than the genuine pulse which caused them.
+
+Other spurious pulses may be due to light generated within the phototube
+<<krall>> and have a pulse height equivalent to a single photoelectron pulse.
+Effects which cause such spurious pulses include
+
+. [[eff-a]] electrode glow and
+. [[eff-b]] faceplate phosphorescence initiated either by Cerenkov radiation
+or direct excitation by ionizing radiations.
+
+Effect <<eff-a>> occurs when the phototube is operated at high gain (stem:[>= 10^9] say)
+when light emitted from the anode and last few dynodes is scattered back
+to the photocathode. This gives rise to a spurious pulse at one electron
+transit time through the phototube, i.e. in less than about 50 ns. It is more
+usual to operate phototubes at much lower gains when the effect is absent,
+
+[[fig7]]
+.Time-interval distribution of spurious pulses in a phototube type 56 DUVP (from <<smith>>).
+image::img09.png[]
+
+[[fig8]]
+.Time-interval distribution of spurious pulses in a phototube type RCA C31000 D (from <<williams>>, courtesy North-Holland Publishing Company, Amsterdam).
+image::img10.png[]
+
+and, in any case, modern phototubes are well baffled so that light from
+this source does not reach the photocathode. The second effect may be
+due to Cerenkov radiation emitted by relativistic particles (e.g. Compton
+scattered electrons from high energy stem:[gamma]-rays) traversing the glass envelope.
+The Cerenkov radiation can then interact with the photocathode to produce
+a pulse. If the phototube is part of a scintillation detector, this pulse
+will be coincident with, and add to, the main pulse due to light from the
+scintillator itself. However, it has been shown that such pulses can be
+accompanied by several smaller pulses occurring up to several tens of
+microseconds afterwards. An explanation put forward <<jerde>> is that the blue
+light of the Cerenkov radiation excites phosphorescence in the glass
+faceplate which, as the excited states subsequently decay, emits visible
+radiation. However, another investigation, while confirming the effect,
+has cast doubt on this explanation and an alternative mechanism in which
+the effect is due to direct excitation of the electrons in the solid has been
+put forward <<dressler>>. An extensive study of three phototubes having a gallium
+arsenide first dynode has confirmed the existence of spurious pulses due to
+ions and to the interaction of energetic radiation with the face plate in
+this type of phototube <<coates23>>, <<coates27>>.
+
+[[fig9]]
+.Time-interval distribution of spurious pulses for ^147^Pm dissolved in a liquid scintillator. Start pulses correspond to an energy loss of 30 to 90 keV (from <<houtermans21>>, courtesy North-Holland Publishing Company, Amsterdam).
+image::img11.png[]
+
+Spurious pulses caused by the decay of excited states in the faceplates
+are probably single-electron events. However, it is an oversimplification
+to assume that all spurious pulses in the tails of the time-interval distributions
+in <<fig7>> and <<fig8>> are single photoelectron pulses; there is in fact
+a distribution of event size. The explanation is probably that "ion pulses"
+are produced as a result of spurious single-electron events.
+
+Liquid and plastic scintillators together with most glasses phosphoresce
+after exposure to strong light and hence it is advisable to keep such materials
+in darkness or red light for several hours before using them. Because of
+these phosphorescent properties there is always the possibility that spurious
+pulses, due to phosphorescence induced by the light generated by a genuine
+pulse or due to direct excitation, may occur. Houtermans <<houtermans21>> has
+published a time-interval distribution (reproduced in <<fig9>> obtained
+with a complete scintillation detector and concludes that, since a significant
+difference was found between the shapes obtained using liquid and plastic
+scintillators, some spurious pulses originate in the scintillator itself.
+However, in general, this aspect has received rather little attention to date.
+
+== Conclusion
+
+It is clear that an experimenter should be aware of the possibility of
+spurious pulses in any counting system, but it is also evident that spurious
+pulses are not likely to be a serious source of error in most well-designed
+counting experiments for the measurement of stem:[beta]-emitters, except possibly
+those involving liquid scintillation counters. With one or two provisos
+the usual practice of operating a proportional counter near the centre of
+the plateau is probably sound. It is however advisable to check, using one
+of the methods described above, for the existence of spurious pulses from
+time to time and especially when any new or unusual measurement is
+undertaken. One such situation may be the use of large high-pressure
+proportional counters.
+
+In scintillation counting the situation is satisfactory for Nal(Tl) systems
+unless one is working at extremely low stem:[gamma]-ray energies. But perhaps the
+most critical situation is in the use of liquid scintillation counting for
+absolute measurements of low energy stem:[beta]-emitters. Here the light output is
+small and therefore the pulse heights of spurious events are more comparable
+with those of genuine pulses. Thus there is a significant possibility of
+spurious pulses and the use of liquid scintillators as stem:[4pi beta]-detectors at the
+present time is limited largely by this phenomenon <<houtermans28>>. The use of two
+phototubes in coincidence will substantially reduce the number of spurious
+pulses detected but the overall efficiency is also reduced.
+
+[appendix,obligation=informative]
+[[appendix1]]
+== The influence of an imposed dead time on the detection of subsequent spurious pulses
+
+Many of the methods described in the text for the estimation of stem:[theta] involve
+the recording of the number of times a detecting circuit is actuated.
+This circuit may be, for example, a gate, a time-to-amplitude converter
+or an analyser in either the pulse-height or time mode. In such methods
+it is assumed that the circuit is actuated by genuine pulses only; this
+assumption is usually justified by the fact that the value of stem:[theta] is very much
+less than unity. Here the validity of this assumption will be examined.
+
+The problem may be stated in the following way: given a pulse train,
+composed of both genuine and spurious pulses, which is detected by
+a circuit, the overall dead time of which is longer than the maximum time
+interval between a genuine pulse and its associated spurious pulse{s),
+what is the probability that the circuit will be actuated by a spurious
+pulse?
+
+Let stem:[f(tau)] be the density for the time interval between a genuine and
+a spurious pulse and stem:[tau_s] the maximum value of this interval (<<fig10>>).
+
+[[fig10]]
+.a) A hypothetical interval density stem:[f(tau)] of spurious pulses as a function of time interval stem:[tau]. b) A sketch illustrating the relationship of the density stem:[f(tau)] with respect to events in real time stem:[t].
+image::img12.png[]
+
+The circuit, of dead time stem:[tau_D], is actuated at time stem:[t = tau_s - tau_D] and it is
+immaterial whether the actuating pulse is genuine or spurious. Time stem:[t = 0]
+is taken at a point stem:[tau_s] before the end of the dead time since, neglecting
+second order spurious pulses, only genuine pulses in the interval stem:[t = 0] to
+stem:[tau_s] can produce a spurious pulse, which must fall in the interval stem:[t = tau_s]
+to stem:[2tau_s]. The next pulse after the end of the dead time up to stem:[t = 2 tau_s]
+may be spurious or genuine, or there may be no pulse. However, in the
+last case, the next pulse to arrive must be genuine. Hence, if the count
+rate of genuine pulses is stem:[N], then the probability stem:[P_s] that the next pulse
+after the end of the dead time is spurious is
+
+[stem%unnumbered]
+++++
+P_s = int_0^(tau_s) N theta "d"t int_(tau_s - tau)^(tau_s) f(tau) e^(-N(tau - tau_s + t)) "d" tau.
+++++
+
+The evaluation of this requires a knowledge of the shape of the time-interval
+density stem:[f(tau)], and, as noted in the text, this may vary considerably
+from one case to another. However, by way of an example, assume that
+stem:[f(tau)] is constant for stem:[tau <= tau_s] and equal to stem:[1//tau_s]. Then
+
+[stem%unnumbered]
+++++
+P_s = theta[1- (1-e^(-N tau_s))//N tau_s].
+++++
+
+As stem:[N tau_s] increases to large values, stem:[P_s] tends to stem:[theta], while for small values of stem:[N tau_s] for this particular case, stem:[P_s] tends to stem:[N tau_s theta//2]. In general stem:[P_s=a theta],
+where stem:[a] is some function of stem:[N] and stem:[tau_s] while the probability stem:[P_g] that the
+next pulse is genuine is stem:[P_g = 1 - a theta].
+
+Thus the assumption that all actuating counts are genuine is only incorrect
+by a factor stem:[(1 - a theta)]; by using a sufficiently low count rate the departure
+of this factor from unity may be made insignificant, *independently* of the
+value of stem:[theta]. Thus for most situations, especially where stem:[theta] is also small,
+the assumption is a valid one.
+
+[appendix,obligation=informative]
+[[appendix2]]
+== The elimination of genuine pulses from time-interval distributions obtained by the time-to-amplitude converter technique
+
+The time-to-amplitude converter (TAC) system can usually be arranged
+such that every start pulse gives rise to one recorded stop pulse. In the
+event that the next pulse after a start pulse occurs at a time greater than
+the range of the TAC system, the pulse may be recorded in an "overflow"
+channel. Let stem:[n_s] be the total number of start pulses and stem:[n(t)] the recorded
+time-interval distribution. Then the probability stem:[S(t)] that no stop pulse
+arrives earlier than stem:[t] is given by
+
+[stem%unnumbered]
+++++
+S(t) = 1/(n_s) int_t^(oo) n(t) "d"t = 1 - 1/(n_s) int_0^t n(t) "d"t,
+++++
+
+since
+
+[stem%unnumbered]
+++++
+n_s = int_0^(oo) n(t) "d"t;
+++++
+
+thus
+
+[stem%unnumbered]
+++++
+n(t) "d"t = -n_s "d"/("d"t) S(t) "d"t.
+++++
+
+The stop pulses may be genuine, or spurious and time correlated to the
+start pulse, or spurious but arising from a genuine pulse occurring before
+the start pulse (i.e. not correlated with the start pulse). The three types
+will be indicated by the subscripts stem:[r], stem:[c] and stem:[a], respectively. Thus,
+neglecting the influence of dead times,
+
+[stem%unnumbered]
+++++
+S(t) = S_r(t) * S_c(t) * S_a(t).
+++++
+
+However, the probability differential stem:[C(t)" d"t] for the spurious pulses,
+which would be observed in the absence of all genuine events (except
+for the start), would be stem:[-d S_c(t)], i.e.
+
+[stem%unnumbered]
+++++
+C(t) = -"d"/("d"t) S_c(t) = -"d"/("d"t) [(S(t))/(S_r(t)*S_a(t))],
+++++
+
+and hence
+
+[stem%unnumbered]
+++++
+theta = - int_0^(oo) "d"/"d"t [(S(t))/(S_r(t)*S_a(t))] "d"t.
+++++
+
+The probability stem:[S(t)] can be readily determined from the observed time-interval
+distribution and stem:[S_r(t)]. In a similar manner, stem:[S_a(t)] can be obtained
+from a subsidiary experiment in which a pulse generator is used to start
+the TAC system.
+
+
+[bibliography]
+== References
+
+* [[[campion1,1]]], Campion, P.J., "Spurious pulses in proportional counters: A review", Nucl. Instr. and Meth. *112*, 75 (1973)
+
+* [[[williams,1]]], Williams, A. and Smith, D., "Afterpulses in liquid scintillation counters", Nucl. Instr. and Meth. *112*, 131 (1973)
+
+* [[[lovborg,1]]], Løvborg, L., "Accurate determination of the stability of stem:[beta]-proportional counters against variations in the energy threshold", in "Standardization of Radionuclides", International Atomic Energy Agency, Vienna, p. 103 (1967)
+
+* [[[houtermans4,1]]], Houtermans, H., Miguel, M. and Werner, E., "Fast testing of radiation counter performance by single-channel counting", in "Standardization of Radionuclides", International Atomic Energy Agency, Vienna, p. 115 (1967)
+
+* [[[putman,1]]], Putman, J.L., "Analysis of spurious counts in Geiger counters", Proc. Phys. Soc., *61*, 312 (1948)
+
+* [[[genz6,1]]], Genz, H., Harmer, D.S. and Fink, R.W., "Measurement by two-dimensional pulse analysis of the time and energy distributions of afterpulses in proportional counters", Nucl. Instr. and Meth. *60*, 195 (1968)
+
+* [[[campion7,1]]], Campion, P.J. and Kingham, M.W.J., "Spurious pulses in methane filled proportional counters", Int. J. Appl. Radiat. and Isotopes *20*, 479 (1969)
+
+* [[[muller8,1]]], Müller, J.W., Private communication (1974)
+
+* [[[coates9,1]]], Coates, P. B., "The correction for photon "pile up" in the measurement of radioactive lifetimes", J. Phys. *E1*, 878 (1968)
+
+* [[[coates10,1]]], Coates, P.B., "Distortion in the measurement of time-interval distributions", Nucl. Instr. and Meth. *113*, 311 (1973)
+
+* [[[houtermans11,1]]], Houtermans, H., Private communication (1973)
+
+* [[[smith,1]]], Smith, D., Private communication (1974)
+
+* [[[campion13,1]]], Campion, P.J., "A sensitive method for determining the end of plateaux in proportional counters", J. Phys. *E3*, 920 (1970)
+
+* [[[lewis,1]]], Lewis, V.E., Smith, D. and Williams, A., "Correlation counting applied to the determination of absolute disintegration rates for nuclides with delayed states", Metrologia *9*, 14 (1973)
+
+* [[[muller15,1]]], Müller, J. W., "A new method for distinguishing between pairs and single pulses", Rapport BIPM-72/14 (1972), Recueil de travaux du BIPM, vol. 4, and personal communication
+
+* [[[muller16,1]]], Müller, J.W., "On the precision of the modulo counting technique", Rapport BIPM-75/7 (1975)
+
+* [[[landaud,1]]], Landaud, G. and Mabboux, C., "Analyse du coefficient de corrélation de la fonction aléatoire stem:[X(t) = +- 1]. Application ò l'étude de lois de désintégration de radioéléments", J. Physique Rad. *21*, 615 (1960)
+
+* [[[muller18,1]]], Müller, J. W ., "A complex modulo K countert", Rapport BIPM-73/5 (1973), Recueil de travaux du BIPM, vol. 4
+
+* [[[genz19,1]]], Genz, H., "Single electron detection in proportional gas counters", Nucl. Instr. and Meth. *112*, 83 (1973)
+
+* [[[campion20,1]]], Campion, P.J. and Burke, M., "A comparison of proportional counter gases with respect to spurious pulse production", Int. J. Appl. Radiat. and Isotopes *26*, 79 (1975)
+
+* [[[houtermans21,1]]], Houtermans, H., See discussion, Nucl. Instr. and Meth. *112*, 134 (1973)
+
+* [[[morton,1]]], Morton, G.A., Smith, H.M. and Wasserman, R., "Afterpulses in photomultipliers", IEEE Trans. on Nucl. Sci. *NS14*, 443 (1967)
+
+* [[[coates23,1]]], Coates, P.B., "The origins of afterpulses in photomultipliers", J. Phys. *D6*, 1159 (1973)
+
+* [[[krall,1]]], Krall, H.A., "Extraneous light emission from photomultipliers", IEEE Trans. on Nucl. Sci. *NS14*, 455 (1967)
+
+* [[[jerde,1]]], Jerde, R.L. and Peterson, L.E., "Effects of high energy radiations on noise pulses from photomultiplier tubes", Rev. Sci. Instr. *38*, 1387 (1967) -
+
+* [[[dressler,1]]], Dressler, K. and Spitzer, L., "Photomultiplier tube pulses induced by stem:[gamma]-rays", Rev. Sci. Instr. *38*, 436 (1967)
+
+* [[[coates27,1]]], Coates, P.B., "Noise sources in the C31000D photomultiplier", J. Phys. *E4*, 201 (1971)
+
+* [[[houtermans28,1]]], Houtermans, H., "Probability of non-detection in liquid scintillation counting", Nucl. Instr. and Meth. *112*, 121 (1973)
