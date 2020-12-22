@@ -757,7 +757,7 @@ For the different calibration approaches, diffraction will be considered in diff
 * For the hybrid method, diffraction effects are part of the absolute SSE and are not considered separately.
 * For the radiance method, diffraction is significant for the apertures used with the trap detector for calibration. Diffraction in the filter radiometer is part of the relative SSE and is not considered separately.
 
-Diffraction occurs for both of the two apertures that define the optical geometry. As both effects are small, they can be treated independently, and the two corrections add to give: 
+Diffraction occurs for both of the two apertures that define the optical geometry. As both effects are small, they can be treated independently, and the two corrections add to give:
 
 [[eq41]]
 [stem]
@@ -1206,7 +1206,7 @@ The relative uncertainty associated with the radiance measured by the filter rad
 
 Methods for measuring linearity are roughly divided into two groups – 'dual-aperture' and 'combinatorial' methods <<saunders2007>>. Dual-aperture methods compare the sum of two signals when two individual apertures are successively illuminated with the combined signal obtained when both apertures are simultaneously illuminated. The flux levels are progressively increased to cover the range of signals expected in use, and the measured non-linearity values accumulate with increasing flux. The most common dual-aperture method is a flux-doubling method, in which it is arranged that the two individual signals are approximately equal, and the signal levels progressively double until the highest signal level is reached. This method tends to produce fairly sparse data.
 
-If the linearity factor in <<eq12>> is defined as a continuous function of the measured signal, stem:[K_("lin") = 1//eta(S_("meas"))], then the linearised measured signal is simply given by 
+If the linearity factor in <<eq12>> is defined as a continuous function of the measured signal, stem:[K_("lin") = 1//eta(S_("meas"))], then the linearised measured signal is simply given by
 
 [[eq62]]
 [stem]
@@ -1547,7 +1547,7 @@ Substituting <<eq79>> and <<eq80>> into <<eq77>> and <<eq78>> and differentiatin
 [[eq82]]
 [stem]
 ++++
-(del S)/(del lambda_("sys")) = K/2 sum_(i=1)^N s_i (del L_("b")(lambda,T))/(del lambda) :|:_(lambda=lambda_i) delta lambda_i, 
+(del S)/(del lambda_("sys")) = K/2 sum_(i=1)^N s_i (del L_("b")(lambda,T))/(del lambda) :|:_(lambda=lambda_i) delta lambda_i,
 ++++
 
 [[eq83]]
@@ -1576,7 +1576,7 @@ and
 (del S)/(del T) = K/2 sum_(i=1)^N s_i (del L_("b")(lambda,T))/(del T) :|:_(lambda=lambda_i) delta lambda_i
 ++++
 
-where 
+where
 
 [[eq87]]
 [stem]
@@ -1869,7 +1869,7 @@ where stem:[delta lambda_i] is given by <<eq78>> in <<appendixA>>. The uncertain
 [[eq117]]
 [stem]
 ++++
-u^2(H) = sum_(i=1)^N [((del H)/(del lambda_("ran",i))u(lambda_("ran",i)))^2 + ((del H)/(del s_("ran",i)) u_("rel")(s_("ran",i)))^2] + H^2 u_("rel")^2(s_("sys")) + H^2 u_("rel")^2(K). 
+u^2(H) = sum_(i=1)^N [((del H)/(del lambda_("ran",i))u(lambda_("ran",i)))^2 + ((del H)/(del s_("ran",i)) u_("rel")(s_("ran",i)))^2] + H^2 u_("rel")^2(s_("sys")) + H^2 u_("rel")^2(K).
 ++++
 
 The sensitivity coefficients for stem:[lambda_0] are:
