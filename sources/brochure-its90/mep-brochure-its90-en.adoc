@@ -41,66 +41,66 @@ The international science community, through the International Atomic Energy Age
 
 [stem%unnumbered]
 ++++
-(""^2"H"//""^1"H")_{VSMOW} = 0.00015576(5),
+(""^2"H"//""^1"H")_{"VSMOW"} = 0.00015576(5),
 ++++
 
 [stem%unnumbered]
 ++++
-(""^{18}"O" // ""^{16}"O")_{VSMOW} = 0.0020052(5),
+(""^{18}"O" // ""^{16}"O")_{"VSMOW"} = 0.0020052(5),
 ++++
 
 [stem%unnumbered]
 ++++
-(""^{17}"O"//""^{16}"O")_{VSMOW}  =  0.0003799(9).
+(""^{17}"O"//""^{16}"O")_{"VSMOW"}  =  0.0003799(9).
 ++++
 
 
-For the purposes of thermometry, these absolute values are specified for the isotopic composition of the water used for realizing the definition of the kelvin with the assigned temperature stem:[T_{90}("TPW") = 273.16 " K"]. However, variations in isotopic composition of water can be measured much more accurately in relative mode (that is, relative to that of VSMOW) than in absolute mode. This is the reason why the scale definition for isotope values of water is still artefact-based. Isotopic deviations of artefact VSMOW from SMOW are negligible when expressed as an equivalent change in the TPW temperature.
+For the purposes of thermometry, these absolute values are specified for the isotopic composition of the water used for realizing the definition of the kelvin with the assigned temperature stem:[ii(T)_{90}("TPW") = 273.16 " "rm(K)]. However, variations in isotopic composition of water can be measured much more accurately in relative mode (that is, relative to that of VSMOW) than in absolute mode. This is the reason why the scale definition for isotope values of water is still artefact-based. Isotopic deviations of artefact VSMOW from SMOW are negligible when expressed as an equivalent change in the TPW temperature.
 
 Variations in amount-of-substance ratios are conventionally reported as deviations from VSMOW, such as
 
 
 [stem]
 ++++
-delta ""^{18}"O"_{"CAL"} = [{(""^{18}"O"//""^{16}"O")_{"sample"} - (""^{18}"O"//""^{16}"O")_{VSMOW}} / {(""^{18}"O"//""^{16}"O")_{VSMOW}}],
+ii(delta) ""^{18}"O"_{"CAL"} = [{(""^{18}"O"//""^{16}"O")_{"sample"} - (""^{18}"O"//""^{16}"O")_{"VSMOW"}} / {(""^{18}"O"//""^{16}"O")_{"VSMOW"}}],
 ++++
 
 
-and similarly for stem:[delta "D"] (where symbol stem:["D"] designates ^2^H, and symbol H will subsequently designate ^1^H) and stem:[delta]^17^O. The subscript CAL emphasizes that the stem:[delta]-value has been determined with respect to VSMOW. Usually the results are in the parts-per-thousand range, so are expressed in permil (per thousand, ‰).
+and similarly for stem:[ii(delta) "D"] (where symbol stem:["D"] designates ^2^H, and symbol H will subsequently designate ^1^H) and stem:[ii(delta)]^17^O. The subscript CAL emphasizes that the stem:[ii(delta)]-value has been determined with respect to VSMOW. Usually the results are in the parts-per-thousand range, so are expressed in permil (per thousand, ‰).
 
-Besides VSMOW, to further improve the inter-laboratory reproducibility of the water isotopic composition measurements, SLAP is also used to define the scale. The stem:[delta]-values of SLAP have been defined based on consensus between expert laboratories taking part in a large international intercomparison [Gonfiantini, 1984]. They are stem:[delta "D" = -428 ‰] and stem:[delta ""^{18}"O" = -55.5 ‰] with respect to VSMOW. These consensus values are used in the definition of the so-called normalized VSMOW-SLAP scale:
+Besides VSMOW, to further improve the inter-laboratory reproducibility of the water isotopic composition measurements, SLAP is also used to define the scale. The stem:[ii(delta)]-values of SLAP have been defined based on consensus between expert laboratories taking part in a large international intercomparison [Gonfiantini, 1984]. They are stem:[ii(delta) "D" = -428 ‰] and stem:[ii(delta) ""^{18}"O" = -55.5 ‰] with respect to VSMOW. These consensus values are used in the definition of the so-called normalized VSMOW-SLAP scale:
 
 
 [stem]
 ++++
-delta ""^{18} "O" ("sample")_{"NORM"} = [delta ""^{18} "O" ("sample")_{"CAL"} {(-0.0555)}/{delta ""^{18} "O"("SLAP")_{"CAL"}}],
+ii(delta) ""^{18} "O" ("sample")_{"NORM"} = [ii(delta) ""^{18} "O" ("sample")_{"CAL"} {(-0.0555)}/{delta ""^{18} "O"("SLAP")_{"CAL"}}],
 ++++
 
-and similarly for stem:[delta "D"], with the value stem:[-0.428] in the nominator. All isotope laboratories usually report their isotope stem:[delta]-values for water in this normalized way.
+and similarly for stem:[ii(delta) "D"], with the value stem:[-0.428] in the nominator. All isotope laboratories usually report their isotope stem:[ii(delta)]-values for water in this normalized way.
 
-For all naturally occurring surface waters, the isotopic composition is sufficiently close to that of VSMOW, and the correlation between the ^18^O and the ^17^O contents is so strong [<<Meijer1998,Meijer and Li 1998>>] that the effect of the isotopes on the TPW temperature can be specified by a linear function of only the stem:[delta "D"] and stem:[delta]^18^O values:
+For all naturally occurring surface waters, the isotopic composition is sufficiently close to that of VSMOW, and the correlation between the ^18^O and the ^17^O contents is so strong [<<Meijer1998,Meijer and Li 1998>>] that the effect of the isotopes on the TPW temperature can be specified by a linear function of only the stem:[ii(delta) "D"] and stem:[ii(delta)]^18^O values:
 
 
 [stem]
 ++++
-T_{"meas"} = T_{90} ("TPW") + A("D") cdot delta D + A ("O") cdot delta^{18} "O" ,
+ii(T)_{"meas"} = ii(T)_{90} ("TPW") + ii(A)("D") * ii(delta) "D" + ii(A) ("O") * ii(delta)^{18} "O" ,
 ++++
 
 
-where the last term on the right accounts for both the ^18^O and the ^17^O effects, but requires only the knowledge of the δ^18^O value. The most precise set of isotopic depression constants presently available, and those specified for use with the ITS-90, are by Faghihi _et al._ (<<Faghihi2015a,2015a>> and <<Faghihi2015b,2015b>>). These values are: stem:[A("D") = 673" "mu"K"] and stem:[A("O") = 630" "mu"K"], withestimated standard uncertainties of stem:[4" "mu"K"] and stem:[10" "mu"K"], respectively. These values have been derived using stem:[delta]-values expressed on the normalized VSMOW-SLAP scale.
+where the last term on the right accounts for both the ^18^O and the ^17^O effects, but requires only the knowledge of the stem:[ii(delta)]^18^O value. The most precise set of isotopic depression constants presently available, and those specified for use with the ITS-90, are by Faghihi _et al._ (<<Faghihi2015a,2015a>> and <<Faghihi2015b,2015b>>). These values are: stem:[ii(A)("D") = 673" "rm(mu) rm(K)] and stem:[ii(A)("O") = 630" "rm(mu) rm(K)], withestimated standard uncertainties of stem:[4" "rm(mu) rm(K)] and stem:[10" "rm(mu) rm(K)], respectively. These values have been derived using stem:[delta]-values expressed on the normalized VSMOW-SLAP scale.
 
 The practice, introduced by some manufacturers, of adding enriched water to the initial source water to compensate for the isotope depletion taking place during the purification process is not recommended. After adding enriched water, full isotope analysis including the difficult measurement of δ^17^O is required, with less accurate and less reliable results. For TPW cells manufactured with addition of enriched water, the following correction equation is recommended:
 
 
 [stem]
 ++++
-T_{"meas"} = T_{90} ("TPW") + A("D") cdot delta "D" + A("O") cdot delta ""^{18}"O" + A(""^{17}"O") {delta ""^{17}"O" - [(1 + delta ""^{18}"O")^{0.528} -  1]} ,
+ii(T)_{"meas"} = ii(T)_{90} ("TPW") + ii(A)("D") * ii(delta) "D" + ii(A)("O") * ii(delta) ""^{18}"O" + ii(A)(""^{17}"O") {ii(delta) ""^{17}"O" - [(1 + ii(delta) ""^{18}"O")^{0.528} -  1]} ,
 ++++
 
 
-where the coefficient stem:[A(""^{17}"O") = 60" "mu"K"] given by <<White2010,White and Tew (2010)>> has an estimated standard uncertainty of stem:[1" "mu"K"].
+where the coefficient stem:[ii(A)(""^{17}"O") = 60" "rm(mu) rm(K)] given by <<White2010,White and Tew (2010)>> has an estimated standard uncertainty of stem:[1" "rm(mu) rm(K)].
 
-It should be noted that the original references VSMOW and SLAP water are exhausted. Their successors, VSMOW2 and SLAP2 have been prepared with utmost care to resemble the originals to within the uncertainties. Only for SLAP2 the stem:[delta "D"] value is -427.5 ‰ instead of -428 ‰.
+It should be noted that the original references VSMOW and SLAP water are exhausted. Their successors, VSMOW2 and SLAP2 have been prepared with utmost care to resemble the originals to within the uncertainties. Only for SLAP2 the stem:[ii(delta) "D"] value is -427.5 ‰ instead of -428 ‰.
 
 
 == Isotopic composition and corrections for the triple point of equilibrium hydrogen
@@ -109,25 +109,25 @@ The effects of isotopic composition on the triple point of equilibrium hydrogen 
 
 The isotopic composition of commercially available hydrogen varies from an amount-of-substance ratio of about 27 micromole of D per mole of H to about 150 micromole of D per mole of H. It has been established that the discrepancies previously found at the triple point are mainly due to the variable deuterium content in the hydrogen used for its realization [<<Pavese2000,Pavese and Tew 2000>>, <<Pavese2002,Pavese _et al._ 2002>>].
 
-It is therefore specified that the ITS-90 temperature assigned to the triple point of equilibrium hydrogen, stem:[T_{90}("e-H"_2 " TP") = 13.8033 " K"], is taken to refer to an amount-of-substance ratio of stem:[0.00008902] mole of D per mole of H. This is the isotopic ratio determined for SLAP [<<Gonfiantini1978,Gonfiantini 1978>>].
+It is therefore specified that the ITS-90 temperature assigned to the triple point of equilibrium hydrogen, stem:[ii(T)_{90}("e-H"_2 " TP") = 13.8033 " "rm(K)], is taken to refer to an amount-of-substance ratio of stem:[0.00008902] mole of D per mole of H. This is the isotopic ratio determined for SLAP [<<Gonfiantini1978,Gonfiantini 1978>>].
 
 To correct to the isotopic reference ratio, the following function is specified:
 
 
 [stem]
 ++++
-T_{"meas" = T_{90} ("e-H"_2 "TP") + k_{"D"} (x - x_0),
+ii(T)_{"meas"} = ii(T)_{90} ("e-H"_2 "TP") + k_{"D"} (x - x_0),
 ++++
 
 
-where stem:[x] denotes the amount-of-substance ratio of the sample in micromole D per mole H, stem:[x_0 = 89.02" "mu"mol/mol"] in the reference ratio specified above, and stem:[k_{"D"}] the triple-pointtemperature variation as a function of the deuterium ratio (the slope). The current value for stem:[k_{"D"}], specified for the ITS-90, was determined by Fellmuth _et al._ [<<Fellmuth2005,Fellmuth _et al._ 2005>>] as stem:[k_{"D"} = 5.42" "mu"K"//(mu"mol/mol")] with an estimated standard uncertainty of stem:[0.31" "mu"K"//(mu"mol/mol")].
+where stem:[x] denotes the amount-of-substance ratio of the sample in micromole D per mole H, stem:[x_0 = 89.02" "rm(mu) rm(mol)//rm(mol)] in the reference ratio specified above, and stem:[k_{"D"}] the triple-pointtemperature variation as a function of the deuterium ratio (the slope). The current value for stem:[k_{"D"}], specified for the ITS-90, was determined by Fellmuth _et al._ [<<Fellmuth2005,Fellmuth _et al._ 2005>>] as stem:[k_{"D"} = 5.42" "rm(mu) rm(K)//(rm(mu) rm(mol)//rm(mol))] with an estimated standard uncertainty of stem:[0.31" "rm(mu) rm(K)//(rm(mu) rm(mol)//rm(mol))].
 
 
 == Isotopic composition for the vapour-pressure points of equilibrium hydrogen
 
 The effects of isotopic composition on the vapour-pressure points of equilibrium hydrogen and the uncertainties related to these effects are discussed in detail in [<<Steur2005,Steur _et al._ 2005>>].
 
-Isotopic fractionation manifests itself as a difference of as much as stem:[0.4 " mK"] between the dew point (vanishingly small liquid fraction) and the bubble point (vanishingly small vapour fraction) [<<Pavese2002,Pavese _et al._ 2002>>].
+Isotopic fractionation manifests itself as a difference of as much as stem:[0.4 " "rm(mK)] between the dew point (vanishingly small liquid fraction) and the bubble point (vanishingly small vapour fraction) [<<Pavese2002,Pavese _et al._ 2002>>].
 
 To reduce the effect of isotopic fractionation while maintaining coherence over the entire vapour-pressure range (i.e., including the triple point), it is therefore specified that the ITS-90 relations for the vapour pressure of equilibrium hydrogen are referenced to an amount-of-substance ratio of stem:[0.00008902] mole D per mole H, i.e. the isotopic ratio determined for SLAP.
 
@@ -138,18 +138,18 @@ The effects of isotopic composition on the triple point of neon (Ne TP) and unce
 
 The isotopic composition of commercially available neon varies from an amount-of-substance ratio of about stem:[0.0915] mole of ^22^Ne per mole of Ne to about stem:[0.0948] mole of ^22^Ne per mole of Ne, and about stem:[0.0027] mole of ^21^Ne per mole of Ne to about stem:[0.0028] mole of ^21^Ne per mole of Ne. It has been established that the discrepancies previously found at the triple point are mainly due to the variable ^22^Ne content in the neon used for its realization [<<Pavese2008a,Pavese _et al._ 2008a>>, <<Pavese2008b,Pavese _et al._ 2008b>>].
 
-It is therefore specified that the ITS-90 temperature assigned to the triple point of neon, stem:[T_{90} ("Ne TP") = 24.6651 " K"], is taken to refer to amount-of-substance ratios of stem:[0.0925] mole of ^22^Ne per mole of Ne and stem:[0.0027] mole of ^21^Ne per mole of Ne. This is the IUPAC isotopic composition [<<Wieser2011,Wieser and Coplen 2011>>].
+It is therefore specified that the ITS-90 temperature assigned to the triple point of neon, stem:[ii(T)_{90} ("Ne TP") = 24.6651 " "rm(K)], is taken to refer to amount-of-substance ratios of stem:[0.0925] mole of ^22^Ne per mole of Ne and stem:[0.0027] mole of ^21^Ne per mole of Ne. This is the IUPAC isotopic composition [<<Wieser2011,Wieser and Coplen 2011>>].
 
 To correct for the isotopic reference ratios, the following function is specified (pseudo-binary approach):
 
 
 [stem]
 ++++
-T_{"meas"} = T_{90}("Ne TP") + k_0 + k_1 (""^{22}x + ""^{21}x//2) + k_2 (""^{22}x + ""^{21}x//2)^2 ,
+ii(T)_{"meas"} = ii(T)_{90}("Ne TP") + k_0 + k_1 (""^{22}x + ""^{21}x//2) + k_2 (""^{22}x + ""^{21}x//2)^2 ,
 ++++
 
 
-where ^22^x and ^21^x denote the amount-of-substance ratios of the sample for ^22^Ne and ^21^Ne, respectively. The current values for the coefficients, specified for the ITS-90, are given by Pavese _et al._ [<<Pavese2013,Pavese _et al._ 2013>>] as stem:[k_0 = -0.01382 " K"], stem:[k_1 = 0.147350 " K"], stem:[k_2 = –0.000779 " K"] (stem:[k_1] and stem:[k_2] are rounded to six decimal figures which influences the correction by less than stem:[1" "mu"K"]). The estimated standard uncertainty of the slope of the function amounts to stem:[400" "mu"K"] for a quasi IUPAC isotopic composition, and to stem:[200" "mu"K"] for a quasi-pure ^20^Ne [<<Steur2012,Steur _et al._ 2012>>]. If the neon fixed point of the ITS-90 is realized via the triple point of ^20^Ne, an uncertainty in stem:[k_0] amounting to stem:[30" "mu"K"] has also to be considered.
+where ^22^stem:[x] and ^21^stem:[x] denote the amount-of-substance ratios of the sample for ^22^Ne and ^21^Ne, respectively. The current values for the coefficients, specified for the ITS-90, are given by Pavese _et al._ [<<Pavese2013,Pavese _et al._ 2013>>] as stem:[k_0 = -0.01382 " "rm(K)], stem:[k_1 = 0.147350 " "rm(K)], stem:[k_2 = –0.000779 " "rm(K)] (stem:[k_1] and stem:[k_2] are rounded to six decimal figures which influences the correction by less than stem:[1" "rm(mu) rm(K)]). The estimated standard uncertainty of the slope of the function amounts to stem:[400" "rm(mu) rm(K)] for a quasi IUPAC isotopic composition, and to stem:[200" "rm(mu) rm(K)] for a quasi-pure ^20^Ne [<<Steur2012,Steur _et al._ 2012>>]. If the neon fixed point of the ITS-90 is realized via the triple point of ^20^Ne, an uncertainty in stem:[k_0] amounting to stem:[30" "rm(mu) rm(K)] has also to be considered.
 
 
 [bibliography]
@@ -177,7 +177,7 @@ where ^22^x and ^21^x denote the amount-of-substance ratios of the sample for ^2
 
 * [[[Pavese2008a,1]]] Pavese F., Fellmuth B., Hill, K.D., Head D., Hermier Y., Lipinski L., Nakano T., Peruzzi A., Sakurai H., Szmyrka-Grzebyk A., Steele A.G., Steur P.P.M., Tamura O., Tew W.L., Valkiers. S., Wolber. L., 2008a, _Int. J. Thermophys._, *29*, 57-66.
 
-* [[[Pavese2008b,1]]] Pavese F., Fellmuth B., Hill K.D., Head D., Hermier Y., Lipinski L., Nakano T., Peruzzi A., Sakurai H., Szmyrka-Grzebyk A., Steele A.G., Steur P.P.M., Tamura O., Tew W.L., Valkiers S., Wolber L., 2008b, "Status of progress towards the determination of the relationship between neon triple-point temperature stem:[T_{"tp"}] and isotopic amount composition stem:[x]", Comité Consultatif de Thermométrie, Working Document CCT/08-06.
+* [[[Pavese2008b,1]]] Pavese F., Fellmuth B., Hill K.D., Head D., Hermier Y., Lipinski L., Nakano T., Peruzzi A., Sakurai H., Szmyrka-Grzebyk A., Steele A.G., Steur P.P.M., Tamura O., Tew W.L., Valkiers S., Wolber L., 2008b, "Status of progress towards the determination of the relationship between neon triple-point temperature stem:[ii(T)_{"tp"}] and isotopic amount composition stem:[x]", Comité Consultatif de Thermométrie, Working Document CCT/08-06.
 
 * [[[Pavese2013,1]]] Pavese F., Steur P.P.M., Hermier Y., Hill K.D., Kim J.S., Lipinski L., Nagao K., Nakano T., Peruzzi A., Sparasci F., Szmyrka-Grzebyk A., Tamura O., Tew W.L., Valkiers S., van Geel J., 2013, "Dependence of the Triple Point Temperature of Neon on Isotopic Composition and its Implications for the ITS-90", In: _Temperature: Its Measurement and Control in Science and Industry_, Vol. 8.
 
