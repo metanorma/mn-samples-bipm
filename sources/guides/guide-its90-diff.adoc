@@ -23,27 +23,27 @@
 [.preface]
 == Abstract
 
-At the CCT's request, Working Group 4 (WG4) critically reviewed all available measurements of stem:[T - T_{90}] including constant-volume gas thermometry, acoustic gas thermometry, spectral radiation thermometry, total radiation thermometry, noise thermometry, and dielectric-constant gas thermometry. Consensus estimates are provided for stem:[T - T_{90}], for selected measurements from stem:[4.2 " K"] to stem:[1358 " K"], as well as a recommendation for analytic approximations to stem:[T - T_{90}] for the range stem:[0.65 " K"] to stem:[1358 " K"].
+At the CCT's request, Working Group 4 (WG4) critically reviewed all available measurements of stem:[ii(T) - ii(T)_{90}] including constant-volume gas thermometry, acoustic gas thermometry, spectral radiation thermometry, total radiation thermometry, noise thermometry, and dielectric-constant gas thermometry. Consensus estimates are provided for stem:[ii(T) - ii(T)_{90}], for selected measurements from stem:[4.2 " "rm(K)] to stem:[1358 " "rm(K)], as well as a recommendation for analytic approximations to stem:[ii(T) - ii(T)_{90}] for the range stem:[0.65 " "rm(K)] to stem:[1358 " "rm(K)].
 
 
 == Table of Differences
 
-<<tab1>> summarizes the best estimates of stem:[T - T_{90}] above stem:[4.2 " K"] as of 2010. In general, a weighted average was formed using the uncertainties identified by WG4. For details see <<Fischer2011>>. The data are shown in <<fig1>> and <<fig2>>.
+<<tab1>> summarizes the best estimates of stem:[ii(T) - ii(T)_{90}] above stem:[4.2 " "rm(K)] as of 2010. In general, a weighted average was formed using the uncertainties identified by WG4. For details see <<Fischer2011>>. The data are shown in <<fig1>> and <<fig2>>.
 
 
 [[tab1]]
-.Estimates of stem:[T - T_{90}] between stem:[4.2 " K"] and stem:[1358 " K"]. The transitions of the defining fixed pointsand secondary reference points of the ITS-90 are marked in the 2^nd^ and 6^th^ columns. All uncertainties are standard uncertainties (stem:[k = 1]). The differences for temperatures above stem:[1358 " K"] are under investigation by Working Group 5. The results presented here may be extrapolated above stem:[1358 " K"] using Planck's law.
+.Estimates of stem:[ii(T) - ii(T)_{90}] between stem:[4.2 " "rm(K)] and stem:[1358 " "rm(K)]. The transitions of the defining fixed pointsand secondary reference points of the ITS-90 are marked in the 2^nd^ and 6^th^ columns. All uncertainties are standard uncertainties (stem:[k = 1]). The differences for temperatures above stem:[1358 " "rm(K)] are under investigation by Working Group 5. The results presented here may be extrapolated above stem:[1358 " "rm(K)] using Planck's law.
 [cols="8*"]
 |===
-a| stem:[T_{90}] +
+a| stem:[ii(T)_{90}] +
 (K)
-| a| stem:[T - T_{90}] +
+| a| stem:[ii(T) - ii(T)_{90}] +
 (mK)
 a| stem:[u] +
 (mK)
-a| stem:[T_{90}] +
+a| stem:[ii(T)_{90}] +
 (K)
-| a| stem:[T - T_{90}] +
+| a| stem:[ii(T) - ii(T)_{90}] +
 (mK)
 a| stem:[u] +
 (mK)
@@ -75,34 +75,34 @@ a| stem:[u] +
 
 == Interpolation Functions
 
-If it is not convenient to use <<tab1>>, the differences stem:[T - T_{90}] may be approximated by the following expressions. Above stem:[70 " K"], the relative differences of the interpolation functions (with respect to the values of <<tab1>>) are less than 15 %, except at stem:[600 " K"] and the gold point.
+If it is not convenient to use <<tab1>>, the differences stem:[ii(T) - ii(T)_{90}] may be approximated by the following expressions. Above stem:[70 " "rm(K)], the relative differences of the interpolation functions (with respect to the values of <<tab1>>) are less than 15 %, except at stem:[600 " "rm(K)] and the gold point.
 
-From stem:[0.65 " K"] to stem:[2 " K"], use the polynomial for the temperature scale PTB-2006 (based on the ^3^Helium vapor-pressure) <<Engert2007>> with
-
-
-[stem%unnumbered]
-++++
-T - T_{90} -= T_{2006} - T_{90}.
-++++
-
-
-Below stem:[1 " K"], stem:[T_{2006}] is identical to stem:[T_{"PLTS-"2000}].
-
-From stem:[2 " K"] to stem:[8 " K"],
+From stem:[0.65 " "rm(K)] to stem:[2 " "rm(K)], use the polynomial for the temperature scale PTB-2006 (based on the ^3^Helium vapor-pressure) <<Engert2007>> with
 
 
 [stem%unnumbered]
 ++++
-T - T_{90} -= 0.
+ii(T) - ii(T)_{90} -= ii(T)_{2006} - ii(T)_{90}.
 ++++
 
 
-From stem:[8 " K"] to stem:[273.16 " K"],
+Below stem:[1 " "rm(K)], stem:[ii(T)_{2006}] is identical to stem:[ii(T)_{"PLTS-"2000}].
+
+From stem:[2 " "rm(K)] to stem:[8 " "rm(K)],
+
+
+[stem%unnumbered]
+++++
+ii(T) - ii(T)_{90} -= 0.
+++++
+
+
+From stem:[8 " "rm(K)] to stem:[273.16 " "rm(K)],
 
 [[eq1]]
 [stem]
 ++++
-(T - T_{90})//"mK" = sum_{i=0..7} b_i xx (log_{10} (T_{90}//273.16 " K"))^{i+1}
+(ii(T) - ii(T)_{90})//rm(mK) = sum_{i=0..7} b_i xx (log_{10} (ii(T)_{90}//273.16 " "rm(K)))^{i+1}
 ++++
 
 
@@ -120,14 +120,14 @@ b_4 = -4.19898 xx 10^3 " " b_5 = -2.61319 xx 10^3 " " b_6 = -8.41922 xx 10^2 " "
 ++++
 
 
-The derivative stem:["d"(T - T_{90})//"d"T_{90}] at the triple point of water is stem:[7.0 xx 10^{-5}].
+The derivative stem:["d"(ii(T) - ii(T)_{90})//"d"ii(T)_{90}] at the triple point of water is stem:[7.0 xx 10^{-5}].
 
-From stem:[273.16 " K"] to stem:[1357.77 " K"] (copper point):
+From stem:[273.16 " "rm(K)] to stem:[1357.77 " "rm(K)] (copper point):
 
 [[eq2]]
 [stem]
 ++++
-(T - T_{90}) // "mK" = (T_{90} // "K") sum_{i=0..4} c_i xx (273.16 " K" // T_{90})^{2i}
+(ii(T) - ii(T)_{90}) // rm(mK) = (ii(T)_{90} // rm(K)) sum_{i=0..4} c_i xx (273.16 " "rm(K) // ii(T)_{90})^{2i}
 ++++
 
 
@@ -144,12 +144,12 @@ The derivative at the triple point of water is stem:[10.1 xx 10^{-5}], resulting
 
 
 [[fig1]]
-.Overview of consensus estimates for stem:[T - T_{90}] with emphasis on the range above the triple point of water. The smooth functions (<<eq1>> and <<eq2>>, black line) are interpolating the mean values (black dots). Error bars represent uncertainties with stem:[k = 1].
+.Overview of consensus estimates for stem:[ii(T) - ii(T)_{90}] with emphasis on the range above the triple point of water. The smooth functions (<<eq1>> and <<eq2>>, black line) are interpolating the mean values (black dots). Error bars represent uncertainties with stem:[k = 1].
 image::fig1.png[]
 
 
 [[fig2]]
-.Enlargement of the range between stem:[4.2 " K"] and stem:[80 " K"] of consensus estimates for stem:[T - T_{90}]. The smooth function (<<eq1>>, black line) interpolates the mean values (black dots) above stem:[8 " K"]. Error bars represent uncertainties with stem:[k = 1].
+.Enlargement of the range between stem:[4.2 " "rm(K)] and stem:[80 " "rm(K)] of consensus estimates for stem:[ii(T) - ii(T)_{90}]. The smooth function (<<eq1>>, black line) interpolates the mean values (black dots) above stem:[8 " "rm(K)]. Error bars represent uncertainties with stem:[k = 1].
 image::fig2.png[]
 
 
