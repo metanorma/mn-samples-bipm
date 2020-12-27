@@ -44,11 +44,11 @@ A comparison of the ozone reference standards of the Office of Environment and H
 == Terms and definitions
 
 stem:[x_("nom")]:: nominal ozone amount-of-substance fraction in dry air furnished by the ozone generator
-stem:[x_("A",i)]:: stem:[i]th measurement of the nominal value stem:[x_("nom")] by the photometer stem:[ii(A)]
-stem:[bar x_"A"]:: the mean of stem:[ii(N)] measurements of the nominal value stem:[x_("nom")] measured by the photometer stem:[A : bar x_A = 1/N sum_(i=1)^N x_(A,i)]
-stem:[s_"A"]:: standard deviation of stem:[ii(N)] measurements of the nominal value stem:[x_("nom")] measured by the photometer stem:[ii(A) : s_"A"^2 = 1/(ii(N)-1) sum_(i=1)^ii(N)(x_("A",i)-bar x_"A")^2]
+stem:[x_("A",i)]:: stem:[i]th measurement of the nominal value stem:[x_("nom")] by the photometer stem:["A"]
+stem:[bar x_"A"]:: the mean of stem:[ii(N)] measurements of the nominal value stem:[x_("nom")] measured by the photometer stem:["A" : bar x_"A" = 1/ii(N) sum_(i=1)^ii(N) x_("A",i)]
+stem:[s_"A"]:: standard deviation of stem:[ii(N)] measurements of the nominal value stem:[x_("nom")] measured by the photometer stem:["A" : s_"A"^2 = 1/(ii(N)-1) sum_(i=1)^ii(N)(x_("A",i)-bar x_"A")^2]
 
-* The result of the linear regression fit performed between two sets of data measured by the photometers stem:[ii(A)] and stem:[ii(B)] during a comparison is written: stem:[x_"A" =  a_(ii(A),ii(B))x_"B" + b_(ii(A),ii(B))]. With this notation, the photometer stem:[ii(A)] is compared against the photometer stem:[ii(B)]. stem:[a_(ii(A),ii(B))] is dimensionless and stem:[b_(ii(A),ii(B))] is expressed in units of nmol/mol.
+* The result of the linear regression fit performed between two sets of data measured by the photometers stem:["A"] and stem:["B"] during a comparison is written: stem:[x_"A" =  a_("A,B")x_"B" + b_("A,B")]. With this notation, the photometer stem:["A"] is compared against the photometer stem:["B"]. stem:[a_("A,"B)] is dimensionless and stem:[b_("A,B")] is expressed in units of nmol/mol.
 
 == Measurement schedule
 
@@ -118,12 +118,12 @@ stem:[ii(T)]:: is the measured temperature of the cells;
 stem:[ii(T)_("std")]:: is the standard temperature (273.15 K);
 stem:[ii(P)]:: is the measured pressure of the cells;
 stem:[ii(P)_("std")]:: is the standard pressure (101.325 kPa);
-stem:[ii(D)]:: is the product of transmittances of two cells, with the transmittance (stem:[ii(T)_r]) of one cell defined as
+stem:[ii(D)]:: is the product of transmittances of two cells, with the transmittance (stem:[ii(T)_"r"]) of one cell defined as
 
 [[eq2]]
 [stem]
 ++++
-ii(T)_r = ii(I)_("ozone")/ii(I)_("air")
+ii(T)_"r" = ii(I)_("ozone")/ii(I)_("air")
 ++++
 
 where
