@@ -46,12 +46,12 @@ The BIPM has an ionometric primary standard for graphite but no comparisons in t
 
 Two comparison exercises were carried out. Firstly, a determination of absorbed dose to graphite was made by the LNHB in the BIPM reference beam using a LNHB transfer chamber in the BIPM graphite phantom. The BIPM reference beam is a collimated 10 cm stem:[xx] 10 cm square field for which the appropriate dose conversion was calculated using the BIPM phase-space files and geometries. Secondly, complementary measurements were carried out using a BIPM transfer chamber in the LNHB Co-60 reference beam. However, the LNHB beam has a circular profile and to determine the BIPM absorbed dose it would be necessary for the BIPM to calculate an appropriate conversion factor using the LNHB phase-space files and geometry. For this reason, only the results obtained at the BIPM have been exploited in this report.
 
-The comparison result is represented by the ratio stem:[R],
+The comparison result is represented by the ratio stem:[ii(R)],
 
 [[eq1a]]
 [stem,subsequence=A]
 ++++
-R = (D_("G,BIPM"))/(D_("G,LNHB")),
+ii(R) = (ii(D)_("G,BIPM"))/(ii(D)_("G,LNHB")),
 ++++
 
 and the associated combined relative standard uncertainty stem:[u_c],
@@ -59,7 +59,7 @@ and the associated combined relative standard uncertainty stem:[u_c],
 [[eq1b]]
 [stem,subsequence=A]
 ++++
-u_c ( D_("G,BIPM")/D_("G,LNHB") ).
+u_c ( ii(D)_("G,BIPM")/ii(D)_("G,LNHB") ).
 ++++
 
 The comparison measurements were carried out at the BIPM from 1 to 2 March 2011.
@@ -75,7 +75,7 @@ Before the comparison, measurements were carried out at the LNHB, using the LNHB
 [[eq2]]
 [stem]
 ++++
-dot(D)_("G") = N_("D,G")I_("G")*sum_i k_i .
+dot(ii(D))_("G") = ii(N)_("D,G")ii(I)_("G")*sum_i k_i .
 ++++
 
 [[fig1]]
@@ -84,70 +84,70 @@ image::img01.png[]
 
 [[table1]]
 [cols="<,^,^"]
-.Calibration coefficient for the NE 2571 transfer chamber (serial number 642) of the LNHB, corrected for the asymmetry of the disc containing the chamber (stem:[k_("asym")]), the polarity effect (stem:[k_("pol")]) and ion recombination (stem:[k_("s")]). The calibration coefficient is given for the reference conditions stem:[p=101.325" kPa"], stem:[T = 20.0" °C"] and stem:["RH"= 0 %].
+.Calibration coefficient for the NE 2571 transfer chamber (serial number 642) of the LNHB, corrected for the asymmetry of the disc containing the chamber (stem:[k_("asym")]), the polarity effect (stem:[k_("pol")]) and ion recombination (stem:[k_("s")]). The calibration coefficient is given for the reference conditions stem:[p=101.325" "rm(kPa)], stem:[ii(T) = 20.0" "rm(°C)] and stem:["RH"= 0 %].
 |===
 ^| Parameter h| y h| [ stem:[u(y)_c //y] ] / stem:[10^(–3)]
 | stem:[k_("asym")] | 0.999 94 | 0.08
 | stem:[k_("pol")] | 0.998 83 | 0.33
 | stem:[k_("s")] | 1.001 19 | 0.50
 | stem:[k_("rn")] | 1.000 4 | 0.45
-| stem:[N_("D,G")] / [ stem:[Gy*C^(–1)] ] | 3.983 stem:[xx] 10^7^ | 2.56
+| stem:[N_("D,G")] / [ stem:[rm(Gy)*rm(C)^(–1)] ] | 3.983 stem:[xx] 10^7^ | 2.56
 |===
 
 === The BIPM method to determine the absorbed dose to graphite
 
 ==== Measurement principle
 
-The BIPM absorbed-dose graphite calorimeter is described in <<picard4>>, <<picard5>>. No electrical heating is employed, but rather the specific heat capacity of the graphite core stem:[c_(p,"c")] has been determined previously in a separate experiment <<picard6>>. Quasi-adiabatic conditions are achieved by irradiating the core in a graphite jacket that is smaller than the radiation field, resulting in a relatively uniform dose distribution in the jacket. This arrangement is mounted in a PMMA footnote:[Polymethylmethacrylate] support and vacuum container with graphite build-up plates to centre the core at the reference depth of 5 g cm^-2^. The mean absorbed dose stem:[D_("c")] in the graphite core is determined using
+The BIPM absorbed-dose graphite calorimeter is described in <<picard4>>, <<picard5>>. No electrical heating is employed, but rather the specific heat capacity of the graphite core stem:[c_(p,"c")] has been determined previously in a separate experiment <<picard6>>. Quasi-adiabatic conditions are achieved by irradiating the core in a graphite jacket that is smaller than the radiation field, resulting in a relatively uniform dose distribution in the jacket. This arrangement is mounted in a PMMA footnote:[Polymethylmethacrylate] support and vacuum container with graphite build-up plates to centre the core at the reference depth of 5 g cm^-2^. The mean absorbed dose stem:[ii(D)_("c")] in the graphite core is determined using
 
 [[eq3]]
 [stem]
 ++++
-D_("c") = c_(p,"c")(T) * Delta T * k_("imp"),
+D_("c") = c_(p,"c")(ii(T)) * Delta ii(T) * k_("imp"),
 ++++
 
-where stem:[Delta T] is the temperature rise in the core and stem:[k_("imp")] corrects for non-graphite materials in the core.
+where stem:[Delta ii(T)] is the temperature rise in the core and stem:[k_("imp")] corrects for non-graphite materials in the core.
 
 Two nominally identical parallel-plate ionization chambers with graphite walls and collector, similar in design to the existing BIPM standards for air kerma and absorbed dose to water, were fabricated for the determination of the absorbed dose to graphite from the measured absorbed dose to the graphite core. The first chamber (calo 3) is housed in a graphite jacket, nominally identical to the calorimeter jacket, and is irradiated in the same PMMA support and phantom arrangement. The second chamber (calo5) is mounted in a large graphite phantom and irradiated with its centre at 5 g cm^–2^. These measurement arrangements are represented schematically in <<fig2>>.
 
 [[fig2]]
-.Schematic representation of the three measurement situations giving rise to Monte Carlo calculations; the yellow arrow indicates the incoming beam. Two of the measurements are made in a common cubic PMMA phantom. a) The calorimeter is used in vacuum and stem:[D_("c")] is both measured and calculated. b) The graphite core is replaced by the transfer ionization chamber at atmospheric pressure. The ionization charge in graphite stem:[Q_("c")] is measured and the corresponding cavity dose stem:[D_("cav,c")] calculated. c) The ionization chamber is placed in a large graphite phantom. The ionization charge in graphite stem:[Q_("G")] is measured and the corresponding cavity dose stem:[D_("cav,G")] calculated. The mean absorbed dose to graphite stem:[D_("G")] in the absence of the chamber is also calculated for a graphite detector with the same dimensions as the cavity. It follows that a correction factor stem:[k_("rn")] is required for the radial non-uniformity of the radiation field over this dimension, measured for a homogeneous graphite phantom.
+.Schematic representation of the three measurement situations giving rise to Monte Carlo calculations; the yellow arrow indicates the incoming beam. Two of the measurements are made in a common cubic PMMA phantom. a) The calorimeter is used in vacuum and stem:[ii(D)_("c")] is both measured and calculated. b) The graphite core is replaced by the transfer ionization chamber at atmospheric pressure. The ionization charge in graphite stem:[ii(Q)_("c")] is measured and the corresponding cavity dose stem:[ii(D)_("cav,c")] calculated. c) The ionization chamber is placed in a large graphite phantom. The ionization charge in graphite stem:[ii(Q)_("G")] is measured and the corresponding cavity dose stem:[ii(D)_("cav,G")] calculated. The mean absorbed dose to graphite stem:[ii(D)_("G")] in the absence of the chamber is also calculated for a graphite detector with the same dimensions as the cavity. It follows that a correction factor stem:[k_("rn")] is required for the radial non-uniformity of the radiation field over this dimension, measured for a homogeneous graphite phantom.
 image::img02.png[]
 
-The method adopted by the BIPM combining calorimetric and ionometric measurements with Monte Carlo simulations to determine the absorbed dose to water is described in detail in <<burns7>> and has previously been applied for the determination of absorbed dose to water in <<picard8>>, <<picard9>>, <<picard10>>. In analogy, the absorbed dose to graphite stem:[D_("G")] can be evaluated as
+The method adopted by the BIPM combining calorimetric and ionometric measurements with Monte Carlo simulations to determine the absorbed dose to water is described in detail in <<burns7>> and has previously been applied for the determination of absorbed dose to water in <<picard8>>, <<picard9>>, <<picard10>>. In analogy, the absorbed dose to graphite stem:[ii(D)_("G")] can be evaluated as
 
 [[eq4]]
 [stem]
 ++++
-D_("G") = D_("c") (Q_("G"))/(Q_("C")) ( (D_("G"))/(D_("C")) )^(MC) ( (D_("cav,c"))/(D_("cav,G")) )^(MC) k_("m"),
+ii(D)_("G") = ii(D)_("c") (ii(Q)_("G"))/(ii(Q)_("C")) ( (ii(D)_("G"))/(ii(D)_("C")) )^("MC") ( (ii(D)_("cav,c"))/(ii(D)_("cav,G")) )^("MC") k_("m"),
 ++++
 
 where
 
-stem:[D_("c")]:: measured absorbed dose to the graphite core;
-stem:[Q_("c")]:: ionization charge measured when the transfer chamber is positioned in the graphite jacket, replacing the core;
-stem:[Q_("G")]:: ionization charge measured when the transfer chamber is positioned in the graphite phantom;
-stem:[(D_("G")/D_("c"))^(MC)]:: calculated ratio of absorbed dose to the graphite phantom and to the graphite core using Monte Carlo simulations;
-stem:[((D_("cav,c"))/(D_("cav,G")) )^(MC)]:: calculated ratio of cavity doses in the two graphite arrangements using Monte Carlo simulations;
+stem:[ii(D)_("c")]:: measured absorbed dose to the graphite core;
+stem:[ii(Q)_("c")]:: ionization charge measured when the transfer chamber is positioned in the graphite jacket, replacing the core;
+stem:[ii(Q)_("G")]:: ionization charge measured when the transfer chamber is positioned in the graphite phantom;
+stem:[(ii(D)_("G")/ii(D)_("c"))^("MC")]:: calculated ratio of absorbed dose to the graphite phantom and to the graphite core using Monte Carlo simulations;
+stem:[((ii(D)_("cav,c"))/(ii(D)_("cav,G")) )^("MC")]:: calculated ratio of cavity doses in the two graphite arrangements using Monte Carlo simulations;
 stem:[k_("rn")]:: measured correction for radial non-uniformity in graphite.
 
-In abbreviated form, stem:[D_("G")] can be expressed as
+In abbreviated form, stem:[ii(D)_("G")] can be expressed as
 
 [[eq5]]
 [stem]
 ++++
-D_("G") = D_("c") (Q_("G"))/(Q_("c")) C_("G,c") k_"m",
+ii(D)_("G") = ii(D)_("c") (ii(Q)_("G"))/(ii(Q)_("c")) ii(C)_("G,c") k_"m",
 ++++
 
-where stem:[C_("G,c")] represents the total Monte Carlo conversion factor.
+where stem:[ii(C)_("G,c")] represents the total Monte Carlo conversion factor.
 
 ==== Monte Carlo simulations
 
-The Monte Carlo calculations are described in detail in <<burns7>> and make use of the PENELOPE code <<salvat11>>. As noted in the preceding section, four geometries are simulated and the accuracy of the method relies on the symmetry of the geometries and the simulation parameters. A novel aspect of this is the use of a disc-shaped transfer chamber whose total graphite thickness on-axis is the same as that of the calorimeter core. Very few of the geometrical bodies appear in only one of the four simulations so that the fine details should not need to be simulated. Nevertheless, a very detailed geometrical model was constructed. Similarly, although detailed electron transport should not be essential for the same reasons, sufficient detail was used to permit the cavity dose to be calculated in a way that gives the same results as a full calculation using event-by-event electron transport (as demonstrated in an earlier work <<burns12>>). Reference <<burns7>> includes a detailed uncertainty analysis for the calculation of the conversion factor stem:[C_("w,c")] for the determination of absorbed dose to water.
+The Monte Carlo calculations are described in detail in <<burns7>> and make use of the PENELOPE code <<salvat11>>. As noted in the preceding section, four geometries are simulated and the accuracy of the method relies on the symmetry of the geometries and the simulation parameters. A novel aspect of this is the use of a disc-shaped transfer chamber whose total graphite thickness on-axis is the same as that of the calorimeter core. Very few of the geometrical bodies appear in only one of the four simulations so that the fine details should not need to be simulated. Nevertheless, a very detailed geometrical model was constructed. Similarly, although detailed electron transport should not be essential for the same reasons, sufficient detail was used to permit the cavity dose to be calculated in a way that gives the same results as a full calculation using event-by-event electron transport (as demonstrated in an earlier work <<burns12>>). Reference <<burns7>> includes a detailed uncertainty analysis for the calculation of the conversion factor stem:[ii(C)_("w,c")] for the determination of absorbed dose to water.
 
-Phase-space files of incident photons at 90 cm from the BIPM Co-60 source have earlier been generated using the PENELOPE code <<salvat11>>, <<burns13>>. In total, stem:[2.5 xx 10^7] independent photons are available, distributed for convenience in 24 files. The phase-space files have here been used to calculate stem:[C_("G,c")] rather than stem:[C_("w,G")].
+Phase-space files of incident photons at 90 cm from the BIPM Co-60 source have earlier been generated using the PENELOPE code <<salvat11>>, <<burns13>>. In total, stem:[2.5 xx 10^7] independent photons are available, distributed for convenience in 24 files. The phase-space files have here been used to calculate stem:[ii(C)_("G,c")] rather than stem:[ii(C)_("w,G")].
 
-The result of the calculations for stem:[C_("G,c")] is listed in <<table3>>. The figures in parentheses represent the combined standard uncertainty in the trailing digits based on the analysis for stem:[C_("w,c")] presented in <<burns7>>, including components arising from the simulation geometries, input spectra, radiation transport mechanisms and cross-section data used. The value is slightly reduced from the 1.7 parts in 10^3^ given in <<burns7>> because the ratio of photon cross sections for water and graphite does not enter into the present work. The statistical standard uncertainty for stem:[C_("w,c"^2)] is around 0.03 %.
+The result of the calculations for stem:[ii(C)_("G,c")] is listed in <<table3>>. The figures in parentheses represent the combined standard uncertainty in the trailing digits based on the analysis for stem:[ii(C)_("w,c")] presented in <<burns7>>, including components arising from the simulation geometries, input spectra, radiation transport mechanisms and cross-section data used. The value is slightly reduced from the 1.7 parts in 10^3^ given in <<burns7>> because the ratio of photon cross sections for water and graphite does not enter into the present work. The statistical standard uncertainty for stem:[ii(C)_("w,c"^2)] is around 0.03 %.
 
 ==== BIPM Graphite Phantom
 
@@ -180,9 +180,9 @@ image::img06.png[]
 
 [[table2]]
 [cols="<,^,^,^"]
-.Components of the phantom assembly upstream the measurement plane. The density stem:[rho] and mass thickness stem:[d_("m")] of graphite phantom components used in the comparison are given for the components in the centre of the beam.
+.Components of the phantom assembly upstream the measurement plane. The density stem:[ii(rho)] and mass thickness stem:[d_("m")] of graphite phantom components used in the comparison are given for the components in the centre of the beam.
 |===
-^| component ^| symbol | stem:[rho // g" cm"^(–3)] | stem:[d_("m") // g" cm"^(–2)]
+^| component ^| symbol | stem:[ii(rho) // g" "rm(cm)^(–3)] | stem:[d_("m") // g" "rm(cm)^(–2)]
 | {a} front disc in graphite a| [%unnumbered]
 image::img07.png[] | 1.741 | 2.006
 | {b} BIPM small graphite cylinder a| [%unnumbered]
@@ -209,12 +209,12 @@ image::img14.png[]
 
 === Measurement Results
 
-The results obtained using the BIPM calorimeter and calo5 ionization chamber are listed in <<table3>>. The parameters stem:[dot(D)_("c")] and stem:[I_("c")] are the result of many repeat measurements in the small calorimeter phantom (<<fig2, Figure 2(a)>> and <<fig2, Figure 2(b)>>, respectively) between 2009 to 2012 (including measurements made after the present comparison). The parameter stem:[I_("G")] represents the current measured for this comparison in the large phantom (<<fig5>>) at a mass thickness of 4.998 g cm^–2^ in compensated mode. The difference between these conditions for stem:[I_("G")] and the non-compensated conditions used for the LNHB ionization chamber (<<fig4>>) is accounted for by the Monte Carlo factor stem:[C_("G,c")] in the table. Using <<eq5>>, the absorbed dose rate to graphite stem:[dot(D)_("c,BIPM")] in the CisBIO Co-60 beam at 2011-01-01 00:00:00 UTC and at the reference depth of 4.945 g cm^–2^ (non-compensated) is determined as
+The results obtained using the BIPM calorimeter and calo5 ionization chamber are listed in <<table3>>. The parameters stem:[dot(ii(D))_("c")] and stem:[ii(I)_("c")] are the result of many repeat measurements in the small calorimeter phantom (<<fig2, Figure 2(a)>> and <<fig2, Figure 2(b)>>, respectively) between 2009 to 2012 (including measurements made after the present comparison). The parameter stem:[ii(I)_("G")] represents the current measured for this comparison in the large phantom (<<fig5>>) at a mass thickness of 4.998 g cm^–2^ in compensated mode. The difference between these conditions for stem:[ii(I)_("G")] and the non-compensated conditions used for the LNHB ionization chamber (<<fig4>>) is accounted for by the Monte Carlo factor stem:[ii(C)_("G,c")] in the table. Using <<eq5>>, the absorbed dose rate to graphite stem:[dot(ii(D))_("c,BIPM")] in the CisBIO Co-60 beam at 2011-01-01 00:00:00 UTC and at the reference depth of 4.945 g cm^–2^ (non-compensated) is determined as
 
 [[eq7]]
 [stem]
 ++++
-dot(D)_("c,BIPM") = 5.333" mG y"*"s"^(-1)
+dot(ii(D))_("c,BIPM") = 5.333" "rm(m)" "rm(Gy)*rm(s)^(-1)
 ++++
 
 with an associated relative standard uncertainty of 3.6 parts in 10^3^.
@@ -223,38 +223,38 @@ with an associated relative standard uncertainty of 3.6 parts in 10^3^.
 .Measured or calculated parameters used to determine the absorbed dose to graphite in the BIPM Co-60 reference beam using the BIPM calorimeter.
 |===
 | Parameter | stem:[y] | [ stem:[u(y)//y] ] / stem:[10^(-3)]
-| stem:[dot(D)_("c")] / [ stem:["Gy"*"min"^(-1)] ] | 0.2968 | 1.5
-| stem:[I_("c")] / pA footnote:f7[Corrected for volume, orientation and polarization.] | 1286.8 | 0.5 footnote:f8[Uncertainty of positioning included in the estimate]
+| stem:[dot(ii(D))_("c")] / [ stem:[rm(Gy)*rm(min)^(-1)] ] | 0.2968 | 1.5
+| stem:[ii(I)_("c")] / pA footnote:f7[Corrected for volume, orientation and polarization.] | 1286.8 | 0.5 footnote:f8[Uncertainty of positioning included in the estimate]
 | stem:[k_("rn,G"] [17] | 1.0032 | 1.0
-| stem:[C_("G,c")] | 1.0080 | 1.4
-| stem:[I_("G")] / pA footnote:f7[] | 1371.8 | 0.5 footnote:f8[]
-| stem:[d_("m")] / [ stem:["g"*"cm"^(-2)] ] | 4.998 | 0.4
+| stem:[ii(C)_("G,c")] | 1.0080 | 1.4
+| stem:[ii(I)_("G")] / pA footnote:f7[] | 1371.8 | 0.5 footnote:f8[]
+| stem:[d_("m")] / [ stem:[rm(g)*rm(cm)^(-2)] ] | 4.998 | 0.4
 |===
 
 The LNHB disc housing the transfer ionization chamber (serial number 642) was placed in the BIPM graphite phantom, replacing the corresponding BIPM disc (<<fig5>>). The results obtained for the LNHB transfer chamber at the BIPM are given in <<table4>>. A decay correction has been included to compare the data on 2008-01-01 (using the same Co-60 half-life for the LNHB and BIPM determinations). Further, the BIPM measurement system gives currents normalized to 0° C and for a relative humidity of 50 %, giving rise to two supplementary corrections.
 
 [[table4]]
 [cols="<,^,^"]
-.Measured or calculated parameters used to determine the absorbed dose to graphite in the BIPM Co-60 reference beam using the LNHB transfer chamber. The calibration coefficient stem:[N_("Dc")] for the transfer chamber is given for the reference conditions stem:[p = 101.325" kPa"], stem:[T = 20.0" °C"] and stem:["RH"= 0 %], and consequently the ionization current Ic measured at the BIPM is normalized to these conditions. Correction factors are applied for the asymmetry of the LNHB disc (stem:[k_("asym")]), polarity (stem:[k_("pol")]), recombination (stem:[k_("s")]), radial non-uniformity (stem:[k_("rn")]) and source decay (stem:[k_("decay")]).
+.Measured or calculated parameters used to determine the absorbed dose to graphite in the BIPM Co-60 reference beam using the LNHB transfer chamber. The calibration coefficient stem:[ii(N)_("Dc")] for the transfer chamber is given for the reference conditions stem:[p = 101.325" "rm(kPa)], stem:[ii(T) = 20.0" "rm(°C)] and stem:["RH"= 0 %], and consequently the ionization current Ic measured at the BIPM is normalized to these conditions. Correction factors are applied for the asymmetry of the LNHB disc (stem:[k_("asym")]), polarity (stem:[k_("pol")]), recombination (stem:[k_("s")]), radial non-uniformity (stem:[k_("rn")]) and source decay (stem:[k_("decay")]).
 |===
 ^| Parameter h| stem:[y] h| [ stem:[u(y)_c //y] ] / stem:[10^(–3)]
-| stem:[N_("Dc")] / [ stem:["Gy"*"C"^(–1)] ] | 3.983 stem:[xx] 107 | 2.56
-| stem:[I_("c")] / pA | 142.87 | 0.1
+| stem:[ii(N)_("Dc")] / [ stem:[rm(Gy)*rm(C)^(–1)] ] | 3.983 stem:[xx] 107 | 2.56
+| stem:[ii(I)_("c")] / pA | 142.87 | 0.1
 | stem:[k_("T")] | 0.9318 | 0.2
 | stem:[k_("RH")] | 0.997 | 0.3
 | stem:[k_("asym")] | 0.999 94 | 0.08
 | stem:[k_("pol")] | 0.998 83 | 0.33
 | stem:[k_("s")] | 1.001 19 | 0.50
 | stem:[k_("rn,c")] | 1.000 5 | 0.1
-| stem:[dot(D)_("c")] / [ stem:["Gy"*"min"^(-1)] ] | 5.289 | 2.6
+| stem:[dot(ii(D))_("c")] / [ stem:[rm(Gy)*rm(min)^(-1)] ] | 5.289 | 2.6
 |===
 
-Using <<eq2>>, the LNHB determination of absorbed dose rate to graphite stem:[dot(D)_("c,LNHB")] in the CisBIO Co-60 beam at 2011-01-01 00:00:00 UTC and at the reference depth of 4.945 g cm^–2^ (non-compensated) is determined as
+Using <<eq2>>, the LNHB determination of absorbed dose rate to graphite stem:[dot(ii(D))_("c,LNHB")] in the CisBIO Co-60 beam at 2011-01-01 00:00:00 UTC and at the reference depth of 4.945 g cm^–2^ (non-compensated) is determined as
 
 [[eq8]]
 [stem]
 ++++
-dot(D)_("c,LNHB") = 5.289" mG y"*"s"^(-1)
+dot(ii(D))_("c,LNHB") = 5.289" "rm(m)" "rm(Gy)*rm(s)^(-1)
 ++++
 
 with an associated relative standard uncertainty of 2.6 parts in 10^3^.
@@ -266,7 +266,7 @@ From <<eq7>> and <<eq8>> the comparison result is derived as
 [[eq9]]
 [stem]
 ++++
-Delta = (dot(D)_("c,LNHB"))/(dot(D)_("c,BIPM")) = 0.992 ,
+Delta = (dot(ii(D))_("c,LNHB"))/(dot(ii(D))_("c,BIPM")) = 0.992 ,
 ++++
 
 with a combined relative standard uncertainty stem:[u_("c")] of 5 parts in 10^3^.
@@ -277,7 +277,7 @@ The use of composite graphite phantoms containing a chamber holder, outer suppor
 
 Furthermore, the mean bulk density measured (and simulated) for a given graphite component might not be a sufficiently good representation, especially if local inhomogeneities exist and in particular for the upstream graphite components close to the beam axis. The fact that the LNHB and BIPM transfer chambers are very different in cross section might also be relevant (aside from the first-order effect correct by stem:[k_("rn")]). The magnitude of these effects and the associated uncertainty are difficult to estimate but might be possible to evaluate using a similar technique to that of Boutillon <<comite16>>. These effects represent a significant limitation when measuring absorbed dose to graphite.
 
-To best take account of this in the present comparison, the BIPM absorbed-dose conversion from stem:[D_("c")] (the measured dose to the calorimeter core in its small phantom, i.e. jacket) to stem:[D_("G")] (the dose estimate used for the comparison), was calculated for the precise conditions of irradiation of the BIPM and LNHB chambers. In other words, the cavity dose stem:[D_("cav,G")] was calculated for the composite phantom used for the BIPM chamber, while stem:[D_("G")] was calculated for the phantom used for the LNHB transfer chamber (replacing the chamber itself by graphite of the same density as the chamber holder). By adopting this method, any remaining errors are expected to be below 0.1 % and an additional uncertainty of this value is included. Note that by using this method, slight deviations of the chamber depths from 5 g cm^–2^ are taken into account and no depth corrections need be applied.
+To best take account of this in the present comparison, the BIPM absorbed-dose conversion from stem:[ii(D)_("c")] (the measured dose to the calorimeter core in its small phantom, i.e. jacket) to stem:[ii(D)_("G")] (the dose estimate used for the comparison), was calculated for the precise conditions of irradiation of the BIPM and LNHB chambers. In other words, the cavity dose stem:[ii(D)_("cav,G")] was calculated for the composite phantom used for the BIPM chamber, while stem:[ii(D)_("G")] was calculated for the phantom used for the LNHB transfer chamber (replacing the chamber itself by graphite of the same density as the chamber holder). By adopting this method, any remaining errors are expected to be below 0.1 % and an additional uncertainty of this value is included. Note that by using this method, slight deviations of the chamber depths from 5 g cm^–2^ are taken into account and no depth corrections need be applied.
 
 A BIPM.RI(I)-K6 comparison of calorimetric determinations of absorbed dose to water in accelerator photon beams was carried out between the LNHB and the BIPM in March 2012 <<picard18>>. For these beams, the BIPM standard is the same graphite calorimeter; however, for the LNHB the high-energy standard is a combination of results based on graphite and water calorimeters. The present result is in consistency with the results of the comparison between the two laboratories at 6 MV and 20 MV, determined at 0.995 and 0.994, respectively, with a combined standard uncertainty of 5 parts in 10^3^. Meanwhile, the absorbed dose to water determined using the BIPM ionometric standard has been compared in the BIPM Co-60 reference beam with that determined using the BIPM graphite calorimeter system. The ratio of these determinations has been evaluated as 0.9995(25) <<burns19>>. As a consequence, the result presented in this report is also consistent with the result of the BIPM.RI(I)-K4 <<kessler20>>.
 
@@ -324,6 +324,6 @@ A comparison of absorbed dose to graphite in a Co-60 reference beam was carried 
 
 * [[[picard18,18]]], Picard S, Burns D T, Roger P, Delaunay F, Le Roy M, Ostrowsky A, Sommier L, Vermesse D 2013 Key comparison BIPM.RI(I)-K6 of the standards for absorbed dose to water of the LNE-LNHB, France and the BIPM in accelerator photon beams http://iopscience.iop.org/0026-1394/50/1A/06015[_Metrologia_ *50* _Tech. Suppl._ 06015], 24 pp.
 
-* [[[burns19,19]]], Burns D T, Picard S, Kessler C and Roger P 2013 Comparison of the BIPM ionometric and calorimetric stem:[D_("w")] standards for ^60^Co, Consultative Committee for Ionizing Radiation, Section I, working document CCRI(I)/13-20 3 pp.
+* [[[burns19,19]]], Burns D T, Picard S, Kessler C and Roger P 2013 Comparison of the BIPM ionometric and calorimetric stem:[ii(D)_("w")] standards for ^60^Co, Consultative Committee for Ionizing Radiation, Section I, working document CCRI(I)/13-20 3 pp.
 
 * [[[kessler20,20]]], C Kessler footnote:f1[Bureau International des Poids et Mesures], D T Burns footnote:f1[], F Delaunay footnote:[Laboratoire National Henri Becquerel] and M Donois 2013 Key comparison BIPM.RI(I)-K4 of the absorbed dose to water standards of the LNE–LNHB, France and the BIPM in ^60^Co gamma radiation http://iopscience.iop.org/0026-1394/50/1A/06019/[_Metrologia_ *50* _Tech. Suppl._ 06019], 11 pp.
