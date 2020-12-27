@@ -46,10 +46,10 @@ A comparison of the ozone reference standards of the Czech Hydrometeorological I
 
 == Terms and definitions
 
-stem:[x_(nom)]:: nominal ozone mole fraction in dry air supplied by the ozone generator.
-stem:[x_("A",i)]:: stem:[i]th measurement of the nominal value stem:[x_(nom)] by the photometer A.
-stem:[bar(x)_("A")]:: the mean of stem:[N] measurements of the nominal value stem:[x_(nom)] measured by the photometer A : stem:[bar(x)_("A") = 1/N sum_(i=1)^N x_("A",i)]
-stem:[s_("A")]:: standard deviation of stem:[N] measurements of the nominal value stem:[x_(nom)] measured by the photometer A : stem:[s_("A")^2 = 1/(N-1) sum_(i=1)^N (x_("A",i)-bar(x)_("A"))^2]
+stem:[x_("nom")]:: nominal ozone mole fraction in dry air supplied by the ozone generator.
+stem:[x_("A",i)]:: stem:[i]th measurement of the nominal value stem:[x_("nom")] by the photometer A.
+stem:[bar(x)_("A")]:: the mean of stem:[ii(N)] measurements of the nominal value stem:[x_("nom")] measured by the photometer A : stem:[bar(x)_("A") = 1/ii(N) sum_(i=1)^ii(N) x_("A",i)]
+stem:[s_("A")]:: standard deviation of stem:[ii(N)] measurements of the nominal value stem:[x_("nom")] measured by the photometer A : stem:[s_("A")^2 = 1/(ii(N)-1) sum_(i=1)^ii(N) (x_("A",i)-bar(x)_("A"))^2]
 
 * The result of the linear regression fit performed between two sets of data measured by photometers A and B during a comparison is written as: stem:[x_("A") = a_("A,B")x_("B") + b_("A,B")]. With this notation, photometer A is compared to photometer B. stem:[a_("A,B")] is dimensionless and stem:[b_("A,B")] is expressed in units of nmol/mol.
 
@@ -68,7 +68,7 @@ This comparison was performed following protocol A, corresponding to a direct co
 
 === Ozone generation
 
-The same source of purified air is used for all the ozone photometers being compared. This air is used to provide reference air as well as the ozone–air mixture to each ozone photometer. Ambient air is used as the source for reference air. The air is compressed with an oil-free compressor. It is dried and scrubbed using a commercial purification system so that the mole fraction of ozone and nitrogen oxides remaining in the air is below detectable limits. The relative humidity of the reference air is monitored and the mole fraction of water in air is typically less than stem:[3" "mu"mol/mol"]. The mole fraction of volatile organic hydrocarbons in the reference air was measured (November 2002), with no mole fraction of any detected component exceeding stem:[1" nmol/mol"].
+The same source of purified air is used for all the ozone photometers being compared. This air is used to provide reference air as well as the ozone–air mixture to each ozone photometer. Ambient air is used as the source for reference air. The air is compressed with an oil-free compressor. It is dried and scrubbed using a commercial purification system so that the mole fraction of ozone and nitrogen oxides remaining in the air is below detectable limits. The relative humidity of the reference air is monitored and the mole fraction of water in air is typically less than stem:[3" "rm(mu) rm(mol)//rm(mol)]. The mole fraction of volatile organic hydrocarbons in the reference air was measured (November 2002), with no mole fraction of any detected component exceeding stem:[1" "rm(nmol)//rm(mol)].
 
 A common dual external manifold in Pyrex is used to supply the necessary flows of reference air and ozone–air mixtures to the ozone photometers. The two columns of this manifold are vented to atmospheric pressure.
 
@@ -95,69 +95,69 @@ All instruments included in this comparison were Standard Reference Photometers 
 
 === Measurement equation of a NIST SRP
 
-The measurement of ozone mole fraction by an SRP is based on the absorption of radiation at 253.7 nm by ozonized air in the gas cells of the instrument. One unique characteristic of the instrument design is the use of two gas cells to overcome the instability of the light source. The measurement equation is derived from the Beer–Lambert and ideal gas laws. The number concentration (stem:[C]) of ozone is calculated from:
+The measurement of ozone mole fraction by an SRP is based on the absorption of radiation at 253.7 nm by ozonized air in the gas cells of the instrument. One unique characteristic of the instrument design is the use of two gas cells to overcome the instability of the light source. The measurement equation is derived from the Beer–Lambert and ideal gas laws. The number concentration (stem:[ii(C)]) of ozone is calculated from:
 
 [[eq1]]
 [stem]
 ++++
-C = (-1)/(2 sigma L_("opt")) (T)/(T_("std")) (P_("std"))/(P) "ln"(D)
+ii(C) = (-1)/(2 ii(sigma) ii(L)_("opt")) (ii(T))/(ii(T)_("std")) (ii(P)_("std"))/(ii(P)) "ln"(ii(D))
 ++++
 
 where
 
-stem:[sigma]:: is the absorption cross-section of ozone at stem:[253.7" nm"] under standard conditions of temperature and pressure, stem:[1.1476 xx 10^(−17)" cm"^2"/molecule"] <<iso13964>>;
-stem:[L_("opt")]:: is the optical path length of one of the cells;
-stem:[T]:: is the measured temperature of the cells;
-stem:[T_("std")]:: is the standard temperature (stem:[273.15" K"]);
-stem:[P]:: is the measured pressure of the cells;
-stem:[P_("std")]:: is the standard pressure (stem:[101.325" kPa"]);
-stem:[D]:: is the product of transmittances of two cells, with the transmittance (stem:[T_r]) of one cell defined as
+stem:[ii(sigma)]:: is the absorption cross-section of ozone at stem:[253.7" "rm(nm)] under standard conditions of temperature and pressure, stem:[1.1476 xx 10^(−17)" "rm(cm)^2"/molecule"] <<iso13964>>;
+stem:[ii(L)_("opt")]:: is the optical path length of one of the cells;
+stem:[ii(T)]:: is the measured temperature of the cells;
+stem:[ii(T)_("std")]:: is the standard temperature (stem:[273.15" "rm(K)]);
+stem:[ii(P)]:: is the measured pressure of the cells;
+stem:[ii(P)_("std")]:: is the standard pressure (stem:[101.325" "rm(kPa)]);
+stem:[ii(D)]:: is the product of transmittances of two cells, with the transmittance (stem:[ii(T)_r]) of one cell defined as
 
 [[eq2]]
 [stem]
 ++++
-T_r = I_("ozone")/I_("air")
+ii(T)_r = ii(I)_("ozone")/ii(I)_("air")
 ++++
 
 where
 
-stem:[I_("ozone")]:: is the UV radiation intensity measured from the cell when containing ozonized air; and
-stem:[I_("air")]:: is the UV radiation intensity measured from the cell when containing pure air (also called reference or zero air).
+stem:[ii(I)_("ozone")]:: is the UV radiation intensity measured from the cell when containing ozonized air; and
+stem:[ii(I)_("air")]:: is the UV radiation intensity measured from the cell when containing pure air (also called reference or zero air).
 
 Using the ideal gas law, <<eq1>> can be reformulated in order to express the measurement results as a mole fraction (stem:[x]) of ozone in air:
 
 [[eq3]]
 [stem]
 ++++
-x = (-1)/(2sigmaL_("opt")) T/P R/(N_"A") "ln"(D)
+x = (-1)/(2 ii(sigma) ii(L)_("opt")) ii(T)/ii(P) ii(R)/(ii(N)_"A") "ln"(ii(D))
 ++++
 
 where
 
-stem:[N_"A"]:: is the Avogadro constant, stem:[6.022142 xx 10^(23)" mol"^(−1)], and
-stem:[R]:: is the gas constant, stem:[8.314472" J mol"^(−1)" K"^(−1)].
+stem:[ii(N)_"A"]:: is the Avogadro constant, stem:[6.022142 xx 10^(23)" "rm(mol)^(−1)], and
+stem:[ii(R)]:: is the gas constant, stem:[8.314472" "rm(J)" "rm(mol)^(−1)" "rm(K)^(−1)].
 
 The formulation implemented in the SRP software is:
 
 [[eq4]]
 [stem]
 ++++
-x = (-1)/(2 alpha_"x" L_("opt")) T/(T_("std")) (P_("std"))/P "ln"(D)
+x = (-1)/(2 ii(alpha)_"x" ii(L)_("opt")) ii(T)/(ii(T)_("std")) (ii(P)_("std"))/ii(P) "ln"(ii(D))
 ++++
 
 where
 
-stem:[alpha_"x"]:: is the linear absorption coefficient under standard conditions, expressed in cm^−1^, linked to the absorption cross–section with the relation:
+stem:[ii(alpha)_"x"]:: is the linear absorption coefficient under standard conditions, expressed in cm^−1^, linked to the absorption cross–section with the relation:
 
 [[eq5]]
 [stem]
 ++++
-alpha_"x" = sigma (N_"A")/R (P_("std"))/(T_("std"))
+ii(alpha)_"x" = ii(sigma) (ii(N)_"A")/ii(R) (ii(P)_("std"))/(ii(T)_("std"))
 ++++
 
 === Absorption cross–section for ozone
 
-The linear absorption coefficient at standard conditions stem:[alpha_"x"] used within the SRP software algorithm is stem:[308.32" cm"^(−1)]. This corresponds to a value for the absorption cross–section stem:[sigma] of stem:[1.1476 xx 10^(−17)" cm"^2"/molecule"], rather than the more often quoted stem:[1.147 xx 10^(−17)" cm"^2"/molecule"]. In the comparison of two SRP instruments, the absorption cross section can be considered to have a conventional value and its uncertainty can be set to zero. However, in the comparison of different methods or when considering the complete uncertainty budget of the method the uncertainty of the absorption cross–section should be taken into account. A consensus value of 2.12 % at a 95 % level of confidence for the uncertainty of the absorption cross–section has been proposed by the BIPM and the NIST in a recent publication <<viallon3>>.
+The linear absorption coefficient at standard conditions stem:[ii(alpha)_"x"] used within the SRP software algorithm is stem:[308.32" "rm(cm)^(−1)]. This corresponds to a value for the absorption cross–section stem:[ii(sigma)] of stem:[1.1476 xx 10^(−17)" "rm(cm)^2"/molecule"], rather than the more often quoted stem:[1.147 xx 10^(−17)" "rm(cm)^2"/molecule"]. In the comparison of two SRP instruments, the absorption cross section can be considered to have a conventional value and its uncertainty can be set to zero. However, in the comparison of different methods or when considering the complete uncertainty budget of the method the uncertainty of the absorption cross–section should be taken into account. A consensus value of 2.12 % at a 95 % level of confidence for the uncertainty of the absorption cross–section has been proposed by the BIPM and the NIST in a recent publication <<viallon3>>.
 
 === Condition of the BIPM SRPs
 
@@ -173,20 +173,20 @@ The uncertainty budget for the ozone mole fraction in dry air (stem:[x]) measure
 .2+^h| Component (stem:[y]) 4+^h| Uncertainty stem:[u(y)] .2+^h| Sensitivity coefficient stem:[c_i= (delx)/(dely)] .2+^h| contribution to stem:[u(x)] stem:[abs(c_i)*u(y)] nmol/mol
 ^h| Source ^h| Distribution ^h| Standard Uncertainty ^h| Combined standard uncertainty stem:[u(y)]
 
-.3+h| Optical Path stem:[L_("opt")] | Measurement scale | Rectangular | 0.0006 cm .3+<.^| 0.52 cm .3+^.^| stem:[-x/(L_("opt"))] .3+^.^| stem:[2.89 xx 10^(−3)x]
+.3+h| Optical Path stem:[ii(L)_("opt")] | Measurement scale | Rectangular | 0.0006 cm .3+<.^| 0.52 cm .3+^.^| stem:[-x/(ii(L)_("opt"))] .3+^.^| stem:[2.89 xx 10^(−3)x]
 | Repeatability | Normal | 0.01 cm
 | Correction factor | Rectangular | 0.52 cm
 
-.2+h| Pressure stem:[P] | Pressure gauge | Rectangular | 0.029 kPa .2+.^| 0.034 kPa .2+^.^| stem:[−x/P] .2+^.^| stem:[3.37 xx 10^(−4)x]
+.2+h| Pressure stem:[ii(P)] | Pressure gauge | Rectangular | 0.029 kPa .2+.^| 0.034 kPa .2+^.^| stem:[−x/ii(P)] .2+^.^| stem:[3.37 xx 10^(−4)x]
 | Difference between cells | Rectangular | 0.017 kPa
 
-.2+h| Temperature stem:[T] | Temperature probe | Rectangular | 0.03 K .2+.^| 0.07 K .2+^.^| stem:[x/T] .2+^.^| stem:[2.29 xx 10^(−4)x]
+.2+h| Temperature stem:[ii(T)] | Temperature probe | Rectangular | 0.03 K .2+.^| 0.07 K .2+^.^| stem:[x/ii(T)] .2+^.^| stem:[2.29 xx 10^(−4)x]
 | Temperature gradient | Rectangular | 0.058 K
 
-.2+h| Ratio of intensities stem:[D] | Scaler resolution | Rectangular | stem:[8 xx 10^(−6)] .2+.^| stem:[1.4 xx 10^(−5)] .2+^.^| stem:[x/(D"ln"(D))] .2+^.^| 0.28
+.2+h| Ratio of intensities stem:[ii(D)] | Scaler resolution | Rectangular | stem:[8 xx 10^(−6)] .2+.^| stem:[1.4 xx 10^(−5)] .2+^.^| stem:[x/(ii(D)"ln"(ii(D)))] .2+^.^| 0.28
 | Repeatability | Triangular | stem:[1.1 xx 10^(−5)]
 
-h| Absorption Cross section stem:[sigma] | Hearn value | a| stem:[1.22 xx 10^(−19)] cm^2^/molecule a| stem:[1.22 xx 10^(−19)] cm^2^/molecule ^.^| stem:[-x/alpha] ^.^| stem:[1.06 xx 10^(−2)x]
+h| Absorption Cross section stem:[ii(sigma)] | Hearn value | a| stem:[1.22 xx 10^(−19)] cm^2^/molecule a| stem:[1.22 xx 10^(−19)] cm^2^/molecule ^.^| stem:[-x/ii(alpha)] ^.^| stem:[1.06 xx 10^(−2)x]
 |===
 
 As explained in the comparison protocol, following this budget the standard uncertainty associated with the ozone mole fraction measurement with the BIPM SRPs can be expressed as a numerical equation (numerical values expressed as nmol/mol):
@@ -212,7 +212,7 @@ where:
 [[eq8]]
 [stem]
 ++++
-u_"b"^2 = (u^2(T))/(T^2) + (u^2(P))/(P^2) + (u^2(L_("opt")))/(L_("opt")^2)
+u_"b"^2 = (u^2(ii(T)))/(ii(T)^2) + (u^2(ii(P)))/(ii(P)^2) + (u^2(ii(L)_("opt")))/(ii(L)_("opt")^2)
 ++++
 
 The value of stem:[u_"b"] is given by the expression of the measurement uncertainty: stem:[u_"b" = 2.92 xx 10^(−3)].
@@ -241,20 +241,20 @@ No covariance term for the CHMI standard SRP17 was included in the calculations.
 .2+^h| Component (stem:[y]) 4+^h| Uncertainty stem:[u(y)] .2+^h| Sensitivity coefficient stem:[c_i= (delx)/(dely)] .2+^h| contribution to stem:[u(x)] stem:[abs(c_i)*u(y)] nmol/mol
 ^h| Source ^h| Distribution ^h| Standard Uncertainty ^h| Combined standard uncertainty stem:[u(y)]
 
-.3+h| Optical Path stem:[L_("opt")] | Measurement scale | Rectangular | 0.005 cm .3+.^| 0.52 cm .3+^.^| stem:[−x/(L_("opt")] .3+^.^| stem:[2.89 xx 10^(−3)x]
+.3+h| Optical Path stem:[ii(L)_("opt")] | Measurement scale | Rectangular | 0.005 cm .3+.^| 0.52 cm .3+^.^| stem:[−x/(ii(L)_("opt")] .3+^.^| stem:[2.89 xx 10^(−3)x]
 | Variability | Rectangular | 0.004 cm
 | Divergence | Rectangular | 0. 52 cm
 
-.2+h| Pressure stem:[P] | Pressure gauge | Rectangular | 0.029 kPa .2+.^| 0.034 kPa .2+^.^| stem:[−x/P] .2+^.^| stem:[3.37 xx 10^(−4)x]
+.2+h| Pressure stem:[ii(P)] | Pressure gauge | Rectangular | 0.029 kPa .2+.^| 0.034 kPa .2+^.^| stem:[−x/ii(P)] .2+^.^| stem:[3.37 xx 10^(−4)x]
 | Difference between cells | Rectangular | 0.017 kPa
 
-.2+h| Temperature stem:[T] | Temperature probe | Rectangular | 0.03 K .2+.^| 0.07 K .2+^.^| stem:[x/T] .2+^.^| stem:[2.29 xx 10^(−4)x]
+.2+h| Temperature stem:[ii(T)] | Temperature probe | Rectangular | 0.03 K .2+.^| 0.07 K .2+^.^| stem:[x/ii(T)] .2+^.^| stem:[2.29 xx 10^(−4)x]
 | Temperature gradient | Rectangular | 0.058 K
 
-.2+h| Ratio of intensities stem:[D] | Scaler resolution | Rectangular | stem:[8 xx 10^(−6)] .2+.^| stem:[1.4 xx 10^(−5)] .2+^.^| stem:[x/(D"ln"(D))] .2+^.^| 0.28
+.2+h| Ratio of intensities stem:[ii(D)] | Scaler resolution | Rectangular | stem:[8 xx 10^(−6)] .2+.^| stem:[1.4 xx 10^(−5)] .2+^.^| stem:[x/(ii(D)"ln"(ii(D)))] .2+^.^| 0.28
 | Repeatability | Triangular | stem:[1.1 xx 10^(−5)]
 
-h| Absorption Cross section stem:[alpha] | Hearn value | a| stem:[1.22 xx 10^(−19)] cm^2^/molecule a| stem:[1.22 xx 10^(−19)] cm^2^/molecule ^.^| stem:[-x/alpha] ^.^| stem:[1.06 xx 10^(−2)x]
+h| Absorption Cross section stem:[ii(alpha)] | Hearn value | a| stem:[1.22 xx 10^(−19)] cm^2^/molecule a| stem:[1.22 xx 10^(−19)] cm^2^/molecule ^.^| stem:[-x/ii(alpha)] ^.^| stem:[1.06 xx 10^(−2)x]
 |===
 
 [[analysis]]
@@ -321,7 +321,7 @@ The relationship between SRP17 and SRP27 is given by the result of the generaliz
 x_("SRP17") = 1.0034x_("SRP27") - 0.06
 ++++
 
-The standard uncertainties on the parameters of the regression are stem:[u(a_1) = 0.0032] for the slope and stem:[u(a_0) = 0.21" nmol/mol"] for the intercept. The covariance between the two parameters is stem:["cov"(a_0, a_1) = –1.66 xx 10^(−4)].
+The standard uncertainties on the parameters of the regression are stem:[u(a_1) = 0.0032] for the slope and stem:[u(a_0) = 0.21" "rm(nmol)//rm(mol)] for the intercept. The covariance between the two parameters is stem:["cov"(a_0, a_1) = –1.66 xx 10^(−4)].
 
 The least-squares regression results confirm that a linear fit is appropriate, with a sum of the the squared deviations (SSD) of 0.30 and a goodness of fit (GoF) equal to 0.17.
 
