@@ -84,18 +84,18 @@ the possible mechanisms for the production of such pulses except where
 the mechanism seems to be well established; a review of the time-interval
 distributions of spurious pulses observed in proportional counters has been
 recently published <<campion1>>, while those obtained in scintillation detectors
-have been discussed by Williams and Smith <<<williams>>.
+have been discussed by Williams and Smith <<williams>>.
 
 The total probability for the production of a spurious pulse, or pulses,
-per genuine pulse is usually denoted by stem:[theta] and, as so defined, is independent
+per genuine pulse is usually denoted by stem:[ii(theta)] and, as so defined, is independent
 of the time-interval distribution of spurious pulses. However, only those
 spurious pulses which can be detected are of any practical significance,
 i.e. only those which occur beyond the end of the dead time {which is
 assumed to be non-extendable} and which trigger the discriminator of
 the recording system; thus the measurement of the spurious pulses in any
-practical situation yields a probability stem:[theta'] which depends on the dead time
+practical situation yields a probability stem:[ii(theta)'] which depends on the dead time
 {and hence on the shape of the time-interval distribution} and the discrimination
-level. In this monograph stem:[theta'] will be tacitly equated with stem:[theta], but
+level. In this monograph stem:[ii(theta)'] will be tacitly equated with stem:[ii(theta)], but
 the difference should be noted when comparing measurements of spurious
 pulses using different amplifier-discriminator systems.
 
@@ -124,7 +124,7 @@ counters. On the other hand, the slope could result from a genuine increase
 in efficiency of the detector. Another elementary method is the visual
 observation of an oscilloscope screen but, unless the spurious pulses are
 produced with near-constant time intervals relative to the initiating pulse,
-it is difficult to detect their presence when stem:[theta] is less than about 0.1.
+it is difficult to detect their presence when stem:[ii(theta)] is less than about 0.1.
 
 With the possible exceptions of pulses occurring in Geiger counters and
 some pulses in photomultipliers, spurious events in radiation detectors give
@@ -173,7 +173,7 @@ pulse heights between genuine and spurious events, the spurious-to-genuine
 sensitivity in most of the techniques described below can be considerably
 improved by using appropriate pulse-height selection, but the penalty
 incurred by doing so is that it is difficult to make quantitative measurements
-of stem:[theta]. However, if it is merely desired to detect the point of onset of
+of stem:[ii(theta)]. However, if it is merely desired to detect the point of onset of
 spurious pulses, as a function of detector voltage for example, the combination
 of pulse-height analysis with time analysis can be used with
 advantage.
@@ -202,7 +202,7 @@ of a multichannel analyser in the time mode <<genz6>>, <<campion7>>. In this tec
 a suitable pulse from the amplifier-discriminator system is used to start
 the {internal} clock of the multichannel analyser and all subsequent pulses
 are recorded in channels whose addresses are proportional to the time
-e lapsed from the start pulse. Thus stem:[theta] is given by the number of correlated
+e lapsed from the start pulse. Thus stem:[ii(theta)] is given by the number of correlated
 pulses divided by the number of start pulses. The first number is obtained
 from the total number of pulses recorded in the relevant channels less the
 number of genuine pulses which may be estimated from the (statistically)
@@ -219,7 +219,7 @@ started by spurious pulses (see <<appendix1>>).
 
 The chief disadvantage of the time-mode analyser technique is that most
 commercially available multichannel analysers have a channel dwell time
-plus switching time of the order of stem:[10" "mu rm(s)] or more, and hence the method
+plus switching time of the order of stem:[10" "rm(mu) rm(s)] or more, and hence the method
 is unsatisfactory for investigating time intervals of less than a few tens of
 microseconds. For such situations a time-to-amplitude converter (TAC)
 may be used together with a multichannel analyser in the pulse-height mode.
@@ -248,7 +248,7 @@ it should be noted that if two or more spurious pulses arise from a single
 event then, neglecting genuine pulses, the TAC system will record only
 the first spurious pulse and no information can be obtained about the time-interval
 distribution of the subsequent spurious pulses without further experimentation;
-this is true even for the situation where the overall value of stem:[theta]
+this is true even for the situation where the overall value of stem:[ii(theta)]
 is considerably less than unity.
 
 Direct techniques can be used for both detection and estimation but, as
@@ -284,7 +284,7 @@ but as soon as the counter voltage is increased to the point where spurious
 counts occur, the gated count will increase. A typical example of the use
 of this method as applied to a proportional counter is given in <<fig4>> where
 the gated count is compared with a conventional plateau plot, using
-a gating interval of stem:[25" "mu rm(s)]. A simple calculation shows that the method
+a gating interval of stem:[25" "rm(mu) rm(s)]. A simple calculation shows that the method
 can be several orders of magnitude more sensitive in detecting the point
 of onset of spurious pulses compared with the normal plateau plot. It will
 be seen that this method is the time analogue of the pulse-height technique
@@ -310,54 +310,54 @@ to yield the spurious events. Thus
 
 [stem%unnumbered]
 ++++
-theta = (n_g - <n_g>)//n_o,
+ii(theta) = (n_g - <n_g>)//n_o,
 ++++
 
 where stem:[n_g] is the total number of gated counts recorded in a counting
-interval stem:[T], using a gate of length stem:[tau] (which must be longer than the
-maximum time interval stem:[tau_s] between a genuine pulse and its associated
+interval stem:[ii(T)], using a gate of length stem:[ii(tau)] (which must be longer than the
+maximum time interval stem:[ii(tau)_s] between a genuine pulse and its associated
 spurious pulse(s) ). The expected number of counts due to random events
 is stem:[<n_g>] and stem:[n_o] is the total number of times the gate opens in the time
-interval stem:[T]. Further, let stem:[n] be the total number of genuine counts in this
-interval. If stem:[tau_D] is the minimum time between pulses which can actuate
+interval stem:[ii(T)]. Further, let stem:[n] be the total number of genuine counts in this
+interval. If stem:[ii(tau)_D] is the minimum time between pulses which can actuate
 the gate, then, assuming that all such pulses are due to genuine events,
 
 [stem%unnumbered]
 ++++
-<n_g> = n_o^2 tau // [T(1-n_o tau_D//T)].
+<n_g> = n_o^2 ii(tau) // [ii(T)(1-n_o ii(tau)_D//ii(T))].
 ++++
 
-For the case that stem:[tau_D = tau],
+For the case that stem:[ii(tau)_D = ii(tau)],
 
 [stem%unnumbered]
 ++++
-<n_g> = n_o^2tau // [T(1-n_o tau//T)];
+<n_g> = n_o^2 ii(tau) // [ii(T)(1-n_o ii(tau)//ii(T))];
 ++++
 
 but for the latter situation
 
 [stem%unnumbered]
 ++++
-n_g + n_o = n(1+theta)
+n_g + n_o = n(1+ii(theta))
 ++++
 
 and
 
 [stem%unnumbered]
 ++++
-<n_g> = n_o n tau //T = n_o (n_g + n_o) tau // [T(1+theta)].
+<n_g> = n_o n ii(tau) //ii(T) = n_o (n_g + n_o) ii(tau) // [ii(T)(1+ii(theta))].
 ++++
 
 Equating these two estimates for stem:[<n_g>] gives
 
 [stem%unnumbered]
 ++++
-theta = n_g // n_o - tau(n_g + n_o) // T.
+ii(theta) = n_g // n_o - ii(tau)(n_g + n_o) // ii(T).
 ++++
 
 The assumption that stem:[n_o] includes only genuine events is discussed in
-<<appendix1>> and is valid if stem:[n tau_s theta//T] is small compared with unity. Thus
-the method can be used for the quantitative estimation of stem:[theta] whether
+<<appendix1>> and is valid if stem:[n ii(tau)_s ii(theta)//ii(T)] is small compared with unity. Thus
+the method can be used for the quantitative estimation of stem:[ii(theta)] whether
 or not the detector gives rise to a plateau. For both techniques it is
 essential that the gate width is sufficient to include all the spurious pulses,
 although for *detection* a better spurious-to-genuine sensitivity may
@@ -381,13 +381,13 @@ A further gating technique involves the principle of correlation counting
 due to the presence of time-correlated spurious counts, can be detected
 by a statistical analysis of the counts recorded in gating intervals taken
 at random with respect to the pulse train. If measurements are made for
-a large number stem:[n_o] of counting intervals each of length stem:[tau], and if stem:[p_i]
+a large number stem:[n_o] of counting intervals each of length stem:[ii(tau)], and if stem:[p_i]
 genuine pulses and stem:[d_i] spurious pulses occur in the stem:[i]th interval, then
 the mean number of observed counts per interval will be
 
 [stem%unnumbered]
 ++++
-m = (n_g)/(n_o) = 1/(n_o) sum_(i=1)^(n_o) (p_i + d_i) = bar(p) + bar(d) = bar(p) (1+theta).
+m = (n_g)/(n_o) = 1/(n_o) sum_(i=1)^(n_o) (p_i + d_i) = bar(p) + bar(d) = bar(p) (1+ii(theta)).
 ++++
 
 Separating those genuine pulses which do not have associated pulses in
@@ -410,12 +410,12 @@ of counts per interval, for stem:[n_o] large, is
 
 [stem%unnumbered]
 ++++
-E[v] = v = E[(x_i+y_i+2c_i)^2] - {E[x_i+y_i+2c_i]}^2
+ii(E)[v] = v = ii(E)[(x_i+y_i+2c_i)^2] - {ii(E)[x_i+y_i+2c_i]}^2
 ++++
 
 [stem%unnumbered]
 ++++
-= E[(x_i+y_i)^2] - {E[x_i + y_i]}^2 + 4E [c_i^2] - 4{E[c_i]}^2
+= ii(E)[(x_i+y_i)^2] - {ii(E)[x_i + y_i]}^2 + 4 ii(E) [c_i^2] - 4{ii(E)[c_i]}^2
 ++++
 
 [stem%unnumbered]
@@ -430,22 +430,22 @@ pulses in the same interval, and it may be expressed
 
 [stem%unnumbered]
 ++++
-bar(c) = bar(p) theta f(lambda, tau),
+bar(c) = bar(p) ii(theta) f(ii(lambda), ii(tau)),
 ++++
 
-where stem:[lambda] is some characteristic time constant. As stem:[lambda tau] becomes very large,
-stem:[f(lambda, tau)] tends to unity and
+where stem:[ii(lambda)] is some characteristic time constant. As stem:[ii(lambda) ii(tau)] becomes very large,
+stem:[f(ii(lambda), ii(tau))] tends to unity and
 
 [stem%unnumbered]
 ++++
-bar(c) = 1/2 (v-m) = bar(p) theta = m theta //(1+theta);
+bar(c) = 1/2 (v-m) = bar(p) ii(theta) = m ii(theta) //(1+ii(theta));
 ++++
 
 thus
 
 [stem%unnumbered]
 ++++
-theta = (v-m)/(3m-v).
+ii(theta) = (v-m)/(3m-v).
 ++++
 
 
@@ -497,7 +497,7 @@ specially sensitized.
 A recent technique for the detection of spurious pulses is based on the
 fact that most correlated events occur in pairs, i.e. a genuine pulse
 is followed by a spurious pulse <<muller15>>, <<muller16>>. Therefore, the total number stem:[n]
-of events observed in a given counting interval stem:[tau] can always be decomposed
+of events observed in a given counting interval stem:[ii(tau)] can always be decomposed
 into pairs and single pulses; thus
 
 [stem%unnumbered]
@@ -509,85 +509,85 @@ As the quality of stem:[n] being even or odd depends exclusively on stem:[n_("si
 any measuring method based on "modulo two" counting will only "see"
 the unpaired events, permitting the statistical separation of them from
 the pulses arriving in pairs. Both stem:[n_("pair")] and stem:[n_("sing")] always form Poisson
-processes (with mean rates stem:[N_("pair")] and stem:[N_("sing")], respectively), provided
+processes (with mean rates stem:[ii(N)_("pair")] and stem:[ii(N)_("sing")], respectively), provided
 this was the case for the series of original (parent) events. In general,
 the count rates depend on the distribution of the parent-daughter time
-intervals. If this is assumed to be exponential with mean stem:[lambda^(-1)], it is found
+intervals. If this is assumed to be exponential with mean stem:[ii(lambda)^(-1)], it is found
 that
 
 [stem%unnumbered]
 ++++
-N_("pair") = N epsilon_p epsilon_d theta [1- 1/(lambda tau) (1-e^(-lambda tau))]
+ii(N)_("pair") = ii(N) ii(epsilon)_p ii(epsilon)_d ii(theta) [1- 1/(ii(lambda) ii(tau)) (1-e^(-ii(lambda) ii(tau)))]
 ++++
 
 and
 
 [stem%unnumbered]
 ++++
-N_("sing") = N{epsilon_p + epsilon_d theta - 2 epsilon_p epsilon_d theta [1- 1/(lambda tau) (1- e^(-lambda tau))]}.
+ii(N)_("sing") = ii(N){ii(epsilon)_p + ii(epsilon)_d ii(theta) - 2 ii(epsilon)_p ii(epsilon)_d ii(theta) [1- 1/(ii(lambda) ii(tau)) (1- e^(-ii(lambda) ii(tau)))]}.
 ++++
 
-Here stem:[epsilon_p(epsilon_d)] is the detection efficiency for a parent (daughter) pulse, and
-stem:[theta] denotes the probability of a spurious pulse being generated.
+Here stem:[ii(epsilon)_p(ii(epsilon)_d)] is the detection efficiency for a parent (daughter) pulse, and
+stem:[ii(theta)] denotes the probability of a spurious pulse being generated.
 
-However, if stem:[lambda tau > > 1], i.e. for sufficiently long counting intervals, the exact
+However, if stem:[ii(lambda) ii(tau) > > 1], i.e. for sufficiently long counting intervals, the exact
 form of the parent-daughter time-interval distribution is irrelevant since
 the rates then approach the limiting values
 
 [stem%unnumbered]
 ++++
-N_("pair") = N epsilon_p epsilon_d theta
+ii(N)_("pair") = ii(N) ii(epsilon)_p ii(epsilon)_d ii(theta)
 ++++
 
 and
 
 [stem%unnumbered]
 ++++
-N_("sing") = N(epsilon_p + epsilon_d theta - 2 epsilon_p epsilon_d theta).
+ii(N)_("sing") = ii(N)(ii(epsilon)_p + ii(epsilon)_d ii(theta) - 2 ii(epsilon)_p ii(epsilon)_d ii(theta)).
 ++++
 
 A convenient way for determining experimentally the probability for stem:[n]
-being even or odd as a function of stem:[tau] consists in using a correlator of the
+being even or odd as a function of stem:[ii(tau)] consists in using a correlator of the
 type first applied by Landaud and Mabboux <<landaud>> for measuring life-times.
 As the parity of stem:[n] does not depend on the number of pairs, such a
-measurement yields directly stem:[N_("sing")], and for a Poisson distribution:
+measurement yields directly stem:[ii(N)_("sing")], and for a Poisson distribution:
 
 [stem%unnumbered]
 ++++
-"Prob ("n" even") = 1/2 [1+"exp" (-2 N_("sing")tau)].
+"Prob ("n" even") = 1/2 [1+"exp" (-2 ii(N)_("sing")ii(tau))].
 ++++
 
 On the other hand, a simple direct counting of the total pulse train gives
 
 [stem%unnumbered]
 ++++
-N_("tot") = N (epsilon_p + epsilon_d theta) = N_("sing") + 2N_("pair").
+ii(N)_("tot") = ii(N) (ii(epsilon)_p + ii(epsilon)_d ii(theta)) = ii(N)_("sing") + 2 ii(N)_("pair").
 ++++
 
-Therefore, any significant difference between stem:[N_("tot")] and stem:[N_("sing")] as deduced
-from the correlation measurement allows one to determine stem:[N_("pair")], i.e.
+Therefore, any significant difference between stem:[ii(N)_("tot")] and stem:[ii(N)_("sing")] as deduced
+from the correlation measurement allows one to determine stem:[ii(N)_("pair")], i.e.
 the spurious pulse count rate.
 
 The feasibility of this new method has been shown by various checks with
 artificial pulse trains <<muller8>>. It can be seen from <<fig5>> how the presence
 of spurious pulses modifies the logarithmic plot of the correlation function
-stem:[R(tau)], which is here defined as
+stem:[ii(R)(ii(tau))], which is here defined as
 
 [stem%unnumbered]
 ++++
-R(tau) = "Prob ("n" even") - "Prob ("n" odd"),
+ii(R)(ii(tau)) = "Prob ("n" even") - "Prob ("n" odd"),
 ++++
 
 giving
 
 [stem%unnumbered]
 ++++
-R(tau) = { ("exp"[-2 N_("tot")tau],"for "tau < < lambda^(-1)),("exp"[-2(N_("tot")-2N_("pair")tau)],"'' "tau > > lambda^(-1).) :}
+ii(R)(ii(tau)) = { ("exp"[-2 ii(N)_("tot") ii(tau)],"for " ii(tau) < < ii(lambda)^(-1)),("exp"[-2(ii(N)_("tot")-2 ii(N)_("pair") ii(tau))],"'' "ii(tau) > > ii(lambda)^(-1).) :}
 ++++
 
 In particular, for a fixed delay between parent and daughter pulses, this
-change in the exponent occurs suddenly at stem:[tau = lambda^(-1)]. The experiments
-suggest that even for a ratio stem:[N_("pair")//N_("tot")] as low as 0.005 the presence
+change in the exponent occurs suddenly at stem:[ii(tau) = ii(lambda)^(-1)]. The experiments
+suggest that even for a ratio stem:[ii(N)_("pair")//ii(N)_("tot")] as low as 0.005 the presence
 of spurious pulses can still be readily established.
 
 It is also possible to generalize this approach to multiple spurious pulses
@@ -598,65 +598,65 @@ should be consulted.
 
 In order to compare the sensitivities of the gating methods 1, 2 and 3 and
 the modulo counting technique outlined above, the variance on the
-estimate of stem:[theta] for each technique is given in <<table1>> for a counting time stem:[T]
-and a genuine pulse rate stem:[N]. These variances are all to some extent
+estimate of stem:[ii(theta)] for each technique is given in <<table1>> for a counting time stem:[ii(T)]
+and a genuine pulse rate stem:[ii(N)]. These variances are all to some extent
 approximate since implicit in their calculation is the assumption that
 spurious pulses obey Poisson statistics. Nevertheless, they give a useful
 guide for comparison purposes. In <<table1>> two further approximations are
-given for the variance depending on whether stem:[theta] is large or small compared
-to stem:[Ntau], or its equivalent in the case of method 3. The variance estimate
+given for the variance depending on whether stem:[ii(theta)] is large or small compared
+to stem:[ii(N) ii(tau)], or its equivalent in the case of method 3. The variance estimate
 for the modulo counting technique is taken from <<muller16>>. The requirement
 which is often encountered in radionuclide metrology is to establish the
-presence or absence of a very small stem:[theta], i.e. stem:[theta < < N tau].
+presence or absence of a very small stem:[ii(theta)], i.e. stem:[ii(theta) < < ii(N) ii(tau)].
 
 [[fig5]]
-.Measurement of the correlation function stem:[R(tau)], for the approximate parameters stem:[N_("sing") = 2 500" "rm(s)^(-1)], stem:[N_("pair") = 0] or stem:[900" "rm(s)^(-1)] and stem:[lambda^(-1) -= tau_o = 10 mu rm(s)].
+.Measurement of the correlation function stem:[ii(R)(ii(tau))], for the approximate parameters stem:[ii(N)_("sing") = 2 500" "rm(s)^(-1)], stem:[ii(N)_("pair") = 0] or stem:[900" "rm(s)^(-1)] and stem:[ii(lambda)^(-1) -= ii(tau)_o = 10" "rm(mu) rm(s)].
 image::img07.png[]
 
 [NOTE]
 ====
 [align=left]
 The theoretical curves given for comparison are +
-A - without pairs: stem:[-"ln" R = 2N_("sing")tau] +
-B - with pairs: stem:[-"ln" R = { (2N_("tot")tau,"for "tau < tau_o),(2N_("tot")tau - 4 N_("pair")(tau-tau_o),"'' "tau>tau_o) :}] +
+A - without pairs: stem:[-"ln" ii(R) = 2ii(N)_("sing") ii(tau)] +
+B - with pairs: stem:[-"ln" ii(R) = { (2ii(N)_("tot") ii(tau),"for " ii(tau) < ii(tau)_o),(2 ii(N)_("tot") ii(tau) - 4 ii(N)_("pair")(ii(tau)-ii(tau)_o),"'' "ii(tau)>ii(tau)_o) :}] +
 (from <<muller8>>).
 ====
 
-For method 1 two expressions are given for the variance on stem:[theta] corresponding
+For method 1 two expressions are given for the variance on stem:[ii(theta)] corresponding
 to the two techniques for handling the data. In calculating the variance for
 the first technique (which, as pointed out above, is perhaps more useful
-for determining the "end" of a plateau rather than measuring stem:[theta] quantitatively)
+for determining the "end" of a plateau rather than measuring stem:[ii(theta)] quantitatively)
 it is assumed that the counting time is divided between two readings as
 opposed to one reading for the second technique. In practice, of course,
 a number of points would be taken along the plateau as shown in <<fig4>>.
 
 [[table1]]
 [cols="^,^,^,^,<"]
-.A comparison of methods for measuring stem:[theta], the probability for producing a spurious pulse
+.A comparison of methods for measuring stem:[ii(theta)], the probability for producing a spurious pulse
 |===
-.2+| Method .2+| Variance on stem:[theta] 2+^| Variance on stem:[theta] for .2+^| Comments
-a| stem:[theta < < N tau] +
-or equivalent a| stem:[theta > >N tau] +
+.2+| Method .2+| Variance on stem:[ii(theta)] 2+^| Variance on stem:[ii(theta)] for .2+^| Comments
+a| stem:[ii(theta) < < ii(N) ii(tau)] +
+or equivalent a| stem:[ii(theta) > > ii(N) ii(tau)] +
 or equivalent
 
 a| *Direct technique* +
-(Plateau technique) | stem:[2(2N tau + theta)//NT] | stem:[4tau//T] | stem:[2theta // NT] a| Minimum of two readings required. Calculation assumes total time is stem:[T] footnote:[Valid for multiple spurious pulses].
+(Plateau technique) | stem:[2(2 ii(N) ii(tau) + ii(theta))//ii(NT)] | stem:[4tau//ii(T)] | stem:[2ii(theta) // ii(NT)] a| Minimum of two readings required. Calculation assumes total time is stem:[ii(T)] footnote:[Valid for multiple spurious pulses].
 | *Gating techniques* | | | |
-| 1. Subtraction technique | stem:[(Ntau + theta)//NT] | stem:[tau//T] | stem:[theta//NT] a| stem:[tau] must be known. Calculation assumes stem:[tau_D = tau] footnote:[Valid for multiple spurious pulses].
-| 2. Correlation technique | stem:[(Ntau + 2theta)//NT] | stem:[tau//T] | stem:[2theta//NT] a| Unnecessary to know stem:[tau], but it must be constant. Application to multiple spurious pulses requires knowledge of number distribution.
-| 3. Pulsed source technique | stem:[([N_b^(1//2) + (N_s theta + N_b)^(1//2) \]^2)/(N_s^2T)] a| stem:[4N_b//N_s^2T] stem:[(theta< < N_b//N_s)] a| stem:[theta//N_sT] stem:[(theta < < N_b // N_s)] a| stem:[N_s] is accelerator/spark rate and stem:[N_b] background rate. Calculation assumes optimum division of total time stem:[T] between background and source plus background measurements.
-| *Modulo counting technique* | | stem:[2//NT] | a| Calculation assumes absence of multiple spurious pulses. stem:[N tau] should be in the range 0.1 to 1.0; therefore the method is not applicable to the case stem:[theta > > N tau]. For details see <<muller16>>.
+| 1. Subtraction technique | stem:[(ii(N) ii(tau) + ii(theta))//ii(NT)] | stem:[ii(tau)//ii(T)] | stem:[ii(theta)//ii(NT)] a| stem:[ii(tau)] must be known. Calculation assumes stem:[ii(tau)_D = ii(tau)] footnote:[Valid for multiple spurious pulses].
+| 2. Correlation technique | stem:[(ii(N) ii(tau) + 2ii(theta))//ii(NT)] | stem:[ii(tau)//ii(T)] | stem:[2ii(theta)//ii(NT)] a| Unnecessary to know stem:[ii(tau)], but it must be constant. Application to multiple spurious pulses requires knowledge of number distribution.
+| 3. Pulsed source technique | stem:[([ii(N)_b^(1//2) + (ii(N)_s ii(theta) + ii(N)_b)^(1//2) \]^2)/(ii(N)_s^2 ii(T))] a| stem:[4 ii(N)_b//ii(N)_s^2 ii(T)] stem:[(ii(theta)< < ii(N)_b//ii(N)_s)] a| stem:[ii(theta)//ii(N)_s ii(T)] stem:[(ii(theta) < < ii(N)_b // ii(N)_s)] a| stem:[ii(N)_s] is accelerator/spark rate and stem:[ii(N)_b] background rate. Calculation assumes optimum division of total time stem:[ii(T)] between background and source plus background measurements.
+| *Modulo counting technique* | | stem:[2//ii(NT)] | a| Calculation assumes absence of multiple spurious pulses. stem:[ii(N) ii(tau)] should be in the range 0.1 to 1.0; therefore the method is not applicable to the case stem:[ii(theta) > > ii(N) ii(tau)]. For details see <<muller16>>.
 |===
 
-For small stem:[theta] values, method 3 (pulsed source technique) is the most sensitive
+For small stem:[ii(theta)] values, method 3 (pulsed source technique) is the most sensitive
 since the effect of the random nature of the pulses used in the other methods
 has been removed. However, considering methods 1 (subtraction technique)
 and 2 {correlation technique} alone, it is seen that the variances are comparable,
-there being no difference for the case that stem:[theta < < N tau], while for
-stem:[theta > >N tau] the variance of method 1 is a factor of 2 smaller. The variance
+there being no difference for the case that stem:[ii(theta) < < ii(N) ii(tau)], while for
+stem:[ii(theta) > > ii(N) ii(tau)] the variance of method 1 is a factor of 2 smaller. The variance
 of both the subtraction and correlation techniques is somewhat smaller than
 that of the modulo counting technique because of the restriction on the
-value stem:[N tau] in the latter method <<muller16>>.
+value stem:[ii(N) ii(tau)] in the latter method <<muller16>>.
 
 == Results
 
@@ -706,14 +706,14 @@ conditions (see, for example, the recent review by Genz <<genz19>> and
 
 [stem%unnumbered]
 ++++
-f_e(E) = 1/m e^(-E//m)
+f_e(ii(E)) = 1/m e^(-ii(E)//m)
 ++++
 
 with a strongly peaked Pólya-type distribution
 
 [stem%unnumbered]
 ++++
-f_p(E) = (4E)/(m^2) e^(-2E//m),
+f_p(ii(E)) = (4 ii(E))/(m^2) e^(-2 ii(E)//m),
 ++++
 
 where stem:[m] is the mean of the distribution in both cases. In practice most
@@ -730,7 +730,7 @@ distribution is applicable. Some recent work <<campion20>> has indicated that fo
 many counting gases it may not be possible to detect single electrons without
 incurring some spurious pulses, the number varying considerably with the
 gas and, further, that there is a significant probability that some events
-produce more than one spurious pulse even although the mean stem:[theta] may be
+produce more than one spurious pulse even although the mean stem:[ii(theta)] may be
 considerably less than unity.
 
 === Scintillation counters
@@ -851,12 +851,12 @@ pulses detected but the overall efficiency is also reduced.
 [[appendix1]]
 == The influence of an imposed dead time on the detection of subsequent spurious pulses
 
-Many of the methods described in the text for the estimation of stem:[theta] involve
+Many of the methods described in the text for the estimation of stem:[ii(theta)] involve
 the recording of the number of times a detecting circuit is actuated.
 This circuit may be, for example, a gate, a time-to-amplitude converter
 or an analyser in either the pulse-height or time mode. In such methods
 it is assumed that the circuit is actuated by genuine pulses only; this
-assumption is usually justified by the fact that the value of stem:[theta] is very much
+assumption is usually justified by the fact that the value of stem:[ii(theta)] is very much
 less than unity. Here the validity of this assumption will be examined.
 
 The problem may be stated in the following way: given a pulse train,
@@ -866,47 +866,47 @@ interval between a genuine pulse and its associated spurious pulse{s),
 what is the probability that the circuit will be actuated by a spurious
 pulse?
 
-Let stem:[f(tau)] be the density for the time interval between a genuine and
-a spurious pulse and stem:[tau_s] the maximum value of this interval (<<fig10>>).
+Let stem:[f(ii(tau))] be the density for the time interval between a genuine and
+a spurious pulse and stem:[ii(tau)_s] the maximum value of this interval (<<fig10>>).
 
 [[fig10]]
-.a) A hypothetical interval density stem:[f(tau)] of spurious pulses as a function of time interval stem:[tau]. b) A sketch illustrating the relationship of the density stem:[f(tau)] with respect to events in real time stem:[t].
+.a) A hypothetical interval density stem:[f(ii(tau))] of spurious pulses as a function of time interval stem:[ii(tau)]. b) A sketch illustrating the relationship of the density stem:[f(ii(tau))] with respect to events in real time stem:[t].
 image::img12.png[]
 
-The circuit, of dead time stem:[tau_D], is actuated at time stem:[t = tau_s - tau_D] and it is
+The circuit, of dead time stem:[ii(tau)_D], is actuated at time stem:[t = ii(tau)_s - ii(tau)_D] and it is
 immaterial whether the actuating pulse is genuine or spurious. Time stem:[t = 0]
-is taken at a point stem:[tau_s] before the end of the dead time since, neglecting
+is taken at a point stem:[ii(tau)_s] before the end of the dead time since, neglecting
 second order spurious pulses, only genuine pulses in the interval stem:[t = 0] to
-stem:[tau_s] can produce a spurious pulse, which must fall in the interval stem:[t = tau_s]
-to stem:[2tau_s]. The next pulse after the end of the dead time up to stem:[t = 2 tau_s]
+stem:[ii(tau)_s] can produce a spurious pulse, which must fall in the interval stem:[t = ii(tau)_s]
+to stem:[2 ii(tau)_s]. The next pulse after the end of the dead time up to stem:[t = 2 ii(tau)_s]
 may be spurious or genuine, or there may be no pulse. However, in the
 last case, the next pulse to arrive must be genuine. Hence, if the count
-rate of genuine pulses is stem:[N], then the probability stem:[P_s] that the next pulse
+rate of genuine pulses is stem:[ii(N)], then the probability stem:[ii(P)_s] that the next pulse
 after the end of the dead time is spurious is
 
 [stem%unnumbered]
 ++++
-P_s = int_0^(tau_s) N theta "d"t int_(tau_s - tau)^(tau_s) f(tau) e^(-N(tau - tau_s + t)) "d" tau.
+ii(P)_s = int_0^(ii(tau)_s) ii(N) ii(theta) "d"t int_(ii(tau)_s - ii(tau))^(ii(tau)_s) f(ii(tau)) e^(-ii(N)(ii(tau) - ii(tau)_s + t)) "d" ii(tau).
 ++++
 
 The evaluation of this requires a knowledge of the shape of the time-interval
-density stem:[f(tau)], and, as noted in the text, this may vary considerably
+density stem:[f(ii(tau))], and, as noted in the text, this may vary considerably
 from one case to another. However, by way of an example, assume that
-stem:[f(tau)] is constant for stem:[tau <= tau_s] and equal to stem:[1//tau_s]. Then
+stem:[f(ii(tau))] is constant for stem:[ii(tau) <= ii(tau)_s] and equal to stem:[1//ii(tau)_s]. Then
 
 [stem%unnumbered]
 ++++
-P_s = theta[1- (1-e^(-N tau_s))//N tau_s].
+ii(P)_s = ii(theta)[1- (1-e^(-ii(N) ii(tau)_s))//ii(N) ii(tau)_s].
 ++++
 
-As stem:[N tau_s] increases to large values, stem:[P_s] tends to stem:[theta], while for small values of stem:[N tau_s] for this particular case, stem:[P_s] tends to stem:[N tau_s theta//2]. In general stem:[P_s=a theta],
-where stem:[a] is some function of stem:[N] and stem:[tau_s] while the probability stem:[P_g] that the
-next pulse is genuine is stem:[P_g = 1 - a theta].
+As stem:[ii(N) ii(tau)_s] increases to large values, stem:[ii(P)_s] tends to stem:[ii(theta)], while for small values of stem:[ii(N) ii(tau)_s] for this particular case, stem:[ii(P)_s] tends to stem:[ii(N) ii(tau)_s ii(theta)//2]. In general stem:[ii(P)_s=a ii(theta)],
+where stem:[a] is some function of stem:[ii(N)] and stem:[ii(tau)_s] while the probability stem:[ii(P)_g] that the
+next pulse is genuine is stem:[ii(P)_g = 1 - a ii(theta)].
 
 Thus the assumption that all actuating counts are genuine is only incorrect
-by a factor stem:[(1 - a theta)]; by using a sufficiently low count rate the departure
+by a factor stem:[(1 - a ii(theta))]; by using a sufficiently low count rate the departure
 of this factor from unity may be made insignificant, *independently* of the
-value of stem:[theta]. Thus for most situations, especially where stem:[theta] is also small,
+value of stem:[ii(theta)]. Thus for most situations, especially where stem:[ii(theta)] is also small,
 the assumption is a valid one.
 
 [appendix,obligation=informative]
@@ -918,12 +918,12 @@ such that every start pulse gives rise to one recorded stop pulse. In the
 event that the next pulse after a start pulse occurs at a time greater than
 the range of the TAC system, the pulse may be recorded in an "overflow"
 channel. Let stem:[n_s] be the total number of start pulses and stem:[n(t)] the recorded
-time-interval distribution. Then the probability stem:[S(t)] that no stop pulse
+time-interval distribution. Then the probability stem:[ii(S)(t)] that no stop pulse
 arrives earlier than stem:[t] is given by
 
 [stem%unnumbered]
 ++++
-S(t) = 1/(n_s) int_t^(oo) n(t) "d"t = 1 - 1/(n_s) int_0^t n(t) "d"t,
+ii(S)(t) = 1/(n_s) int_t^(oo) n(t) "d"t = 1 - 1/(n_s) int_0^t n(t) "d"t,
 ++++
 
 since
@@ -948,27 +948,27 @@ neglecting the influence of dead times,
 
 [stem%unnumbered]
 ++++
-S(t) = S_r(t) * S_c(t) * S_a(t).
+ii(S)(t) = ii(S)_r(t) * ii(S)_c(t) * ii(S)_a(t).
 ++++
 
-However, the probability differential stem:[C(t)" d"t] for the spurious pulses,
+However, the probability differential stem:[ii(C)(t)" d"t] for the spurious pulses,
 which would be observed in the absence of all genuine events (except
-for the start), would be stem:[-d S_c(t)], i.e.
+for the start), would be stem:[-"d" ii(S)_c(t)], i.e.
 
 [stem%unnumbered]
 ++++
-C(t) = -"d"/("d"t) S_c(t) = -"d"/("d"t) [(S(t))/(S_r(t)*S_a(t))],
+ii(C)(t) = -"d"/("d"t) ii(S)_c(t) = -"d"/("d"t) [(ii(S)(t))/(ii(S)_r(t)*ii(S)_a(t))],
 ++++
 
 and hence
 
 [stem%unnumbered]
 ++++
-theta = - int_0^(oo) "d"/"d"t [(S(t))/(S_r(t)*S_a(t))] "d"t.
+ii(theta) = - int_0^(oo) "d"/("d"t) [(ii(S)(t))/(ii(S)_r(t)*ii(S)_a(t))] "d"t.
 ++++
 
-The probability stem:[S(t)] can be readily determined from the observed time-interval
-distribution and stem:[S_r(t)]. In a similar manner, stem:[S_a(t)] can be obtained
+The probability stem:[ii(S)(t)] can be readily determined from the observed time-interval
+distribution and stem:[ii(S)_r(t)]. In a similar manner, stem:[ii(S)_a(t)] can be obtained
 from a subsidiary experiment in which a pulse generator is used to start
 the TAC system.
 
@@ -1008,7 +1008,7 @@ the TAC system.
 
 * [[[muller16,1]]], Müller, J.W., "On the precision of the modulo counting technique", Rapport BIPM-75/7 (1975)
 
-* [[[landaud,1]]], Landaud, G. and Mabboux, C., "Analyse du coefficient de corrélation de la fonction aléatoire stem:[X(t) = +- 1]. Application ò l'étude de lois de désintégration de radioéléments", J. Physique Rad. *21*, 615 (1960)
+* [[[landaud,1]]], Landaud, G. and Mabboux, C., "Analyse du coefficient de corrélation de la fonction aléatoire stem:[ii(X)(t) = +- 1]. Application ò l'étude de lois de désintégration de radioéléments", J. Physique Rad. *21*, 615 (1960)
 
 * [[[muller18,1]]], Müller, J. W ., "A complex modulo K countert", Rapport BIPM-73/5 (1973), Recueil de travaux du BIPM, vol. 4
 
