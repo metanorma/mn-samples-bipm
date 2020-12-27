@@ -26,15 +26,15 @@
 [preface]
 == Outline of the project
 
-The project was carried out in the context of a three-month secondment to the BIPM by Anna Villevalde from the D.I. Mendeleev All-Russian Institute for Metrology (VNIIM, Russia) during the period March to June 2019. The aim of the project was to re-measure the air-attenuation coefficient (stem:[mu_(air)]) and aluminium half-value layer (HVL) for the existing radiation qualities used for comparisons of national primary standards and calibrations of national secondary standards for low-energy x-rays including mammography (<<Kessler,Kessler and Burns 2018>>), then to measure stem:[mu_(air)] and HVL for new reference qualities at 1 m to complement the existing qualities at 0.5 m. The goal of this work is to expand the services and options available to the national metrology institutes and reduce the uncertainty of international comparisons.
+The project was carried out in the context of a three-month secondment to the BIPM by Anna Villevalde from the D.I. Mendeleev All-Russian Institute for Metrology (VNIIM, Russia) during the period March to June 2019. The aim of the project was to re-measure the air-attenuation coefficient (stem:[ii(mu)_("air")]) and aluminium half-value layer (HVL) for the existing radiation qualities used for comparisons of national primary standards and calibrations of national secondary standards for low-energy x-rays including mammography (<<Kessler,Kessler and Burns 2018>>), then to measure stem:[ii(mu)_("air")] and HVL for new reference qualities at 1 m to complement the existing qualities at 0.5 m. The goal of this work is to expand the services and options available to the national metrology institutes and reduce the uncertainty of international comparisons.
 
 The specific objectives of the project, as stated before commencement, were to:
 
-* review the existing methods and results for the determination of stem:[mu_(air)] and HVL;
+* review the existing methods and results for the determination of stem:[ii(mu)_("air")] and HVL;
 * assemble the air-attenuation tube (and if time permits, verify the internal air-path length when at ambient air pressure and at reduced pressure);
-* re-measure stem:[mu_(air)] and HVL for a selection of the 10 kV to 50 kV W/Al and W/Mo qualities at 0.5 m, to confirm the previous determinations;
+* re-measure stem:[ii(mu)_("air")] and HVL for a selection of the 10 kV to 50 kV W/Al and W/Mo qualities at 0.5 m, to confirm the previous determinations;
 * as above for the 25 kV to 35 kV Mo/Mo qualities at 0.6 m;
-* measure stem:[mu_(air)] and HVL for the 10 kV to 50 kV W/Al and W/Mo qualities at 1 m and compare the results (for HVL) with those derived using the 'single-attenuator' measurements.
+* measure stem:[ii(mu)_("air")] and HVL for the 10 kV to 50 kV W/Al and W/Mo qualities at 1 m and compare the results (for HVL) with those derived using the 'single-attenuator' measurements.
 * write a report on the methods and results;
 * time permitting, calibrate the BIPM reference chambers at selected radiation qualities;
 * time permitting, prepare an updated summary of the aluminium filters available, including optimized thickness determinations from previous work.
@@ -44,33 +44,33 @@ As well as achieving these objectives, the following additional work was underta
 * verification of the polarity correction for the FAC-L-01 and FAC-L-02 primary standard ionization chambers;
 * study of the dependence of the air-kerma rate on the parasite current.
 
-== Definitions and review of existing methods for the determination of stem:[mu_(air)] and HVL
+== Definitions and review of existing methods for the determination of stem:[ii(mu)_("air")] and HVL
 
-_Air-attenuation coefficient stem:[mu_(air)] and free-air chamber attenuation correction stem:[k_a]_
+_Air-attenuation coefficient stem:[ii(mu)_("air")] and free-air chamber attenuation correction stem:[k_"a"]_
 
 The attenuation coefficient of a material is a measure of the quantity of radiation attenuated by a given thickness of the material. The linear attenuation coefficient is the fractional change in the x-ray intensity per thickness of the attenuating material because of interactions in the material. The linear attenuation coefficient varies with photon energy, type of material and the physical density of the material.
 
-The attenuation of photons of energy stem:[E] is expressed mathematically by the formula
+The attenuation of photons of energy stem:[ii(E)] is expressed mathematically by the formula
 
 [[eq1]]
 [stem]
 ++++
-I = I_0 e^(-mu(E)x).
+ii(I) = ii(I)_0 e^(-ii(mu)(ii(E))x).
 ++++
 
-Here, stem:[I_0] is the incident beam intensity, stem:[I] is the beam intensity transmitted through the material of thickness stem:[x], and stem:[mu(E)] is the linear attenuation coefficient for photons of energy stem:[E]. This equation may be used to calculate the attenuation coefficient for any material when the incident and transmitted photon intensities are measured.
+Here, stem:[ii(I)_0] is the incident beam intensity, stem:[ii(I)] is the beam intensity transmitted through the material of thickness stem:[x], and stem:[ii(mu)(ii(E))] is the linear attenuation coefficient for photons of energy stem:[ii(E)]. This equation may be used to calculate the attenuation coefficient for any material when the incident and transmitted photon intensities are measured.
 
 A polychromatic beam contains a spectrum of photon energies. For x-ray beams, the maximum photon energy is determined by the peak voltage used to generate the beam. Because of the spectrum of photon energies, transmission of the polychromatic beam through the material does not follow the simple <<eq1>>. When the polychromatic beam passes through the material, photons of low energy are attenuated in greater number than higher energy photons; therefore, both the number of transmitted photons and the spectrum changes with increasing thickness of material. The increase in the mean or effective energy that occurs with increasing thickness of attenuating material is known as _beam hardening_.
 
-Determination of the air-kerma rate using a primary standard free-air ionization chamber includes a number of correction factors. The most significant, especially for low-energy x-rays, is the air-attenuation correction factor. It takes into account the fact that over the air-path length between the defining plane of the diaphragm and the centre of the collecting region of the free-air chamber there is attenuation of the primary photon fluence. The attenuation correction for the attenuation length stem:[A] is evaluated as:
+Determination of the air-kerma rate using a primary standard free-air ionization chamber includes a number of correction factors. The most significant, especially for low-energy x-rays, is the air-attenuation correction factor. It takes into account the fact that over the air-path length between the defining plane of the diaphragm and the centre of the collecting region of the free-air chamber there is attenuation of the primary photon fluence. The attenuation correction for the attenuation length stem:[ii(A)] is evaluated as:
 
 [[eq2]]
 [stem]
 ++++
-k_a = e^(mu_(air)A),
+k_"a" = e^(ii(mu)_("air") ii(A)),
 ++++
 
-where the mean linear air-attenuation coefficient stem:[mu_(air)] is determined by experiment for a particular radiation quality (<<Burns3,Burns and Büermann 2009>>).
+where the mean linear air-attenuation coefficient stem:[ii(mu)_("air")] is determined by experiment for a particular radiation quality (<<Burns3,Burns and Büermann 2009>>).
 
 _Half-Value Layer (HVL)_
 
@@ -80,25 +80,25 @@ The conditions under which HVL measurements should be made are referred to as na
 
 The term _transmission_ is defined here as the ratio of the air-kerma rate behind a given attenuator to the air-kerma rate for the unattenuated beam. To obtain the HVL for a particular beam the transmission is plotted as a function of the thickness of attenuator. The HVL value is derived by interpolation as the thickness of attenuator that corresponds to a transmission equal to 0.5. For this interpolation, linear or quadratic fits can be used, or an exponential fit based on <<eq1>> constrained to a transmission of unity for zero thickness. For attenuators with thickness chosen to be very close to the expected HVL, the three methods were shown to be in close agreement.
 
-_Method used at the BIPM for stem:[mu_(air)] and HVL determinations_
+_Method used at the BIPM for stem:[ii(mu)_("air")] and HVL determinations_
 
-The method used at the BIPM for the determination of the linear air-attenuation coefficient stem:[mu_(air)] and the HVL for low-energy x-ray radiation qualities involves measurements with a variable-pressure tube shown in <<fig1>> (<<Boutillon,Boutillon et al. 1969>>). The existing tube with well-known internal length (268.87 mm) is placed between the x-ray tube and the free-air ionization chamber. At each end of the variable-pressure tube is a beryllium window, the two windows totaling 0.42 mm in thickness. Under normal conditions for measurements using the W-anode x-ray tube these windows are considered part of the 'inherent' filtration and are used at all times for the reference radiation qualities (this is not the case for the Mo-anode x-ray tube qualities). It was experimentally verified that the presence of the tube itself, without its Be windows, does not measurably change the ionization current in the chamber.
+The method used at the BIPM for the determination of the linear air-attenuation coefficient stem:[ii(mu)_("air")] and the HVL for low-energy x-ray radiation qualities involves measurements with a variable-pressure tube shown in <<fig1>> (<<Boutillon,Boutillon et al. 1969>>). The existing tube with well-known internal length (268.87 mm) is placed between the x-ray tube and the free-air ionization chamber. At each end of the variable-pressure tube is a beryllium window, the two windows totaling 0.42 mm in thickness. Under normal conditions for measurements using the W-anode x-ray tube these windows are considered part of the 'inherent' filtration and are used at all times for the reference radiation qualities (this is not the case for the Mo-anode x-ray tube qualities). It was experimentally verified that the presence of the tube itself, without its Be windows, does not measurably change the ionization current in the chamber.
 
 [[fig1]]
 .The BIPM variable-pressure tube positioned in the beam.
 image::img01.png[]
 
-Inside the variable-pressure tube, the air pressure is reduced to compensate for air attenuation within the free-air ionization chamber. The air-attenuation correction is essentially eliminated by withdrawing the amount of air equal to that between the defining plane of the diaphragm and the centre of the collecting region of the free-air chamber (that is, over the attenuation length stem:[A]). The consequent increase in the ionization current, for a given radiation quality, is a measure of the mean air-attenuation coefficient for that quality.
+Inside the variable-pressure tube, the air pressure is reduced to compensate for air attenuation within the free-air ionization chamber. The air-attenuation correction is essentially eliminated by withdrawing the amount of air equal to that between the defining plane of the diaphragm and the centre of the collecting region of the free-air chamber (that is, over the attenuation length stem:[ii(A)]). The consequent increase in the ionization current, for a given radiation quality, is a measure of the mean air-attenuation coefficient for that quality.
 
-At the BIPM the air-kerma rate for low-energy x-rays is determined at the reference distance (normally 500 mm) from the exit window of the x-ray tube at 20 °C and 100 kPa footnote:[The use of 100 kPa in the specification of the reference air-path length and for the stem:[mu_(air)] value used in the data acquisition software is historical. It is independent of the reference conditions for ionization current measurements, which specify normalization to the reference air pressure of 101.325 kPa.] (air density 1.188 8 mg cm^–3^). The free-air chamber attenuation length is 100 mm and the variable-pressure tube length is approximately 300 mm. It follows that to remove the amount of air corresponding to the attenuation length, the variable-pressure tube is operated at approximately 60 kPa pressure. The precise value is calculated by the data acquisition program taking into account the ambient conditions at the time of measurement.
+At the BIPM the air-kerma rate for low-energy x-rays is determined at the reference distance (normally 500 mm) from the exit window of the x-ray tube at 20 °C and 100 kPa footnote:[The use of 100 kPa in the specification of the reference air-path length and for the stem:[ii(mu)_("air")] value used in the data acquisition software is historical. It is independent of the reference conditions for ionization current measurements, which specify normalization to the reference air pressure of 101.325 kPa.] (air density 1.188 8 mg cm^–3^). The free-air chamber attenuation length is 100 mm and the variable-pressure tube length is approximately 300 mm. It follows that to remove the amount of air corresponding to the attenuation length, the variable-pressure tube is operated at approximately 60 kPa pressure. The precise value is calculated by the data acquisition program taking into account the ambient conditions at the time of measurement.
 
 To determine the HVL for a given set of conditions (generating voltage, filtration, distance) measurements for at least three different attenuator thicknesses should be made. Each attenuator is composed using a combination of filters containing high-purity aluminium foils of well-known thicknesses. The total thickness for each attenuator is chosen to be very close to the expected HVL for the particular radiation quality. For most of the radiation qualities three attenuators were used, including at least one with thickness higher and at least one with thickness lower than the HVL.
 
 For each attenuator, the full set of ionization current measurements with the free-air chamber involves five pairs of measurement series. The first pair are made at ambient pressure (without then with the attenuator) followed by a pair with reduced pressure in the variable-pressure tube (with then without the attenuator). These two pairs are repeated and followed by a final pair at ambient pressure (without then with the attenuator), making a total of ten series of measurements of ionization current. Each of these measurement series comprises typically 7 measurements of the ionization current with an integration time of 30 s (for ionization currents lower than 10 pA the integration time is typically increased to 60 s). For each set of ten current measurements, the transmission is calculated as follows.
 
-For the five series of measurements without the attenuator, that is, for the reference beam under test, the air-attenuation coefficient stem:[mu_(air)] is calculated from the results under ambient conditions and with reduced pressure using an iteration algorithm. The value of stem:[mu_(air)] is found such that the standard deviation of the corrected ionization currents is minimized. This is the stem:[mu_(air)] value for the reference beam. The same procedure is used to find stem:[mu_(air)] for the five series of measurements with the attenuator; this value of stem:[mu_(air)] for the attenuated beam is required to obtain the transmission.
+For the five series of measurements without the attenuator, that is, for the reference beam under test, the air-attenuation coefficient stem:[ii(mu)_("air")] is calculated from the results under ambient conditions and with reduced pressure using an iteration algorithm. The value of stem:[ii(mu)_("air")] is found such that the standard deviation of the corrected ionization currents is minimized. This is the stem:[ii(mu)_("air")] value for the reference beam. The same procedure is used to find stem:[ii(mu)_("air")] for the five series of measurements with the attenuator; this value of stem:[ii(mu)_("air")] for the attenuated beam is required to obtain the transmission.
 
-The above procedure results in five consecutive estimates of the transmission, one for each pair of measurement series. The transmission that corresponds to the attenuator of a given thickness is calculated as the mean of the five estimates. The final transmission value used for the HVL determination is corrected for the change in the correction factor for scattered photons, stem:[k_(sc)], that arises due to the beam hardening by the attenuator, using data for stem:[k_(sc)] as a function of stem:[mu_(air)] based on earlier work by <<Boutillon,M. Boutillon>>. This correction is typically only 2 or 3 parts in 10^4^.
+The above procedure results in five consecutive estimates of the transmission, one for each pair of measurement series. The transmission that corresponds to the attenuator of a given thickness is calculated as the mean of the five estimates. The final transmission value used for the HVL determination is corrected for the change in the correction factor for scattered photons, stem:[k_("sc")], that arises due to the beam hardening by the attenuator, using data for stem:[k_("sc")] as a function of stem:[ii(mu)_("air")] based on earlier work by <<Boutillon,M. Boutillon>>. This correction is typically only 2 or 3 parts in 10^4^.
 
 == Assembly of air-attenuation tube and verification of internal air-path length
 
@@ -106,7 +106,7 @@ The air-attenuation tube is not maintained as a fixed assembly because its windo
 
 The internal length of the variable-pressure tube at a reduced pressure of 60 kPa was previously determined to be 268.87 mm with an estimated uncertainty of 0.02 mm. The internal length was calculated as the total length of the tube at ambient air pressure (269.33 mm) less the thickness of the beryllium windows of 0.42 mm and the reduced pressure effect estimated as 0.04 mm.
 
-This length was verified during the present measurements. The newly-determined value for the internal length is 269.16 mm, which differs from the previous value by 0.3 mm. It was calculated in the same way as previously as the total length of 269.62 mm (at ambient air pressure) subtracting the thickness of the beryllium windows and the reduced pressure effect (which was not re-measured). The influence on the stem:[mu_(air)] values of a difference of 0.3 mm in the tube length is negligible (less than 1 part in 10^4^ at 10 kV).
+This length was verified during the present measurements. The newly-determined value for the internal length is 269.16 mm, which differs from the previous value by 0.3 mm. It was calculated in the same way as previously as the total length of 269.62 mm (at ambient air pressure) subtracting the thickness of the beryllium windows and the reduced pressure effect (which was not re-measured). The influence on the stem:[ii(mu)_("air")] values of a difference of 0.3 mm in the tube length is negligible (less than 1 part in 10^4^ at 10 kV).
 
 [[fig2]]
 .Air-attenuation tube assembly.
@@ -114,21 +114,21 @@ image::img02.png[]
 
 Each window assembly involves a rubber vacuum joint, which will be more or less compressed depending on the degree of tightening of the mounting screws. The effect of tightening was investigated by measuring the thickness of the support (at the end of the tube that does not have the vacuum connection). The difference in the thickness of the support between complete tightening and incomplete but sufficient tightening is around 0.1 mm. Although this does directly affect the positioning of each Be window, it might explain some but probably not all of the observed change of 0.3 mm.
 
-== Re-measurement of stem:[mu_(air)] and HVL for a selection of W/Al and W/Mo qualities at 0.5 m
+== Re-measurement of stem:[ii(mu)_("air")] and HVL for a selection of W/Al and W/Mo qualities at 0.5 m
 
 At the BIPM the air-kerma rate for the low-energy radiation qualities produced using the tungsten x-ray tube and either aluminium (W/Al) or molybdenum (W/Mo) filters is normally determined at the reference distance of 0.5 m from the exit window of the x-ray tube. The reference air-kerma rate for each radiation quality is 1 mGy/s.
 
-The air-attenuation coefficients stem:[mu_(air)] and the HVLs for the W/Al qualities used at present were mostly measured in 2001 (<<Burns2,Burns and Roger 2001>>). For the W/Mo radiation qualities for mammography the corresponding measurements were made in 2002. For the present project, new measurements were performed for several radiation qualities to make sure that the values in use are still valid and to perform an additional stability check.
+The air-attenuation coefficients stem:[ii(mu)_("air")] and the HVLs for the W/Al qualities used at present were mostly measured in 2001 (<<Burns2,Burns and Roger 2001>>). For the W/Mo radiation qualities for mammography the corresponding measurements were made in 2002. For the present project, new measurements were performed for several radiation qualities to make sure that the values in use are still valid and to perform an additional stability check.
 
-A re-measurement of stem:[mu_(air)] and HVL was carried out for the following W/Al radiation qualities: 10 kV, 30 kV, 50 kVb and 50 kVa. The new measurements included repeats of the previous determinations using the same attenuators. Revised thickness values were used for certain filters making up the attenuators, although these revisions were shown to have no significant influence on the results. For the 30 kV and 50 kVa qualities two attenuators were used. For 50 kVb measurements with three attenuators were performed and an additional check of the effect of the lead collimator was made. To derive the HVL values for 30 kV, 50 kVb and 50 kVa linear interpolation was used. At 10 kV measurements with five attenuators were performed and the HVL was calculated using a quadratic fit to the results.
+A re-measurement of stem:[ii(mu)_("air")] and HVL was carried out for the following W/Al radiation qualities: 10 kV, 30 kV, 50 kVb and 50 kVa. The new measurements included repeats of the previous determinations using the same attenuators. Revised thickness values were used for certain filters making up the attenuators, although these revisions were shown to have no significant influence on the results. For the 30 kV and 50 kVa qualities two attenuators were used. For 50 kVb measurements with three attenuators were performed and an additional check of the effect of the lead collimator was made. To derive the HVL values for 30 kV, 50 kVb and 50 kVa linear interpolation was used. At 10 kV measurements with five attenuators were performed and the HVL was calculated using a quadratic fit to the results.
 
-The results are given in <<table1>> alongside the values presently in use. The stem:[mu_(air)] values are given at 293.15 K and 100 kPa (as used in the data acquisition software), and for an air-path length of 100 mm. The free-air chamber attenuation correction factors stem:[k_a] for 293.15 K and 101.325 kPa (as presented in comparison reports) are also given in the table.
+The results are given in <<table1>> alongside the values presently in use. The stem:[ii(mu)_("air")] values are given at 293.15 K and 100 kPa (as used in the data acquisition software), and for an air-path length of 100 mm. The free-air chamber attenuation correction factors stem:[k_"a"] for 293.15 K and 101.325 kPa (as presented in comparison reports) are also given in the table.
 
-There was no robust determination of the uncertainty of the measured HVL values as this does not enter directly in the air-kerma determination. However it can be seen from the table that the new HVL values agree with the values presently in use at the level of around 1 part in 10^3^. For the stem:[mu_(air)] values, their influence on the air-kerma rate is expressed in terms of the attenuation correction stem:[k_a]. The relative combined standard uncertainty that is presently used for the stem:[k_a] values is 2 parts in 10^4^. The new stem:[k_a] values are in agreement with the previous at the level of this combined uncertainty except for 10 kV. For 10 kV the relative difference in the stem:[k_a] values is around 1 part in 10^3^.
+There was no robust determination of the uncertainty of the measured HVL values as this does not enter directly in the air-kerma determination. However it can be seen from the table that the new HVL values agree with the values presently in use at the level of around 1 part in 10^3^. For the stem:[ii(mu)_("air")] values, their influence on the air-kerma rate is expressed in terms of the attenuation correction stem:[k_"a"]. The relative combined standard uncertainty that is presently used for the stem:[k_"a"] values is 2 parts in 10^4^. The new stem:[k_"a"] values are in agreement with the previous at the level of this combined uncertainty except for 10 kV. For 10 kV the relative difference in the stem:[k_"a"] values is around 1 part in 10^3^.
 
 [[table1]]
 [cols="<,<,^,^,^,^"]
-.Results of the re-measurement of stem:[mu_(air)] and HVL for selected W/Al radiation qualities at the 0.5 m reference distance
+.Results of the re-measurement of stem:[ii(mu)_("air")] and HVL for selected W/Al radiation qualities at the 0.5 m reference distance
 |===
 2+| Radiation quality | 10 kV | 30 kV | 50 kVb | 50 kVa
 2+| Generating potential / kV | 10 | 30 | 50 | 50
@@ -136,104 +136,104 @@ There was no robust determination of the uncertainty of the measured HVL values 
 2+| Reference distance / m | 0.5 | 0.5 | 0.5 | 0.5
 .2+| Al HVL / mm | value in use | 0.0368 | 0.1694 | 1.0168 | 2.2623
 | measured 2019 | 0.0368 | 0.1695 | 1.0155 | 2.2612
-.2+| stem:[mu_(air)// m^(–1)] | value in use | 1.7630 | 0.4353 | 0.0896 | 0.0450
+.2+| stem:[ii(mu)_("air")// m^(–1)] | value in use | 1.7630 | 0.4353 | 0.0896 | 0.0450
 | measured 2019 | 1.7724 | 0.4338 | 0.0897 | 0.0468
-.2+| stem:[k_a] | value in use | 1.1956 | 1.0451 | 1.0091 | 1.0046
+.2+| stem:[k_"a"] | value in use | 1.1956 | 1.0451 | 1.0091 | 1.0046
 | measured 2019 | 1.1967 | 1.0449 | 1.0091 | 1.0048
 |===
 
-A change at 10 kV is not unexpected. It is commonly observed that the air-kerma rate at 10 kV decreases with usage of the x-ray tube. Two common explanations for this observation are tungsten vapour from the anode forming a thin coating on the inner surface of the exit window of the x-ray tube, and roughening of the anode surface due to small cracks. As well as attenuating the x-ray fluence, each of these effects is expected to lead to a hardening of the beam (higher HVL) and a consequent decrease in stem:[mu_(air)]. However the results obtained for stem:[mu_(air)] and HVL are not consistent with this explanation; there is no significant change in the HVL and the new value for stem:[mu_(air)] is 0.5% _higher_ than that measured previously.
+A change at 10 kV is not unexpected. It is commonly observed that the air-kerma rate at 10 kV decreases with usage of the x-ray tube. Two common explanations for this observation are tungsten vapour from the anode forming a thin coating on the inner surface of the exit window of the x-ray tube, and roughening of the anode surface due to small cracks. As well as attenuating the x-ray fluence, each of these effects is expected to lead to a hardening of the beam (higher HVL) and a consequent decrease in stem:[ii(mu)_("air")]. However the results obtained for stem:[ii(mu)_("air")] and HVL are not consistent with this explanation; there is no significant change in the HVL and the new value for stem:[ii(mu)_("air")] is 0.5% _higher_ than that measured previously.
 
-For mammography x-rays, re-measurement of stem:[mu_(air)] and HVL was performed for the 23 kV and 35 kV W/Mo radiation qualities. The new measurements were made with the same attenuators as used previously. For both radiation qualities two attenuators were used. The results are presented in <<table2>>.
+For mammography x-rays, re-measurement of stem:[ii(mu)_("air")] and HVL was performed for the 23 kV and 35 kV W/Mo radiation qualities. The new measurements were made with the same attenuators as used previously. For both radiation qualities two attenuators were used. The results are presented in <<table2>>.
 
 [[table2]]
 [cols="<,<,^,^"]
-.Results of the re-measurement of stem:[mu_(air)] and HVL for selected W/Mo radiation qualities at the 0.5 m reference distance
+.Results of the re-measurement of stem:[ii(mu)_("air")] and HVL for selected W/Mo radiation qualities at the 0.5 m reference distance
 |===
 2+| Radiation quality | 23 kV | 35 kV
 2+| Generating potential / kV | 23 | 35
-2+| Mo filtration / stem:[mu]m | 60 | 60
+2+| Mo filtration / stem:[rm(mu) rm(m)] | 60 | 60
 2+| Reference distance / m | 0.5 | 0.5
 .2+| Al HVL / mm | value in use | 0.3315 | 0.3883
 | measured 2019 | 0.3313 | 0.3877
-.2+| stem:[mu_(air) // m^(–1)] | value in use | 0.2127 | 0.1903
+.2+| stem:[ii(mu)_("air") // rm(m)^(–1)] | value in use | 0.2127 | 0.1903
 | measured 2019 | 0.2108 | 0.1902
-.2+| stem:[k_a] | value in use | 1.0218 | 1.0195
+.2+| stem:[k_"a"] | value in use | 1.0218 | 1.0195
 | measured 2019 | 1.0216 | 1.0195
 |===
 
-The difference between the values in use and the newly-measured HVL values is around 1 part in 10^3^, and the new results for stem:[k_a] are in agreement with the previous at the level of the stated combined standard uncertainty of 2 parts in 10^4^.
+The difference between the values in use and the newly-measured HVL values is around 1 part in 10^3^, and the new results for stem:[k_"a"] are in agreement with the previous at the level of the stated combined standard uncertainty of 2 parts in 10^4^.
 
-== Re-measurement of stem:[mu_(air)] and HVL for a selection of Mo/Mo qualities at 0.6 m
+== Re-measurement of stem:[ii(mu)_("air")] and HVL for a selection of Mo/Mo qualities at 0.6 m
 
-The mammography radiation qualities using the molybdenum-anode x-ray tube and a molybdenum filter (Mo/Mo) are established at the BIPM for the reference distance of 0.6 m from the exit window of the tube. The reference air-kerma rate for each radiation quality is 2 mGy/s. The air-attenuation coefficients stem:[mu_(air)] and the HVLs for the qualities used at present were measured in 2009. New measurements were performed for the 25 kV and 35 kV radiation qualities.
+The mammography radiation qualities using the molybdenum-anode x-ray tube and a molybdenum filter (Mo/Mo) are established at the BIPM for the reference distance of 0.6 m from the exit window of the tube. The reference air-kerma rate for each radiation quality is 2 mGy/s. The air-attenuation coefficients stem:[ii(mu)_("air")] and the HVLs for the qualities used at present were measured in 2009. New measurements were performed for the 25 kV and 35 kV radiation qualities.
 
-The results are given in <<table3>> alongside the values presently in use. The stem:[mu_(air)] values are given at 293.15 K and 100 kPa and for an air-path length of 100 mm; the stem:[k_a] values are given for 293.15 K and 101.325 kPa.
+The results are given in <<table3>> alongside the values presently in use. The stem:[ii(mu)_("air")] values are given at 293.15 K and 100 kPa and for an air-path length of 100 mm; the stem:[k_"a"] values are given for 293.15 K and 101.325 kPa.
 
 [[table3]]
 [cols="<,<,^,^"]
-.Results of the re-measurement of stem:[mu_(air)] and HVL for selected Mo/Mo radiation qualities at the 0.6 m reference distance
+.Results of the re-measurement of stem:[ii(mu)_("air")] and HVL for selected Mo/Mo radiation qualities at the 0.6 m reference distance
 |===
 2+| Radiation quality | 25 kV | 35 kV
 2+| Generating potential / kV | 25 | 35
-2+| Mo filtration / stem:[mu]m | 30 | 30
+2+| Mo filtration / stem:[rm(mu) rm(m)] | 30 | 30
 2+| Reference distance / m | 0.6 | 0.6
 .2+| Al HVL / mm | value in use | 0.2774 | 0.3650 
 | measured 2019 | 0.2778 | 0.3651
-.2+| stem:[mu_(air) // m^(–1)] | value in use | 0.2613 | 0.2066
+.2+| stem:[ii(mu)_("air") // rm(m)^(–1)] | value in use | 0.2613 | 0.2066
 | measured 2019 | 0.2611 | 0.2078
-.2+| stem:[k_a] | value in use | 1.0268 | 1.0212
+.2+| stem:[k_"a"] | value in use | 1.0268 | 1.0212
 | measured 2019 | 1.0268 | 1.0213
 |===
 
-Again, the new HVL values agree with the values presently in use at the level of around 1 part in 10^3^, and there is no significant difference between the results for stem:[k_a].
+Again, the new HVL values agree with the values presently in use at the level of around 1 part in 10^3^, and there is no significant difference between the results for stem:[k_"a"].
 
-The values for stem:[mu_(air)] and HVLs are determined using the variable-pressure tube with the beryllium windows of total thickness 0.42 mm. However these Be windows are not included in the permanent filtration of the Mo/Mo beams. Additional measurements were performed at the 25 kV radiation quality to ensure that the effect of the Be windows on the air-kerma rate determination is within the stated uncertainty for stem:[k_a] of 2 parts in 10^4^.
+The values for stem:[ii(mu)_("air")] and HVLs are determined using the variable-pressure tube with the beryllium windows of total thickness 0.42 mm. However these Be windows are not included in the permanent filtration of the Mo/Mo beams. Additional measurements were performed at the 25 kV radiation quality to ensure that the effect of the Be windows on the air-kerma rate determination is within the stated uncertainty for stem:[k_"a"] of 2 parts in 10^4^.
 
-The measurements of stem:[mu_(air)] and HVL at 25 kV described above were made with the variable-pressure tube using two aluminium attenuators. The measurements were repeated using an additional Be attenuator of 0.418 mm thickness in the beam (positioned between the Al attenuators and the variable-pressure tube). These two sets of measurements gave the results for stem:[mu_(air)] and HVL with Be windows in the beam and with 'double' Be windows in the beam. From these results the stem:[mu_(air)] value for the reference beam (that is, without any Be other than the x-ray tube window) was deduced using a linear extrapolation to zero thickness of Be. A measurement of the HVL was then performed using the same two Al attenuators but without the variable-pressure tube in the beam, making use of the 'extrapolated' stem:[mu_(air)] values obtained in the previous step for zero thickness of Be.
+The measurements of stem:[ii(mu)_("air")] and HVL at 25 kV described above were made with the variable-pressure tube using two aluminium attenuators. The measurements were repeated using an additional Be attenuator of 0.418 mm thickness in the beam (positioned between the Al attenuators and the variable-pressure tube). These two sets of measurements gave the results for stem:[ii(mu)_("air")] and HVL with Be windows in the beam and with 'double' Be windows in the beam. From these results the stem:[ii(mu)_("air")] value for the reference beam (that is, without any Be other than the x-ray tube window) was deduced using a linear extrapolation to zero thickness of Be. A measurement of the HVL was then performed using the same two Al attenuators but without the variable-pressure tube in the beam, making use of the 'extrapolated' stem:[ii(mu)_("air")] values obtained in the previous step for zero thickness of Be.
 
-The results obtained for the 25 kV Mo/Mo radiation quality without Be windows are presented in <<table4>> in comparison with the values presently in use (measured with Be windows). Although the two HVLs differ by stem:[2.3" "mu"m"], which is significantly greater than the estimated uncertainty of around 1 part in 10^3^ and indicates a measurable change in beam quality, the relative difference in the stem:[k_a] values is consistent with the stated combined standard uncertainty of 2 parts in 10^4^.
+The results obtained for the 25 kV Mo/Mo radiation quality without Be windows are presented in <<table4>> in comparison with the values presently in use (measured with Be windows). Although the two HVLs differ by stem:[2.3" "rm(mu) rm(m)], which is significantly greater than the estimated uncertainty of around 1 part in 10^3^ and indicates a measurable change in beam quality, the relative difference in the stem:[k_"a"] values is consistent with the stated combined standard uncertainty of 2 parts in 10^4^.
 
 [[table4]]
 [cols="<,^,^"]
-.Results for stem:[mu_(air)] and HVL obtained with and without Be windows in the beam for the 25 kV Mo/Mo radiation quality at the 0.6 m reference distance
+.Results for stem:[ii(mu)_("air")] and HVL obtained with and without Be windows in the beam for the 25 kV Mo/Mo radiation quality at the 0.6 m reference distance
 |===
 | Measured | with Be windows (normal) | without Be windows
 | Al HVL / mm | 0.2774 | 0.2751
-| stem:[mu_(air) // m^(–1)] | 0.2613 | 0.2636
-| stem:[k_a] | 1.0268 | 1.0271
+| stem:[ii(mu)_("air") // rm(m)^(–1)] | 0.2613 | 0.2636
+| stem:[k_"a"] | 1.0268 | 1.0271
 |===
 
-== Measurement of stem:[mu_(air)] and HVL for the new W/Al and W/Mo qualities at 1 m and comparison of HVLs with results of 'single-attenuator' determinations
+== Measurement of stem:[ii(mu)_("air")] and HVL for the new W/Al and W/Mo qualities at 1 m and comparison of HVLs with results of 'single-attenuator' determinations
 
-The linear attenuation coefficient stem:[mu_(air)] and the HVL for low-energy x-ray beams depend significantly on the reference distance. An increase of air thickness between the x-ray tube and the free-air chamber leads to attenuation and hardening of the beam. To establish the reference radiation qualities at 1 m it is necessary to know the corresponding values for stem:[mu_(air)] and HVL. Measurements of stem:[mu_(air)] and HVL were made for the W/Al and W/Mo qualities recently established at 1 m.
+The linear attenuation coefficient stem:[ii(mu)_("air")] and the HVL for low-energy x-ray beams depend significantly on the reference distance. An increase of air thickness between the x-ray tube and the free-air chamber leads to attenuation and hardening of the beam. To establish the reference radiation qualities at 1 m it is necessary to know the corresponding values for stem:[ii(mu)_("air")] and HVL. Measurements of stem:[ii(mu)_("air")] and HVL were made for the W/Al and W/Mo qualities recently established at 1 m.
 
-The thicknesses for attenuators used during the measurements were selected to be as close as possible to the expected HVL values. Some of the attenuators previously used for the reference qualities at 0.5m were also used to determine the change in transmission for a given attenuator measured at 0.5 m and at 1 m. As noted previously, in determining the transmission for each attenuator the ratio of the correction factors for scattered photons, stem:[k_(sc)], was derived by interpolation from the values produced by <<Boutillon,M. Boutillon>>.
+The thicknesses for attenuators used during the measurements were selected to be as close as possible to the expected HVL values. Some of the attenuators previously used for the reference qualities at 0.5m were also used to determine the change in transmission for a given attenuator measured at 0.5 m and at 1 m. As noted previously, in determining the transmission for each attenuator the ratio of the correction factors for scattered photons, stem:[k_("sc")], was derived by interpolation from the values produced by <<Boutillon,M. Boutillon>>.
 
-The results for the W/Al radiation qualities are presented in <<table5>>. The stem:[mu_(air)] values are given at 293.15 K and 100 kPa and for an air path length of 100 mm. The correction factor stem:[k_a] is given for 293.15 K and 101.325 kPa.
+The results for the W/Al radiation qualities are presented in <<table5>>. The stem:[ii(mu)_("air")] values are given at 293.15 K and 100 kPa and for an air path length of 100 mm. The correction factor stem:[k_"a"] is given for 293.15 K and 101.325 kPa.
 
 [[table5]]
 [cols="<,^,^,^,^,^"]
-.Results of the measurement of stem:[mu_(air)] and HVL for the W/Al radiation qualities at the 1 m reference distance
+.Results of the measurement of stem:[ii(mu)_("air")] and HVL for the W/Al radiation qualities at the 1 m reference distance
 |===
 | Radiation quality | 10 kV | 30 kV | 25 kV | 50 kVb | 50 kVa
 | Generating potential / kV | 10 | 30 | 25 | 50 | 50
 | Al filtration / mm | 0 | 0.2082 | 0.3723 | 1.0082 | 3.989
 | Reference distance / m | 1 | 1 | 1 | 1 | 1
 | Al HVL / mm | 0.0445 | 0.1951 | 0.2654 | 1.0414 | 2.2737
-| stem:[mu_(air) // m^(–1)] | 1.4329 | 0.3903 | 0.2863 | 0.0874 | 0.0474
-| stem:[k_a] | 1.1563 | 1.0403 | 1.0294 | 1.0089 | 1.0048
+| stem:[ii(mu)_("air") // m^(–1)] | 1.4329 | 0.3903 | 0.2863 | 0.0874 | 0.0474
+| stem:[k_"a"] | 1.1563 | 1.0403 | 1.0294 | 1.0089 | 1.0048
 |===
 
 For the 30 kV quality the measurements were performed with five attenuators (initial measurements with the three attenuators used previously at 0.5 m, followed by measurements with two additional attenuators to get closer to the expected HVL value). For each of the 25 kV, 50 kVb and 50 kVa qualities three attenuators were used. Measurements at 10 kV were made with six attenuators. Linear interpolation was used to obtain the HVL for all qualities except 10 kV, for which a quadratic fit was used.
 
-The uncertainty of the HVL for each radiation quality was estimated from the uncertainty of the linear least-squares regression (Excel program by D. Burns). This uncertainty was typically less than stem:[1" "mu"m"] (stem:[0.2" "mu"m"] at 10 kV). For stem:[mu_(air)] the uncertainty was evaluated from the results with no attenuator for a given radiation quality. It was typically less than 1 part in 10^3^. The corresponding estimate for the uncertainty of the attenuation correction stem:[k_a] is less than 1 part in 10^4^.
+The uncertainty of the HVL for each radiation quality was estimated from the uncertainty of the linear least-squares regression (Excel program by D. Burns). This uncertainty was typically less than stem:[1" "rm(mu) rm(m)] (stem:[0.2" "rm(mu) rm(m)] at 10 kV). For stem:[ii(mu)_("air")] the uncertainty was evaluated from the results with no attenuator for a given radiation quality. It was typically less than 1 part in 10^3^. The corresponding estimate for the uncertainty of the attenuation correction stem:[k_"a"] is less than 1 part in 10^4^.
 
-In <<table6>> the new HVL values are compared with the approximate values derived from 'single-attenuator' measurements combined with calculations using SpekCalc (<<Poludniowski,Poludniowski et al. 2009>>), work carried out in 2018 to obtain provisional values for the HVLs. The new stem:[mu_(air)] values are compared with those measured during the BIPM.RI(I)-K2 comparison with the NRC in 2018 (<<Burns4,Burns et al. 2019>>).
+In <<table6>> the new HVL values are compared with the approximate values derived from 'single-attenuator' measurements combined with calculations using SpekCalc (<<Poludniowski,Poludniowski et al. 2009>>), work carried out in 2018 to obtain provisional values for the HVLs. The new stem:[ii(mu)_("air")] values are compared with those measured during the BIPM.RI(I)-K2 comparison with the NRC in 2018 (<<Burns4,Burns et al. 2019>>).
 
 [[table6]]
 [cols="<,<,^,^,^,^,^"]
-.New stem:[mu_(air)] and HVL values in comparison with those used in 2018 for the W/Al radiation qualities at the 1 m reference distance
+.New stem:[ii(mu)_("air")] and HVL values in comparison with those used in 2018 for the W/Al radiation qualities at the 1 m reference distance
 |===
 2+| Radiation quality | 10 kV | 30 kV | 25 kV | 50 kVb | 50 kVa
 2+| Generating potential / kV | 10 | 30 | 25 | 50 | 50
@@ -241,32 +241,32 @@ In <<table6>> the new HVL values are compared with the approximate values derive
 2+| Reference distance / m | 1 | 1 | 1 | 1 | 1
 .2+| Al HVL / mm | estimated 2018 | 0.045 | 0.191 | 0.262 | 1.04 | 2.28
 | measured 2019 | 0.0445 | 0.1951 | 0.2654 | 1.0414 | 2.2737
-.2+| stem:[mu_(air) // m^(–1)] | estimated 2018 | 1.431 | 0.3890 | 0.2841 | 0.0867 | 0.0459
+.2+| stem:[ii(mu)_("air") // rm(m)^(–1)] | estimated 2018 | 1.431 | 0.3890 | 0.2841 | 0.0867 | 0.0459
 | measured 2019 | 1.4329 | 0.3903 | 0.2863 | 0.0874 | 0.0474
-.2+| stem:[k_a] | estimated 2018 | 1.1560 | 1.0402 | 1.0292 | 1.0088 | 1.0047
+.2+| stem:[k_"a"] | estimated 2018 | 1.1560 | 1.0402 | 1.0292 | 1.0088 | 1.0047
 | measured 2019 | 1.1563 | 1.0403 | 1.0294 | 1.0089 | 1.0048
 |===
 
-The typical difference in the HVL values is about stem:[3" "mu"m"] (stem:[< 1" "mu"m"] at 10 kV), which is considered a good result in view of the approximate nature of the 'single-attenuator' values derived provisionally in 2018. The stem:[k_a] correction factors derived from the stem:[mu_(air)] values used for the comparison with the NRC in 2018 are in agreement with the results obtained in 2019 at the level of the stated combined standard uncertainty of 2 parts in 10^4^.
+The typical difference in the HVL values is about stem:[3" "rm(mu) rm(m)] (stem:[< 1" "rm(mu) rm(m)] at 10 kV), which is considered a good result in view of the approximate nature of the 'single-attenuator' values derived provisionally in 2018. The stem:[k_"a"] correction factors derived from the stem:[ii(mu)_("air")] values used for the comparison with the NRC in 2018 are in agreement with the results obtained in 2019 at the level of the stated combined standard uncertainty of 2 parts in 10^4^.
 
-The results of the stem:[mu_(air)] and HVL measurements for the W/Mo radiation qualities at 1 m reference distance are presented in <<table7>>. Three attenuators were used for all except the 30 kV and 40 kV qualities, for which four were used. The HVL values were obtained by linear interpolation for all qualities.
+The results of the stem:[ii(mu)_("air")] and HVL measurements for the W/Mo radiation qualities at 1 m reference distance are presented in <<table7>>. Three attenuators were used for all except the 30 kV and 40 kV qualities, for which four were used. The HVL values were obtained by linear interpolation for all qualities.
 
-The uncertainties for the HVL and stem:[mu_(air)] values were derived in the same way as for W/Al radiation qualities at 1 m. The typical uncertainty of the HVL is less than stem:[0.5" "mu"m"]. The statistical standard uncertainty of stem:[mu_(air)] is typically 1 part in 10^3^. The estimated uncertainty of the attenuation correction stem:[k_a] derived from this statistical uncertainty of stem:[mu_(air)] is less than 2 parts in 10^4^.
+The uncertainties for the HVL and stem:[ii(mu)_("air")] values were derived in the same way as for W/Al radiation qualities at 1 m. The typical uncertainty of the HVL is less than stem:[0.5" "rm(mu) rm(m)]. The statistical standard uncertainty of stem:[ii(mu)_("air")] is typically 1 part in 10^3^. The estimated uncertainty of the attenuation correction stem:[k_"a"] derived from this statistical uncertainty of stem:[ii(mu)_("air")] is less than 2 parts in 10^4^.
 
 [[table7]]
 [cols="<,^,^,^,^,^,^,^"]
-.Results of the measurement of stem:[mu_(air)] and HVL for the W/Mo radiation qualities at the 1 m reference distance
+.Results of the measurement of stem:[ii(mu)_("air")] and HVL for the W/Mo radiation qualities at the 1 m reference distance
 |===
 | Radiation quality | 23 kV | 25 kV | 28 kV | 30 kV | 35 kV | 40 kV | 50 kV
 | Generating potential / kV | 23 | 25 | 28 | 30 | 35 | 40 | 50
-| Mo filtration / stem:[mu]m | 60 | 60 | 60 | 60 | 60 | 60 | 60
+| Mo filtration / stem:[rm(mu) rm(m)] | 60 | 60 | 60 | 60 | 60 | 60 | 60
 | Reference distance / m | 1 | 1 | 1 | 1 | 1 | 1 | 1
 | Al HVL / mm | 0.3429 | 0.3539 | 0.3675 | 0.3765 | 0.4031 | 0.4350 | 0.5127
-| stem:[mu_(air)] / m^–1^ | 0.2073 | 0.2017 | 0.1932 | 0.1913 | 0.1835 | 0.1748 | 0.1600
-| stem:[k_a] | 1.0212 | 1.0206 | 1.0198 | 1.0196 | 1.0188 | 1.0179 | 1.0163
+| stem:[ii(mu)_("air")] / m^–1^ | 0.2073 | 0.2017 | 0.1932 | 0.1913 | 0.1835 | 0.1748 | 0.1600
+| stem:[k_"a"] | 1.0212 | 1.0206 | 1.0198 | 1.0196 | 1.0188 | 1.0179 | 1.0163
 |===
 
-To illustrate the difference between the results of measurements of stem:[mu_(air)] and HVLs at 0.5 m and 1 m, two graphs are given in <<fig3>> and <<fig4>>.
+To illustrate the difference between the results of measurements of stem:[ii(mu)_("air")] and HVLs at 0.5 m and 1 m, two graphs are given in <<fig3>> and <<fig4>>.
 
 <<fig3>> shows the difference between the HVL values at the 0.5 m and 1 m reference distances for the W/Al 50 kVb radiation quality. The horizontal line (red, dashed) denotes the value 0.5 for the transmission and the vertical lines the corresponding HVL values (1.0155 mm at 0.5 m and 1.0414 mm at 1 m). It is evident from the results that at 1 m the beam becomes harder as the mean energy of the beam increases, and so the HVL increases.
 
@@ -274,10 +274,10 @@ To illustrate the difference between the results of measurements of stem:[mu_(ai
 .HVL determination for the 50 kVb radiation quality at the 0.5 m and 1 m reference distances.
 image::img03.png[]
 
-In <<fig4>> the stem:[mu_(air)] values measured at the 0.5 m and 1m reference distances for the low-energy W/Al radiation qualities are plotted against the corresponding HVLs on a logarithmical scale. It can be seen from the graph that for the 10 kV, 30 kV and 25 kV radiation qualities (with mean energies below 20 keV) there is a notable change in the HVL with distance and the corresponding stem:[mu_(air)] values fall essentially on the same line. This effect decreases with increasing energy, such that for the 50 kVb and 50 kVa qualities there is no significant difference in the HVL and stem:[mu_(air)] values measured at 0.5 m and 1 m.
+In <<fig4>> the stem:[ii(mu)_("air")] values measured at the 0.5 m and 1m reference distances for the low-energy W/Al radiation qualities are plotted against the corresponding HVLs on a logarithmical scale. It can be seen from the graph that for the 10 kV, 30 kV and 25 kV radiation qualities (with mean energies below 20 keV) there is a notable change in the HVL with distance and the corresponding stem:[ii(mu)_("air")] values fall essentially on the same line. This effect decreases with increasing energy, such that for the 50 kVb and 50 kVa qualities there is no significant difference in the HVL and stem:[ii(mu)_("air")] values measured at 0.5 m and 1 m.
 
 [[fig4]]
-.Air-attenuation coefficients stem:[mu_(air)] at the 0.5 m and 1 m reference distances for the low-energy W/Al radiation qualities as a function of HVL (log-log scale).
+.Air-attenuation coefficients stem:[ii(mu)_("air")] at the 0.5 m and 1 m reference distances for the low-energy W/Al radiation qualities as a function of HVL (log-log scale).
 image::img04.png[]
 
 During the measurements the decision was taken to implement higher values for the reference air-kerma rates for the W/Al and W/Mo radiation qualities at 1 m, to increase the signal-to-noise ratio for chambers under calibration. The new rates are presented in <<table8>> and <<table9>> along with the corresponding values of the anode current and the generator software parameter Isend.
@@ -290,7 +290,7 @@ During the measurements the decision was taken to implement higher values for th
 | Al filtration / mm | 0 | 0.2082 | 0.3723 | 1.0082 | 3.989
 | Reference distance / m | 1 | 1 | 1 | 1 | 1
 | Al HVL / mm | 0.04450 | 0.1951 | 0.2654 | 1.0414 | 2.2737
-| stem:[mu_(air)] / m^–1^ | 1.4329 | 0.3903 | 0.2863 | 0.0874 | 0.0474
+| stem:[ii(mu)_("air")] / m^–1^ | 1.4329 | 0.3903 | 0.2863 | 0.0874 | 0.0474
 | Anode current / mA | 17.578 | 6.657 | 14.865 | 12.710 | 17.270
 | Isend / stem:[mu]A | 17528 | 6830 | 14962 | 12980 | 17510
 | New air-kerma rate / mGy/s | 0.3 | 1 | 0.8 | 1 | 0.3
@@ -304,9 +304,9 @@ During the measurements the decision was taken to implement higher values for th
 | Mo filtration / mm | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06
 | Reference distance / m | 1 | 1 | 1 | 1 | 1 | 1 | 1
 | Al HVL / mm | 0.3429 | 0.3539 | 0.3675 | 0.3765 | 0.4031 | 0.4350 | 0.5127
-| stem:[mu_(air)] / m^–1^ | 0.2073 | 0.2017 | 0.1932 | 0.1913 | 0.1835 | 0.1748 | 0.1600
+| stem:[ii(mu)_("air")] / m^–1^ | 0.2073 | 0.2017 | 0.1932 | 0.1913 | 0.1835 | 0.1748 | 0.1600
 | Anode current / mA | 17.900 | 17.650 | 16.398 | 16.540 | 15.955 | 15.544 | 13.144
-| Isend / stem:[mu]A | 17955 | 17720 | 16495 | 16650 | 16103 | 15729 | 13413
+| Isend / stem:[rm(mu) rm(A)] | 17955 | 17720 | 16495 | 16650 | 16103 | 15729 | 13413
 | New air-kerma rate / mGy/s | 0.25 | 0.3 | 0.35 | 0.4 | 0.5 | 0.6 | 0.7
 |===
 
@@ -320,7 +320,7 @@ A new labelled box for the US and C series filters was organized. As some of the
 
 To check the stability of the primary standard and at the same time gather information on the long-term behavior of commercial ionization chambers, three chambers of the BIPM – Shonka serial number 1, PTW23344 serial number 683 and Radcal RC6M serial number 9112 – were calibrated at selected W/Al x-ray radiation qualities at 0.5 m distance.
 
-The new results for the air-kerma calibration coefficients stem:[N_K], expressed in Gy stem:[muC^(–1)], and for the polarity correction stem:[k_(pol)] are presented in <<table10>> to <<table12>> alongside the values determined previously and corrected for the changes to the primary standard made in 2009 and 2019.
+The new results for the air-kerma calibration coefficients stem:[ii(N)_K], expressed in stem:[rm(Gy)" "rm(mu) rm(C)^(–1)], and for the polarity correction stem:[k_("pol")] are presented in <<table10>> to <<table12>> alongside the values determined previously and corrected for the changes to the primary standard made in 2009 and 2019.
 
 [[table10]]
 [cols="<,^,^,^,^,^,^"]
@@ -328,7 +328,7 @@ The new results for the air-kerma calibration coefficients stem:[N_K], expressed
 |===
 | Radiation quality 2+| 20 kV 2+| 30 kV 2+| 50 kVb
 | Al HVL / mm 2+| 0.0729 2+| 0.1694 2+| 1.0168
-| | stem:[N_K] / Gy stem:[muC^(–1)] | stem:[k_(pol)] | stem:[N_K] / Gy stem:[muC^(–1)] | stem:[k_(pol)] | stem:[N_K] / Gy stem:[muC^(–1)] | stem:[k_(pol)]
+| | stem:[ii(N)_K] stem:[// rm(Gy)] stem:[rm(mu) rm(C)^(–1)] | stem:[k_("pol")] | stem:[ii(N)_K] stem:[// rm(Gy)] stem:[rm(mu) rm(C)^(–1)] | stem:[k_("pol")] | stem:[ii(N)_K] stem:[// rm(Gy)] stem:[rm(mu) rm(C)^(–1)] | stem:[k_("pol")]
 | 2001 footnote:[The average of the results obtained in 2001.] | 93.10 | 1.0061 | 27.93 | 1.0073 | 10.903 | 1.0089
 | 2002 | 92.89 | 1.0063 | 27.92 | 1.0076 | 10.905 | 1.0090
 | 2004 | 93.12 | 1.0062 | 27.97 | 1.0075 | 10.906 | 1.0089
@@ -342,7 +342,7 @@ For the Shonka chamber the measurements were performed at both polarities, for t
 
 [[table11]]
 [cols="<,^,^"]
-.Calibration coefficients (in Gy stem:[muC^(–1)]) for the PTW23344 serial no. 683 ionization chamber
+.Calibration coefficients (in stem:[rm(Gy)" "rm(mu) rm(C)^(–1)]) for the PTW23344 serial no. 683 ionization chamber
 |===
 | Radiation quality | 30 kV | 50 kVb
 | Al HVL / mm | 0.1694 | 1.0168
@@ -356,7 +356,7 @@ For the Shonka chamber the measurements were performed at both polarities, for t
 
 [[table12]]
 [cols="<,^,^,^,^"]
-.Calibration coefficients (in Gy stem:[muC^(–1)]) for the Radcal RC6M serial no. 9112 ionization chamber
+.Calibration coefficients (in stem:[rm(Gy)" "rm(mu) rm(C)^(–1)]) for the Radcal RC6M serial no. 9112 ionization chamber
 |===
 | Radiation quality | 10 kV | 30 kV | 25 kV | 50 kVb
 | Al HVL / mm | 0.0368 | 0.1694 | 0.2425 | 1.0168
@@ -397,7 +397,7 @@ image::img07.png[]
 
 The generating voltage for the BIPM low-energy x-ray facility is stabilized by introducing a small anode voltage that compensates in real time for drift in the generator output. However, the introduction of an anode voltage introduces a current leakage path through the distilled water used for the tube cooling and the voltmeter that measures the anode voltage. Consequently, there is a difference between the measured anode current and the actual tube current, an effect that is minimized by maintaining the anode voltage at a low value (typically 10 V). A correction for this current leakage, referred to as a parasite current, is derived from the impedance of the leakage path, estimated each day before switching-on the generator voltage by applying 60 V to the anode.
 
-The present measurements were performed at the W/Al 30 kV radiation quality, for which the reference anode current is the lowest (1.3654 mA) and therefore the parasite current has the greatest relative effect. During the measurements the anode voltage was varied in steps from 10 V to 50 V, which has the effect of changing the parasite current from stem:[2" "mu"A"] and stem:[10" "mu"A"]. Four sets of measurements were made. <<fig8>> shows the dependence of the ionization current measured in the primary standard (normalized in the usual way to the reference anode current) on the parasite current. The results for each set are normalized to the first measurement in the set, which corresponds to the usual measurement condition (a parasite current of stem:[2" "mu"A"]). For the worst case of stem:[10" "mu"A"] (which is about 1 % of the anode current and would never be used for an air-kerma determination) the air-kerma rate is underestimated by around 0.1 %. Under the normal condition of a parasite current of typically stem:[2" "mu"A"] the air-kerma rate (normalized in the usual way) is underestimated by around 0.02 % footnote:[Following these measurements, it was shown that the impedance of the leakage path decreases systematically each day for the first two or three hours after switching on the generator, a variation that was not taken into account in the usual measurement procedure. With a revised procedure that takes this variation into account, the residual effect on the air-kerma rate determination was shown to be only 0.02 % for parasite current of stem:[13" "mu"A"], and consequently entirely negligible for the usual parasite current of stem:[2" "mu"A"].]. Note, however, that this has no effect on comparisons and calibrations since all measured ionization currents are normalized to a reference anode current in the same way.
+The present measurements were performed at the W/Al 30 kV radiation quality, for which the reference anode current is the lowest (1.3654 mA) and therefore the parasite current has the greatest relative effect. During the measurements the anode voltage was varied in steps from 10 V to 50 V, which has the effect of changing the parasite current from stem:[2" "rm(mu) rm(A)] and stem:[10" "rm(mu) rm(A)]. Four sets of measurements were made. <<fig8>> shows the dependence of the ionization current measured in the primary standard (normalized in the usual way to the reference anode current) on the parasite current. The results for each set are normalized to the first measurement in the set, which corresponds to the usual measurement condition (a parasite current of stem:[2" "rm(mu) rm(A)]). For the worst case of stem:[10" "rm(mu) rm(A)] (which is about 1 % of the anode current and would never be used for an air-kerma determination) the air-kerma rate is underestimated by around 0.1 %. Under the normal condition of a parasite current of typically stem:[2" "rm(mu) rm(A)] the air-kerma rate (normalized in the usual way) is underestimated by around 0.02 % footnote:[Following these measurements, it was shown that the impedance of the leakage path decreases systematically each day for the first two or three hours after switching on the generator, a variation that was not taken into account in the usual measurement procedure. With a revised procedure that takes this variation into account, the residual effect on the air-kerma rate determination was shown to be only 0.02 % for parasite current of stem:[13" "rm(mu) rm(A)], and consequently entirely negligible for the usual parasite current of stem:[2" "rm(mu) rm(A)].]. Note, however, that this has no effect on comparisons and calibrations since all measured ionization currents are normalized to a reference anode current in the same way.
 
 [[fig8]]
 .The ionization current as a function of the parasite current, each measurement set normalized to the first value in the set.
