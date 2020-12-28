@@ -31,28 +31,28 @@ Thus, in the lengthy attempt to evaluate parities for observed counts, when the 
 m_r^(+-) = sum_(k=0)^oo (-1)^k k^r p_k .
 ++++
 
-If the probabilities stem:[p_k] follow the Poisson law (with mean value stem:[p]), the moment of order stem:[r >= 1] is known <<bipm92-5>> to be
+If the probabilities stem:[p_k] follow the Poisson law (with mean value stem:[ii(mu)]), the moment of order stem:[r >= 1] is known <<bipm92-5>> to be
 
 [[eq2]]
 [stem]
 ++++
-m_r^(+-) = e^(-2mu) sum_(j=1)^r S(r,j) (-mu)^j ,
+m_r^(+-) = e^(-2 ii(mu)) sum_(j=1)^r S(r,j) (-ii(mu))^j ,
 ++++
 
-where stem:[S] is a Stirling number of the second kind <<riordan>>.
+where stem:[ii(S)] is a Stirling number of the second kind <<riordan>>.
 
 In the problem encountered, the expression to be evaluated is of the form
 
 [stem%unnumbered]
 ++++
-F = sum_(j=0)^(r-1) ((r-1),(j)) m_(j+1)^(+-) ,
+ii(F) = sum_(j=0)^(r-1) ((r-1),(j)) m_(j+1)^(+-) ,
 ++++
 
 which can be rearranged to become
 
 [stem%unnumbered]
 ++++
-F = e^(-2mu) sum_(k=1)^(j+1) (-mu)^k T(r,k) ,
+ii(F) = e^(-2 ii(mu)) sum_(k=1)^(j+1) (-ii(mu))^k ii(T)(r,k) ,
 ++++
 
 where
@@ -60,7 +60,7 @@ where
 [[eq3]]
 [stem]
 ++++
-T(r,k) = sum_(j=0)^(r-1) ((r-1),(j)) S(j+1,k)
+ii(T)(r,k) = sum_(j=0)^(r-1) ((r-1),(j)) ii(S)(j+1,k)
 ++++
 
 is now the quantity in which we are interested.
@@ -70,7 +70,7 @@ numbers as triangular matrices of infinite order. In a simplified notation, thes
 
 [stem%unnumbered]
 ++++
-ul B = [[1,,,,], [1,1,,,], [1,2,1,,], [color(red)(1),color(red)(3),color(red)(3),color(red)(1),], [1,4,6,4,1], [,,...,,]]
+ul (ii(B)) = [[1,,,,], [1,1,,,], [1,2,1,,], [color(red)(1),color(red)(3),color(red)(3),color(red)(1),], [1,4,6,4,1], [,,...,,]]
 ++++
 stem:[color(red)(r=4)]
 
@@ -78,26 +78,26 @@ and
 
 [stem%unnumbered]
 ++++
-ul S = [[1,,,,], [1,color(red)(1),,,], [1,color(red)(3),1,,], [1,color(red)(7),6,1,], [1,15,25,10,1], [,,...,,]] ,
+ul (ii(S)) = [[1,,,,], [1,color(red)(1),,,], [1,color(red)(3),1,,], [1,color(red)(7),6,1,], [1,15,25,10,1], [,,...,,]] ,
 ++++
 stem:[color(red)(k=2)]
 
-where we have put stem:[((0),(0)) = 1] and omitted the Stirling numbers stem:[S(j,0)] as they are not needed in <<eq3>>.
+where we have put stem:[((0),(0)) = 1] and omitted the Stirling numbers stem:[ii(S)(j,0)] as they are not needed in <<eq3>>.
 
-If we choose, for example. the values stem:[r = 4] and stem:[k = 2], the evaluation of stem:[T(4,2)], according to <<eq3>>, involves pairwise multiplication of the terms within rectangles in the above matrices. It is readily seen that this corresponds to a matrix multiplication; hence we can write symbolically
+If we choose, for example. the values stem:[r = 4] and stem:[k = 2], the evaluation of stem:[ii(T)(4,2)], according to <<eq3>>, involves pairwise multiplication of the terms within rectangles in the above matrices. It is readily seen that this corresponds to a matrix multiplication; hence we can write symbolically
 
 [[eq4]]
 [stem]
 ++++
-ul T = ul B xx ul S ,
+ul (ii(T)) = ul (ii(B)) xx ul (ii(S)) ,
 ++++
 
-where stem:[ul T] is now also a matrix.
+where stem:[ul (ii(T))] is now also a matrix.
 
-If we evaluate, for a few arguments, the numerical values of stem:[T(r,k)], we find the coefficients assembled in <<table1>>.
+If we evaluate, for a few arguments, the numerical values of stem:[ii(T)(r,k)], we find the coefficients assembled in <<table1>>.
 
 [[table1]]
-.Some numerical values of stem:[T(r,k)].
+.Some numerical values of stem:[ii(T)(r,k)].
 |===
 | | stem:[k = 1] | 2 | 3 | 4 | 5 | 6
 | stem:[r=l] | 1 | | | | | 
@@ -108,19 +108,19 @@ If we evaluate, for a few arguments, the numerical values of stem:[T(r,k)], we f
 | 6 | 32 | 211 | 285 | 125 | 20 | 1
 |===
 
-A closer inspection of <<table1>> reveals that its values follow a simple recurrence relation {blank}footnote:[Note that the quantities stem:[T(r,k)] are identical with coefficients that have been listed before in another context <<bipm92-9>>, and which were then denoted by stem:[beta_j(r,2)]. The correspondence is stem:[beta_j(r,2) = T(r+1, j+1)]. In fact, it now turns out that all the coefficients evaluated in <<bipm92-9>> allow simple recurrences, namely (in the original notation) stem:[alpha_j(r,t) = t alpha_j(r-1,t) + alpha_(j-1)(r-1,t)] and stem:[beta_j(r,t) = (j+t) beta_j(r-1,t) + beta_(j-1)(r-1,t)], a property which has not been recognized previously. These relations also provide a convenient means for checking the numerical values.], namely
+A closer inspection of <<table1>> reveals that its values follow a simple recurrence relation {blank}footnote:[Note that the quantities stem:[ii(T)(r,k)] are identical with coefficients that have been listed before in another context <<bipm92-9>>, and which were then denoted by stem:[ii(beta)_j(r,2)]. The correspondence is stem:[ii(beta)_j(r,2) = ii(T)(r+1, j+1)]. In fact, it now turns out that all the coefficients evaluated in <<bipm92-9>> allow simple recurrences, namely (in the original notation) stem:[ii(alpha)_j(r,t) = t ii(alpha)_j(r-1,t) + ii(alpha)_(j-1)(r-1,t)] and stem:[ii(beta)_j(r,t) = (j+t) ii(beta)_j(r-1,t) + ii(beta)_(j-1)(r-1,t)], a property which has not been recognized previously. These relations also provide a convenient means for checking the numerical values.], namely
 
 [[eq5]]
 [stem]
 ++++
-T(r,k) = (k+l) T(r-l,k) + T(r-l,k-l) .
+ii(T)(r,k) = (k+l) ii(T)(r-l,k) + ii(T)(r-l,k-l) .
 ++++
 
 This reminds us of the fact that there exist similar recurrences for the binomial coefficients and for the Stirling numbers. These are known to be
 
 [stem%unnumbered]
 ++++
-B(n,k) = B(n-l,k) + B(n-l,k-l)
+ii(B)(n,k) = ii(B)(n-l,k) + ii(B)(n-l,k-l)
 ++++
 
 and
@@ -128,102 +128,102 @@ and
 [[eq6]]
 [stem]
 ++++
-S(n,k) = k S(n-l,k) + S(n-l,k-l) ,
+ii(S)(n,k) = k ii(S)(n-l,k) + ii(S)(n-l,k-l) ,
 ++++
 
 respectively.
 
 A comparison with <<eq5>> and <<eq4>> immediately raises the question whether the "transfer' of recurrences is a general feature of matrix multiplication.
 
-To approach this problem, consider a general matrix multiplication stem:[ul A xx ul B = ul C] and start with the assumed recurrences
+To approach this problem, consider a general matrix multiplication stem:[ul (ii(A)) xx ul (ii(B)) = ul (ii(C))] and start with the assumed recurrences
 
 [stem%unnumbered]
 ++++
-A_(i,j) = alpha_1 A_(i-1,j) + alpha_2 A_(i-1,j-1) ,
+ii(A)_(i,j) = ii(alpha)_1 ii(A)_(i-1,j) + ii(alpha)_2 ii(A)_(i-1,j-1) ,
 ++++
 
 [[eq7]]
 [stem]
 ++++
-B_(j,k) = beta_1 B_(j-1,k) + beta_2 B_(j-1,k-1) .
+ii(B)_(j,k) = ii(beta)_1 ii(B)_(j-1,k) + ii(beta)_2 ii(B)_(j-1,k-1) .
 ++++
 
-This gives for the element stem:[C_(i,k)] of the product matrix
-
-[stem%unnumbered]
-++++
-C_(i,k) = sum_j A_(i,j)B_(j,k)
-++++
+This gives for the element stem:[ii(C)_(i,k)] of the product matrix
 
 [stem%unnumbered]
 ++++
-= sum_j (alpha_1 A_(i-1,j) + alpha_2 A_(i-1,j-1)) (beta_1 B_(j-1,k) + beta_2 B_(j-1,k-1))
+ii(C)_(i,k) = sum_j ii(A)_(i,j) ii(B)_(j,k)
 ++++
 
 [stem%unnumbered]
 ++++
-= sum alpha_1 A_(i-1,j) (beta_1 B_(j-1,k) + beta_2 B_(j-1,k-1)) + sum alpha_2 A_(i-1,j-1) beta_1 B_(j-1,k) + sum alpha_2 A_(i-1,j-1) beta_2 B_(j-1,k-1)
+= sum_j (ii(alpha)_1 ii(A)_(i-1,j) + ii(alpha)_2 ii(A)_(i-1,j-1)) (ii(beta)_1 ii(B)_(j-1,k) + ii(beta)_2 ii(B)_(j-1,k-1))
 ++++
 
 [stem%unnumbered]
 ++++
-= sum alpha_1 A_(i-1,j) B_(j,k) + alpha_2 beta_1 C_(i-1,k) + alpha_2 beta_2 C_(i-1,k-1)
+= sum ii(alpha)_1 ii(A)_(i-1,j) (ii(beta)_1 ii(B)_(j-1,k) + ii(beta)_2 ii(B)_(j-1,k-1)) + sum ii(alpha)_2 ii(A)_(i-1,j-1) ii(beta)_1 ii(B)_(j-1,k) + sum ii(alpha)_2 ii(A)_(i-1,j-1) ii(beta)_2 ii(B)_(j-1,k-1)
 ++++
 
 [stem%unnumbered]
 ++++
-= alpha_1 C_(i-1,k) + alpha_2 beta_1 C_(i-1,k) + alpha_2 beta_2 C_(i-1,k-1)
+= sum ii(alpha)_1 ii(A)_(i-1,j) ii(B)_(j,k) + ii(alpha)_2 ii(beta)_1 ii(C)_(i-1,k) + ii(alpha)_2 ii(beta)_2 ii(C)_(i-1,k-1)
+++++
+
+[stem%unnumbered]
+++++
+= ii(alpha)_1 ii(C)_(i-1,k) + ii(alpha)_2 ii(beta)_1 ii(C)_(i-1,k) + ii(alpha)_2 ii(beta)_2 ii(C)_(i-1,k-1)
 ++++
 
 [[eq8]]
 [stem]
 ++++
-= (alpha_1 + alpha_2 beta_1) C_(i-1,k) + alpha_2 beta_2 C_(i-1,k-1)
+= (ii(alpha)_1 + ii(alpha)_2 ii(beta)_1) ii(C)_(i-1,k) + ii(alpha)_2 ii(beta)_2 ii(C)_(i-1,k-1)
 ++++
 
-As expected, we return to the situation given in <<eq5>> by putting stem:[alpha_1 = alpha_2 = 1," "beta_1 = k] and stem:[beta_2 = 1].
+As expected, we return to the situation given in <<eq5>> by putting stem:[ii(alpha)_1 = ii(alpha)_2 = 1," "ii(beta)_1 = k] and stem:[ii(beta)_2 = 1].
 
-It is interesting to note in <<eq8>> that the coefficients stem:[gamma], for the product element
+It is interesting to note in <<eq8>> that the coefficients stem:[ii(gamma)], for the product element
 
 [[eq9]]
 [stem]
 ++++
-C_(i,k) = gamma_1 C_(i-1,k) + gamma_2 C_(i-1,k-1) ,
+ii(C)_(i,k) = ii(gamma)_1 ii(C)_(i-1,k) + ii(gamma)_2 ii(C)_(i-1,k-1) ,
 ++++
 
-involve not only sums, but also products of the coefficients stem:[alpha] and stem:[beta]. The coefficients stem:[gamma] are thus not symmetric in stem:[alpha] and stem:[beta].
+involve not only sums, but also products of the coefficients stem:[ii(alpha)] and stem:[ii(beta)]. The coefficients stem:[ii(gamma)] are thus not symmetric in stem:[ii(alpha)] and stem:[ii(beta)].
 
 It may therefore be worthwhile also to consider triple recurrences, i.e. relations of the form
 
 [stem%unnumbered]
 ++++
-A_(i,j) = alpha_1 A_(i-1,j) + alpha_2 A_(i-1,j-1) + alpha_3 A_(i-1,j-2) ,
+ii(A)_(i,j) = ii(alpha)_1 ii(A)_(i-1,j) + ii(alpha)_2 ii(A)_(i-1,j-1) + ii(alpha)_3 ii(A)_(i-1,j-2) ,
 ++++
 
 [[eq10]]
 [stem]
 ++++
-B_(j,k) = beta_1 B_(j-1,k) + beta_2 B_(j-1,k-1) + beta_3 B_(j-1,k-2) .
+ii(B)_(j,k) = ii(beta)_1 ii(B)_(j-1,k) + ii(beta)_2 ii(B)_(j-1,k-1) + ii(beta)_3 ii(B)_(j-1,k-2) .
 ++++
 
-After a similar, although longer calculation, we can show that the form of the product element stem:[C_(i,k)] is
+After a similar, although longer calculation, we can show that the form of the product element stem:[ii(C)_(i,k)] is
 
 [stem%unnumbered]
 ++++
-C_(i,k) = [alpha_1 + beta_1(alpha_2 + alpha_3beta_1)] C_(i-1,k) + beta_2 (alpha_2 + 2alpha_3beta_1)C_(i-1,k-1)
+ii(C)_(i,k) = [ii(alpha)_1 + ii(beta)_1(ii(alpha)_2 + ii(alpha)_3 ii(beta)_1)] ii(C)_(i-1,k) + ii(beta)_2 (ii(alpha)_2 + 2 ii(alpha)_3 ii(beta)_1) ii(C)_(i-1,k-1)
 ++++
 
 [[eq11]]
 [stem]
 ++++
-+ [beta_3(alpha_2 + 2alpha_3beta_1) + alpha_3beta_2^2] C_(i-1,k-2) + 2alpha_3beta_2beta_3 C_(i-1,k-3) + alpha_3beta_3^2 C_(i-1,k-4) .
++ [ii(beta)_3(ii(alpha)_2 + 2 ii(alpha)_3 ii(beta)_1) + ii(alpha)_3 ii(beta)_2^2] ii(C)_(i-1,k-2) + 2 ii(alpha)_3 ii(beta)_2 ii(beta)_3 ii(C)_(i-1,k-3) + ii(alpha)_3 ii(beta)_3^2 C_(i-1,k-4) .
 ++++
 
-Obviously, for stem:[alpha_3 = beta_3 = 0] this reduces to <<eq8>>.
+Obviously, for stem:[ii(alpha)_3 = ii(beta)_3 = 0] this reduces to <<eq8>>.
 
-It is worth noting that not only the new coefficients stem:[gamma], introduced in <<eq9>>, become more complicated, but also that their number no longer agrees with those of stem:[alpha] and stem:[beta].
+It is worth noting that not only the new coefficients stem:[ii(gamma)], introduced in <<eq9>>, become more complicated, but also that their number no longer agrees with those of stem:[ii(alpha)] and stem:[ii(beta)].
 
-I have just been informed by Mme M. Boutillon, a colleague at the BIPM, that the following general rule holds: If the recurrence formulae for both stem:[A] and stem:[B] have stem:[m] terms (in stem:[alpha] and stem:[beta]), the recurrence for stem:[C] includes stem:[(m-1)^2+1] terms (stem:[gamma]).
+I have just been informed by Mme M. Boutillon, a colleague at the BIPM, that the following general rule holds: If the recurrence formulae for both stem:[ii(A)] and stem:[ii(B)] have stem:[m] terms (in stem:[ii(alpha)] and stem:[ii(beta)]), the recurrence for stem:[ii(C)] includes stem:[(m-1)^2+1] terms (stem:[ii(gamma)]).
 
 This nice result explains why we find five terms in the product of triple recursions stem:[(m=3)]. In addition, it shows that only in the case of a double recursion stem:[(m=2)] - the case stem:[m = 1] is of no interest - the elements of the product matrix have the same number of terms in the recurrence.
 
