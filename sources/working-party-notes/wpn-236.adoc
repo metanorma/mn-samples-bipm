@@ -29,7 +29,7 @@ This problem occurs rather frequently and, no doubt, has been treated many times
 
 Suppose that we have to deal with a situation which is "under statistical control". What we actually require is that the first two moments of the number stem:[x] of events, counted in a given time interval, show no significant trend with time.
 
-Now consider measurements that have been performed on m samples, of size stem:[n_j" " (j = 1, 2, ... , m)], taken randomly from sorne stable population. Let the results be available in the form of me an values stem:[bar x_j] and variances stem:[s_j^2] (for a single measurement), which have been obtained by forming from the measurements stem:[x_(ij)] the quantities
+Now consider measurements that have been performed on stem:[m] samples, of size stem:[n_j" " (j = 1, 2, ... , m)], taken randomly from sorne stable population. Let the results be available in the form of me an values stem:[bar x_j] and variances stem:[s_j^2] (for a single measurement), which have been obtained by forming from the measurements stem:[x_(ij)] the quantities
 
 [[eq1]]
 [stem]
@@ -49,37 +49,37 @@ This allows us to form the weighted mean value
 
 [stem%unnumbered]
 ++++
-bar(barx) = 1/N sum_(j=1)^m n_jx_j,
+bar(bar x) = 1/ii(N) sum_(j=1)^m n_jx_j,
 ++++
 
 where
 
 [stem%unnumbered]
 ++++
-N = sum_(j=1)^m n_j
+ii(N) = sum_(j=1)^m n_j
 ++++
 
 is the total number of measurements performed. Note that all the variances <<eq2>> refer to a single measurement stem:[x_(ij)], not to a mean value stem:[bar x_j].
 
-Our problem is to evaluate, on the basis of the data given in <<eq1>> and <<eq2>>, a value for the variance of a single measurement, denoted by stem:[s^2(x)]. According to the definition of a variance, we have, considering all the stem:[N] measurements performed, the estimation
+Our problem is to evaluate, on the basis of the data given in <<eq1>> and <<eq2>>, a value for the variance of a single measurement, denoted by stem:[s^2(x)]. According to the definition of a variance, we have, considering all the stem:[ii(N)] measurements performed, the estimation
 
 [[eq3]]
 [stem]
 ++++
-s^2(x) = 1/(N-1) sum_(j=1)^m sum_(i=1)^(n_j) (x_(ij)- bar(barx))^2.
+s^2(x) = 1/(ii(N)-1) sum_(j=1)^m sum_(i=1)^(n_j) (x_(ij)- bar(bar x))^2.
 ++++
 
 This expression will now be rearranged. In a first step we easily find
 
 [stem%unnumbered]
 ++++
-(N-1) * s^2(x) = sum_(j=1)^m sum_(i=1)^(n_j) [(x_(ij)-bar x_j) + (bar x_j - bar(barx))]^2
+(ii(N)-1) * s^2(x) = sum_(j=1)^m sum_(i=1)^(n_j) [(x_(ij)-bar x_j) + (bar x_j - bar(barx))]^2
 ++++
 
 [[eq4]]
 [stem]
 ++++
-= sum_j sum_i [(x_(ij)-bar x_j)^2 + (bar x_j - bar(barx))^2 + 2(x_(ij)-bar x_j)(bar x_j-bar(barx))].
+= sum_j sum_i [(x_(ij)-bar x_j)^2 + (bar x_j - bar(bar x))^2 + 2(x_(ij)-bar x_j)(bar x_j-bar(barx))].
 ++++
 
 Since according to <<eq1>>
@@ -94,21 +94,21 @@ we arrive, by using <<eq2>>, at the form
 [[eq5]]
 [stem]
 ++++
-s^2(x) = 1/(N-1) sum_(j=1)^m [(n_j-1)s_j^2 + n_j(bar x_j - bar(barx))^2]^2.
+s^2(x) = 1/(ii(N)-1) sum_(j=1)^m [(n_j-1)s_j^2 + n_j(bar x_j - bar(barx))^2]^2.
 ++++
 
 This is a useful identity. For the special case of stem:[m = 2] samples, it follows from <<eq1>> that
 
 [stem%unnumbered]
 ++++
-bar x_1 - bar(barx) = bar x_1 - 1/N (n_1 bar x_1+n_2 bar x_2) = n_2/N (bar x_1 - bar x_2),
+bar x_1 - bar(bar x) = bar x_1 - 1/ii(N) (n_1 bar x_1+n_2 bar x_2) = n_2/ii(N) (bar x_1 - bar x_2),
 ++++
 
 and similarly
 
 [stem%unnumbered]
 ++++
-bar x_2 - bar(barx) = n_1/N (bar x_2 - bar x_1).
+bar x_2 - bar(bar x) = n_1/ii(N) (bar x_2 - bar x_1).
 ++++
 
 Hence, the relation <<eq5>> takes the form
@@ -116,7 +116,7 @@ Hence, the relation <<eq5>> takes the form
 [[eq6]]
 [stem]
 ++++
-s^2(x) = 1/(N-1) [(n_1-1)s_1^2 + (n_2-1)s_2^2 + (n_1n_2)/N (bar x_1 - bar x_2)^2],
+s^2(x) = 1/(ii(N)-1) [(n_1-1)s_1^2 + (n_2-1)s_2^2 + (n_1n_2)/ii(N) (bar x_1 - bar x_2)^2],
 ++++
 
 in agreement with a result given in <<muller>>.
@@ -142,7 +142,7 @@ sum_(j=1)^m n_j (bar x_j - bar(barx))^2 = (m-1) sum_j n_j * s^2 (bar(bar x))
 = (m-1) * s^2(x),
 ++++
 
-as stem:[sum_j n_j = N] and stem:[s^2(bar(barx)) = s^2(x)//N].
+as stem:[sum_j n_j = ii(N)] and stem:[s^2(bar(bar x)) = s^2(x)//ii(N)].
 
 Note, however, that the last equation is not an identity: it is a statistical relation. Thus, it does not always hold numerically. It is true on the average and requires that experimental conditions do not change.
 
@@ -150,14 +150,14 @@ If we take advantage of <<eq8>>, <<eq5>> can be brought into the form
 
 [stem%unnumbered]
 ++++
-(N-1)*s^2(x) = sum_j (n_j-1) * s_j^2 + (m-1)*s^2(x),
+(ii(N)-1)*s^2(x) = sum_j (n_j-1) * s_j^2 + (m-1)*s^2(x),
 ++++
 
 or
 
 [stem%unnumbered]
 ++++
-s^2(x)[N-1 - (m-1)] = sum_j (n_j-1)*s_j^2.
+s^2(x)[ii(N)-1 - (m-1)] = sum_j (n_j-1)*s_j^2.
 ++++
 
 Hence, we arrive at the general formula
@@ -165,7 +165,7 @@ Hence, we arrive at the general formula
 [[eq9]]
 [stem]
 ++++
-s^2(x) = (sum_(j=1)^m (n_j-1)*s_j^2)/(N-m),
+s^2(x) = (sum_(j=1)^m (n_j-1)*s_j^2)/(ii(N)-m),
 ++++
 
 which allows us to obtain the required variance from those measured in the stem:[m] samples. This form is quite remarkable in that the experimental mean values stem:[bar x_j], present in <<eq5>>, have disappeared.
