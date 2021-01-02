@@ -1,0 +1,323 @@
+
+[[annexE]]
+[appendix]
+== Motivation and basis for Recommendation INC-1 (1980)
+
+This annex gives a brief discussion of both the motivation and statistical basis for Recommendation INC-1 (1980) of the Working Group on the Statement of Uncertainties upon which this _Guide_ rests. For further discussion, see References <<CIPM1980>>, <<KAARLS1981>>, <<M1979>>, <<M1984>>.
+
+
+[[scls_E-1]]
+=== "Safe", "random", and "systematic"
+
+[[scls_E-1-1]]
+==== {blank}
+
+This _Guide_ presents a widely applicable method for evaluating and expressing uncertainty in measurement. It provides a realistic rather than a "safe" value of uncertainty based on the concept that there is no inherent difference between an uncertainty component arising from a random effect and one arising from a correction for a systematic effect (see <<scls_3-2-2>> and <<scls_3-2-3>>). The method stands, therefore, in contrast to certain older methods that have the following two ideas in common.
+
+
+[[scls_E-1-2]]
+==== {blank}
+
+The first idea is that the uncertainty reported should be "safe" or "conservative", meaning that it must never err on the side of being too small. In fact, because the evaluation of the uncertainty of a measurement result is problematic, it was often made deliberately large.
+
+
+[[scls_E-1-3]]
+==== {blank}
+
+The second idea is that the influences that give rise to uncertainty were always recognizable as either "random" or "systematic" with the two being of different natures; the uncertainties associated with each were to be combined in their own way and were to be reported separately (or when a single number was required, combined in some specified way). In fact, the method of combining uncertainties was often designed to satisfy the safety requirement.
+
+
+[[scls_E-2]]
+=== Justification for realistic uncertainty evaluations
+
+[[scls_E-2-1]]
+==== {blank}
+
+When the value of a measurand is reported, the best estimate of its value and the best evaluation of the uncertainty of that estimate must be given, for if the uncertainty is to err, it is not normally possible to decide in which direction it should err "safely". An understatement of uncertainties might cause too much trust to be placed in the values reported, with sometimes embarrassing or even disastrous consequences. A deliberate overstatement of uncertainties could also have undesirable repercussions. It could cause users of measuring equipment to purchase instruments that are more expensive than they need, or it could cause costly products to be discarded unnecessarily or the services of a calibration laboratory to be rejected.
+
+
+[[scls_E-2-2]]
+==== {blank}
+
+That is not to say that those using a measurement result could not apply their own multiplicative factor to its stated uncertainty in order to obtain an expanded uncertainty that defines an interval having a specified level of confidence and that satisfies their own needs, nor in certain circumstances that institutions providing measurement results could not routinely apply a factor that provides a similar expanded uncertainty that meets the needs of a particular class of users of their results. However, such factors (always to be stated) must be applied to the uncertainty as determined by a realistic method, and only _after_ the uncertainty has been so determined, so that the interval defined by the expanded uncertainty has the level of confidence required and the operation may be easily reversed.
+
+
+[[scls_E-2-3]]
+==== {blank}
+
+Those engaged in measurement often must incorporate in their analyses the results of measurements made by others, with each of these other results possessing an uncertainty of its own. In evaluating the uncertainty of their own measurement result, they need to have a best value, not a "safe" value, of the uncertainty of each of the results incorporated from elsewhere. Additionally, there must be a logical and simple way in which these imported uncertainties can be combined with the uncertainties of their own observations to give the uncertainty of their own result. Recommendation INC-1 (1980) provides such a way.
+
+
+[[scls_E-3]]
+=== Justification for treating all uncertainty components identically
+
+The focus of the discussion of this subclause is a simple example that illustrates how this _Guide_ treats uncertainty components arising from random effects and from corrections for systematic effects in exactly the same way in the evaluation of the uncertainty of the result of a measurement. It thus exemplifies the viewpoint adopted in this _Guide_ and cited in <<scls_E-1-1>>, namely, that all components of uncertainty are of the same nature and are to be treated identically. The starting point of the discussion is a simplified derivation of the mathematical expression for the propagation of standard deviations, termed in this _Guide_ the law of propagation of uncertainty.
+
+
+[[scls_E-3-1]]
+==== {blank}
+
+Let the output quantity stem:[z = f (w_1,w_2,...,w_N)] depend on stem:[N] input quantities stem:[w_1, w_2,...,w_N], where each stem:[w_i] is described by an appropriate probability distribution. Expansion of stem:[f] about the expectations of the stem:[w_i], stem:[E(w_i) -= mu_i], in a first-order Taylor series yields for small deviations of stem:[z] about stem:[mu_z] in terms of small deviations of stem:[w_i] about stem:[mu_i],
+
+[[eq_E-1]]
+[stem]
+++++
+z - mu_z = sum_{i=1}^N {partial f}/{partial w_i} (w_i - mu_i)
+++++
+
+where all higher-order terms are assumed to be negligible and stem:[mu_z = f(mu_1,mu_2,...,mu_N)]. The square of the deviation stem:[z - mu_z] is then given by
+
+[stem]
+++++
+(z - mu_z)^2 = (sum_{i=1}^N {partial f}/{partial w_i} (w_i - mu_i))^2
+++++
+
+which may be written as
+
+[[eq_E-2b]]
+[stem]
+++++
+(z - mu_z)^2 = sum_{i=1}^N ({partial f}/{partial w_i})^2 (w_i - mu_i)^2 + 2 sum_{i=1}^{N-1} sum_{j=i+1}^N {partial f}/{partial w_i} {partial f}/{partial w_j} (w_i - mu_i) (w_j - mu_i)
+++++
+
+
+The expectation of the squared deviation stem:[(z - mu)^2] is the variance of stem:[z], that is, stem:[E[(z -mu_z)^2\] = sigma^2], and thus <<eq_E-2b>> leads to
+
+[[eq_E-3]]
+[stem]
+++++
+sigma_z^2 = sum_{i=1}^N ({partial f}/{partial w_i})^2 sigma^2 + 2 sum_{i=1}^{N-1} sum_{j=i+1}^N {partial f}/{partial w_i} {partial f}/{partial w_j} sigma_i sigma_j rho_{ij}
+++++
+
+
+In this expression, stem:[sigma_i^2 = E [(w_i - mu_i)^2\]] is the variance of stem:[w_i] and stem:[rho_{ij} = v(w_i, w_j)//(sigma_i^2 σ_j^2)^{1//2}] is the correlation
+coefficient of stem:[w_i] and stem:[w_j], where stem:[v(w_i, w_j) = E[(w_i - mu_i)(w_j - mu_j)\]] is the covariance of stem:[w_i] and stem:[w_j].
+
+
+NOTE: stem:[sigma_z^2] and stem:[sigma_i^2] are, respectively, the central moments of order 2 (see <<scls_C-2-13>> and <<scls_C-2-22>>) of the probability distributions of stem:[z] and stem:[w_i]. A probability distribution may be completely characterized by its expectation, variance, and higher-order central moments.
+
+NOTE: <<eq_13>> in <<scls_5-2-2>> [together with <<eq_15>>], which is used to calculate combined standard uncertainty, is identical to <<eq_E-3>> except that <<eq_13>> is expressed in terms of estimates of the variances, standard deviations, and correlation coefficients.
+
+
+[[scls_E-3-2]]
+==== {blank}
+
+In the traditional terminology, <<eq_E-3>> is often called the "general law of error propagation", an appellation that is better applied to an expression of the form stem:[Delta z = sum_{i=1}^N (partial f//partial w_i)Delta w_i], where stem:[Delta z] is the change in stem:[z] due to (small) changes stem:[Delta w_i] in the stem:[w_i] [see <<eq_E-8>>]. In fact, it is appropriate to call <<eq_E-3>> the law of propagation of uncertainty as is done in this _Guide_ because it shows how the uncertainties of the input quantities stem:[w_i], taken equal to the standard deviations of the probability distributions of the stem:[w_i], combine to give the uncertainty of the output quantity stem:[z] if that uncertainty is taken equal to the standard deviation of the probability distribution of stem:[z].
+
+
+[[scls_E-3-3]]
+==== {blank}
+
+<<eq_E-3>> also applies to the propagation of multiples of standard deviations, for if each standard deviation stem:[sigma_i] is replaced by a multiple stem:[k sigma_i], with the same stem:[k] for each stem:[sigma_i], the standard deviation of the output quantity stem:[z] is replaced by stem:[k sigma_z]. However, it does not apply to the propagation of confidence intervals. If each stem:[sigma_i] is replaced with a quantity stem:[delta_i] that defines an interval corresponding to a given level of confidence stem:[p], the resulting quantity for stem:[z], stem:[delta_z], will not define an interval corresponding to the same value of stem:[p] unless all of the stem:[w_i] are described by normal distributions. No such assumptions regarding the normality of the probability distributions of the quantities stem:[w_i] are implied in <<eq_E-3>>. More specifically, if in <<eq_10>> in <<scls_5-1-2>> each standard uncertainty stem:[u(x_i)] is evaluated from independent repeated observations and multiplied by the stem:[t]-factor appropriate for its degrees of freedom for a particular value of stem:[p] (say stem:[p = 95] percent), the uncertainty of the estimate stem:[y] will not define an interval corresponding to that value of stem:[p] (see <<scls_G-3>> and <<scls_G-4>>).
+
+NOTE: The requirement of normality when propagating confidence intervals using <<eq_E-3>> may be one of the reasons for the historic separation of the components of uncertainty derived from repeated observations, which were assumed to be normally distributed, from those that were evaluated simply as upper and lower bounds.
+
+
+[[scls_E-3-4]]
+==== {blank}
+
+Consider the following example: stem:[z] depends on only one input quantity stem:[w], stem:[z = f(w)], where stem:[w] is estimated by averaging stem:[n] values stem:[w_k] of stem:[w]; these stem:[n] values are obtained from stem:[n] independent repeated observations stem:[q_k] of a random variable stem:[q]; and stem:[w_k] and stem:[q_k] are related by
+
+[stem]
+++++
+w_k = alpha + beta q_k
+++++
+
+Here stem:[alpha] is a constant "systematic" offset or shift common to each observation, and stem:[beta] is a common scale factor. The offset and the scale factor, although fixed during the course of the observations, are assumed to be characterized by _a priori_ probability distributions, with stem:[alpha] and stem:[beta] the best estimates of the expectations of these distributions.
+
+The best estimate of stem:[w] is the arithmetic mean or average stem:[bar(w)] obtained from
+
+[[eq_E-5]]
+[stem]
+++++
+bar(w) = 1/n sum_{k=1}^n w_k = 1/n sum_{k=1}^n (alpha + beta q_k)
+++++
+
+The quantity stem:[z] is then estimated by stem:[f(bar(w)) = f(alpha, beta, q_1, q_2,...,q_n)] and the estimate stem:[u^2(z)] of its variance stem:[sigma^2(z)] is
+obtained from <<eq_E-3>>. If for simplicity it is assumed that stem:[z = w] so that the best estimate of stem:[z] is stem:[z = f(bar(w)) = bar(w)], then the estimate stem:[u^2(z)] can be readily found. Noting from <<eq_E-5>> that
+
+[stem%unnumbered]
+++++
+{:({:{partial f}/{partial alpha} = 1,:}),
+({:{partial f}/{partial beta} = 1/n sum_{k=1}^n q_k = bar(q):}):}
+++++
+
+and
+
+[stem%unnumbered]
+++++
+{partial f}/{partial q_k} = {beta}/n ,
+++++
+
+denoting the estimated variances of stem:[alpha] and stem:[beta] by stem:[u^2(alpha)] and stem:[u^2(beta)], respectively, and assuming that the individual observations are uncorrelated, one finds from <<eq_E-3>>
+
+[[eq_E-6]]
+[stem]
+++++
+u^2(z) = u^2(alpha) + bar(q)^2 u^2(beta) + beta^2 {s^2(q_k)}/n
+++++
+
+where stem:[s^2(q_k)] is the experimental variance of the observations stem:[q_k] calculated according to <<eq_4>>, and stem:[s^2(q_k)//n = s^2(bar(q))] is the experimental variance of the mean stem:[bar(q)] [<<eq_5>> in <<scls_4-2-3>>].
+
+
+
+[[scls_E-3-5]]
+==== {blank}
+
+In the traditional terminology, the third term on the right-hand side of <<eq_E-6>> is called a "random" contribution to the estimated variance stem:[u^2(z)] because it normally decreases as the number of observations stem:[n] increases, while the first two terms are called "systematic" contributions because they do not depend on stem:[n].
+
+Of more significance, in some traditional treatments of measurement uncertainty, <<eq_E-6>> is questioned because no distinction is made between uncertainties arising from systematic effects and those arising from random effects. In particular, combining variances obtained from _a priori_ probability distributions with those obtained from frequency-based distributions is deprecated because the concept of probability is considered to be applicable _only_ to events that can be repeated a large number of times under essentially the same conditions, with the probability stem:[p] of an event (stem:[0 <= p <= 1]) indicating the _relative frequency_ with which the event will occur.
+
+In contrast to this frequency-based point of view of probability, an equally valid viewpoint is that probability is a measure of the _degree of belief_ that an event will occur <<JEFFREYS1983>>, <<PRESS1989>>. For example, suppose one has a chance of winning a small sum of money stem:[D] and one is a rational bettor. One's degree of belief in event stem:[A] occurring is p =0.5 if one is indifferent to these two betting choices:
+
+. receiving stem:[D] if event stem:[A] occurs but nothing if it does not occur;
+. receiving stem:[D] if event stem:[A] does not occur but nothing if it does occur.
+
+Recommendation INC-1 (1980) upon which this _Guide_ rests implicitly adopts such a viewpoint of probability since it views expressions such as <<eq_E-6>> as the appropriate way to calculate the combined standard uncertainty of a result of a measurement.
+
+
+[[scls_E-3-6]]
+==== {blank}
+
+There are three distinct advantages to adopting an interpretation of probability based on degree of belief, the standard deviation (standard uncertainty), and the law of propagation of uncertainty [<<eq_E-3>>] as the basis for evaluating and expressing uncertainty in measurement, as has been done in this _Guide_:
+
+. the law of propagation of uncertainty allows the combined standard uncertainty of one result to be readily incorporated in the evaluation of the combined standard uncertainty of another result in which the first is used;
+. the combined standard uncertainty can serve as the basis for calculating intervals that correspond in a realistic way to their required levels of confidence; and
+. [[item_E-3-6c]]it is unnecessary to classify components as "random" or "systematic" (or in any other manner) when evaluating uncertainty because all components of uncertainty are treated in the same way.
+
+Benefit <<item_E-3-6c>>) is highly advantageous because such categorization is frequently a source of confusion; an uncertainty component is not either "random" or "systematic". Its nature is conditioned by the use made of the corresponding quantity, or more formally, by the context in which the quantity appears in the mathematical model that describes the measurement. Thus, when its corresponding quantity is used in a different context, a "random" component may become a "systematic" component, and vice versa.
+
+
+[[scls_E-3-7]]
+==== {blank}
+
+For the reason given in <<item_E-3-6c>> above, Recommendation INC- 1 (1980) does not classify components of uncertainty as either "random" or "systematic". In fact, as far as the calculation of the combined standard uncertainty of a measurement result is concerned, there is no need to classify uncertainty components and thus no real need for any classificational scheme. Nonetheless, since convenient labels can sometimes be helpful in the communication and discussion of ideas, Recommendation INC-1 (1980) does provide a scheme for classifying the two distinct _methods_ by which uncertainty components may be evaluated, "A" and "B" (see <<scls_0-7>>,<<scls_2-3-2>>, and <<scls_2-3-3>>).
+
+Classifying the methods used to evaluate uncertainty components avoids the principal problem associated with classifying the components themselves, namely, the dependence of the classification of a component on how the corresponding quantity is used. However, classifying the methods rather than the components does not preclude gathering the individual components evaluated by the two methods into specific groups for a particular purpose in a given measurement, for example, when comparing the experimentally observed and theoretically predicted variability of the output values of a complex measurement system (see <<scls_3-4-3>>).
+
+
+[[scls_E-4]]
+=== Standard deviations as measures of uncertainty
+
+[[scls_E-4-1]]
+==== {blank}
+
+<<eq_E-3>> requires that no matter how the uncertainty of the estimate of an input quantity is obtained, it must be evaluated as a standard uncertainty, that is, as an estimated standard deviation. If some "safe" alternative is evaluated instead, it cannot be used in <<eq_E-3>>. In particular, if the "maximum error bound" (the largest conceivable deviation from the putative best estimate) is used in <<eq_E-3>>, the resulting uncertainty will have an ill-defined meaning and will be unusable by anyone wishing to incorporate it into subsequent calculations of the uncertainties of other quantities (see <<scls_E-3-3>>).
+
+
+[[scls_E-4-2]]
+==== {blank}
+
+When the standard uncertainty of an input quantity cannot be evaluated by an analysis of the results of an adequate number of repeated observations, a probability distribution must be adopted based on knowledge that is much less extensive than might be desirable. That does not, however, make the distribution invalid or unreal; like all probability distributions, it is an expression of what knowledge exists.
+
+
+[[scls_E-4-3]]
+==== {blank}
+
+Evaluations based on repeated observations are not necessarily superior to those obtained by other means. Consider stem:[s(bar(q))], the experimental standard deviation of the mean of stem:[n] independent observations stem:[q_k] of a normally distributed random variable stem:[q] [see <<eq_5>> in <<scls_4-2-3>>]. The quantity stem:[s(bar(q))] is a statistic (see <<scls_C-2-23>>) that estimates stem:[sigma(bar(q))], the standard deviation of the probability distribution of stem:[q], that is, the standard deviation of the distribution of the values of stem:[q] that would be obtained if the measurement were repeated an infinite number of times. The variance stem:[sigma^2[s(bar(q))\]] of stem:[s(bar(q))] is given, approximately, by
+
+[[eq_E-7]]
+[stem]
+++++
+sigma^2 [s(bar(q))] ~~ sigma^2 (bar(q))//(2v)
+++++
+
+where stem:[v = n - 1] is the degrees of freedom of stem:[s(q)] (see <<scls_G-3-3>>). Thus the relative standard deviation of stem:[s(q)], which is given by the ratio stem:[sigma [s(bar(q))\]sigma(bar(q))] and which can be taken as a measure of the relative uncertainty of stem:[s(q)], is approximately stem:[[2(n -1)\]^{-1//2}]. This "uncertainty of the uncertainty" of stem:[bar(q)], which arises from the purely statistical reason of limited sampling, can be surprisingly large; for stem:[n = 10] observations it is 24 percent. This and other values are given in <<table_E-1>>, which shows that the standard deviation of a statistically estimated standard deviation is not negligible for practical values of stem:[n]. One may therefore conclude that Type A evaluations of standard uncertainty are not necessarily more reliable than Type B evaluations, and that in many practical measurement situations where the number of observations is limited, the components obtained from Type B evaluations may be better known than the components obtained from Type A evaluations.
+
+
+[[scls_E-4-4]]
+==== {blank}
+
+It has been argued that, whereas the uncertainties associated with the application of a particular method of measurement are statistical parameters characterizing random variables, there are instances of a "truly systematic effect" whose uncertainty must be treated differently. An example is an offset having an unknown fixed value that is the same for every determination by the method due to a possible imperfection in the very principle of the method itself or one of its underlying assumptions. But if the possibility of such an offset is acknowledged to exist and its magnitude is believed to be possibly significant, then it can be described by a probability distribution, however simply constructed, based on the knowledge that led to the conclusion that it could exist and be significant. Thus, if one considers probability to be a measure of the degree of belief that an event will occur, the contribution of such a systematic effect can be included in the combined standard uncertainty of a measurement result by evaluating it as a standard uncertainty of an _a priori_ probability distribution and treating it in the same manner as any other standard uncertainty of an inputquantity.
+
+[example]
+The specification of a particular measurement procedure requires that a certain input quantity be calculated from a specific power-series expansion whose higher-order terms are inexactly known. The systematic effect due to not being able to treat these terms exactly leads to an unknown fixed offset that cannot be experimentally sampled by repetitions of the procedure. Thus the uncertainty associated with the effect cannot be evaluated and included in the uncertainty of the final measurement result if a frequency-based interpretation of probability is strictly followed. However, interpreting probability on the basis of degree of belief allows the uncertainty characterizing the effect to be evaluated from an _a priori_ probability distribution (derived from the available knowledge concerning the inexactly known terms) and to be included in the calculation of the combined standard uncertainty of the measurement result like any other uncertainty.
+
+
+
+[[table_E-1]]
+.stem:[sigma[s(bar(q))\]//sigma(bar(q))], the standard deviation of the experimental standard deviation of the mean stem:[bar(q)] of stem:[n] independent observations of a normally distributed random variable stem:[q], relative to the standard deviation of that mean <<item_tabe1a>> <<item_tabe1b>>
+[cols="2*^"]
+|===
+| Number of observations +
+stem:[n]
+| stem:[sigma[s(bar(q))\]//sigma(bar(q))] +
+(percent)
+
+| 2 | 76
+| 3 | 52
+| 4 | 42
+| 5 | 36
+| 10 | 24
+| 20 | 16
+| 30 | 13
+| 50 | 10
+
+2+a|
+. [[item_tabe1a]]The values given have been calculated from the exact expression for stem:[sigma[s(bar(q))\]//sigma(bar(q))], not the approximate expression stem:[[2(n-1)\]^{-1//2}].
+
+. [[item_tabe1b]]In the expression stem:[sigma[s(bar(q))\]//sigma(bar(q))], the denominator stem:[sigma(bar(q))] is the expectation stem:[E[S//sqrt(n)\]] and the numerator 
+stem:[sigma[s(bar(q))\]] is the square root of the variance stem:[V[S//sqrt(n)\]], where stem:[S] denotes a random variable equal to the standard deviationof stem:[n] independent random variables stem:[X_1,..., X_n], each having a normal distribution with mean value stem:[mu] and variance stem:[sigma^2]:
++
+--
+[stem%unnumbered]
+++++
+S = sqrt(1/{n-1} sum_{i=1}^n (X_i - bar(X))^2) , " " " " bar(X) = 1/n sum_{i=1}^n X_i
+++++
+
+The expectation and variance of stem:[S] are given by:
+
+[stem%unnumbered]
+++++
+E[S] = sqrt(2/{n-1}) {Gamma (n//2)}/{Gamma [(n-1)//2]} sigma, " " " " V[S] = sigma^2 - E[S]^2,
+++++
+
+where stem:[Gamma(x)] is the gamma function. Note that stem:[E[S\] < sigma] for a finite number stem:[n].
+--
+|===
+
+
+
+[[scls_E-5]]
+=== A comparison of two views of uncertainty
+
+[[scls_E-5-1]]
+==== {blank}
+
+The focus of this _Guide_ is on the measurement result and its evaluated uncertainty rather than on the unknowable quantities "true" value and error (see <<annexD>>). By taking the operational views that the result of a measurement is simply the value attributed to the measurand and that the uncertainty of that result is a measure of the dispersion of the values that could reasonably be attributed to the measurand, this _Guide_ in effect uncouples the often confusing connection between uncertainty and the unknowable quantities "true" value and error.
+
+
+[[scls_E-5-2]]
+==== {blank}
+
+This connection may be understood by interpreting the derivation of <<eq_E-3>>, the law of propagation of uncertainty, from the standpoint of "true" value and error. In this case, stem:[mu_i] is viewed as the unknown, unique "true" value of input quantity stem:[w_i] and each stem:[w_i] is assumed to be related to its "true" value stem:[mu_i] by stem:[w_i = mu_i + epsilon_i], where stem:[epsilon_i] is the error in stem:[w_i]. The expectation of the probability distribution of each stem:[epsilon_i] is assumed to be zero, stem:[E(epsilon_i) = 0], with variance stem:[E(epsilon_i^2) = sigma_i^2]. <<eq_E-1>> becomes then
+
+[[eq_E-8]]
+[stem]
+++++
+epsilon_z = sum_{i=1}^N {partial f}/{partial w_i} epsilon_i
+++++
+
+where stem:[epsilon_z = z - mu_z] is the error in stem:[z] and stem:[mu_z] is the "true" value of stem:[z]. If one then takes the expectation of the square of stem:[epsilon_z], one obtains an equation identical in form to <<eq_E-3>> but in which stem:[sigma_z^2 = E(epsilon_z^2)] is the variance of stem:[epsilon_z] and stem:[rho_{ij} = upsilon(epsilon_i,epsilon_j)//(sigma_i^2sigma_j^2)^{1//2}] is the correlation coefficient of stem:[epsilon_i] and stem:[epsilon_j], where stem:[upsilon(epsilon_i, epsilon_j) = E(epsilon_iepsilon_j)] is the
+covariance of stem:[epsilon_i] and stem:[epsilon_j]. The variances and correlation coefficients are thus associated with the _errors_ of the input quantities rather than with the input quantities themselves.
+
+[[note_E-5-2]]
+NOTE: It is assumed that probability is viewed as a measure of the degree of belief that an event will occur, implying that a systematic error may be treated in the same way as a random error and that stem:[epsilon_i] represents either kind.
+
+
+[[scls_E-5-3]]
+==== {blank}
+
+In practice, the difference in point of view does not lead to a difference in the numerical value of the measurement result or of the uncertainty assigned to that result.
+
+First, in both cases, the best available estimates of the input quantities stem:[w_i] are used to obtain the best estimate of stem:[z] from the function stem:[f]; it makes no difference _in the calculations_ if the best estimates are viewed as the values most likely to be attributed to the quantities in question or the best estimates of their "true" values.
+
+Second, because stem:[epsilon_i = w_i - mu_i], and because the stem:[mu_i] represent unique, fixed values and hence have no uncertainty, the variances and standard deviations of the stem:[epsilon_i] and stem:[w_i] are identical. This means that in both cases, the standard uncertainties used as the estimates of the standard deviations stem:[sigma_i] to obtain the combined standard uncertainty of the measurement result are identical and will yield the same numerical value for that uncertainty. Again, it makes no difference _in the calculations_ if a standard uncertainty is viewed as a measure of the dispersion of the probability distribution of an input quantity or as a measure of the dispersion of the probability distribution of the error of that quantity.
+
+NOTE: If the assumption of the <<note_E-5-2>> had not been made, then the discussion of this subclause would not apply unless all of the estimates of the input quantities and the uncertainties of those estimates were obtained from the statistical analysis of repeated observations, that is, from Type A evaluations.
+
+
+[[scls_E-5-4]]
+==== {blank}
+
+While the approach based on "true" value and error yields the same numerical results as the approach taken in this _Guide_ (provided that the assumption of the <<note_E-5-2>> is made), this _Guide_'s concept of uncertainty eliminates the confusion between error and uncertainty (see <<annexD>>). Indeed, this _Guide_'s operational approach, wherein the focus is on the observed (or estimated) value of a quantity and the observed (or estimated) variability of that value, makes any mention of error entirely unnecessary.
