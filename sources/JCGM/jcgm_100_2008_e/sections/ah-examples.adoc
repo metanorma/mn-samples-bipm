@@ -1,0 +1,1729 @@
+
+[[annexH]]
+[appendix]
+== Examples
+
+This annex gives six examples, <<scls_H-1>> to <<scls_H-6>>, which are worked out in considerable detail in order to illustrate the basic principles presented in this _Guide_ for evaluating and expressing uncertainty in measurement. Together with the examples included in the main text and in some of the other annexes, they should enable the users of this _Guide_ to put these principles into practice in their own work.
+
+Because the examples are for illustrative purposes, they have by necessity been simplified. Moreover, because they and the numerical data used in them have been chosen mainly to demonstrate the principles of this _Guide_, neither they nor the data should necessarily be interpreted as describing real measurements. While the data are used as given, in order to prevent rounding errors, more digits are retained in intermediate calculations than are usually shown. Thus the stated result of a calculation involving several quantities may differ slightly from the result implied by the numerical values given in the text for these quantities.
+
+It is pointed out in earlier portions of this _Guide_ that classifying the methods used to evaluate components of uncertainty as Type A or Type B is for convenience only; it is not required for the determination of the combined standard uncertainty or expanded uncertainty of a measurement result because all uncertainty components, however they are evaluated, are treated in the same way (see <<scls_3-3-4>>, <<scls_5-1-2>>, and <<scls_E-3-7>>). Thus, in the examples, the method used to evaluate a particular component of uncertainty is not specifically identified as to its type. However, it will be clear from the discussion whether a component is obtained from a Type A or a Type B evaluation.
+
+
+[[scls_H-1]]
+=== End-gauge calibration
+
+This example demonstrates that even an apparently simple measurement may involve subtle aspects of uncertainty evaluation.
+
+
+[[scls_H-1-1]]
+==== The measurement problem
+
+The length of a nominally 50 mm end gauge is determined by comparing it with a known standard of the same nominal length. The direct output of the comparison of the two end gauges is the difference stem:[d] in their lengths:
+
+[[eq_H-1]]
+[stem]
+++++
+d = l(1 + alpha theta) - l_{"S"}(1 + alpha_{"S"}theta_{"S"})
+++++
+
+where
+
+stem:[l]:: is the measurand, that is, the length at 20 °C of the end gauge being calibrated;
+stem:[l_{"S"}]:: is the length of the standard at 20 °C as given in its calibration certificate;
+stem:[alpha] and stem:[alpha_{"S"}]:: are the coefficients of thermal expansion, respectively, of the gauge being calibrated and the standard;
+stem:[theta] and stem:[theta_{"S"}]:: are the _deviations_ in temperature from the 20 °C reference temperature, respectively, of the gauge and the standard.
+
+
+[[scls_H-1-2]]
+==== Mathematical model
+
+From <<eq_H-1>>, the measurand is given by
+
+[[eq_H-2]]
+[stem]
+++++
+l = {l_{"S"}(1 + alpha_{"S"}theta_{"S"}) + d}/{(1 + alpha theta)} = l_{"S"} + d + l_{"S"}(alpha_{"S"}theta_{"S"} - alpha theta) + ...
+++++
+
+If the difference in temperature between the end gauge being calibrated and the standard is written as stem:[delta theta = theta - theta_{"S"}], and the difference in their thermal expansion coefficients as stem:[delta alpha = alpha - alpha_{"S"}], <<eq_H-2>> becomes
+
+[[eq_H-3]]
+[stem]
+++++
+l = f (l_{"S"}, d, alpha_{"S"}, theta, delta alpha, delta theta) = l_{"S"} + d - l_{"S"} (delta alpha cdot theta + alpha_{"S"} cdot delta theta)
+++++
+
+The differences stem:[delta theta] and stem:[delta alpha], but not their uncertainties, are estimated to be zero; and stem:[delta alpha], stem:[alpha_{"S"}], stem:[delta theta], and stem:[theta] are assumed to be uncorrelated. (If the measurand were expressed in terms of the variables stem:[theta], stem:[theta_{"S"}], stem:[alpha], and stem:[alpha_{"S"}], it would be necessary to include the correlation between stem:[theta] and stem:[theta_{"S"}], and between stem:[alpha] and stem:[alpha_{"S"}].)
+
+It thus follows from <<eq_H-3>> that the estimate of the value of the measurand stem:[l] may be obtained from the simple expression stem:[l_{"S"} + bar(d)], where stem:[l_{"S"}] is the length of the standard at 20 °C as given in its calibration certificate and stem:[d] is estimated by stem:[d], the arithmetic mean of stem:[n = 5] independent repeated observations. The combined standard uncertainty stem:[u_{"c"}(l)] of stem:[l] is obtained by applying <<eq_10>> in <<scls_5-1-2>> to <<eq_H-3>>, as discussed below.
+
+NOTE: In this and the other examples, for simplicity of notation, the same symbol is used for a quantity and its estimate.
+
+
+[[scls_H-1-3]]
+==== Contributory variances
+
+The pertinent aspects of this example as discussed in this and the following subclauses are summarized in <<table_H-1>>.
+
+Since it is assumed that stem:[delta alpha = 0] and stem:[delta theta = 0], the application of <<eq_10>> in <<scls_5-1-2>> to <<eq_H-3>> yields
+
+[[eq_H-4]]
+[stem]
+++++
+u_{"c"}^2(l) = c_{"S"}^2 u^2(l_{"S"}) + c_d^2 u^2(d) + c_{alpha_{"S"}}^2 u^2(alpha_{"S"}) + c_{theta}^2 u^2(theta) + c_{delta alpha}^2 u^2(delta alpha) + c_{delta theta}^2 u^2(delta theta)
+++++
+
+with
+
+[stem%unnumbered]
+++++
+{:({:c_{"S"}:},{:= partial f//partial l_{"S"} = 1 - (delta alpha cdot theta + alpha_{"S"} cdot delta theta) = 1:}),
+({:c_d:},{:= partial f//partial d = 1:}),
+({:c_{alpha_{"S"}}:},{:= partial f//partial alpha_{"S"} = -l_{"S"} delta theta = 0:}),
+({:c_{theta}:},{:= partial f//partial theta = -l_{"S"} delta alpha = 0:}),
+({:c_{delta alpha}:},{:= partial f//partia delta alpha = -l_{"S"} theta:}),
+({:c_{delta theta}:},{:= partial f//partial delta theta = -l_{"S"} alpha_{"S"}:}):}
+++++
+
+and thus
+
+[[eq_H-5]]
+[stem]
+++++
+u_{"c"}^2(l) = u^2(l_{"S"}) + u^2(d) + l_{"S"}^2 theta^2 u^2(delta alpha) + l_{"S"}^2 alpha_{"S"}^2 u^2(delta theta)
+++++
+
+
+[[scls_H-1-3-1]]
+===== Uncertainty of the calibration of the standard, stem:[u(l_{"S"})]
+
+The calibration certificate gives as the expanded uncertainty of the standard stem:[U = 0.075" "mu"m"] and states that it was obtained using a coverage factor of stem:[k = 3]. The standard uncertainty is then
+
+[stem%unnumbered]
+++++
+u (l_{"S"}) = (0.075" "mu"m")//3 = 25" nm"
+++++
+
+
+[[scls_H-1-3-2]]
+===== Uncertainty of the measured difference in lengths, u(d)
+
+The pooled experimental standard deviation characterizing the comparison of stem:[l] and stem:[l_{"S"}] was determined from the variability of 25 independent repeated observations of the difference in lengths of two standard end gauges and was found to be 13 nm. In the comparison of this example, five repeated observations were taken. The standard uncertainty associated with the arithmetic mean of these readings is then (see <<scls_4-2-4>>)
+
+[stem%unnumbered]
+++++
+u(bar(d)) = s(bar(d)) = (13" nm")//sqrt(5) = 5.8" nm"
+++++
+
+According to the calibration certificate of the comparator used to compare stem:[l] with stem:[l_{"S"}], its uncertainty "due to random errors" is stem:[pm 0.01" "mu"m"] at a level of confidence of 95 percent and is based on 6 replicate measurements; thus the standard uncertainty, using the stem:[t]-factor stem:[t_{95}(5) = 2.57] for stem:[v = 6 - 1 = 5] degrees of freedom (see <<annexG>>, <<table_G-2>>), is
+
+[stem%unnumbered]
+++++
+u(d_1) = (0.01" "mu"m")//2.57 = 3.9" nm"
+++++
+
+The uncertainty of the comparator "due to systematic errors" is given in the certificate as stem:[0.02" "mu"m"] at the "three sigma level". The standard uncertainty from this cause may therefore be taken to be
+
+[stem%unnumbered]
+++++
+u(d_2) = (0.02" "mu"m")//3 = 6.7" nm"
+++++
+
+The total contribution is obtained from the sum of the estimated variances:
+
+[stem%unnumbered]
+++++
+u^2(d) = u^2(bar(d)) + u^2(d_1) + u^2(d_2) = 93" nm"^2
+++++
+
+or
+
+[stem%unnumbered]
+++++
+u(d) = 9.7" nm"
+++++
+
+
+[[scls_H-1-3-3]]
+===== Uncertainty of the thermal expansion coefficient, stem:[u(alpha_{"S"})]
+
+The coefficient of thermal expansion of the standard end gauge is given as stem:[alpha_{"S"} = 11.5 xx 10^{-6}" °C"^{-1}] with an uncertainty represented by a rectangular distribution with bounds stem:[pm 2 xx 10^{-6}" °C"^{-1}]. The standard uncertainty is then [see <<eq_7>>]
+
+[stem%unnumbered]
+++++
+u(alpha_{"S"}) = (2 xx 10^{-6}" °C"^{-1})//sqrt(3) = 1.2 xx 10^{-6} " °C"^{-1}
+++++
+
+Since stem:[c_{alpha_{"S"}} = {partial f}/{partial alpha_{"S"}} = -l_{"S"}delta theta = 0] as indicated in <<scls_H-1-3>>, this uncertainty contributes nothing to the uncertainty of stem:[l] in first order. It does, however, have a second-order contribution that is discussed in <<scls_H-1-7>>.
+
+
+[[table_H-1]]
+.Summary of standard uncertainty components
+[cols="6*^"]
+|===
+h| Standard uncertainty component +
+stem:[u(x_i)]
+h| Source of uncertainty
+h| Value of standard uncertainty +
+stem:[u(x_i)]
+h| stem:[c_i -= partial f// partial x_i]
+h| stem:[u_i(l) -= \|c_i\| u(x_i)] +
+(nm)
+h| Degrees of freedom
+
+| stem:[u (l_{"S"})] | Calibration of standard end gauge | 25 nm | 1 | 25 | 18
+| stem:[u(d)] | Measured difference between end gauges | stem:[9.7] nm | 1 | stem:[9.7] | stem:[25.6]
+| stem:[u(bar(d))] | repeated observations | stem:[5.8] nm | | | 24
+| stem:[u(d_1)] | random effects of comparator | stem:[3.9] nm | | | 5
+| stem:[u(d_2)] | systematic effects of comparator | 6.7 nm | | | 8
+| stem:[u(alpha_{"S"})] | Thermal expansion coefficient of standard end gauge | stem:[1.2 xx 10^{-6}" °C"^{-1}] | 0 | 0 |
+| stem:[u(theta)] | Temperature of test bed | stem:[0.41" °C"] | 0 | 0 |
+| stem:[u(theta)] | mean temperature of bed | stem:[0.2" °C"] | | |
+| stem:[u(Delta)] | cyclic variation of temperature of room | stem:[0.35" °C"] | | |
+| stem:[u(delta_{alpha})] | Difference in expansion coefficients of end gauges | stem:[0.58 xx 10^{-6}" °C"^{-1}] | stem:[-l_{"S"} theta] | stem:[2.9] | 50
+| stem:[u(delta theta)] | Difference in temperatures of end gauges | stem:[0.029" °C"] | stem:[-l_{"S"} alpha_{"S"}] | stem:[16.6] | 2
+
+6+>a|
+[stem%unnumbered]
+++++
+u_{"c"}^2(l) = sum u_i^2 (l) = 1002" nm"^2
+++++
+
+[stem%unnumbered]
+++++
+u_{"c"}(l) = 32" nm"
+++++
+
+[stem%unnumbered]
+++++
+nu_{"eff"}(l) = 16
+++++
+|===
+
+
+[[scls_H-1-3-4]]
+===== Uncertainty of the deviation of the temperature of the end gauge, stem:[u(theta)]
+
+The temperature of the test bed is reported as stem:[(19.9 pm 0.5)" °C"]; the temperature at the time of the individual observations was not recorded. The stated maximum offset, stem:[Delta = 0.5" °C"], is said to represent the amplitude of an approximately cyclical variation of the temperature under a thermostatic system, not the uncertainty of the mean temperature. The value of the mean temperature deviation
+
+[stem%unnumbered]
+++++
+bar(theta) = 19.9" °C" - 20" °C" = - 0.1" °C"
+++++
+
+is reported as having a standard uncertainty itself due to the uncertainty in the mean temperature of the test bed of
+
+[stem%unnumbered]
+++++
+u(bar(theta)) = 0.2" °C"
+++++
+
+while the cyclic variation in time produces a U-shaped (arcsine) distribution of temperatures resulting in a standard uncertainty of
+
+[stem%unnumbered]
+++++
+u(Delta) = (0.5" °C")//sqrt(2) = 0.35" °C"
+++++
+
+The temperature deviation stem:[theta] may be taken equal to stem:[bar(theta)], and the standard uncertainty of stem:[theta] is obtained from
+
+[stem%unnumbered]
+++++
+u^2(theta) = u^2(bar(theta)) + u^2(Delta) = 0.165" °C"^2
+++++
+
+which gives
+
+[stem%unnumbered]
+++++
+u(theta) = 0.41" °C"
+++++
+
+Since stem:[c_{theta} = partial f//partial theta = -l_{"S"} delta alpha = 0] as indicated in <<scls_H-1-3>>, this uncertainty also contributes nothing to the uncertainty of stem:[l] in first order; but it does have a second-order contribution that is discussed in <<scls_H-1-7>>.
+
+
+[[scls_H-1-3-5]]
+===== Uncertainty of the difference in expansion coefficients, stem:[u(delta alpha)]
+
+The estimated bounds on the variability of stem:[delta alpha] are stem:[pm 1 xx 10^{-6}" °C"^{-1}], with an equal probability of stem:[delta alpha] having any value within those bounds. The standard uncertainty is
+
+[stem%unnumbered]
+++++
+u(delta alpha) = (1 xx 10^{-6}" °C"^{-1})//sqrt(3) = 0.58 xx 10^{-6}" °C"^{-1}
+++++
+
+
+[[scls_H-1-3-6]]
+===== Uncertainty of the difference in temperature of the gauges, stem:[u(delta theta)]
+
+The standard and the test gauge are expected to be at the same temperature, but the temperature difference could lie with equal probability anywhere in the estimated interval stem:[-0.05" °C"] to stem:[+0.05" °C"]. The standard uncertainty is
+
+[stem%unnumbered]
+++++
+u(delta theta) = (0.05" °C")//sqrt(3) = 0.029" °C"
+++++
+
+
+[[scls_H-1-4]]
+==== Combined standard uncertainty
+
+The combined standard uncertainty stem:[u_{"c"}(l)] is calculated from <<eq_H-5>>. The individual terms are collected and substituted into this expression to obtain
+
+[[eq_H-6a]]
+[stem]
+++++
+u_{"c"}^2(l) = (25 " nm")^2 + (9.7 " nm")^2 + (0.05 " m")^2 (-0.1 " °C")^2 (0.58 xx 10^{-6}" °C"^{-1})^2 + (0.05 " m")^2 (11.5 xx 10^{-6}" °C"^{-1})^2 (0.029" °C")^2
+++++
+
+[[eq_H-6b]]
+[stem]
+++++
+= (25 " nm")^2 + (9.7 " nm")^2 + (2.9 " nm")^2 + (16.6 "nm")^2 = 1002 " nm"^2
+++++
+
+or
+
+[[eq_H-6c]]
+[stem]
+++++
+u_{"c"}(l) = 32" nm"
+++++
+
+The dominant component of uncertainty is obviously that of the standard, stem:[u(l_{"S"}) = 25" nm"].
+
+
+[[scls_H-1-5]]
+==== Final result
+
+The calibration certificate for the standard end gauge gives stem:[l_{"S"} = 50.000623" mm"] as its length at 20 °C. The arithmetic mean stem:[bar(d)] of the five repeated observations of the difference in lengths between the unknown end gauge and the standard gauge is 215 nm. Thus, since stem:[l = l_{"S"} + d] (see <<scls_H-1-2>>), the length stem:[l] of the unknown end gauge at 20 °C is stem:[50.000838" mm"]. Following <<scls_7-2-2>>, the final result of the measurement may be stated as:
+____
+stem:[l = 50.000838" mm"] with a combined standard uncertainty stem:[u_{"c"} = 32" nm"]. The corresponding relativecombined standard uncertainty is stem:[u_{"c"}//l = 6.4 xx 10^{-7}].
+____
+
+
+[[scls_H-1-6]]
+==== Expanded uncertainty
+
+Suppose that one is required to obtain an expanded uncertainty stem:[U_{99} = k_{99} u_{"c"}(l)] that provides an interval having a level of confidence of approximately 99 percent. The procedure to use is that summarized in <<scls_G-6-4>>, and the required degrees of freedom are indicated in <<table_H-1>>. These were obtained as follows:
+
+. [[item_H-1-6a]]_Uncertainty of the calibration of the standard_, stem:[u(l_{"S"})] [<<scls_H-1-3-1>>]. The calibration certificate states that theeffective degrees of freedom of the combined standard uncertainty from which the quoted expanded uncertainty was obtained is stem:[nu_{"eff"}(l_{"S"}) = 18].
+. [[item_H-1-6b]]_Uncertainty of the measured difference in lengths_, stem:[u(d)] [<<scls_H-1-3-2>>]. Although stem:[bar(d)] was obtained from five repeated observations, because stem:[u(bar(d))] was obtained from a pooled experimental standard deviation based on 25 observations, the degrees of freedom of stem:[u(bar(d))] is stem:[v(bar(d)) = 25 - 1 = 24] (see <<note_H-3-6>>). The degrees of freedom of stem:[u(d_1)], the uncertainty due to random effects on the comparator, is stem:[v(d_1) = 6 - 1 = 5] because stem:[d_1] was obtained from six repeated measurements. The stem:[pm 0.02" "mu"m"] uncertainty for systematic effects on the comparator may be assumed to be reliable to 25 percent, and thus the degrees of freedom from <<eq_G-3>> in <<scls_G-4-2>> is stem:[v(d_2) = 8] (see the <<example_G-4-2>> of <<scls_G-4-2>>). The effective degrees of freedom of stem:[u(d)], stem:[nu_{"eff"}(d)], is then obtained from <<eq_G-2b>> in <<scls_G-4-1>>:
++
+--
+[stem%unnumbered]
+++++
+nu_{"eff"}(d) = {[u^2(bar(d)) + u^2(d_1) + u^2(d_2)]^2}/{{u^4(bar(d))}/{v(bar(d))} + {u^4(d_1)}/{v(d_1)} + {u^4(d_2)}/{v(d_2)}} = {(9.7 " nm")^4}/{{(5.8 " nm")^4}/24 + {(3.9 " nm")^4}/5 + {(6.7 " nm")^4}/8} = 25.6
+++++
+--
+
+. [[item_H-1-6d]]_Uncertainty of the difference in expansion coeficients_, stem:[u(delta alpha)] [<<scls_H-1-3-5>>]. The estimated bounds of stem:[pm 1 xx 10^{-6}" °C"^{-1}] on the variability of stem:[delta alpha] are deemed to be reliable to 10 percent. This gives, from <<eq_G-3>> in <<scls_G-4-2>>, stem:[v (delta alpha) = 50].
+. _Uncertainty of the difference in temperatures of the gauges_, stem:[u(delta theta)] [<<scls_H-1-3-6>>]. The estimated interval stem:[-0.05" °C"] to stem:[+0.05" °C"] for the temperature difference stem:[delta theta] is believed to be reliable only to 50 percent, which from <<eq_G-3>> in <<scls_G-4-2>> gives stem:[v (delta theta) = 2].
+
+The calculation of stem:[nu_{"eff"}(l)] from <<eq_G-2b>> in <<scls_G-4-1>> proceeds in exactly the same way as for the calculation of stem:[nu_{"eff"}(d)] in <<item_H-1-6b>> above. Thus from <<eq_H-6b>> and <<eq_H-6c>> and the values for stem:[v] given in <<item_H-1-6a>> through <<item_H-1-6d>>,
+
+[stem%unnumbered]
+++++
+nu_{"eff"}(l) = {(32 " nm")^4}/{{(25 " nm")^4}/18 + {(9.7 " nm")^4}/25.6 + {(2.9 " nm")^4}/50 + {(16.6 " nm")^4}/2} = 16.7
+++++
+
+To obtain the required expanded uncertainty, this value is first truncated to the next lower integer, stem:[nu_{"eff"}(l) = 16]. It then follows from <<table_G-2>> in <<annexG>> that stem:[t_{99}(16) = 2.92], and hence stem:[U_{99} = t_{99}(16) u_{"c"}(l) = 2.92 xx (32" nm") = 93" nm"]. Following <<scls_7-2-4>>, the final result of the measurement may be stated as:
+
+____
+stem:[l = (50.000838 pm 0.000093)" mm"], where the number following the symbol stem:[pm] is the numerical value of an expanded uncertainty stem:[U = k u_{"c"}], with stem:[U] determined from a combined standard uncertainty stem:[u_{"c"} = 32" nm"] and a coverage factor stem:[k = 2.92] based on the stem:[t]-distribution for stem:[v = 16] degrees of freedom, and defines an interval estimated to have a level of confidence of 99 percent. The corresponding relative expanded uncertainty is stem:[U//l = 1.9 xx 10^{-6}].
+____
+
+[[scls_H-1-7]]
+==== Second-order terms
+
+The <<note_5-1-2>> points out that <<eq_10>>, which is used in this example to obtain the combined standard uncertainty stem:[u_{"c"}(l)], must be augmented when the nonlinearity of the function stem:[Y = f (X_1, X_2,..., X_N)] is so significant that the higher-order terms in the Taylor series expansion cannot be neglected. Such is the case in this example, and therefore the evaluation of stem:[u_{"c"}(l)] as presented up to this point is not complete. Application to <<eq_H-3>> of the expression given in the <<note_5-1-2>> yields in fact two distinct non-negligible second-order terms to be added to <<eq_H-5>>. These terms, which arise from the quadratic term in the expression of the <<note_5-1-2>>, are
+
+[stem%unnumbered]
+++++
+l_{"S"}^2 u^2(delta alpha) u^2(theta) + l_{"S"}^2 u^2(alpha_{"S"}) u^2(delta theta)
+++++
+
+but only the first of these terms contributes significantly to stem:[u_{"c"}(l)]:
+
+[stem%unnumbered]
+++++
+l_{"S"} u(delta alpha) u(theta) = (0.05 m) (0.58 xx 10^{-6}" °C"^{-1})(0.41" °C") = 11.7" nm"
+++++
+
+[stem%unnumbered]
+++++
+l_{"S"} u(alpha_{"S"}) u(delta theta)=(0.05 m)(1.2 xx 10^{-6}" °C"^{-1})(0.029" °C") = 1.7" nm"
+++++
+
+The second-order terms increase stem:[u_{"c"}(l)] from 32 nm to 34 nm.
+
+
+[[scls_H-2]]
+=== Simultaneous resistance and reactance measurement
+
+This example demonstrates the treatment of multiple measurands or output quantities determined simultaneously in the same measurement and the correlation of their estimates. It considers only the random variations of the observations; in actual practice, the uncertainties of corrections for systematic effects would also contribute to the uncertainty of the measurement results. The data are analysed in two different ways with each yielding essentially the same numerical values.
+
+
+[[scls_H-2-1]]
+==== The measurement problem
+
+The resistance stem:[R] and the reactance stem:[X] of a circuit element are determined by measuring the amplitude stem:[V] of a sinusoidally-alternating potential difference across its terminals, the amplitude stem:[I] of the alternating current passing through it, and the phase-shift angle stem:[phi] of the alternating potential difference relative to the alternating current. Thus the three input quantities are stem:[V], stem:[I], and stem:[phi] and the three output quantities -- the measurands -- are the three impedance components stem:[R], stem:[X], and stem:[Z]. Since stem:[Z^2 = R^2 + X^2], there are only two independent output quantities.
+
+
+[[scls_H-2-2]]
+==== Mathematical model and data
+
+The measurands are related to the input quantities by Ohm's law:
+
+[[eq_H-7]]
+[stem]
+++++
+R = V/I cos phi; " " " " X = V/I sin phi: " " " " Z = V/I
+++++
+
+Consider that five independent sets of simultaneous observations of the three input quantities stem:[V], stem:[I], and stem:[phi] are obtained under similar conditions (see <<scls_B-2-15>>), resulting in the data given in <<table_H-2>>. The arithmetic means of the observations and the experimental standard deviations of those means calculated from <<eq_3>> and <<eq_5>> are also given. The means are taken as the best estimates of the expected values of the input quantities, and the experimental standard deviations are the standard uncertainties of those means.
+
+Because the means stem:[bar(V)], stem:[bar(I)], and stem:[bar(phi)] are obtained from simultaneous observations, they are correlated and the correlations must be taken into account in the evaluation of the standard uncertainties of the measurands stem:[R], stem:[X], and stem:[Z]. The required correlation coefficients are readily obtained from <<eq_14>> in <<scls_5-2-2>> using values of stem:[s(bar(V),bar(I))], stem:[s(bar(V),bar(phi))], and stem:[s(bar(I),bar(phi))] calculated from <<eq_17>> in <<scls_5-2-3>>. The results are included in <<table_H-2>>, where it should be recalled that stem:[r(x_i,x_j) = r(x_j,x_i)] and stem:[r(x_i,x_i) = 1].
+
+
+[[table_H-2]]
+.Values of the input quantities stem:[V], stem:[I], and stem:[phi] obtained from five sets of simultaneous observations
+[cols="4*^"]
+|===
+.2+h| Set number +
+stem:[k]
+3+h| Input quantities
+
+| stem:[V] +
+(V)
+| stem:[I] +
+(mA)
+| stem:[phi] +
+(rad)
+
+| 1 | stem:[5.007] | stem:[19.663] | stem:[1.0456]
+| 2 | stem:[4.994] | stem:[19.639] | stem:[1.0438]
+| 3 | stem:[5.005] | stem:[19.640] | stem:[1.0468]
+| 4 | stem:[4.990] | stem:[19.685] | stem:[1.0428]
+| 5 | stem:[4.999] | stem:[19.678] | stem:[1.0433]
+| Arithmetic mean | stem:[bar(V) = 4.9990] | stem:[bar(I) = 19.6610] | stem:[bar(phi) = 1.04446]
+| Experimental standard deviation of mean | stem:[s(bar(V)) = 0.0032] | stem:[s(bar(I)) = 0.0095] | stem:[s(bar(phi)) = 0.00075]
+
+4+| Correlation coefficients
+4+a|
+[stem%unnumbered]
+++++
+r(bar(V),bar(I)) = -0.36
+++++
+
+[stem%unnumbered]
+++++
+r(bar(V),bar(phi)) = 0.86
+++++
+
+[stem%unnumbered]
+++++
+r (bar(I),bar(phi)) = -0.65
+++++
+|===
+
+
+[[scls_H-2-3]]
+==== Results: approach 1
+
+Approach 1 is summarized in <<table_H-3>>.
+
+The values of the three measurands stem:[R], stem:[X], and stem:[Z] are obtained from the relations given in <<eq_H-7>> using the mean values stem:[bar(V)], stem:[bar(I)], and stem:[bar(phi)] of <<table_H-2>> for stem:[V], stem:[I], and stem:[phi]. The standard uncertainties of stem:[R], stem:[X], and stem:[Z] are obtained from <<eq_16>> in <<scls_5-2-2>> since, as pointed out above, the input quantities stem:[V], stem:[I], and stem:[bar(phi)] are correlated. As an example, consider stem:[Z = bar(V)//bar(I)]. Identifying stem:[bar(V)] with stem:[x_1], stem:[bar(I)] with stem:[x_2], and stem:[f] with stem:[Z = bar(V)//bar(I)], <<eq_16>> in <<scls_5-2-2>> yields for the combined standard uncertainty of stem:[Z]
+
+[[eq_H-8a]]
+[stem]
+++++
+u_{"c"}^2 (Z) = (1/{bar(I)})^2 u^2 (bar(V)) + ({bar(V)}/bar(I)^2)^2 u^2(bar(I)) + 2(1/{bar(I)})(-{bar(V)}/{bar(I)^2}) u(bar(V)) u(bar(I)) r(bar(V),bar(I))
+++++
+
+[[eq_H-8b]]
+[stem]
+++++
+= Z^2 [{u(bar(V))}/{bar(V)}]^2 + Z^2 [{u(bar(I))}/{bar(I)}]^2 - 2 Z^2 [{u(bar(V))}/{bar(V)}] [{u(bar(I))}/{bar(I)}] r(bar(V),bar(I))
+++++
+
+or
+
+[[eq_H-8c]]
+[stem]
+++++
+u_{"c","r"}^2 (bar(Z)) = u_{"r"}^2 (bar(V)) + u_{"r"}^2 (bar(I)) - 2 u_{"r"} (bar(V)) u_{"r"} (bar(I)) r(bar(V),bar(I))
+++++
+
+where stem:[u(bar(V)) = s(bar(V))], stem:[u(bar(I)) = s(bar(I))], and the subscript "r" in the last expression indicates that stem:[u] is a relative uncertainty. Substitution of the appropriate values from <<table_H-2>> into <<eq_H-8a>> then gives stem:[u_{"c"}(Z) = 0.236" "Omega].
+
+Because the three measurands or output quantities depend on the same input quantities, they too are correlated. The elements of the covariance matrix that describes this correlation may be written in general as
+
+[[eq_H-9]]
+[stem]
+++++
+u(y_l,y_m) = sum_{i=1}^N sum_{j=1}^N {partial y_l}/{partial x_i} {partial y_m}/{partial x_j} u(x_i) u(x_j) r(x_i,x_j)
+++++
+
+where stem:[y_l = f_l(x_1, x_2,..., x_N)] and stem:[y_m = f_m(x_1, x_2,..., x_N)]. <<eq_H-9>> is a generalization of <<eq_F-2>> in <<scls_F-1-2-3>> when the stem:[q_l] in that expression are correlated. The estimated correlation coefficients of the output quantities are given by stem:[r(y_l, y_m) = u(y_l, y_m)//u(y_l)u(y_m)], as indicated in <<eq_14>> in <<scls_5-2-2>>. It should be recognized that the diagonal elements of the covariance matrix, stem:[u(y_l,y_l) -= u^2(y_l)], are the estimated variances of the output quantities stem:[y_l] (see <<note2_5-2-2>>) and that for stem:[m = l], <<eq_H-9>> is identical to <<eq_16>> in <<scls_5-2-2>>.
+
+To apply <<eq_H-9>> to this example, the following identifications are made:
+
+[stem%unnumbered]
+++++
+{:({:y_1 = R:},{:x_1 = bar(V):},{:u(x_i) = s(x_i):}),
+({:y_2 = X:},{:x_2 = bar(I):},{:N = 3:}),
+({:y_3 = Z:},{:x_3 = bar(phi):},{:"":}):}
+++++
+
+The results of the calculations of stem:[R], stem:[X], and stem:[Z] and of their estimated variances and correlation coefficients are given in <<table_H-3>>.
+
+
+[[table_H-3]]
+.Calculated values of the output quantities stem:[R], stem:[X], and stem:[Z]: approach 1
+[cols="4*^"]
+|===
+h| Measurand index +
+stem:[l]
+h| Relationship between estimate of measurand stem:[y_l] and input estimates stem:[x_i]
+h| Value of estimate stem:[y_l], which is the result of measurement
+h| Combined standard uncertainty stem:[u_{"c"}(y_l)] of result of measurement
+
+| 1
+| stem:[y_1 = R = (bar(V)//bar(I)) cos phi]
+| stem:[y_1 = R = 127.732" "Omega]
+| stem:[u_{"c"}(R) = 0.071" "Omega] +
+stem:[u(R)//R = 0.06 xx 10^{-2}]
+
+| 2
+| stem:[y_2 = X = (bar(V)//bar(I)) sin phi]
+| stem:[y_2 = X = 219.847" "Omega]
+| stem:[u_{"c"}(X) = 0.295" "Omega] +
+stem:[u(X)//X = 0.13 xx 10^{-2}]
+
+| 3
+| stem:[y_3 = Z = bar(V)//bar(I)]
+| stem:[y_3 = Z = 254.260" "Omega]
+| stem:[u_{"c"}(Z) = 0.236" "Omega] +
+stem:[u(Z)//Z = 0.09 xx 10^{-2}]
+
+
+4+| Correlation coefficients stem:[r(y_l, y_m)]
+4+a|
+[stem%unnumbered]
+++++
+r(y_1,y_2) = r(R,X)= -0.588
+++++
+
+[stem%unnumbered]
+++++
+r(y_1,y_3)= r(R,Z)= -0.485
+++++
+
+[stem%unnumbered]
+++++
+r(y_2,y_3) = r(X,Z) = 0.993
+++++
+|===
+
+
+[[scls_H-2-4]]
+==== Results: approach 2
+
+Approach 2 is summarized in <<table_H-4>>.
+
+Since the data have been obtained as five sets of observations of the three input quantities stem:[V], stem:[I], and stem:[phi], it is possible to compute a value for stem:[R], stem:[X], and stem:[Z] from _each set_ of input data, and then take the arithmetic mean of the five individual values to obtain the best estimates of stem:[R], stem:[X], and stem:[Z]. The experimental standard deviation of each mean (which is its combined standard uncertainty) is then calculated from the five individual values in the usual way [<<eq_5>> in <<scls_4-2-3>>]; and the estimated covariances of the three means are calculated by applying <<eq_17>> in <<scls_5-2-3>> directly to the five individual values from which each mean is obtained. There are no differences in the output values, standard uncertainties, and estimated covarianc es provided by the two approaches except for second-order effects associated with replacing terms such as stem:[bar(V)//bar(I)] and stem:[cos{bar(phi)}] by stem:[bar(V//I)] and stem:[bar(cos phi)].
+
+To demonstrate this approach, <<table_H-4>> gives the values of stem:[R], stem:[X] and stem:[Z] calculated from each of the five sets of observations. The arithmetic means, standard uncertainties, and estimated correlation coefficients are then directly computed from these individual values. The numerical results obtained in this way are negligibly different from the results given in <<table_H-3>>.
+
+
+[[table_H-4]]
+.Calculated values of the output quantities stem:[R], stem:[X], and stem:[Z]: approach 2
+[cols="4*^"]
+|===
+.2+h| Set number +
+stem:[k]
+3+h| Individual values of measurands
+
+| stem:[R = (V//I) cos phi] +
+(stem:[Omega])
+| stem:[X = (V//I) sin phi] +
+(stem:[Omega])
+| stem:[Z = V//I] +
+(stem:[Omega])
+
+| 1 | stem:[127.67] | stem:[220.32] | stem:[254.64]
+| 2 | stem:[127.89] | stem:[219.79] | stem:[254.29]
+| 3 | stem:[127.51] | stem:[220.64] | stem:[254.84]
+| 4 | stem:[127.71] | stem:[218.97] | stem:[253.49]
+| 5 | stem:[127.88] | stem:[219.51] | stem:[254.04]
+| Arithmetic mean | stem:[y_1 = 127.732] | stem:[y_2 = bar(X) = 219.847] | stem:[y_3 = bar(Z) = 254.260]
+| Experimental standard deviation of mean | stem:[s(bar(R)) = 0.071] | stem:[s(bar(X)) = 0.295] | stem:[s(bar(Z)) = 0.236]
+
+4+| Correlation coefficients stem:[r(y_l,y_m)]
+4+a|
+[stem%unnumbered]
+++++
+r(y_1,y_2) = r(bar(R),bar(X)) = -0.588
+++++
+
+[stem%unnumbered]
+++++
+r(y_1,y_3) = r(bar(R),bar(Z)) = -0.485
+++++
+
+[stem%unnumbered]
+++++
+r (y_2,y_3) = r(bar(X),bar(Z)) = 0.993
+++++
+|===
+
+
+In the terminology of the <<note_4-1-4>>, approach 2 is an example of obtaining the estimate stem:[y] from
+stem:[Y = (sum_{k=1}^n Y_k) // n], while approach 1 is an example of obtaining stem:[y] from stem:[y = f(bar(X)_1, bar(X)_2,...,bar(X)_N)]. As pointed out
+in that note, in general, the two approaches will give _identical_ results if stem:[f] is a linear function of its input quantities (provided that the experimentally observed correlation coefficients are taken into account when implementing approach 1). If stem:[f] is not a linear function, then the results of approach 1 will differ from those of approach 2 depending on the degree of nonlinearity and the estimated variances and covariances of the stem:[X_i]. This may be seen from the expression
+
+[[eq_H-10]]
+[stem]
+++++
+y = f(bar(X)_1, bar(X)_2,...,bar(X)_N) + 1/2 sum_{i=1}^N sum_{j=1}^N {partial^2 f}/{partial bar(X)_i partial bar(X)_j} u(bar(X)_i, bar(X)_j) + ...
+++++
+
+where the second term on the right-hand side is the second-order term in the Taylor series expansion of stem:[f] in terms of the stem:[bar(X)_i] (see also <<note_5-1-2>>). In the present case, approach 2 is preferred because it avoids the approximation stem:[y = f(bar(X)_1, bar(X)_2,..., bar(X)_N)] and better reflects the measurement procedure used -- the data were in fact collected in sets.
+
+On the other hand, approach 2 would be inappropriate if the data of <<table_H-2>> represented stem:[n_1 = 5] observations of the potential difference stem:[V], followed by stem:[n_2 = 5] observations of the current stem:[I], and then followed by stem:[n_3 = 5] observations of the phase stem:[phi], and would be impossible if stem:[x = n_1 != n_2 != n_3]. (It is in fact poor measurement procedure to carry out the measurements in this way since the potential difference across a fixed impedance and the current through it are directly related.)
+
+If the data of <<table_H-2>> are reinterpreted in this manner so that approach 2 is inappropriate, and if correlations among the quantities stem:[V], stem:[I], and stem:[phi] are assumed to be absent, then the observed correlation coefficients have no significance and should be set equal to zero. If this is done in <<table_H-2>>, <<eq_H-9>> reduces to the equivalent of <<eq_F-2>> in <<scls_F-1-2-3>>, namely,
+
+[[eq_H-11]]
+[stem]
+++++
+u(y_l,y_m) = sum_{i=i}^N {partial y_l}/{partial x_i} {partial y_m}/{partial x_i} u^2(x_i)
+++++
+
+and its application to the data of <<table_H-2>> leads to the changes in <<table_H-3>> shown in <<table_H-5>>.
+
+
+[[table_H-5]]
+.Changes in <<table_H-3>> under the assumption that the correlation coefficients of Table H.2 are zero
+[cols="1*"]
+|===
+| Combined standard uncertainty stem:[u_{"c"}(y_l)] of result of measurement
+
+a|
+[stem%unnumbered]
+++++
+u_{"c"}(ii(R)) = 0.195" "Omega
+++++
+[stem%unnumbered]
+++++
+u_{"c"} (ii(R))//ii(R) = 0.15 xx 10^{-2}
+++++
+
+a|
+[stem%unnumbered]
+++++
+u_{"c"}(ii(X)) = 0.201" "Omega
+++++
+[stem%unnumbered]
+++++
+u_{"c"}(ii(X))/ii(X) =0.09 xx 10^{-2}
+++++
+
+a|
+[stem%unnumbered]
+++++
+u_{"c"}(ii(Z)) = 0.204" "Omega
+++++
+[stem%unnumbered]
+++++
+u_{"c"}(ii(Z))/ii(Z) = 0.08 xx 10^{-2}
+++++
+
+| Correlation coefficients stem:[r(y_l, y_m)]
+
+a|
+[stem%unnumbered]
+++++
+r(y_1, y_2)= r(ii(R), ii(X)) = 0.056
+++++
+[stem%unnumbered]
+++++
+r(y_1, y_3) = r(ii(R), ii(Z)) = 0.527
+++++
+[stem%unnumbered]
+++++
+r(y_2, y_3) = r(ii(X), ii(Z)) = 0.878
+++++
+|===
+
+
+[[scls_H-3]]
+=== Calibration of a thermometer
+
+This example illustrates the use of the method of least squares to obtain a linear calibration curve and how the parameters of the fit, the intercept and slope, and their estimated variances and covariance, are used to obtain from the curve the value and standard uncertainty of a predicted correction.
+
+
+[[scls_H-3-1]]
+==== The measurement problem
+
+A thermometer is calibrated by comparing stem:[n = 11] temperature readings stem:[t_k] of the thermometer, each having negligible uncertainty, with corresponding known reference temperatures stem:[t_{"R",k}] in the temperature range 21 °C to 27 °C to obtain the corrections stem:[b_k = t_{"R",k} - t_k] to the readings. The _measured_ corrections stem:[b_k] and _measured_ temperatures stem:[t_k] are the input quantities of the evaluation. A linear calibration curve
+
+[[eq_H-12]]
+[stem]
+++++
+b(t) = y_1 + y_2 (t - t_0)
+++++
+
+is fitted to the measured corrections and temperatures by the method of least squares. The parameters stem:[y_1] and stem:[y_2], which are respectively the intercept and slope of the calibration curve, are the two measurands or outputquantities to be determined. The temperature stem:[t_0] is a conveniently chosen exact reference temperature; it is not an independent parameter to be determined by the least-squares fit. Once stem:[y_1] and stem:[y_2] are found, along with their estimated variances and covariance, <<eq_H-12>> can be used to predict the value and standard uncertainty of the correction to be applied to the thermometer for any value stem:[t] of the temperature.
+
+
+[[scls_H-3-2]]
+==== Least-squares fitting
+
+Based on the method of least squares and under the assumptions made in <<scls_H-3-1>> above, the output quantities stem:[y_1] and stem:[y_2] and their estimated variances and covariance are obtained by minimizing the sum
+
+[stem%unnumbered]
+++++
+S = sum_{k=1}^n [b_k - y_1 - y_2 (t_k - t_0)]^2
+++++
+
+This leads to the following equations for stem:[y_1], stem:[y_2], their experimental variances stem:[s^2(y_1)] and stem:[s^2(y_2)], and their estimated correlation coefficient stem:[r(y_1, y_2) = s(y_1, y_2)//s(y_1)s(y_2)], where stem:[s(y_1, y_2)] is their estimated covariance:
+
+[[eq_H-13a]]
+[stem]
+++++
+y_1 = {(sum b_k)(sum theta_k^2) - (sum b_k theta_k)(sum theta_k)}/D
+++++
+
+[[eq_H-13b]]
+[stem]
+++++
+y_2 = {n sum b_k theta_k - (sum b_k)(sum theta_k)}/D
+++++
+
+[[eq_H-13c]]
+[stem]
+++++
+s^2(y_1) = {s^2 sum theta_k^2}/D
+++++
+
+[[eq_H-13d]]
+[stem]
+++++
+s^2(y_2) = n {s^2}/D
+++++
+
+[[eq_H-13e]]
+[stem]
+++++
+r(y_1,y_2) = - {sum theta_k}/{sqrt(n sum theta_k^2)}
+++++
+
+[[eq_H-13f]]
+[stem]
+++++
+s^2 = {sum [b_k - b(t_k)]^2}/{n - 2}
+++++
+
+[[eq_H-13g]]
+[stem]
+++++
+D = n sum theta_k^2 - (sum theta_k)^2 = n sum (theta_k - bar(theta))^2 = n sum (t_k - bar(t))^2
+++++
+
+where all sums are from stem:[k = 1] to stem:[n], stem:[theta_k = t_k - t_0], stem:[bar(theta) = (sum theta_k)//n], and stem:[bar(t) = (sum t_k)//n]; stem:[[b_k - b(t_k)\]] is the difference between the measured or observed correction stem:[b_k] at the temperature stem:[t_k] and the correction stem:[b(t_k)] predicted by the fitted curve stem:[b(t) = y_1 + y_2(t - t_0)] at stem:[t_k]. The variance stem:[s^2] is a measure of the overall uncertainty of the fit, where the factor stem:[n - 2] reflects the fact that because two parameters, stem:[y_1] and stem:[y_2], are determined by the stem:[n] observations, the degrees of freedom of stem:[s^2] is stem:[v = n - 2] (see <<scls_G-3-3>>).
+
+
+[[scls_H-3-3]]
+==== Calculation of results
+
+The data to be fitted are given in the second and third columns of <<table_H-6>>. Taking stem:[t_0 = 20" °C"] as the reference temperature, application of <<eq_H-13a>> to <<eq_H-13g>> yields
+
+[stem%unnumbered]
+++++
+{:({:y_1 = -0.1712" °C":},{:s(y_1) = 0.0029" °C":}),
+({:y_2 = 0.00218 :},{:s(y_2) = 0.00067:}),
+({:r(y_1,y_2) = -0.930:},{:s = 0.0035" °C":}):}
+++++
+
+The fact that the slope stem:[y_2] is more than three times larger than its standard uncertainty provides some indication that a calibration curve and not a fixed average correction is required.
+
+
+[[table_H-6]]
+.Data used to obtain a linear calibration curve for a thermometer by the method of least squares
+[cols="5*^",options="header"]
+|===
+| Reading number +
+stem:[k]
+| Thermometer reading +
+stem:[t_k] +
+(°C)
+| Observed correction +
+stem:[b_k = t_{R,k} - t_k] +
+(°C)
+| Predicted correction +
+stem:[b(t_k)] +
+(°C)
+| Difference between observed and predicted correction +
+stem:[b_k - b(t_k)] +
+(°C)
+
+| 1 | stem:[21.521] | stem:[-0.171] | stem:[-0.1679] | stem:[-0.0031]
+| 2 | stem:[22.012] | stem:[-0.169] | stem:[-0.1668] | stem:[-0.0022]
+| 3 | stem:[22.512] | stem:[-0.166] | stem:[-0.1657] | stem:[-0.0003]
+| 4 | stem:[23.003] | stem:[-0.159] | stem:[-0.1646] | stem:[+0.0056]
+| 5 | stem:[23.507] | stem:[-0.164] | stem:[-0.1635] | stem:[-0.0005]
+| 6 | stem:[23.999] | stem:[-0.165] | stem:[-0.1625] | stem:[-0.0025]
+| 7 | stem:[24.513] | stem:[-0.156] | stem:[-0.1614] | stem:[+0.0054]
+| 8 | stem:[25.002] | stem:[-0.157] | stem:[-0.1603] | stem:[+0.0033]
+| 9 | stem:[25.503] | stem:[-0.159] | stem:[-0.1592] | stem:[+0.0002]
+| 10 | stem:[26.010] | stem:[-0.161] | stem:[-0.1581] | stem:[-0.0029]
+| 11 | stem:[26.511] | stem:[-0.160] | stem:[-0.1570] | stem:[-0.0030]
+|===
+
+
+The calibration curve may then be written as
+
+[[eq_H-14]]
+[stem]
+++++
+b(t) = -0.1712 (29)" "rm(°C) + 0.00218 (67) (t - 20" "rm(°C))
+++++
+
+where the numbers in parentheses are the numerical values of the standard uncertainties referred to the corresponding last digits of the quoted results for the intercept and slope (see <<scls_7-2-2>>). This equation gives the predicted value of the correction stem:[b(t)] at any temperature stem:[t], and in particular the value stem:[b(t_k)] at stem:[t = t_k]. These values are given in the fourth column of the table while the last column gives the differences between the measured and predicted values, stem:[b_k - b(t_k)]. An analysis of these differences can be used to check the validity of the linear model; formal tests exist (see Reference <<FULLER1987>>), but are not considered in this example.
+
+
+[[scls_H-3-4]]
+==== Uncertainty of a predicted value
+
+The expression for the combined standard uncertainty of the predicted value of a correction can be readily obtained by applying the law of propagation of uncertainty, <<eq_16>> in <<scls_5-2-2>>, to <<eq_H-12>>. Noting that stem:[b(t) = f (y_1, y_2)] and writing stem:[u(y_1) = s (y_1)] and stem:[u(y_2) = s (y_2)], one obtains
+
+[[eq_H-15]]
+[stem]
+++++
+u_{"c"}^2 [b (t)] = u^2 (y_1) + (t - t_0)^2 u^2(y_2) + 2(t - t_0) u(y_1) u(y_2) r (y_1, y_2)
+++++
+
+
+The estimated variance stem:[u_{"c"}^2[b(t)\]] is a minimum at stem:[t_{"min"} = t_0 - u (y1) r(y1,y2)//u(y_2)], which in the present case is stem:[t_{"min"} = 24.0085" °C"].
+
+As an example of the use of <<eq_H-15>>, consider that one requires the thermometer correction and its uncertainty at stem:[t = 30 °C], which is outside the temperature range in which the thermometer was actually calibrated. Substituting stem:[t = 30" °C"] in <<eq_H-14>> gives
+
+[stem%unnumbered]
+++++
+b (30" °C") = - 0.1494" °C"
+++++
+
+while <<eq_H-15>> becomes
+
+[stem%unnumbered]
+++++
+u_{"c"}^2 [b(30°C)] = (0.0029" °C")^2 + (10" °C")^2 (0.00067)^2 + 2(10" °C") (0.0029" °C") (0.00067) (-0.930) = 17.1 xx 10^{-6}" °C"^2
+++++
+
+or
+
+[stem%unnumbered]
+++++
+u_{"c"} [b (30" °C")] = 0.0041" °C"
+++++
+
+Thus the correction at stem:[30" °C"] is stem:[- 0.1494" °C"], with a combined standard uncertainty of stem:[u_{"c"} = 0.0041" °C"], and with stem:[u_{"c"}] having stem:[nu = n - 2 = 9] degrees of freedom.
+
+
+[[scls_H-3-5]]
+==== Elimination of the correlation between the slope and intercept
+
+<<eq_H-13e>> for the correlation coefficient stem:[r(y_1,y_2)] implies that if stem:[t_0] is so chosen that
+stem:[sum_{k=1}^n theta_k = sum_{k=1}^n (t_k - t_0) = 0], then stem:[r(y_1,y_2) = 0] and stem:[y_1] and stem:[y_2] will be uncorrelated, thereby simplifying the
+computation of the standard uncertainty of a predicted correction. Since stem:[sum_{k=1}^n theta_k = 0] when stem:[t_0 = bar(t) = (sum_{k=1}^n t_k)//n],
+and stem:[bar(t) = 24.0085" °C"] in the present case, repeating the least-squares fit with
+stem:[t_0 = bar(t) = 24.0085 " °C"] would lead to values of stem:[y_1] and stem:[y_2] that are uncorrelated. (The temperature stem:[bar(t)] is also thetemperature at which stem:[u^2[b(t)\]] is a minimum -- see <<scls_H-3-4>>.) However, repeating the fit is unnecessary because it can be shown that
+
+[[eq_H-16a]]
+[stem]
+++++
+b(t) = y'_1 + y_2 (t - bar(t))
+++++
+
+[[eq_H-16b]]
+[stem]
+++++
+u_{"c"}^2 [b(t)] = u^2 (y'_1) + (t - bar(t))^2 u^2(y_2)
+++++
+
+[stem]
+++++
+r(y'_1,y_2) = 0
+++++
+
+where
+
+[stem%unnumbered]
+++++
+y'_1 = y_1 + y_2 (bar(t) - t_0)
+++++
+
+[stem%unnumbered]
+++++
+bar(t) = t_0 - s (y_1) r(y_1,y_2)//s(y_2)
+++++
+
+[stem%unnumbered]
+++++
+s^2 (y'_1) = s^2 (y_1) [1 - r^2(y_1, y_2)]
+++++
+
+
+and in writing <<eq_H-16b>>, the substitutions stem:[u(y'_1) = s(y'_1)] and stem:[u(y_2) = s(y_2)] have been made [see <<eq_H-15>>].
+
+Application of these relations to the results given in <<scls_H-3-3>> yields
+
+[[eq_H-17a]]
+[stem]
+++++
+b(t) = -0.1625 (11) + 0.00218 (67) (t - 24.0085 " °C")
+++++
+
+[[eq_H-17b]]
+[stem]
+++++
+u_{"c"}^2 [b(t)] = (0.0011)^2 + (t - 24.0085" °C")^2 (0.00067)^2
+++++
+
+That these expressions give the same results as <<eq_H-14>> and <<eq_H-15>> can be checked by repeating the calculation of stem:[b(30" °C")] and stem:[u_{"c"}[b(30" °C")\]]. The substitution of stem:[t = 30" °C"] into <<eq_H-17a>> and <<eq_H-17b>> yields
+
+[stem%unnumbered]
+++++
+b (30" °C")= -0.1494" °C"
+++++
+
+[stem%unnumbered]
+++++
+u_{"c"} [b (30" °C")] = 0.0041" °C"
+++++
+
+which are identical to the results obtained in <<scls_H-3-4>>. The estimated covariance between two predicted corrections stem:[b(t_1)] and stem:[b(t_2)] may be obtained from <<eq_H-9>> in <<scls_H-2-3>>.
+
+
+[[scls_H-3-6]]
+==== Other considerations
+
+The least-squares method can be used to fit higher-order curves to data points, and is also applicable to cases where the individual data points have uncertainties. Standard texts on the subject should be consulted for details <<FULLER1987>>. However, the following examples illustrate two cases where the measured corrections stem:[b_k] are not assumed to be exactly known.
+
+. Let each stem:[t_k] have negligible uncertainty, let each of the stem:[n] values stem:[t_{"R",k}] be obtained from a series of stem:[m] repeated readings, and let the pooled estimate of variance for such readings based on a large amount of data obtained over several months be stem:[s_{"p"}^2]. Then the estimated variance of each stem:[t_{"R",k}] is stem:[s_{"p"}^2//m = u_0^2] and each observed correction stem:[b_k = t_{"R",k} - t_k] has the _same_ standard uncertainty stem:[u_0]. Under these circumstances (and under the assumption that there is no reason to believe that the linear model is incorrect), stem:[u_0^2] replaces stem:[s^2] in <<eq_H-13c>> and <<eq_H-13d>>.
++
+--
+[[note_H-3-6]]
+[NOTE]
+====
+A pooled estimate of variance stem:[s_{"p"}^2] based on stem:[N] series of independent observations of the same random variable is obtained from
+
+[stem%unnumbered]
+++++
+s_{"p"}^2 = {sum_{i=1}^{N} nu_i s_i^2}/{sum_{i=1}^{N} nu_i}
+++++
+
+where stem:[s_i^2] is the experimental variance of the __i__th series of stem:[n_i] independent repeated observations [<<eq_4>> in
+<<scls_4-2-2>>] and has degrees of freedom stem:[nu_i = n_i - 1]. The degrees of freedom of stem:[s_{"p"}] is stem:[v = sum_{i=1}^{N} nu_i]. The experimental variance
+stem:[s_{"p"}^2//m]) (and the experimental standard deviation stem:[s_{"p"}//sqrt(m)]) of the arithmetic mean of stem:[m] independent observations characterized by the pooled estimate of variance stem:[s_{"p"}^2] also has stem:[nu] degrees of freedom.
+====
+--
+
+. Suppose that each stem:[t_k] has negligible uncertainty, that a correction stem:[epsilon_k] is applied to each of the stem:[n] values stem:[t_{"R",k}],
+and that each correction has the same standard uncertainty stem:[u_a]. Then the standard uncertainty of each
+stem:[b_k = t_{"R",t} - t_k] is also stem:[u_a], and stem:[s^2(y_1)] is replaced by stem:[s^2(y_1) + u_a^2] and stem:[s^2(y'_1)] is replaced by stem:[s^2(y'_1) + u_a^2].
+
+
+[[scls_H-4]]
+=== Measurement of activity
+
+This example is similar to example <<scls_H-2>>, the simultaneous measurement of resistance and reactance, in that the data can be analysed in two different ways but each yields essentially the same numerical result. The first approach illustrates once again the need to take the observed correlations between input quantities into account.
+
+
+[[scls_H-4-1]]
+==== The measurement problem
+
+The unknown radon (^222^Rn) activity concentration in a water sample is determined by liquid-scintillation counting against a radon-in-water standard sample having a known activity concentration. The unknown activity concentration is obtained by measuring three counting sources consisting of approximately 5 g of water and 12 g of organic emulsion scintillator in vials of volume 22 ml:
+
+Source (a):: a _standard_ consisting of a mass stem:[m_{"S"}] of the standard solution with a known activity concentration;
+Source (b):: a matched _blank_ water sample containing no radioactive material, used to obtain the background counting rate;
+Source \(c):: the _sample_ consisting of an aliquot of mass stem:[m_x] with unknown activity concentration.
+
+Six cycles of measurement of the three counting sources are made in the order standard -- blank -- sample; and each dead-time-corrected counting interval stem:[T_0] for each source during all six cycles is 60 minutes. Although the background counting rate cannot be assumed to be constant over the entire counting interval (65 hours), it is assumed that the number of counts obtained for each blank may be used as representative of the background counting rate during the measurements of the standard and sample in the same cycle. The data are given in <<table_H-7>>, where
+
+
+stem:[t_{"S"}], stem:[t_{"B"}], stem:[t_x]:: are the times from the reference time stem:[t = 0] to the midpoint of the dead-time-corrected
+counting intervals stem:[T_0 = 60" min"] for the standard, blank, and sample vials, respectively;
+although stem:[t_{"B"}] is given for completeness, it is not needed in the analysis;
+
+stem:[C_{"S"}], stem:[C_{"B"}], stem:[C_x]:: are the number of counts recorded in the dead-time-corrected counting intervals stem:[T_0 = 60" min"]
+for the standard, blank, and sample vials, respectively.
+
+
+The observed counts may be expressed as
+
+[[eq_H-18a]]
+[stem]
+++++
+C_{"S"} = C_{"B"} + epsilon A_{"S"} T_0 m_{"S"} e^{-lambda_{t_{"S"}}}
+++++
+
+[[eq_H-18b]]
+[stem]
+++++
+C_x = C_{"B"} + epsilon A_x T_0 m_x e^{-lambda_{t_x}}
+++++
+
+
+where
+
+stem:[epsilon]:: is the liquid scintillation detection efficiency for ^222^Rn for a given source composition, assumed to be independent of the activity level;
+stem:[A_{"S"}]:: is the activity concentration of the standard at the reference time stem:[t = 0];
+stem:[A_x]:: is the _measurand_ and is defined as the unknown activity concentration of the sample at the reference time stem:[t = 0];
+stem:[m_{"S"}]:: is the mass of the standard solution;
+stem:[m_x]:: is the mass of the sample aliquot;
+stem:[lambda]:: is the decay constant for ^222^Rn: stem:[lambda = (ln 2)//T_{1//2} = 1.25894 xx 10^{-4}" min"^{-1} (T_{1//2} = 5505.8" min")].
+
+
+[[table_H-7]]
+.Counting data for determining the activity concentration of an unknown sample
+[cols="7*^",options="header"]
+|===
+| Cycle 2+| Standard 2+| Blank 2+| Sample
+
+| stem:[k]
+| stem:[t_{"S"}] +
+(min)
+| stem:[C_{"S"}] +
+(counts)
+| stem:[t_{"B"}] +
+(min)
+| stem:[C_{"B"}] +
+(counts)
+| stem:[t_x] +
+(min)
+| stem:[C_x] +
+(counts)
+
+| 1 | stem:[243.74] | stem:[15380] | stem:[305.56] | stem:[4054] | stem:[367.37] | stem:[41432]
+| 2 | stem:[984.53] | stem:[14978] | stem:[1046.10] | stem:[3922] | stem:[1107.66] | stem:[38706]
+| 3 | stem:[1723.87] | stem:[14394] | stem:[1785.43] | stem:[4200] | stem:[1846.99] | stem:[35860]
+| 4 | stem:[2463.17] | stem:[13254] | stem:[2524.73] | stem:[3830] | stem:[2586.28] | stem:[32238]
+| 5 | stem:[3217.56] | stem:[12516] | stem:[3279.12] | stem:[3956] | stem:[3340.68] | stem:[29640]
+| 6 | stem:[3956.83] | stem:[11058] | stem:[4018.38] | stem:[3980] | stem:[4079.94] | stem:[26356]
+|===
+
+<<eq_H-18a>> and <<eq_H-18b>> indicate that neither the six individual values of stem:[C_{"S"}] nor of stem:[C_x] given in <<table_H-7>> can be averaged directly because of the exponential decay of the activity of the standard and sample, and slight variations in background counts from one cycle to another. Instead, one must deal with the decay-corrected and background-corrected counts (or counting rates defined as the number of counts divided by stem:[T_0 = 60" min"]). This suggests combining <<eq_H-18a>> and <<eq_H-18b>> to obtain the following expression for the unknown concentration in terms of the known quantities:
+
+[stem]
+++++
+{:({:A_x:},{:= f(A_{"S"}, m_{"S"},m_x,C_{"S"},C_x,t_{"S"},t_x,lambda):}),
+({:"":},{:= A_{"S"} {m_{"S"}}/{m_x} {(C_x - C_B)e^{lambda t_x}}/{(C_{"S"} - C_{"B"})e^{lambda t_{"S"}}}:}),
+({:"":},{:= A_{"S"} {m_{"S"}}/{m_x} {C_x - C_{"B"}}/{C_{"S"} - C_{"B"}} e^{lambda (t_x - t_{"S"})}:}):}
+++++
+
+where stem:[(C_x - C_{"B"})e^{lambda t_x}] and stem:[(C_{"S"} - C_{"B"})e^{lambda t_{"S"}}] are, respectively, the background-corrected counts of the sample and the standard at the reference time stem:[t = 0] and for the time interval stem:[T_0 = 60" min"]. Alternatively, one may simply write
+
+[[eq_H-20]]
+[stem]
+++++
+A_x = f(A_{"S"},m_{"S"},m_x,R_{"S"},R_x) = A_{"S"} {m_{"S"}}/{m_x} {R_x}/{R_{"S"}}
+++++
+
+where the background-corrected and decay-corrected _counting rates_ stem:[R_x] and stem:[R_{"S"}] are given by
+
+[[eq_H-21a]]
+[stem]
+++++
+R_x = [(C_x - C_{"B"})//T_0] e^{lambda t_x}
+++++
+
+[[eq_H-21b]]
+[stem]
+++++
+R_{"S"} = [(C_x - C_{"B"})//T_0] e^{lambda t_{"S"}}
+++++
+
+
+[[scls_H-4-2]]
+==== Analysis of data
+
+<<table_H-8>> summarizes the values of the background-corrected and decay-corrected counting rates stem:[R_{"S"}] and stem:[R_x] calculated from <<eq_H-21a>> and <<eq_H-21b>> using the data of <<table_H-7>> and stem:[lambda = 1.25894 xx 10^{-4}" min"^{-1}] as given earlier. It should be noted that the ratio stem:[R = R_x//R_{"S"}] is most simply calculated from the expression
+
+[stem%unnumbered]
+++++
+[(C_x - C_{"B"})//(C_{"S"} - C_{"B"})] e^{lambda(t_x - t_{"S"})}
+++++
+
+
+The arithmetic means stem:[R_{"S"}], stem:[R_x], and stem:[R], and their experimental standard deviations stem:[s(bar(R)_{"S"})], stem:[s(bar(R)_x)], and stem:[s(bar(R))], are calculated in the usual way [<<eq_3>> and <<eq_5>> in <<scls_4-2>>]. The correlation coefficient stem:[r(bar(R)_x, bar(R)_{"S"})] is calculated from <<eq_17>> in <<scls_5-2-3>> and <<eq_14>> in <<scls_5-2-2>>.
+
+Because of the comparatively small variability of the values of stem:[R_x] and of stem:[R_{"S"}], the ratio of means stem:[bar(R)_x//bar(R)_{"S"}] and the standard uncertainty stem:[u(bar(R)_x//bar(R)_{"S"})] of this ratio are, respectively, very nearly the same as the mean ratio stem:[R] and its experimental standard deviation stem:[s(bar(R))] as given in the last column of <<table_H-8>> [see <<scls_H-2-4>> and <<eq_H-10>> therein]. However, in calculating the standard uncertainty stem:[u(bar(R)_x // bar(R)_{"S"})], the correlation between stem:[R_x] and stem:[R_{"S"}] as represented by the correlation coefficient stem:[r(bar(R)_x, bar(R)_{"S"})] must betaken into account using<<eq_16>> in <<scls_5-2-2>>. [That equation yields for the relative estimated variance of stem:[bar(R)_x//bar(R)_{"S"}] the last three terms of <<eq_H-22b>>.]
+
+It should be recognized that the respective experimental standard deviations of stem:[R_x] and of stem:[R_{"S"}], stem:[sqrt(6) s(bar(R)_x)] and stem:[sqrt(6) s(bar(R)_{"S"})], indicate a variability in these quantities that is two to three times larger than the variability implied by the Poisson statistics of the counting process; the latter is included in the observed variability of the counts and need not be accounted for separately.
+
+
+[[table_H-8]]
+.Calculation of decay-corrected and background-corrected counting rates*
+[cols="5*^"]
+|===
+| Cycle +
+stem:[k]
+| stem:[R_x] +
+(stem:["min"^{-1}])
+| stem:[R_{"S"}] +
+(stem:["min"^{-1}])
+| stem:[t_x - t_{"S"}] +
+(min)
+| stem:[R = R_x//R_{"S"}]
+
+| 1 | stem:[652.46] | stem:[194.65] | stem:[123.63] | stem:[3.3520]
+| 2 | stem:[666.48] | stem:[208.58] | stem:[123.13] | stem:[3.1953]
+| 3 | stem:[665.80] | stem:[211.08] | stem:[123.12] | stem:[3.1543]
+| 4 | stem:[655.68] | stem:[214.17] | stem:[123.11] | stem:[3.0615]
+| 5 | stem:[651.87] | stem:[213.92] | stem:[123.12] | stem:[3.0473]
+| 6 | stem:[623.31] | stem:[194.13] | stem:[123.11] | stem:[3.2107]
+
+|
+a|
+[stem%unnumbered]
+++++
+bar(R)_x = 652.60
+++++
+[stem%unnumbered]
+++++
+s(bar(R)_x) = 6.42
+++++
+[stem%unnumbered]
+++++
+s(bar(R)_x)//bar(R)_x = 0.98 xx 10^{-2}
+++++
+
+a|
+[stem%unnumbered]
+++++
+bar(R)_{"S"} = 206.09
+++++
+[stem%unnumbered]
+++++
+s(bar(R)_{"S"}) = 3.79
+++++
+[stem%unnumbered]
+++++
+s(bar(R)_{"S"})//bar(R)_{"S"} = 1.84 xx 10^{-2}
+++++
+|
+.2+a|
+[stem%unnumbered]
+++++
+bar(R) = 3.170
+++++
+[stem%unnumbered]
+++++
+s(bar(R)) = 0.046
+++++
+[stem%unnumbered]
+++++
+s(bar(R))//bar(R) = 1.44 xx 10^{-2}
+++++
+
+|
+2+a|
+[stem%unnumbered]
+++++
+bar(R)_x//bar(R)_{"S"} = 3.167
+++++
+[stem%unnumbered]
+++++
+u(bar(R)_x // bar(R)_{"S"}) = 0.045
+++++
+[stem%unnumbered]
+++++
+y(bar(R)_x//bar(R)_{"S"})//(bar(R)_x//bar(R)_{"S"}) = 1.42 xx 10^{-2}
+++++
+|
+
+5+|Correlation coefficient
+
+5+|stem:[r(bar(R)_x,bar(R)_{"S"}) = 0.646]
+|===
+
+
+
+[[scls_H-4-3]]
+==== Calculation of final results
+
+To obtain the unknown activity concentration stem:[A_x] and its combined standard uncertainty stem:[u_{"c"}(A_x)] from <<eq_H-20>> requires stem:[A_{"S"}], stem:[m_x], and stem:[m_{"S"}] and their standard uncertainties. These are given as
+
+[stem%unnumbered]
+++++
+{:({:A_{"S"} = 0.1368" Bq/g":},{:"":}),
+({:u(A_{"S"}) = 0.0018" Bq/g";:},{:u(A_{"S"})//A_{"S"} = 1.32 xx 10^{-2}:}):}
+++++
+
+[stem%unnumbered]
+++++
+{:({:m_{"S"} = 5.0192" g":},{:"":}),
+({:u(m_{"S"}) = 0.0050" g";:},{:u(m_{"S"})//m_{"S"} = 0.10 xx 10^{-2}:}):}
+++++
+
+[stem%unnumbered]
+++++
+{:({:m_x = 5.0571 " g":},{:"":}),
+({:u(m_x) = 0.0010 " g";:},{:u(m_x)//m_x = 0.002 xx 10^{-1}:}):}
+++++
+
+
+Other possible sources of uncertainty are evaluated to be negligible:
+
+* standard uncertainties of the decay times, stem:[u(t_{"S",k})] and stem:[u(t_{x,k})];
+* standard uncertainty of the decay constant of ^222^Rn, stem:[u(lambda) = 1 xx 10^{-7}" min"^{-1}]. (The significant quantity is the decay factor stem:[exp[lambda(t_x - t_{"S"})\]], which varies from stem:[1.01563] for cycles stem:[k = 4] and 6 to stem:[1.01570] for cycle stem:[k = 1]. The standard uncertainty of these values is stem:[u = 1.2 xx 10^{-5}]);
+* uncertainty associated with the possible dependence of the detection efficiency of the scintillation counter on the source used (standard, blank, and sample);
+* uncertainty of the correction for counter dead-time and of the correction for the dependence of counting efficiency on activity level.
+
+
+[[scls_H-4-3-1]]
+===== Results: approach 1
+
+As indicated earlier, stem:[A_x] and stem:[u_{"c"}(A_x)] may be obtained in two different ways from <<eq_H-20>>). In the first approach, stem:[A_x] is calculated using the arithmetic means R_x and stem:[R_{"S"}], which leads to
+
+[[eq_H-22a]]
+[stem]
+++++
+A_x = A_{"S"} {m_{"S"}}/{m_x} {bar(R)_x}/{bar(R)_{"S"}} = 0.4300 " Bq/g"
+++++
+
+Application of <<eq_16>> in <<scls_5-2-2>> to this expression yields for the combined variance stem:[u_{"c"}^2(A_x)]
+
+[[eq_H-22b]]
+[stem]
+++++
+{u_{"c"}^2 (A_x)}/{A_x^2} = {u^2 (A_{"S"})}/{A_{"S"}^2} + {u^2(m_{"S"})}/{m_{"S"}^2} + {u^2 (m_x)}/{m_x^2} + {u^2 (bar(R)_x)}/{bar(R)_x^2} + {u^2 (bar(R)_{"S"})}/{bar(R)_{"S"}^2} - 2r(bar(R)_x,bar(R)_{"S"}) {u(bar(R)_x) u(bar(R)_{"S"})}/{bar(R)_x bar(R)_{"S"}}
+++++
+
+where, as noted in <<scls_H-4-2>>, the last three terms give stem:[u^2(bar(R)_x//bar(R)_{"S"})//(bar(R)_x//bar(R)_{"S"})^2], the estimated relative variance of stem:[bar(R)_x//bar(R)_{"S"}]. Consistent with the discussion of <<scls_H-2-4>>, the results in <<table_H-8>> show that stem:[bar(R)] is not exactly equal to
+stem:[bar(R)_x//bar(R)_{"S"}]; and that the standard uncertainty stem:[u(bar(R)_x//bar(R)_{"S"})] of stem:[bar(R)_x // bar(R)_{"S"}] is not exactly equal to the standard uncertainty stem:[s(bar(R))] of stem:[bar(R)].
+
+Substitution of the values of the relevant quantities into <<eq_H-22a>> and <<eq_H-22b>> yields
+
+[stem%unnumbered]
+++++
+{u_{"c"}(A_x)}/{A_x} = 1.93 xx 10^{-2}
+++++
+
+[stem%unnumbered]
+++++
+u_{"c"} (A_x) = 0.0083" Bq/g"
+++++
+
+The result of the measurement may then be stated as:
+____
+stem:[A_x = 0.4300" Bq/g"] with a combined standard uncertainty of stem:[u_{"c"} = 0.0083" Bq/g"].
+____
+
+
+[[scls_H-4-3-2]]
+===== Results: approach 2
+
+In the second approach, which avoids the correlation between stem:[bar(R)_x] and stem:[bar(R)_{"S"}], stem:[A_x] is calculated using the
+arithmetic mean stem:[bar(R)]. Thus
+
+[stem]
+++++
+A_x = A_{"S"} {m_{"S"}}/{m_x} bar(R) = 0.4304" Bq/g"
+++++
+
+The expression for stem:[u_{"c"}^2(A_x)] is simply
+
+[stem]
+++++
+{u_{"c"}^2 (A_x)}/{A_x^2} = {u^2 (A_{"S"})}/{A_{"S"}^2} + {u^2 (m_{"S"})}/{m_{"S"}^2} + {u^2 (m_x)}/{m_x^2} + {u^2 (bar(R))}/{bar(R)^2}
+++++
+
+which yields
+
+[stem%unnumbered]
+++++
+{u_{"c"} (A_x)}/{A_x} = 1.95 xx 10^{-2}
+++++
+
+[stem%unnumbered]
+++++
+u_{"c"} (A_x) = 0.0084" Bq/g"
+++++
+
+The result of the measurement may then be stated as:
+
+____
+stem:[A_x = 0.4304" Bq/g"] with a combined standard uncertainty of stem:[u_{"c"} = 0.0084" Bq/g"].
+____
+
+The effective degrees of freedom of stem:[u_{"c"}] can be evaluated using the Welch-Satterthwaite formula in the manner illustrated in <<scls_H-1-6>>.
+
+As in <<scls_H-2>>, of the two results, the second is preferred because it avoids approximating the mean of a ratio of two quantities by the ratio of the means of the two quantities; and it better reflects the measurement procedure used -- the data were in fact collected in separate cycles.
+
+Nevertheless, the difference between the values of stem:[A_x] resulting from the two approaches is clearly small compared with the standard uncertainty ascribed to either one, and the difference between the two standard uncertainties is entirely negligible. Such agreement demonstrates that the two approaches are equivalent when the observed correlations are properly included.
+
+
+[[scls_H-5]]
+=== Analysis of variance
+
+This example provides a brief introduction to analysis of variance (ANOVA) methods. These statistical techniques are used to identify and quantify individual _random effects_ in a measurement so that they may be properly taken into account when the uncertainty of the result of the measurement is evaluated. Although ANOVA methods are applicable to a wide range of measurements, for example, the calibration of reference standards, such as Zener voltage standards and standards of mass, and the certification of reference materials, ANOVA methods by themselves cannot identify systematic effects that might be present.
+
+There are many different models included under the general name of ANOVA. Because of its importance, the specific model discussed in this example is the balanced nested design. The numerical illustration of this model involves the calibration of a Zener voltage standard; the analysis should be relevant to a variety of practical measurement situations.
+
+ANOVA methods are of special importance in the certification of reference materials (RMs) by interlaboratory testing, a topic covered thoroughly in ISO Guide 35 <<ISO1989>> (see <<scls_H-5-3-2>> for a brief description of such RM certification). Since much of the material contained in ISO Guide 35 is in fact broadly applicable, that publication may be consulted for additional details concerning ANOVA, including unbalanced nested designs. References <<BOX1978>> and <<BARKER1985>> may be similarly consulted.
+
+
+[[scls_H-5-1]]
+==== The measurement problem
+
+Consider a nominally 10 V Zener voltage standard that is calibrated against a stable voltage reference over a two-week period. On each of stem:[J] days during the period, stem:[K] independent repeated observations of the potential difference stem:[V_{"S"}] of the standard are made. If stem:[V_{jk}] denotes the __k__th observation of stem:[V_{"S"}](stem:[k = 1, 2,...,K]) on the __j__th day (stem:[j = 1, 2,..., J]), the best estimate of the potential difference of the standard is the arithmetic mean stem:[bar(V)] of the stem:[JK] observations [see <<eq_3>> in <<scls_4-2-1>>],
+
+[[eq_H-24a]]
+[stem]
+++++
+V_{"S"} = 1/{JK} sum_{j=1}^J sum_{k=1}^K V_{jk} = bar(V)
+++++
+
+The experimental standard deviation of the mean stem:[s(bar(V))], which is a measure of the uncertainty of stem:[bar(V)] as an estimate of the potential difference of the standard, is obtained from [see <<eq_5>> in <<scls_4-2-3>>]
+
+[[eq_H-24b]]
+[stem]
+++++
+s^2 (bar(V)) = 1/{JK(JK - 1)} sum_{j=1}^J sum_{k=1}^K (V_{jk} - bar(V))^2
+++++
+
+[[note_H-5-1]]
+NOTE: It is assumed throughout this example that all corrections applied to the observations to compensate for systematic effects have negligible uncertainties or their uncertainties are such that they can be taken into account at the end of the analysis. A correction in this latter category, and one that can itself be applied to the mean of the observations at the end of the analysis, is the difference between the certified value (assumed to have a given uncertainty) and the working value of the stable voltage reference against which the Zener voltage standard is calibrated. Thus the estimate of the potential difference of the standard obtained statistically from the observations is not necessarily the final result of the measurement; and the experimental standard deviation of that estimate is not necessarily the combined standard uncertainty of the final result.
+
+The experimental standard deviation of the mean stem:[s(bar(V))] as obtained from <<eq_H-24b>> is an appropriate measure of the uncertainty of stem:[bar(V)] only if the day-to-day variability of the observations is the same as the variability of the observations made on a single day. If there is evidence that the between-day variability is significantly larger than can be expected from the within-day variability, use of this expression could lead to a considerable understatement of the uncertainty of stem:[bar(V)]. Two questions thus arise: How should one decide if the between-day variability (characterized by a between-day component of variance) is significant in comparison with the within-day variability (characterized by a within-day component of variance) and, if it is, how should one evaluate the uncertainty of the mean?
+
+
+[[scls_H-5-2]]
+==== A numerical example
+
+[[scls_H-5-2-1]]
+====== {blank}
+
+Data which allow the above questions to be addressed are given in <<table_H-9>>, where
+
+stem:[J = 10] is the number of days on which potential-difference observations were made;
+
+stem:[K = 5] is the number of potential-difference observations made on each day;
+
+[[eq_H-25a]]
+[stem]
+++++
+bar(V)_j = 1/K sum_{k=1}^K V_{jk}
+++++
+
+is the arithmetic mean of the stem:[K = 5] potential-difference observations made on the __j__th day (there are stem:[J = 10] such daily means);
+
+[[eq_H-25b]]
+[stem]
+++++
+bar(V) = 1/J sum_{j=1}^J bar(V)_j = 1/{JK} sum_{j=1}^J sum_{k=1}^K V_{jk}
+++++
+
+is the arithmetic mean of the stem:[J = 10] daily means and thus the overall mean of the stem:[ii(JK) = 50] observations;
+
+[[eq_H-25c]]
+[stem]
+++++
+s^2(V_{jk}) = 1/{K-1} sum_{k=1}^K (V_{jk} - bar(V)_j)^2
+++++
+
+is the experimental variance of the stem:[K = 5] observations made on the __j__th day (there are stem:[J = 10] such estimates of variance); and
+
+[[eq_H-25d]]
+[stem]
+++++
+s^2(bar(V)_j) = 1/{J-1} sum_{j=1}^J (bar(V)_j - bar(V))^2
+++++
+
+is the experimental variance of the stem:[J = 10] daily means (there is only one such estimate of variance).
+
+
+[[scls_H-5-2-2]]
+====== {blank}
+
+The consistency of the within-day variability and between-day variability of the observations canbe investigated by comparing two independent estimates of stem:[sigma_W^2], the within-day component of variance (that is, the variance of observations made on the same day).
+
+The first estimate of stem:[sigma_W^2], denoted by stem:[s_a^2], is obtained from the observed variation of the daily means stem:[bar(V)_j]. Since stem:[bar(V)_j] is the average of stem:[K] observations, its estimated variance stem:[s^2 (bar(V)_j)], under the assumption that the between-day component of variance is zero, estimates stem:[sigma_W^2//K]. It then follows from <<eq_H-25d>> that
+
+[[eq_H-26a]]
+[stem]
+++++
+s_a^2 = K s^2 (bar(V)_j) = K/{J - 1} sum_{j=1}^J (bar(V)_j - bar(V))^2
+++++
+
+which is an estimate of stem:[sigma_W^2] having stem:[nu_a = J - 1 = 9] degrees of freedom.
+
+The second estimate of stem:[sigma_W^2], denoted by stem:[s_{"b"}^2], is the pooled estimate of variance obtained from the stem:[J = 10] individual values of stem:[s^2(V_{jk})] using the equation of the <<note_H-3-6>>, where the ten individual values are calculated from <<eq_H-25c>>. Because the degrees of freedom of each of these values is stem:[nu_i = K - 1], the resulting expression for stem:[s_{"b"}^2] is simply their average. Thus
+
+[[eq_H-26b]]
+[stem]
+++++
+s_{"b"}^2 = bar(s^2(V_{jk})) = 1/J sum_{j=1}^J s^2 (V_{jk}) = 1/{J(K - 1)} sum_{j=1}^J sum_{k=1}^K (V_{jk} - bar(V)_j)^2
+++++
+
+which is an estimate of stem:[sigma_W^2] having stem:[nu_{"b"} = J(K - 1) = 40] degrees of freedom.
+
+The estimates of stem:[sigma_W^2] given by <<eq_H-26a>> and <<eq_H-26b>> are stem:[s_{"a"}^2 = (128" "mu"V")^2] and stem:[s_{"b"}^2 = (85" "mu"V")^2], respectively (see <<table_H-9>>). Since the estimate stem:[s_{"a"}^2] is based on the variability of the daily means while the estimate stem:[s_{"b"}^2] is based on the variability of the daily observations, their difference indicates the possible presence of an effect that varies from one day to another but that remains relatively constant when observations are made on any single day. The stem:[F]-test is used to test this possibility, and thus the assumption that the between-day component of variance is zero.
+
+
+[[scls_H-5-2-3]]
+====== {blank}
+
+The stem:[F]-distribution is the probability distribution of the ratio stem:[F(nu_{"a"},nu_{"b"}) = s_{"a"}^2(nu_{"a"})//s_{"b"}^2(nu_{"b"})] of two independent estimates, stem:[s_{"a"}^2 (nu_{"a"})] and stem:[s_{"b"}^2 (nu_{"b"})], of the variance stem:[sigma^2] of a normally distributed random variable <<BOX1978>>. The parameters stem:[nu_{"a"}] and stem:[nu_{"b"}] are the respective degrees of freedom of the two estimates and stem:[0 <= F(nu_{"a"},nu_{"b"}) < oo]. Values of stem:[F] are tabulated for different values of stem:[nu_{"a"}] and stem:[nu_{"b"}] and various quantiles of the stem:[F]-distribution. A value of stem:[F(nu_{"a"}, nu_{"b"}) > F_{0.95}] or stem:[F(nu_{"a"}, nu_{"b"}) > F_{0.975}] (the critical value) is usually interpreted as indicating that stem:[s_{"a"}^2 (nu_{"a"})] is larger than stem:[s_{"b"}^2 (nu_{"b"})] by a statistically significant amount; and that the probability of a value of stem:[F] as large as that observed, if the two estimates were estimates of the same variance, is less than stem:[0.05] or stem:[0.025], respectively. (Other critical values may also be chosen, such as stem:[F_{0.99}].)
+
+
+[%landscape]
+<<<
+
+[[table_H-9]]
+.Summary of voltage standard calibration data obtained on stem:[J = 10] days, with each daily mean stem:[bar(V)_j] and experimental standard deviation stem:[s(V_{jk})]  based on stem:[K = 5] independent repeated observations
+[cols="11*^"]
+|===
+.2+| Quantity 10+| Day, stem:[j]
+| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+
+| stem:[bar(V)_j//"V"] | stem:[10.000172] | stem:[10.000116] | stem:[10.000013] | stem:[10.000144] | stem:[10.000106] | stem:[10.000031] | stem:[10.000060] | stem:[10.000125] | stem:[10.000163] | stem:[10.000041] 
+| stem:[s(V_{jk})//rm(muV)] | 60 | 77 | 111 | 101 | 67 | 93 | 80 | 73 | 88 | 86
+
+11+a|
+[stem%unnumbered]
+++++
+bar(V) = 10.000097" "rm(V) " " " " s(bar(V)_j) = 57" "rm(muV)
+++++
+[stem%unnumbered]
+++++
+s_{"a"}^2 = Ks^2 (bar(V)_j) = 5(57" "rm(muV))^2 = (128" "rm(muV))^2 " " " " s_{"b"}^2 = bar(s^2 (V_{jk})) = (85" "rm(muV))^2
+++++
+|===
+
+
+[%portrait]
+<<<
+
+[[scls_H-5-2-4]]
+====== {blank}
+
+The application of the stem:[F]-test to the present numerical example yields
+
+[stem]
+++++
+F(nu_{"a"},nu_{"b"}}) = {s_{"a"}^2}/{s_{"b"}^2} = {K s^2 (bar(V)_j)}/{s^2 (bar(V)_{jk})} = {5(57" "mu"V")^2}/{(85" "mu"V")^2} = 2.25
+++++
+
+with stem:[nu_a = J - 1 = 9] degrees of freedom in the numerator and stem:[nu_{"b"} = J (K - 1) = 40] degrees of freedom in the denominator. Since stem:[F_{0.95} (9.40) = 2.12] and stem:[F_{0.975} (9.40) = 2.45], it is concluded that there is a statistically significant between-day effect at the 5 percent level of significance but not at the stem:[2.5] percent level.
+
+
+[[scls_H-5-2-5]]
+====== {blank}
+
+If the existence of a between-day effect is rejected because the difference between stem:[s_{"a"}^2] and stem:[s_{"b"}^2] is not viewed as statistically significant (an imprudent decision because it could lead to an underestimate of the uncertainty), the estimated variance stem:[s^2(bar(V))] of stem:[bar(V)] should be calculated from <<eq_H-24b>>. That relation is equivalent to pooling the estimates stem:[s_{"a"}^2] and stem:[s_{"b"}^2] (that is, taking a weighted average of stem:[s_{"a"}^2] and stem:[s_{"b"}^2], each weighted by its respective degrees of freedom stem:[nu_{"a"}] and stem:[nu_{"b"}] -- see <<note_H-3-6>>) to obtain the best estimate of the variance of the observations; and dividing that estimate by stem:[JK], the number of observations, to obtain the best estimate stem:[s^2(bar(V))] of the variance of the mean of the observations. Following this procedure one obtains
+
+[[eq_H-28a]]
+[stem]
+++++
+s^2(bar(V)) = {(J - 1)s_{"a"}^2 + J (K - 1) s_{"b"}^2}/{JK (JK - 1)} = {9(128" "mu"V")^2 + 40(85" "mu"V")^2}/{(10)(5)(49)}
+++++
+
+[[eq_H-28b]]
+[stem]
+++++
+s^2(bar(V)) = (13" "mu"V")^2, " or " s(bar(V)) = (13" "mu"V")
+++++
+
+
+with stem:[s(V)] having stem:[JK - 1 = 49] degrees of freedom.
+
+If it is assumed that all corrections for systematic effects have already been taken into account and that all other components of uncertainty are insignificant, then the result of the calibration can be stated as stem:[V_{"S"} = V = 10.000097" V"] (see <<table_H-9>>), with a combined standard uncertainty of stem:[s(bar(V)) = u_{"c"} = 13" "mu"V"], and with stem:[u_{"c"}] having 49 degrees of freedom.
+
+NOTE: In practice, there would very likely be additional components of uncertainty that were significant and therefore would have to be combined with the component of uncertainty obtained statistically from the observations (see <<note_H-5-1>>).
+
+[NOTE]
+====
+<<eq_H-28a>> for stem:[s^2(bar(V))] can be shown to be equivalent to <<eq_H-24b>> by writing the double sum, denoted by stem:[S], in that equation as
+
+[stem%unnumbered]
+++++
+S = sum_{j=1}^J sum_{k=1}^K [(V_{jk} - bar(V)_j) + (bar(V)_j - bar(V))]^2 = (J - 1)s_{"a"}^2 + J (K - 1)s_{"b"}^2
+++++
+====
+
+
+[[scls_H-5-2-6]]
+====== {blank}
+
+If the existence of a between-day effect is accepted (a prudent decision because it avoids a possible underestimate of the uncertainty) and it is assumed to be random, then the variance stem:[s^2(bar(V)_j)] calculated from the stem:[J = 10] daily means according to <<eq_H-25d>> estimates not stem:[sigma_{"W"}^2//K] as postulated in <<scls_H-5-2-2>>, but stem:[sigma_{"W"}^2//K + sigma_{"B"}^2], where stem:[sigma_{"B"}^2] is the between-day random component of variance. This implies that
+
+[[eq_H-29]]
+[stem]
+++++
+s^2 (bar(V)_j) = s_{"W"}^2 // K + s_{"B"}^2
+++++
+
+where stem:[s_{"w"}^2] estimates stem:[sigma_W^2] and stem:[s_{"B"}^2] estimates stem:[sigma_{"B"}^2]. Since stem:[bar(s^2(V_{jk}))] calculated from <<eq_H-26b>> depends only on the within-day variability of the observations, one may take stem:[s_{"w"}^2 = s^2(V_{jk})]. Thus the ratio
+stem:[Ks^2 (bar(V_j))//bar(s^2 (V_{jk}))] used for the stem:[F]-test in <<scls_H-5-2-4>> becomes
+
+[stem]
+++++
+F = {K s^2(bar(V)_j)}/{bar(s^2(V_{jk}))} = {s_{"W"}^2 + K s_{"B"}^2}/{s_{"W"}^2} = {5(57" "mu"V")^2}/{85" "mu"V"} = 2.25
+++++
+
+
+which then leads to
+
+[[eq_H-31a]]
+[stem]
+++++
+{:({:s_{"B"}^2:},{:= {K s^2(bar(V)_j) - bar(s^2 (V_{jk}))}/{K}:}),
+({:s_{"B"}^2:},{:= (43" "mu"V")^2, " or " s_{"W"} = 85" "mu"V":}):}
+++++
+
+[[eq_H-31b]]
+[stem]
+++++
+s_{"W"}^2 bar(s^2(V_{jk})) = (85" "mu"V")^2, " or " s_{"W"} = 85" "mu"V"
+++++
+
+
+The estimated variance of stem:[bar(V)] is obtained from stem:[s^2(bar(V)_j)], <<eq_H-25d>>, because stem:[s^2(bar(V)_j)] properly reflects both the within-day and between-day random components of variance [see <<eq_H-29>>]. Thus
+
+[[eq_H-32]]
+[stem]
+++++
+{:({:s^2(bar(V)):},{:= s^2 (bar(V)_j)//J:}),
+({:"":},{:= (57" "mu"V")^2//10, " or " s(bar(V)) = 18" "mu"V":}):}
+++++
+
+with stem:[s(bar(V))] having stem:[J - 1 = 9] degrees of freedom.
+
+The degrees of freedom of stem:[s_{"w"}^2] (and thus stem:[s_{"w"}]) is stem:[J(K - 1) = 40] [see <<eq_H-26b>>]. The degrees of freedom of stem:[s_{"B"}^2] (and thus stem:[s_{"B"}]) is the effective degrees of freedom of the difference stem:[s_{"B"}^2 = s^2 (bar(V)_j) - bar(s^2 (V_{jk})) // K] [<<eq_H-31a>>], but its estimation is problematic.
+
+
+[[scls_H-5-2-7]]
+====== {blank}
+
+The best estimate of the potential difference of the voltage standard is then stem:[V_{"S"} = V = 10.000097" V"], with stem:[s(bar(V)) = u_{"c"} = 18" "mu"V"] as given in <<eq_H-32>>. This value of stem:[u_{"c"}] and its 9 degreesof freedom are to be compared with stem:[u_{"c"} = 13" "mu"V"] and its 49 degrees of freedom, the result obtained in <<scls_H-5-2-5>> [<<eq_H-28b>>] when the existence of a between-day effect was rejected.
+
+In a real measurement an apparent between-day effect should be further investigated, if possible, in order to determine its cause and whether a systematic effect is present that would negate the use of ANOVA methods. As pointed out at the beginning of this example, ANOVA techniques are designed to identify and evaluate components of uncertainty arising from random effects; they cannot provide information about components arising from systematic effects.
+
+
+[[scls_H-5-3]]
+==== The role of ANOVA in measurement
+
+[[scls_H-5-3-1]]
+====== {blank}
+
+This voltage standard example illustrates what is generally termed a balanced, one-stage nested design. It is a one-stage nested design because there is one level of "nesting" of the observations with one factor, the day on which observations are made, being varied in the measurement. It is balanced because the same number of observations is made on each day. The analysis presented in the example can be used to determine if there is an "operator effect", an "instrument effect", a "laboratory effect", a "sample effect", or even a "method effect" in a particular measurement. Thus in the example, one might imagine replacing the observations made on the stem:[J] different days by observations made on the same day but by stem:[J] different operators; the between-day component of variance becomes then a component of variance associated with different operators.
+
+
+[[scls_H-5-3-2]]
+====== {blank}
+
+As noted in <<scls_H-5>>, ANOVA methods are widely used in the certification of reference materials (RMs) by interlaboratory testing. Such certification usually involves having a number of independent, equally competent laboratories measure samples of a material for the property for which the material is to be certified. It is generally assumed that the differences between individual results, both within and between laboratories, are statistical in nature regardless of the causes. Each laboratory mean is considered an unbiased estimate of the property of the material, and usually the unweighted mean of the laboratory means is assumed to be the best estimate of that property.
+
+An RM certification might involve stem:[I] different laboratories, each of which measures the requisite property of stem:[J] different samples of the material, with each measurement of a sample consisting of stem:[K] independent repeatedobservations. Thus the total number of observations is stem:[IJK] and the total number of samples is stem:[IJ]. This is an example of a balanced, two- stage nested design analogous to the one-stage voltage-standard example above. In this case, there are two levels of "nesting" of the observations with two different factors, sample and laboratory, being varied in the measurement. The design is balanced because each sample is observed the same number of times (stem:[K]) in each laboratory and each laboratory measures the same number of samples (stem:[J]). In further analogy with the voltage-standard example, in the RM case the purpose of the analysis of the data is to investigate the possible existence of a between-samples effect and a between-laboratories effect, and to determine the proper uncertainty to assign to the best estimate of the value of the property to be certified. In keeping with the previous paragraph, that estimate is assumed to be the mean of the stem:[I] laboratory means, which is also the mean of the stem:[IJK] observations.
+
+
+[[scls_H-5-3-3]]
+====== {blank}
+
+The importance of varying the input quantities upon which a measurement result depends so that its uncertainty is based on observed data evaluated statistically is pointed out in <<scls_3-4-2>>. Nested designs and the analysis of the resulting data by ANOVA methods can be successfully used in many measurement situations encountered in practice.
+
+Nonetheless, as indicated in <<scls_3-4-1>>, varying all input quantities is rarely feasible due to limited time and resources; at best, in most practical measurement situations, it is only possible to evaluate a few components of uncertainty using ANOVA methods. As pointed out in <<scls_4-3-1>>, many components must be evaluated by scientific judgement using all of the available information on the possible variability of the input quantities in question; in many instances an uncertainty component, such as arises from a between-samples effect, a between-laboratories effect, a between-instruments effect, or a between-operators effect, cannot be evaluated by the statistical analysis of series of observations but must be evaluated from the available pool of information.
+
+
+[[scls_H-6]]
+=== Measurements on a reference scale: hardness
+
+Hardness is an example of a physical concept that cannot be quantified without reference to a method of measurement; it has no unit that is independent of such a method. The quantity "hardness" is unlike classical measurable quantities in that it cannot be entered into algebraic equations to define other measurable quantities (though it is sometimes used in empirical equations that relate hardness to another property for a category of materials). Its magnitude is determined by a conventional measurement, that of a linear dimension of an indentation in a block of the material of interest, or _sample block_. The measurement is made according to a written standard, which includes a description of the "indentor", the construction of the machine by which the indentor is applied, and the way in which the machine is to be operated. There is more than one written standard, so there is more than one scale of hardness.
+
+The hardness reported is a function (depending on the scale) of the linear dimension that is measured. In the example given in this subclause, it is a linear function of the arithmetic mean or average of the depths of five repeated indentations, but for some other scales the function is nonlinear.
+
+Realizations of the standard machine are kept as national standards (there is no international standard realization); a comparison between a particular machine and the _national standard machine_ is made using a _transfer-standard block_.
+
+
+[[scls_H-6-1]]
+==== The measurement problem
+
+In this example, the hardness of a sample block of material is determined on the scale "Rockwell C" using a machine that has been calibrated against the national standard machine. The scale unit of Rockwell-C hardness is 0.002 mm, with hardness on that scale defined as stem:[100 xx (0.002" mm")] minus the average of the depths, measured in mm, of five indentations. The value of that quantity divided by the Rockwell scale unit 0.002 mm is called the "HRC hardness index". In this example, the quantity is called simply "hardness",
+
+symbol stem:[h_{"Rockwell C"}], and the numerical value of hardness expressed in Rockwell units of length is called the "hardness index", stem:[H_{"Rockwell C"}].
+
+
+[[scls_H-6-2]]
+==== Mathematical model
+
+To the average of the depths of the indentations made in the sample block by the machine used to determine its hardness, or _calibration machine_, must be added corrections to determine the average of the depths of the indentations that would have been made in the same block by the national standard machine. Thus
+
+[[eq_H-33a]]
+[stem]
+++++
+{:(h_{"Rockwell C"},= f(bar(d),Delta_{"c"},Delta_{"b"},Delta_{"S"}))
+,("",= 100(0.002" mm") - bar(d) - Delta_{"c"} - Delta_{"b"} - Delta_{"S"}):}
+++++
+
+[stem]
+++++
+h_{"Rockwell C"} = h_{"Rockwell C"}//(0.002" mm")
+++++
+
+
+where
+
+stem:[bar(d)]:: is the average of the depths of five indentations made by the calibration machine in the sample block;
+
+stem:[Delta_{"c"}]:: is the correction obtained from a comparison of the calibration machine with the national standard machine using a transfer-standard block, equal to the average of the depths of stem:[5m] indentations made by the national standard machine in this block, minus the average of the depths of stem:[5n] indentations made in the same block by the calibration machine;
+
+stem:[Delta_{"b"}]:: is the difference in hardness (expressed as a difference of average depth of indentation) between the two parts of the transfer-standard block used respectively for indentations by the two machines, assumed zero; and
+
+stem:[Delta_{"S"}]:: is the error due to the lack of repeatability of the national standard machine and the incomplete definition of the quantity hardness. Although stem:[Delta_{"S"}] must be assumed to be zero, it has a standard uncertainty associated with it of stem:[u(Delta_{"S"})].
+
+Since the partial derivatives, stem:[partial f//partial bar(d)], stem:[partial f//partial Delta_{"c"}], stem:[partial f//partial Delta_{"b"}], and stem:[partial f//partial Delta_{"S"}] of the function of <<eq_H-33a>> are all equal to stem:[-1], the combined standard uncertainty stem:[u_{"c"}(h)] of the hardness of the sample block as measured by the calibration machine is simply given by
+
+[[eq_H-34]]
+[stem]
+++++
+u_{"c"}^2 (h) = u^2 (bar(d)) + u^2(Delta_{"c"}) + u^2(Delta_{"b"}) + u^2(Delta_{"S"})
+++++
+
+where for simplicity of notation stem:[h -= h_{"Rockwell C"}].
+
+
+[[scls_H-6-3]]
+==== Contributory variances
+
+[[scls_H-6-3-1]]
+===== Uncertainty of the average depth of indentation stem:[bar(d)] of the sample block, stem:[u(bar(d))]
+
+_Uncertainty of repeated observations_. Strict repetition of an observation is not possible because a new indentation cannot be made on the site of an earlier one. Since each indentation must be made on a different site, any variation in the results includes the effect of variations in hardness between different sites. Thus stem:[u(bar(d))], the standard uncertainty of the average of the depths of five indentations in the sample block by the calibration machine, is taken as stem:[s_{"p"}(d_k)// sqrt(5)], where stem:[s_{"p"}(d_k)] is the pooled experimental standard deviation of the depths of indentations determined by "repeated" measurements on a block known to have very uniform hardness (see <<scls_4-2-4>>).
+
+_Uncertainty of indication_. Although the correction to stem:[bar(d)] due to the display of the calibration machine is zero, there is an uncertainty in stem:[bar(d)] due to the uncertainty of the indication of depth due to the resolution stem:[delta] of the display given by stem:[u^2(delta) = delta^2//12] (see <<scls_F-2-2-1>>). The estimated variance of stem:[bar(d)] is thus
+
+[stem]
+++++
+u^2(bar(d)) = s^2 (d_k)//5 + delta^2//12
+++++
+
+
+[[scls_H-6-3-2]]
+===== Uncertainty of the correction for the difference between the two machines, stem:[u(Delta_{"c"})]
+
+As indicated in <<scls_H-6-2>>, stem:[Delta_c] is the correction for the difference between the national standard machine and the calibration machine. This correction may be expressed as stem:[Delta_c = z'_{"S"} - z'], where stem:[z'_{"S"} = (sum_{i=1}^m bar(z)_{"S",i})//m] is the average depth of the stem:[5m] indentations made by the national standard machine in the transfer-standard block; and stem:[z' = (sum_{i=1}^n bar(z)_i)//n] is the  average depth of the stem:[5n] indentations made in the same block by the calibration machine. Thus, assuming that for the comparison the uncertainty due to the resolution of the display of each machine is negligible, the estimated variance of stem:[Delta_c] is
+
+[[eq_H-36]]
+[stem]
+++++
+u^2(Delta_{"c"} = {s_{"av"}^2 (bar(z)_{"S"})}/m + {s_{"av"}^2 (bar(z))}/n)
+++++
+
+where
+
+stem:[s_{"av"}^2 (bar(z)_{"S"}) = [sum_{i=1}^m s^2 (bar(z)_{"S",i})\]//m]:: is the average of the experimental variances of the means of each of the
+stem:[m] series of indentations stem:[z_{"S",ik}] made by the standard machine;
+
+stem:[s_{"av"}^2(bar(z)) = [sum_{i=1}^n s^2 (bar(z)_i)]//n]:: is the average of the experimental variances of the means of each of the stem:[n] series of indentations stem:[z_{ik}] made by the calibration machine.
+
+
+NOTE: The variances stem:[s_{"av"}^2(bar(z)_{"S"})] and stem:[s_{"av"}^2(bar(z))] are pooled estimates of variance -- see the discussion of <<eq_H-26b>>.
+
+
+
+[[scls_H-6-3-3]]
+===== Uncertainty of the correction due to variations in the hardness of the transfer-standard block, stem:[u(Delta_{"b"})]
+
+OIML International Recommendation R 12, _Verification and calibration of Rockwell C hardness standardized blocks_, requires that the maximum and minimum depths of indentation obtained from five measurements onthe transfer-standard block shall not differ by more than a fraction stem:[x] of the average depth of indentation, where stem:[x] is a function of the hardness level. Let, therefore, the maximum difference in the depths of indentation over the entire block be stem:[xz'], where stem:[z'] is as defined in <<scls_H-6-3-2>> with stem:[n = 5]. Also let the maximum difference be described by a triangular probability distribution about the average value stem:[xz'//2] (on the likely assumption that values near the central value are more probable than extreme values -- see <<scls_4-3-9>>). Then, if in <<eq_9b>> in <<scls_4-3-9>> stem:[a = xz'//2], the estimated variance of the correction to the average depth of indentation due to differences of the hardnesses presented respectively to the standard machine and the calibration machine is
+
+[[eq_H-37]]
+[stem]
+++++
+u^2(Delta_{"b"}) = (x z')^2 // 24
+++++
+
+As indicated in <<scls_H-6-2>>, it is assumed that the best estimate of the correction stem:[Delta_{"b"}] itself is zero.
+
+
+[[scls_H-6-3-4]]
+===== Uncertainty of the national standard machine and the definition of hardness, stem:[u(Delta_{"S"})]
+
+The uncertainty of the national standard machine together with the uncertainty due to incomplete definition of the quantity hardness is reported as an estimated standard deviation stem:[u(Delta_{"S"})] (a quantity of dimension _length_).
+
+
+[[scls_H-6-4]]
+==== The combined standard uncertainty, stem:[u_{"c"}(h)]
+
+Collection of the individual terms discussed in <<scls_H-6-3-1>> to <<scls_H-6-3-4>> and their substitution into <<eq_H-34>> yields for the estimated variance of the measurement of hardness
+
+[[eq_H-38]]
+[stem]
+++++
+u_{"c"}^2(h) = {s^2 (d_k)}/5 + {delta^2}/12 + {s_{"av"}^2 (bar(z)_{"S"})}/m + {s_{"av"}^2 (bar(z))}/n + {(xz')^2}/24 + u^2 (Delta_{"S"})
+++++
+
+and the combined standard uncertainty is stem:[u_{"c"}(h)].
+
+
+[[scls_H-6-5]]
+==== Numerical example
+
+The data for this example are summarized in <<table_H-10>>.
+
+
+[[table_H-10]]
+.Summary of data for determining the hardness of a sample block on the scale Rockwell C
+[cols="2*",optios="header"]
+|===
+| Source of uncertainty | Value
+
+| Average depth stem:[bar(d)] of 5 indentations made by the calibration machine in the sample block: stem:[0.072" mm"]
+| stem:[36.0] Rockwell scale unit
+
+| Indicated hardness index of the sample block from the 5 indentations: stem:[H_{"Rockwell C"} = h_{"Rockwell C"}//(0.002" mm") = [100(0.002" mm") - 0.072 mm\]//(0.002" mm")] (see <<scls_H-6-1>>)
+| stem:[64.0] HRC
+
+| Pooled experimental standard deviation stem:[s_{"p"}(d_k)] of the depths of indentations made by the calibration machine in a block having uniform hardness
+| stem:[0.45] Rockwell scale unit
+
+| Resolution stem:[delta] of the display of the calibration machine | stem:[0.1] Rockwell scale unit
+
+| stem:[s_{"av"}(bar(z)_{"S"})], square root of the average of the experimental variances of the means of stem:[m] series of indentations made by the national standard machine in the transfer-standard block
+| stem:[0.10] Rockwell scale unit, stem:[m = 6]
+
+| stem:[s_{"av"}(bar(z))], square root of the average of the experimental variances of the means of stem:[n] series of indentations made by the calibration machine in the transfer-standard block
+| stem:[0.11] Rockwell scale unit, stem:[n = 6]
+
+| Permitted fractional variation stem:[x] of the depth of penetration in the transfer-standard block | stem:[1.5 xx 10^{-2}]
+
+| Standard uncertainty stem:[u(Delta_{"S"})] of the national standard machine and definition of hardness | stem:[0.5] Rockwell scale unit
+|===
+
+
+The scale is Rockwell C, designated HRC. The Rockwell scale unit is stem:[0.002" mm"], and thus in <<table_H-10>> and in the following, it is understood that (for example) "stem:[36.0] Rockwell scale unit" means stem:[36.0 xx (0.002" mm") = 0.072" mm"] and is simply a convenient way of expressing the data and results.
+
+If the values for the relevant quantities given in <<table_H-10>> are substituted into <<eq_H-38>>, one obtains the following two expressions:
+
+[stem%unnumbered]
+++++
+{:(u_{"c"}^2(h),=[0.45^2/5 + 0.1^2/12 + 0.10^2/6 + 0.11^2/6 + (0.015 xx 36.0)^2/24 + 0.5^2] ("Rockwell scale unit")^2),
+("",=0.307 ("Rockwell scale unit")^2),
+(u_{"c"}(h),= 0.55 " Rockwell scale unit" = 0.0011" mm"):}
+++++
+
+
+
+where for the purpose of the calculation of uncertainty it is adequate to take stem:[z' = bar(d) = 36.0" Rockwell scale unit"]. Thus, if it is assumed that stem:[Delta_c = 0], the hardness of the sample block is
+
+stem:[h_{"Rockwell C"} = 64.0" Rockwell scale unit"] or stem:[0.1280" mm"] with a combined standard uncertainty of stem:[u_{"c"} = 0.55" Rockwell scale unit"] or stem:[0.0011" mm"].
+
+The hardness index of the block is stem:[h_{"Rockwell C"}//(0.002 mm) = (0.1280 mm)//(0.002 mm)], or
+
+stem:[H_{"Rockwell C"} = 64.0] HRC with a combined standard uncertainty of stem:[u_{c} = 0.55] HRC.
+
+In addition to the component of uncertainty due to the national standard machine and the definition of hardness, stem:[u(Delta_{"S"}) = 0.5] Rockwell scale unit, the significant components of uncertainty are those of the repeatability of the machine, stem:[s_{"p"} (d_k)//5 = 0.20] Rockwell scale unit; and the variation of the hardness of the transfer-standard block, which is stem:[(x z')^2//24 = 0.11] Rockwell scale unit. The effective degrees of freedom of stem:[u_{"c"}] can be evaluated using the Welch-Satterthwaite formula in the manner illustrated in <<scls_H-1-6>>.

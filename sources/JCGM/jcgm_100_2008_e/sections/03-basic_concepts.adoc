@@ -1,0 +1,223 @@
+
+[[cls_3]]
+== Basic concepts
+
+Additional discussion of basic concepts may be found in <<annexD>>, which focuses on the ideas of "true" value, error and uncertainty and includes graphical illustrations of these concepts; and in <<annexE>>, which explores the motivation and statistical basis for Recommendation INC-1 (1980) upon which this _Guide_ rests. <<annexJ>> is a glossary of the principal mathematical symbols used throughout the _Guide_.
+
+
+[[scls_3-1]]
+=== Measurement
+
+[[scls_3-1-1]]
+==== {blank}
+
+The objective of a *measurement* (<<scls_B-2-5>>) is to determine the *value* (<<scls_B-2-2>>) of the *measurand* (<<scls_B-2-9>>), that is, the value of the *particular quantity* (<<note1_B-2-1>>) to be measured. A measurement therefore begins with an appropriate specification of the measurand, the *method of measurement* (<<scls_B-2-7>>), and the *measurement procedure* (<<scls_B-2-8>>).
+
+NOTE: The term "true value" (see <<annexD>>) is not used in this _Guide_ for the reasons given in <<scls_D-3-5>>; the terms "value of a measurand" (or of a quantity) and "true value of a measurand" (or of a quantity) are viewed as equivalent.
+
+
+[[scls_3-1-2]]
+==== {blank}
+
+In general, the *result of a measurement* (<<scls_B-2-11>>) is only an approximation or *estimate* (<<scls_C-2-26>>) of the value of the measurand and thus is complete only when accompanied by a statement of the *uncertainty* (<<scls_B-2-18>>) of that estimate.
+
+
+[[scls_3-1-3]]
+==== {blank}
+
+In practice, the required specification or definition of the measurand is dictated by the required *accuracy of measurement* (<<scls_B-2-14>>). The measurand should be defined with sufficient completeness withrespect to the required accuracy so that for all practical purposes associated with the measurement its value is unique. It is in this sense that the expression "value of the measurand" is used in this _Guide_.
+
+[example]
+If the length of a nominally one-metre long steel bar is to be determined to micrometre accuracy, its specification should include the temperature and pressure at which the length is defined. Thus the measurand should be specified as, for example, the length of the bar at 25.00 °C footnote:[*Footnote to the 2008 version:* According to Resolution 10 of the 22nd CGPM (2003) "... the symbol for the decimal marker shall be either the point on the line or the comma on the line...". The JCGM has decided to adopt, in its documents in English, the point on the line. However, in this document, the decimal comma has been retained for consistency with the 1995 printed version.] and stem:[101325" Pa"] (plus any other defining parameters deemed necessary, such as the way the bar is to be supported). However, if the length is to be determined to only millimetre accuracy, its specification would not require a defining temperature or pressure or a value for any other defining parameter.
+
+NOTE: Incomplete definition of the measurand can give rise to a component of uncertainty sufficiently large that it must be included in the evaluation of the uncertainty of the measurement result (see <<scls_D-1-1>>, <<scls_D-3-4>>, and <<scls_D-6-2>>).
+
+
+[[scls_3-1-4]]
+==== {blank}
+
+In many cases, the result of a measurement is determined on the basis of series of observations obtained under *repeatability conditions* (<<note1_B-2-15>>).
+
+
+[[scls_3-1-5]]
+==== {blank}
+
+Variations in repeated observations are assumed to arise because *influence quantities* (<<scls_B-2-10>>) that can affect the measurement result are not held completely constant.
+
+
+[[scls_3-1-6]]
+==== {blank}
+
+The mathematical model of the measurement that transforms the set of repeated observations into the measurement result is of critical importance because, in addition to the observations, it generally includes various influence quantities that are inexactly known. This lack of knowledge contributes to the uncertainty of the measurement result, as do the variations of the repeated observations and any uncertainty associated with the mathematical model itself.
+
+
+[[scls_3-1-7]]
+==== {blank}
+
+This _Guide_ treats the measurand as a scalar (a single quantity). Extension to a set of related measurands determined simultaneously in the same measurement requires replacing the scalar measurand and its *variance* (<<scls_C-2-11>>,<<scls_C-2-20>>,<<scls_C-3-2>>) by a vector measurand and *covariance matrix* (<<scls_C-3-5>>). Such a replacement is considered in this _Guide_ only in the examples (see <<scls_H-2>>, <<scls_H-3>>, and <<scls_H-4>>).
+
+
+[[scls_3-2]]
+=== Errors, effects, and corrections
+
+[[scls_3-2-1]]
+==== {blank}
+
+In general, a measurement has imperfections that give rise to an *error* (<<scls_B-2-19>>) in the measurement result. Traditionally, an error is viewed as having two components, namely, a *random* (<<scls_B-2-21>>) component and a *systematic* (<<scls_B-2-22>>) component.
+
+NOTE: Error is an idealized concept and errors cannot be known exactly.
+
+
+[[scls_3-2-2]]
+==== {blank}
+
+Random error presumably arises from unpredictable or stochastic temporal and spatial variations of influence quantities. The effects of such variations, hereafter termed _random effects_, give rise to variations in repeated observations of the measurand. Although it is not possible to compensate for the random error of a measurement result, it can usually be reduced by increasing the number of observations; its *expectation* or *expected value* (<<scls_C-2-9>>, <<scls_C-3-1>>) is zero.
+
+NOTE: The experimental standard deviation of the arithmetic mean or average of a series of observations (see <<scls_4-2-3>>) is _not_ the random error of the mean, although it is so designated in some publications. It is instead a measure of the _uncertainty_ of the mean due to random effects. The exact value of the error in the mean arising from these effects cannotbe known.
+
+NOTE: In this _Guide_, great care is taken to distinguish between the terms "error" and "uncertainty". They are not synonyms, but represent completely different concepts; they should not be confused with one another or misused.
+
+
+[[scls_3-2-3]]
+==== {blank}
+
+Systematic error, like random error, cannot be eliminated but it too can often be reduced. If a systematic error arises from a recognized effect of an influence quantity on a measurement result, hereafter termed a _systematic effect_, the effect can be quantified and, if it is significant in size relative to the required accuracy of the measurement, a *correction* (<<scls_B-2-23>>) or *correction factor* (<<scls_B-2-24>>) can be applied to compensate for the effect. It is assumed that, after correction, the expectation or expected value of the error arising from a systematic effect is zero.
+
+NOTE: The uncertainty of a correction applied to a measurement result to compensate for a systematic effect is _not_ the systematic error, often termed bias, in the measurement result due to the effect as it is sometimes called. It is instead a measure of the _uncertainty_ of the result due to incomplete knowledge of the required value of the correction. The error arising from imperfect compensation of a systematic effect cannot be exactly known. The terms "error" and "uncertainty" should be used properly and care taken to distinguish between them.
+
+
+[[scls_3-2-4]]
+==== {blank}
+
+It is assumed that the result of a measurement has been corrected for all recognized significant systematic effects and that every effort has been made to identify such effects.
+
+[example]
+A correction due to the finite impedance of a voltmeter used to determine the potential difference (the measurand) across a high-impedance resistor is applied to reduce the systematic effect on the result of the measurement arising from the loading effect of the voltmeter. However, the values of the impedances of the voltmeter and resistor, which are used to estimate the value of the correction and which are obtained from other measurements, are themselves uncertain. These uncertainties are used to evaluate the component of the uncertainty of the potential difference determination arising from the correction and thus from the systematic effect due to the finite impedance of the voltmeter.
+
+NOTE: Often, measuring instruments and systems are adjusted or calibrated using measurement standards and reference materials to eliminate systematic effects; however, the uncertainties associated with these standards and materials must still be taken into account.
+
+NOTE: The case where a correction for a known significant systematic effect is not applied is discussed in the <<note_6-3-1>> and in <<scls_F-2-4-5>>.
+
+
+[[scls_3-3]]
+=== Uncertainty
+
+[[scls_3-3-1]]
+==== {blank}
+
+The uncertainty of the result of a measurement reflects the lack of exact knowledge of the value of the measurand (see <<scls_2-2>>). The result of a measurement after correction for recognized systematic effects is still only an _estimate_ of the value of the measurand because of the uncertainty arising from random effects and from imperfect correction of the result for systematic effects.
+
+NOTE: The result of a measurement (after correction) can unknowably be very close to the value of the measurand (and hence have a negligible error) even though it may have a large uncertainty. Thus the uncertainty of the result of a measurement should not be confused with the remaining unknown error.
+
+
+[[scls_3-3-2]]
+==== {blank}
+
+In practice, there are many possible sources of uncertainty in a measurement, including:
+
+. [[item_3-3-2a]]incomplete definition of the measurand;
+. imperfect reaIization of the definition of the measurand;
+. nonrepresentative sampling -- the sample measured may not represent the defined measurand;
+. inadequate knowledge of the effects of environmental conditions on the measurement or imperfect measurement of environmental conditions;
+. personal bias in reading analogue instruments;
+. finite instrument resolution or discrimination threshold;
+. inexact values of measurement standards and reference materials;
+. inexact values of constants and other parameters obtained from external sources and used in the data-reduction algorithm;
+. [[item_3-3-2i]]approximations and assumptions incorporated in the measurement method and procedure;
+. [[item_3-3-2j]]variations in repeated observations of the measurand under apparently identical conditions.
+
+These sources are not necessarily independent, and some of sources <<item_3-3-2a>> to <<item_3-3-2i>> may contribute to source <<item_3-3-2j>>. Of course, an unrecognized systematic effect cannot be taken into account in the evaluation of the uncertainty of the result of a measurement but contributes to its error.
+
+
+[[scls_3-3-3]]
+==== {blank}
+
+Recommendation INC-1 (1980) of the Working Group on the Statement of Uncertainties groups uncertainty components into two categories based on their method of evaluation, "A" and "B" (see <<scls_0-7>>,<<scls_2-3-2>>, and <<scls_2-3-3>>). These categories apply to _uncertainty_ and are not substitutes for the words "random" and "systematic". The uncertainty of a correction for a known systematic effect may in some cases be obtained by a Type A evaluation while in other cases by a Type B evaluation, as may the uncertainty characterizing a random effect.
+
+NOTE: In some publications, uncertainty components are categorized as "random" and "systematic" and are associated with errors arising from random effects and known systematic effects, respectively. Such categorization of components of uncertainty can be ambiguous when generally applied. For example, a "random" component of uncertainty in one measurement may become a "systematic" component of uncertainty in another measurement in which the result of the first measurement is used as an input datum. Categorizing the _methods_ of evaluating uncertainty components rather than the _components_ themselves avoids such ambiguity. At the same time, it does not preclude collecting individual components that have been evaluated by the two different methods into designated groups to be used for a particular purpose (see <<scls_3-4-3>>).
+
+
+[[scls_3-3-4]]
+==== {blank}
+
+The purpose of the Type A and Type B classification is to indicate the two different ways of evaluating uncertainty components and is for convenience of discussion only; the classification is not meant to indicate that there is any difference in the nature of the components resulting from the two types of evaluation. Both types of evaluation are based on *probability distributions* (<<scls_C-2-3>>), and the uncertainty components resulting from either type are quantified by variances or standard deviations.
+
+
+[[scls_3-3-5]]
+==== {blank}
+
+The estimated variance stem:[u^2] characterizing an uncertainty component obtained from a Type A evaluation is calculated from series of repeated observations and is the familiar statistically estimated variance stem:[s^2] (see <<scls_4-2>>). The estimated *standard deviation* (<<scls_C-2-12>>,<<scls_C-2-21>>,<<scls_C-3-3>>) stem:[u], the positive square root of stem:[u^2], is thus stem:[u = s] and for convenience is sometimes called a _Type A standard uncertainty_. For an uncertainty component obtained from a Type B evaluation, the estimated variance stem:[u^2] is evaluated using available knowledge (see <<scls_4-3>>), and the estimated standard deviation u is sometimes called a _Type B standard uncertainty_.
+
+Thus a Type A standard uncertainty is obtained from a *probability density function* (<<scls_C-2-5>>) derived from an *observed frequency distribution* (<<scls_C-2-18>>), while a Type B standard uncertainty is obtained from an assumed probability density function based on the degree of belief that an event will occur [often called subjective *probability* (<<scls_C-2-1>>)].Both approaches employ recognized interpretations of probability.
+
+NOTE: A Type B evaluation of an uncertainty component is usually based on a pool of comparatively reliable information (see <<scls_4-3-1>>).
+
+
+[[scls_3-3-6]]
+==== {blank}
+
+The standard uncertainty of the result of a measurement, when that result is obtained from the values of a number of other quantities, is termed _combined standard uncertainty_ and denoted by stem:[u_{"c"}]. It is the estimated standard deviation associated with the result and is equal to the positive square root of the combined variance obtained from all variance and *covariance* (<<scls_C-3-4>>) components, however evaluated, using what is termed in this _Guide_ the _law of propagation of uncertainty_ (see <<cls_5>>).
+
+
+[[scls_3-3-7]]
+==== {blank}
+
+To meet the needs of some industrial and commercial applications, as well as requirements in the areas of health and safety, an _expanded uncertainty_ stem:[U] is obtained by multiplying the combined standard uncertainty stem:[u_{"c"}] by a _coverage factor_ stem:[k]. The intended purpose of stem:[U] is to provide an interval about the result of a measurement that may be expected to encompass a large fraction of the distribution of values that could reasonably be attributed to the measurand. The choice of the factor stem:[k], which is usually in the range 2 to 3, is based on the coverage probability or level of confidence required of the interval (see <<cls_6>>).
+
+NOTE: The coverage factor stem:[k] is always to be stated, so that the standard uncertainty of the measured quantity can be recovered for use in calculating the combined standard uncertainty of other measurement results that may depend on that quantity.
+
+
+[[scls_3-4]]
+=== Practical considerations
+
+[[scls_3-4-1]]
+==== {blank}
+
+If all of the quantities on which the result of a measurement depends are varied, its uncertainty can be evaluated by statistical means. However, because this is rarely possible in practice due to limited time and resources, the uncertainty of a measurement result is usually evaluated using a mathematical model of the measurement and the law of propagation of uncertainty. Thus implicit in this _Guide_ is the assumption that a measurement can be modelled mathematically to the degree imposed by the required accuracy of the measurement.
+
+
+[[scls_3-4-2]]
+==== {blank}
+
+Because the mathematical model may be incomplete, all relevant quantities should be varied to the fullest practicable extent so that the evaluation of uncertainty can be based as much as possible on observed data. Whenever feasible, the use of empirical models of the measurement founded on long-term quantitative data, and the use of check standards and control charts that can indicate if a measurement is under statistical control, should be part of the effort to obtain reliable evaluations of uncertainty. The mathematical model should always be revised when the observed data, including the result of independent determinations of the same measurand, demonstrate that the model is incomplete. A well-designed experiment can greatly facilitate reliable evaluations of uncertainty and is an important part of the art of measurement.
+
+
+[[scls_3-4-3]]
+==== {blank}
+
+In order to decide if a measurement system is functioning properly, the experimentally observed variability of its output values, as measured by their observed standard deviation, is often compared with the predicted standard deviation obtained by combining the various uncertainty components that characterize the measurement. In such cases, only those components (whether obtained from Type A or Type B evaluations) that could contribute to the experimentally observed variability of these output values should be considered.
+
+NOTE: Such an analysis may be facilitated by gathering those components that contribute to the variability and those that do not into two separate and appropriately labelled groups.
+
+
+[[scls_3-4-4]]
+==== {blank}
+
+In some cases, the uncertainty of a correction for a systematic effect need not be included in the evaluation of the uncertainty of a measurement result. Although the uncertainty has been evaluated, it may be ignored if its contribution to the combined standard uncertainty of the measurement result is insignificant. If the value of the correction itself is insignificant relative to the combined standard uncertainty, it too may be ignored.
+
+
+[[scls_3-4-5]]
+==== {blank}
+
+It often occurs in practice, especially in the domain of legal metrology, that a device is tested through a comparison with a measurement standard and the uncertainties associated with the standard and the comparison procedure are negligible relative to the required accuracy of the test. An example is the use of a set of well-calibrated standards of mass to test the accuracy of a commercial scale. In such cases, because the components of uncertainty are small enough to be ignored, the measurement may be viewed as determining the error of the device under test. (See also <<scls_F-2-4-2>>.)
+
+
+[[scls_3-4-6]]
+==== {blank}
+
+The estimate of the value of a measurand provided by the result of a measurement is sometimes expressed in terms of the adopted value of a measurement standard rather than in terms of the relevant unit of the International System of Units (SI). In such cases, the magnitude of the uncertainty ascribable to the measurement result may be significantly smaller than when that result is expressed in the relevant SI unit. (In effect, the measurand has been redefined to be the ratio of the value of the quantity to be measured to the adopted value of the standard.)
+
+[example]
+A high-quality Zener voltage standard is calibrated by comparison with a Josephson effect voltage reference based on the conventional value of the Josephson constant recommended for international use by the CIPM. The relative combined standard uncertainty stem:[u_{"c"}(V_{"S"})//V_{"S"}] (see <<scls_5-1-6>>) of the calibrated potential difference stem:[V_{"S"}] of the Zener standard is stem:[2 xx 10^{-8}] when stem:[V_{"S"}] is reported in terms of the conventional value, but stem:[u_{"c"}(V_{"S"})//V_{"S"}] is stem:[4 xx 10^{-7}] when stem:[V_{"S"}] is reported in terms of the SI unit of potential difference, the volt (V), because of the additional uncertainty associated with the SI value of the Josephson constant.
+
+
+[[scls_3-4-7]]
+==== {blank}
+
+Blunders in recording or analysing data can introduce a significant unknown error in the result of ameasurement. Large blunders can usually be identified by a proper review of the data; small ones could be masked by, or even appear as, random variations. Measures of uncertainty are not intended to account for such mistakes.
+
+
+[[scls_3-4-8]]
+==== {blank}
+
+Although this _Guide_ provides a framework for assessing uncertainty, it cannot substitute for critical thinking, intellectual honesty and professional skill. The evaluation of uncertainty is neither a routine task nor a purely mathematical one; it depends on detailed knowledge of the nature of the measurand and of the measurement. The quality and utility of the uncertainty quoted for the result of a measurement therefore ultimately depend on the understanding, critical analysis, and integrity of those who contribute to the assignment of its value.

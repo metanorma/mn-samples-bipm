@@ -1,0 +1,75 @@
+
+[[cls_6]]
+== Determining expanded uncertainty
+
+[[scls_6-1]]
+=== Introduction
+
+[[scls_6-1-1]]
+==== {blank}
+
+Recommendation INC-1 (1980) of the Working Group on the Statement of Uncertainties on which this_Guide_ is based (see the <<cls_0>>), and Recommendations 1 (CI-1981) and 1 (CI-1986) of the CIPM approving and reaffirming INC-1 (1980) (see <<scls_A-2>> and <<scls_A-3>>), advocate the use of the combined standard uncertainty stem:[u_{"c"}(y)] as the parameter for expressing quantitatively the uncertainty of the result of a measurement. Indeed, in the second of its recommendations, the CIPM has requested that what is now termed combined standard uncertainty stem:[u_{"c"}(y)] be used "by all participants in giving the results of all international comparisons or other work done under the auspices of the CIPM and Comités Consultatifs".
+
+
+[[scls_6-1-2]]
+==== {blank}
+
+Although stem:[u_{"c"}(y)] can be universally used to express the uncertainty of a measurement result, in some commercial, industrial, and regulatory applications, and when health and safety are concerned, it is often necessary to give a measure of uncertainty that defines an interval about the measurement result that may be expected to encompass a large fraction of the distribution of values that could reasonably be attributed to the measurand. The existence of this requirement was recognized by the Working Group and led to paragraph 5 of Recommendation INC-1 (1980). It is also reflected in Recommendation 1 (CI-1986) of the CIPM.
+
+
+[[scls_6-2]]
+=== Expanded uncertainty
+
+[[scls_6-2-1]]
+==== {blank}
+
+The additional measure of uncertainty that meets the requirement of providing an interval of the kind indicated in <<scls_6-1-2>> is termed _expanded uncertainty_ and is denoted by stem:[U]. The expanded uncertainty stem:[U] is obtained by multiplying the combined standard uncertainty stem:[u_{"c"}(y)] by a _coverage factor_ stem:[k]:
+
+[[eq_18]]
+[stem]
+++++
+U = k u_{"c"} (y)
+++++
+
+The result of a measurement is then conveniently expressed as stem:[Y = y pm U], which is interpreted to mean that the best estimate of the value attributable to the measurand stem:[Y] is stem:[y], and that stem:[y - U] to stem:[y + U] is an interval that may be expected to encompass a large fraction of the distribution of values that could reasonably be attributed to stem:[Y]. Such an interval is also expressed as stem:[y - U <= Y <= y + U].
+
+
+[[scls_6-2-2]]
+==== {blank}
+
+The terms *confidence interval* (<<scls_C-2-27>>, <<scls_C-2-28>>) and *confidence level* (<<scls_C-2-29>>) have specific definitions in statistics and are only applicable to the interval defined by stem:[U] when certain conditions are met, including that all components of uncertainty that contribute to stem:[u_{"c"}(y)] be obtained from Type A evaluations. Thus, in this _Guide_, the word "confidence" is not used to modify the word "interval" when referring to the interval defined by stem:[U]; and the term "confidence level" is not used in connection with that interval but rather the term "level of confidence". More specifically, stem:[U] is interpreted as defining an interval about the measurement result that encompasses a large fraction stem:[p] of the probability distribution characterized by that result and its combined standard uncertainty, and stem:[p] is the _coverage probability_ or _level of confidence_ of the interval.
+
+
+[[scls_6-2-3]]
+==== {blank}
+
+Whenever practicable, the level of confidence stem:[p] associated with the interval defined by stem:[U] should be estimated and stated. It should be recognized that multiplying stem:[u_{"c"}(y)] by a constant provides no new information but presents the previously available information in a different form. However, it should also be recognized that in most cases the level of confidence stem:[p] (especially for values of stem:[p] near 1) is rather uncertain, not only because of limited knowledge of the probability distribution characterized by stem:[y] and stem:[u_{"c"}(y)] (particularly in the
+extreme portions), but also because of the uncertainty of stem:[u_{"c"}(y)] itself (see <<note2_2-3-5>>, <<scls_6-3-2>>, <<scls_6-3-3>> and <<annexG>>, especially <<scls_G-6-6>>).
+
+NOTE: For preferred ways of stating the result of a measurement when the measure of uncertainty is stem:[u_{"c"}(y)] and when it is stem:[U], see <<scls_7-2-2>> and <<scls_7-2-4>>, respectively.
+
+
+[[scls_6-3]]
+=== Choosing a coverage factor
+
+[[scls_6-3-1]]
+==== {blank}
+
+The value of the coverage factor stem:[k] is chosen on the basis of the level of confidence required of the interval stem:[y - U] to stem:[y + U]. In general, stem:[k] will be in the range 2 to 3. However, for special applications stem:[k] may be outside this range. Extensive experience with and full knowledge of the uses to which a measurement result will be put can facilitate the selection of a proper value of stem:[k].
+
+[[note_6-3-1]]
+NOTE: Occasionally, one may find that a known correction stem:[b] for a systematic effect has not been applied to the reported result of a measurement, but instead an attempt is made to take the effect into account by enlarging the "uncertainty" assigned to the result. This should be avoided; only in very special circumstances should corrections for known significant systematic effects not be applied to the result of a measurement (see <<scls_F-2-4-5>> for a specific case and how to treat it). Evaluating the uncertainty of a measurement result should not be confused with assigning a safety limit to some quantity.
+
+
+[[scls_6-3-2]]
+==== {blank}
+
+Ideally, one would like to be able to choose a specific value of the coverage factor stem:[k] that would provide an interval stem:[Y = y pm U = y pm k u_{"c"}(y)] corresponding to a particular level of confidence stem:[p], such as 95 or 99 percent; equivalently, for a given value of stem:[k], one would like to be able to state unequivocally the level of confidence associated with that interval. However, this is not easy to do in practice because it requires extensive knowledge of the probability distribution characterized by the measurement result stem:[y] and its combined standard uncertainty stem:[u_{"c"}(y)]. Although these parameters are of critical importance, they are by themselves insufficient for the purpose of establishing intervals having exactly known levels of confidence.
+
+
+[[scls_6-3-3]]
+==== {blank}
+
+Recommendation INC-1 (1980) does not specify how the relation between stem:[k] and stem:[p] should be established. This problem is discussed in <<annexG>>, and a preferred method for its approximate solution is presented in <<scls_G-4>> and summarized in <<scls_G-6-4>>. However, a simpler approach, discussed in <<scls_G-6-6>>, is often adequate in measurement situations where the probability distribution characterized by stem:[y] and stem:[u_{"c"}(y)] is approximately normal and the effective degrees of freedom of stem:[u_{"c"}(y)] is of significant size. When this is the case, which frequently occurs in practice, one can assume that taking stem:[k = 2] produces an interval having a level of confidence of approximately 95 percent, and that taking stem:[k = 3] produces an interval having a level of confidence of approximately 99 percent.
+
+NOTE: A method for estimating the effective degrees of freedom of stem:[u_{"c"}(y)] is given in <<scls_G-4>>. <<table_G-2>> of <<annexG>> can then be used to help decide if this solution is appropriate for a particular measurement (see <<scls_G-6-6>>).

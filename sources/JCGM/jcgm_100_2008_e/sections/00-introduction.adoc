@@ -1,0 +1,66 @@
+
+[[cls_0]]
+== Introduction
+
+[[scls_0-1]]
+=== {blank}
+
+When reporting the result of a measurement of a physical quantity, it is obligatory that some quantitativeindication of the quality of the result be given so that those who use it can assess its reliability. Without such an indication, measurement results cannot be compared, either among themselves or with reference values given in a specification or standard. It is therefore necessary that there be a readily implemented, easily understood, and generally accepted procedure for characterizing the quality of a result of a measurement, that is, for evaluating and expressing its _uncertainty_.
+
+
+[[scls_0-2]]
+=== {blank}
+
+The concept of _uncertainty_ as a quantifiable attribute is relatively new in the history of measurement, although _error_ and _error analysis_ have long been a part of the practice of measurement science or metrology. It is now widely recognized that, when all of the known or suspected components of error have been evaluated and the appropriate corrections have been applied, there still remains an uncertainty about the correctness of the stated result, that is, a doubt about how well the result of the measurement represents the value of the quantity being measured.
+
+
+[[scls_0-3]]
+=== {blank}
+
+Just as the nearly universal use of the International System of Units (SI) has brought coherence to all scientific and technological measurements, a worldwide consensus on the evaluation and expression of uncertainty in measurement would permit the significance of a vast spectrum of measurement results in science, engineering, commerce, industry, and regulation to be readily understood and properly interpreted. In this era of the global marketplace, it is imperative that the method for evaluating and expressing uncertainty be uniform throughout the world so that measurements performed in different countries can be easily compared.
+
+
+[[scls_0-4]]
+=== {blank}
+
+The ideal method for evaluating and expressing the uncertainty of the result of a measurement shouldbe:
+
+* _universal_: the method should be applicable to all kinds of measurements and to all types of input dataused in measurements.
+
+The actual quantity used to express uncertainty should be:
+
+* _internally consistent_: it should be directly derivable from the components that contribute to it, as well asindependent of how these components are grouped and of the decomposition of the components into subcomponents;
+* _transferable_: it should be possible to use directly the uncertainty evaluated for one result as a componentin evaluating the uncertainty of another measurement in which the first result is used.
+
+Further, in many industrial and commercial applications, as well as in the areas of health and safety, it is often necessary to provide an interval about the measurement result that may be expected to encompass a large fraction of the distribution of values that could reasonably be attributed to the quantity subject to measurement. Thus the ideal method for evaluating and expressing uncertainty in measurement should be capable of readily providing such an interval, in particular, one with a coverage probability or level of confidence that corresponds in a realistic way with that required.
+
+
+[[scls_0-5]]
+=== {blank}
+
+The approach upon which this guidance document is based is that outlined in Recommendation INC-1 (1980) <<KAARLS1981>> of the Working Group on the Statement of Uncertainties, which was convened by the BIPM in response to a request of the CIPM (see <<foreword>>). This approach, the justification of which is discussed in <<annexE>>, meets all of the requirements outlined above. This is not the case for most other methods in current use. Recommendation INC-1 (1980) was approved and reaffirmed by the CIPM in its own Recommendations 1 (CI-1981) <<CIPM1982>> and 1 (CI-1986) <<CIPM1987>>; the English translations of these CIPM Recommendations are reproduced in <<annexA>> (see <<scls_A-2>> and <<scls_A-3>>, respectively). Because Recommendation INC-1 (1980) is the foundation upon which this document rests, the English translation is reproduced in <<scls_0-7>> and the French text, which is authoritative, is reproduced in <<scls_A-1>>.
+
+
+[[scls_0-6]]
+=== {blank}
+
+A succinct summary of the procedure specified in this guidance document for evaluating andex pressing uncertainty in measurement is given in <<cls_8>> and a number of examples are presented in detail in <<annexH>>. Other annexes deal with general terms in metrology (<<annexB>>); basic statistical terms and concepts (<<annexC>>); "true" value, error, and uncertainty (<<annexD>>); practical suggestions for evaluating uncertainty components (<<annexF>>); degrees of freedom and levels of confidence (<<annexG>>); the principal mathematical symbols used throughout the document (<<annexJ>>); and bibliographical references (<<bibliography>>). An <<alphabetical_index>> concludes the document.
+
+
+[[scls_0-7]]
+=== {blank}
+
+*Recommendation INC-1 (1980)* Expression of experimental uncertainties
+
+. The uncertainty in the result of a measurement generally consists of several components which may be grouped into two categories according to the way in which their numerical value is estimated:
+.. those which are evaluated by statistical methods,
+.. those which are evaluated by other means.
+
+There is not always a simple correspondence between the classification into categories A or B and the previously used classification into "random" and "systematic" uncertainties. The term "systematic uncertainty" can be misleading and should be avoided.
+
+Any detailed report of the uncertainty should consist of a complete list of the components, specifying for each the method used to obtain its numerical value.
+
+. The components in category A are characterized by the estimated variances stem:[s_i^2], (or the estimated "standard deviations" stem:[s_i]) and the number of degrees of freedom stem:[nu_i]. Where appropriate, the covariances should be given.
+. The components in category B should be characterized by quantities stem:[u_j^2], which may be considered as approximations to the corresponding variances, the existence of which is assumed. The quantities stem:[u_j^2] may be treated like variances and the quantities stem:[u_j] like standard deviations. Where appropriate,the covariances should be treated in a similar way.
+. The combined uncertainty should be characterized by the numerical value obtained by applying the usual method for the combination of variances. The combined uncertainty and its components should be expressed in the form of "standard deviations".
+. If, for particular applications, it is necessary to multiply the combined uncertainty by a factor to obtain an overall uncertainty, the multiplying factor used must always be stated.
