@@ -9,9 +9,6 @@ on:
     paths-ignore:
       - .gitlab-ci.yml
       - .github/workflows/test.yml
-      - .github/workflows/macos.yml
-      - .github/workflows/ubuntu.yml
-      - .github/workflows/windows.yml
       - .github/workflows/docker-pres_xml.yml
   repository_dispatch:
     types: [ metanorma/metanorma-docker ]
