@@ -50,7 +50,7 @@ All chambers are irradiated for at least thirty minutes, with the appropriate po
 
 The leakage current is normally measured before and after each set of measurements and a correction is applied, based on the mean value. A chamber for which the relative leakage current is high, and in particular for which the leakage is also variable, is unsuitable for use as a transfer instrument and might also be considered unsuitable for calibration. In the latter case, a study note is issued.
 
-The irradiation facilities at the BIPM are temperature controlled (close to 20 °C) at the level of around 100 mK. For air-kerma measurements in ^60^Co, an additional passive enclosure is used to ensure temperature stability below 50 mK. The BIPM reference conditions for air temperature, pressure and relative humidity are stem:[ii(T)_0 = 293.15" "rm(K)], stem:[ii(P)_0 = 101.325" "rm(kPa)] and 50 %, respectively. As the relative humidity is controlled within the range 40 % to 55 %, no humidity correction is applied.
+The irradiation facilities at the BIPM are temperature controlled (close to stem:[20 "unitsml(degC)"]) at the level of around stem:[100 "unitsml(mK)"]. For air-kerma measurements in ^60^Co, an additional passive enclosure is used to ensure temperature stability below stem:[50 "unitsml(mK)"]. The BIPM reference conditions for air temperature, pressure and relative humidity are stem:[ii(T)_0 = 293.15 "unitsml(K)"], stem:[ii(P)_0 = 101.325 "unitsml(kPa)"] and 50 %, respectively. As the relative humidity is controlled within the range 40 % to 55 %, no humidity correction is applied.
 
 _Calibration of national standards_: No correction is applied for lack of saturation; the air-kerma rate or absorbed-dose-to-water rate is stated in the certificate. For thimble chamber types calibrated in gamma radiation and in airkerma for medium-energy x-rays, the radial non-uniformity correction for the BIPM beams is small and is stated in the certificate, although no correction factor is applied. For waterproof thimble chamber types calibrated in terms of absorbed dose to water in medium-energy x-rays, the correction factor at the reference depth will be similar at both laboratories and again no correction factor is applied. In low-energy x-rays, chambers of larger dimensions may be calibrated and the radial uniformity of the beam shows more variation from one laboratory to another. For these reasons, the appropriate correction factor is always applied.
 
@@ -66,7 +66,7 @@ The primary standard, transfer chamber or national reference standard is operate
 ii(I) = ii(I)_("exp") (ii(T)/(ii(T)_0)) ((ii(P)_0)/ii(P))
 ++++
 
-where stem:[ii(I)_("exp")] is the ionization current measured at temperature stem:[ii(T)] (expressed in K) and pressure stem:[ii(P)] (expressed in kPa).
+where stem:[ii(I)_("exp")] is the ionization current measured at temperature stem:[ii(T)] (expressed in K) and pressure stem:[ii(P)] (expressed in stem:["unitsml(kPa)"]).
 
 For a transfer chamber or national reference standard, the calibration coefficient stem:[ii(N)_K] is defined by the relation
 
@@ -84,7 +84,7 @@ Details of the conditions of measurement at the BIPM and the uncertainties in th
 
 _^60^Co gamma radiation_
 
-When a primary standard is compared directly, the measuring conditions are stated clearly in the comparison report. For indirect comparisons and calibrations, the transfer chamber or national reference standard is placed in its waterproof sleeve (unless calibration of a waterproof chamber without a sleeve is requested) and positioned in the BIPM cubic water phantom of side length 30 cm. Its axis is placed in the reference plane, at the reference depth of 5 g cm^−2^ in water. This depth includes the window of the phantom (PMMA, 0.476 g cm^−2^) and is corrected for the change in water density with temperature. As well as correctly orienting the chamber, a reference mark on the sleeve (if used) is rotated so as to point towards the radiation source, unless a different orientation is indicated.
+When a primary standard is compared directly, the measuring conditions are stated clearly in the comparison report. For indirect comparisons and calibrations, the transfer chamber or national reference standard is placed in its waterproof sleeve (unless calibration of a waterproof chamber without a sleeve is requested) and positioned in the BIPM cubic water phantom of side length stem:[30 "unitsml(cm)"]. Its axis is placed in the reference plane, at the reference depth of stem:[5 "unitsml(g*cm^−2)"] in water. This depth includes the window of the phantom (PMMA, stem:[0.476 "unitsml(g*cm^−2)"]) and is corrected for the change in water density with temperature. As well as correctly orienting the chamber, a reference mark on the sleeve (if used) is rotated so as to point towards the radiation source, unless a different orientation is indicated.
 
 The calibration coefficient stem:[ii(N)_(ii(D),w)] is determined using the relation
 
@@ -96,15 +96,15 @@ ii(N)_(ii(D),w) = dot(ii(D))_w//(ii(I)_w k_("win"))
 
 where:
 
-stem:[dot(ii(D))_w]:: is the absorbed dose rate to water at the reference point, measured using the BIPM standard at a depth of 5 g cm^−2^ in water;
+stem:[dot(ii(D))_w]:: is the absorbed dose rate to water at the reference point, measured using the BIPM standard at a depth of stem:[5 "unitsml(g*cm^−2)"] in water;
 stem:[ii(I)_w]:: is the ionization current measured using the chamber under the BIPM reference conditions of air temperature, pressure and humidity;
 stem:[k_("win") = 0.9997]:: is a correction factor applied to stem:[ii(I)_w] for the non-equivalence with water of the PMMA window of the phantom (required because a similar factor is applied to the BIPM standard).
 
-The conditions of measurement at the BIPM are given in <<table7>>. The physical constants and correction factors used in the ionometric determination of the absorbed dose rate to water at 5 g cm^−2^ are given in <<table9>> along with their estimated relative uncertainties.
+The conditions of measurement at the BIPM are given in <<table7>>. The physical constants and correction factors used in the ionometric determination of the absorbed dose rate to water at stem:[5 "unitsml(g*cm^(−2))"] are given in <<table9>> along with their estimated relative uncertainties.
 
 _Medium-energy x-ray beams_
 
-Only waterproof thimble chamber types are accepted and are measured without a waterproof sleeve. For indirect comparisons and calibrations, the transfer chamber or national reference standard is positioned in the BIPM cubic water phantom of side length 20 cm. Its axis is placed in the reference plane, at the reference depth of 2 g cm^−2^ in water. This depth includes the window of the phantom (PMMA, 0.200 g cm^−2^). Because of the shallow depth, no correction is required for the change in water density with temperature.
+Only waterproof thimble chamber types are accepted and are measured without a waterproof sleeve. For indirect comparisons and calibrations, the transfer chamber or national reference standard is positioned in the BIPM cubic water phantom of side length stem:[20 "unitsml(cm)"]. Its axis is placed in the reference plane, at the reference depth of stem:[2 "unitsml(g*cm^−2)"] in water. This depth includes the window of the phantom (PMMA, stem:[0.200 "unitsml(g*cm^−2)"]). Because of the shallow depth, no correction is required for the change in water density with temperature.
 
 The calibration coefficient stem:[ii(N)_(ii(D),w)] is determined using the relation
 
@@ -116,7 +116,7 @@ ii(N)_(ii(D),w) = dot(ii(D))_w//ii(I)_w,
 
 where:
 
-stem:[dot(ii(D))_w]:: is the absorbed dose rate to water at the reference point at a depth of 2 g cm^−2^ in the water phantom, determined by the BIPM standard;
+stem:[dot(ii(D))_w]:: is the absorbed dose rate to water at the reference point at a depth of stem:[2 "unitsml(g*cm^−2)"] in the water phantom, determined by the BIPM standard;
 stem:[ii(I)_w]:: is the ionization current measured using the chamber under the BIPM reference conditions of air temperature, pressure and humidity.
 
 At the BIPM, the absorbed dose to water is derived from the air-kerma determination. The conditions of measurement are given in <<table4>>. The physical constants and correction factors used in the ionometric determination of air kerma and the factor for the conversion to absorbed dose to water are given in <<table5>> and their estimated relative uncertainties are given in <<table6>>.
@@ -147,61 +147,61 @@ The BIPM dosimetry measurements fulfil the criteria of Annex G.6.6 of JCGM (2008
 
 [[table1]]
 [cols="<,^,^"]
-.X-rays (10 kV to 50 kV)
+.X-rays (stem:[10 "unitsml(kV)"] to stem:[50 "unitsml(kV)"])
 |===
 | X-ray tube | W-anode | Mo-anode
-| Distance between beryllium window of x-ray tube and reference plane of standard | 50 cm | 60 cm
-| Beam diameter in reference plane | 8.4 cm | 10 cm
-| Beryllium filtration | stem:[~~] 3.0 mm | 0.8 mm
+| Distance between beryllium window of x-ray tube and reference plane of standard | stem:[50 "unitsml(cm)"] | stem:[60 "unitsml(cm)"]
+| Beam diameter in reference plane | stem:[8.4 "unitsml(cm)"] | stem:[10 "unitsml(cm)"]
+| Beryllium filtration | stem:[~~ 3.0 "unitsml(mm)"] | stem:[0.8 "unitsml(mm)"]
 |===
 
 [%unnumbered]
 [cols="<,^,^,^,^,^"]
 |===
 6+<h| Reference qualities W-anode x-ray tube footnote:[Recommended by Section I of the CCEMRI (1972, 1975).]
-| X-ray tube voltage / kV | 10 | 30 | 25 | 50 (b) | 50 (a) footnote:[The more heavily-filtered of the two 50 kV radiation qualities.]
-| Al filtration / mm | 0 | 0.208 | 0.372 | 1.008 | 3.989
-| Al half-value layer / mm | 0.037 | 0.169 | 0.242 | 1.017 | 2.262
-| stem:[bar(ii(mu))//ii(rho)] footnote:f2[Mass attenuation coefficient for air.] / stem:[rm(cm)^2rm(g)^(-1)] | 14.84 | 3.66 | 2.60 | 0.75 | 0.38
-| air-kerma rate / mGy s^−1^ | 1.00 | 1.00 | 1.00 | 1.00 | 1.00
+| X-ray tube voltage / stem:["unitsml(kV)"] | 10 | 30 | 25 | 50 (b) | 50 (a) footnote:[The more heavily-filtered of the two stem:[50 "unitsml(kV)"] radiation qualities.]
+| Al filtration / stem:["unitsml(mm)"] | 0 | 0.208 | 0.372 | 1.008 | 3.989
+| Al half-value layer / stem:["unitsml(mm)"] | 0.037 | 0.169 | 0.242 | 1.017 | 2.262
+| stem:[bar(ii(mu))//ii(rho)] footnote:f2[Mass attenuation coefficient for air.] / stem:["unitsml(cm^2*g^-1)"] | 14.84 | 3.66 | 2.60 | 0.75 | 0.38
+| air-kerma rate / stem:["unitsml(mGy*s^−1)"] | 1.00 | 1.00 | 1.00 | 1.00 | 1.00
 |===
 
 [%unnumbered]
 [cols="<,^,^,^,^"]
 |===
 5+<h| Reference qualities Mo-anode x-ray tube footnote:[Endorsed by the CCRI (2011).]
-| X-ray tube voltage / kV | 25 | 28 | 30 | 35
-| Mo filtration / stem:[ii(mu)]m | 30 | 30 | 30 | 30
-| Al half-value layer / mm | 0.277 | 0.310 | 0.329 | 0.365
-| stem:[bar(ii(mu))//ii(rho)] footnote:f2[] / stem:[rm(cm)^2 rm(g)^(-1)] | 2.20 | 1.99 | 1.91 | 1.74
-| air-kerma rate / mGy s^−1^ | 2.00 | 2.00 | 2.00 | 2.00
+| X-ray tube voltage / stem:["unitsml(kV)"] | 25 | 28 | 30 | 35
+| Mo filtration / stem:["unitsml(um)"] | 30 | 30 | 30 | 30
+| Al half-value layer / stem:["unitsml(mm)"] | 0.277 | 0.310 | 0.329 | 0.365
+| stem:[bar(ii(mu))//ii(rho)] footnote:f2[] / stem:["unitsml(cm^2*g^-1)"] | 2.20 | 1.99 | 1.91 | 1.74
+| air-kerma rate / stem:["unitsml(mGy*s^−1)"] | 2.00 | 2.00 | 2.00 | 2.00
 |===
 
 [%unnumbered]
 [cols="<,^,^,^,^,^,^,^"]
 |===
 8+<h| Reference qualities W-anode x-ray tube, Mo filter
-| X-ray tube voltage / kV | 23 | 25 | 28 | 30 | 35 | 40 | 50
-| Mo filtration / stem:[ii(mu)]m | 60 | 60 | 60 | 60 | 60 | 60 | 60
-| Al half-value layer / mm | 0.332 | 0.342 | 0.355 | 0.364 | 0.388 | 0.417 | 0.489
-| stem:[bar(ii(mu))//ii(rho)] footnote:f2[] / stem:[rm(cm)^2 rm(g)^(-1)] | 1.79 | 1.75 | 1.70 | 1.67 | 1.60 | 1.53 | 1.40
-| air-kerma rate / mGy s^−1^ | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00
+| X-ray tube voltage / stem:["unitsml(kV)"] | 23 | 25 | 28 | 30 | 35 | 40 | 50
+| Mo filtration / stem:["unitsml(um)"] | 60 | 60 | 60 | 60 | 60 | 60 | 60
+| Al half-value layer / stem:["unitsml(mm)"] | 0.332 | 0.342 | 0.355 | 0.364 | 0.388 | 0.417 | 0.489
+| stem:[bar(ii(mu))//ii(rho)] footnote:f2[] / stem:["unitsml(cm^2*g^-1)"] | 1.79 | 1.75 | 1.70 | 1.67 | 1.60 | 1.53 | 1.40
+| air-kerma rate / stem:["unitsml(mGy*s^−1)"] | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00
 |===
 
 [align=center]
 *Physical constants and correction factors used in the BIPM determination of the air-kerma rate* footnote:[Details on the determination of the air-kerma rate are given in Boutillon _et al_ (1969); correction factors are described by Burns (2004) and Burns _et al_ (2009) for the W-anode qualities and by Kessler et al (2010) for the Mo-anode qualities.]
 
-Dry air density stem:[(273.15" "rm(K)", "101.325" "rm(kPa)) = 1.2930" "rm(kg)" "rm(m)^(−3)]
+Dry air density stem:[(273.15 "unitsml(K)"", "101.325 "unitsml(kPa)") = 1.2930 "unitsml(kg*m^−3)"]
 
-stem:[ii(W)//e = 33.97" "rm(J)" "rm(C)^(−1)]
+stem:[ii(W)//e = 33.97 "unitsml(J*C^−1)"]
 
 [[table2]]
 [cols="^,<,^,^,^,^,^"]
-.X-rays (10 kV to 50 kV)
+.X-rays (stem:[10 "unitsml(kV)"] to stem:[50 "unitsml(kV)"])
 |===
 7+<h| W-anode x-ray tube
-7+<| Measuring volume FAC-L-01: 1.2004 cm^3^
-2+<| X-ray tube voltage / kV ^| 10 ^| 30 ^| 25 ^| 50 (b) ^| 50 (a)
+7+<| Measuring volume FAC-L-01: stem:[1.2004 "unitsml(cm^3)"]
+2+<| X-ray tube voltage / stem:["unitsml(kV)"] ^| 10 ^| 30 ^| 25 ^| 50 (b) ^| 50 (a)
 7+<| _Correction factors_
 | stem:[k_("sc")] | scattered radiation | 0.9962 | 0.9972 | 0.9973 | 0.9977 | 0.9979
 | stem:[k_("fl")] | fluorescence | 0.9952 | 0.9971 | 0.9969 | 0.9980 | 0.9985
@@ -210,7 +210,7 @@ stem:[ii(W)//e = 33.97" "rm(J)" "rm(C)^(−1)]
 | stem:[k_("w")] | energy dependence of stem:[ii(W)_("air")] footnote:f22[]
 | stem:[k_("s")] | saturation | 1.0006 | 1.0007 | 1.0007 | 1.0007 | 1.0007
 | stem:[k_("pol")] | polarity | 1.0005 | 1.0005 | 1.0005 | 1.0005 | 1.0005
-| stem:[k_("a")] | air attenuation footnote:f23[Values at 293.15 K and 101.325 kPa for an attenuation length of 10.0 cm.] | 1.1957 | 1.0451 | 1.0319 | 1.0091 | 1.0046
+| stem:[k_("a")] | air attenuation footnote:f23[Values at stem:[293.15 "unitsml(K)"] and stem:[101.325 "unitsml(kPa)"] for an attenuation length of stem:[10.0 "unitsml(cm)"].] | 1.1957 | 1.0451 | 1.0319 | 1.0091 | 1.0046
 | stem:[k_("d")] | field distortion | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000
 | stem:[k_("dia")] | diaphragm | 0.9999 | 0.9995 | 0.9996 | 0.9989 | 0.9984
 | stem:[k_("p")] | wall transmission | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000
@@ -222,8 +222,8 @@ stem:[ii(W)//e = 33.97" "rm(J)" "rm(C)^(−1)]
 [cols="^,<,^,^,^,^"]
 |===
 6+<h| Mo-anode x-ray tube
-6+<| Measuring volume FAC-L-02: 1.2197 cm^3^
-2+<| X-ray tube voltage / kV ^| 25 ^| 28 ^| 30 ^| 35
+6+<| Measuring volume FAC-L-02: stem:[1.2197 "unitsml(cm^3)"]
+2+<| X-ray tube voltage / stem:["unitsml(kV)"] ^| 25 ^| 28 ^| 30 ^| 35
 6+<| _Correction factors_
 | stem:[k_("sc")] | scattered radiation | 0.9977 | 0.9977 | 0.9978 | 0.9978
 | stem:[k_("fl")] | fluorescence | 0.9975 | 0.9976 | 0.9976 | 0.9977
@@ -244,8 +244,8 @@ stem:[ii(W)//e = 33.97" "rm(J)" "rm(C)^(−1)]
 [cols="^,<,^,^,^,^,^,^,^"]
 |===
 9+<h| W-anode x-ray tube, Mo filter
-9+<| Measuring volume FAC-L-01: 1.2004 cm^3^
-2+<| X-ray tube voltage / kV ^| 23 ^| 25 ^| 28 ^| 30 ^| 35 ^| 40 ^| 50
+9+<| Measuring volume FAC-L-01: stem:[1.2004 "unitsml(cm^3)"]
+2+<| X-ray tube voltage / stem:["unitsml(kV)"] ^| 23 ^| 25 ^| 28 ^| 30 ^| 35 ^| 40 ^| 50
 9+<| _Correction factors_
 | stem:[k_("sc")] | scattered radiation | 0.9974 | 0.9974 | 0.9974 | 0.9974 | 0.9974 | 0.9974 | 0.9975
 | stem:[k_("fl")] | Fluorescence | 0.9972 | 0.9972 | 0.9972 | 0.9972 | 0.9973 | 0.9973 | 0.9975
@@ -267,13 +267,13 @@ stem:[ii(W)//e = 33.97" "rm(J)" "rm(C)^(−1)]
 
 [[table3]]
 [cols="<,<,^,^"]
-.X-rays (10 kV to 50 kV)
+.X-rays (stem:[10 "unitsml(kV)"] to stem:[50 "unitsml(kV)"])
 |===
 .2+| Symbol .2+| Parameter / unit 2+a| stem:[10^2 xx] Relative standard uncertainty footnote:[stem:[s_i] represents the relative uncertainty estimated by statistical methods (Type A); stem:[u_i] represents the relative uncertainty estimated by other methods (Type B).]
 ^| stem:[s_("i")] ^| stem:[u_("i")]
 4+| _Physical constants_
-| stem:[ii(rho)_("a")] | dry air density (0°C, 101.325 kPa) / stem:[rm(kg)" "rm(m)^(−3)] | – | 0.01
-| stem:[ii(W)//e] | mean energy per charge / stem:[rm(J)" "rm(C)^(−1)] | – | 0.35 footnote:f32[Value adopted from January 2019 (Burns and Kessler 2018).]
+| stem:[ii(rho)_("a")] | dry air density (stem:[0 "unitsml(degC)"], stem:[101.325 "unitsml(kPa)"]) / stem:["unitsml(kg*m^-3)"] | – | 0.01
+| stem:[ii(W)//e] | mean energy per charge / stem:["unitsml(J*C^-1)"] | – | 0.35 footnote:f32[Value adopted from January 2019 (Burns and Kessler 2018).]
 | stem:[g] | fraction of energy lost in radiative processes in air | – | 0.01
 4+| _Correction factors_
 | stem:[k_("sc")] | scattered radiation | – | 0.03
@@ -299,43 +299,43 @@ stem:[ii(W)//e = 33.97" "rm(J)" "rm(C)^(−1)]
 [align=center]
 *Conditions of measurement at the BIPM*
 
-Distance between focal spot and reference plane of standard: 120 cm
+Distance between focal spot and reference plane of standard: stem:[120 "unitsml(cm)"]
 
-Beam diameter in the reference plane: 9.8 cm
+Beam diameter in the reference plane: stem:[9.8 "unitsml(cm)"]
 
-Inherent filtration: stem:[~~] 3 mm Be
+Inherent filtration: stem:[~~ 3 "unitsml(mm)"] Be
 
-Reference depth for absorbed dose measurement: 2 g cm^−2^
+Reference depth for absorbed dose measurement: stem:[2 "unitsml(g*cm^−2)"]
 
 [[table4]]
-.X-rays (100 kV to 250 kV)
+.X-rays (stem:[100 "unitsml(kV)"] to stem:[250 "unitsml(kV)"])
 [cols="<,^,^,^,^"]
 |===
 5+<h| Reference qualities footnote:[Recommended by Section I of the CCEMRI (1972).]
-| X-ray tube voltage / kV | 100 | 135 | 180 | 250
-| Al filtration / mm | 3.431 | 2.228 | 2.228 | 2.228
-| Cu filtration / mm | - | 0.232 | 0.485 | 1.570
-| Al half-value layer / mm | 4.030 | - | - | -
-| Cu half-value layer / mm | 0.149 | 0.489 | 0.977 | 2.484
-| stem:[bar(ii(mu))//ii(rho)] footnote:f2[] / stem:[rm(cm)^2 rm(g)^(-1)] | 0.290 | 0.190 | 0.162 | 0.137
-| air-kerma rate / mGy s^−1^ | 0.50 | 0.50 | 0.50 | 0.50
-| Absorbed-dose-to-water rate / mGy s^−1^ | 0.59 | 0.71 | 0.72 | 0.68
+| X-ray tube voltage / stem:["unitsml(kV)"] | 100 | 135 | 180 | 250
+| Al filtration / stem:["unitsml(mm)"] | 3.431 | 2.228 | 2.228 | 2.228
+| Cu filtration / stem:["unitsml(mm)"] | - | 0.232 | 0.485 | 1.570
+| Al half-value layer / stem:["unitsml(mm)"] | 4.030 | - | - | -
+| Cu half-value layer / stem:["unitsml(mm)"] | 0.149 | 0.489 | 0.977 | 2.484
+| stem:[bar(ii(mu))//ii(rho)] footnote:f2[] / stem:["unitsml(cm^2*g^-1)"] | 0.290 | 0.190 | 0.162 | 0.137
+| air-kerma rate / stem:["unitsml(mGy*s^−1)"] | 0.50 | 0.50 | 0.50 | 0.50
+| Absorbed-dose-to-water rate / stem:["unitsml(mGy*s^−1)"] | 0.59 | 0.71 | 0.72 | 0.68
 |===
 
 [align=center]
 *Physical constants and correction factors used in the BIPM determination of the air-kerma rate footnote:[Details on the determination of the air-kerma rate are described by Boutillon (1978) and the re-evaluation of the correction factors is described by Burns _et al_ (2009).] and absorbed-dose-to-water rate footnote:f52[Details on the determination of the absorbed-dose-to-water rate are described by Burns (2017).] and conversion factor from air kerma to absorbed dose to water*
 
-Dry air density stem:[(273.15" "rm(K)", "101.325" "rm(kPa)) = 1.2930" "rm(kg)" "rm(m)^(−3)]
+Dry air density stem:[(273.15 "unitsml(K)"", "101.325 "unitsml(kPa)") = 1.2930 "unitsml(kg*m^-3)"]
 
-stem:[ii(W)//e = 33.97" "rm(J)" "rm(C)^(−1)]
+stem:[ii(W)//e = 33.97 "unitsml(J*C^-1)"]
 
 [[table5]]
 [cols="^,<,^,^,^,^"]
-.X-rays (100 kV to 250 kV)
+.X-rays (stem:[100 "unitsml(kV)"] to stem:[250 "unitsml(kV)"])
 |===
 6+<h| W-anode x-ray tube
-6+<| Measuring volume FAC-M-01: 4.6554 cm^3^
-2+<| X-ray tube voltage / kV ^| 100 ^| 135 ^| 180 ^| 250
+6+<| Measuring volume FAC-M-01: stem:[4.6554 "unitsml(cm^3)"]
+2+<| X-ray tube voltage / stem:["unitsml(kV)"] ^| 100 ^| 135 ^| 180 ^| 250
 6+<| _Correction factors_
 | stem:[k_("sc")] | scattered radiation | 0.9952 | 0.9959 | 0.9964 | 0.9974
 | stem:[k_("fl")] | fluorescence | 0.9985 | 0.9992 | 0.9994 | 0.9999
@@ -344,7 +344,7 @@ stem:[ii(W)//e = 33.97" "rm(J)" "rm(C)^(−1)]
 | stem:[k_("w")] | energy dependence of stem:[ii(W)_("air")] footnote:f53[]
 | stem:[k_("s")] | saturation | 1.0010 | 1.0010 | 1.0010 | 1.0010
 | stem:[k_("pol")] | polarity | 1.0002 | 1.0002 | 1.0002 | 1.0002
-| stem:[k_("a")] | air attenuation footnote:[Values at 293.15 K and 101.325 kPa for an attenuation length of 28.15 cm.] | 1.0099 | 1.0065 | 1.0055 | 1.0047
+| stem:[k_("a")] | air attenuation footnote:[Values at stem:[293.15 "unitsml(K)"] and stem:[101.325 "unitsml(kPa)"] for an attenuation length of stem:[28.15 "unitsml(cm)"].] | 1.0099 | 1.0065 | 1.0055 | 1.0047
 | stem:[k_("d")] | field distortion | 1.0000 | 1.0000 | 1.0000 | 1.0000
 | stem:[k_("dia")] | diaphragm | 0.9995 | 0.9993 | 0.9991 | 0.9980
 | stem:[k_("p")] | wall transmission | 1.0000 | 1.0000 | 0.9999 | 0.9988
@@ -359,13 +359,13 @@ stem:[ii(W)//e = 33.97" "rm(J)" "rm(C)^(−1)]
 
 [[table6]]
 [cols="<,<,^,^"]
-.X-rays (100 kV to 250 kV)
+.X-rays (stem:[100 "unitsml(kV)"] to stem:[250 "unitsml(kV)"])
 |===
 .2+| Symbol .2+| Parameter / unit 2+| stem:[10^2 xx] Relative standard uncertainty footnote:[stem:[s_i] represents the relative uncertainty estimated by statistical methods (Type A); stem:[u_i] represents the relative uncertainty estimated by other methods (Type B).]
 ^| stem:[s_("i")] ^| stem:[u_("i")]
 4+| _Physical constants_
-| stem:[ii(rho)_("a")] | dry air density (0°C, 101.325 kPa) / stem:[rm(kg)" "rm(m)^(−3)] | – | 0.01
-| stem:[ii(W)//e] | mean energy per charge / stem:[rm(J)" "rm(C)^(−1)] | – | 0.35 footnote:f62[Value adopted from June 2017 for absorbed dose to water and from January 2019 for air kerma (Burns and Kessler 2018).]
+| stem:[ii(rho)_("a")] | dry air density (stem:[0 "unitsml(degC)"], stem:[101.325 "unitsml(kPa)"]) / stem:["unitsml(kg*m^-3)"] | – | 0.01
+| stem:[ii(W)//e] | mean energy per charge / stem:["unitsml(J*C^-1)"] | – | 0.35 footnote:f62[Value adopted from June 2017 for absorbed dose to water and from January 2019 for air kerma (Burns and Kessler 2018).]
 | stem:[g] | fraction of energy lost in radiative processes in air | – | 0.01
 4+| _Correction factors_
 | stem:[k_("sc")] | scattered radiation | – | 0.03
@@ -409,11 +409,11 @@ stem:[ii(W)//e = 33.97" "rm(J)" "rm(C)^(−1)]
 |===
 2+| Radiotherapy level
 2+| _Measurement of air kerma and absorbed dose to water_
-| Theratron source activity (2017-01-01) | stem:[~~] 65 TBq
-| source type: solid discs of 20 mm diameter |
-| distance from source centre to reference plane | 1 m
-| beam section in the reference plane footnote:[The photon fluence rate at the centre of each side of the 10 cm stem:[xx] 10 cm field is 50 % of the photon fluence rate at the centre of the square.] | 10 cm stem:[xx] 10 cm
-| reference depth for absorbed dose measurement | 5 g cm^−2^
+| Theratron source activity (2017-01-01) | stem:[~~ 65 "unitsml(TBq)"]
+| source type: solid discs of stem:[20 "unitsml(mm)"] diameter |
+| distance from source centre to reference plane | stem:[1 "unitsml(m)"]
+| beam section in the reference plane footnote:[The photon fluence rate at the centre of each side of the stem:[10 "unitsml(cm)" xx 10 "unitsml(cm)"] field is 50 % of the photon fluence rate at the centre of the square.] | stem:[10 "unitsml(cm)" xx 10 "unitsml(cm)"]
+| reference depth for absorbed dose measurement | stem:[5 "unitsml(g*cm^−2)"]
 |===
 
 [align=center]
@@ -426,10 +426,10 @@ stem:[ii(W)//e = 33.97" "rm(J)" "rm(C)^(−1)]
 .2+| Symbol .2+| Parameter / unit 2.2+| Value 2+| stem:[10^2 xx] Relative standard uncertainty footnote:[stem:[s_"i"] represents the relative uncertainty estimated by statistical methods (Type A); stem:[u_"i"] represents the relative uncertainty estimated by other methods (Type B).]
 ^| stem:[s_("i")] ^| stem:[u_("i")]
 6+| _Physical constants_
-| stem:[ii(rho)_("a")] | dry air density (0°C, 101.325 kPa) / stem:[rm(kg)" "rm(m)^(–3)] | 1.2930 | | – | 0.01
+| stem:[ii(rho)_("a")] | dry air density (stem:[0 "unitsml(degC)"], stem:[101.325 "unitsml(kPa)"]) / stem:["unitsml(kg*m^-3)"] | 1.2930 | | – | 0.01
 | stem:[(bar(ii(mu)_("en"))//ii(rho))_("a,c")] | ratio of mass energy-absorption coefficients | 0.9989 | | 0.01 | 0.04
 | stem:[s_("c,a")] | ratio of mass stopping powers | 0.9928 .2+| } | .2+| 0.08 footnote:[Uncertainty value for the product stem:[s_("c,a") ii(W)//e] adopted from January 2019 (Burns and Kessler 2018).]
-| stem:[ii(W)//e] | mean energy per charge / stem:[rm(J)" "rm(C)^(–1)] | 33.97 |
+| stem:[ii(W)//e] | mean energy per charge / stem:["unitsml(J*C^-1)"] | 33.97 |
 | stem:[g] | fraction of energy lost in radiative processes in air | 0.0031 | | – | 0.02
 6+| _Correction factors_
 | stem:[k_("g")] | re-absorption of radiative loss | 0.9996 | | – | 0.01
@@ -440,7 +440,7 @@ stem:[ii(W)//e = 33.97" "rm(J)" "rm(C)^(−1)]
 | stem:[k_("an")] | axial non-uniformity | 1.0020 |
 | stem:[k_("rn")] | radial non-uniformity | 1.0015 | | – | 0.02
 6+| _Measurement of_ stem:[ii(I)//ii(nu)]
-| stem:[ii(nu)] | effective volume / cm^3^ | 6.8855 footnote:[Standard CH6-1] | | – | 0.08 footnote:f84[]
+| stem:[ii(nu)] | effective volume / stem:["unitsml(cm^3)"] | 6.8855 footnote:[Standard CH6-1] | | – | 0.08 footnote:f84[]
 | stem:[ii(I)] | ionization current (stem:[ii(T)], stem:[ii(P)], air compressibility) | | – | – | 0.02
 | a| short-term reproducibility (including positioning and current measurement) footnote:[Over a period of 3 months. The long-term reproducibility over a period of 15 years, stem:[u_("rep")], is 0.0004.] | | – | 0.01 | –
 6+a| _Combined uncertainty of the BIPM determination of air-kerma rate at 1 m_
@@ -449,7 +449,7 @@ stem:[ii(W)//e = 33.97" "rm(J)" "rm(C)^(−1)]
 |===
 
 [align=center]
-*Physical constants and correction factors used in the BIPM ionometric determination of the absorbed-dose-to-water rate footnote:[Details on the determination of absorbed dose to water are described by Boutillon _et al_ (1993) and the re-evaluation of the standard is described by Burns and Kessler (2018).] at 5 g cm^−2^, and their estimated relative standard uncertainties*
+*Physical constants and correction factors used in the BIPM ionometric determination of the absorbed-dose-to-water rate footnote:[Details on the determination of absorbed dose to water are described by Boutillon _et al_ (1993) and the re-evaluation of the standard is described by Burns and Kessler (2018).] at stem:[5 "unitsml(g*cm^−2)], and their estimated relative standard uncertainties*
 
 [[table9]]
 [cols="<,<,^,^,^"]
@@ -459,9 +459,9 @@ stem:[ii(W)//e = 33.97" "rm(J)" "rm(C)^(−1)]
 ^| stem:[s_("i")] ^| stem:[u_("i")]
 
 5+| _Physical constants_
-| stem:[ii(rho)_"a"] | dry air density (0°C, 101.325 kPa) / stem:[rm(kg)" "rm(m)^(−3)] | 1.2930 | – | 0.01
+| stem:[ii(rho)_"a"] | dry air density (stem:[0 "unitsml(degC)", stem:[101.325 "unitsml(kPa)"]) / stem:["unitsml(kg*m^-3)"] | 1.2930 | – | 0.01
 | stem:[(ii(mu)_("en")//ii(rho))_("w,g")] a| ratio of mass energy-absorption coefficients | 1.1131 | – | 0.05
-| stem:[ii(W)//e] | mean energy per charge / stem:[rm(J)" "rm(C)^(−1)] | 33.97 | – | 0.08
+| stem:[ii(W)//e] | mean energy per charge / stem:["unitsml(J*C^-1)"] | 33.97 | – | 0.08
 | stem:[ii(D)_("g,air")=s_("g,air")k_("cav")] a| product of the ratio of mass stopping powers and cavity perturbation correction | 0.9958 | 0.02 | 0.13
 | stem:[ii(psi)_("w,g")] | fluence ratio | 1.0037 | 0.01 | 0.07
 | stem:[ii(beta)_("w,g")] a| absorbed-dose-to-collision-kerma ratio | 0.9998 | 0.01 | 0.01
@@ -472,7 +472,7 @@ stem:[ii(W)//e = 33.97" "rm(J)" "rm(C)^(−1)]
 | stem:[k_("s")] | saturation | 1.0021 | 0.01 | 0.02
 | stem:[k_("h")] | humidity | 0.9970 | – | 0.03
 5+| _Measurement of_ stem:[ii(I)//ii(nu)]
-| stem:[ii(nu)] | volume / cm^3^ | 6.7928 footnote:[Standard CH7-1.] | – | 0.08
+| stem:[ii(nu)] | volume / stem:["unitsml(cm^3)"] | 6.7928 footnote:[Standard CH7-1.] | – | 0.08
 | stem:[ii(I)] | ionization current (stem:[ii(T)], stem:[ii(P)], air compressibility) | – | – | 0.02
 | a| short-term reproducibility (including positioning and current measurement) footnote:[Over a period of 3 months. The long-term reproducibility over a period of 15 years, stem:[u_("rep")], is 0.0006.] | | 0.02 | –
 5+| _Combined uncertainty of the BIPM determination of absorbed-dose rate to water_
@@ -483,11 +483,11 @@ stem:[ii(W)//e = 33.97" "rm(J)" "rm(C)^(−1)]
 [bibliography]
 == References
 
-* [[[boutillon1,1]]], Boutillon M, Henry W H and Lamperti PJ 1969 Comparison of exposure standards in the 10-50 kV x-ray region https://www.iop.org/EJ/abstract/0026-1394/5/1/002/[_Metrologia_, *5*, 1-11].
+* [[[boutillon1,1]]], Boutillon M, Henry W H and Lamperti PJ 1969 Comparison of exposure standards in the stem:[10-50 "unitsml(kV)"] x-ray region https://www.iop.org/EJ/abstract/0026-1394/5/1/002/[_Metrologia_, *5*, 1-11].
 
 * [[[boutillon2,2]]], Boutillon M and Niatel M-T 1973 A study of a graphite chamber for absolute exposure measurement of ^60^Co gamma rays https://www.iop.org/EJ/abstract/0026-1394/9/4/001/[_Metrologia_, *9*, 139-146]
 
-* [[[boutillon3,3]]], Boutillon M 1978 Mesure de l'exposition au BIPM dans le domaine des rayons X de 100 à 250 kV https://www.bipm.org/utils/common/pdf/rapportBIPM/1978/03.pdf[_Rapport BIPM-78/3_].
+* [[[boutillon3,3]]], Boutillon M 1978 Mesure de l'exposition au BIPM dans le domaine des rayons X de stem:[100] à stem:[250 "unitsml(kV)"] https://www.bipm.org/utils/common/pdf/rapportBIPM/1978/03.pdf[_Rapport BIPM-78/3_].
 
 * [[[boutillon4,4]]], Boutillon M and Perroche A-M 1993 Determination of calibration factors in terms of air kerma and absorbed dose to water in the ^60^Co gamma rays SSDL Newsletter *32*.
 
