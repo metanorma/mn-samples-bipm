@@ -37,7 +37,7 @@
 
 .Abstract
 
-A comparison of the ozone reference standards of the Office of Environment and Heritage NSW (OEH) and of the Bureau International des Poids et Mesures (BIPM) has been performed. Both institutes maintain Standard Reference Photometers (SRPs), developed by the National Institute of Standards and Technology (NIST), as their reference standards. The instruments were compared over a nominal ozone amount-of-substance fraction range of 0 nmol/mol to 500 nmol/mol and the results showed good agreement.
+A comparison of the ozone reference standards of the Office of Environment and Heritage NSW (OEH) and of the Bureau International des Poids et Mesures (BIPM) has been performed. Both institutes maintain Standard Reference Photometers (SRPs), developed by the National Institute of Standards and Technology (NIST), as their reference standards. The instruments were compared over a nominal ozone amount-of-substance fraction range of stem:[0 "unitsml(nmol/mol)"] to stem:[500 "unitsml(nmol/mol)"] and the results showed good agreement.
 
 == Introduction
 
@@ -51,7 +51,7 @@ stem:[x_("A",i)]:: stem:[i]th measurement of the nominal value stem:[x_("nom")] 
 stem:[bar(x)_("A")]:: the mean of stem:[N] measurements of the nominal value stem:[x_("nom")] measured by the photometer A : stem:[bar(x)_("A") = 1/ii(N) sum_(i=1)^ii(N) x_("A",i)]
 stem:[s_("A")]:: standard deviation of stem:[ii(N)] measurements of the nominal value stem:[x_("nom")] measured by the photometer A : stem:[s_("A")^2 = 1/(ii(N)-1) sum_(i=1)^ii(N) (x_("A",i)-bar(x)_("A"))^2]
 
-* The result of the linear regression fit performed between two sets of data measured by the photometers A and B during a comparison is written: stem:[x_("A") = a_("A,B")x_("B") + b_("A,B")]. With this notation, the photometer A is compared against the photometer B. stem:[a_("A,B")] is dimensionless and stem:[b_("A,B")] is expressed in units of nmol/mol.
+* The result of the linear regression fit performed between two sets of data measured by the photometers A and B during a comparison is written: stem:[x_("A") = a_("A,B")x_("B") + b_("A,B")]. With this notation, the photometer A is compared against the photometer B. stem:[a_("A,B")] is dimensionless and stem:[b_("A,B")] is expressed in units of stem:["unitsml(nmol/mol)"].
 
 == Measurement schedule
 
@@ -69,7 +69,7 @@ This comparison was performed following protocol A, corresponding to a direct co
 
 === Ozone generation
 
-The same source of purified air is used for all the ozone photometers being compared. This air is used to provide reference air as well as the ozone-air mixture to each ozone photometer. Ambient air is used as the source for reference air. The air is compressed with an oil-free compressor, dried and scrubbed with a commercial purification system so that the amount-ofsubstance fraction of ozone and nitrogen oxides remaining in the air is below detectable limits. The relative humidity of the reference air is monitored and the amount-of-substance fraction of water in air is typically found to be less than 3 stem:[rm(mu) rm(mol)//rm(mol)]. The amount-of-substance fraction of volatile organic hydrocarbons in the reference air was measured (November 2002), with no amount-of-substance fraction of any detected component exceeding 1 nmol/mol.
+The same source of purified air is used for all the ozone photometers being compared. This air is used to provide reference air as well as the ozone-air mixture to each ozone photometer. Ambient air is used as the source for reference air. The air is compressed with an oil-free compressor, dried and scrubbed with a commercial purification system so that the amount-ofsubstance fraction of ozone and nitrogen oxides remaining in the air is below detectable limits. The relative humidity of the reference air is monitored and the amount-of-substance fraction of water in air is typically found to be less than stem:[3 "unitsml(umol/mol)"]. The amount-of-substance fraction of volatile organic hydrocarbons in the reference air was measured (November 2002), with no amount-of-substance fraction of any detected component exceeding stem:[1 "unitsml(nmol/mol)"].
 
 A common dual external manifold in Pyrex is used to furnish the necessary flows of reference air and ozone-air mixtures to the ozone photometers. The two columns of this manifold are vented to atmospheric pressure.
 
@@ -77,9 +77,9 @@ A common dual external manifold in Pyrex is used to furnish the necessary flows 
 
 Prior to the comparison, all the instruments were switched on and allowed to stabilize for at least 8 hours. The pressure and temperature measurement systems of the instruments were checked at this time. If any adjustments were required, these were noted. For this comparison, no adjustments were necessary.
 
-One comparison run includes 10 different amount-of-substance fractions distributed over the range, together with the measurement of reference air at the beginning and end of each run. The nominal amount-of-substance fractions were measured in a sequence imposed by the protocol (0, 220, 80, 420, 120, 320, 30, 370, 170, 500, 270, and 0) nmol/mol. Each of these points is an average of 10 single measurements.
+One comparison run includes 10 different amount-of-substance fractions distributed over the range, together with the measurement of reference air at the beginning and end of each run. The nominal amount-of-substance fractions were measured in a sequence imposed by the protocol (0, 220, 80, 420, 120, 320, 30, 370, 170, 500, 270, and 0) stem:["unitsml(nmol/mol)"]. Each of these points is an average of 10 single measurements.
 
-For each nominal value of the ozone amount-of-substance fraction stem:[x_("nom")] furnished by the ozone generator, the standard deviation stem:[s_("SRP27")] of the set of 10 consecutive measurements stem:[x_("SRP27",i)] recorded by BIPM-SRP27 was calculated. The measurement results were considered valid if stem:[s_("SRP27")] was less than 1 nmol/mol, which ensures that the photometers were measuring a stable ozone concentration. If not, another series of 10 consecutive measurements was performed.
+For each nominal value of the ozone amount-of-substance fraction stem:[x_("nom")] furnished by the ozone generator, the standard deviation stem:[s_("SRP27")] of the set of 10 consecutive measurements stem:[x_("SRP27",i)] recorded by BIPM-SRP27 was calculated. The measurement results were considered valid if stem:[s_("SRP27")] was less than stem:[1 "unitsml(nmol/mol)"], which ensures that the photometers were measuring a stable ozone concentration. If not, another series of 10 consecutive measurements was performed.
 
 === Comparison repeatability
 
@@ -104,7 +104,7 @@ The instruments maintained by the BIPM and the OEH are Standard Reference Photom
 
 === Measurement equation of a NIST SRP
 
-The measurement of the ozone amount-of-substance fraction by an SRP is based on the absorption of radiation at 253.7 nm by ozonized air in the gas cells of the instrument. One particular feature of the instrument design is the use of two gas cells to overcome the instability of the light source. The measurement equation is derived from the Beer-Lambert and ideal gas laws. The number concentration (stem:[ii(C)]) of ozone is calculated from:
+The measurement of the ozone amount-of-substance fraction by an SRP is based on the absorption of radiation at stem:[253.7 "unitsml(nm)"] by ozonized air in the gas cells of the instrument. One particular feature of the instrument design is the use of two gas cells to overcome the instability of the light source. The measurement equation is derived from the Beer-Lambert and ideal gas laws. The number concentration (stem:[ii(C)]) of ozone is calculated from:
 
 [[eq1]]
 [stem]
@@ -114,12 +114,12 @@ ii(C) = (-1)/(2 ii(sigma) ii(L)_("opt")) (ii(T))/(ii(T)_("std")) (ii(P)_("std"))
 
 where
 
-stem:[sigma]:: is the absorption cross-section of ozone at stem:[253.7" "rm(nm)] under standard conditions of temperature and pressure, stem:[1.1476 xx 10^(−17)" "rm(cm)^2//"molecule"] <<iso13964>>;
+stem:[sigma]:: is the absorption cross-section of ozone at stem:[253.7 "unitsml(nm)"] under standard conditions of temperature and pressure, stem:[1.1476 xx 10^(−17) "unitsml(cm^2)"//"molecule"] <<iso13964>>;
 stem:[ii(L)_("opt")]:: is the mean optical path length of the two cells;
 stem:[ii(T)]:: is the measured temperature of the cells;
-stem:[ii(T)_("std")]:: is the standard temperature (stem:[273.15" "rm(K)]);
+stem:[ii(T)_("std")]:: is the standard temperature (stem:[273.15 "unitsml(K)"]);
 stem:[ii(P)]:: is the measured pressure of the cells;
-stem:[ii(P)_("std")]:: is the standard pressure (stem:[101.325" "rm(kPa)]);
+stem:[ii(P)_("std")]:: is the standard pressure (stem:[101.325 "unitsml(kPa)"]);
 stem:[ii(D)]:: is the product of transmittances of two cells, with the transmittance (stem:[ii(T)_r]) of one cell defined as
 
 [[eq2]]
@@ -143,8 +143,8 @@ x = (-1)/(2 ii(sigma) ii(L)_("opt")) ii(T)/ii(P) ii(R)/(ii(N)_"A") "ln"(ii(D))
 
 where
 
-stem:[ii(N)_"A"]:: is the Avogadro constant, stem:[6.022142 xx 10^(23)" "rm(mol)^(−1)], and
-stem:[ii(R)]:: is the gas constant, stem:[8.314472" "rm(J)" "rm(mol)^(−1)" "rm(K)^(−1)].
+stem:[ii(N)_"A"]:: is the Avogadro constant, stem:[6.022142 xx 10^(23) "unitsml(mol^-1)"], and
+stem:[ii(R)]:: is the gas constant, stem:[8.314472 "unitsml(J*mol^-1*K^−1)"].
 
 The formulation implemented in the SRP software is:
 
@@ -156,7 +156,7 @@ x = (-1)/(2 ii(alpha)_"x" L_("opt")) ii(T)/(ii(T)_("std")) (ii(P)_("std"))/ii(P)
 
 where
 
-stem:[ii(alpha)_"x"]:: is the linear absorption coefficient under standard conditions, expressed in cm^−1^, linked to the absorption cross–section with the relation:
+stem:[ii(alpha)_"x"]:: is the linear absorption coefficient under standard conditions, expressed in stem:["unitsml(cm^−1)"], linked to the absorption cross–section with the relation:
 
 [[eq5]]
 [stem]
@@ -166,7 +166,7 @@ ii(alpha)_"x" = ii(sigma) (ii(N)_"A")/ii(R) (ii(P)_("std"))/(ii(T)_("std"))
 
 === Absorption cross-section for ozone
 
-The linear absorption coefficient under standard conditions x used within the SRP software algorithm is stem:[308.32" "rm(cm)^(–1)]. This corresponds to a value for the absorption cross section stem:[ii(sigma)] of stem:[1.1476 xx 10^(–17)" "rm(cm)^2"/molecule"], rather than the more often quoted stem:[1.147 xx 10^(–17)" "rm(cm)^2"/molecule"]. In the comparison of two SRP instruments, the absorption cross-section can be considered to have a conventional value and its uncertainty can be set to zero. However, in the comparison of different methods or when considering the complete uncertainty budget of the method, the uncertainty of the absorption cross-section should be taken into account. A consensus value of 2.12 % at a 95 % level of confidence for the uncertainty of the absorption cross-section has been proposed by the BIPM and the NIST in a recent publication <<viallon3>>.
+The linear absorption coefficient under standard conditions x used within the SRP software algorithm is stem:[308.32 "unitsml(cm^-1)"]. This corresponds to a value for the absorption cross section stem:[ii(sigma)] of stem:[1.1476 xx 10^(–17) "unitsml(cm^2)""/molecule"], rather than the more often quoted stem:[1.147 xx 10^(–17) "unitsml(cm^2)""/molecule"]. In the comparison of two SRP instruments, the absorption cross-section can be considered to have a conventional value and its uncertainty can be set to zero. However, in the comparison of different methods or when considering the complete uncertainty budget of the method, the uncertainty of the absorption cross-section should be taken into account. A consensus value of 2.12 % at a 95 % level of confidence for the uncertainty of the absorption cross-section has been proposed by the BIPM and the NIST in a recent publication <<viallon3>>.
 
 === Condition of the BIPM SRPs
 
@@ -174,32 +174,32 @@ Compared to the original design described in <<paur>>, SRP27 and SRP28 have been
 
 === Uncertainty budget of the common reference BIPM-SRP27
 
-The uncertainty budget for the ozone amount-of-substance fraction in dry air (stem:[x]) measured by the instruments BIPM-SRP27 and BIPM-SRP28 in the nominal range 0 nmol/mol to stem:[500" "rm(nmol)//rm(mol)] is given in <<table1>>.
+The uncertainty budget for the ozone amount-of-substance fraction in dry air (stem:[x]) measured by the instruments BIPM-SRP27 and BIPM-SRP28 in the nominal range stem:[0 "unitsml(nmol/mol)"] to stem:[500 "unitsml(nmol/mol)"] is given in <<table1>>.
 
 [[table1]]
 [cols="<,<,<,<,<,^,^"]
 .Uncertainty budget for the SRPs maintained by the BIPM
 |===
-.2+^h| Component (stem:[y]) 4+^h| Uncertainty stem:[u(y)] .2+^h| Sensitivity coefficient stem:[c_i= (delx)/(dely)] .2+^h| contribution to stem:[u(x)] stem:[abs(c_i)*u(y)] nmol/mol
+.2+^h| Component (stem:[y]) 4+^h| Uncertainty stem:[u(y)] .2+^h| Sensitivity coefficient stem:[c_i= (delx)/(dely)] .2+^h| contribution to stem:[u(x)] stem:[abs(c_i)*u(y)] stem:["unitsml(nmol/mol)"]
 ^h| Source ^h| Distribution ^h| Standard Uncertainty ^h| Combined standard uncertainty stem:[u(y)]
 
-.3+h| Optical Path stem:[ii(L)_("opt")] | Measurement scale | Rectangular | 0.0006 cm .3+<.^| 0.52 cm .3+^.^| stem:[-x/(ii(L)_("opt"))] .3+^.^| stem:[2.89 xx 10^(−3)x]
-| Repeatability | Normal | 0.01 cm
-| Correction factor | Rectangular | 0.52 cm
+.3+h| Optical Path stem:[ii(L)_("opt")] | Measurement scale | Rectangular | stem:[0.0006 "unitsml(cm)"] .3+<.^| stem:[0.52 "unitsml(cm)"] .3+^.^| stem:[-x/(ii(L)_("opt"))] .3+^.^| stem:[2.89 xx 10^(−3)x]
+| Repeatability | Normal | stem:[0.01 "unitsml(cm)"]
+| Correction factor | Rectangular | stem:[0.52 "unitsml(cm)"]
 
-.2+h| Pressure stem:[ii(P)] | Pressure gauge | Rectangular | 0.029 kPa .2+.^| 0.034 kPa .2+^.^| stem:[−x/ii(P)] .2+^.^| stem:[3.37 xx 10^(−4)x]
-| Difference between cells | Rectangular | 0.017 kPa
+.2+h| Pressure stem:[ii(P)] | Pressure gauge | Rectangular | stem:[0.029 "unitsml(kPa)"] .2+.^| stem:[0.034 "unitsml(kPa)"] .2+^.^| stem:[−x/ii(P)] .2+^.^| stem:[3.37 xx 10^(−4)x]
+| Difference between cells | Rectangular | stem:[0.017 "unitsml(kPa)"]
 
-.2+h| Temperature stem:[ii(T)] | Temperature probe | Rectangular | 0.03 K .2+.^| 0.07 K .2+^.^| stem:[x/ii(T)] .2+^.^| stem:[2.29 xx 10^(−4)x]
-| Temperature gradient | Rectangular | 0.058 K
+.2+h| Temperature stem:[ii(T)] | Temperature probe | Rectangular | stem:[0.03 "unitsml(K)"] .2+.^| stem:[0.07 "unitsml(K)"] .2+^.^| stem:[x/ii(T)] .2+^.^| stem:[2.29 xx 10^(−4)x]
+| Temperature gradient | Rectangular | stem:[0.058 "unitsml(K)"]
 
 .2+h| Ratio of intensities stem:[ii(D)] | Scaler resolution | Rectangular | stem:[8 xx 10^(−6)] .2+.^| stem:[1.4 xx 10^(−5)] .2+^.^| stem:[x/(ii(D)"ln"(ii(D)))] .2+^.^| 0.28
 | Repeatability | Triangular | stem:[1.1 xx 10^(−5)]
 
-h| Absorption Cross section stem:[ii(sigma)] | Hearn value | a| stem:[1.22 xx 10^(−19)] cm^2^/molecule a| stem:[1.22 xx 10^(−19)] cm^2^/molecule ^.^| stem:[-x/ii(alpha)] ^.^| stem:[1.06 xx 10^(−2)x]
+h| Absorption Cross section stem:[ii(sigma)] | Hearn value | a| stem:[1.22 xx 10^(−19)] stem:["unitsml(cm^2)"//"molecule"] a| stem:[1.22 xx 10^(−19)] stem:["unitsml(cm^2)"//"molecule"] ^.^| stem:[-x/ii(alpha)] ^.^| stem:[1.06 xx 10^(−2)x]
 |===
 
-As explained in the protocol of the comparison, following this budget the standard uncertainty associated with the ozone amount-of-substance fraction measurement with the BIPM SRPs can be expressed as a numerical equation (numerical values expressed as nmol/mol):
+As explained in the protocol of the comparison, following this budget the standard uncertainty associated with the ozone amount-of-substance fraction measurement with the BIPM SRPs can be expressed as a numerical equation (numerical values expressed as stem:["unitsml(nmol/mol)"]):
 
 [[eq6]]
 [stem]
@@ -231,13 +231,13 @@ The value of stem:[u_"b"] is given by the expression of the measurement uncertai
 
 Compared to the original design, the OEH SRP21 has been modified to deal with the two biases revealed in <<viallon3>>. In August 2006, an "SRP upgrade kit" was installed by NIST at the NIST laboratories.
 
-Following the replacement of the two gas cells performed in April 2015 at the BIPM, the length of the optical cell changed from 89.92 to 89.58 cm, when calculated as an average of the two cells. This new average value was provided by NIST. The new optical cell would change the input optical path length parameters whilst affecting its uncertainty evaluation.
+Following the replacement of the two gas cells performed in April 2015 at the BIPM, the length of the optical cell changed from stem:[89.92] to stem:[89.58 "unitsml(cm)"], when calculated as an average of the two cells. This new average value was provided by NIST. The new optical cell would change the input optical path length parameters whilst affecting its uncertainty evaluation.
 
 === Uncertainty budget of the SRP21
 
-The uncertainty budget for the ozone amount-of-substance fraction in dry air stem:[x] measured by the OEH standard SRP21 in the nominal range 0 nmol/mol to 500 nmol/mol is given in <<table2>>.
+The uncertainty budget for the ozone amount-of-substance fraction in dry air stem:[x] measured by the OEH standard SRP21 in the nominal range stem:[0 "unitsml(nmol/mol)"] to stem:[500 "unitsml(nmol/mol)"] is given in <<table2>>.
 
-Following this budget, the standard uncertainty associated with the ozone amount-ofsubstance fraction measurement with the SRP21 can be expressed as a numerical equation (numerical values expressed as nmol/mol):
+Following this budget, the standard uncertainty associated with the ozone amount-ofsubstance fraction measurement with the SRP21 can be expressed as a numerical equation (numerical values expressed as stem:["unitsml(nmol/mol)"]):
 
 [[eq9]]
 [stem]
@@ -251,21 +251,21 @@ No covariance term for the SRP21 was included in the calculations.
 [cols="<,^,<,^,^,^,^,<"]
 .Uncertainty budget for the SRP21
 |===
-h| Component h| Value h| Source h| Distribution h| Standard Uncertainty h| Combined Standard Uncertainty h| Sensitivity Coefficient h| Contribution to stem:[u(x)] / nmol/mol
+h| Component h| Value h| Source h| Distribution h| Standard Uncertainty h| Combined Standard Uncertainty h| Sensitivity Coefficient h| Contribution to stem:[u(x)] / stem:["unitsml(nmol/mol)"]
 
-h| Optical Path (stem:[ii(L)]) | 89.58 cm | Measurement | Rect | 0.520 cm | 0.520 cm | stem:[-x/ii(L)] | stem:[2.90 xx 10^(–3)x]
+h| Optical Path (stem:[ii(L)]) | stem:[89.58 "unitsml(cm)"] | Measurement | Rect | stem:[0.520 "unitsml(cm)"] | stem:[0.520 "unitsml(cm)"] | stem:[-x/ii(L)] | stem:[2.90 xx 10^(–3)x]
 
-.2+h| Pressure (stem:[ii(P)]) .2+.^| 101.325 kPa | Gauge | Rect | 0.077 kPa .2+.^| 0.086 kPa .2+^.^| stem:[-x/ii(P)] .2+.^| stem:[8.5 xx 10^(–3)x]
-| Difference | Rect | 0.038 kPa
+.2+h| Pressure (stem:[ii(P)]) .2+.^| stem:[101.325 "unitsml(kPa)"] | Gauge | Rect | stem:[0.077 "unitsml(kPa)"] .2+.^| stem:[0.086 "unitsml(kPa)"] .2+^.^| stem:[-x/ii(P)] .2+.^| stem:[8.5 xx 10^(–3)x]
+| Difference | Rect | stem:[0.038 "unitsml(kPa)"]
 
-.2+h| Temperature (stem:[ii(T)]) .2+.^| 273.15 °K | Probe | Rect | 0.115 K .2+.^| 0.129 K .2+^.^| stem:[x/ii(T)] .2+.^| stem:[4.7 xx 10^(–3)x]
-| Gradient | Rect | 0.058 K
+.2+h| Temperature (stem:[ii(T)]) .2+.^| stem:[273.15 "unitsml(degK)"] | Probe | Rect | stem:[0.115 "unitsml(K)] .2+.^| stem:[0.129 "unitsml(K)"] .2+^.^| stem:[x/ii(T)] .2+.^| stem:[4.7 xx 10^(–3)x]
+| Gradient | Rect | stem:[0.058 "unitsml(K)"]
 
-h| Repeatability | a| Repeat Measurements | Rect a| 0.095 nmol/mol a| 0.095 nmol/mol | 1 | 0.095
+h| Repeatability | a| Repeat Measurements | Rect a| stem:[0.095 "unitsml(nmol/mol)"] a| stem:[0.095 "unitsml(nmol/mol)"] | 1 | 0.095
 
-h| Resolution | | | Rect a| 0.500 nmol/mol a| 0.500 nmol/mol | 1 | 0.500
+h| Resolution | | | Rect a| stem:[0.500 "unitsml(nmol/mol)"] a| stem:[0.500 "unitsml(nmol/mol)"] | 1 | 0.500
 
-h| Absorption Cross Section (stem:[ii(alpha)]) | 308.32 cm^–1^ | Conventional Value | Rect | 1.732 cm^–1^ | 1.732 cm^–1^ | stem:[x/(ii(alpha))] | stem:[1.06 xx 10^(–2)x]
+h| Absorption Cross Section (stem:[ii(alpha)]) | stem:[308.32 "unitsml(cm^(–1))"] | Conventional Value | Rect | stem:[1.732 "unitsml(cm^(–1))] | stem:[1.732 "unitsml(cm^(–1))] | stem:[x/(ii(alpha))] | stem:[1.06 xx 10^(–2)x]
 |===
 
 [[results_uncertainties]]
@@ -276,7 +276,7 @@ Details of the measurement results, the measurement uncertainties and the standa
 [[differences]]
 == Differences from the reference values
 
-For the key comparison BIPM.QM-K1, differences from the reference values were calculated at the twelve nominal ozone amount-of-substance fractions measured, but are only shown in this report at two particular values: 80 nmol/mol and 420 nmol/mol. These values correspond to points 3 and 4 recorded in each comparison. The ozone amount-of-substance fractions measured by the ozone standards can differ from the nominal values because an ozone generator has limited reproducibility. However, as stated in the protocol, the value measured by the common reference SRP27 was expected to be within stem:[+-] 15 nmol/mol of the nominal value. Hence, it is meaningful to compare the degree of equivalence calculated for all the participants at the same nominal value.
+For the key comparison BIPM.QM-K1, differences from the reference values were calculated at the twelve nominal ozone amount-of-substance fractions measured, but are only shown in this report at two particular values: stem:[80 "unitsml(nmol/mol)"] and stem:[420 "unitsml(nmol/mol)"]. These values correspond to points 3 and 4 recorded in each comparison. The ozone amount-of-substance fractions measured by the ozone standards can differ from the nominal values because an ozone generator has limited reproducibility. However, as stated in the protocol, the value measured by the common reference SRP27 was expected to be within stem:[+- 15 "unitsml(nmol/mol)"] of the nominal value. Hence, it is meaningful to compare the degree of equivalence calculated for all the participants at the same nominal value.
 
 === Definition
 
@@ -306,15 +306,15 @@ The differences from the reference values and their uncertainties calculated in 
 
 [[table3]]
 [cols=">,>,>,>,>,>,>,>"]
-.Differences from the reference values of the OEH at the nominal ozone amount-of-substance fractions 80 nmol/mol and 420 nmol/mol
+.Differences from the reference values of the OEH at the nominal ozone amount-of-substance fractions stem:[80 "unitsml(nmol/mol)"] and stem:[420 "unitsml(nmol/mol)"]
 |===
-^h| Nom value ^h| stem:[x_i] / (nmol/mol) ^h| stem:[u_i] / (nmol/mol) ^h| stem:[x_("SRP27")] / (nmol/mol) ^h| stem:[u_("SRP27")] / (nmol/mol) ^h| stem:[ii(D)_i] / (nmol/mol) ^h| stem:[u(Di)] / (nmol/mol) ^h| stem:[U(Di)] / (nmol/mol)
+^h| Nom value ^h| stem:[x_i] / stem:["unitsml(nmol/mol)"] ^h| stem:[u_i] / stem:["unitsml(nmol/mol)"] ^h| stem:[x_("SRP27")] / stem:["unitsml(nmol/mol)"] ^h| stem:[u_("SRP27")] / stem:["unitsml(nmol/mol)"] ^h| stem:[ii(D)_i] / stem:["unitsml(nmol/mol)"] ^h| stem:[u(Di)] / stem:["unitsml(nmol/mol)"] ^h| stem:[U(Di)] / stem:["unitsml(nmol/mol)"]
 h| 80 | 80.75 | 0.57 | 80.72 | 0.37 | 0.03 | 0.67 | 1.35
 h| 420 | 423.87 | 1.39 | 423.23 | 1.27 | 0.64 | 1.88 | 3.77
 |===
 
 [[fig1]]
-.Graphs of equivalence of the OEH at the two nominal ozone amount-of-substance fractions 80 nmol/mol and 420 nmol/mol
+.Graphs of equivalence of the OEH at the two nominal ozone amount-of-substance fractions stem:[80 "unitsml(nmol/mol)"] and stem:[420 "unitsml(nmol/mol)"]
 image::img01.png[]
 
 The differences between the OEH standard and the common reference standard BIPM SRP27
@@ -345,7 +345,7 @@ The relationship between SRP21 and SRP27 is:
 x_("SRP21") = -0.12+1.0022*x_("SRP27")
 ++++
 
-The standard uncertainties on the parameters of the regression are stem:[u(a_1) = 0.0034] for the slope and stem:[u(a_0) = 0.31" "rm(nmol)//rm(mol)] for the intercept. The covariance between the two parameters is stem:[cov(a_0, a_1) = -3.73 xx 10^(–4)" "rm(nmol)//rm(mol)].
+The standard uncertainties on the parameters of the regression are stem:[u(a_1) = 0.0034] for the slope and stem:[u(a_0) = 0.31 "unitsml(nmol/mol)"] for the intercept. The covariance between the two parameters is stem:[cov(a_0, a_1) = -3.73 xx 10^(–4) "unitsml(nmol/mol)"].
 
 The least-square regression statistical parameters confirm the appropriate choice of a linear relation, with a sum of the squared deviations (SSD) of 0.12 and a goodness of fit (GoF) equal to 0.14.
 
@@ -362,7 +362,7 @@ image::img02.png[]
 
 == Conclusion
 
-A comparison was performed between the ozone reference standards of the OEH and of the BIPM. The instruments were compared over a nominal ozone amount-of-substance fraction range of 0 nmol/mol to 500 nmol/mol. Results of this comparison indicated good agreement between both standards.
+A comparison was performed between the ozone reference standards of the OEH and of the BIPM. The instruments were compared over a nominal ozone amount-of-substance fraction range of stem:[0 "unitsml(nmol/mol)"] to stem:[500 "unitsml(nmol/mol)"]. Results of this comparison indicated good agreement between both standards.
 
 [bibliography]
 == References
@@ -441,16 +441,16 @@ Equation:: stem:[x_("NS")=a_("NS","RS")x_("RS") + b_("NS","RS")]
 [cols="^,^,^,^,^"]
 .Least-square regression parameters
 |===
-| stem:[a_("TS,RS")] | stem:[u(a_("TS,RS"))] | stem:[b_("TS,RS")] (nmol/mol) | stem:[u(b_("TS,RS"))] (nmol/mol) | stem:[u(a,b)]
+| stem:[a_("TS,RS")] | stem:[u(a_("TS,RS"))] | stem:[b_("TS,RS")] stem:["unitsml(nmol/mol)"] | stem:[u(b_("TS,RS"))] stem:["unitsml(nmol/mol)"] | stem:[u(a,b)]
 | 1.0022 | 0.0034 | -0.12 | 0.31 | -3.73E-04
 |===
 
 NOTE: Least-square regression parameters will be computed by the BIPM using the sofwtare OzonE v2.0
 
 [cols="^,^,^,^"]
-.Difference from the reference value at 80 nmol/mol and 420 nmol/mol:
+.Difference from the reference value at stem:[80 "unitsml(nmol/mol)"] and stem:[420 "unitsml(nmol/mol)"]:
 |===
-| Nom value (nmol/mol) | stem:[ii(D)_i] (nmol/mol) | stem:[u(ii(D)_i)] (nmol/mol) | stem:[ii(U)(ii(D)_i)] (nmol/mol)
+| Nom value stem:["unitsml(nmol/mol)"] | stem:[ii(D)_i] stem:["unitsml(nmol/mol)"] | stem:[u(ii(D)_i)] stem:["unitsml(nmol/mol)"] | stem:[ii(U)(ii(D)_i)] stem:["unitsml(nmol/mol)"]
 | 80 | 0.03 | 0.67 | 1.35
 | 420 | 0.64 | 1.88 | 3.77
 |===
@@ -466,7 +466,7 @@ image::img03.png[]
 |===
 7+h| Measurement results
 | 3+h| Reference Standard (RS) 3+h| National standard (NS) 
-h| Nominal value h| stem:[x_("RS")] nmol/mol h| stem:[s_("RS")] nmol/mol h| stem:[u(x_("RS"))] nmol/mol h| stem:[x_("NS")] nmol/mol h| stem:[s_("NS")] nmol/mol h| stem:[u(x_("NS"))] nmol/mol
+h| Nominal value h| stem:[x_("RS")] stem:["unitsml(nmol/mol)"] h| stem:[s_("RS")] stem:["unitsml(nmol/mol)"] h| stem:[u(x_("RS"))] stem:["unitsml(nmol/mol)"] h| stem:[x_("NS")] stem:["unitsml(nmol/mol)"] h| stem:[s_("NS")] stem:["unitsml(nmol/mol)"] h| stem:[u(x_("NS"))] stem:["unitsml(nmol/mol)"]
 
 h| 0 | 0.10 | 0.33 | 0.28 | 0.00 | 0.19 | 0.51
 h| 220 | 218.74 | 0.39 | 0.70 | 219.25 | 0.16 | 0.84
@@ -486,7 +486,7 @@ h| 0 | 0.08 | 0.30 | 0.28 | -0.13 | 0.11 | 0.51
 [cols="^,^,^,^,^"]
 |===
 5+h| Differences
-h| Point Number h| Nom value (nmol/mol) h| stem:[ii(D)_i] (nmol/mol) h| stem:[u(ii(D)_i)] (nmol/mol) h| stem:[ii(U)(ii(D)_i)] (nmol/mol)
+h| Point Number h| Nom value stem:["unitsml(nmol/mol)"] h| stem:[ii(D)_i] stem:["unitsml(nmol/mol)"] h| stem:[u(ii(D)_i)] stem:["unitsml(nmol/mol)"] h| stem:[ii(U)(ii(D)_i)] stem:["unitsml(nmol/mol)"]
 h| 1 h| 0 | -0.11 | 0.58 | 1.16
 h| 2 h| 220 | 0.51 | 1.09 | 2.19
 h| 3 h| 80 | 0.03 | 0.67 | 1.35
@@ -516,16 +516,16 @@ Value of stem:[ii(alpha)] for the national standard:: 0.00E+00
 | Ozone generator manufacturer | Environics
 | Ozone generator type | Model 6100
 | Ozone generator serial number | 3128
-| Room temperature(min-max) / °C | 20.55-21.47
+| Room temperature(min-max) / stem:["unitsml(degC)"] | 20.55-21.47
 | Room pressure (min-max) / hpa | 1002.3-1002.6
 | Zero air source | oil free compressor + dryer+ aadco 737-R
-| Reference air flow rate (L/min) | 15
-| Sample flow rate (L/min) | 10
+| Reference air flow rate (stem:["unitsml(L/min)"]) | 15
+| Sample flow rate (stem:["unitsml(L/min)"]) | 10
 | Instruments stabilisation time | more than 48 hours
-| Instruments acquisition time /s (one measurement) | 5s
-| Instruments averaging time /s | 5s
+| Instruments acquisition time /stem:["unitsml(s)"] (one measurement) | stem:[5 "unitsml(s)"]
+| Instruments averaging time /stem:["unitsml(s)"] | stem:[5 "unitsml(s)"]
 | Total time for ozone conditioning | more than 48 hours
-| Ozone mole fraction during conditioning | 850 nmol/mol
+| Ozone mole fraction during conditioning | stem:[850 "unitsml(nmol/mol)"]
 | Comparison repeated continously (Yes/No) | yes
 | If no, ozone mole fraction in between the comparison repeats |
 | Total number of comparison repeats realised | 31
@@ -567,19 +567,19 @@ stem:[u(x) = sqrt((0.28)^2 + (2,92 * 10^(-3)x)^2)]
 |===
 h| Component h| Value h| Source h| Distribution h| Standard Uncertainty h| Combined Standard Uncertainty h| Sensitivity Coefficient h| Contribution to stem:[u(x)]
 
-h| Optical Path (stem:[ii(L)]) | 89.92 cm | BIPM | Rect | 0.520 cm | 0.520 cm ^.^| stem:[-x/(2 ii(L))] | 0.289%
+h| Optical Path (stem:[ii(L)]) | stem:[89.92 "unitsml(cm)"] | BIPM | Rect | stem:[0.520 "unitsml(cm)"] | stem:[0.520 "unitsml(cm)"] ^.^| stem:[-x/(2 ii(L))] | 0.289%
 
-.2+h| Pressure (stem:[ii(P)]) .2+.^| 101.325 kPa | Gauge | Rect | 0.077 kPa .2+.^| 0.086 kPa .2+^.^| stem:[-x/ii(P)] .2+.^| 0.085%
-| Difference | Rect | 0.038 kPa
+.2+h| Pressure (stem:[ii(P)]) .2+.^| stem:[101.325 "unitsml(kPa)"] | Gauge | Rect | stem:[0.077 "unitsml(kPa)"] .2+.^| stem:[0.086 "unitsml(kPa)"] .2+^.^| stem:[-x/ii(P)] .2+.^| 0.085%
+| Difference | Rect | stem:[0.038 "unitsml(kPa)"]
 
-.2+h| Temperature (stem:[ii(T)]) .2+.^| 273.15 °K | Probe | Rect | 0.115 K .2+.^| 0.129 K .2+^.^| stem:[x/ii(T)] .2+.^| 0.047%
-| Gradient | Rect | 0.058 °K
+.2+h| Temperature (stem:[ii(T)]) .2+.^| stem:[273.15 "unitsml(degK)"] | Probe | Rect | stem:[0.115 "unitsml(K)"] .2+.^| stem:[0.129 "unitsml(K)"] .2+^.^| stem:[x/ii(T)] .2+.^| 0.047%
+| Gradient | Rect | stem:[0.058 "unitsml(degK)"]
 
-h| Repeatability | a| Repeat Measurements | Rect a| 0.095 nmol/mol a| 0.095 nmol/mol ^.^| 1 | 0.095 nmol/mol
+h| Repeatability | a| Repeat Measurements | Rect a| stem:[0.095 "unitsml(nmol/mol)"] a| stem:[0.095 "unitsml(nmol/mol)"] ^.^| 1 | stem:[0.095 "unitsml(nmol/mol)"]
 
-h| Resolution | | | Rect a| 0.500 nmol/mol a| 0.500 nmol/mol ^.^| 1 | 0.500 nmol/mol
+h| Resolution | | | Rect a| stem:[0.500 "unitsml(nmol/mol)"] a| stem:[0.500 "unitsml(nmol/mol)"] ^.^| 1 | stem:[0.500 "unitsml(nmol/mol)"]
 
-h| Absorption Cross Section (stem:[ii(alpha)]) | 308.32 cm^–1^ | Conventional Value | Rect | 1.732 cm^–1^ | 1.732 cm^–1^ ^.^| stem:[x/(ii(alpha))] | 0.562%
+h| Absorption Cross Section (stem:[ii(alpha)]) | stem:[308.32 "unitsml(cm^–1)"] | Conventional Value | Rect | stem:[1.732 "unitsml(cm^(–1))"] | stem:[1.732 "unitsml(cm^–1)"] ^.^| stem:[x/(ii(alpha))] | 0.562%
 |===
 
 *Combined Uncertainty*
