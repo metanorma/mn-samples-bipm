@@ -90,7 +90,7 @@ image::img01.png[]
 
 Inside the variable-pressure tube, the air pressure is reduced to compensate for air attenuation within the free-air ionization chamber. The air-attenuation correction is essentially eliminated by withdrawing the amount of air equal to that between the defining plane of the diaphragm and the centre of the collecting region of the free-air chamber (that is, over the attenuation length stem:[ii(A)]). The consequent increase in the ionization current, for a given radiation quality, is a measure of the mean air-attenuation coefficient for that quality.
 
-At the BIPM the air-kerma rate for low-energy x-rays is determined at the reference distance (normally stem:[500 "unitsml(mm)"]) from the exit window of the x-ray tube at stem:[20 "unitsml(degC)"] and stem:[100 "unitsml(kPa)"] footnote:[The use of stem:[100 "unitsml(kPa)"] in the specification of the reference air-path length and for the stem:[ii(mu)_("air")] value used in the data acquisition software is historical. It is independent of the reference conditions for ionization current measurements, which specify normalization to the reference air pressure of stem:[101.325 "unitsml(kPa)"].] (air density stem:[1.1888 "unitsml(mg*cm^–3)"]). The free-air chamber attenuation length is stem:[100 "unitsml(mm)"] and the variable-pressure tube length is approximately stem:[300 "unitsml(mm)"]. It follows that to remove the amount of air corresponding to the attenuation length, the variable-pressure tube is operated at approximately stem:[60 "unitsml(kPa)"] pressure. The precise value is calculated by the data acquisition program taking into account the ambient conditions at the time of measurement.
+At the BIPM the air-kerma rate for low-energy x-rays is determined at the reference distance (normally stem:[500 "unitsml(mm)"]) from the exit window of the x-ray tube at stem:[20 "unitsml(degC)"] and stem:[100 "unitsml(kPa)"] footnote:[The use of stem:[100 "unitsml(kPa)"] in the specification of the reference air-path length and for the stem:[ii(mu)_("air")] value used in the data acquisition software is historical. It is independent of the reference conditions for ionization current measurements, which specify normalization to the reference air pressure of stem:[101.325 "unitsml(kPa)"].] (air density stem:[1.1888 "unitsml(mg*cm^-3)"]). The free-air chamber attenuation length is stem:[100 "unitsml(mm)"] and the variable-pressure tube length is approximately stem:[300 "unitsml(mm)"]. It follows that to remove the amount of air corresponding to the attenuation length, the variable-pressure tube is operated at approximately stem:[60 "unitsml(kPa)"] pressure. The precise value is calculated by the data acquisition program taking into account the ambient conditions at the time of measurement.
 
 To determine the HVL for a given set of conditions (generating voltage, filtration, distance) measurements for at least three different attenuator thicknesses should be made. Each attenuator is composed using a combination of filters containing high-purity aluminium foils of well-known thicknesses. The total thickness for each attenuator is chosen to be very close to the expected HVL for the particular radiation quality. For most of the radiation qualities three attenuators were used, including at least one with thickness higher and at least one with thickness lower than the HVL.
 
@@ -120,7 +120,7 @@ At the BIPM the air-kerma rate for the low-energy radiation qualities produced u
 
 The air-attenuation coefficients stem:[ii(mu)_("air")] and the HVLs for the W/Al qualities used at present were mostly measured in 2001 (<<Burns2,Burns and Roger 2001>>). For the W/Mo radiation qualities for mammography the corresponding measurements were made in 2002. For the present project, new measurements were performed for several radiation qualities to make sure that the values in use are still valid and to perform an additional stability check.
 
-A re-measurement of stem:[ii(mu)_("air")] and HVL was carried out for the following W/Al radiation qualities: stem:[10 "unitsml(kV)"], stem:[30 "unitsml(kV)"], stem:[50 "unitsml(kVb)"] and stem:[50 "unitsml(kVa)"]. The new measurements included repeats of the previous determinations using the same attenuators. Revised thickness values were used for certain filters making up the attenuators, although these revisions were shown to have no significant influence on the results. For the stem:[30 "unitsml(kV)"] and stem:[50 "unitsml(kVa)"] qualities two attenuators were used. For stem:[50 "unitsml(kVb)"] measurements with three attenuators were performed and an additional check of the effect of the lead collimator was made. To derive the HVL values for stem:[30 "unitsml(kV)"], stem:[50 "unitsml(kVb)"] and stem:[50 "unitsml(kVa)"] linear interpolation was used. At stem:[10 "unitsml(kV)"] measurements with five attenuators were performed and the HVL was calculated using a quadratic fit to the results.
+A re-measurement of stem:[ii(mu)_("air")] and HVL was carried out for the following W/Al radiation qualities: stem:[10 "unitsml(kV)"], stem:[30 "unitsml(kV)"], stem:[50 "unitsml(kV)""b"] and stem:[50 "unitsml(kV)""a"]. The new measurements included repeats of the previous determinations using the same attenuators. Revised thickness values were used for certain filters making up the attenuators, although these revisions were shown to have no significant influence on the results. For the stem:[30 "unitsml(kV)"] and stem:[50 "unitsml(kV)""a"] qualities two attenuators were used. For stem:[50 "unitsml(kV)""b"] measurements with three attenuators were performed and an additional check of the effect of the lead collimator was made. To derive the HVL values for stem:[30 "unitsml(kV)"], stem:[50 "unitsml(kV)""b"] and stem:[50 "unitsml(kV)""a"] linear interpolation was used. At stem:[10 "unitsml(kV)"] measurements with five attenuators were performed and the HVL was calculated using a quadratic fit to the results.
 
 The results are given in <<table1>> alongside the values presently in use. The stem:[ii(mu)_("air")] values are given at stem:[293.15 "unitsml(K)"] and stem:[100 "unitsml(kPa)"] (as used in the data acquisition software), and for an air-path length of stem:[100 "unitsml(mm)"]. The free-air chamber attenuation correction factors stem:[k_"a"] for stem:[293.15 "unitsml(K)"] and stem:[101.325 "unitsml(kPa)"] (as presented in comparison reports) are also given in the table.
 
@@ -130,13 +130,13 @@ There was no robust determination of the uncertainty of the measured HVL values 
 [cols="<,<,^,^,^,^"]
 .Results of the re-measurement of stem:[ii(mu)_("air")] and HVL for selected W/Al radiation qualities at the stem:[0.5 "unitsml(m)"] reference distance
 |===
-2+| Radiation quality | stem:[10 "unitsml(kV)"] | stem:[30 "unitsml(kV)"] | stem:[50 "unitsml(kVb)"] | stem:[50 "unitsml(kVa)"]
+2+| Radiation quality | stem:[10 "unitsml(kV)"] | stem:[30 "unitsml(kV)"] | stem:[50 "unitsml(kV)""b"] | stem:[50 "unitsml(kV)""a"]
 2+| Generating potential / stem:["unitsml(kV)"] | 10 | 30 | 50 | 50
 2+| Al filtration / stem:["unitsml(mm)"] | 0 | 0.2082 | 1.0082 | 3.989
 2+| Reference distance / stem:["unitsml(m)"] | 0.5 | 0.5 | 0.5 | 0.5
 .2+| Al HVL / stem:["unitsml(mm)"] | value in use | 0.0368 | 0.1694 | 1.0168 | 2.2623
 | measured 2019 | 0.0368 | 0.1695 | 1.0155 | 2.2612
-.2+| stem:[ii(mu)_("air")// "unitsml(m^–1)"] | value in use | 1.7630 | 0.4353 | 0.0896 | 0.0450
+.2+| stem:[ii(mu)_("air")// "unitsml(m^-1)"] | value in use | 1.7630 | 0.4353 | 0.0896 | 0.0450
 | measured 2019 | 1.7724 | 0.4338 | 0.0897 | 0.0468
 .2+| stem:[k_"a"] | value in use | 1.1956 | 1.0451 | 1.0091 | 1.0046
 | measured 2019 | 1.1967 | 1.0449 | 1.0091 | 1.0048
@@ -216,7 +216,7 @@ The results for the W/Al radiation qualities are presented in <<table5>>. The st
 [cols="<,^,^,^,^,^"]
 .Results of the measurement of stem:[ii(mu)_("air")] and HVL for the W/Al radiation qualities at the stem:[1 "unitsml(m)"] reference distance
 |===
-| Radiation quality | stem:[10 "unitsml(kV)"] | stem:[30 "unitsml(kV)"] | stem:[25 "unitsml(kV)"] | stem:[50 "unitsml(kVb)"] | stem:[50 "unitsml(kVa)"]
+| Radiation quality | stem:[10 "unitsml(kV)"] | stem:[30 "unitsml(kV)"] | stem:[25 "unitsml(kV)"] | stem:[50 "unitsml(kV)""b"] | stem:[50 "unitsml(kV)""a"]
 | Generating potential / stem:["unitsml(kV)"] | 10 | 30 | 25 | 50 | 50
 | Al filtration / stem:["unitsml(mm)"] | 0 | 0.2082 | 0.3723 | 1.0082 | 3.989
 | Reference distance / stem:["unitsml(m)"] | 1 | 1 | 1 | 1 | 1
@@ -225,7 +225,7 @@ The results for the W/Al radiation qualities are presented in <<table5>>. The st
 | stem:[k_"a"] | 1.1563 | 1.0403 | 1.0294 | 1.0089 | 1.0048
 |===
 
-For the stem:[30 "unitsml(kV)"] quality the measurements were performed with five attenuators (initial measurements with the three attenuators used previously at stem:[0.5 "unitsml(m)"], followed by measurements with two additional attenuators to get closer to the expected HVL value). For each of the stem:[25 "unitsml(kV)"], stem:[50 "unitsml(kVb)"] and stem:[50 "unitsml(kVa)"] qualities three attenuators were used. Measurements at stem:[10 "unitsml(kV)"] were made with six attenuators. Linear interpolation was used to obtain the HVL for all qualities except stem:[10 "unitsml(kV)"], for which a quadratic fit was used.
+For the stem:[30 "unitsml(kV)"] quality the measurements were performed with five attenuators (initial measurements with the three attenuators used previously at stem:[0.5 "unitsml(m)"], followed by measurements with two additional attenuators to get closer to the expected HVL value). For each of the stem:[25 "unitsml(kV)"], stem:[50 "unitsml(kV)""b"] and stem:[50 "unitsml(kV)""a"] qualities three attenuators were used. Measurements at stem:[10 "unitsml(kV)"] were made with six attenuators. Linear interpolation was used to obtain the HVL for all qualities except stem:[10 "unitsml(kV)"], for which a quadratic fit was used.
 
 The uncertainty of the HVL for each radiation quality was estimated from the uncertainty of the linear least-squares regression (Excel program by D. Burns). This uncertainty was typically less than stem:[1 "unitsml(um)"] (stem:[0.2 "unitsml(um)"] at stem:[10 "unitsml(kV)"]). For stem:[ii(mu)_("air")] the uncertainty was evaluated from the results with no attenuator for a given radiation quality. It was typically less than 1 part in 10^3^. The corresponding estimate for the uncertainty of the attenuation correction stem:[k_"a"] is less than 1 part in 10^4^.
 
@@ -235,7 +235,7 @@ In <<table6>> the new HVL values are compared with the approximate values derive
 [cols="<,<,^,^,^,^,^"]
 .New stem:[ii(mu)_("air")] and HVL values in comparison with those used in 2018 for the W/Al radiation qualities at the stem:[1 "unitsml(m)"] reference distance
 |===
-2+| Radiation quality | stem:[10 "unitsml(kV)"] | stem:[30 "unitsml(kV)"] | stem:[25 "unitsml(kV)"] | stem:[50 "unitsml(kVb)"] | stem:[50 "unitsml(kVa)"]
+2+| Radiation quality | stem:[10 "unitsml(kV)"] | stem:[30 "unitsml(kV)"] | stem:[25 "unitsml(kV)"] | stem:[50 "unitsml(kV)""b"] | stem:[50 "unitsml(kV)""a"]
 2+| Generating potential / stem:["unitsml(kV)"] | 10 | 30 | 25 | 50 | 50
 2+| Al filtration / stem:["unitsml(mm)"] | 0 | 0.2082 | 0.3723 | 1.0082 | 3.989
 2+| Reference distance / stem:["unitsml(m)"] | 1 | 1 | 1 | 1 | 1
@@ -268,13 +268,13 @@ The uncertainties for the HVL and stem:[ii(mu)_("air")] values were derived in t
 
 To illustrate the difference between the results of measurements of stem:[ii(mu)_("air")] and HVLs at stem:[0.5 "unitsml(m)"] and stem:[1 "unitsml(m)"], two graphs are given in <<fig3>> and <<fig4>>.
 
-<<fig3>> shows the difference between the HVL values at the stem:[0.5 "unitsml(m)"] and stem:[1 "unitsml(m)"] reference distances for the W/Al stem:[50 "unitsml(kVb)"] radiation quality. The horizontal line (red, dashed) denotes the value 0.5 for the transmission and the vertical lines the corresponding HVL values (stem:[1.0155 "unitsml(mm)"] at stem:[0.5 "unitsml(m)"] and stem:[1.0414 "unitsml(mm)"] at stem:[1 "unitsml(m)"]). It is evident from the results that at stem:[1 "unitsml(m)"] the beam becomes harder as the mean energy of the beam increases, and so the HVL increases.
+<<fig3>> shows the difference between the HVL values at the stem:[0.5 "unitsml(m)"] and stem:[1 "unitsml(m)"] reference distances for the W/Al stem:[50 "unitsml(kV)""b"] radiation quality. The horizontal line (red, dashed) denotes the value 0.5 for the transmission and the vertical lines the corresponding HVL values (stem:[1.0155 "unitsml(mm)"] at stem:[0.5 "unitsml(m)"] and stem:[1.0414 "unitsml(mm)"] at stem:[1 "unitsml(m)"]). It is evident from the results that at stem:[1 "unitsml(m)"] the beam becomes harder as the mean energy of the beam increases, and so the HVL increases.
 
 [[fig3]]
-.HVL determination for the stem:[50 "unitsml(kVb)"] radiation quality at the stem:[0.5 "unitsml(m)"] and stem:[1 "unitsml(m)"] reference distances.
+.HVL determination for the stem:[50 "unitsml(kV)""b"] radiation quality at the stem:[0.5 "unitsml(m)"] and stem:[1 "unitsml(m)"] reference distances.
 image::img03.png[]
 
-In <<fig4>> the stem:[ii(mu)_("air")] values measured at the stem:[0.5 "unitsml(m)"] and stem:[1 "unitsml(m)"] reference distances for the low-energy W/Al radiation qualities are plotted against the corresponding HVLs on a logarithmical scale. It can be seen from the graph that for the stem:[10 "unitsml(kV)"], stem:[30 "unitsml(kV)"] and stem:[25 "unitsml(kV)"] radiation qualities (with mean energies below stem:[20 "unitsml(keV)"]) there is a notable change in the HVL with distance and the corresponding stem:[ii(mu)_("air")] values fall essentially on the same line. This effect decreases with increasing energy, such that for the stem:[50 "unitsml(kVb)"] and stem:[50 "unitsml(kVa)"] qualities there is no significant difference in the HVL and stem:[ii(mu)_("air")] values measured at stem:[0.5 "unitsml(m)"] and stem:[1 "unitsml(m)"].
+In <<fig4>> the stem:[ii(mu)_("air")] values measured at the stem:[0.5 "unitsml(m)"] and stem:[1 "unitsml(m)"] reference distances for the low-energy W/Al radiation qualities are plotted against the corresponding HVLs on a logarithmical scale. It can be seen from the graph that for the stem:[10 "unitsml(kV)"], stem:[30 "unitsml(kV)"] and stem:[25 "unitsml(kV)"] radiation qualities (with mean energies below stem:[20 "unitsml(keV)"]) there is a notable change in the HVL with distance and the corresponding stem:[ii(mu)_("air")] values fall essentially on the same line. This effect decreases with increasing energy, such that for the stem:[50 "unitsml(kV)""b"] and stem:[50 "unitsml(kV)""a"] qualities there is no significant difference in the HVL and stem:[ii(mu)_("air")] values measured at stem:[0.5 "unitsml(m)"] and stem:[1 "unitsml(m)"].
 
 [[fig4]]
 .Air-attenuation coefficients stem:[ii(mu)_("air")] at the stem:[0.5 "unitsml(m)"] and stem:[1 "unitsml(m)"] reference distances for the low-energy W/Al radiation qualities as a function of HVL (log-log scale).
@@ -286,7 +286,7 @@ During the measurements the decision was taken to implement higher values for th
 [cols="<,^,^,^,^,^"]
 .New air-kerma rates for the W/Al radiation qualities at the reference distance of stem:[1 "unitsml(m)"]
 |===
-| Radiation quality | stem:[10 "unitsml(kV)"] | stem:[30 "unitsml(kV)"] | stem:[25 "unitsml(kV)"] | stem:[50 "unitsml(kVb)"] | stem:[50 "unitsml(kVa)"]
+| Radiation quality | stem:[10 "unitsml(kV)"] | stem:[30 "unitsml(kV)"] | stem:[25 "unitsml(kV)"] | stem:[50 "unitsml(kV)""b"] | stem:[50 "unitsml(kV)""a"]
 | Al filtration / stem:["unitsml(mm)"] | 0 | 0.2082 | 0.3723 | 1.0082 | 3.989
 | Reference distance / stem:["unitsml(m)"] | 1 | 1 | 1 | 1 | 1
 | Al HVL / stem:["unitsml(mm)"] | 0.04450 | 0.1951 | 0.2654 | 1.0414 | 2.2737
@@ -326,7 +326,7 @@ The new results for the air-kerma calibration coefficients stem:[ii(N)_K], expre
 [cols="<,^,^,^,^,^,^"]
 .Calibration coefficients and polarity correction for the Shonka serial no. 1 ionization chamber
 |===
-| Radiation quality 2+| stem:[20 "unitsml(kV)"] 2+| stem:[30 "unitsml(kV)"] 2+| stem:[50 "unitsml(kVb)"]
+| Radiation quality 2+| stem:[20 "unitsml(kV)"] 2+| stem:[30 "unitsml(kV)"] 2+| stem:[50 "unitsml(kV)""b"]
 | Al HVL / stem:["unitsml(mm)"] 2+| 0.0729 2+| 0.1694 2+| 1.0168
 | | stem:[ii(N)_K] stem:[// "unitsml(Gy)"] stem:["unitsml(uC^-1)"] | stem:[k_("pol")] | stem:[ii(N)_K] stem:[// "unitsml(Gy)"] stem:["unitsml(uC^-1)"] | stem:[k_("pol")] | stem:[ii(N)_K] stem:[// "unitsml(Gy)"] stem:["unitsml(uC^-1)"] | stem:[k_("pol")]
 | 2001 footnote:[The average of the results obtained in 2001.] | 93.10 | 1.0061 | 27.93 | 1.0073 | 10.903 | 1.0089
@@ -344,7 +344,7 @@ For the Shonka chamber the measurements were performed at both polarities, for t
 [cols="<,^,^"]
 .Calibration coefficients (in stem:["unitsml(Gy*uC^-1)"]) for the PTW23344 serial no. 683 ionization chamber
 |===
-| Radiation quality | stem:[30 "unitsml(kV)"] | stem:[50 "unitsml(kVb)"]
+| Radiation quality | stem:[30 "unitsml(kV)"] | stem:[50 "unitsml(kV)""b"]
 | Al HVL / stem:["unitsml(mm)"] | 0.1694 | 1.0168
 | 2002 | 69.90 | 67.35
 | 2004 | 69.95 | 67.15
@@ -358,7 +358,7 @@ For the Shonka chamber the measurements were performed at both polarities, for t
 [cols="<,^,^,^,^"]
 .Calibration coefficients (in stem:["unitsml(Gy*uC^-1)"]) for the Radcal RC6M serial no. 9112 ionization chamber
 |===
-| Radiation quality | stem:[10 "unitsml(kV)"] | stem:[30 "unitsml(kV)"] | stem:[25 "unitsml(kV)"] | stem:[50 "unitsml(kVb)"]
+| Radiation quality | stem:[10 "unitsml(kV)"] | stem:[30 "unitsml(kV)"] | stem:[25 "unitsml(kV)"] | stem:[50 "unitsml(kV)""b"]
 | Al HVL / stem:["unitsml(mm)"] | 0.0368 | 0.1694 | 0.2425 | 1.0168
 | 2004 | 4.783 | 4.731 | 4.720 | 4.768
 | 2005 | 4.791 | 4.732 | 4.719 | 4.769
@@ -369,19 +369,19 @@ For the Shonka chamber the measurements were performed at both polarities, for t
 | Standard deviation / % | 0.03 | 0.06 | 0.06 | 0.07
 |===
 
-In <<fig5>> the calibration coefficients for the three ionization chambers at the stem:[30 "unitsml(kV)"] and stem:[50 "unitsml(kVb)"] radiation qualities, normalized to the first measurement for each, are presented as a function of the year of calibration.
+In <<fig5>> the calibration coefficients for the three ionization chambers at the stem:[30 "unitsml(kV)"] and stem:[50 "unitsml(kV)""b"] radiation qualities, normalized to the first measurement for each, are presented as a function of the year of calibration.
 
-It can be noted that for the Radcal RC6M chamber and for the Shonka chamber at the stem:[30 "unitsml(kV)"] quality there is an increase in the calibration coefficient of around 0.3 % over the period from 2001 to 2019. On the other hand, the results for the PTW 23344 chamber and for the Shonka at the stem:[50 "unitsml(kVb)"] quality set an upper limit on potential changes in the primary standard over the same period of not more than 0.1 %, indicating that the larger variations seen for the stem:[30 "unitsml(kV)"] quality arise from instabilities in the chambers themselves.
+It can be noted that for the Radcal RC6M chamber and for the Shonka chamber at the stem:[30 "unitsml(kV)"] quality there is an increase in the calibration coefficient of around 0.3 % over the period from 2001 to 2019. On the other hand, the results for the PTW 23344 chamber and for the Shonka at the stem:[50 "unitsml(kV)""b"] quality set an upper limit on potential changes in the primary standard over the same period of not more than 0.1 %, indicating that the larger variations seen for the stem:[30 "unitsml(kV)"] quality arise from instabilities in the chambers themselves.
 
 [[fig5]]
-.The calibration coefficients NK for the Shonka, PTW23344 and Radcal RC6M ionization chambers at the stem:[30 "unitsml(kV)"] and stem:[50 "unitsml(kVb)"] radiation qualities, normalized to the first measurement for each.
+.The calibration coefficients NK for the Shonka, PTW23344 and Radcal RC6M ionization chambers at the stem:[30 "unitsml(kV)"] and stem:[50 "unitsml(kV)""b"] radiation qualities, normalized to the first measurement for each.
 image::img05.png[]
 
 == Measurement of the polarity correction for the FAC-L-01 and FAC-L-02 primary-standard ionization chambers
 
 The effect of changing the polarity of the high voltage and the polarity correction were checked for the FAC-L-01 and FAC-L-02 primary-standard ionization chambers used for measurements with the W-anode and Mo-anode tubes, respectively.
 
-For the FAC-L-01 chamber the polarity correction for the use of the chamber at stem:[+1500 "unitsml(V)"] was previously determined in 2001–2002 to be 1.00046 with the standard uncertainty of 1 part in 10^4^ and it was found to be independent of the radiation quality. The present measurements were performed at the W/Al stem:[50 "unitsml(kVb)"] radiation quality (at stem:[0.5 "unitsml(m)"] distance) with a wait of 5 minutes between the sets of measurements after a change of polarity (an initial test was performed to ensure that there is no change in the air-kerma rate after 5 minutes). The graph of the absolute ionization current measured at positive and negative polarities, normalized to the average ionization current, is presented in <<fig6>>. The polarity correction is determined as 1.00042 and is in agreement with the previous value at the level of the standard uncertainty.
+For the FAC-L-01 chamber the polarity correction for the use of the chamber at stem:[+1500 "unitsml(V)"] was previously determined in 2001–2002 to be 1.00046 with the standard uncertainty of 1 part in 10^4^ and it was found to be independent of the radiation quality. The present measurements were performed at the W/Al stem:[50 "unitsml(kV)""b"] radiation quality (at stem:[0.5 "unitsml(m)"] distance) with a wait of 5 minutes between the sets of measurements after a change of polarity (an initial test was performed to ensure that there is no change in the air-kerma rate after 5 minutes). The graph of the absolute ionization current measured at positive and negative polarities, normalized to the average ionization current, is presented in <<fig6>>. The polarity correction is determined as 1.00042 and is in agreement with the previous value at the level of the standard uncertainty.
 
 For the FAC-L-02 chamber the measurements were previously performed in 2007 and the polarity effect was determined to be negligible for all Mo/Mo radiation qualities. The present measurements were performed at the stem:[35 "unitsml(kV)"] and stem:[25 "unitsml(kV)"] radiation qualities. At stem:[35 "unitsml(kV)"] there was a 0.1 % drift in the air-kerma rate during the measurements. At stem:[25 "unitsml(kV)"] there was almost the same drift over the first 4 hours of measurements, after which the air-kerma rate became more stable (see <<fig7>>). To obtain the final result at least 4 series of measurements (each lasting approximately 8 minutes) were performed at each polarity. The polarity correction of 1.00008 for the use of the chamber at stem:[+1500 "unitsml(V)"] was obtained at the stem:[25 "unitsml(kV)"] radiation quality. This value agrees with the value in use (1.0000) at the level of the stated uncertainty of 1 part in 10^4^.
 
