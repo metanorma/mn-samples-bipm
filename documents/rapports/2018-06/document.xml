@@ -1,0 +1,2388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bipm-standard xmlns="https://www.metanorma.org/ns/bipm" type="semantic" version="2.1.7">
+<bibdata type="standard">
+<title language="en" format="text/plain" type="main">Measuring Conditions and Uncertainties for the Comparison and Calibration of National Dosimetric Standards at the BIPM</title>
+
+<docidentifier type="BIPM">BIPM BIPM-2018/06</docidentifier><docnumber>BIPM-2018/06</docnumber><contributor><role type="author"/><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"/><person>
+<name><completename>C. Kessler</completename></name>
+<affiliation><organization>
+</organization></affiliation></person></contributor><contributor><role type="author"/><person>
+<name><completename>D.T. Burns</completename></name>
+<affiliation><organization>
+</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2018-12</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2018</from><owner><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem><date type="circulated"/><version><draft>Rapport BIPM-2011/04</draft></version></bibitem>
+</relation><ext><doctype>rapport</doctype><editorialgroup><committee acronym=""/></editorialgroup><structuredidentifier><docnumber>BIPM-2018/06</docnumber></structuredidentifier></ext></bibdata><misc-container><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit xml:id="U_kV" dimensionURL="#NISTd18">
+<UnitSystem name="SI" type="SI_derived" xml:lang="en-US"/>
+<UnitName xml:lang="en">kV</UnitName>
+<UnitSymbol type="HTML">kV</UnitSymbol>
+<UnitSymbol type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="normal">kV</mi></mrow></math>
+</UnitSymbol>
+
+<RootUnits><EnumeratedRootUnit unit="volt" prefix="k"/></RootUnits>
+
+</Unit></UnitSet><QuantitySet><Quantity xml:id="NISTq34" dimensionURL="#NISTd5" quantityType="base">
+<QuantityName xml:lang="en-US">Celsius temperature</QuantityName>
+</Quantity></QuantitySet><DimensionSet><Dimension xml:id="NISTd18">
+<Length symbol="L" powerNumerator="2"/>
+<Mass symbol="M" powerNumerator="1"/>
+<Time symbol="T" powerNumerator="-3"/>
+<ElectricCurrent symbol="I" powerNumerator="-1"/>
+</Dimension></DimensionSet><PrefixSet><Prefix prefixBase="10" prefixPower="3" xml:id="NISTp10_3">
+  <PrefixName xml:lang="en">kilo</PrefixName>
+  <PrefixSymbol type="ASCII">k</PrefixSymbol>
+  <PrefixSymbol type="unicode">k</PrefixSymbol>
+  <PrefixSymbol type="LaTeX">k</PrefixSymbol>
+  <PrefixSymbol type="HTML">k</PrefixSymbol>
+</Prefix></PrefixSet></UnitsML></misc-container>
+<boilerplate>
+  <copyright-statement>
+    <clause>
+      <p align="center" id="_93cc0a2a-5f28-112f-d573-02d97c5ec3f0"> © Bureau International des Poids et Mesures 2018 all rights reserved</p>
+    </clause>
+  </copyright-statement>
+  <license-statement>
+    <clause>
+      <title>Copyright statement</title>
+      <p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<link target="http://creativecommons.org/licenses/by/4.0/"/>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
+    </clause>
+  </license-statement>
+  <feedback-statement>
+    <p id="_bd0b4a04-1c9b-db4f-f27f-b98101e93f33">BIPM<br/>
+      Pavillon de Breteuil<br/>
+      F-92312 Sèvres Cedex<br/>
+      FRANCE</p>
+  </feedback-statement>
+</boilerplate>
+
+<preface><foreword id="_c2b7938f-a8ae-5f5f-0db4-6aa7c1d65ff8" obligation="informative">
+<title>Foreword</title>
+<p id="_f0398846-c47f-4bf4-5432-0df0e7dcd700">Information is presented on the experimental conditions used in the x- and gamma-radiation beams at the BIPM for comparisons of national primary standards and calibrations of national secondary standards in terms of air kerma and absorbed dose to water, together with the uncertainties involved in the determination of these dosimetric quantities.</p>
+</foreword></preface><sections>
+<clause id="_introduction" obligation="normative">
+<title>Introduction</title>
+<p id="_dcc0194a-8aad-1d87-db46-60e1229cdf8e">For each signatory of the Metre Convention and for a given type of measurement, the BIPM works with the National Metrology Institute (NMI) or a laboratory designated nationally for the purpose. For those laboratories that hold national primary standards, the BIPM compares these standards against the BIPM reference standards, either directly using the primary standards in the BIPM reference beams or indirectly through the calibration of transfer instruments by both the BIPM and the NMI. For those that do not hold primary standards, the BIPM calibrates secondary standards that are then normally used as national reference instruments. For this reason, the chambers should be instruments of good quality; in particular with respect to leakage current and both short- and long-term stability.</p>
+
+<p id="_3c55cfa3-ce31-ae1a-77ed-1a7d7ccde740">Comparisons, characterizations and calibrations of ionization chambers are performed at the BIPM in terms of:</p>
+
+<ul id="_8645dda3-61bd-cc55-73a8-016245a94cba"><li><p id="_b77d1fc0-1090-7752-ea24-4f07e224113e">air kerma in the low- (including mammography) and medium-energy x-ray ranges and in <sup>60</sup>Co gamma radiation;</p>
+</li>
+<li><p id="_eaa7a82c-65b3-eac2-383e-fb424ecdceb6">absorbed dose to water in medium-energy x-ray beams and in <sup>60</sup>Co gamma radiation;</p>
+</li>
+</ul>
+
+<p id="_d1784282-e472-24de-a717-4183482dc8f2">The present report documents the conditions of measurement at the BIPM, the values for the physical constants and correction factors, and the estimated uncertainties in the determination of the primary quantities and of calibration coefficients.</p>
+</clause>
+
+<clause id="_general_remarks" obligation="normative">
+<title>General remarks</title>
+<p id="_41b14f32-1be9-d375-adc2-7e50ac72cfe8">The reference plane is specified in terms of a distance from the radiation source or, in the case of low-energy x-rays, from the beam exit window. The reference point is the intersection of the beam axis with the reference plane.</p>
+
+<p id="_c483e6b7-25a0-d8b6-cc72-89f1087d8914">For chamber types other than parallel plate, the chamber is positioned with its axis in the reference plane and with the stated point of measurement of the chamber at the reference point. For measurements in gamma radiation, the chamber is used with the build-up cap provided. The orientation of the chamber is such that the number, text or line inscribed on the stem faces the radiation source, unless a different orientation is indicated. Parallel-plate chambers are calibrated with the front surface of the chamber casing in the reference plane, unless a different surface is indicated on the chamber, and with the entrance window centred on the beam axis.</p>
+
+<p id="_f34705a8-23f9-5585-6c20-f41468818233">All chambers are irradiated for at least thirty minutes, with the appropriate polarizing potential applied to the outer electrode (wall or window), before any measurements are made. If the NMI applies a potential of a given polarity to the collecting electrode, the BIPM will apply the same potential with opposite polarity to the outer electrode.</p>
+
+<p id="_99c4601f-b805-3ee1-da56-e87607260b02">The leakage current is normally measured before and after each set of measurements and a correction is applied, based on the mean value. A chamber for which the relative leakage current is high, and in particular for which the leakage is also variable, is unsuitable for use as a transfer instrument and might also be considered unsuitable for calibration. In the latter case, a study note is issued.</p>
+
+<p id="_2d80903f-fc94-9965-e4ed-d1e884f2e7dc">The irradiation facilities at the BIPM are temperature controlled (close to <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>20</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu23"><mi mathvariant="normal">°C</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math></stem>) at the level of around <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>100</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_mK"><mi mathvariant="normal">mK</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem>. For air-kerma measurements in <sup>60</sup>Co, an additional passive enclosure is used to ensure temperature stability below <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>50</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_mK"><mi mathvariant="normal">mK</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem>. The BIPM reference conditions for air temperature, pressure and relative humidity are <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>T</mi></mstyle></mrow><mrow><mn>0</mn></mrow></msub><mo>=</mo><mn>293.15</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>P</mi></mstyle></mrow><mrow><mn>0</mn></mrow></msub><mo>=</mo><mn>101.325</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kPa"><mi mathvariant="normal">kPa</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem> and 50 %, respectively. As the relative humidity is controlled within the range 40 % to 55 %, no humidity correction is applied.</p>
+
+<p id="_4fb378a7-3813-498a-9387-879004792d03"><em>Calibration of national standards</em>: No correction is applied for lack of saturation; the air-kerma rate or absorbed-dose-to-water rate is stated in the certificate. For thimble chamber types calibrated in gamma radiation and in airkerma for medium-energy x-rays, the radial non-uniformity correction for the BIPM beams is small and is stated in the certificate, although no correction factor is applied. For waterproof thimble chamber types calibrated in terms of absorbed dose to water in medium-energy x-rays, the correction factor at the reference depth will be similar at both laboratories and again no correction factor is applied. In low-energy x-rays, chambers of larger dimensions may be calibrated and the radial uniformity of the beam shows more variation from one laboratory to another. For these reasons, the appropriate correction factor is always applied.</p>
+
+<p id="_9b34be21-dc5f-6572-0c8c-ad9c0508492d"><em>Comparisons of national standards</em>: This depends to some extent on the practice at the NMI and no general statement can be made; the measuring conditions adopted are clearly stated in the comparison report.</p>
+</clause>
+
+<clause id="_comparison_and_calibration_in_terms_of_air_kerma_x_rays_60co" obligation="normative">
+<title>Comparison and calibration in terms of air kerma (x-rays, <sup>60</sup>Co)</title>
+<p id="_11c1c047-aac6-785f-ad0e-f868ea3f6ff7">The primary standard, transfer chamber or national reference standard is operated in air at the stated reference distance. The ionization current <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>I</mi></mstyle></math></stem> is determined under the BIPM reference conditions of air temperature, pressure and humidity. The value of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>I</mi></mstyle></math></stem> is given by</p>
+
+<formula id="eq1"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>I</mi></mstyle><mo>=</mo><msub><mrow><mstyle mathvariant="italic"><mi>I</mi></mstyle></mrow><mrow><mtext>exp</mtext></mrow></msub><mfenced open="(" close=")"><mrow><mfrac><mrow><mstyle mathvariant="italic"><mi>T</mi></mstyle></mrow><mrow><msub><mrow><mstyle mathvariant="italic"><mi>T</mi></mstyle></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mrow></mfenced><mfenced open="(" close=")"><mrow><mfrac><mrow><msub><mrow><mstyle mathvariant="italic"><mi>P</mi></mstyle></mrow><mrow><mn>0</mn></mrow></msub></mrow><mrow><mstyle mathvariant="italic"><mi>P</mi></mstyle></mrow></mfrac></mrow></mfenced></math></stem></formula>
+
+<p id="_cd013448-9bba-8f43-70c8-3cc05c27d773">where <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>I</mi></mstyle></mrow><mrow><mtext>exp</mtext></mrow></msub></math></stem> is the ionization current measured at temperature <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>T</mi></mstyle></math></stem> (expressed in K) and pressure <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>P</mi></mstyle></math></stem> (expressed in <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_kPa"><mi mathvariant="normal">kPa</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem>).</p>
+
+<p id="_9cbfb04f-ecbc-0510-e490-3efb8eeda290">For a transfer chamber or national reference standard, the calibration coefficient <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mi mathvariant="normal">K</mi></mrow></msub></math></stem> is defined by the relation</p>
+
+<formula id="eq2"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mi mathvariant="normal">K</mi></mrow></msub><mo>=</mo><msub><mrow><mover accent="true"><mrow><mstyle mathvariant="italic"><mi>K</mi></mstyle></mrow><mo>.</mo></mover></mrow><mrow><mtext>BIPM</mtext></mrow></msub><mo>/</mo><mstyle mathvariant="italic"><mi>I</mi></mstyle><mo>,</mo></math></stem></formula>
+
+<p id="_103c78a6-18d6-de81-7f47-26cdc36d5d3e">where <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mover accent="true"><mrow><mstyle mathvariant="italic"><mi>K</mi></mstyle></mrow><mo>.</mo></mover></mrow><mrow><mtext>BIPM</mtext></mrow></msub></math></stem> is the air-kerma rate at the reference point, measured with the BIPM standard.</p>
+
+<p id="_5b83d0bb-95c8-87e0-a2ac-5decc40f0faa">Details of the conditions of measurement at the BIPM and the uncertainties in the determination of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mover accent="true"><mrow><mstyle mathvariant="italic"><mi>K</mi></mstyle></mrow><mo>.</mo></mover></mrow><mrow><mtext>BIPM</mtext></mrow></msub></math></stem> are given in <xref target="table1"/> to <xref target="table6"/> for x-rays and in <xref target="table7"/> and <xref target="table9"/> for <sup>60</sup>Co. In these tables, the relative standard uncertainties estimated by statistical methods (Type A) are denoted by <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>s</mi></mrow><mrow><mtext>i</mtext></mrow></msub></math></stem> and those estimated by other means (Type B) are denoted by <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>u</mi></mrow><mrow><mtext>i</mtext></mrow></msub></math></stem>.</p>
+</clause>
+
+<clause id="_comparison_and_calibration_in_terms_of_absorbed_dose_to_water_x_rays_60co" obligation="normative">
+<title>Comparison and calibration in terms of absorbed dose to water (x-rays, <sup>60</sup>Co)</title>
+<p id="_07110a3f-37b9-fe94-c1a6-bc9d6985f8e3"><em><sup>60</sup>Co gamma radiation</em></p>
+
+<p id="_2aabbfad-9a13-c130-4fc6-cf05c8602e25">When a primary standard is compared directly, the measuring conditions are stated clearly in the comparison report. For indirect comparisons and calibrations, the transfer chamber or national reference standard is placed in its waterproof sleeve (unless calibration of a waterproof chamber without a sleeve is requested) and positioned in the BIPM cubic water phantom of side length <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>30</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm"><mi mathvariant="normal">cm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem>. Its axis is placed in the reference plane, at the reference depth of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_g.cm-2"><mi mathvariant="normal">g</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem> in water. This depth includes the window of the phantom (PMMA, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0.476</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_g.cm-2"><mi mathvariant="normal">g</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem>) and is corrected for the change in water density with temperature. As well as correctly orienting the chamber, a reference mark on the sleeve (if used) is rotated so as to point towards the radiation source, unless a different orientation is indicated.</p>
+
+<p id="_957cc80c-8ac0-83b8-639a-84011004f448">The calibration coefficient <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mrow><mstyle mathvariant="italic"><mi>D</mi></mstyle><mo>,</mo><mi>w</mi></mrow></mrow></msub></math></stem> is determined using the relation</p>
+
+<formula id="eq3"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mrow><mstyle mathvariant="italic"><mi>D</mi></mstyle><mo>,</mo><mi>w</mi></mrow></mrow></msub><mo>=</mo><msub><mrow><mover accent="true"><mrow><mstyle mathvariant="italic"><mi>D</mi></mstyle></mrow><mo>.</mo></mover></mrow><mrow><mi>w</mi></mrow></msub><mo>/</mo><mfenced open="(" close=")"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>I</mi></mstyle></mrow><mrow><mi>w</mi></mrow></msub><msub><mrow><mi>k</mi></mrow><mrow><mtext>win</mtext></mrow></msub></mrow></mfenced></math></stem><dl id="_2dc248d7-cf23-1a81-844d-81312e804a4c" key="true"><dt><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mover accent="true"><mrow><mstyle mathvariant="italic"><mi>D</mi></mstyle></mrow><mo>.</mo></mover></mrow><mrow><mi>w</mi></mrow></msub></math></stem></dt>
+<dd><p id="_dca51e1a-ea23-a8f2-4a2d-a29f5eb84021">is the absorbed dose rate to water at the reference point, measured using the BIPM standard at a depth of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_g.cm-2"><mi mathvariant="normal">g</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem> in water;</p>
+</dd>
+<dt><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>I</mi></mstyle></mrow><mrow><mi>w</mi></mrow></msub></math></stem></dt>
+<dd><p id="_9831503f-2cd6-82d5-8c04-19bb4b6bbc6a">is the ionization current measured using the chamber under the BIPM reference conditions of air temperature, pressure and humidity;</p>
+</dd>
+<dt><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>win</mtext></mrow></msub><mo>=</mo><mn>0.9997</mn></math></stem></dt>
+<dd><p id="_41e709e2-9181-4b36-57a7-d53d6bf99a62">is a correction factor applied to <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>I</mi></mstyle></mrow><mrow><mi>w</mi></mrow></msub></math></stem> for the non-equivalence with water of the PMMA window of the phantom (required because a similar factor is applied to the BIPM standard).</p>
+</dd>
+</dl></formula>
+
+
+
+
+
+<p id="_03bf0890-7c45-abc9-3d70-f83d8fbd9cb9">The conditions of measurement at the BIPM are given in <xref target="table7"/>. The physical constants and correction factors used in the ionometric determination of the absorbed dose rate to water at <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_g.cm-2"><mi mathvariant="normal">g</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem> are given in <xref target="table9"/> along with their estimated relative uncertainties.</p>
+
+<p id="_f40ec652-d2b5-2410-d915-deedf7abd23a"><em>Medium-energy x-ray beams</em></p>
+
+<p id="_e3c924b9-c572-d755-4360-aad6f0add07e">Only waterproof thimble chamber types are accepted and are measured without a waterproof sleeve. For indirect comparisons and calibrations, the transfer chamber or national reference standard is positioned in the BIPM cubic water phantom of side length <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>20</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm"><mi mathvariant="normal">cm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem>. Its axis is placed in the reference plane, at the reference depth of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_g.cm-2"><mi mathvariant="normal">g</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem> in water. This depth includes the window of the phantom (PMMA, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0.200</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_g.cm-2"><mi mathvariant="normal">g</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem>). Because of the shallow depth, no correction is required for the change in water density with temperature.</p>
+
+<p id="_38fb2612-c539-9ece-e484-df86eef45cde">The calibration coefficient <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mrow><mstyle mathvariant="italic"><mi>D</mi></mstyle><mo>,</mo><mi>w</mi></mrow></mrow></msub></math></stem> is determined using the relation</p>
+
+<formula id="eq4"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mrow><mstyle mathvariant="italic"><mi>D</mi></mstyle><mo>,</mo><mi>w</mi></mrow></mrow></msub><mo>=</mo><msub><mrow><mover accent="true"><mrow><mstyle mathvariant="italic"><mi>D</mi></mstyle></mrow><mo>.</mo></mover></mrow><mrow><mi>w</mi></mrow></msub><mo>/</mo><msub><mrow><mstyle mathvariant="italic"><mi>I</mi></mstyle></mrow><mrow><mi>w</mi></mrow></msub><mo>,</mo></math></stem><dl id="_699b4801-ea8f-56ce-7b05-cbe3c3be6828" key="true"><dt><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mover accent="true"><mrow><mstyle mathvariant="italic"><mi>D</mi></mstyle></mrow><mo>.</mo></mover></mrow><mrow><mi>w</mi></mrow></msub></math></stem></dt>
+<dd><p id="_83e73950-6a1e-977c-267e-5e7f2822392a">is the absorbed dose rate to water at the reference point at a depth of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_g.cm-2"><mi mathvariant="normal">g</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem> in the water phantom, determined by the BIPM standard;</p>
+</dd>
+<dt><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>I</mi></mstyle></mrow><mrow><mi>w</mi></mrow></msub></math></stem></dt>
+<dd><p id="_c4af2be3-4084-b7dd-92f9-604be4de635c">is the ionization current measured using the chamber under the BIPM reference conditions of air temperature, pressure and humidity.</p>
+</dd>
+</dl></formula>
+
+
+
+
+
+<p id="_45940601-7268-1ea3-e5a5-aa580ae5624a">At the BIPM, the absorbed dose to water is derived from the air-kerma determination. The conditions of measurement are given in <xref target="table4"/>. The physical constants and correction factors used in the ionometric determination of air kerma and the factor for the conversion to absorbed dose to water are given in <xref target="table5"/> and their estimated relative uncertainties are given in <xref target="table6"/>.</p>
+</clause>
+
+<clause id="_use_of_calibration_coefficients" obligation="normative">
+<title>Use of calibration coefficients</title>
+<p id="_bdf41f33-c6e9-a282-2027-dcc7ae59573a">A transfer chamber or national reference standard calibrated in the BIPM beam can be used in another beam, taking the calibration coefficients <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mi mathvariant="normal">K</mi></mrow></msub></math></stem> or <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mrow><mi mathvariant="normal">D</mi><mo>,</mo><mi>w</mi></mrow></mrow></msub></math></stem> to determine <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>K</mi></mstyle></math></stem> or <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>D</mi></mstyle></mrow><mrow><mi>w</mi></mrow></msub></math></stem> in that beam, subject to certain provisions as listed below:</p>
+
+<ol id="_f8f35051-81f2-7a2c-7227-147189fd9d53" type="arabic"><li><p id="_6d0a97f7-1c63-4dd4-5be4-a3d7ec852a89">The humidity conditions must not differ significantly from those of the calibration at the BIPM. If the relative humidity is outside the range 30 % to 70 %, the recommendations of ICRU Report 90 (ICRU 2016) should be used.</p>
+</li>
+<li><p id="_8b4fb2a6-bde7-0daf-051e-12086f0a22bd">The conditions of measurement must not differ significantly from those of the calibration at the BIPM. Otherwise, additional corrections may be necessary as described by Boutillon <em>et al</em> (1993) and Boutillon (1996). Particular attention should be paid to:</p>
+<ul id="_80302b99-447e-678a-951c-64287a20fbde"><li><p id="_c65eaf8c-2ca3-9339-dbbf-0ed825802bed">the radiation quality, particularly in the x-ray range;</p>
+</li>
+<li><p id="_cfcac071-81a9-23cc-2e60-43867abb85df">the distance from the source;</p>
+</li>
+<li><p id="_5652f085-0ffa-2e91-c6a7-23df4c034736">the dimensions of the radiation field, in particular with regard to the radiation scattered by the stem and the support for calibration in terms of air kerma;</p>
+</li>
+<li><p id="_416f541e-0595-6a5c-19ea-091acea74904">the intensity of the ionization current, which can produce a change in the ion recombination;</p>
+</li>
+<li><p id="_54c629d2-f759-92fd-5ae9-2b240f59bcaa">the radial non-uniformity of the beam over the cross-section of the chamber.</p>
+</li>
+</ul>
+</li>
+</ol>
+</clause>
+
+<clause id="_comparison_and_calibration_uncertainties" obligation="normative">
+<title>Comparison and calibration uncertainties</title>
+<p id="_80e90b96-6452-1541-6afc-8eb8729c9f95">The uncertainties associated with dosimetry measurements made at the BIPM are analysed in accordance with the <em>Guide to the Expression of Uncertainty in Measurement</em> (JCGM 2008). The uncertainty budgets for the dosimetry standards are given in <xref target="table3"/>, <xref target="table6"/>, <xref target="table8"/> and <xref target="table9"/>. For comparisons, the BIPM standard uncertainties are combined with those associated with the primary or transfer chamber, taking correlation into account, to give the combined standard uncertainty of the comparison results. The detailed uncertainty budgets are given in the comparison report. For the calibration of national reference standards, the BIPM standard uncertainties are combined with the uncertainties associated with the chamber under calibration to give the combined standard uncertainty of the calibration coefficient. This value is given in the calibration certificate.</p>
+
+<p id="_1dc06507-5062-7bfc-fde9-13c48a5e1583">It is emphasized that the uncertainty associated with BIPM calibrations is a combined <em>standard</em> uncertainty without the application of a coverage factor <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></stem>. This long-standing practice of not applying a coverage factor is maintained to facilitate the combination of the BIPM and NMI uncertainties and thus simplify the subsequent dissemination of the standard to the customers of the NMI.</p>
+
+<p id="_01532a15-ad06-424e-0a1c-a0b332c5bc08">The BIPM dosimetry measurements fulfil the criteria of Annex G.6.6 of JCGM (2008). In particular, for the purpose of calculating the expanded uncertainty for their end result at a specified level of confidence, an NMI can assume that the effective number of degrees of freedom for a BIPM calibration is sufficient to be able to use a coverage factor <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi><mo>=</mo><mn>2</mn></math></stem> for a level of confidence of approximately 95 %. Any exceptions are noted in the calibration certificate.</p>
+
+<p id="_23dad634-83a6-79b5-2441-ccbd925b29b5" align="center"><strong>Conditions of measurement at the BIPM</strong></p>
+
+<table id="table1">
+<name>X-rays (<stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem> to <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>50</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem>)</name>
+<tbody><tr><td valign="top" align="left">X-ray tube</td>
+<td valign="top" align="center">W-anode</td>
+<td valign="top" align="center">Mo-anode</td>
+</tr><tr><td valign="top" align="left">Distance between beryllium window of x-ray tube and reference plane of standard</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>50</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm"><mi mathvariant="normal">cm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>60</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm"><mi mathvariant="normal">cm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+</tr><tr><td valign="top" align="left">Beam diameter in reference plane</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>8.4</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm"><mi mathvariant="normal">cm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm"><mi mathvariant="normal">cm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+</tr><tr><td valign="top" align="left">Beryllium filtration</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≈</mo><mn>3.0</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_mm"><mi mathvariant="normal">mm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0.8</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_mm"><mi mathvariant="normal">mm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+</tr></tbody>
+</table>
+
+<table id="_244d9698-e271-5ba3-172b-7470d5acf664" unnumbered="true"><tbody><tr><th colspan="6" valign="top" align="left">Reference qualities W-anode x-ray tube<fn reference="a"><p id="_95b44bbb-45ea-cab0-962c-d955ff4f3cdc">Recommended by Section I of the CCEMRI (1972, 1975).</p>
+</fn></th>
+</tr><tr><td valign="top" align="left">X-ray tube voltage / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">10</td>
+<td valign="top" align="center">30</td>
+<td valign="top" align="center">25</td>
+<td valign="top" align="center">50 (b)</td>
+<td valign="top" align="center">50 (a)<fn reference="b"><p id="_65b5ab16-136e-6a8b-6c3d-cb6b8beda3d9">The more heavily-filtered of the two <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>50</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem> radiation qualities.</p>
+</fn></td>
+</tr><tr><td valign="top" align="left">Al filtration / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_mm"><mi mathvariant="normal">mm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">0</td>
+<td valign="top" align="center">0.208</td>
+<td valign="top" align="center">0.372</td>
+<td valign="top" align="center">1.008</td>
+<td valign="top" align="center">3.989</td>
+</tr><tr><td valign="top" align="left">Al half-value layer / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_mm"><mi mathvariant="normal">mm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">0.037</td>
+<td valign="top" align="center">0.169</td>
+<td valign="top" align="center">0.242</td>
+<td valign="top" align="center">1.017</td>
+<td valign="top" align="center">2.262</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mrow><mstyle mathvariant="italic"><mi>μ</mi></mstyle></mrow><mo>¯</mo></mover><mo>/</mo><mstyle mathvariant="italic"><mi>ρ</mi></mstyle></math></stem><fn reference="c"><p id="_6a986f3f-5245-7e7e-1f30-0c78e88c20f2">Mass attenuation coefficient for air.</p>
+</fn> / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_cm2.g-1"><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mn>2</mn></mrow></msup><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">g</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">14.84</td>
+<td valign="top" align="center">3.66</td>
+<td valign="top" align="center">2.60</td>
+<td valign="top" align="center">0.75</td>
+<td valign="top" align="center">0.38</td>
+</tr><tr><td valign="top" align="left">air-kerma rate / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_mGy.s-1"><mi mathvariant="normal">mGy</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">s</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">1.00</td>
+<td valign="top" align="center">1.00</td>
+<td valign="top" align="center">1.00</td>
+<td valign="top" align="center">1.00</td>
+<td valign="top" align="center">1.00</td>
+</tr></tbody>
+</table>
+
+<table id="_f62754dd-3b3d-26b2-d063-1761f007ef6e" unnumbered="true"><tbody><tr><th colspan="5" valign="top" align="left">Reference qualities Mo-anode x-ray tube<fn reference="a"><p id="_346f9d13-de48-708c-0d12-2f3fcb1d8290">Endorsed by the CCRI (2011).</p>
+</fn></th>
+</tr><tr><td valign="top" align="left">X-ray tube voltage / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">25</td>
+<td valign="top" align="center">28</td>
+<td valign="top" align="center">30</td>
+<td valign="top" align="center">35</td>
+</tr><tr><td valign="top" align="left">Mo filtration / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_um"><mi mathvariant="normal">µm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">30</td>
+<td valign="top" align="center">30</td>
+<td valign="top" align="center">30</td>
+<td valign="top" align="center">30</td>
+</tr><tr><td valign="top" align="left">Al half-value layer / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_mm"><mi mathvariant="normal">mm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">0.277</td>
+<td valign="top" align="center">0.310</td>
+<td valign="top" align="center">0.329</td>
+<td valign="top" align="center">0.365</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mrow><mstyle mathvariant="italic"><mi>μ</mi></mstyle></mrow><mo>¯</mo></mover><mo>/</mo><mstyle mathvariant="italic"><mi>ρ</mi></mstyle></math></stem><fn reference="b"><p id="_e05e427b-6fba-5a1c-7c0d-6ce16e0e9a53">Mass attenuation coefficient for air.</p>
+</fn> / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_cm2.g-1"><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mn>2</mn></mrow></msup><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">g</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">2.20</td>
+<td valign="top" align="center">1.99</td>
+<td valign="top" align="center">1.91</td>
+<td valign="top" align="center">1.74</td>
+</tr><tr><td valign="top" align="left">air-kerma rate / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_mGy.s-1"><mi mathvariant="normal">mGy</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">s</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">2.00</td>
+<td valign="top" align="center">2.00</td>
+<td valign="top" align="center">2.00</td>
+<td valign="top" align="center">2.00</td>
+</tr></tbody>
+</table>
+
+<table id="_e0e656b8-5ed0-5e03-6bd6-b746e2daaea3" unnumbered="true"><tbody><tr><th colspan="8" valign="top" align="left">Reference qualities W-anode x-ray tube, Mo filter</th>
+</tr><tr><td valign="top" align="left">X-ray tube voltage / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">23</td>
+<td valign="top" align="center">25</td>
+<td valign="top" align="center">28</td>
+<td valign="top" align="center">30</td>
+<td valign="top" align="center">35</td>
+<td valign="top" align="center">40</td>
+<td valign="top" align="center">50</td>
+</tr><tr><td valign="top" align="left">Mo filtration / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_um"><mi mathvariant="normal">µm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">60</td>
+<td valign="top" align="center">60</td>
+<td valign="top" align="center">60</td>
+<td valign="top" align="center">60</td>
+<td valign="top" align="center">60</td>
+<td valign="top" align="center">60</td>
+<td valign="top" align="center">60</td>
+</tr><tr><td valign="top" align="left">Al half-value layer / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_mm"><mi mathvariant="normal">mm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">0.332</td>
+<td valign="top" align="center">0.342</td>
+<td valign="top" align="center">0.355</td>
+<td valign="top" align="center">0.364</td>
+<td valign="top" align="center">0.388</td>
+<td valign="top" align="center">0.417</td>
+<td valign="top" align="center">0.489</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mrow><mstyle mathvariant="italic"><mi>μ</mi></mstyle></mrow><mo>¯</mo></mover><mo>/</mo><mstyle mathvariant="italic"><mi>ρ</mi></mstyle></math></stem><fn reference="a"><p id="_6724ee6f-c4a2-cbad-a70c-aab02bfae64c">Mass attenuation coefficient for air.</p>
+</fn> / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_cm2.g-1"><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mn>2</mn></mrow></msup><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">g</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">1.79</td>
+<td valign="top" align="center">1.75</td>
+<td valign="top" align="center">1.70</td>
+<td valign="top" align="center">1.67</td>
+<td valign="top" align="center">1.60</td>
+<td valign="top" align="center">1.53</td>
+<td valign="top" align="center">1.40</td>
+</tr><tr><td valign="top" align="left">air-kerma rate / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_mGy.s-1"><mi mathvariant="normal">mGy</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">s</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">1.00</td>
+<td valign="top" align="center">1.00</td>
+<td valign="top" align="center">1.00</td>
+<td valign="top" align="center">1.00</td>
+<td valign="top" align="center">1.00</td>
+<td valign="top" align="center">1.00</td>
+<td valign="top" align="center">1.00</td>
+</tr></tbody>
+</table>
+
+<p id="_f6f9aca8-58fe-c97d-48fb-b8aa8588692f" align="center"><strong>Physical constants and correction factors used in the BIPM determination of the air-kerma rate</strong><fn reference="1"><p id="_9a7b3806-018e-573f-cfe4-2bf18a2b0ead">Details on the determination of the air-kerma rate are given in Boutillon <em>et al</em> (1969); correction factors are described by Burns (2004) and Burns <em>et al</em> (2009) for the W-anode qualities and by Kessler et al (2010) for the Mo-anode qualities.</p>
+</fn></p>
+
+<p id="_80a83a03-570e-7472-afb0-72807679a63a">Dry air density <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mfenced open="(" close=")"><mrow><mn>273.15</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
+
+
+
+
+
+
+
+
+
+<mtext>, </mtext><mn>101.325</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kPa"><mi mathvariant="normal">kPa</mi></mrow>
+
+
+
+
+
+
+
+
+</mrow></mfenced><mo>=</mo><mn>1.2930</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu27p10_3.u1e-3/1"><mi mathvariant="normal">kg</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">m</mi></mrow><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+
+</math></stem></p>
+
+<p id="_8f146937-b8e0-31c5-f151-8ad2c98756d5"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>W</mi></mstyle><mo>/</mo><mi>e</mi><mo>=</mo><mn>33.97</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_J.C-1"><mi mathvariant="normal">J</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">C</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+</math></stem></p>
+
+<table id="table2">
+<name>X-rays (<stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem> to <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>50</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem>)</name>
+<tbody><tr><th colspan="7" valign="top" align="left">W-anode x-ray tube</th>
+</tr><tr><td colspan="7" valign="top" align="left">Measuring volume FAC-L-01: <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1.2004</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm3"><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+</tr><tr><td colspan="2" valign="top" align="left">X-ray tube voltage / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">10</td>
+<td valign="top" align="center">30</td>
+<td valign="top" align="center">25</td>
+<td valign="top" align="center">50 (b)</td>
+<td valign="top" align="center">50 (a)</td>
+</tr><tr><td colspan="7" valign="top" align="left"><em>Correction factors</em></td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>sc</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">scattered radiation</td>
+<td valign="top" align="center">0.9962</td>
+<td valign="top" align="center">0.9972</td>
+<td valign="top" align="center">0.9973</td>
+<td valign="top" align="center">0.9977</td>
+<td valign="top" align="center">0.9979</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>fl</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">fluorescence</td>
+<td valign="top" align="center">0.9952</td>
+<td valign="top" align="center">0.9971</td>
+<td valign="top" align="center">0.9969</td>
+<td valign="top" align="center">0.9980</td>
+<td valign="top" align="center">0.9985</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>e</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">electron loss</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>ii</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">initial ionization<fn reference="a"><p id="_42df018b-b9cb-ae3b-1328-3c2282ee937c">Combined values for <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>ii</mtext></mrow></msub></math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>W</mtext></mrow></msub></math></stem> adopted from January 2019 (Burns and Kessler 2018).</p>
+</fn></td>
+<td valign="middle" rowspan="2" align="center">0.9953</td>
+<td valign="middle" rowspan="2" align="center">0.9968</td>
+<td valign="middle" rowspan="2" align="center">0.9969</td>
+<td valign="middle" rowspan="2" align="center">0.9977</td>
+<td valign="middle" rowspan="2" align="center">0.9980</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>w</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">energy dependence of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>W</mi></mstyle></mrow><mrow><mtext>air</mtext></mrow></msub></math></stem><fn reference="a"><p id="_75e0341e-fe7c-386a-9d34-e07f292693f2">Combined values for <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>ii</mtext></mrow></msub></math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>W</mtext></mrow></msub></math></stem> adopted from January 2019 (Burns and Kessler 2018).</p>
+</fn></td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>s</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">saturation</td>
+<td valign="top" align="center">1.0006</td>
+<td valign="top" align="center">1.0007</td>
+<td valign="top" align="center">1.0007</td>
+<td valign="top" align="center">1.0007</td>
+<td valign="top" align="center">1.0007</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>pol</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">polarity</td>
+<td valign="top" align="center">1.0005</td>
+<td valign="top" align="center">1.0005</td>
+<td valign="top" align="center">1.0005</td>
+<td valign="top" align="center">1.0005</td>
+<td valign="top" align="center">1.0005</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>a</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">air attenuation<fn reference="b"><p id="_96a6f6fd-ce12-7426-08fe-cc6dd61d66c9">Values at <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>293.15</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>101.325</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kPa"><mi mathvariant="normal">kPa</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem> for an attenuation length of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10.0</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm"><mi mathvariant="normal">cm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem>.</p>
+</fn></td>
+<td valign="top" align="center">1.1957</td>
+<td valign="top" align="center">1.0451</td>
+<td valign="top" align="center">1.0319</td>
+<td valign="top" align="center">1.0091</td>
+<td valign="top" align="center">1.0046</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>d</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">field distortion</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>dia</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">diaphragm</td>
+<td valign="top" align="center">0.9999</td>
+<td valign="top" align="center">0.9995</td>
+<td valign="top" align="center">0.9996</td>
+<td valign="top" align="center">0.9989</td>
+<td valign="top" align="center">0.9984</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>p</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">wall transmission</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>h</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">humidity</td>
+<td valign="top" align="center">0.998</td>
+<td valign="top" align="center">0.998</td>
+<td valign="top" align="center">0.998</td>
+<td valign="top" align="center">0.998</td>
+<td valign="top" align="center">0.998</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>−</mo><mi>g</mi></math></stem></td>
+<td valign="top" align="left">radiative loss</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+</tr></tbody>
+</table>
+
+<table id="_c7ebdc41-5b0e-91f1-c6ed-0bd66ca6838e" unnumbered="true"><tbody><tr><th colspan="6" valign="top" align="left">Mo-anode x-ray tube</th>
+</tr><tr><td colspan="6" valign="top" align="left">Measuring volume FAC-L-02: <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1.2197</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm3"><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+</tr><tr><td colspan="2" valign="top" align="left">X-ray tube voltage / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">25</td>
+<td valign="top" align="center">28</td>
+<td valign="top" align="center">30</td>
+<td valign="top" align="center">35</td>
+</tr><tr><td colspan="6" valign="top" align="left"><em>Correction factors</em></td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>sc</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">scattered radiation</td>
+<td valign="top" align="center">0.9977</td>
+<td valign="top" align="center">0.9977</td>
+<td valign="top" align="center">0.9978</td>
+<td valign="top" align="center">0.9978</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>fl</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">fluorescence</td>
+<td valign="top" align="center">0.9975</td>
+<td valign="top" align="center">0.9976</td>
+<td valign="top" align="center">0.9976</td>
+<td valign="top" align="center">0.9977</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>e</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">electron loss</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>ii</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">initial ionization<fn reference="a"><p id="_6753cf90-5264-0f16-cc21-b159e56a98e0">Combined values for <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>ii</mtext></mrow></msub></math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>W</mtext></mrow></msub></math></stem> adopted from January 2019 (Burns and Kessler 2018).</p>
+</fn></td>
+<td valign="top" rowspan="2" align="center">0.9968</td>
+<td valign="top" rowspan="2" align="center">0.9968</td>
+<td valign="top" rowspan="2" align="center">0.9969</td>
+<td valign="top" rowspan="2" align="center">0.9969</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>w</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">energy dependence of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>W</mi></mstyle></mrow><mrow><mtext>air</mtext></mrow></msub></math></stem><fn reference="a"><p id="_288948df-aa8e-4a6a-e0df-9ce503ab6294">Combined values for <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>ii</mtext></mrow></msub></math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>W</mtext></mrow></msub></math></stem> adopted from January 2019 (Burns and Kessler 2018).</p>
+</fn></td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>s</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">saturation</td>
+<td valign="top" align="center">1.0015</td>
+<td valign="top" align="center">1.0015</td>
+<td valign="top" align="center">1.0015</td>
+<td valign="top" align="center">1.0015</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>pol</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">polarity</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>a</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">air attenuation<fn reference="b"><p id="_97f36913-3e10-ffe0-7528-4dc3d13896f6">Values at <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>293.15</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>101.325</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kPa"><mi mathvariant="normal">kPa</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem> for an attenuation length of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10.0</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm"><mi mathvariant="normal">cm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem>.</p>
+</fn></td>
+<td valign="top" align="center">1.0269</td>
+<td valign="top" align="center">1.0244</td>
+<td valign="top" align="center">1.0233</td>
+<td valign="top" align="center">1.0212</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>d</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">field distortion</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>dia</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">diaphragm</td>
+<td valign="top" align="center">0.9996</td>
+<td valign="top" align="center">0.9995</td>
+<td valign="top" align="center">0.9995</td>
+<td valign="top" align="center">0.9995</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>p</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">wall transmission</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>h</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">humidity</td>
+<td valign="top" align="center">0.998</td>
+<td valign="top" align="center">0.998</td>
+<td valign="top" align="center">0.998</td>
+<td valign="top" align="center">0.998</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>−</mo><mi>g</mi></math></stem></td>
+<td valign="top" align="left">radiative loss</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+</tr></tbody>
+</table>
+
+<table id="_144ec774-b1c3-9599-bed6-facf6ee36a59" unnumbered="true"><tbody><tr><th colspan="9" valign="top" align="left">W-anode x-ray tube, Mo filter</th>
+</tr><tr><td colspan="9" valign="top" align="left">Measuring volume FAC-L-01: <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1.2004</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm3"><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+</tr><tr><td colspan="2" valign="top" align="left">X-ray tube voltage / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">23</td>
+<td valign="top" align="center">25</td>
+<td valign="top" align="center">28</td>
+<td valign="top" align="center">30</td>
+<td valign="top" align="center">35</td>
+<td valign="top" align="center">40</td>
+<td valign="top" align="center">50</td>
+</tr><tr><td colspan="9" valign="top" align="left"><em>Correction factors</em></td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>sc</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">scattered radiation</td>
+<td valign="top" align="center">0.9974</td>
+<td valign="top" align="center">0.9974</td>
+<td valign="top" align="center">0.9974</td>
+<td valign="top" align="center">0.9974</td>
+<td valign="top" align="center">0.9974</td>
+<td valign="top" align="center">0.9974</td>
+<td valign="top" align="center">0.9975</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>fl</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">Fluorescence</td>
+<td valign="top" align="center">0.9972</td>
+<td valign="top" align="center">0.9972</td>
+<td valign="top" align="center">0.9972</td>
+<td valign="top" align="center">0.9972</td>
+<td valign="top" align="center">0.9973</td>
+<td valign="top" align="center">0.9973</td>
+<td valign="top" align="center">0.9975</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>e</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">electron loss</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>ii</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">initial ionization<fn reference="a"><p id="_d76e6b92-145c-c41e-b6ed-4e218cf0c6e8">Combined values for <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>ii</mtext></mrow></msub></math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>W</mtext></mrow></msub></math></stem> adopted from January 2019 (Burns and Kessler 2018).</p>
+</fn></td>
+<td valign="top" rowspan="2" align="center">0.9971</td>
+<td valign="top" rowspan="2" align="center">0.9971</td>
+<td valign="top" rowspan="2" align="center">0.9971</td>
+<td valign="top" rowspan="2" align="center">0.9971</td>
+<td valign="top" rowspan="2" align="center">0.9972</td>
+<td valign="top" rowspan="2" align="center">0.9972</td>
+<td valign="top" rowspan="2" align="center">0.9973</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>w</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">energy dependence of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>W</mi></mstyle></mrow><mrow><mtext>air</mtext></mrow></msub></math></stem><fn reference="a"><p id="_42480b3a-7228-b06e-5071-dd2ca98643af">Combined values for <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>ii</mtext></mrow></msub></math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>W</mtext></mrow></msub></math></stem> adopted from January 2019 (Burns and Kessler 2018).</p>
+</fn></td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>s</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">Saturation</td>
+<td valign="top" align="center">1.0006</td>
+<td valign="top" align="center">1.0006</td>
+<td valign="top" align="center">1.0006</td>
+<td valign="top" align="center">1.0006</td>
+<td valign="top" align="center">1.0006</td>
+<td valign="top" align="center">1.0006</td>
+<td valign="top" align="center">1.0006</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>pol</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">Polarity</td>
+<td valign="top" align="center">1.0005</td>
+<td valign="top" align="center">1.0005</td>
+<td valign="top" align="center">1.0005</td>
+<td valign="top" align="center">1.0005</td>
+<td valign="top" align="center">1.0005</td>
+<td valign="top" align="center">1.0005</td>
+<td valign="top" align="center">1.0005</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>a</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">air attenuation<fn reference="b"><p id="_518b07d7-d87c-8796-1304-f92c561b8f87">Values at <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>293.15</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>101.325</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kPa"><mi mathvariant="normal">kPa</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem> for an attenuation length of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10.0</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm"><mi mathvariant="normal">cm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem>.</p>
+</fn></td>
+<td valign="top" align="center">1.0218</td>
+<td valign="top" align="center">1.0213</td>
+<td valign="top" align="center">1.0208</td>
+<td valign="top" align="center">1.0203</td>
+<td valign="top" align="center">1.0195</td>
+<td valign="top" align="center">1.0187</td>
+<td valign="top" align="center">1.0170</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>d</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">field distortion</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>dia</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">diaphragm</td>
+<td valign="top" align="center">0.9995</td>
+<td valign="top" align="center">0.9995</td>
+<td valign="top" align="center">0.9995</td>
+<td valign="top" align="center">0.9995</td>
+<td valign="top" align="center">0.9995</td>
+<td valign="top" align="center">0.9995</td>
+<td valign="top" align="center">0.9994</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>p</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">wall transmission</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>h</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">Humidity</td>
+<td valign="top" align="center">0.998</td>
+<td valign="top" align="center">0.998</td>
+<td valign="top" align="center">0.998</td>
+<td valign="top" align="center">0.998</td>
+<td valign="top" align="center">0.998</td>
+<td valign="top" align="center">0.998</td>
+<td valign="top" align="center">0.998</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>−</mo><mi>g</mi></math></stem></td>
+<td valign="top" align="left">radiative loss</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+</tr></tbody>
+</table>
+
+<p id="_e0264918-c20c-d1c6-0791-478cfdfa35c7" align="center"><strong>Estimated relative standard uncertainties in the BIPM determination of the air-kerma rate</strong></p>
+
+<table id="table3">
+<name>X-rays (<stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem> to <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>50</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem>)</name>
+<tbody><tr><td valign="top" rowspan="2" align="left">Symbol</td>
+<td valign="top" rowspan="2" align="left">Parameter / unit</td>
+<td colspan="2" valign="top" align="center"><p id="_da42cca8-7eb4-131b-9793-66dd69e5ff79"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mn>10</mn></mrow><mrow><mn>2</mn></mrow></msup><mo>×</mo></math></stem> Relative standard uncertainty<fn reference="a"><p id="_5c6bf337-c412-7df8-015e-983fd51452b3"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>s</mi></mrow><mrow><mi>i</mi></mrow></msub></math></stem> represents the relative uncertainty estimated by statistical methods (Type A); <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>u</mi></mrow><mrow><mi>i</mi></mrow></msub></math></stem> represents the relative uncertainty estimated by other methods (Type B).</p>
+</fn></p>
+</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>s</mi></mrow><mrow><mtext>i</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>u</mi></mrow><mrow><mtext>i</mtext></mrow></msub></math></stem></td>
+</tr><tr><td colspan="4" valign="top" align="left"><em>Physical constants</em></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>ρ</mi></mstyle></mrow><mrow><mtext>a</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">dry air density (<stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu23"><mi mathvariant="normal">°C</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>101.325</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kPa"><mi mathvariant="normal">kPa</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem>) / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu27p10_3.u1e-3/1"><mi mathvariant="normal">kg</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">m</mi></mrow><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.01</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>W</mi></mstyle><mo>/</mo><mi>e</mi></math></stem></td>
+<td valign="top" align="left">mean energy per charge / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_J.C-1"><mi mathvariant="normal">J</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">C</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.35<fn reference="b"><p id="_e7409def-76b0-68cf-13bc-1ab81a86e2f1">Value adopted from January 2019 (Burns and Kessler 2018).</p>
+</fn></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>g</mi></math></stem></td>
+<td valign="top" align="left">fraction of energy lost in radiative processes in air</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.01</td>
+</tr><tr><td colspan="4" valign="top" align="left"><em>Correction factors</em></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>sc</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">scattered radiation</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.03</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>fl</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">fluorescence</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.05</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>e</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">electron loss</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.01</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>ii</mtext></mrow></msub><msub><mrow><mi>k</mi></mrow><mrow><mtext>w</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">initial ionization and energy dependence of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>W</mi></mstyle></mrow><mrow><mtext>air</mtext></mrow></msub></math></stem><fn reference="b"><p id="_ac566c55-4b3f-327e-2a93-e2b5b90fdd8f">Value adopted from January 2019 (Burns and Kessler 2018).</p>
+</fn></td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.12</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>s</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">saturation</td>
+<td valign="top" align="center">0.01</td>
+<td valign="top" align="center">0.01</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>pol</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">polarity</td>
+<td valign="top" align="center">0.01</td>
+<td valign="top" align="center">–</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>a</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">air attenuation</td>
+<td valign="top" align="center">0.02</td>
+<td valign="top" align="center">0.01</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>d</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">field distortion</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.07</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>dia</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">diaphragm</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.03</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>p</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">wall transmission</td>
+<td valign="top" align="center">0.01</td>
+<td valign="top" align="center">–</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>h</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">humidity</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.03</td>
+</tr><tr><td colspan="4" valign="top" align="left"><em>Measurement of</em> <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>I</mi></mstyle><mo>/</mo><mstyle mathvariant="italic"><mi>ν</mi></mstyle></math></stem></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>I</mi></mstyle></math></stem></td>
+<td valign="top" align="left">ionization current (<stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>T</mi></mstyle></math></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>P</mi></mstyle></math></stem>, air compressibility)</td>
+<td valign="top" align="center">0.02</td>
+<td valign="top" align="center">0.02</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>ν</mi></mstyle></math></stem></td>
+<td valign="top" align="left">volume</td>
+<td valign="top" align="center">0.03</td>
+<td valign="top" align="center">0.05</td>
+</tr><tr><td valign="top" align="left"/><td valign="top" align="left">positioning of standard</td>
+<td valign="top" align="center">0.01</td>
+<td valign="top" align="center">0.01</td>
+</tr><tr><td colspan="4" valign="top" align="left"><em>Combined uncertainty of the BIPM determination of air-kerma rate</em> <sup>(3)</sup></td>
+</tr><tr><td colspan="2" valign="top" align="left">quadratic summation</td>
+<td valign="top" align="center">0.05</td>
+<td valign="top" align="center">0.39</td>
+</tr><tr><td colspan="2" valign="top" align="left">combined relative standard uncertainty</td>
+<td colspan="2" valign="top" align="center">0.39</td>
+</tr></tbody>
+</table>
+
+<p id="_53c36402-1d84-d055-e97d-6c28080d815d" align="center"><strong>Conditions of measurement at the BIPM</strong></p>
+
+<p id="_84281e6a-f88e-1343-2c56-f6639cdd154e">Distance between focal spot and reference plane of standard: <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>120</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm"><mi mathvariant="normal">cm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></p>
+
+<p id="_309bd479-eafa-26d8-1a35-1c2c157f5597">Beam diameter in the reference plane: <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>9.8</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm"><mi mathvariant="normal">cm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></p>
+
+<p id="_79c4230b-5f83-8265-6983-07c116520e23">Inherent filtration: <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≈</mo><mn>3</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_mm"><mi mathvariant="normal">mm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem> Be</p>
+
+<p id="_dca23f3a-0114-a6ac-8a66-f5049061d214">Reference depth for absorbed dose measurement: <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_g.cm-2"><mi mathvariant="normal">g</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem></p>
+
+<table id="table4">
+<name>X-rays (<stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>100</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem> to <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>250</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem>)</name>
+<tbody><tr><th colspan="5" valign="top" align="left">Reference qualities<fn reference="a"><p id="_ce9bf136-36b9-7d4c-9485-a8007e54b394">Recommended by Section I of the CCEMRI (1972).</p>
+</fn></th>
+</tr><tr><td valign="top" align="left">X-ray tube voltage / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">100</td>
+<td valign="top" align="center">135</td>
+<td valign="top" align="center">180</td>
+<td valign="top" align="center">250</td>
+</tr><tr><td valign="top" align="left">Al filtration / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_mm"><mi mathvariant="normal">mm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">3.431</td>
+<td valign="top" align="center">2.228</td>
+<td valign="top" align="center">2.228</td>
+<td valign="top" align="center">2.228</td>
+</tr><tr><td valign="top" align="left">Cu filtration / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_mm"><mi mathvariant="normal">mm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">-</td>
+<td valign="top" align="center">0.232</td>
+<td valign="top" align="center">0.485</td>
+<td valign="top" align="center">1.570</td>
+</tr><tr><td valign="top" align="left">Al half-value layer / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_mm"><mi mathvariant="normal">mm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">4.030</td>
+<td valign="top" align="center">-</td>
+<td valign="top" align="center">-</td>
+<td valign="top" align="center">-</td>
+</tr><tr><td valign="top" align="left">Cu half-value layer / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_mm"><mi mathvariant="normal">mm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">0.149</td>
+<td valign="top" align="center">0.489</td>
+<td valign="top" align="center">0.977</td>
+<td valign="top" align="center">2.484</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mrow><mstyle mathvariant="italic"><mi>μ</mi></mstyle></mrow><mo>¯</mo></mover><mo>/</mo><mstyle mathvariant="italic"><mi>ρ</mi></mstyle></math></stem><fn reference="b"><p id="_d2167af4-76d1-3401-7677-399a8a93e3b7">Mass attenuation coefficient for air.</p>
+</fn> / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_cm2.g-1"><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mn>2</mn></mrow></msup><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">g</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">0.290</td>
+<td valign="top" align="center">0.190</td>
+<td valign="top" align="center">0.162</td>
+<td valign="top" align="center">0.137</td>
+</tr><tr><td valign="top" align="left">air-kerma rate / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_mGy.s-1"><mi mathvariant="normal">mGy</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">s</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">0.50</td>
+<td valign="top" align="center">0.50</td>
+<td valign="top" align="center">0.50</td>
+<td valign="top" align="center">0.50</td>
+</tr><tr><td valign="top" align="left">Absorbed-dose-to-water rate / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_mGy.s-1"><mi mathvariant="normal">mGy</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">s</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">0.59</td>
+<td valign="top" align="center">0.71</td>
+<td valign="top" align="center">0.72</td>
+<td valign="top" align="center">0.68</td>
+</tr></tbody>
+</table>
+
+<p id="_2843debc-c562-a798-9f8a-30408aed28d6" align="center"><strong>Physical constants and correction factors used in the BIPM determination of the air-kerma rate<fn reference="2"><p id="_a738f4f9-9bf5-ea89-e046-a031004b5e56">Details on the determination of the air-kerma rate are described by Boutillon (1978) and the re-evaluation of the correction factors is described by Burns <em>et al</em> (2009).</p>
+</fn> and absorbed-dose-to-water rate<fn reference="3"><p id="_776bee83-7ffe-a7b8-6f93-77e1306af73c">Details on the determination of the absorbed-dose-to-water rate are described by Burns (2017).</p>
+</fn> and conversion factor from air kerma to absorbed dose to water</strong></p>
+
+<p id="_8b6cae42-4fc4-588c-9f4c-69337c0a13b1">Dry air density <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mfenced open="(" close=")"><mrow><mn>273.15</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
+
+
+
+
+
+
+
+
+
+<mtext>, </mtext><mn>101.325</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kPa"><mi mathvariant="normal">kPa</mi></mrow>
+
+
+
+
+
+
+
+
+</mrow></mfenced><mo>=</mo><mn>1.2930</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu27p10_3.u1e-3/1"><mi mathvariant="normal">kg</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">m</mi></mrow><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+
+</math></stem></p>
+
+<p id="_61ed9b80-20fe-efcf-196a-2085fe651dbf"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>W</mi></mstyle><mo>/</mo><mi>e</mi><mo>=</mo><mn>33.97</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_J.C-1"><mi mathvariant="normal">J</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">C</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+</math></stem></p>
+
+<table id="table5">
+<name>X-rays (<stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>100</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem> to <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>250</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem>)</name>
+<tbody><tr><th colspan="6" valign="top" align="left">W-anode x-ray tube</th>
+</tr><tr><td colspan="6" valign="top" align="left">Measuring volume FAC-M-01: <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>4.6554</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm3"><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+</tr><tr><td colspan="2" valign="top" align="left">X-ray tube voltage / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">100</td>
+<td valign="top" align="center">135</td>
+<td valign="top" align="center">180</td>
+<td valign="top" align="center">250</td>
+</tr><tr><td colspan="6" valign="top" align="left"><em>Correction factors</em></td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>sc</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">scattered radiation</td>
+<td valign="top" align="center">0.9952</td>
+<td valign="top" align="center">0.9959</td>
+<td valign="top" align="center">0.9964</td>
+<td valign="top" align="center">0.9974</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>fl</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">fluorescence</td>
+<td valign="top" align="center">0.9985</td>
+<td valign="top" align="center">0.9992</td>
+<td valign="top" align="center">0.9994</td>
+<td valign="top" align="center">0.9999</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>e</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">electron loss</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0015</td>
+<td valign="top" align="center">1.0047</td>
+<td valign="top" align="center">1.0085</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>ii</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">initial ionization<fn reference="a"><p id="_88faacf9-92bc-c52c-9b7b-745346d65af0">Combined values for <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>ii</mtext></mrow></msub></math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>W</mtext></mrow></msub></math></stem> adopted from June 2017 for absorbed dose to water and from January 2019 for air kerma (Burns and Kessler 2018).</p>
+</fn></td>
+<td valign="top" rowspan="2" align="center">0.9980</td>
+<td valign="top" rowspan="2" align="center">0.9980</td>
+<td valign="top" rowspan="2" align="center">0.9981</td>
+<td valign="top" rowspan="2" align="center">0.9986</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>w</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">energy dependence of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>W</mi></mstyle></mrow><mrow><mtext>air</mtext></mrow></msub></math></stem><fn reference="a"><p id="_51926905-0a85-8f2c-001b-bc8265ea7194">Combined values for <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>ii</mtext></mrow></msub></math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>W</mtext></mrow></msub></math></stem> adopted from June 2017 for absorbed dose to water and from January 2019 for air kerma (Burns and Kessler 2018).</p>
+</fn></td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>s</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">saturation</td>
+<td valign="top" align="center">1.0010</td>
+<td valign="top" align="center">1.0010</td>
+<td valign="top" align="center">1.0010</td>
+<td valign="top" align="center">1.0010</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>pol</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">polarity</td>
+<td valign="top" align="center">1.0002</td>
+<td valign="top" align="center">1.0002</td>
+<td valign="top" align="center">1.0002</td>
+<td valign="top" align="center">1.0002</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>a</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">air attenuation<fn reference="b"><p id="_d4b97500-5b9f-3fe4-2e15-f8c5a42e481c">Values at <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>293.15</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>101.325</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kPa"><mi mathvariant="normal">kPa</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem> for an attenuation length of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>28.15</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm"><mi mathvariant="normal">cm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem>.</p>
+</fn></td>
+<td valign="top" align="center">1.0099</td>
+<td valign="top" align="center">1.0065</td>
+<td valign="top" align="center">1.0055</td>
+<td valign="top" align="center">1.0047</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>d</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">field distortion</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>dia</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">diaphragm</td>
+<td valign="top" align="center">0.9995</td>
+<td valign="top" align="center">0.9993</td>
+<td valign="top" align="center">0.9991</td>
+<td valign="top" align="center">0.9980</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>p</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">wall transmission</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center">0.9999</td>
+<td valign="top" align="center">0.9988</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>h</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">humidity</td>
+<td valign="top" align="center">0.998</td>
+<td valign="top" align="center">0.998</td>
+<td valign="top" align="center">0.998</td>
+<td valign="top" align="center">0.998</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>–</mo><mi>g</mi></math></stem></td>
+<td valign="top" align="left">radiative loss</td>
+<td valign="top" align="center">0.9999</td>
+<td valign="top" align="center">0.9999</td>
+<td valign="top" align="center">0.9998</td>
+<td valign="top" align="center">0.9997</td>
+</tr><tr><td colspan="6" valign="top" align="left"><em>Conversion factor from air kerma to absorbed dose to water</em></td>
+</tr><tr><td colspan="2" valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mtext>w,air</mtext></mrow></msub></math></stem><fn reference="c"><p id="_e15e6764-931f-6b00-9951-c266656f61bc">Details on the determination of the absorbed-dose-to-water rate are described by Burns (2017).</p>
+</fn></td>
+<td valign="top" align="center">1.1840</td>
+<td valign="top" align="center">1.4294</td>
+<td valign="top" align="center">1.4429</td>
+<td valign="top" align="center">1.3673</td>
+</tr></tbody>
+</table>
+
+<p id="_d8a0ec80-b14d-226e-ba6f-352c6c76d0d9" align="center"><strong>Estimated relative standard uncertainties in the BIPM determination of the air-kerma rate and absorbed-dose-to-water rate</strong></p>
+
+<table id="table6">
+<name>X-rays (<stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>100</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem> to <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>250</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem>)</name>
+<tbody><tr><td valign="top" rowspan="2" align="left">Symbol</td>
+<td valign="top" rowspan="2" align="left">Parameter / unit</td>
+<td colspan="2" valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mn>10</mn></mrow><mrow><mn>2</mn></mrow></msup><mo>×</mo></math></stem> Relative standard uncertainty<fn reference="a"><p id="_6a4d7b5c-dac7-70aa-4310-e230f9245820"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>s</mi></mrow><mrow><mi>i</mi></mrow></msub></math></stem> represents the relative uncertainty estimated by statistical methods (Type A); <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>u</mi></mrow><mrow><mi>i</mi></mrow></msub></math></stem> represents the relative uncertainty estimated by other methods (Type B).</p>
+</fn></td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>s</mi></mrow><mrow><mtext>i</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>u</mi></mrow><mrow><mtext>i</mtext></mrow></msub></math></stem></td>
+</tr><tr><td colspan="4" valign="top" align="left"><em>Physical constants</em></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>ρ</mi></mstyle></mrow><mrow><mtext>a</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">dry air density (<stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu23"><mi mathvariant="normal">°C</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>101.325</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kPa"><mi mathvariant="normal">kPa</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem>) / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu27p10_3.u1e-3/1"><mi mathvariant="normal">kg</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">m</mi></mrow><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.01</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>W</mi></mstyle><mo>/</mo><mi>e</mi></math></stem></td>
+<td valign="top" align="left">mean energy per charge / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_J.C-1"><mi mathvariant="normal">J</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">C</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.35<fn reference="b"><p id="_e057c36c-9004-7eb6-1f8d-f59f753cd582">Value adopted from June 2017 for absorbed dose to water and from January 2019 for air kerma (Burns and Kessler 2018).</p>
+</fn></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>g</mi></math></stem></td>
+<td valign="top" align="left">fraction of energy lost in radiative processes in air</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.01</td>
+</tr><tr><td colspan="4" valign="top" align="left"><em>Correction factors</em></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>sc</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">scattered radiation</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.03</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>fl</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">fluorescence</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.03</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>e</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">electron loss</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.05</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>ii</mtext></mrow></msub><msub><mrow><mi>k</mi></mrow><mrow><mtext>w</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">initial ionization and energy dependence of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>W</mi></mstyle></mrow><mrow><mtext>air</mtext></mrow></msub></math></stem><fn reference="b"><p id="_99c9c78d-729f-036a-3e7a-ff5e7d01bd83">Value adopted from June 2017 for absorbed dose to water and from January 2019 for air kerma (Burns and Kessler 2018).</p>
+</fn></td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.05</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>s</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">saturation</td>
+<td valign="top" align="center">0.02</td>
+<td valign="top" align="center">0.01</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>pol</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">polarity</td>
+<td valign="top" align="center">0.01</td>
+<td valign="top" align="center">–</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>a</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">air attenuation</td>
+<td valign="top" align="center">0.02</td>
+<td valign="top" align="center">0.01</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>d</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">field distortion</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.07</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>dia</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">diaphragm</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.03</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>p</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">wall transmission</td>
+<td valign="top" align="center">0.01</td>
+<td valign="top" align="center">–</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>h</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">humidity</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.03</td>
+</tr><tr><td colspan="4" valign="top" align="left"><em>Measurement of</em> <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>I</mi></mstyle><mo>/</mo><mstyle mathvariant="italic"><mi>ν</mi></mstyle></math></stem></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>I</mi></mstyle></math></stem></td>
+<td valign="top" align="left">ionization current (<stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>T</mi></mstyle></math></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>P</mi></mstyle></math></stem>, air compressibility)</td>
+<td valign="top" align="center">0.02</td>
+<td valign="top" align="center">0.02</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>ν</mi></mstyle></math></stem></td>
+<td valign="top" align="left">volume</td>
+<td valign="top" align="center">0.01</td>
+<td valign="top" align="center">0.05</td>
+</tr><tr><td valign="top" align="left"/><td valign="top" align="left">positioning of standard</td>
+<td valign="top" align="center">0.01</td>
+<td valign="top" align="center">0.01</td>
+</tr><tr><td colspan="4" valign="top" align="left"><em>Combined uncertainty of the BIPM determination of air-kerma rate</em></td>
+</tr><tr><td colspan="2" valign="top" align="left">quadratic summation</td>
+<td valign="top" align="center">0.04</td>
+<td valign="top" align="center">0.37</td>
+</tr><tr><td colspan="2" valign="top" align="left">combined relative standard uncertainty</td>
+<td colspan="2" valign="top" align="center">0.38</td>
+</tr></tbody>
+</table>
+
+<table id="_4802bd5a-9f71-dc57-4596-05e4e3d280a0" unnumbered="true"><tbody><tr><td valign="top" rowspan="2" align="left">Symbol</td>
+<td valign="top" rowspan="2" align="left">Parameter / unit</td>
+<td colspan="2" valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mn>10</mn></mrow><mrow><mn>2</mn></mrow></msup><mo>×</mo></math></stem> Relative standard uncertainty<fn reference="a"><p id="_31bbd7d5-8817-b538-7c0b-4fc7dff47245"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>s</mi></mrow><mrow><mtext>i</mtext></mrow></msub></math></stem> represents the relative uncertainty estimated by statistical methods (Type A); <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>u</mi></mrow><mrow><mtext>i</mtext></mrow></msub></math></stem> represents the relative uncertainty estimated by other methods (Type B).</p>
+</fn></td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>s</mi></mrow><mrow><mtext>i</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>u</mi></mrow><mrow><mtext>i</mtext></mrow></msub></math></stem></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="normal">K</mi></math></stem></td>
+<td valign="top" align="left">air-kerma rate / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mtext>Gy s</mtext></mrow><mrow><mrow><mo>−</mo><mn>1</mn></mrow></mrow></msup></math></stem></td>
+<td valign="top" align="center">0.04</td>
+<td valign="top" align="center">0.37</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi mathvariant="normal">C</mi></mrow><mrow><mtext>w,air</mtext></mrow></msub></math></stem><fn reference="b"><p id="_e2e59757-e51b-5545-7472-7dfd6ed9821d">Value adopted from June 2017 for absorbed dose to water and from January 2019 for air kerma (Burns and Kessler 2018).</p>
+</fn></td>
+<td valign="top" align="left">conversion factor from air kerma to absorbed dose to water</td>
+<td valign="top" align="center">0.13</td>
+<td valign="top" align="center">0.40</td>
+</tr><tr><td colspan="4" valign="top" align="left"><em>Combined uncertainty of the BIPM determination of absorbed-dose-to-water rate</em></td>
+</tr><tr><td colspan="2" valign="top" align="left">quadratic summation</td>
+<td valign="top" align="center">0.14</td>
+<td valign="top" align="center">0.55</td>
+</tr><tr><td colspan="2" valign="top" align="left">combined relative standard uncertainty</td>
+<td colspan="2" valign="top" align="center">0.56</td>
+</tr></tbody>
+</table>
+
+<p id="_3daa700d-d6ae-1d7b-66d5-0455c5e015f7"><strong>Conditions of measurement at the BIPM</strong></p>
+
+<table id="table7">
+<name><sup>60</sup>Co gamma radiation</name>
+<tbody><tr><td colspan="2" valign="top" align="left">Radiotherapy level</td>
+</tr><tr><td colspan="2" valign="top" align="left"><em>Measurement of air kerma and absorbed dose to water</em></td>
+</tr><tr><td valign="top" align="left">Theratron source activity (2017-01-01)</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≈</mo><mn>65</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_TBq"><mi mathvariant="normal">TBq</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+</tr><tr><td valign="top" align="left">source type: solid discs of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>20</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_mm"><mi mathvariant="normal">mm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem> diameter</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="left">distance from source centre to reference plane</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu1"><mi mathvariant="normal">m</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+</tr><tr><td valign="top" align="left">beam section in the reference plane<fn reference="a"><p id="_c8e2c209-f12b-59d8-a02c-002e8cbfdc49">The photon fluence rate at the centre of each side of the <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm"><mi mathvariant="normal">cm</mi></mrow>
+
+
+
+
+
+
+
+
+<mo>×</mo><mn>10</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm"><mi mathvariant="normal">cm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem> field is 50 % of the photon fluence rate at the centre of the square.</p>
+</fn></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm"><mi mathvariant="normal">cm</mi></mrow>
+
+
+
+
+
+
+
+
+<mo>×</mo><mn>10</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_cm"><mi mathvariant="normal">cm</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+</tr><tr><td valign="top" align="left">reference depth for absorbed dose measurement</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_g.cm-2"><mi mathvariant="normal">g</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+</tr></tbody>
+</table>
+
+<p id="_243ac064-b48a-d7ed-fdd5-bc72ad7018d4" align="center"><strong>Physical constants and correction factors used in the BIPM determination of the air-kerma rate<fn reference="4"><p id="_b8d842aa-10be-e6ed-ab12-1efdfd02eff1">Details on the determination of air kerma are described by Boutillon <em>et al</em> (1973), Burns (2006), Burns <em>et al</em> (2007) and the re-evaluation of the standard is described in Burns and Kessler (2018).</p>
+</fn>, and their estimated relative standard uncertainties</strong></p>
+
+<table id="table8">
+<name><sup>60</sup>Co gamma radiation</name>
+<tbody><tr><td valign="top" rowspan="2" align="left">Symbol</td>
+<td valign="top" rowspan="2" align="left">Parameter / unit</td>
+<td colspan="2" valign="top" rowspan="2" align="center">Value</td>
+<td colspan="2" valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mn>10</mn></mrow><mrow><mn>2</mn></mrow></msup><mo>×</mo></math></stem> Relative standard uncertainty<fn reference="a"><p id="_15588bba-1dd8-f06c-6246-5f985a9cdeff"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>s</mi></mrow><mrow><mtext>i</mtext></mrow></msub></math></stem> represents the relative uncertainty estimated by statistical methods (Type A); <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>u</mi></mrow><mrow><mtext>i</mtext></mrow></msub></math></stem> represents the relative uncertainty estimated by other methods (Type B).</p>
+</fn></td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>s</mi></mrow><mrow><mtext>i</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>u</mi></mrow><mrow><mtext>i</mtext></mrow></msub></math></stem></td>
+</tr><tr><td colspan="6" valign="top" align="left"><em>Physical constants</em></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>ρ</mi></mstyle></mrow><mrow><mtext>a</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">dry air density (<stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu23"><mi mathvariant="normal">°C</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>101.325</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kPa"><mi mathvariant="normal">kPa</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem>) / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu27p10_3.u1e-3/1"><mi mathvariant="normal">kg</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">m</mi></mrow><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">1.2930</td>
+<td valign="top" align="center"/><td valign="top" align="center">–</td>
+<td valign="top" align="center">0.01</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mfenced open="(" close=")"><mrow><mover accent="true"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>μ</mi></mstyle></mrow><mrow><mtext>en</mtext></mrow></msub></mrow><mo>¯</mo></mover><mo>/</mo><mstyle mathvariant="italic"><mi>ρ</mi></mstyle></mrow></mfenced></mrow><mrow><mtext>a,c</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">ratio of mass energy-absorption coefficients</td>
+<td valign="top" align="center">0.9989</td>
+<td valign="top" align="center"/><td valign="top" align="center">0.01</td>
+<td valign="top" align="center">0.04</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>s</mi></mrow><mrow><mtext>c,a</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">ratio of mass stopping powers</td>
+<td valign="top" align="center">0.9928</td>
+<td valign="top" rowspan="2" align="center">}</td>
+<td valign="top" align="center"/><td valign="top" rowspan="2" align="center">0.08<fn reference="b"><p id="_868c6f8b-ab29-a5f2-7e10-2275e45ca412">Uncertainty value for the product <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>s</mi></mrow><mrow><mtext>c,a</mtext></mrow></msub><mstyle mathvariant="italic"><mi>W</mi></mstyle><mo>/</mo><mi>e</mi></math></stem> adopted from January 2019 (Burns and Kessler 2018).</p>
+</fn></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>W</mi></mstyle><mo>/</mo><mi>e</mi></math></stem></td>
+<td valign="top" align="left">mean energy per charge / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_J.C-1"><mi mathvariant="normal">J</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">C</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">33.97</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>g</mi></math></stem></td>
+<td valign="top" align="left">fraction of energy lost in radiative processes in air</td>
+<td valign="top" align="center">0.0031</td>
+<td valign="top" align="center"/><td valign="top" align="center">–</td>
+<td valign="top" align="center">0.02</td>
+</tr><tr><td colspan="6" valign="top" align="left"><em>Correction factors</em></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>g</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">re-absorption of radiative loss</td>
+<td valign="top" align="center">0.9996</td>
+<td valign="top" align="center"/><td valign="top" align="center">–</td>
+<td valign="top" align="center">0.01</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>h</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">humidity</td>
+<td valign="top" align="center">0.9970</td>
+<td valign="top" align="center"/><td valign="top" align="center">–</td>
+<td valign="top" align="center">0.03</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>s</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">saturation</td>
+<td valign="top" align="center">1.0022</td>
+<td valign="top" align="center"/><td valign="top" align="center">0.01</td>
+<td valign="top" align="center">0.02</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>st</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">stem scattering</td>
+<td valign="top" align="center">1.0000</td>
+<td valign="top" align="center"/><td valign="top" align="center">0.01</td>
+<td valign="top" align="center">–</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>wall</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">wall attenuation and scattering</td>
+<td valign="top" align="center">1.0011</td>
+<td valign="top" rowspan="2" align="center">}</td>
+<td valign="top" align="center"/><td valign="top" rowspan="2" align="center">–<fn reference="c"><p id="_6e734264-24e4-16aa-bd52-894d416ea7f0">The uncertainties for kwall and kan are included in the determination of the effective volume (Burns et al 2007).</p>
+</fn></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>an</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">axial non-uniformity</td>
+<td valign="top" align="center">1.0020</td>
+<td valign="top" align="center"/></tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>rn</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">radial non-uniformity</td>
+<td valign="top" align="center">1.0015</td>
+<td valign="top" align="center"/><td valign="top" align="center">–</td>
+<td valign="top" align="center">0.02</td>
+</tr><tr><td colspan="6" valign="top" align="left"><em>Measurement of</em> <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>I</mi></mstyle><mo>/</mo><mstyle mathvariant="italic"><mi>ν</mi></mstyle></math></stem></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>ν</mi></mstyle></math></stem></td>
+<td valign="top" align="left">effective volume / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_cm3"><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">6.8855<fn reference="d"><p id="_59d3e40e-d13c-5ef2-88d6-81f1fe141d17">Standard CH6-1</p>
+</fn></td>
+<td valign="top" align="center"/><td valign="top" align="center">–</td>
+<td valign="top" align="center">0.08<fn reference="c"><p id="_ab9bdeee-3c82-7788-c4a4-ffc10c4c0fcf">The uncertainties for kwall and kan are included in the determination of the effective volume (Burns et al 2007).</p>
+</fn></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>I</mi></mstyle></math></stem></td>
+<td valign="top" align="left">ionization current (<stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>T</mi></mstyle></math></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>P</mi></mstyle></math></stem>, air compressibility)</td>
+<td valign="top" align="center"/><td valign="top" align="center">–</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.02</td>
+</tr><tr><td valign="top" align="left"/><td valign="top" align="left"><p id="_aa31662a-f919-6e61-08a3-429d76fe537c">short-term reproducibility (including positioning and current measurement)<fn reference="e"><p id="_0570001b-c100-3bdc-ea1a-d09331ea24a1">Over a period of 3 months. The long-term reproducibility over a period of 15 years, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>u</mi></mrow><mrow><mtext>rep</mtext></mrow></msub></math></stem>, is 0.0004.</p>
+</fn></p>
+</td>
+<td valign="top" align="center"/><td valign="top" align="center">–</td>
+<td valign="top" align="center">0.01</td>
+<td valign="top" align="center">–</td>
+</tr><tr><td colspan="6" valign="top" align="left"><p id="_8ed372b5-ef49-0324-34b4-7953a28a501b"><em>Combined uncertainty of the BIPM determination of air-kerma rate at 1 m</em></p>
+</td>
+</tr><tr><td colspan="4" valign="top" align="left">quadratic summation</td>
+<td valign="top" align="center">0.02</td>
+<td valign="top" align="center">0.13</td>
+</tr><tr><td colspan="4" valign="top" align="left">combined relative standard uncertainty</td>
+<td colspan="2" valign="top" align="center">0.13</td>
+</tr></tbody>
+</table>
+
+<p id="_1f0ed6d7-9c3f-8e3a-621c-626865853b15" align="center"><strong>Physical constants and correction factors used in the BIPM ionometric determination of the absorbed-dose-to-water rate<fn reference="5"><p id="_9862edca-b486-211a-a16e-3c54cdff3422">Details on the determination of absorbed dose to water are described by Boutillon <em>et al</em> (1993) and the re-evaluation of the standard is described by Burns and Kessler (2018).</p>
+</fn> at <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_g.cm-2"><mi mathvariant="normal">g</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem>, and their estimated relative standard uncertainties</strong></p>
+
+<table id="table9">
+<name><sup>60</sup>Co gamma radiation</name>
+<tbody><tr><td valign="top" rowspan="2" align="left">Symbol</td>
+<td valign="top" rowspan="2" align="left">Parameter / unit</td>
+<td valign="top" rowspan="2" align="center">Value</td>
+<td colspan="2" valign="top" align="center"><p id="_7949aec3-6bc9-b0f8-e6af-19e34cf7e178"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mn>10</mn></mrow><mrow><mn>2</mn></mrow></msup><mo>×</mo></math></stem> Relative standard uncertainty<fn reference="a"><p id="_28d6619e-c8f1-8615-cf00-42101423176d"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>s</mi></mrow><mrow><mtext>i</mtext></mrow></msub></math></stem> represents the relative uncertainty estimated by statistical methods (Type A); <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>u</mi></mrow><mrow><mtext>i</mtext></mrow></msub></math></stem> represents the relative uncertainty estimated by other methods (Type B).</p>
+</fn></p>
+</td>
+</tr><tr><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>s</mi></mrow><mrow><mtext>i</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>u</mi></mrow><mrow><mtext>i</mtext></mrow></msub></math></stem></td>
+</tr><tr><td colspan="5" valign="top" align="left"><em>Physical constants</em></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>ρ</mi></mstyle></mrow><mrow><mtext>a</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">dry air density (<stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu23"><mi mathvariant="normal">°C</mi></mrow>
+
+
+
+
+
+
+
+
+
+<mo>,</mo><mi>s</mi><mi>t</mi><mi>e</mi><mi>m</mi><mo>:</mo><mfenced open="[" close=""><mrow><mn>101.325</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kPa"><mi mathvariant="normal">kPa</mi></mrow>
+
+
+
+
+
+
+
+
+</mrow></mfenced></math></stem>) / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu27p10_3.u1e-3/1"><mi mathvariant="normal">kg</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">m</mi></mrow><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">1.2930</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.01</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mfenced open="(" close=")"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>μ</mi></mstyle></mrow><mrow><mtext>en</mtext></mrow></msub><mo>/</mo><mstyle mathvariant="italic"><mi>ρ</mi></mstyle></mrow></mfenced></mrow><mrow><mtext>w,g</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left"><p id="_a4f84c66-da90-228d-7a42-a9b8e4e80157">ratio of mass energy-absorption coefficients</p>
+</td>
+<td valign="top" align="center">1.1131</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.05</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>W</mi></mstyle><mo>/</mo><mi>e</mi></math></stem></td>
+<td valign="top" align="left">mean energy per charge / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_J.C-1"><mi mathvariant="normal">J</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">C</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">33.97</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.08</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>D</mi></mstyle></mrow><mrow><mtext>g,air</mtext></mrow></msub><mo>=</mo><msub><mrow><mi>s</mi></mrow><mrow><mtext>g,air</mtext></mrow></msub><msub><mrow><mi>k</mi></mrow><mrow><mtext>cav</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left"><p id="_f63a68e6-2c7d-8203-23cb-c77e3498e7c8">product of the ratio of mass stopping powers and cavity perturbation correction</p>
+</td>
+<td valign="top" align="center">0.9958</td>
+<td valign="top" align="center">0.02</td>
+<td valign="top" align="center">0.13</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>ψ</mi></mstyle></mrow><mrow><mtext>w,g</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">fluence ratio</td>
+<td valign="top" align="center">1.0037</td>
+<td valign="top" align="center">0.01</td>
+<td valign="top" align="center">0.07</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mtext>w,g</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left"><p id="_7e7ee9c6-d909-aa5f-174c-3a6c765d5ddb">absorbed-dose-to-collision-kerma ratio</p>
+</td>
+<td valign="top" align="center">0.9998</td>
+<td valign="top" align="center">0.01</td>
+<td valign="top" align="center">0.01</td>
+</tr><tr><td colspan="5" valign="top" align="left"><em>Correction factors</em></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>env</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">envelope of the chamber</td>
+<td valign="top" align="center">0.9993</td>
+<td valign="top" align="center">0.01</td>
+<td valign="top" align="center">0.02</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>win</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">entrance window of the phantom</td>
+<td valign="top" align="center">0.9997</td>
+<td valign="top" align="center">0.01</td>
+<td valign="top" align="center">0.01</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>rn</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">radial non-uniformity</td>
+<td valign="top" align="center">1.0056</td>
+<td valign="top" align="center">0.01</td>
+<td valign="top" align="center">0.03</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>s</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">saturation</td>
+<td valign="top" align="center">1.0021</td>
+<td valign="top" align="center">0.01</td>
+<td valign="top" align="center">0.02</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>h</mtext></mrow></msub></math></stem></td>
+<td valign="top" align="left">humidity</td>
+<td valign="top" align="center">0.9970</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.03</td>
+</tr><tr><td colspan="5" valign="top" align="left"><em>Measurement of</em> <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>I</mi></mstyle><mo>/</mo><mstyle mathvariant="italic"><mi>ν</mi></mstyle></math></stem></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>ν</mi></mstyle></math></stem></td>
+<td valign="top" align="left">volume / <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_cm3"><msup><mrow><mi mathvariant="normal">cm</mi></mrow><mrow><mn>3</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math></stem></td>
+<td valign="top" align="center">6.7928<fn reference="b"><p id="_93df9318-f46c-b053-315e-be9cce1c5670">Standard CH7-1.</p>
+</fn></td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.08</td>
+</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>I</mi></mstyle></math></stem></td>
+<td valign="top" align="left">ionization current (<stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>T</mi></mstyle></math></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>P</mi></mstyle></math></stem>, air compressibility)</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">–</td>
+<td valign="top" align="center">0.02</td>
+</tr><tr><td valign="top" align="left"/><td valign="top" align="left"><p id="_0eb78f3b-87f7-0ac9-bd9b-4989ec1419a9">short-term reproducibility (including positioning and current measurement)<fn reference="c"><p id="_40570e01-d12c-7e62-93da-968a25740786">Over a period of 3 months. The long-term reproducibility over a period of 15 years, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>u</mi></mrow><mrow><mtext>rep</mtext></mrow></msub></math></stem>, is 0.0006.</p>
+</fn></p>
+</td>
+<td valign="top" align="center"/><td valign="top" align="center">0.02</td>
+<td valign="top" align="center">–</td>
+</tr><tr><td colspan="5" valign="top" align="left"><em>Combined uncertainty of the BIPM determination of absorbed-dose rate to water</em></td>
+</tr><tr><td colspan="3" valign="top" align="left">quadratic summation</td>
+<td valign="top" align="center">0.04</td>
+<td valign="top" align="center">0.18</td>
+</tr><tr><td colspan="3" valign="top" align="left">combined relative standard uncertainty</td>
+<td colspan="2" valign="top" align="center">0.19</td>
+</tr></tbody>
+</table>
+</clause>
+
+
+</sections><bibliography><references id="_references" normative="false" obligation="informative">
+<title>References</title><bibitem id="boutillon1">
+  <formattedref format="application/x-isodoc+xml">Boutillon M, Henry W H and Lamperti PJ 1969 Comparison of exposure standards in the <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn><mo>−</mo><mn>50</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem> x-ray region <link target="https://www.iop.org/EJ/abstract/0026-1394/5/1/002/"><em>Metrologia</em>, <strong>5</strong>, 1-11</link>.</formattedref>
+  <docidentifier type="metanorma">[1]</docidentifier>
+</bibitem><bibitem id="boutillon2">
+  <formattedref format="application/x-isodoc+xml">Boutillon M and Niatel M-T 1973 A study of a graphite chamber for absolute exposure measurement of <sup>60</sup>Co gamma rays <link target="https://www.iop.org/EJ/abstract/0026-1394/9/4/001/"><em>Metrologia</em>, <strong>9</strong>, 139-146</link></formattedref>
+  <docidentifier type="metanorma">[2]</docidentifier>
+</bibitem><bibitem id="boutillon3">
+  <formattedref format="application/x-isodoc+xml">Boutillon M 1978 Mesure de l’exposition au BIPM dans le domaine des rayons X de <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>100</mn></math></stem> à <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>250</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_kV"><mi mathvariant="normal">kV</mi></mrow>
+
+
+
+
+
+
+
+
+</math></stem> <link target="https://www.bipm.org/utils/common/pdf/rapportBIPM/1978/03.pdf"><em>Rapport BIPM-78/3</em></link>.</formattedref>
+  <docidentifier type="metanorma">[3]</docidentifier>
+</bibitem><bibitem id="boutillon4">
+  <formattedref format="application/x-isodoc+xml">Boutillon M and Perroche A-M 1993 Determination of calibration factors in terms of air kerma and absorbed dose to water in the <sup>60</sup>Co gamma rays SSDL Newsletter <strong>32</strong>.</formattedref>
+  <docidentifier type="metanorma">[4]</docidentifier>
+</bibitem><bibitem id="boutillon5">
+  <formattedref format="application/x-isodoc+xml">Boutillon M and Perroche A-M 1993 Ionometric determination of absorbed dose to water for cobalt-60 gamma rays, <link target="https://www.iop.org/EJ/abstract/0031-9155/38/3/010/"><em>Phys. Med. Biol.</em> <strong>38</strong>, 439-454</link></formattedref>
+  <docidentifier type="metanorma">[5]</docidentifier>
+</bibitem><bibitem id="boutillon6">
+  <formattedref format="application/x-isodoc+xml">Boutillon M 1996 Behaviour of transfer chambers in the low-energy x-ray range <link target="https://www.iop.org/EJ/abstract/0026-1394/33/5/7/"><em>Metrologia</em> <strong>33</strong> 479-484</link>.</formattedref>
+  <docidentifier type="metanorma">[6]</docidentifier>
+</bibitem><bibitem id="burns7">
+  <formattedref format="application/x-isodoc+xml">Burns D T 2004 Changes to the BIPM primary air-kerma standards for x-rays <link target="https://www.iop.org/EJ/abstract/0026-1394/41/1/L02/"><em>Metrologia</em> <strong>41</strong> L3</link>.</formattedref>
+  <docidentifier type="metanorma">[7]</docidentifier>
+</bibitem><bibitem id="burns8">
+  <formattedref format="application/x-isodoc+xml">Burns D T 2006 A new approach to the determination of air kerma using primary-standard cavity ionization chambers <link target="https://www.iop.org/EJ/abstract/0031-9155/51/4/012/"><em>Phys. Med. Biol.</em> <strong>51</strong>, 929-942</link></formattedref>
+  <docidentifier type="metanorma">[8]</docidentifier>
+</bibitem><bibitem id="burns9">
+  <formattedref format="application/x-isodoc+xml">Burns D T, Allisy P J and Kessler C 2007 Re-evaluation of the BIPM international standard for air kerma in <sup>60</sup>Co gamma radiation, <link target="https://www.iop.org/EJ/abstract/0026-1394/44/6/N02"><em>Metrologia</em>, 44, L53-L56</link></formattedref>
+  <docidentifier type="metanorma">[9]</docidentifier>
+</bibitem><bibitem id="burns10">
+  <formattedref format="application/x-isodoc+xml">Burns D T, Kessler C and Allisy P J 2009 Re-evaluation of the BIPM international standards for air kerma in x-rays <link target="https://www.bipm.org/metrologia/ViewArticle.jsp?VOLUME=46&amp;PAGE=L21-L23"><em>Metrologia</em>, 46, L21-L23</link></formattedref>
+  <docidentifier type="metanorma">[10]</docidentifier>
+</bibitem><bibitem id="burns11">
+  <formattedref format="application/x-isodoc+xml">Burns D T 2017 New BIPM absorbed dose standard for medium-energy x-rays <link target="https://www.bipm.org/cc/AllowedDocuments.jsp">CCRI(I)/17-08</link></formattedref>
+  <docidentifier type="metanorma">[11]</docidentifier>
+</bibitem><bibitem id="burns12">
+  <formattedref format="application/x-isodoc+xml">Burns D T and Kessler C 2018 Re-evaluation of the BIPM international dosimetry standards on adoption of the recommendations of ICRU Report 90 <link target="https://iopscience.iop.org/article/10.1088/1681-7575/aacb01"><em>Metrologia</em> <strong>55</strong> R21-R26</link></formattedref>
+  <docidentifier type="metanorma">[12]</docidentifier>
+</bibitem><bibitem id="ccemri13">
+  <formattedref format="application/x-isodoc+xml">CCEMRI 1972 Qualités de rayonnement <em>Comité Consultative pour les Etalons de Mesures des Rayonnements Ionisants (Section I)</em> 2 R15 (Offilib, 75240 Paris Cedex 05)</formattedref>
+  <docidentifier type="metanorma">[13]</docidentifier>
+</bibitem><bibitem id="ccemri14">
+  <formattedref format="application/x-isodoc+xml">CCEMRI 1975 Qualités de rayonnement <em>Comité Consultative pour les Etalons de Mesures des Rayonnements Ionisants (Section I)</em> <strong>3</strong> R(I)6 (Offilib, F-75240 Paris Cedex 05)</formattedref>
+  <docidentifier type="metanorma">[14]</docidentifier>
+</bibitem><bibitem id="ccri">
+  <formattedref format="application/x-isodoc+xml">CCRI 2011 Mammography dosimetry radiation qualities Consultative <em>Committee for Ionizing Radiation</em> 22nd meeting report (2011)</formattedref>
+  <docidentifier type="metanorma">[15]</docidentifier>
+</bibitem><bibitem id="icru">
+  <formattedref format="application/x-isodoc+xml">ICRU 2016 Key data for ionizing radiation dosimetry: Measurement standards and applications <link target="https://academic.oup.com/jicru/article/14/1/NP/2468591"><em>J. ICRU</em> <strong>14</strong> ICRU Report 90</link> (Oxford University Press)</formattedref>
+  <docidentifier type="metanorma">[16]</docidentifier>
+</bibitem><bibitem id="jcgm">
+  <formattedref format="application/x-isodoc+xml">JCGM 2008 <em>Evaluation of measurement data – Guide to the expression of uncertainty in measurement</em> <link target="https://www.bipm.org/utils/common/documents/jcgm/JCGM_100_2008_E.pdf">JCGM 100:2008</link> (GUM with minor corrections)</formattedref>
+  <docidentifier type="metanorma">[17]</docidentifier>
+</bibitem><bibitem id="kessler">
+  <formattedref format="application/x-isodoc+xml">Kessler C, Roger P and Burns D T 2010 Establishment of reference radiation qualities for mammography <link target="https://www.bipm.org/utils/common/pdf/rapportBIPM/2010/01.pdf"><em>Rapport BIPM-2010/01</em></link></formattedref>
+  <docidentifier type="metanorma">[18]</docidentifier>
+</bibitem>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</references></bibliography>
+</bipm-standard>

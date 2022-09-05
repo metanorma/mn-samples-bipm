@@ -1,0 +1,1466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bipm-standard xmlns="https://www.metanorma.org/ns/bipm" type="presentation" version="2.1.7">
+<bibdata type="standard">
+<title language="en" format="text/plain" type="main">How to define the base units of the revised SI from seven constants with fixed numerical values</title>
+
+<docidentifier type="BIPM">BIPM BIPM-2018/02</docidentifier><docnumber>BIPM-2018/02</docnumber><contributor><role type="author"/><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"/><person>
+<name><completename>Richard Davis</completename></name>
+<affiliation><organization>
+<name>BIPM</name>
+</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition language="">3</edition><edition language="en">third edition</edition><version><revision-date>2018-04-06</revision-date></version><language current="true">en</language><script current="true">Latn</script><status><stage>in-force</stage></status><copyright><from>2018</from><owner><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem><date type="circulated"/><version/></bibitem>
+</relation><ext><doctype>rapport</doctype><editorialgroup><committee acronym=""/></editorialgroup><si-aspect>full</si-aspect><structuredidentifier><docnumber>BIPM-2018/02</docnumber></structuredidentifier></ext></bibdata><localized-strings><localized-string key="scope" language="en">Scope</localized-string><localized-string key="symbolsabbrev" language="en">Symbols and abbreviated terms</localized-string><localized-string key="abbrev" language="en">Abbreviated terms</localized-string><localized-string key="symbols" language="en">Symbols</localized-string><localized-string key="table_of_contents" language="en">Contents</localized-string><localized-string key="introduction" language="en">Introduction</localized-string><localized-string key="foreword" language="en">Foreword</localized-string><localized-string key="abstract" language="en">Abstract</localized-string><localized-string key="acknowledgements" language="en">Acknowledgements</localized-string><localized-string key="termsdef" language="en">Terms and definitions</localized-string><localized-string key="termsdefsymbolsabbrev" language="en">Terms, definitions, symbols and abbreviated terms</localized-string><localized-string key="termsdefsymbols" language="en">Terms, definitions and symbols</localized-string><localized-string key="termsdefabbrev" language="en">Terms, definitions and abbreviated terms</localized-string><localized-string key="normref" language="en">Normative references</localized-string><localized-string key="bibliography" language="en">References</localized-string><localized-string key="preface" language="en">Preface</localized-string><localized-string key="clause" language="en">Chapter</localized-string><localized-string key="annex" language="en">Appendix</localized-string><localized-string key="appendix" language="en">Annex</localized-string><localized-string key="no_terms_boilerplate" language="en"><p>No terms and definitions are listed in this document.</p>
+</localized-string><localized-string key="internal_terms_boilerplate" language="en"><p>For the purposes of this document, 
+    the following terms and definitions apply.</p>
+</localized-string><localized-string key="norm_with_refs_pref" language="en">The following referenced documents are indispensable for the application of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</localized-string><localized-string key="norm_empty_pref" language="en">There are no normative references in this document.</localized-string><localized-string key="external_terms_boilerplate" language="en"><p>For the purposes of this document, 
+  the terms and definitions given in % apply.</p>
+</localized-string><localized-string key="internal_external_terms_boilerplate" language="en"><p>For the purposes of this document, the terms and definitions 
+  given in % and the following apply.</p>
+</localized-string><localized-string key="term_defined_in" language="en">[term defined in %]</localized-string><localized-string key="binary_and" language="en">%1 and %2</localized-string><localized-string key="multiple_and" language="en">%1, and %2</localized-string><localized-string key="binary_or" language="en">%1 or %2</localized-string><localized-string key="multiple_or" language="en">%1, or %2</localized-string><localized-string key="chain_and" language="en">%1 and %2</localized-string><localized-string key="chain_or" language="en">%1 or %2</localized-string><localized-string key="chain_from" language="en">%1 from %2</localized-string><localized-string key="chain_to" language="en">%1 to %2</localized-string><localized-string key="SpelloutRules" language="en">spellout-ordinal</localized-string><localized-string key="note" language="en">NOTE</localized-string><localized-string key="note_xref" language="en">Note</localized-string><localized-string key="termnote" language="en">Note % to entry</localized-string><localized-string key="list" language="en">List</localized-string><localized-string key="deflist" language="en">Definition List</localized-string><localized-string key="figure" language="en">Figure</localized-string><localized-string key="formula" language="en">Equation</localized-string><localized-string key="inequality" language="en">Inequality</localized-string><localized-string key="table" language="en">Table</localized-string><localized-string key="requirement" language="en">Requirement</localized-string><localized-string key="recommendation" language="en">Recommendation</localized-string><localized-string key="permission" language="en">Permission</localized-string><localized-string key="recommendationtest" language="en">Recommendation test</localized-string><localized-string key="requirementtest" language="en">Requirement test</localized-string><localized-string key="permissiontest" language="en">Permission test</localized-string><localized-string key="recommendationclass" language="en">Recommendations class</localized-string><localized-string key="requirementclass" language="en">Requirements class</localized-string><localized-string key="permissionclass" language="en">Permissions class</localized-string><localized-string key="abstracttest" language="en">Abstract test</localized-string><localized-string key="conformanceclass" language="en">Conformance class</localized-string><localized-string key="key" language="en">Key</localized-string><localized-string key="example" language="en">EXAMPLE</localized-string><localized-string key="example_xref" language="en">Example</localized-string><localized-string key="where" language="en">where</localized-string><localized-string key="wholeoftext" language="en">Whole of text</localized-string><localized-string key="draft_label" language="en">draft</localized-string><localized-string key="inform_annex" language="en">informative</localized-string><localized-string key="norm_annex" language="en">normative</localized-string><localized-string key="modified" language="en">modified</localized-string><localized-string key="deprecated" language="en">DEPRECATED</localized-string><localized-string key="source" language="en">Adapted from</localized-string><localized-string key="and" language="en">and</localized-string><localized-string key="all_parts" language="en">All Parts</localized-string><localized-string key="edition_ordinal" language="en">%Spellout edition</localized-string><localized-string key="edition" language="en">edition</localized-string><localized-string key="version" language="en">version</localized-string><localized-string key="toc_figures" language="en">List of figures</localized-string><localized-string key="toc_tables" language="en">List of tables</localized-string><localized-string key="toc_recommendations" language="en">List of recommendations</localized-string><localized-string key="month_january" language="en">January</localized-string><localized-string key="month_february" language="en">February</localized-string><localized-string key="month_march" language="en">March</localized-string><localized-string key="month_april" language="en">April</localized-string><localized-string key="month_may" language="en">May</localized-string><localized-string key="month_june" language="en">June</localized-string><localized-string key="month_july" language="en">July</localized-string><localized-string key="month_august" language="en">August</localized-string><localized-string key="month_september" language="en">September</localized-string><localized-string key="month_october" language="en">October</localized-string><localized-string key="month_november" language="en">November</localized-string><localized-string key="month_december" language="en">December</localized-string><localized-string key="obligation" language="en">Obligation</localized-string><localized-string key="subject" language="en">Subject</localized-string><localized-string key="inherits" language="en">Inherits</localized-string><localized-string key="admonition.danger" language="en">Danger</localized-string><localized-string key="admonition.warning" language="en">Warning</localized-string><localized-string key="admonition.caution" language="en">Caution</localized-string><localized-string key="admonition.important" language="en">Important</localized-string><localized-string key="admonition.safety_precautions" language="en">Safety Precautions</localized-string><localized-string key="admonition.editorial" language="en">Editorial Note</localized-string><localized-string key="locality.section" language="en">Section</localized-string><localized-string key="locality.clause" language="en">Clause</localized-string><localized-string key="locality.part" language="en">Part</localized-string><localized-string key="locality.paragraph" language="en">Paragraph</localized-string><localized-string key="locality.chapter" language="en">Chapter</localized-string><localized-string key="locality.page" language="en">Page</localized-string><localized-string key="locality.table" language="en">Table</localized-string><localized-string key="locality.annex" language="en">Annex</localized-string><localized-string key="locality.figure" language="en">Figure</localized-string><localized-string key="locality.example" language="en">Example</localized-string><localized-string key="locality.note" language="en">Note</localized-string><localized-string key="locality.formula" language="en">Formula</localized-string><localized-string key="grammar_abbrevs.masculine" language="en">m</localized-string><localized-string key="grammar_abbrevs.feminine" language="en">f</localized-string><localized-string key="grammar_abbrevs.neuter" language="en">n</localized-string><localized-string key="grammar_abbrevs.common" language="en">common</localized-string><localized-string key="grammar_abbrevs.singular" language="en">sg</localized-string><localized-string key="grammar_abbrevs.dual" language="en">dual</localized-string><localized-string key="grammar_abbrevs.pl" language="en">pl</localized-string><localized-string key="grammar_abbrevs.isPreposition" language="en">prep</localized-string><localized-string key="grammar_abbrevs.isParticiple" language="en">part</localized-string><localized-string key="grammar_abbrevs.isAdjective" language="en">adj</localized-string><localized-string key="grammar_abbrevs.isAdverb" language="en">adv</localized-string><localized-string key="grammar_abbrevs.isNoun" language="en">noun</localized-string><localized-string key="grammar_abbrevs.isVerb" language="en">verb</localized-string><localized-string key="relatedterms.deprecates" language="en">deprecates</localized-string><localized-string key="relatedterms.supersedes" language="en">supersedes</localized-string><localized-string key="relatedterms.narrower" language="en">narrower</localized-string><localized-string key="relatedterms.broader" language="en">broader</localized-string><localized-string key="relatedterms.equivalent" language="en">equivalent</localized-string><localized-string key="relatedterms.compare" language="en">compare</localized-string><localized-string key="relatedterms.contrast" language="en">contrast</localized-string><localized-string key="relatedterms.see" language="en">see</localized-string><localized-string key="relatedterms.seealso" language="en">see also</localized-string><localized-string key="Clause.sg" language="en">Clause</localized-string><localized-string key="Clause.pl" language="en">Clauses</localized-string><localized-string key="Annex.sg" language="en">Annex</localized-string><localized-string key="Annex.pl" language="en">Annexes</localized-string><localized-string key="Appendix.sg" language="en">Appendix</localized-string><localized-string key="Appendix.pl" language="en">Appendixes</localized-string><localized-string key="Note.sg" language="en">Note</localized-string><localized-string key="Note.pl" language="en">Notes</localized-string><localized-string key="Note_%_to_entry.sg" language="en">Note % to entry</localized-string><localized-string key="Note_%_to_entry.pl" language="en">Notes % to entry</localized-string><localized-string key="List.sg" language="en">List</localized-string><localized-string key="List.pl" language="en">Lists</localized-string><localized-string key="Figure.sg" language="en">Figure</localized-string><localized-string key="Figure.pl" language="en">Figures</localized-string><localized-string key="Formula.sg" language="en">Formula</localized-string><localized-string key="Formula.pl" language="en">Formulas</localized-string><localized-string key="Table.sg" language="en">Table</localized-string><localized-string key="Table.pl" language="en">Tables</localized-string><localized-string key="Requirement.sg" language="en">Requirement</localized-string><localized-string key="Requirement.pl" language="en">Requirements</localized-string><localized-string key="Recommendation.sg" language="en">Recommendation</localized-string><localized-string key="Recommendation.pl" language="en">Recommendations</localized-string><localized-string key="Permission.sg" language="en">Permission</localized-string><localized-string key="Permission.pl" language="en">Permissions</localized-string><localized-string key="Example.sg" language="en">Example</localized-string><localized-string key="Example.pl" language="en">Examples</localized-string><localized-string key="Part.sg" language="en">Part</localized-string><localized-string key="Part.pl" language="en">Parts</localized-string><localized-string key="Section.sg" language="en">Section</localized-string><localized-string key="Section.pl" language="en">Sections</localized-string><localized-string key="Paragraph.sg" language="en">Paragraph</localized-string><localized-string key="Paragraph.pl" language="en">Paragraphs</localized-string><localized-string key="Chapter.sg" language="en">Chapter</localized-string><localized-string key="Chapter.pl" language="en">Chapters</localized-string><localized-string key="Page.sg" language="en">Page</localized-string><localized-string key="Page.pl" language="en">Pages</localized-string><localized-string key="iso_annex" language="en">Annex</localized-string><localized-string key="see" language="en">see</localized-string><localized-string key="see_also" language="en">see also</localized-string><localized-string key="subclause" language="en">Section</localized-string><localized-string key="clause_jcgm" language="en">Clause</localized-string><localized-string key="subclause_jcgm" language="en">Clause</localized-string><localized-string key="index" language="en">Index</localized-string><localized-string key="all_rights_reserved" language="en">All rights reserved</localized-string><localized-string key="language" language="en">en</localized-string><localized-string key="script" language="en">Latn</localized-string></localized-strings><misc-container><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit xml:id="U_NISTu7" dimensionURL="#NISTd7">
+<UnitSystem name="SI" type="SI_derived" xml:lang="en-US"/>
+<UnitName xml:lang="en">candela</UnitName>
+<UnitSymbol type="HTML">cd</UnitSymbol>
+<UnitSymbol type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="normal">cd</mi></mrow></math><!-- cd -->
+</UnitSymbol>
+
+
+</Unit></UnitSet><QuantitySet><Quantity xml:id="NISTq7" dimensionURL="#NISTd7" quantityType="base">
+<QuantityName xml:lang="en-US">luminous intensity</QuantityName>
+</Quantity></QuantitySet><DimensionSet><Dimension xml:id="NISTd7">
+<LuminousIntensity symbol="J" powerNumerator="1"/>
+</Dimension></DimensionSet><PrefixSet><Prefix prefixBase="10" prefixPower="3" xml:id="NISTp10_3">
+  <PrefixName xml:lang="en">kilo</PrefixName>
+  <PrefixSymbol type="ASCII">k</PrefixSymbol>
+  <PrefixSymbol type="unicode">k</PrefixSymbol>
+  <PrefixSymbol type="LaTeX">k</PrefixSymbol>
+  <PrefixSymbol type="HTML">k</PrefixSymbol>
+</Prefix></PrefixSet></UnitsML></misc-container>
+<boilerplate>
+  <copyright-statement>
+    <clause>
+      <p align="center" id="_93cc0a2a-5f28-112f-d573-02d97c5ec3f0"> © Bureau International des Poids et Mesures 2018 all rights reserved</p>
+    </clause>
+  </copyright-statement>
+  <license-statement>
+    <clause>
+      <title depth="1">Copyright statement</title>
+      <p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<link target="http://creativecommons.org/licenses/by/4.0/"/>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
+    </clause>
+  </license-statement>
+  <feedback-statement>
+    <p id="_bd0b4a04-1c9b-db4f-f27f-b98101e93f33">BIPM<br/>
+      Pavillon de Breteuil<br/>
+      F-92312 Sèvres Cedex<br/>
+      FRANCE</p>
+  </feedback-statement>
+</boilerplate>
+
+<preface><foreword id="_06ad3fe6-1653-1620-e83c-2d584750e299" obligation="informative" displayorder="1">
+<title>Foreword</title>
+<p id="_e63668d6-34fe-8200-42a0-9cb73b5ec99e">As part of a revision to the SI expected to be approved later this year and to take effect in May 2019, the seven base units will be defined by giving fixed numerical values to seven “defining constants”.</p>
+
+<p id="_77eb96de-d8df-fda6-5e04-5af7ca36273b">The report shows how the definitions of all seven base units can be derived efficiently from the defining constants, with the result appearing as a table. The table’s form makes evident a number of connections between the defining constants and the base units.</p>
+
+<p id="_86db02dd-e165-0cac-e9dd-557922c24c04">Appendices show how the same methodology could have been used to define the same base units in the present SI, as well as the mathematics which underpins the methodology.</p>
+</foreword></preface><sections>
+<clause id="introduction" obligation="normative" displayorder="2">
+<title depth="1">1.<tab/>Introduction</title>
+<p id="_e06f0729-e8fe-75c4-5414-d8a7de53b698">Preparations for the upcoming revision of the International System of Units (SI) began in earnest with Resolution 1 of the 24th meeting of the General Conference on Weights and Measures (CGPM) in 2011 <eref type="inline" bibitemid="cgpm2011" citeas="[1]">[1]</eref>. The 26th CGPM in November 2018 is expected to give final approval to a revision of the present SI <eref type="inline" bibitemid="bipm2006" citeas="[2]">[2]</eref> based on the guidance laid down in Ref. <eref type="inline" bibitemid="cgpm2011" citeas="[1]">[1]</eref>. The SI will then become a system of units based on exact numerical values of seven defining constants, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub></math><!-- Delta (nu)_((Cs)) --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math><!-- c --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math><!-- h --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>e</mi></math><!-- e --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math><!-- k --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mtext>A</mtext></mrow></msub></math><!-- (N)_((A)) --></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>K</mi></mstyle></mrow><mrow><mtext>cd</mtext></mrow></msub></math><!-- (K)_((cd)) --></stem> exactly as specified in the following bullets:</p>
+
+<ul id="_6be28f0b-919e-b6da-ac9c-534f49ee638a"><li><p id="_fc8971d2-7a19-c063-24c6-4a478b6e74f9">the unperturbed ground state hyperfine transition frequency of the caesium 133 atom <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub></math><!-- Delta (nu)_((Cs)) --></stem> is <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>9 192 631 770</mn><mtext> hertz</mtext></math><!-- 9192631770 \ hertz --></stem>,</p>
+</li>
+<li><p id="_b155f8fa-ac68-35ca-7a09-90d64d6f0e5d">the speed of light in vacuum <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math><!-- c --></stem> is <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>299 792 458</mn><mtext> metres per second</mtext></math><!-- 299792458 \ metres per second --></stem>,</p>
+</li>
+<li><p id="_ab91c385-c972-0350-7271-cebdad2c7f89">the Planck constant <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math><!-- h --></stem> is <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>6.626 070 15</mn><mo>×</mo><msup><mrow><mn>10</mn></mrow><mrow><mrow><mo>−</mo><mn>34</mn></mrow></mrow></msup><mtext> joule second</mtext></math><!-- 6.62607015 xx 10^(- 34) \ joule second --></stem>,</p>
+</li>
+<li><p id="_f2ec31ec-a0fd-d16d-e2d6-a6530f4913cf">the elementary charge <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>e</mi></math><!-- e --></stem> is <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1.602 176 634</mn><mo>×</mo><msup><mrow><mn>10</mn></mrow><mrow><mrow><mo>−</mo><mn>19</mn></mrow></mrow></msup><mtext> coulomb</mtext></math><!-- 1.602176634 xx 10^(- 19) \ coulomb --></stem>,</p>
+</li>
+<li><p id="_2263b5f7-83e4-554b-c9e5-f789223ec23c">the Boltzmann constant <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math><!-- k --></stem> is <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1.380 649</mn><mo>×</mo><msup><mrow><mn>10</mn></mrow><mrow><mrow><mo>−</mo><mn>23</mn></mrow></mrow></msup><mtext> joule per kelvin</mtext></math><!-- 1.380649 xx 10^(- 23) \ joule per kelvin --></stem>,</p>
+</li>
+<li><p id="_e7ea7f89-06f4-5666-7c5f-985abfc2431f">the Avogadro constant <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mtext>A</mtext></mrow></msub></math><!-- (N)_((A)) --></stem> is <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>6.022 140 76</mn><mo>×</mo><msup><mrow><mn>10</mn></mrow><mrow><mn>23</mn></mrow></msup><mtext> reciprocal mole</mtext></math><!-- 6.02214076 xx 10^(23) \ reciprocal mole --></stem>,</p>
+</li>
+<li><p id="_8e0c709e-5ccf-395b-93e2-b6236c0da9f4">the luminous efficacy of monochromatic radiation of frequency <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>540</mn><mo>×</mo><mn>1 012</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu31"><mi mathvariant="normal">Hz</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- 540 xx 1012 ⁢ Hz --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>K</mi></mstyle></mrow><mrow><mtext>cd</mtext></mrow></msub></math><!-- (K)_((cd)) --></stem>, is <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>683</mn><mtext> lumens per watt</mtext></math><!-- 683 \ lumens per watt --></stem>.</p>
+</li>
+</ul>
+
+<p id="_3f659b37-da20-4627-d50c-a0a4f31fc23c">The hertz, joule, coulomb, lumen, and watt, with unit symbols <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu31"><mi mathvariant="normal">Hz</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- Hz --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu13"><mi mathvariant="normal">J</mi></mrow>
+
+
+
+
+
+
+
+
+</math><!-- J --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu15"><mi mathvariant="normal">C</mi></mrow>
+
+
+
+
+
+
+
+
+</math><!-- C --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu32"><mi mathvariant="normal">lm</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- lm --></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu14"><mi mathvariant="normal">W</mi></mrow>
+
+
+
+
+
+
+
+
+</math><!-- W --></stem>, respectively, are related to the seven base units: second, metre, kilogram, ampere, kelvin, mole and candela, with unit symbols <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu3"><mi mathvariant="normal">s</mi></mrow>
+
+
+
+
+
+
+
+
+</math><!-- s --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu1"><mi mathvariant="normal">m</mi></mrow>
+
+
+
+
+
+
+
+
+</math><!-- m --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu2"><mi mathvariant="normal">kg</mi></mrow>
+
+
+
+
+
+
+
+
+
+
+</math><!-- kg --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu4"><mi mathvariant="normal">A</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- A --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- K --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu6"><mi mathvariant="normal">mol</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- mol --></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu7"><mi mathvariant="normal">cd</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- cd --></stem>, respectively, through the relations <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu31"><mi mathvariant="normal">Hz</mi></mrow>
+
+
+
+
+
+
+
+
+
+<mo>=</mo><mrow xref="U_NISTu3e-1/1"><msup><mrow><mi mathvariant="normal">s</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math><!-- Hz = s^(- 1) --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu13"><mi mathvariant="normal">J</mi></mrow>
+
+
+
+
+
+
+
+
+<mo>=</mo><mrow xref="U_kg.m2.s-2"><mi mathvariant="normal">kg</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">m</mi></mrow><mrow><mn>2</mn></mrow></msup><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">s</mi></mrow><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math><!-- J = kg ⁢ m^2 ⁢ s^(- 2) --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu15"><mi mathvariant="normal">C</mi></mrow>
+
+
+
+
+
+
+
+
+<mo>=</mo><mrow xref="U_A.s"><mi mathvariant="normal">A</mi><mo rspace="thickmathspace">⁢</mo><mi mathvariant="normal">s</mi></mrow>
+
+
+
+
+
+
+
+</math><!-- C = A ⁢ s --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>l</mi><mi>m</mi><mo>=</mo><mrow xref="U_cd.sr"><mi mathvariant="normal">cd</mi><mo rspace="thickmathspace">⁢</mo><mi mathvariant="normal">sr</mi></mrow>
+
+
+
+
+
+
+
+</math><!-- l m = cd ⁢ sr --></stem><fn reference="1"><p id="_43816818-2740-3b6c-2ea7-7cf62c6bc00b">sr is the symbol for steradian, the unit of solid angle. Although <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu10"><mi mathvariant="normal">sr</mi></mrow>
+
+
+
+
+
+
+
+
+
+<mo>=</mo><mrow xref="U_m2/m2"><msup><mrow><mi mathvariant="normal">m</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>/</mo><msup><mrow><mi mathvariant="normal">m</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+<mo>=</mo><mn>1</mn></math><!-- sr = m^2 // m^2 = 1 --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu10"><mi mathvariant="normal">sr</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- sr --></stem> is used when needed for clarity <eref type="inline" bibitemid="bipm2006" citeas="[2]">[2]</eref>.</p>
+</fn> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu14"><mi mathvariant="normal">W</mi></mrow>
+
+
+
+
+
+
+
+
+<mo>=</mo><mrow xref="U_kg.m2.s-3"><mi mathvariant="normal">kg</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">m</mi></mrow><mrow><mn>2</mn></mrow></msup><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">s</mi></mrow><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math><!-- W = kg ⁢ m^2 ⁢ s^(- 3) --></stem> (see Ref. <eref type="inline" bibitemid="bipm2006" citeas="[2]">[2]</eref>). Only so-called “coherent” units <eref type="inline" bibitemid="bipm2006" citeas="[2]">[2]</eref> are used here and in the following. This means that, just as in the bullets, we will not affix numerical prefixes (such as mega or nano) either to the base units or to combinations of base units that have special names (such as joule or watt).</p>
+
+<p id="_f82d59e3-f628-3e10-963c-90c29b3c6547">The numerical values of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub></math><!-- Delta (nu)_((Cs)) --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math><!-- c --></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>K</mi></mstyle></mrow><mrow><mtext>cd</mtext></mrow></msub></math><!-- (K)_((cd)) --></stem> given in the bullets have been fixed (defined to be exact) since 1967, 1983 and 1979 respectively <eref type="inline" bibitemid="bipm2006" citeas="[2]">[2]</eref>. It was premature in 2011 to specify exact values for <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math><!-- h --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>e</mi></math><!-- e --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math><!-- k --></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mtext>A</mtext></mrow></msub></math><!-- (N)_((A)) --></stem> because their experimentally-determined values were not yet known with sufficiently small uncertainty to assure a smooth transition to the proposed new definitions. That has changed, and the numerical values given above are those recommended in October 2017 by the CODATA Task Group on Fundamental Constants <eref type="inline" bibitemid="newell" citeas="[3]">[3]</eref>. They have been accepted by the CIPM and are expected to be confirmed by the CGPM at its next meeting, in November 2018.</p>
+
+<p id="_be44a911-33d6-4e80-e4c7-8d7c792c975e">This note describes an efficient method to convert the information contained in the seven bullets to definitions of the SI base units, which are, not coincidentally, seven in number <eref type="inline" bibitemid="bipm2006" citeas="[2]">[2]</eref>. The reasons for this particular choice of defining constants are important but have been presented elsewhere <eref type="inline" bibitemid="bipm2018" citeas="[4]">[4]</eref>.</p>
+
+<p id="_6710b781-f559-29fa-2ed3-3f824dece1ad">Starting with the seven bullets, we derive in one step the seven combinations of defining constants whose unit is a base unit of the SI. The algorithm used results in an easy-to-read table. The exact numerical values given in the bullets are then introduced to complete the definitions of the base units. <xref target="present_si">Appendix 1</xref> applies the same method to the present SI, illustrating the method’s generality as well as providing a novel contrast to the upcoming revision. Each base unit will be defined independently of the others, although typical derivations take a different approach. <xref target="derivation_defs">Appendix 2</xref> describes a more abstract method of defining the base units from the values of the defining constants and compares the abstract formalism with that presented in the next two sections.</p>
+
+<p id="_e0950c6a-68fc-4775-b2de-1c58de6b3972">If all seven base units of the SI can be defined in terms of the seven defining constants, an obvious but important corollary follows: <strong><em>All SI units can be defined in terms of the seven defining constants.</em></strong> The distinction between base and derived units remains useful, but not essential for many purposes.<fn reference="2"><p id="_35089797-7a99-983d-5feb-615969edb2bb">Even early editions of the SI Brochure remarked that separate classes of base and derived units are “not essential to the physics of the subject” <eref type="inline" bibitemid="page" citeas="[5]">[5]</eref>, but added that the classifications were useful, considering the goal of “a single, practical, worldwide system [of units] for international relations, for teaching and scientific work”.</p>
+</fn></p>
+
+<p id="_08fc8b25-595c-5c1c-aae6-9ecebd3a516a">The following method is consistent with a more rigorous analysis provided by Mohr in 2008 <eref type="inline" bibitemid="mohr" citeas="[6]">[6]</eref>, which the interested reader is encouraged to consult.</p>
+</clause>
+
+<clause id="defining_constants" obligation="normative" displayorder="3">
+<title depth="1">2.<tab/>Defining constants written in terms of base units</title>
+<p id="_b65d18e6-77de-9ee4-f42b-cd21b2706454">We begin with <xref target="table1">Table 1</xref>, which presents much of the information given in the bullets of <xref target="introduction">Chapter 1</xref> in more usable form. Note that the defining constants are shown as labels in the first column. The four new defining constants and the base units which are redefined in consequence are shown in red. The units of the defining constants can be expressed as the product of powers of the base units, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mrow xref="U_NISTu3"><mi mathvariant="normal">s</mi></mrow>
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow></msup><msup><mrow><mrow xref="U_NISTu1"><mi mathvariant="normal">m</mi></mrow>
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow></msup><msup><mrow><mrow xref="U_NISTu2"><mi mathvariant="normal">kg</mi></mrow>
+
+
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>γ</mi></mstyle></mrow></msup><msup><mrow><mrow xref="U_NISTu4"><mi mathvariant="normal">A</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>δ</mi></mstyle></mrow></msup><msup><mrow><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>ε</mi></mstyle></mrow></msup><msup><mrow><mrow xref="U_NISTu6"><mi mathvariant="normal">mol</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>ζ</mi></mstyle></mrow></msup><msup><mrow><mrow xref="U_NISTu7"><mi mathvariant="normal">cd</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>η</mi></mstyle></mrow></msup></math><!-- s^(alpha) m^(beta) kg^(gamma) A^(delta) K^(epsilon) mol^(zeta) cd^(eta) --></stem> <eref type="inline" bibitemid="bipm2006" citeas="[2]">[2]</eref>, as specified in the bullets of <xref target="introduction">Chapter 1</xref>. The exponents that are required appear in the rows of <xref target="table1">Table 1</xref> for each of the defining constants; for example, the coherent unit of the Planck constant <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math><!-- h --></stem> is <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu13.u3"><mi mathvariant="normal">J</mi><mo rspace="thickmathspace">⁢</mo><mi mathvariant="normal">s</mi></mrow>
+
+
+
+
+
+
+
+
+
+<mo>=</mo><mrow xref="U_NISTu27p10_3.u1e2/1.u3e-1/1"><mi mathvariant="normal">kg</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">m</mi></mrow><mrow><mn>2</mn></mrow></msup><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">s</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- J ⁢ s = kg ⁢ m^2 ⁢ s^(- 1) --></stem>, so that for the row labelled <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math><!-- h --></stem> the exponents <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>α</mi></mstyle></math><!-- alpha --></stem> through <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>η</mi></mstyle></math><!-- eta --></stem> are (-1, 2, 1, 0, 0, 0, 0). The columns show whether a unit appears in a particular bullet. We see, for instance, that the second appears in the unit of every constant except <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mtext>A</mtext></mrow></msub></math><!-- (N)_((A)) --></stem>, but with four different exponents.</p>
+
+<table id="table1"><name>Table 1</name><tbody><tr><td valign="top" align="center"/><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu3"><mi mathvariant="normal">s</mi></mrow>
+
+
+
+
+
+
+
+
+</math><!-- s --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu1"><mi mathvariant="normal">m</mi></mrow>
+
+
+
+
+
+
+
+
+</math><!-- m --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#ff0000"><mrow xref="U_NISTu2"><mi mathvariant="normal">kg</mi></mrow>
+
+
+
+
+
+
+
+
+
+
+</mstyle></math><!-- kg --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#ff0000"><mrow xref="U_NISTu4"><mi mathvariant="normal">A</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mstyle></math><!-- A --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#ff0000"><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mstyle></math><!-- K --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#ff0000"><mrow xref="U_NISTu6"><mi mathvariant="normal">mol</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mstyle></math><!-- mol --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu7"><mi mathvariant="normal">cd</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- cd --></stem></th>
+</tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub></math><!-- Delta (nu)_((Cs)) --></stem></th>
+<td valign="top" align="center">-1</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+</tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math><!-- c --></stem></th>
+<td valign="top" align="center">-1</td>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+</tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#ff0000"><mi>h</mi></mstyle></math><!-- h --></stem></th>
+<td valign="top" align="center">-1</td>
+<td valign="top" align="center">2</td>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+</tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#ff0000"><mi>e</mi></mstyle></math><!-- e --></stem></th>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+</tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#ff0000"><mi>k</mi></mstyle></math><!-- k --></stem></th>
+<td valign="top" align="center">-2</td>
+<td valign="top" align="center">2</td>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center">-1</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+</tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#ff0000"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mtext>A</mtext></mrow></msub></mstyle></math><!-- (N)_((A)) --></stem></th>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center">-1</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+</tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>K</mi></mstyle></mrow><mrow><mtext>cd</mtext></mrow></msub></math><!-- (K)_((cd)) --></stem></th>
+<td valign="top" align="center">3</td>
+<td valign="top" align="center">-2</td>
+<td valign="top" align="center">-1</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center">1</td>
+</tr></tbody>
+</table>
+
+<p id="_e047bbd0-fef8-ba3a-27c1-816dd3471a35">The sequence of the seven defining constants in the left column of labels follows the order in which they are presented in the CGPM Resolution and in <xref target="introduction">Chapter 1</xref>. The sequence of base units in the top row of labels follows the order in which these units are defined in Ref. <eref type="inline" bibitemid="bipm2018" citeas="[4]">[4]</eref>. This results in a table where the exponents above the diagonal cells are all zero (as are most exponents below the diagonal). The diagonal cells (those with a violet background) associate each defining constant with a unique base unit. The cells with a yellow background show that “helping” units are also needed. For instance, the Planck constant <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math><!-- h --></stem> is key to redefining the kilogram (violet cell), but the unit of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math><!-- h --></stem> also contains the inverse second and the metre squared (yellow cells).</p>
+</clause>
+
+<clause id="base_units" obligation="normative" displayorder="4">
+<title depth="1">3.<tab/>Base units as defined by the “defining constants”</title>
+<p id="_57a1c4da-115d-8cad-5d51-2c58041c7504">The seven SI base units can be defined in terms of the seven defining constants. To do this, we create a second table, <xref target="table2">Table 2</xref>, that shows the combination of defining constants required to define each base unit. <xref target="table2">Table 2</xref> is the major contribution of this report.</p>
+
+<p id="_f5046d64-14c4-027f-ef8e-10e412c379f7">The numbers in <xref target="table2">Table 2</xref> are also exponents, this time used to show the combination of defining constants (labelled in the top row) that has the same unit as each base unit (labelled in the left column). Except for an exact scaling factor, which is easily derived as shown below, each base unit is defined by the product <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>Δ</mo><msubsup><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow><mrow><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle><mo>′</mo></mrow></mrow></msubsup><mtext> </mtext><msup><mrow><mi>c</mi></mrow><mrow><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle><mo>′</mo></mrow></mrow></msup><mtext> </mtext><msup><mrow><mi>h</mi></mrow><mrow><mrow><mstyle mathvariant="italic"><mi>γ</mi></mstyle><mo>′</mo></mrow></mrow></msup><mtext> </mtext><msup><mrow><mi>e</mi></mrow><mrow><mrow><mstyle mathvariant="italic"><mi>δ</mi></mstyle><mo>′</mo></mrow></mrow></msup><mtext> </mtext><msup><mrow><mi>k</mi></mrow><mrow><mrow><mstyle mathvariant="italic"><mi>ε</mi></mstyle><mo>′</mo></mrow></mrow></msup><mtext> </mtext><msubsup><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mrow xref="U_NISTu4"><mi mathvariant="normal">A</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mrow><mrow><mrow><mstyle mathvariant="italic"><mi>ζ</mi></mstyle><mo>′</mo></mrow></mrow></msubsup><mtext> </mtext><msubsup><mrow><mstyle mathvariant="italic"><mi>K</mi></mstyle></mrow><mrow><mtext>cd</mtext></mrow><mrow><mrow><mi mathvariant="normal">η</mi><mo>′</mo></mrow></mrow></msubsup></math><!-- Delta nu_(Cs)^(alpha ') \ c^(beta ') \ h^(gamma ') \ e^(delta ') \ k^(epsilon ') \ N_A^(zeta ') \ K_(cd)^(eta ') --></stem>, where the required exponents for each row appear in the table. If an exponent is zero, it means that its constant is not needed, and its cell, though containing zero, has been left blank for visual clarity. Each column shows which defining constants are needed in the definition of the base units. We see that <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub></math><!-- Delta (nu)_((Cs)) --></stem> is needed to define six of the seven base units (using three different exponents), <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math><!-- c --></stem> is only needed to define two base units, etc.</p>
+
+<p id="_87deba64-fd77-404f-5e1b-f2b0a53310db">All exponents have been derived from <xref target="table1">Table 1</xref> in one step using the following mathematical operation. Note that the cells containing numbers in <xref target="table1">Table 1</xref> constitute a <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>7</mn><mo>×</mo><mn>7</mn></math><!-- 7 xx 7 --></stem> matrix. Invert that matrix using, for example, the MINVERSE command in Excel. The inverse obtained is the <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>7</mn><mo>×</mo><mn>7</mn></math><!-- 7 xx 7 --></stem> matrix of exponents shown in <xref target="table2">Table 2</xref>.<fn reference="3"><p id="_64f38047-1479-5793-4ebb-6afeac28895a">The <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>7</mn><mo>×</mo><mn>7</mn></math><!-- 7 xx 7 --></stem> squares of numbers in <xref target="table1">Table 1</xref> and <xref target="table2">Table 2</xref> are called “lower triangular matrices” because all numbers above the diagonal are zero. The inverse of a triangular matrix is triangular as well, provided that the inverse exists. The inverse exists if and only if none of the numbers in the diagonal cells is zero.</p>
+</fn> Remember that the blank cells actually contain zero.</p>
+
+<table id="table2">
+<name>Table 2.<tab/>The revised SI <eref type="inline" bibitemid="bipm2018" citeas="[4]">[4]</eref>. Blank cells all contain zero (not displayed).</name>
+<tbody><tr><td valign="top" align="center"/><td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub></math><!-- Delta (nu)_((Cs)) --></stem></td>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math><!-- c --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#ff0000"><mi>h</mi></mstyle></math><!-- h --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#ff0000"><mi>e</mi></mstyle></math><!-- e --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#ff0000"><mi>k</mi></mstyle></math><!-- k --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#ff0000"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mtext>A</mtext></mrow></msub></mstyle></math><!-- (N)_((A)) --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>K</mi></mstyle></mrow><mrow><mtext>cd</mtext></mrow></msub></math><!-- (K)_((cd)) --></stem></th>
+</tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu3"><mi mathvariant="normal">s</mi></mrow>
+
+
+
+
+
+
+
+
+</math><!-- s --></stem></th>
+<td valign="top" align="center">-1</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/></tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu1"><mi mathvariant="normal">m</mi></mrow>
+
+
+
+
+
+
+
+
+</math><!-- m --></stem></th>
+<td valign="top" align="center">-1</td>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/></tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#ff0000"><mrow xref="U_NISTu2"><mi mathvariant="normal">kg</mi></mrow>
+
+
+
+
+
+
+
+
+
+
+</mstyle></math><!-- kg --></stem></th>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center">-2</td>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/></tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#ff0000"><mrow xref="U_NISTu4"><mi mathvariant="normal">A</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mstyle></math><!-- A --></stem></th>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">1</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/></tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#ff0000"><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mstyle></math><!-- K --></stem></th>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center"/><td valign="top" align="center">1</td>
+<td valign="top" align="center"/><td valign="top" align="center">-1</td>
+<td valign="top" align="center"/><td valign="top" align="center"/></tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#ff0000"><mrow xref="U_NISTu6"><mi mathvariant="normal">mol</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mstyle></math><!-- mol --></stem></th>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">-1</td>
+<td valign="top" align="center"/></tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu7"><mi mathvariant="normal">cd</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- cd --></stem></th>
+<td valign="top" align="center">2</td>
+<td valign="top" align="center"/><td valign="top" align="center">1</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">1</td>
+</tr></tbody>
+</table>
+
+<p id="_ce42ec01-0fbd-7532-c670-f512ab1f8b52">From the “unitsml(kg)” row of <xref target="table2">Table 2</xref> we may infer that the following combination of three defining constants has the kilogram as its unit <eref type="inline" bibitemid="mohr" citeas="[6]">[6]</eref>:</p>
+
+<formula id="eq1"><name>1</name><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>Δ</mo><msubsup><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow><mrow><mn>1</mn></mrow></msubsup><msup><mrow><mi>c</mi></mrow><mrow><mrow><mo>−</mo><mn>2</mn></mrow></mrow></msup><msup><mrow><mi>h</mi></mrow><mrow><mn>1</mn></mrow></msup><msup><mrow><mi>e</mi></mrow><mrow><mn>0</mn></mrow></msup><msup><mrow><mi>k</mi></mrow><mrow><mn>0</mn></mrow></msup><msubsup><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mtext>A</mtext></mrow><mrow><mn>0</mn></mrow></msubsup><msubsup><mrow><mstyle mathvariant="italic"><mi>K</mi></mstyle></mrow><mrow><mtext>cd</mtext></mrow><mrow><mn>0</mn></mrow></msubsup><mo>=</mo><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub><msup><mrow><mi>c</mi></mrow><mrow><mrow><mo>−</mo><mn>2</mn></mrow></mrow></msup><mi>h</mi><mo>=</mo><mfrac><mrow><mrow><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub><mi>h</mi></mrow></mrow><mrow><msup><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo>.</mo></math><!-- Delta nu_(Cs)^1 c^(- 2) h^1 e^0 k^0 N_A^0 K_(cd)^0 = Delta (nu)_((Cs)) c^(- 2) h = ((Delta (nu)_((Cs)) h))/((c^2)) . --></stem></formula>
+
+<p id="_3d72250a-86fe-b698-d420-ff4c47ed5c95">In the revised SI, all mass determinations must ultimately be traceable to this quantity because its numerical value in kilograms has been fixed. The exact values of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub></math><!-- Delta (nu)_((Cs)) --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math><!-- c --></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math><!-- h --></stem> given in the bullets of <xref target="introduction">Chapter 1</xref> provide the fixed value. Substituting the information in the first three bullets into the left side of the following equation, which is a combination of physical constants, gives us the right side, which is the value of the combination in the revised SI:</p>
+
+<formula id="_7ef40874-fa83-e46f-1ddc-a57320deca64" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mrow><mrow><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub><mi>h</mi></mrow></mrow><mrow><msup><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><mrow><mfenced open="(" close=")"><mrow><mn>9 192 631 770</mn></mrow></mfenced><mfenced open="(" close=")"><mrow><mn>6.626 070 15</mn><mo>×</mo><msup><mrow><mn>10</mn></mrow><mrow><mrow><mo>−</mo><mn>34</mn></mrow></mrow></msup></mrow></mfenced></mrow></mrow><mrow><msup><mrow><mfenced open="(" close=")"><mrow><mn>299 792 458</mn></mrow></mfenced></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu2"><mi mathvariant="normal">kg</mi></mrow>
+
+
+
+
+
+
+
+
+
+
+<mo>.</mo></math><!-- ((Delta (nu)_((Cs)) h))/((c^2)) = (((9192631770) (6.62607015 xx 10^(- 34))))/(((299792458)^2)) ⁢ kg . --></stem></formula>
+
+<p id="_68ae44cf-75e8-b9fe-5f08-387e4f6c5117">The numbers in parentheses are obviously the exact numerical values of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub></math><!-- Delta (nu)_((Cs)) --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math><!-- c --></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math><!-- h --></stem> specified in <xref target="introduction">Chapter 1</xref>. The base units associated with these numerical values cancel out (unit symbols can be treated algebraically)—except for the kilogram! Then by simple arithmetic,</p>
+
+<formula id="eq2"><name>2</name><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu2"><mi mathvariant="normal">kg</mi></mrow>
+
+
+
+
+
+
+
+
+
+
+<mo>=</mo><mfrac><mrow><msup><mrow><mfenced open="(" close=")"><mrow><mn>299 792 458</mn></mrow></mfenced></mrow><mrow><mn>2</mn></mrow></msup></mrow><mrow><mrow><mfenced open="(" close=")"><mrow><mn>9 192 631 770</mn></mrow></mfenced><mfenced open="(" close=")"><mrow><mn>6.626 070 15</mn><mo>×</mo><msup><mrow><mn>10</mn></mrow><mrow><mrow><mo>−</mo><mn>34</mn></mrow></mrow></msup></mrow></mfenced></mrow></mrow></mfrac><mfrac><mrow><mrow><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub><mi>h</mi></mrow></mrow><mrow><msup><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo>=</mo><mn>1.475 521 399 7</mn><mo>…</mo><mo>×</mo><msup><mrow><mn>10</mn></mrow><mrow><mn>40</mn></mrow></msup><mfrac><mrow><mrow><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub><mi>h</mi></mrow></mrow><mrow><msup><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo>.</mo></math><!-- 1 ⁢ kg = (((299792458)^2))/(((9192631770) (6.62607015 xx 10^(- 34)))) ((Delta (nu)_((Cs)) h))/((c^2)) = 1.4755213997 ... xx 10^(40) ((Delta (nu)_((Cs)) h))/((c^2)) . --></stem></formula>
+
+<p id="_70853583-f624-5cac-4a46-f41aeed0557a">Any given base unit can be defined similarly, without knowing the definitions of any other base units. Only the exact numerical values of the defining constants are required. This definition of the kilogram appears in section 2.3.1 of Ref. <eref type="inline" bibitemid="bipm2018" citeas="[4]">[4]</eref>. A more formal derivation of the seven definitions, of which <xref target="eq2">Equation (2)</xref> is an example, is provided in <xref target="derivation_defs">Appendix 2</xref> along with a comparison to the simplified approach adopted
+above.</p>
+
+<p id="_81c53648-ec53-8837-ede3-a66919e216f7">It is irrelevant that the mass <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub><mi>h</mi><mo>/</mo><msup><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msup></math><!-- Delta (nu)_((Cs)) h // c^2 --></stem> is so miniscule that it must be scaled up by 40 orders of magnitude to equal one kilogram. It has always been true that “any method consistent with the laws of physics could be used to realize any SI unit” <eref type="inline" bibitemid="bipm2006" citeas="[2]">[2]</eref> and such methods already exist for the kilogram as it will be defined by <xref target="eq2">Equation (2)</xref> <eref type="inline" bibitemid="bipm2018" citeas="[4]">[4]</eref>. <xref target="present_si">Appendix 1</xref> discusses in more detail the condition that assures continuity of the redefined kilogram with the present kilogram, and by extension the continuity conditions for the three other redefined units.</p>
+</clause>
+
+<clause id="_summary_and_discussion_corrected_april_2018" obligation="normative" displayorder="5">
+<title depth="1">4.<tab/>Summary and Discussion [corrected April 2018]</title>
+<p id="_6cb63a68-fcfa-9952-780f-2533a939d188">Several pictorial illustrations of the revised SI are already available <eref type="inline" bibitemid="bipm2017" citeas="[7]">[7]</eref>, <eref type="inline" bibitemid="wiki" citeas="[8]">[8]</eref>. In one case, readers are cautioned that the illustration is not an explanation <eref type="inline" bibitemid="bipm2017" citeas="[7]">[7]</eref>. By contrast, <xref target="table2">Table 2</xref> has been derived mathematically from the seven defining constants, knowing only their units. It is easily observed from <xref target="table2">Table 2</xref> that:</p>
+
+<ul id="_b03a9b08-ba62-905f-78d7-2bde6afe4bfe"><li><p id="_794535b8-f279-7d3b-e6c1-bcbada1744a9">The violet cells on the diagonal connect a base unit in the left column with the constant which defines it, in the top row. This is loose terminology because in most instances one or two “helping constants” are required, and these are shown in the yellow cells of each row. All other cells contain zero, and these are left blank;</p>
+</li>
+<li><p id="_8cce1b24-8a77-dd02-35ba-48ea91e7114a">There are only three helping constants, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub></math><!-- Delta (nu)_((Cs)) --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math><!-- c --></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math><!-- h --></stem>, and these also serve as the defining constants for the second, metre and kilogram, respectively. [It is perhaps noteworthy that the second, metre and kilogram are the mechanical units of the old metre-kilogram-second (MKS) system, from which the SI evolved];</p>
+</li>
+<li><p id="_780cbcbf-f5e9-5483-fd3f-7d17818038fd">In each row, the product of powers of the constants in the violet cell and any yellow cells form a quantity (which is also a constant) whose unit is the base unit of the row. The exponents needed are shown;</p>
+</li>
+<li><p id="_cf0742c1-240f-e0fa-1f2e-6ac9ed7afa75">At most, two helping constants are required to define any base unit. [The appearance of helping constants can be viewed as a mathematical requirement which reconciles continuity of the historical base units with the most useful selection of defining constants. See <xref target="present_si">Appendix 1</xref>, which shows that the present SI <eref type="inline" bibitemid="bipm2006" citeas="[2]">[2]</eref> is not very different in this respect];</p>
+</li>
+<li><p id="_f2c37a94-5950-bbc7-62c0-553fb6cba887">Helping constants are not needed to define either the second or the mole.</p>
+</li>
+<li><p id="_65634d1e-b16d-c367-510f-18bcc44a8e51">The ground state hyperfine transition frequency of the caesium 133 atom <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub></math><!-- Delta (nu)_((Cs)) --></stem> is needed in the definitions of all base units except the mole;</p>
+</li>
+<li><p id="_d03b25bf-f15c-3ce7-47b6-8bee6697b84f">The speed of light in vacuum <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math><!-- c --></stem> is needed <em>only</em> in the definitions of the metre and kilogram;</p>
+</li>
+<li><p id="_f5f9bfa7-c162-ff69-650b-6ce9116659b2">The Planck constant <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math><!-- h --></stem> is needed <em>only</em> in the definitions of the kilogram, kelvin and candela;</p>
+</li>
+<li><p id="_70337ad5-b6c7-02d3-0ce1-1d1c8b40b948">The elementary charge <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>e</mi></math><!-- e --></stem>, the Boltzmann constant <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math><!-- k --></stem>, the Avogadro constant <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mtext>A</mtext></mrow></msub></math><!-- (N)_((A)) --></stem> and the luminous efficacy of a specified wavelength <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>K</mi></mstyle></mrow><mrow><mtext>cd</mtext></mrow></msub></math><!-- (K)_((cd)) --></stem> are each needed to define a single base unit (ampere, kelvin, mole and candela respectively). They are not used as helping constants.</p>
+</li>
+</ul>
+
+<p id="_ffbffdc1-c5f8-237d-5a81-ff6aec454306">There is no general requirement that exponents in <xref target="table1">Table 1</xref> and <xref target="table2">Table 2</xref> must be displayed as lower triangular matrices (see <xref target="derivation_defs">Appendix 2</xref>), although this arrangement makes the tables easier to scan visually and therefore has merit. Because <xref target="table1">Table 1</xref> is a lower triangular matrix, one can see that the units can also be defined in seven separate steps rather than as a group, as we have done. The step-by-step method, also used in the draft 9th edition of the SI Brochure <eref type="inline" bibitemid="bipm2018" citeas="[4]">[4]</eref>, first defines the SI second from the upper left corner of <xref target="table1">Table 1</xref>. The metre can then be defined from the next row because the helping unit of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math><!-- c --></stem>, the second, has already been defined. The kilogram can be defined from the third row because the two helping units of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math><!-- h --></stem> have already been defined. All helping units have now been defined and so the remaining four SI units can be defined in any order one wishes, including of course the order found in <eref type="inline" bibitemid="bipm2018" citeas="[4]">[4]</eref>.</p>
+
+<p id="_5d97430b-6546-2ef2-08af-014b13207a45">The seven unique combinations of defining constants whose unit is a base unit (<xref target="eq1">Equation (1)</xref> shows the combination for the kilogram) were derived together by matrix inversion. Since any order of units and defining constants used as labels in <xref target="table1">Table 1</xref> leads to identical definitions of the base units, we have chosen an order that makes <xref target="table2">Table 2</xref> visually simple. It is also the order found in the major reference for the revised SI <eref type="inline" bibitemid="bipm2018" citeas="[4]">[4]</eref>.</p>
+</clause>
+
+
+
+
+
+<clause id="_acknowledgements" obligation="normative" displayorder="6">
+<title depth="1">5.<tab/>Acknowledgements</title>
+<p id="_4e0c58d0-7732-a08d-8ba6-9c5818e9f59d">The author acknowledges helpful discussions with Estefanía de Mirandés (BIPM), Richard J. C. Brown (NPL) and Paul Quincey (NPL).</p>
+</clause>
+
+
+</sections><annex id="present_si" obligation="informative" displayorder="7">
+<title><strong>Appendix 1</strong>.<tab/><strong>The present SI</strong></title>
+<p id="_5871b453-f286-c089-1406-9a46ce8db5d0">The present SI <eref type="inline" bibitemid="bipm2006" citeas="[2]">[2]</eref> could also have been formulated in terms of the six defining constants and one defining quantity that had been specified by the CGPM, either explicitly or implicitly, between 1889 and 1983:</p>
+
+<ul id="_440c120d-dc3e-0ccb-d382-9ad751e8c9cb"><li><p id="_5a7e6c76-d24c-6fce-eda5-c005a5fe6ba3">the unperturbed ground state hyperfine transition frequency of the caesium 133 atom <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub></math><!-- Delta (nu)_((Cs)) --></stem> is <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>9 192 631 770</mn><mtext> hertz</mtext></math><!-- 9192631770 \ hertz --></stem>, (1967)</p>
+</li>
+<li><p id="_bb67f140-6efa-f6a6-5360-7392b0ee6a7f">the speed of light in vacuum <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math><!-- c --></stem> is <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>299 792 458</mn><mtext> metres per second</mtext></math><!-- 299792458 \ metres per second --></stem>, (1983)</p>
+</li>
+<li><p id="_8620fe54-c290-adce-cae9-574bcaec4401"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><mtext>the mass of the international prototype of the kilogram</mtext></mstyle></math><!-- the mass of the international prototype of the kilogram --></stem> <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><msub><mrow><mi>m</mi></mrow><mrow><mstyle mathvariant="script"><mi>K</mi></mstyle></mrow></msub></mstyle></math><!-- (m)_((K)) --></stem> <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><mtext>is 1 kilogram,</mtext></mstyle></math><!-- is 1 kilogram, --></stem> (1889)</p>
+</li>
+<li><p id="_13845ac5-695c-a337-b26d-ee705c035a55"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><mtext>the permeability of vacuum</mtext></mstyle></math><!-- the permeability of vacuum --></stem> <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>μ</mi></mstyle></mrow><mrow><mn>0</mn></mrow></msub><mtext> is </mtext><mn>4</mn><mi mathvariant="normal">π</mi><mo>×</mo><msup><mrow><mn>10</mn></mrow><mrow><mrow><mo>−</mo><mn>7</mn></mrow></mrow></msup><mtext> newton per ampere squared</mtext></mrow></mstyle></math><!-- (mu)_((0)) \ is\ 4 pi xx 10^(- 7) \ newton per ampere squared --></stem>, (1948, 1954)</p>
+</li>
+<li><p id="_f09e5a44-ab5e-1ec9-416f-a8b8552af5b5"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><mtext>the thermodynamic temperature of the triple point of water</mtext></mstyle></math><!-- the thermodynamic temperature of the triple point of water --></stem> <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>T</mi></mstyle></mrow><mrow><mtext>TPW</mtext></mrow></msub><mtext> is </mtext><mn>273.16</mn><mtext> kelvin</mtext></mrow></mstyle></math><!-- (T)_((TPW)) \ is\ 273.16 \ kelvin --></stem>, (1954)</p>
+</li>
+<li><p id="_091fa7e9-8b61-9df6-054d-5dc5eb17acec"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><mtext>the molar mass of carbon 12,</mtext></mstyle></math><!-- the molar mass of carbon 12, --></stem> <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><mrow><mstyle mathvariant="italic"><mi>M</mi></mstyle><msup><mrow><mtext/></mrow><mrow><mn>12</mn></mrow></msup><mtext>C, is </mtext><mn>0.012</mn><mtext> kilogram per mole</mtext></mrow></mstyle></math><!-- M ^(12) C, is\ 0.012 \ kilogram per mole --></stem>, (1971)</p>
+</li>
+<li><p id="_359c1f2e-6a22-7857-8ab7-059e1cebbab7">the luminous efficacy of monochromatic radiation of frequency <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>540</mn><mo>×</mo><mn>1 012</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu31"><mi mathvariant="normal">Hz</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- 540 xx 1012 ⁢ Hz --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>K</mi></mstyle></mrow><mrow><mtext>cd</mtext></mrow></msub></math><!-- (K)_((cd)) --></stem>, is <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>683</mn><mtext> lumens per watt</mtext></math><!-- 683 \ lumens per watt --></stem>. (1979)</p>
+</li>
+</ul>
+
+<p id="_7c86ce6c-a751-7a60-223d-fc8aa02e2e9a">The newton (symbol: <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu11"><mi mathvariant="normal">N</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- N --></stem>) is expressed in terms of base units as <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu11"><mi mathvariant="normal">N</mi></mrow>
+
+
+
+
+
+
+
+
+
+<mo>=</mo><mrow xref="U_kg.m.s-2"><mi mathvariant="normal">kg</mi><mo rspace="thickmathspace">⁢</mo><mi mathvariant="normal">m</mi><mo rspace="thickmathspace">⁢</mo><msup><mrow><mi mathvariant="normal">s</mi></mrow><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow>
+
+
+
+
+
+
+
+
+</math><!-- N = kg ⁢ m ⁢ s^(- 2) --></stem> <eref type="inline" bibitemid="bipm2006" citeas="[2]">[2]</eref>. Expressions for the hertz, lumen and watt in terms of base units are found in <xref target="introduction">Chapter 1</xref>. The defining quantity and three defining constants that will be replaced in the revised SI are shown in blue.</p>
+
+<p id="_a3abe5ed-698d-bc40-7993-cdc72e18c9e1">Carrying out the same procedure as described in <xref target="defining_constants">Chapter 2</xref> and <xref target="base_units">Chapter 3</xref> for the revised SI, we start with <xref target="tableA1-1">Table 1.1</xref>, which contains an embedded <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>7</mn><mo>×</mo><mn>7</mn></math><!-- 7 xx 7 --></stem> matrix. Again, this matrix is a table of exponents inferred from seven bullets, but now they are the bullets found in this Appendix. For ease of comparison with <xref target="table1">Table 1</xref> and <xref target="table2">Table 2</xref>, the order of units in the top row of <xref target="tableA1-1">Table 1.1</xref> is chosen to be identical to that of <xref target="table1">Table 1</xref>, and the order of quantities in the left column is chosen to produce a lower triangular matrix.</p>
+
+<table id="tableA1-1"><name>Table 1.1</name><tbody><tr><td valign="top" align="center"/><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu3"><mi mathvariant="normal">s</mi></mrow>
+
+
+
+
+
+
+
+
+</math><!-- s --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu1"><mi mathvariant="normal">m</mi></mrow>
+
+
+
+
+
+
+
+
+</math><!-- m --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><mrow xref="U_NISTu2"><mi mathvariant="normal">kg</mi></mrow>
+
+
+
+
+
+
+
+
+
+
+</mstyle></math><!-- kg --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><mrow xref="U_NISTu4"><mi mathvariant="normal">A</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mstyle></math><!-- A --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mstyle></math><!-- K --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><mrow xref="U_NISTu6"><mi mathvariant="normal">mol</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mstyle></math><!-- mol --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu7"><mi mathvariant="normal">cd</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- cd --></stem></th>
+</tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub></math><!-- Delta (nu)_((Cs)) --></stem></th>
+<td valign="top" align="center">-1</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+</tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math><!-- c --></stem></th>
+<td valign="top" align="center">-1</td>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+</tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><msub><mrow><mi>m</mi></mrow><mrow><mstyle mathvariant="script"><mi>K</mi></mstyle></mrow></msub></mstyle></math><!-- (m)_((K)) --></stem></th>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+</tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><msub><mrow><mstyle mathvariant="italic"><mi>μ</mi></mstyle></mrow><mrow><mn>0</mn></mrow></msub></mstyle></math><!-- (mu)_((0)) --></stem></th>
+<td valign="top" align="center">-2</td>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center">-2</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+</tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><msub><mrow><mstyle mathvariant="italic"><mi>T</mi></mstyle></mrow><mrow><mtext>TPW</mtext></mrow></msub></mstyle></math><!-- (T)_((TPW)) --></stem></th>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+</tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><mrow><mstyle mathvariant="italic"><mi>M</mi></mstyle><mfenced open="(" close=")"><mrow><msup><mrow><mtext/></mrow><mrow><mn>12</mn></mrow></msup><mtext>C</mtext></mrow></mfenced></mrow></mstyle></math><!-- M (^(12) C) --></stem></th>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center">-1</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+</tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>K</mi></mstyle></mrow><mrow><mtext>cd</mtext></mrow></msub></math><!-- (K)_((cd)) --></stem></th>
+<td valign="top" align="center">3</td>
+<td valign="top" align="center">-2</td>
+<td valign="top" align="center">-1</td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#008000"><mn>0</mn></mstyle></math><!-- 0 --></stem></td>
+<td valign="top" align="center">1</td>
+</tr></tbody>
+</table>
+
+<p id="_3cd33375-a53e-224f-4885-0f96bd0fe98f">Now transpose the labels of <xref target="tableA1-1">Table 1.1</xref> and invert its embedded matrix to arrive at <xref target="tableA1-2">Table 1.2</xref>. As with <xref target="table2">Table 2</xref>, cells containing zero are left blank.</p>
+
+<table id="tableA1-2">
+<name>Table 1.2.<tab/>The present SI <eref type="inline" bibitemid="bipm2006" citeas="[2]">[2]</eref>. The blank cells all contain zero (not displayed).</name>
+<tbody><tr><td valign="top" align="center"/><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub></math><!-- Delta (nu)_((Cs)) --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math><!-- c --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><msub><mrow><mi>m</mi></mrow><mrow><mstyle mathvariant="script"><mi>K</mi></mstyle></mrow></msub></mstyle></math><!-- (m)_((K)) --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><msub><mrow><mstyle mathvariant="italic"><mi>μ</mi></mstyle></mrow><mrow><mn>0</mn></mrow></msub></mstyle></math><!-- (mu)_((0)) --></stem></th>
+<td valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><msub><mrow><mstyle mathvariant="italic"><mi>T</mi></mstyle></mrow><mrow><mtext>TPW</mtext></mrow></msub></mstyle></math><!-- (T)_((TPW)) --></stem></td>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><mrow><mstyle mathvariant="italic"><mi>M</mi></mstyle><mfenced open="(" close=")"><mrow><msup><mrow><mtext/></mrow><mrow><mn>12</mn></mrow></msup><mtext>C</mtext></mrow></mfenced></mrow></mstyle></math><!-- M (^(12) C) --></stem></th>
+<th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>K</mi></mstyle></mrow><mrow><mtext>cd</mtext></mrow></msub></math><!-- (K)_((cd)) --></stem></th>
+</tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu3"><mi mathvariant="normal">s</mi></mrow>
+
+
+
+
+
+
+
+
+</math><!-- s --></stem></th>
+<td valign="top" align="center">-1</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/></tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu1"><mi mathvariant="normal">m</mi></mrow>
+
+
+
+
+
+
+
+
+</math><!-- m --></stem></th>
+<td valign="top" align="center">-1</td>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/></tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><mrow xref="U_NISTu2"><mi mathvariant="normal">kg</mi></mrow>
+
+
+
+
+
+
+
+
+
+
+</mstyle></math><!-- kg --></stem></th>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">1</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/></tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><mrow xref="U_NISTu4"><mi mathvariant="normal">A</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mstyle></math><!-- A --></stem></th>
+<td valign="top" align="center">1/2</td>
+<td valign="top" align="center">1/2</td>
+<td valign="top" align="center">1/2</td>
+<td valign="top" align="center">-1/2</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/></tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mstyle></math><!-- K --></stem></th>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">1</td>
+<td valign="top" align="center"/><td valign="top" align="center"/></tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#0000ff"><mrow xref="U_NISTu6"><mi mathvariant="normal">mol</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mstyle></math><!-- mol --></stem></th>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">1</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">-1</td>
+<td valign="top" align="center"/></tr><tr><th valign="top" align="center"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu7"><mi mathvariant="normal">cd</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- cd --></stem></th>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center">2</td>
+<td valign="top" align="center">1</td>
+<td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center"/><td valign="top" align="center">1</td>
+</tr></tbody>
+</table>
+
+<p id="_1a1402b4-9688-7778-673e-b45e2eb2c63a">This table can easily be compared with <xref target="table2">Table 2</xref>. Note that only the first two rows, those for the second and metre, are identical in the two tables.</p>
+
+<p id="_bf1b64a7-4e74-cc32-4ee1-199432e3d657">There is no reason that the exponents must be integers, as this example illustrates. Thus, in the present SI <eref type="inline" bibitemid="bipm2006" citeas="[2]">[2]</eref>, the ampere is realized by traceability to the quantity <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mfenced open="(" close=")"><mrow><mfrac><mrow><mrow><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub><mi>c</mi><msub><mrow><mi>m</mi></mrow><mrow><mstyle mathvariant="script"><mi>K</mi></mstyle></mrow></msub></mrow></mrow><mrow><msub><mrow><mstyle mathvariant="italic"><mi>μ</mi></mstyle></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mrow></mfenced></mrow><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></msup></math><!-- (((Delta (nu)_((Cs)) c (m)_((K))))/(((mu)_((0)))))^(((1))/((2))) --></stem> which, according to the information in the first four bullets, has an exact value of order <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1.5</mn><mo>×</mo><msup><mrow><mn>10</mn></mrow><mrow><mn>12</mn></mrow></msup><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu4"><mi mathvariant="normal">A</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- 1.5 xx 10^(12) ⁢ A --></stem>. Note that the SI unit of (<stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub><mi>c</mi><msub><mrow><mi>m</mi></mrow><mrow><mstyle mathvariant="script"><mi>K</mi></mstyle></mrow></msub></math><!-- Delta (nu)_((Cs)) c (m)_((K)) --></stem>) is the newton and that of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>μ</mi></mstyle></mrow><mrow><mn>0</mn></mrow></msub></math><!-- (mu)_((0)) --></stem> is the newton per ampere squared.</p>
+
+<p id="_b372b44f-e2ef-cbf3-a0ab-22722febcfb8">The exponents appearing in <xref target="tableA1-2">Table 1.2</xref> and the exact numerical values of the six constants and one physical quantity listed in the bullets of this Appendix would have been sufficient to define all base units of the present SI. For example, a definition equivalent to the present definition of the ampere <eref type="inline" bibitemid="bipm2006" citeas="[2]">[2]</eref> would be:</p>
+
+<formula id="_b818b8a2-6c9f-e5e2-78b9-04757ada6a60" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu4"><mi mathvariant="normal">A</mi></mrow>
+
+
+
+
+
+
+
+
+
+<mo>=</mo><msup><mrow><mfenced open="(" close=")"><mrow><mfrac><mrow><mfenced open="(" close=")"><mtable><mtr><mtd><mrow><mn>4</mn><mi mathvariant="normal">π</mi><mo>×</mo><msup><mrow><mn>10</mn></mrow><mrow><mrow><mo>−</mo><mn>7</mn></mrow></mrow></msup></mrow></mtd></mtr></mtable></mfenced></mrow><mrow><mrow><mfenced open="(" close=")"><mrow><mn>9 192 631 770</mn></mrow></mfenced><mfenced open="(" close=")"><mrow><mn>299 792 458</mn></mrow></mfenced><mfenced open="(" close=")"><mrow><mn>1</mn></mrow></mfenced></mrow></mrow></mfrac></mrow></mfenced></mrow><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></msup><msup><mrow><mfenced open="(" close=")"><mrow><mfrac><mrow><mrow><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub><mi>c</mi><msub><mrow><mi>m</mi></mrow><mrow><mstyle mathvariant="script"><mi>K</mi></mstyle></mrow></msub></mrow></mrow><mrow><msub><mrow><mstyle mathvariant="italic"><mi>μ</mi></mstyle></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mrow></mfenced></mrow><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></msup><mo>=</mo><mn>6.789 687</mn><mo>…</mo><mo>×</mo><msup><mrow><mn>10</mn></mrow><mrow><mrow><mo>−</mo><mn>13</mn></mrow></mrow></msup><msup><mrow><mfenced open="(" close=")"><mrow><mfrac><mrow><mrow><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub><mi>c</mi><msub><mrow><mi>m</mi></mrow><mrow><mstyle mathvariant="script"><mi>K</mi></mstyle></mrow></msub></mrow></mrow><mrow><msub><mrow><mstyle mathvariant="italic"><mi>μ</mi></mstyle></mrow><mrow><mn>0</mn></mrow></msub></mrow></mfrac></mrow></mfenced></mrow><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></msup></math><!-- 1 ⁢ A = (((([[4 pi xx 10^(- 7)]])))/(((9192631770) (299792458) (1))))^(((1))/((2))) (((Delta (nu)_((Cs)) c (m)_((K))))/(((mu)_((0)))))^(((1))/((2))) = 6.789687 ... xx 10^(- 13) (((Delta (nu)_((Cs)) c (m)_((K))))/(((mu)_((0)))))^(((1))/((2))) --></stem></formula>
+
+<p id="_75baa217-ec36-2a57-700c-80c46af2edd4">In the present SI, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>m</mi></mrow><mrow><mstyle mathvariant="script"><mi>K</mi></mstyle></mrow></msub></math><!-- (m)_((K)) --></stem> is the sole defining quantity which is not some kind of constant. Rather, it is the mass of an artefact known as the international prototype of the kilogram, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="script"><mi>K</mi></mstyle></math><!-- K --></stem>, which has been used since 1889 to define one kilogram <eref type="inline" bibitemid="bipm2006" citeas="[2]">[2]</eref>. This artefact definition of the kilogram is simple, understandable and independent of the six constants. Unfortunately, since the mass of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="script"><mi>K</mi></mstyle></math><!-- K --></stem> is not a physical constant, the stability over time of the unit it defines cannot be assured. The same lack of assurance affects, at least in principle, the three units for which <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>m</mi></mrow><mrow><mstyle mathvariant="script"><mi>K</mi></mstyle></mrow></msub></math><!-- (m)_((K)) --></stem> is a “helper”, one of which is the ampere (see yellow cells in the column of <xref target="tableA1-2">Table 1.2</xref> labelled “<stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>m</mi></mrow><mrow><mstyle mathvariant="script"><mi>K</mi></mstyle></mrow></msub></math><!-- (m)_((K)) --></stem>”). When the SI was first approved by the 11th CGPM in 1960, it was recognized that the artefact definition of the kilogram was a weakness of the International System of Units—to be remedied “sooner or later” <eref type="inline" bibitemid="cipm1960" citeas="[9]">[9]</eref>.</p>
+
+<p id="_1b3576cc-10c6-8a05-1649-59e0d5ae731d">The present definition of the kilogram <eref type="inline" bibitemid="bipm2006" citeas="[2]">[2]</eref> is contained entirely in the third bullet of this Appendix. In symbols,</p>
+
+<formula id="_78dbf501-ba2d-e36f-7a7c-4d8a9f018028" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu2"><mi mathvariant="normal">kg</mi></mrow>
+
+
+
+
+
+
+
+
+
+
+<mo>=</mo><msub><mrow><mi>m</mi></mrow><mrow><mstyle mathvariant="script"><mi>K</mi></mstyle></mrow></msub><mo>.</mo></math><!-- 1 ⁢ kg = (m)_((K)) . --></stem></formula>
+
+<p id="_2184352b-46d2-98ed-d5a3-476c577749c1">The revised definition of the kilogram <eref type="inline" bibitemid="bipm2018" citeas="[4]">[4]</eref> is given by <xref target="eq2">Equation (2)</xref>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo rspace="thickmathspace">⁢</mo><mrow xref="U_NISTu2"><mi mathvariant="normal">kg</mi></mrow>
+
+
+
+
+
+
+
+
+
+
+<mo>=</mo><mn>1.475 521 399 7</mn><mo>…</mo><mo>×</mo><msup><mrow><mn>10</mn></mrow><mrow><mn>40</mn></mrow></msup><mfrac><mrow><mrow><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub><mi>h</mi></mrow></mrow><mrow><msup><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac></math><!-- 1 ⁢ kg = 1.4755213997 ... xx 10^(40) ((Delta (nu)_((Cs)) h))/((c^2)) --></stem>. The value of the prefactor on the right-hand side ensures that there will be no perceptible discontinuity in the kilogram unit when it is redefined <eref type="inline" bibitemid="newell" citeas="[3]">[3]</eref>, <eref type="inline" bibitemid="bipm2018" citeas="[4]">[4]</eref>. The continuity condition requires that the weighted mean of the most accurate experimental values of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math><!-- h --></stem> will have been fixed <eref type="inline" bibitemid="newell" citeas="[3]">[3]</eref> so that, <em>just after</em> the redefinition comes into force,</p>
+
+<formula id="_4aa9283e-7c8b-20fc-5199-4816caf16f99" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>⋅</mo><msub><mrow><mi>m</mi></mrow><mrow><mstyle mathvariant="script"><mi>K</mi></mstyle></mrow></msub><mo>=</mo><mn>1.475 521 399 7</mn><mo>…</mo><mo>×</mo><msup><mrow><mn>10</mn></mrow><mrow><mn>40</mn></mrow></msup><mfrac><mrow><mrow><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub><mi>h</mi></mrow></mrow><mrow><msup><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mfrac><mo>,</mo></math><!-- x * (m)_((K)) = 1.4755213997 ... xx 10^(40) ((Delta (nu)_((Cs)) h))/((c^2)) , --></stem></formula>
+
+<p id="_a4f3cd3a-45da-8677-6fa0-873b6203d422">where the experimental value of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math><!-- x --></stem> is unity to within an uncertainty that is sufficiently small to make the redefinition imperceptible to the vast majority of users. (Subsequently, the experimental value of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math><!-- x --></stem> might change simply because <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>m</mi></mrow><mrow><mstyle mathvariant="script"><mi>K</mi></mstyle></mrow></msub></math><!-- (m)_((K)) --></stem> is not a physical constant. Time will tell.) The impact of the revised SI on most users of the present SI has been assessed to be small by international experts <eref type="inline" bibitemid="cipm2018" citeas="[10]">[10]</eref>.</p>
+</annex><annex id="derivation_defs" obligation="informative" displayorder="8">
+<title><strong>Appendix 2</strong>.<tab/><strong>Derivation of definitions of the base units in the revised SI (see Ref. <eref type="inline" bibitemid="bipm2018" citeas="[4]">[4]</eref> section 2.3.1); comparison with the method presented in <xref target="defining_constants">Chapter 2</xref> and <xref target="base_units">Chapter 3</xref> of this report [added March 2018]</strong></title>
+<p id="_3d8b877f-a95d-2838-4066-3b97d332ed68"><strong><em>Preliminary consideration of the defining constants specified in the bullets of <xref target="introduction">Chapter 1</xref></em></strong></p>
+
+<p id="_504f0b40-ce3f-92d2-5220-5279979c27bc">Let <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (C)_((i)) --></stem> be the symbol for the <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mi>i</mi></mrow><mrow><mtext>th</mtext></mrow></msup></math><!-- i^(th) --></stem> defining constant and let its fixed numerical value be <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (N)_((i)) --></stem> when expressed in the SI coherent unit <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>U</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (U)_((i)) --></stem>. Because <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (C)_((i)) --></stem> is one of seven defining constants, the index <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi></math><!-- i --></stem> runs from 1 to 7. The set of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (C)_((i)) --></stem> is comprised of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>Δ</mo><msub><mrow><mstyle mathvariant="italic"><mi>ν</mi></mstyle></mrow><mrow><mtext>Cs</mtext></mrow></msub></math><!-- Delta (nu)_((Cs)) --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math><!-- c --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math><!-- h --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>e</mi></math><!-- e --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math><!-- k --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mtext>A</mtext></mrow></msub></math><!-- (N)_((A)) --></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>K</mi></mstyle></mrow><mrow><mtext>cd</mtext></mrow></msub></math><!-- (K)_((cd)) --></stem>. The subscript <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi></math><!-- i --></stem> assigned to the defining constants is an arbitrary choice. We have chosen here the order in which the bullets are listed in <xref target="introduction">Chapter 1</xref>.</p>
+
+<p id="_cb023c6d-65e7-bc87-625c-c410c0e86083">The <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mi>i</mi></mrow><mrow><mtext>th</mtext></mrow></msup></math><!-- i^(th) --></stem> bullet of <xref target="introduction">Chapter 1</xref> can be written in generic symbols as</p>
+
+<formula id="eqA2-1"><name>2.1</name><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub><mo>=</mo><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub><mo>⋅</mo><msub><mrow><mstyle mathvariant="italic"><mi>U</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub><mo>.</mo></math><!-- (C)_((i)) = (N)_((i)) * (U)_((i)) . --></stem></formula>
+
+<p id="_1966fa5c-d0ee-3cb7-d364-1926a4c267ee">The defining constants are quantities which appear in the equations of physics. The right side of <xref target="eqA2-1">Equation (2.1)</xref> is the exact value of each <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (C)_((i)) --></stem> in the revised SI because the numerical values <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (N)_((i)) --></stem> have been chosen to be exact. The bullets of <xref target="introduction">Chapter 1</xref> therefore define the coherent unit <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>U</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (U)_((i)) --></stem> in terms of the quantity <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (C)_((i)) --></stem>, which is a constant of some type <eref type="inline" bibitemid="bipm2018" citeas="[4]">[4]</eref>. In the bracket notation introduced in section 2.1 of Ref. <eref type="inline" bibitemid="bipm2018" citeas="[4]">[4]</eref>, <xref target="eqA2-1">Equation (2.1)</xref> would be written</p>
+
+<formula id="_58bc5523-9859-4c2b-6355-9398a64cf759" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub><mo>=</mo><mfenced open="{" close="}"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></mrow></mfenced><mfenced open="[" close="]"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></mrow></mfenced><mo>.</mo></math><!-- (C)_((i)) = {(C)_((i))} [(C)_((i))] . --></stem></formula>
+
+<p id="_5207a91b-851f-f127-8b2d-6d6e9167c252">Any coherent unit of the SI can be expressed as the product of powers of the seven base units <eref type="inline" bibitemid="bipm2006" citeas="[2]">[2]</eref>, <eref type="inline" bibitemid="bipm2018" citeas="[4]">[4]</eref>. We refer below to the <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mi>i</mi></mrow><mrow><mtext>th</mtext></mrow></msup></math><!-- i^(th) --></stem> base unit as <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (B)_((i)) --></stem>. The symbols for the seven base units are: <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu3"><mi mathvariant="normal">s</mi></mrow>
+
+
+
+
+
+
+
+
+</math><!-- s --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu1"><mi mathvariant="normal">m</mi></mrow>
+
+
+
+
+
+
+
+
+</math><!-- m --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu2"><mi mathvariant="normal">kg</mi></mrow>
+
+
+
+
+
+
+
+
+
+
+</math><!-- kg --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu4"><mi mathvariant="normal">A</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- A --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- K --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu6"><mi mathvariant="normal">mol</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- mol --></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow xref="U_NISTu7"><mi mathvariant="normal">cd</mi></mrow>
+
+
+
+
+
+
+
+
+
+</math><!-- cd --></stem>. Because units are commutative, the index <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi></math><!-- i --></stem> assigned to each base unit is also an arbitrary choice and need not follow the order shown here, although this is the order adopted in <xref target="defining_constants">Chapter 2</xref> and <xref target="base_units">Chapter 3</xref> of this report and in Ref. <eref type="inline" bibitemid="bipm2018" citeas="[4]">[4]</eref>. The SI unit <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>U</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (U)_((i)) --></stem> of each defining constant is given in terms of the base units by</p>
+
+<formula id="eqA2-2"><name>2.2</name><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>U</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub><mo>=</mo><munderover><mrow><mo>∏</mo></mrow><mrow><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow></mrow><mrow><mn>7</mn></mrow></munderover><msubsup><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mi>j</mi></mrow><mrow><msub><mrow><mi>a</mi></mrow><mrow><mrow><mi>i</mi><mi>j</mi></mrow></mrow></msub></mrow></msubsup><mo>.</mo></math><!-- (U)_((i)) = (prod)_((j = 1))^((7)) B_j^((a)_((i j))) . --></stem></formula>
+
+<p id="_1ea73eb2-b307-a18f-6df6-701068e9456c">The exponents <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>a</mi></mrow><mrow><mrow><mi>i</mi><mi>j</mi></mrow></mrow></msub></math><!-- (a)_((i j)) --></stem> are easily inferred from the seven bullets in <xref target="introduction">Chapter 1</xref> and the supplementary information written just below them. The exponents turn out to be integers ranging from -2 through +3. Note that <xref target="eqA2-2">Equation (2.2)</xref> is merely a consequence of each defining constant being a quantity which has an SI unit.</p>
+
+<p id="_78933c86-92c1-0a73-c175-6179ec8d6d04"><strong><em>The definitions of the base units</em></strong></p>
+
+<p id="_6a02074a-8baa-3c98-75ae-4c027b2f74e9">Combining <xref target="eqA2-1">Equation (2.1)</xref> and <xref target="eqA2-2">Equation (2.2)</xref> to eliminate <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>U</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (U)_((i)) --></stem>, we obtain</p>
+
+<formula id="eqA2-3"><name>2.3</name><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mrow><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></mrow><mrow><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></mrow></mfrac><mo>=</mo><munderover><mrow><mo>∏</mo></mrow><mrow><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow></mrow><mrow><mn>7</mn></mrow></munderover><msubsup><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mi>j</mi></mrow><mrow><msub><mrow><mi>a</mi></mrow><mrow><mrow><mi>i</mi><mi>j</mi></mrow></mrow></msub></mrow></msubsup><mo>.</mo></math><!-- (((C)_((i))))/(((N)_((i)))) = (prod)_((j = 1))^((7)) B_j^((a)_((i j))) . --></stem></formula>
+
+<p id="_1e336a80-b68f-40d3-53f5-d6c5ba946608">The task now is to express any given base unit <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (B)_((i)) --></stem> as the product of powers of the seven ratios <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub><mo>/</mo><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub></math><!-- (C)_((j)) // (N)_((j)) --></stem>. We therefore seek the “inverse form” of <xref target="eqA2-3">Equation (2.3)</xref>.</p>
+
+<p id="_06e53eaf-9869-2537-2632-66424030477a">Temporarily treating the symbols of quantities and units as algebraic abstractions, we take the logarithm<fn reference="4"><p id="_011cbc4e-aab2-6494-989c-c7fb1bdd62d8">See Ref. <eref type="inline" bibitemid="mohr" citeas="[6]">[6]</eref> for a formal derivation that avoids any use of logarithms.</p>
+</fn> of both sides of <xref target="eqA2-3">Equation (2.3)</xref>:</p>
+
+<formula id="eqA2-4"><name>2.4</name><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtext>ln</mtext><mfenced open="(" close=")"><mrow><mfrac><mrow><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></mrow><mrow><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></mrow></mfrac></mrow></mfenced><mo>=</mo><munderover><mrow><mo>∑</mo></mrow><mrow><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow></mrow><mrow><mn>7</mn></mrow></munderover><msub><mrow><mi>a</mi></mrow><mrow><mrow><mi>i</mi><mi>j</mi></mrow></mrow></msub><mtext>ln</mtext><mfenced open="(" close=")"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub></mrow></mfenced><mo>.</mo></math><!-- ln ((((C)_((i))))/(((N)_((i))))) = (sum)_((j = 1))^((7)) (a)_((i j)) ln ((B)_((j))) . --></stem></formula>
+
+<p id="_763fb4b7-93e9-651f-97ee-2bdb5de6d6df">Let</p>
+
+<formula id="_24ccaf91-2d8f-ef99-5783-89f0ce2cad9b" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>w</mi></mrow><mrow><mi>i</mi></mrow></msub><mo>=</mo><mtext>ln</mtext><mfenced open="(" close=")"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub><mo>/</mo><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></mrow></mfenced></math><!-- (w)_((i)) = ln ((C)_((i)) // (N)_((i))) --></stem></formula>
+
+<p id="_64c1eb76-602c-4e20-1c22-248e3a82b1d5">and</p>
+
+<formula id="_52892cc8-2ef8-75ec-a29f-f5328e928345" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>z</mi></mrow><mrow><mi>i</mi></mrow></msub><mo>=</mo><mtext>ln</mtext><mfenced open="(" close=")"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></mrow></mfenced><mo>.</mo></math><!-- (z)_((i)) = ln ((B)_((i))) . --></stem></formula>
+
+<p id="_be57c5c2-daba-dc03-3b96-7b8e37c3cfcf">The set of seven equations represented by <xref target="eqA2-4">Equation (2.4)</xref> can now be written compactly in matrix form as</p>
+
+<formula id="eqA2-5"><name>2.5</name><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>W</mi></mstyle><mo>=</mo><mstyle mathvariant="bold"><mi>A</mi></mstyle><mstyle mathvariant="bold"><mi>Z</mi></mstyle></math><!-- W = A Z --></stem></formula>
+
+<p id="_23c4616d-920f-91e0-7ff5-cbf080c4f1c3">where <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>W</mi></mstyle></math><!-- W --></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>Z</mi></mstyle></math><!-- Z --></stem> are <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>×</mo><mn>7</mn></math><!-- 1 xx 7 --></stem> arrays containing seven logarithmic elements of the form <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>w</mi></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (w)_((i)) --></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>z</mi></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (z)_((i)) --></stem> respectively and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math><!-- A --></stem> is the <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>7</mn><mo>×</mo><mn>7</mn></math><!-- 7 xx 7 --></stem> matrix of exponents consisting of the elements <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>a</mi></mrow><mrow><mrow><mi>i</mi><mi>j</mi></mrow></mrow></msub></math><!-- (a)_((i j)) --></stem>.</p>
+
+<p id="_8b51e9a5-8f0f-a193-0500-ba166dc16201">To solve for <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>Z</mi></mstyle></math><!-- Z --></stem>, multiply <xref target="eqA2-5">Equation (2.5)</xref> from the left by <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><msup><mrow><mi>A</mi></mrow><mrow><mrow><mo>−</mo><mn>1</mn></mrow></mrow></msup></mstyle></math><!-- A^(- 1) --></stem>:</p>
+
+<formula id="eqA2-6"><name>2.6</name><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>Z</mi></mstyle><mo>=</mo><mstyle mathvariant="bold"><mrow><msup><mrow><mi>A</mi></mrow><mrow><mrow><mo>−</mo><mn>1</mn></mrow></mrow></msup><mi>W</mi></mrow></mstyle><mo>.</mo></math><!-- Z = A^(- 1) W . --></stem></formula>
+
+<p id="_ebe2193a-d60a-48ce-c45b-651073f4d779">The existence of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><msup><mrow><mi>A</mi></mrow><mrow><mrow><mo>−</mo><mn>1</mn></mrow></mrow></msup></mstyle></math><!-- A^(- 1) --></stem> is obviously a necessary condition.</p>
+
+<p id="_1e0e9e26-33a2-0e86-4a17-af9c226c9ec0"><xref target="eqA2-6">Equation (2.6)</xref> represents seven individual equations. We now exponentiate each of these to eliminate the logarithms they contain. If the elements of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><msup><mrow><mi>A</mi></mrow><mrow><mrow><mo>−</mo><mn>1</mn></mrow></mrow></msup></mstyle></math><!-- A^(- 1) --></stem> are symbolized by <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>d</mi></mrow><mrow><mrow><mi>i</mi><mi>j</mi></mrow></mrow></msub></math><!-- (d)_((i j)) --></stem>, then the definition of the <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mi>i</mi></mrow><mrow><mtext>th</mtext></mrow></msup></math><!-- i^(th) --></stem> base unit is found to be:</p>
+
+<formula id="eqA2-7"><name>2.7</name><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub><mo>=</mo><munderover><mrow><mo>∏</mo></mrow><mrow><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow></mrow><mrow><mn>7</mn></mrow></munderover><msup><mrow><mfenced open="(" close=")"><mrow><mfrac><mrow><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub></mrow><mrow><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub></mrow></mfrac></mrow></mfenced></mrow><mrow><msub><mrow><mi>d</mi></mrow><mrow><mrow><mi>i</mi><mi>j</mi></mrow></mrow></msub></mrow></msup><mo>,</mo></math><!-- (B)_((i)) = (prod)_((j = 1))^((7)) ((((C)_((j))))/(((N)_((j)))))^((d)_((i j))) , --></stem></formula>
+
+<p id="_2ca13d2c-8c8a-6795-584e-983025ceef7c">which defines each base unit in terms of the defining constants and their fixed numerical values. The same procedure can be used to show that <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub><mo>=</mo><munder><mrow><mo>∏</mo></mrow><mrow><mi>j</mi></mrow></munder><msubsup><mrow><mstyle mathvariant="italic"><mi>U</mi></mstyle></mrow><mrow><mi>j</mi></mrow><mrow><msub><mrow><mi>d</mi></mrow><mrow><mrow><mi>i</mi><mi>j</mi></mrow></mrow></msub></mrow></msubsup></math><!-- (B)_((i)) = underset((j))((prod)) U_j^((d)_((i j))) --></stem> is the inverse form of <xref target="eqA2-2">Equation (2.2)</xref>. The definitions of the base units given in Ref. <eref type="inline" bibitemid="bipm2018" citeas="[4]">[4]</eref> can be recognized as following from <xref target="eqA2-7">Equation (2.7)</xref> when it is written with separate factors for the terms containing the <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub></math><!-- (N)_((j)) --></stem> and the <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub></math><!-- (C)_((j)) --></stem>:</p>
+
+<formula id="_ec3a863f-dc4e-8853-f58e-f088f06f1777"><name>2.8</name><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub><mo>=</mo><mfenced open="(" close=")"><mrow><munderover><mrow><mo>∏</mo></mrow><mrow><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow></mrow><mrow><mn>7</mn></mrow></munderover><msubsup><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mi>j</mi></mrow><mrow><mrow><mo>−</mo><msub><mrow><mi>d</mi></mrow><mrow><mrow><mi>i</mi><mi>j</mi></mrow></mrow></msub></mrow></mrow></msubsup></mrow></mfenced><mfenced open="(" close=")"><mrow><munderover><mrow><mo>∏</mo></mrow><mrow><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow></mrow><mrow><mn>7</mn></mrow></munderover><msubsup><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>j</mi></mrow><mrow><msub><mrow><mi>d</mi></mrow><mrow><mrow><mi>i</mi><mi>j</mi></mrow></mrow></msub></mrow></msubsup></mrow></mfenced><mo>.</mo></math><!-- (B)_((i)) = ((prod)_((j = 1))^((7)) N_j^(- (d)_((i j)))) ((prod)_((j = 1))^((7)) C_j^((d)_((i j)))) . --></stem></formula>
+
+<p id="_90f44da5-abaa-7d78-a145-0a89d3debcb6"><xref target="eqA2-7">Equation (2.7)</xref> can also be used to define the same base units in terms of the present SI when account is taken of the different set of seven bullets, which are shown in <xref target="present_si">Appendix 1</xref>.</p>
+
+<p id="_317d1c8c-f82c-823a-cff1-1a393414b99c"><strong><em>Comparison with the approach taken in <xref target="defining_constants">Chapter 2</xref> and <xref target="base_units">Chapter 3</xref></em></strong></p>
+
+<p id="_298d1000-daeb-cc08-3e60-cfe116da4253"><xref target="defining_constants">Chapter 2</xref> and <xref target="base_units">Chapter 3</xref> take advantage of the simplicity of <xref target="eqA2-2">Equation (2.2)</xref>. The information required for each <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>U</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (U)_((i)) --></stem> seems practically self-evident. Nevertheless, the set of equations contains all exponents <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>a</mi></mrow><mrow><mrow><mi>i</mi><mi>j</mi></mrow></mrow></msub></math><!-- (a)_((i j)) --></stem> which are needed to create matrix <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math><!-- A --></stem>.</p>
+
+<p id="_72fa41f6-e63d-16ec-5bd8-eb2c32e776c0">In <xref target="defining_constants">Chapter 2</xref>, <xref target="table1">Table 1</xref> is described as representing “much of the information” contained in the bullets of <xref target="introduction">Chapter 1</xref>. The information contained is that that the unit <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>U</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (U)_((i)) --></stem> of the <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mi>i</mi></mrow><mrow><mtext>th</mtext></mrow></msup></math><!-- i^(th) --></stem> defining constant <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (C)_((i)) --></stem> can be expressed in terms of the base units as <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mrow xref="U_NISTu3"><mi mathvariant="normal">s</mi></mrow>
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow></msup><msup><mrow><mrow xref="U_NISTu1"><mi mathvariant="normal">m</mi></mrow>
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow></msup><msup><mrow><mrow xref="U_NISTu2"><mi mathvariant="normal">kg</mi></mrow>
+
+
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>γ</mi></mstyle></mrow></msup><msup><mrow><mrow xref="U_NISTu4"><mi mathvariant="normal">A</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>δ</mi></mstyle></mrow></msup><msup><mrow><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>ε</mi></mstyle></mrow></msup><msup><mrow><mrow xref="U_NISTu6"><mi mathvariant="normal">mol</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>ζ</mi></mstyle></mrow></msup><msup><mrow><mrow xref="U_NISTu7"><mi mathvariant="normal">cd</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>η</mi></mstyle></mrow></msup></math><!-- s^(alpha) m^(beta) kg^(gamma) A^(delta) K^(epsilon) mol^(zeta) cd^(eta) --></stem>, where the required exponents are inferred from the <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mi>i</mi></mrow><mrow><mtext>th</mtext></mrow></msup></math><!-- i^(th) --></stem> bullet of <xref target="introduction">Chapter 1</xref> (and, when needed, the supplementary information written below the bullets). <xref target="table1">Table 1</xref> thus provides an example of how the information contained in <xref target="eqA2-2">Equation (2.2)</xref> can be displayed. The important point is that <xref target="table1">Table 1</xref> contains <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math><!-- A --></stem>, and the cells of <xref target="table1">Table 1</xref> contain the array of individual exponents <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>a</mi></mrow><mrow><mrow><mi>i</mi><mi>j</mi></mrow></mrow></msub></math><!-- (a)_((i j)) --></stem> for the chosen ordering of base units and defining constants. The ordering is arbitrary from a mathematical point of view and was therefore chosen in <xref target="defining_constants">Chapter 2</xref> for didactic reasons.</p>
+
+<p id="_65e943f3-2f5d-082d-fa1a-98e16edb8994">It is also true that the exact <strong>value</strong> of the <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mi>i</mi></mrow><mrow><mtext>th</mtext></mrow></msup></math><!-- i^(th) --></stem> defining constant <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (C)_((i)) --></stem> will be expressed in the revised SI in terms of the base units multiplied by an exact number. The SI <strong>value</strong> of each <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (C)_((i)) --></stem> in the revised SI will therefore be <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub><msup><mrow><mrow xref="U_NISTu3"><mi mathvariant="normal">s</mi></mrow>
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow></msup><msup><mrow><mrow xref="U_NISTu1"><mi mathvariant="normal">m</mi></mrow>
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow></msup><msup><mrow><mrow xref="U_NISTu2"><mi mathvariant="normal">kg</mi></mrow>
+
+
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>γ</mi></mstyle></mrow></msup><msup><mrow><mrow xref="U_NISTu4"><mi mathvariant="normal">A</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>δ</mi></mstyle></mrow></msup><msup><mrow><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>ε</mi></mstyle></mrow></msup><msup><mrow><mrow xref="U_NISTu6"><mi mathvariant="normal">mol</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>ζ</mi></mstyle></mrow></msup><msup><mrow><mrow xref="U_NISTu7"><mi mathvariant="normal">cd</mi></mrow>
+
+
+
+
+
+
+
+
+
+</mrow><mrow><mstyle mathvariant="italic"><mi>η</mi></mstyle></mrow></msup></math><!-- (N)_((i)) s^(alpha) m^(beta) kg^(gamma) A^(delta) K^(epsilon) mol^(zeta) cd^(eta) --></stem>, where the exact number <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (N)_((i)) --></stem> is stated in the <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mi>i</mi></mrow><mrow><mtext>th</mtext></mrow></msup></math><!-- i^(th) --></stem> bullet of <xref target="introduction">Chapter 1</xref>. Multiplication by a pure number does not affect the exponents.</p>
+
+<p id="_246bd8a6-1959-a8d8-ac95-b15d8def72a7"><xref target="table2">Table 2</xref> is designed to present a useful picture of the revised SI. With that in mind, <xref target="base_units">Chapter 3</xref> refers to combinations of the defining constants that have the same SI <strong>unit</strong> as the <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mi>i</mi></mrow><mrow><mtext>th</mtext></mrow></msup></math><!-- i^(th) --></stem> base unit <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (B)_((i)) --></stem>. The <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mi>i</mi></mrow><mrow><mtext>th</mtext></mrow></msup></math><!-- i^(th) --></stem> row of <xref target="table2">Table 2</xref> is labelled with base unit <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (B)_((i)) --></stem>; the <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mi>j</mi></mrow><mrow><mtext>th</mtext></mrow></msup></math><!-- j^(th) --></stem> column of <xref target="table2">Table 2</xref> is labelled with the defining constant <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub></math><!-- (C)_((j)) --></stem>. The elements <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>d</mi></mrow><mrow><mrow><mi>i</mi><mi>j</mi></mrow></mrow></msub></math><!-- (d)_((i j)) --></stem> of the table were obtained by inverting matrix <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold"><mi>A</mi></mstyle></math><!-- A --></stem>, which is contained in <xref target="table1">Table 1</xref>. <xref target="table2">Table 2</xref> can therefore be used to find the combination of defining constants that has <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (B)_((i)) --></stem> as its unit. The <strong>definition</strong> of each <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mi>i</mi></mrow></msub></math><!-- (B)_((i)) --></stem> can be obtained by changing the column labels from <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub></math><!-- (C)_((j)) --></stem> to <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub><mo>/</mo><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub></math><!-- (C)_((j)) // (N)_((j)) --></stem> thereby making <xref target="table2">Table 2</xref> equivalent to <xref target="eqA2-7">Equation (2.7)</xref>. However, a more intuitive method is adopted for the example presented in <xref target="base_units">Chapter 3</xref>.</p>
+</annex><bibliography><references id="_references" normative="false" obligation="informative" displayorder="9">
+<title depth="1">References</title><bibitem id="cgpm2011">
+  <formattedref format="application/x-isodoc+xml"><link target="https://www.bipm.org/en/CGPM/db/24/1/">Resolution 1 of the 24th CGPM</link> (2011): “On the possible future revision of the International System of Units, the SI”</formattedref>
+  <docidentifier type="metanorma">[1]</docidentifier>
+</bibitem><bibitem id="bipm2006">
+  <formattedref format="application/x-isodoc+xml">Bureau International des Poids et Mesures, <link target="https://www.bipm.org/utils/common/pdf/si_brochure_8_en.pdf"><em>The International System of Units (SI)</em>, 8th Edition</link>, 2006; 2014.</formattedref>
+  <docidentifier type="metanorma">[2]</docidentifier>
+</bibitem><bibitem id="newell">
+  <formattedref format="application/x-isodoc+xml">David B. Newell <em>et al.</em>, The CODATA 2017 Values of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math><!-- h --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>e</mi></math><!-- e --></stem>, <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math><!-- k --></stem>, and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>N</mi></mstyle></mrow><mrow><mtext>A</mtext></mrow></msub></math><!-- (N)_((A)) --></stem> for Revision of the SI, <em>Metrologia</em> <strong>55</strong> (2018) L13-L16. <link target="https://doi.org/10.1088/1681-7575/aa950a"/></formattedref>
+  <docidentifier type="metanorma">[3]</docidentifier>
+</bibitem><bibitem id="bipm2018">
+  <formattedref format="application/x-isodoc+xml">Bureau International des Poids et Mesures, <em>The International System of Units (SI)</em>, 9th Edition – <link target="https://www.bipm.org/utils/en/pdf/si-revised-brochure/Draft-SI-Brochure-2018.pdf">draft</link> of 5 February 2018.</formattedref>
+  <docidentifier type="metanorma">[4]</docidentifier>
+</bibitem><bibitem id="page">
+  <formattedref format="application/x-isodoc+xml">see for instance page 2 of <em>The International System of Units (SI)</em>, C.H. Page and P. Vigoureux, eds. Nat. Bur. Stand. (U.S.), Spec. Publ. 330 (July 1974). (This English translation of the 3rd Edition of the SI Brochure was approved by the BIPM.)</formattedref>
+  <docidentifier type="metanorma">[5]</docidentifier>
+</bibitem><bibitem id="mohr">
+  <formattedref format="application/x-isodoc+xml">Peter J. Mohr, Defining units in the quantum based SI, <em>Metrologia</em>, <strong>45</strong> (2008) 129-133.</formattedref>
+  <docidentifier type="metanorma">[6]</docidentifier>
+</bibitem><bibitem id="bipm2017">
+  <formattedref format="application/x-isodoc+xml">BIPM, Future Revision of the SI <link target="https://www.bipm.org/utils/common/pdf/SI-Brand-Book.pdf">Brand Book</link>, April 2017, page 11. (the image is reproduced on the cover page of this report)</formattedref>
+  <docidentifier type="metanorma">[7]</docidentifier>
+</bibitem><bibitem id="wiki">
+  <formattedref format="application/x-isodoc+xml">Proposed redefinition of SI base units, <em>Wikipedia</em> (accessed 23 February 2018) <link target="https://en.wikipedia.org/wiki/Proposed_redefinition_of_SI_base_units"/></formattedref>
+  <docidentifier type="metanorma">[8]</docidentifier>
+</bibitem><bibitem id="cipm1960">
+  <formattedref format="application/x-isodoc+xml">see address by CIPM President André Danjon in <link target="https://www.bipm.org/utils/common/pdf/CGPM/CGPM11.pdf"><em>Proceedings</em></link> of the 11th CGPM (1960), pp. 23-25 [in French].</formattedref>
+  <docidentifier type="metanorma">[9]</docidentifier>
+</bibitem><bibitem id="cipm2018">
+  <formattedref format="application/x-isodoc+xml">Joint statement prepared in 2017 by the CIPM Consultative Committees on the proposed revision of the SI. <link target="https://www.bipm.org/utils/common/pdf/SI-statement.pdf"/> (accessed 23 February 2018)</formattedref>
+  <docidentifier type="metanorma">[10]</docidentifier>
+</bibitem>
+
+
+
+
+
+
+
+
+
+
+</references></bibliography>
+<doccontrol>
+<title>Document Control</title>
+<table unnumbered="true"><tbody>
+<tr><th>Authors:</th><td/><td>Richard Davis (BIPM)</td></tr>
+<tr><td> </td><td/>
+<td/></tr>
+  
+</tbody></table></doccontrol>
+</bipm-standard>
