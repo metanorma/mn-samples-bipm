@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en" xml:lang="en">
-  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
+<html lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
   <!--
 @charset "UTF-8";
 /*
@@ -103,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 
 blockquote, q {
   quotes: none; }
-  blockquote:before, blockquote:after, q:before, q:after {
+  blockquote::before, blockquote::after, q::before, q::after {
     content: '';
     content: none; }
 
@@ -126,8 +125,16 @@ b, strong {
 div.document-stage-band, div.document-type-band {
   background-color: #333333; }
 
-a.FootnoteRef + a.FootnoteRef:before {
+a.FootnoteRef + a.FootnoteRef::before {
   content: ", ";
+  vertical-align: super; }
+
+a.TableFootnoteRef + a.TableFootnoteRef::before {
+  content: ", ";
+  vertical-align: super; }
+
+a.TableFootnoteRef, span.TableFootnoteRef,
+a.FootnoteRef, span.FootnoteRef {
   vertical-align: super; }
 
 .addition {
@@ -136,6 +143,43 @@ a.FootnoteRef + a.FootnoteRef:before {
 .deletion {
   color: red;
   text-decoration: line-through; }
+
+ruby {
+  ruby-position: over;
+  -webkit-ruby-position: before; }
+
+ruby ruby {
+  ruby-position: under;
+  -webkit-ruby-position: after; }
+
+/* code highlighting with line numbers */
+table.rouge-line-table td.rouge-gutter {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-right: 1em; }
+
+table.rouge-line-table td.rouge-code {
+  -moz-user-select: all;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all; }
+
+table.rouge-line-table,
+table.rouge-line-table th,
+table.rouge-line-table td {
+  width: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%; }
+
+table.rouge-line-table pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;
+  font-size: 100%; }
 
 #brochure-band {
   background-color: #0AC442; }
@@ -271,6 +315,12 @@ main {
     padding-left: 30px; }
   #toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
     padding-left: 50px; }
+  #toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+    padding-left: 70px; }
+  #toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+    padding-left: 90px; }
+  #toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+    padding-left: 110px; }
   #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
     background: #6C734A;
     box-shadow: inset -5px 0px 10px -5px #6C734A !important; }
@@ -377,12 +427,16 @@ div.figure {
     font-weight: 700;
     font-size: 1em;
     text-align: center; }
-  div.figure > img {
+  div.figure > img, div.figure > svg {
     margin-left: auto;
     margin-right: auto;
     display: block;
     max-width: 100%;
     height: auto; }
+
+table div.figure {
+  padding: 0;
+  margin: 0; }
 
 /*
     Document types + stages
@@ -549,8 +603,11 @@ a:hover {
   background: #6C734A;
   box-shadow: 3px 0 0 #6C734A, -3px 0 0 #6C734A; }
 
-::selection,
-::-moz-selection {
+*::selection {
+  background: #6C734A;
+  color: white; }
+
+*::-moz-selection {
   background: #6C734A;
   color: white; }
 
@@ -563,7 +620,7 @@ ul, ol {
 ul li {
   list-style: none; }
 
-ul li:before {
+ul li::before {
   content: "—";
   display: inline-block;
   width: 1em;
@@ -587,7 +644,7 @@ ol ul > li:first-child {
 #toc-list li {
   list-style-type: none; }
 
-#toc li:before {
+#toc li::before {
   content: " ";
   display: none; }
 
@@ -608,13 +665,13 @@ ol[class="alphabet"] > li {
 ol[class="alphabet"] ol[class="alphabet"] > li {
   list-style: inherit; }
 
-ol[class="alphabet"] > li:before {
+ol[class="alphabet"] > li::before {
   counter-increment: alphabet;
   content: counter(alphabet, lower-alpha) ") ";
   position: absolute;
   left: -1.4em; }
 
-ol[class="alphabet"] ol[class="alphabet"] > li:before {
+ol[class="alphabet"] ol[class="alphabet"] > li::before {
   counter-increment: none;
   content: initial; }
 
@@ -628,13 +685,13 @@ ol[class="roman"] > li {
 ol[class="roman"] ol[class="roman"] > li {
   list-style: inherit; }
 
-ol[class="roman"] > li:before {
+ol[class="roman"] > li::before {
   counter-increment: roman;
   content: "(" counter(roman, lower-roman) ") ";
   position: absolute;
   left: -2.0em; }
 
-ol[class="roman"] ol[class="roman"] > li:before {
+ol[class="roman"] ol[class="roman"] > li::before {
   counter-increment: none;
   content: initial; }
 
@@ -748,7 +805,7 @@ table {
   table th, table td {
     padding: 1em; }
   table td.header {
-    font-weigth: 400; }
+    font-weight: 400; }
 
 p.TableTitle {
   text-align: center;
@@ -1022,7 +1079,46 @@ To top button
     display: none; } }
 
 -->
-</style><title>Pooled variances</title>
+</style><style><!--pre.sourcecode table td { padding: 5px; }
+pre.sourcecode table pre { margin: 0; }
+pre.sourcecode, pre.sourcecode .w {
+  color: #444444;
+}
+pre.sourcecode .cp {
+  color: #CC00A3;
+}
+pre.sourcecode .cs {
+  color: #CC00A3;
+}
+pre.sourcecode .c, pre.sourcecode .ch, pre.sourcecode .cd, pre.sourcecode .cm, pre.sourcecode .cpf, pre.sourcecode .c1 {
+  color: #FF0000;
+}
+pre.sourcecode .kc {
+  color: #C34E00;
+}
+pre.sourcecode .kd {
+  color: #0000FF;
+}
+pre.sourcecode .kr {
+  color: #007575;
+}
+pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
+  color: #0000FF;
+}
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .ld, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+  color: #009C00;
+}
+pre.sourcecode .sa {
+  color: #0000FF;
+}
+pre.sourcecode .nb, pre.sourcecode .bp {
+  color: #C34E00;
+}
+pre.sourcecode .nt {
+  color: #0000FF;
+}
+
+--></style><title>Pooled variances</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--TOC script import-->
@@ -1031,15 +1127,13 @@ To top button
 </script>
 
 <!--Google fonts-->
-<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" />
 
 <!--Font awesome import for the link icon-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
 <style class="anchorjs"></style>
-</link></link></link></head>
-  <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
-    <div class="title-section"><div class="document-stage-band" id="in-force-band">
+</head><body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container"><div class="title-section"><div class="document-stage-band" id="in-force-band">
     <p class="document-stage">In Force</p>
 </div>
 
@@ -1049,7 +1143,7 @@ To top button
 
 
 
-  <div id="toggle"> <span>&#x2022;</span> </div>
+  <div id="toggle"> <span>•</span> </div>
 
   <header>
 
@@ -1090,7 +1184,7 @@ To top button
   
   <div class="coverpage-tc-name">
     
-    <span>J&#xF6;rg W. M&#xFC;ller ().
+    <span>Jörg W. Müller ().
   </span>
   
 
@@ -1112,23 +1206,26 @@ To top button
 <div class="info-section">
 <div class="copyright">
 <div class="boilerplate-copyright">
-    <div>
-      <p id="_dd3ae32b-98cb-d73f-c2c0-5fba00df02f6" style="text-align:center;"> &#xA9; Bureau International des Poids et Mesures 1993 all rights reserved</p>
-    </div>
-  </div>
-  <div class="boilerplate-license">
-    <div><h1 class="IntroTitle">Copyright statement</h1>
 
-      <p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
-    </div>
-  </div>
+<div id="_54c9ec8f-c5b5-5746-63c0-31117a2ff19e">
+<p id="_69d81d45-6cb7-88e3-521b-65e1bc22ba24" style="text-align:center;">© Bureau International des Poids et Mesures 1993 all rights reserved</p>
+</div>
+</div>
+  <div class="boilerplate-license">
+
+<div id="_copyright_statement_2"><h1 class="IntroTitle">Copyright statement</h1>
+
+<p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/:">http://creativecommons.org/licenses/by/4.0/:</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
+</div>
+</div>
   <div id="boilerplate-legal-destination"></div>
 <div class="boilerplate-feedback">
-    <p id="_bd0b4a04-1c9b-db4f-f27f-b98101e93f33">BIPM<br />
-      Pavillon de Breteuil<br />
-      F-92312 S&#xE8;vres Cedex<br />
-      FRANCE</p>
-  </div>
+
+<p id="_e6428749-2432-0772-4c8e-ed6c34018916">BIPM<br />
+Pavillon de Breteuil<br />
+F-92312 Sèvres Cedex<br />
+FRANCE</p>
+</div>
 </div>
 
 <div class="rule"></div>
@@ -1137,2174 +1234,1421 @@ To top button
 
 
 </div>
-</div></header>
-      
-    </div>
-    <br />
-    <div class="prefatory-section"><nav>
-  <h1 id="content">Contents</h1>
-  <div id="toc"><ul><li class="h1"><a href="#toc0">      1.&#xA0; Pooled variances</a></li><li class="h1"><a href="#toc1">      References</a></li></ul></div>
+</div></header></div><br /><div class="prefatory-section"><nav>
+  <div id="toc"><h1 class="IntroTitle">Contents</h1><ul><li class="h1"><a href="#_83482605-840a-4b4b-ba3f-c0574428dbc6">      1.  Pooled variances</a></li>
+<li class="h1"><a href="#_240c5710-d148-4927-8638-3e9ba75bff04">      References</a></li></ul></div>
 
 </nav>
 
 
 <div class="rule toc"></div>
+</div><br /><main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button><div class="authority">
 
-      
-    </div>
-    <br />
-    <main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-      <div class="authority">
-  
-  
-  
-</div>
-      <p class="zzSTDTitle1">Pooled variances</p>
-      <div id="_pooled_variances">
-        <h1 id="toc0">1.&#xA0; Pooled variances</h1>
-        <p id="_556d8392-c259-c870-22c7-c99d4ff9557e">Experimenters in general are weIl advised to subdivide lengthy measurements into a number of shorter ones, whenever feasible. This gives them the possibility&#x2009;&#x2014;&#x2009;should anything have gone wrong&#x2009;&#x2014;&#x2009;at least to be aware of the problem and to know roughly when it occurred. If the results do not indicate an anomaly, the partial results must be combined in such a way that the outcome characterizes the entire measuring period.</p>
-        <p id="_439df5a3-ba0b-ed42-ef9c-5c0c6b93010c">Problems with recent measurements have led us to re-consider the question of how experimental values for the variance, obtained in sequences of runs, should be used to arrive at a &#x201C;best&#x201D; overall estimate.</p>
-        <p id="_ceeb216e-2cc1-a0cf-dd8e-1b86e9828a34">This problem occurs rather frequently and, no doubt, has been treated many times. A few years ago we looked at the special case of two samples <a href="#muller">[1]</a>. In what follows these earlier findings are generalized to include an arbitrary number m of samples. It is shown that the contributions arising from the differences between the individual mean values can be incorporated in those terms that involve only the measured variances.</p>
-        <p id="_7ec4cf48-1975-9d9b-f34e-f175a314afe6">Suppose that we have to deal with a situation which is &#x201C;under statistical control&#x201D;. What we actually require is that the first two moments of the number <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>x</mi>
-</math></span> of events, counted in a given time interval, show no significant trend with time.</p>
-        <p id="_c4b143c0-6273-c95e-6496-315e4ba6392f">Now consider measurements that have been performed on <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>m</mi>
+
+
+
+</div><br /><div id="_pooled_variances"><h1 id="_83482605-840a-4b4b-ba3f-c0574428dbc6">1.  Pooled variances</h1><p id="_556d8392-c259-c870-22c7-c99d4ff9557e">Experimenters in general are weIl advised to subdivide lengthy measurements into a number of shorter ones, whenever feasible. This gives them the possibility — should anything have gone wrong — at least to be aware of the problem and to know roughly when it occurred. If the results do not indicate an anomaly, the partial results must be combined in such a way that the outcome characterizes the entire measuring period.</p><p id="_439df5a3-ba0b-ed42-ef9c-5c0c6b93010c">Problems with recent measurements have led us to re-consider the question of how experimental values for the variance, obtained in sequences of runs, should be used to arrive at a “best” overall estimate.</p><p id="_ceeb216e-2cc1-a0cf-dd8e-1b86e9828a34">This problem occurs rather frequently and, no doubt, has been treated many times. A few years ago we looked at the special case of two samples <a href="#muller">[1]</a>. In what follows these earlier findings are generalized to include an arbitrary number m of samples. It is shown that the contributions arising from the differences between the individual mean values can be incorporated in those terms that involve only the measured variances.</p><p id="_24301d16-cc7e-0aec-6faa-d0d9512561ea">Suppose that we have to deal with a situation which is “under statistical control”. What we actually require is that the first two moments of the number <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>x</mi>
+  </mstyle>
+</math></span> of events, counted in a given time interval, show no significant trend with time.</p><p id="_23ffd1c2-630e-7953-95ce-7450765644d9">Now consider measurements that have been performed on <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>m</mi>
+  </mstyle>
 </math></span> samples, of size <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+  <mstyle displaystyle="false">
+    <msub>
       <mi>n</mi>
-    </mrow>
-    <mrow>
       <mi>j</mi>
-    </mrow>
-  </msub>
-  <mtext>&#xA0;</mtext>
-  <mfenced open="(" close=")">
+    </msub>
+    <mtext> </mtext>
     <mrow>
+      <mo>(</mo>
       <mi>j</mi>
       <mo>=</mo>
       <mn>1</mn>
-      <mo>,</mo>
+      <mo>, </mo>
       <mn>2</mn>
-      <mo>,</mo>
-      <mo>&#x2026;</mo>
-      <mo>,</mo>
+      <mo>, </mo>
+      <mo>…</mo>
+      <mo>, </mo>
       <mi>m</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
+  </mstyle>
 </math></span>, taken randomly from sorne stable population. Let the results be available in the form of me an values <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mover accent="true">
-        <mrow>
-          <mi>x</mi>
-        </mrow>
-        <mo>&#xAF;</mo>
+  <mstyle displaystyle="false">
+    <msub>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
       </mover>
-    </mrow>
-    <mrow>
       <mi>j</mi>
-    </mrow>
-  </msub>
+    </msub>
+  </mstyle>
 </math></span> and variances <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msubsup>
-    <mrow>
+  <mstyle displaystyle="false">
+    <msubsup>
       <mi>s</mi>
-    </mrow>
-    <mrow>
       <mi>j</mi>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msubsup>
+    </msubsup>
+  </mstyle>
 </math></span> (for a single measurement), which have been obtained by forming from the measurements <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+  <mstyle displaystyle="false">
+    <msub>
       <mi>x</mi>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
         <mi>j</mi>
       </mrow>
-    </mrow>
-  </msub>
-</math></span> the quantities</p>
-        <div id="eq1">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mover accent="true">
-        <mrow>
-          <mi>x</mi>
-        </mrow>
-        <mo>&#xAF;</mo>
+    </msub>
+  </mstyle>
+</math></span> the quantities</p><div id="eq1"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
       </mover>
-    </mrow>
-    <mrow>
       <mi>j</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
+    </msub>
+    <mo>=</mo>
+    <mfrac>
       <mn>1</mn>
-    </mrow>
-    <mrow>
       <msub>
-        <mrow>
-          <mi>n</mi>
-        </mrow>
-        <mrow>
-          <mi>j</mi>
-        </mrow>
-      </msub>
-    </mrow>
-  </mfrac>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <msub>
-        <mrow>
-          <mi>n</mi>
-        </mrow>
-        <mrow>
-          <mi>j</mi>
-        </mrow>
-      </msub>
-    </mrow>
-  </munderover>
-  <msub>
-    <mrow>
-      <mi>x</mi>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
+        <mi>n</mi>
         <mi>j</mi>
-      </mrow>
-    </mrow>
-  </msub>
-</math></span>&#xA0; (1)</p>
-          </div>
-        </div>
-        <p id="_38d1fec4-9318-42e1-6aa1-00aa2d262d4c">and</p>
-        <div id="eq2">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msubsup>
+      </msub>
+    </mfrac>
     <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>i</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <msub>
+          <mi>n</mi>
+          <mi>j</mi>
+        </msub>
+      </munderover>
+      <msub>
+        <mi>x</mi>
+        <mrow>
+          <mi>i</mi>
+          <mi>j</mi>
+        </mrow>
+      </msub>
+    </mrow>
+  </mstyle>
+</math></span>  (1)</p></div></div><p id="_38d1fec4-9318-42e1-6aa1-00aa2d262d4c">and</p><div id="eq2"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msubsup>
       <mi>s</mi>
-    </mrow>
-    <mrow>
       <mi>j</mi>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msubsup>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
+    </msubsup>
+    <mo>=</mo>
+    <mfrac>
       <mn>1</mn>
-    </mrow>
-    <mrow>
       <mrow>
         <msub>
-          <mrow>
-            <mi>n</mi>
-          </mrow>
-          <mrow>
-            <mi>j</mi>
-          </mrow>
-        </msub>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-  </mfrac>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <msub>
-        <mrow>
           <mi>n</mi>
-        </mrow>
-        <mrow>
           <mi>j</mi>
-        </mrow>
-      </msub>
-    </mrow>
-  </munderover>
-  <msup>
+        </msub>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </mfrac>
     <mrow>
-      <mfenced open="(" close=")">
+      <munderover>
+        <mo>∑</mo>
         <mrow>
+          <mi>i</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <msub>
+          <mi>n</mi>
+          <mi>j</mi>
+        </msub>
+      </munderover>
+      <msup>
+        <mrow>
+          <mo>(</mo>
           <msub>
+            <mi>x</mi>
             <mrow>
-              <mi>x</mi>
-            </mrow>
-            <mrow>
-              <mrow>
-                <mi>i</mi>
-                <mi>j</mi>
-              </mrow>
-            </mrow>
-          </msub>
-          <mo>&#x2212;</mo>
-          <msub>
-            <mrow>
-              <mi>x</mi>
-            </mrow>
-            <mrow>
+              <mi>i</mi>
               <mi>j</mi>
             </mrow>
           </msub>
+          <mo>−</mo>
+          <msub>
+            <mi>x</mi>
+            <mi>j</mi>
+          </msub>
+          <mo>)</mo>
         </mrow>
-      </mfenced>
+        <mn>2</mn>
+      </msup>
     </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msup>
-  <mo>.</mo>
-</math></span>&#xA0; (2)</p>
-          </div>
-        </div>
-        <p id="_57d78463-2635-6b69-2c79-6dd565d5f5a7">This allows us to form the weighted mean value</p>
-        <div id="_f553b665-35a6-576f-b822-90b60f90684b">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mover accent="true">
-    <mrow>
-      <mover accent="true">
-        <mrow>
-          <mi>x</mi>
-        </mrow>
-        <mo>&#xAF;</mo>
+    <mo>.</mo>
+  </mstyle>
+</math></span>  (2)</p></div></div><p id="_57d78463-2635-6b69-2c79-6dd565d5f5a7">This allows us to form the weighted mean value</p><div id="_3325f610-764b-56a1-32a1-708ceefe2000"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mover>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
       </mover>
-    </mrow>
-    <mo>&#xAF;</mo>
-  </mover>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
+      <mo>¯</mo>
+    </mover>
+    <mo>=</mo>
+    <mfrac>
       <mn>1</mn>
-    </mrow>
-    <mrow>
       <mstyle mathvariant="italic">
         <mi>N</mi>
       </mstyle>
-    </mrow>
-  </mfrac>
-  <munderover>
+    </mfrac>
     <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>m</mi>
+      </munderover>
+      <msub>
+        <mi>n</mi>
         <mi>j</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
+      </msub>
     </mrow>
-    <mrow>
-      <mi>m</mi>
-    </mrow>
-  </munderover>
-  <msub>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    <msub>
       <mi>x</mi>
-    </mrow>
-    <mrow>
       <mi>j</mi>
-    </mrow>
-  </msub>
-  <mo>,</mo>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <p id="_901246e3-d04a-6f5b-c732-3f81770ad00c">where</p>
-        <div id="_8b6b9795-c0de-d61e-ac21-8a974b027515">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>N</mi>
+    </msub>
+    <mo>,</mo>
   </mstyle>
-  <mo>=</mo>
-  <munderover>
+</math></span></p></div></div><p id="_901246e3-d04a-6f5b-c732-3f81770ad00c">where</p><div id="_b19c8334-943a-671e-778d-487abd641bad"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mstyle mathvariant="italic">
+      <mi>N</mi>
+    </mstyle>
+    <mo>=</mo>
     <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>m</mi>
+      </munderover>
+      <msub>
+        <mi>n</mi>
         <mi>j</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
+      </msub>
     </mrow>
-    <mrow>
-      <mi>m</mi>
-    </mrow>
-  </munderover>
-  <msub>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <p id="_4967e4e8-245b-c8b9-7c50-c8c16d2c5c0c">is the total number of measurements performed. Note that all the variances <a href="#eq2">Equation (2)</a> refer to a single measurement <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+  </mstyle>
+</math></span></p></div></div><p id="_ae3b6c5d-d37a-350a-8509-00bbfdfef4ee">is the total number of measurements performed. Note that all the variances <a href="#eq2">Equation (2)</a> refer to a single measurement <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
       <mi>x</mi>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
         <mi>j</mi>
       </mrow>
-    </mrow>
-  </msub>
-</math></span>, not to a mean value <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mover accent="true">
-        <mrow>
-          <mi>x</mi>
-        </mrow>
-        <mo>&#xAF;</mo>
-      </mover>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-</math></span>.</p>
-        <p id="_bd732ed0-0e15-2346-14f8-73d0eba25cf4">Our problem is to evaluate, on the basis of the data given in <a href="#eq1">Equation (1)</a> and <a href="#eq2">Equation (2)</a>, a value for the variance of a single measurement, denoted by <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msup>
-    <mrow>
-      <mi>s</mi>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mi>x</mi>
-    </mrow>
-  </mfenced>
-</math></span>. According to the definition of a variance, we have, considering all the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>N</mi>
+    </msub>
   </mstyle>
-</math></span> measurements performed, the estimation</p>
-        <div id="eq3">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msup>
-    <mrow>
+</math></span>, not to a mean value <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
+      </mover>
+      <mi>j</mi>
+    </msub>
+  </mstyle>
+</math></span>.</p><p id="_b607b565-509d-ab83-fb36-a5ab045df94e">Our problem is to evaluate, on the basis of the data given in <a href="#eq1">Equation (1)</a> and <a href="#eq2">Equation (2)</a>, a value for the variance of a single measurement, denoted by <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msup>
       <mi>s</mi>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
+    </msup>
     <mrow>
+      <mo>(</mo>
       <mi>x</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <mfrac>
+  </mstyle>
+</math></span>. According to the definition of a variance, we have, considering all the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>N</mi>
+    </mstyle>
+  </mstyle>
+</math></span> measurements performed, the estimation</p><div id="eq3"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
     <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mfrac>
       <mn>1</mn>
-    </mrow>
-    <mrow>
       <mrow>
         <mstyle mathvariant="italic">
           <mi>N</mi>
         </mstyle>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
       </mrow>
-    </mrow>
-  </mfrac>
-  <munderover>
+    </mfrac>
     <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mi>m</mi>
-    </mrow>
-  </munderover>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <msub>
-        <mrow>
-          <mi>n</mi>
-        </mrow>
+      <munderover>
+        <mo>∑</mo>
         <mrow>
           <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
         </mrow>
-      </msub>
-    </mrow>
-  </munderover>
-  <msup>
-    <mrow>
-      <mfenced open="(" close=")">
-        <mrow>
+        <mi>m</mi>
+      </munderover>
+      <mrow>
+        <munderover>
+          <mo>∑</mo>
+          <mrow>
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
           <msub>
-            <mrow>
+            <mi>n</mi>
+            <mi>j</mi>
+          </msub>
+        </munderover>
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <msub>
               <mi>x</mi>
-            </mrow>
-            <mrow>
               <mrow>
                 <mi>i</mi>
                 <mi>j</mi>
               </mrow>
-            </mrow>
-          </msub>
-          <mo>&#x2212;</mo>
-          <mover accent="true">
-            <mrow>
-              <mover accent="true">
-                <mrow>
-                  <mi>x</mi>
-                </mrow>
-                <mo>&#xAF;</mo>
+            </msub>
+            <mo>−</mo>
+            <mover>
+              <mover>
+                <mi>x</mi>
+                <mo>¯</mo>
               </mover>
-            </mrow>
-            <mo>&#xAF;</mo>
-          </mover>
-        </mrow>
-      </mfenced>
+              <mo>¯</mo>
+            </mover>
+            <mo>)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </mrow>
     </mrow>
+    <mo>.</mo>
+  </mstyle>
+</math></span>  (3)</p></div></div><p id="_7900d24c-ef3f-6fe3-a6d4-d9ab417b4bc1">This expression will now be rearranged. In a first step we easily find</p><div id="_f1ac9ff5-9e04-e2ae-f9a3-a86ab138f649"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
     <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msup>
-  <mo>.</mo>
-</math></span>&#xA0; (3)</p>
-          </div>
-        </div>
-        <p id="_7900d24c-ef3f-6fe3-a6d4-d9ab417b4bc1">This expression will now be rearranged. In a first step we easily find</p>
-        <div id="_b6cba292-4200-9a39-a26e-d799c3319e7d">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mfenced open="(" close=")">
-    <mrow>
+      <mo>(</mo>
       <mstyle mathvariant="italic">
         <mi>N</mi>
       </mstyle>
-      <mo>&#x2212;</mo>
+      <mo>−</mo>
       <mn>1</mn>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>&#x22C5;</mo>
-  <msup>
-    <mrow>
+    <mo>⋅</mo>
+    <msup>
       <mi>s</mi>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
+    </msup>
     <mrow>
+      <mo>(</mo>
       <mi>x</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <munderover>
+    <mo>=</mo>
     <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mi>m</mi>
-    </mrow>
-  </munderover>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <msub>
-        <mrow>
-          <mi>n</mi>
-        </mrow>
+      <munderover>
+        <mo>∑</mo>
         <mrow>
           <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
         </mrow>
-      </msub>
-    </mrow>
-  </munderover>
-  <msup>
-    <mrow>
-      <mfenced open="[" close="]">
-        <mrow>
-          <mfenced open="(" close=")">
-            <mrow>
-              <msub>
-                <mrow>
-                  <mi>x</mi>
-                </mrow>
-                <mrow>
-                  <mrow>
-                    <mi>i</mi>
-                    <mi>j</mi>
-                  </mrow>
-                </mrow>
-              </msub>
-              <mo>&#x2212;</mo>
-              <msub>
-                <mrow>
-                  <mover accent="true">
-                    <mrow>
-                      <mi>x</mi>
-                    </mrow>
-                    <mo>&#xAF;</mo>
-                  </mover>
-                </mrow>
-                <mrow>
-                  <mi>j</mi>
-                </mrow>
-              </msub>
-            </mrow>
-          </mfenced>
-          <mo>+</mo>
-          <mfenced open="(" close=")">
-            <mrow>
-              <msub>
-                <mrow>
-                  <mover accent="true">
-                    <mrow>
-                      <mi>x</mi>
-                    </mrow>
-                    <mo>&#xAF;</mo>
-                  </mover>
-                </mrow>
-                <mrow>
-                  <mi>j</mi>
-                </mrow>
-              </msub>
-              <mo>&#x2212;</mo>
-              <mover accent="true">
-                <mrow>
-                  <mover accent="true">
-                    <mrow>
-                      <mi>x</mi>
-                    </mrow>
-                    <mo>&#xAF;</mo>
-                  </mover>
-                </mrow>
-                <mo>&#xAF;</mo>
-              </mover>
-            </mrow>
-          </mfenced>
-        </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msup>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div id="eq4">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo>=</mo>
-  <munder>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </munder>
-  <munder>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mi>i</mi>
-    </mrow>
-  </munder>
-  <mfenced open="[" close="]">
-    <mrow>
-      <msup>
-        <mrow>
-          <mfenced open="(" close=")">
-            <mrow>
-              <msub>
-                <mrow>
-                  <mi>x</mi>
-                </mrow>
-                <mrow>
-                  <mrow>
-                    <mi>i</mi>
-                    <mi>j</mi>
-                  </mrow>
-                </mrow>
-              </msub>
-              <mo>&#x2212;</mo>
-              <msub>
-                <mrow>
-                  <mover accent="true">
-                    <mrow>
-                      <mi>x</mi>
-                    </mrow>
-                    <mo>&#xAF;</mo>
-                  </mover>
-                </mrow>
-                <mrow>
-                  <mi>j</mi>
-                </mrow>
-              </msub>
-            </mrow>
-          </mfenced>
-        </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
-      </msup>
-      <mo>+</mo>
-      <msup>
-        <mrow>
-          <mfenced open="(" close=")">
-            <mrow>
-              <msub>
-                <mrow>
-                  <mover accent="true">
-                    <mrow>
-                      <mi>x</mi>
-                    </mrow>
-                    <mo>&#xAF;</mo>
-                  </mover>
-                </mrow>
-                <mrow>
-                  <mi>j</mi>
-                </mrow>
-              </msub>
-              <mo>&#x2212;</mo>
-              <mover accent="true">
-                <mrow>
-                  <mover accent="true">
-                    <mrow>
-                      <mi>x</mi>
-                    </mrow>
-                    <mo>&#xAF;</mo>
-                  </mover>
-                </mrow>
-                <mo>&#xAF;</mo>
-              </mover>
-            </mrow>
-          </mfenced>
-        </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
-      </msup>
-      <mo>+</mo>
-      <mn>2</mn>
-      <mfenced open="(" close=")">
-        <mrow>
+        <mi>m</mi>
+      </munderover>
+      <mrow>
+        <munderover>
+          <mo>∑</mo>
+          <mrow>
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
           <msub>
+            <mi>n</mi>
+            <mi>j</mi>
+          </msub>
+        </munderover>
+        <msup>
+          <mrow>
+            <mo>[</mo>
             <mrow>
-              <mi>x</mi>
+              <mo>(</mo>
+              <msub>
+                <mi>x</mi>
+                <mrow>
+                  <mi>i</mi>
+                  <mi>j</mi>
+                </mrow>
+              </msub>
+              <mo>−</mo>
+              <msub>
+                <mover>
+                  <mi>x</mi>
+                  <mo>¯</mo>
+                </mover>
+                <mi>j</mi>
+              </msub>
+              <mo>)</mo>
             </mrow>
+            <mo>+</mo>
             <mrow>
+              <mo>(</mo>
+              <msub>
+                <mover>
+                  <mi>x</mi>
+                  <mo>¯</mo>
+                </mover>
+                <mi>j</mi>
+              </msub>
+              <mo>−</mo>
+              <mover>
+                <mover>
+                  <mi>x</mi>
+                  <mo>¯</mo>
+                </mover>
+                <mo>¯</mo>
+              </mover>
+              <mo>)</mo>
+            </mrow>
+            <mo>]</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </mrow>
+  </mstyle>
+</math></span></p></div></div><div id="eq4"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <mrow>
+      <munder>
+        <mo>∑</mo>
+        <mi>j</mi>
+      </munder>
+      <mrow>
+        <munder>
+          <mo>∑</mo>
+          <mi>i</mi>
+        </munder>
+        <mrow>
+          <mo>[</mo>
+          <msup>
+            <mrow>
+              <mo>(</mo>
+              <msub>
+                <mi>x</mi>
+                <mrow>
+                  <mi>i</mi>
+                  <mi>j</mi>
+                </mrow>
+              </msub>
+              <mo>−</mo>
+              <msub>
+                <mover>
+                  <mi>x</mi>
+                  <mo>¯</mo>
+                </mover>
+                <mi>j</mi>
+              </msub>
+              <mo>)</mo>
+            </mrow>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <msup>
+            <mrow>
+              <mo>(</mo>
+              <msub>
+                <mover>
+                  <mi>x</mi>
+                  <mo>¯</mo>
+                </mover>
+                <mi>j</mi>
+              </msub>
+              <mo>−</mo>
+              <mover>
+                <mover>
+                  <mi>x</mi>
+                  <mo>¯</mo>
+                </mover>
+                <mo>¯</mo>
+              </mover>
+              <mo>)</mo>
+            </mrow>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <mn>2</mn>
+          <mrow>
+            <mo>(</mo>
+            <msub>
+              <mi>x</mi>
               <mrow>
                 <mi>i</mi>
                 <mi>j</mi>
               </mrow>
-            </mrow>
-          </msub>
-          <mo>&#x2212;</mo>
-          <msub>
-            <mrow>
-              <mover accent="true">
-                <mrow>
-                  <mi>x</mi>
-                </mrow>
-                <mo>&#xAF;</mo>
+            </msub>
+            <mo>−</mo>
+            <msub>
+              <mover>
+                <mi>x</mi>
+                <mo>¯</mo>
               </mover>
-            </mrow>
-            <mrow>
               <mi>j</mi>
-            </mrow>
-          </msub>
-        </mrow>
-      </mfenced>
-      <mfenced open="(" close=")">
-        <mrow>
-          <msub>
-            <mrow>
-              <mover accent="true">
-                <mrow>
-                  <mi>x</mi>
-                </mrow>
-                <mo>&#xAF;</mo>
+            </msub>
+            <mo>)</mo>
+          </mrow>
+          <mrow>
+            <mo>(</mo>
+            <msub>
+              <mover>
+                <mi>x</mi>
+                <mo>¯</mo>
               </mover>
-            </mrow>
-            <mrow>
               <mi>j</mi>
-            </mrow>
-          </msub>
-          <mo>&#x2212;</mo>
-          <mover accent="true">
-            <mrow>
-              <mover accent="true">
-                <mrow>
-                  <mi>x</mi>
-                </mrow>
-                <mo>&#xAF;</mo>
+            </msub>
+            <mo>−</mo>
+            <mover>
+              <mover>
+                <mi>x</mi>
+                <mo>¯</mo>
               </mover>
-            </mrow>
-            <mo>&#xAF;</mo>
-          </mover>
+              <mo>¯</mo>
+            </mover>
+            <mo>)</mo>
+          </mrow>
+          <mo>]</mo>
         </mrow>
-      </mfenced>
-    </mrow>
-  </mfenced>
-  <mo>.</mo>
-</math></span>&#xA0; (4)</p>
-          </div>
-        </div>
-        <p id="_323020d4-c92b-44aa-792f-8e58db550b62">Since according to <a href="#eq1">Equation (1)</a></p>
-        <div id="_796bae4c-5bff-2e96-d82c-811058e28536">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
-        <mo>=</mo>
-        <mn>1</mn>
       </mrow>
     </mrow>
+    <mo>.</mo>
+  </mstyle>
+</math></span>  (4)</p></div></div><p id="_323020d4-c92b-44aa-792f-8e58db550b62">Since according to <a href="#eq1">Equation (1)</a></p><div id="_61fcc590-b2b5-65a9-8a92-1f087e90fa88"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
     <mrow>
-      <msub>
+      <munderover>
+        <mo>∑</mo>
         <mrow>
+          <mi>i</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <msub>
           <mi>n</mi>
-        </mrow>
-        <mrow>
           <mi>j</mi>
-        </mrow>
-      </msub>
-    </mrow>
-  </munderover>
-  <mfenced open="(" close=")">
-    <mrow>
-      <msub>
-        <mrow>
+        </msub>
+      </munderover>
+      <mrow>
+        <mo>(</mo>
+        <msub>
           <mi>x</mi>
-        </mrow>
-        <mrow>
           <mrow>
             <mi>i</mi>
             <mi>j</mi>
           </mrow>
-        </mrow>
-      </msub>
-      <mo>&#x2212;</mo>
-      <msub>
-        <mrow>
-          <mover accent="true">
-            <mrow>
-              <mi>x</mi>
-            </mrow>
-            <mo>&#xAF;</mo>
+        </msub>
+        <mo>−</mo>
+        <msub>
+          <mover>
+            <mi>x</mi>
+            <mo>¯</mo>
           </mover>
-        </mrow>
-        <mrow>
           <mi>j</mi>
-        </mrow>
-      </msub>
+        </msub>
+        <mo>)</mo>
+      </mrow>
     </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <mn>0</mn>
-  <mo>,</mo>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <p id="_60308510-6f2b-0f18-8a64-5e884370d9a3">we arrive, by using <a href="#eq2">Equation (2)</a>, at the form</p>
-        <div id="eq5">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msup>
-    <mrow>
+    <mo>=</mo>
+    <mn>0</mn>
+    <mo>,</mo>
+  </mstyle>
+</math></span></p></div></div><p id="_60308510-6f2b-0f18-8a64-5e884370d9a3">we arrive, by using <a href="#eq2">Equation (2)</a>, at the form</p><div id="eq5"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msup>
       <mi>s</mi>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
+    </msup>
     <mrow>
+      <mo>(</mo>
       <mi>x</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
+    <mo>=</mo>
+    <mfrac>
       <mn>1</mn>
-    </mrow>
-    <mrow>
       <mrow>
         <mstyle mathvariant="italic">
           <mi>N</mi>
         </mstyle>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
       </mrow>
-    </mrow>
-  </mfrac>
-  <munderover>
+    </mfrac>
     <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mi>m</mi>
-    </mrow>
-  </munderover>
-  <msup>
-    <mrow>
-      <mfenced open="[" close="]">
+      <munderover>
+        <mo>∑</mo>
         <mrow>
-          <mfenced open="(" close=")">
-            <mrow>
-              <msub>
-                <mrow>
-                  <mi>n</mi>
-                </mrow>
-                <mrow>
-                  <mi>j</mi>
-                </mrow>
-              </msub>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
-          </mfenced>
-          <msubsup>
-            <mrow>
-              <mi>s</mi>
-            </mrow>
-            <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>m</mi>
+      </munderover>
+      <msup>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mo>(</mo>
+            <msub>
+              <mi>n</mi>
               <mi>j</mi>
-            </mrow>
-            <mrow>
-              <mn>2</mn>
-            </mrow>
+            </msub>
+            <mo>−</mo>
+            <mn>1</mn>
+            <mo>)</mo>
+          </mrow>
+          <msubsup>
+            <mi>s</mi>
+            <mi>j</mi>
+            <mn>2</mn>
           </msubsup>
           <mo>+</mo>
           <msub>
-            <mrow>
-              <mi>n</mi>
-            </mrow>
-            <mrow>
-              <mi>j</mi>
-            </mrow>
+            <mi>n</mi>
+            <mi>j</mi>
           </msub>
           <msup>
             <mrow>
-              <mfenced open="(" close=")">
-                <mrow>
-                  <msub>
-                    <mrow>
-                      <mover accent="true">
-                        <mrow>
-                          <mi>x</mi>
-                        </mrow>
-                        <mo>&#xAF;</mo>
-                      </mover>
-                    </mrow>
-                    <mrow>
-                      <mi>j</mi>
-                    </mrow>
-                  </msub>
-                  <mo>&#x2212;</mo>
-                  <mover accent="true">
-                    <mrow>
-                      <mover accent="true">
-                        <mrow>
-                          <mi>x</mi>
-                        </mrow>
-                        <mo>&#xAF;</mo>
-                      </mover>
-                    </mrow>
-                    <mo>&#xAF;</mo>
-                  </mover>
-                </mrow>
-              </mfenced>
+              <mo>(</mo>
+              <msub>
+                <mover>
+                  <mi>x</mi>
+                  <mo>¯</mo>
+                </mover>
+                <mi>j</mi>
+              </msub>
+              <mo>−</mo>
+              <mover>
+                <mover>
+                  <mi>x</mi>
+                  <mo>¯</mo>
+                </mover>
+                <mo>¯</mo>
+              </mover>
+              <mo>)</mo>
             </mrow>
-            <mrow>
-              <mn>2</mn>
-            </mrow>
+            <mn>2</mn>
           </msup>
+          <mo>]</mo>
         </mrow>
-      </mfenced>
+        <mn>2</mn>
+      </msup>
     </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msup>
-  <mo>.</mo>
-</math></span>&#xA0; (5)</p>
-          </div>
-        </div>
-        <p id="_5833d43f-ce4e-76ca-1e56-70ac9dde8a81">This is a useful identity. For the special case of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>m</mi>
-  <mo>=</mo>
-  <mn>2</mn>
-</math></span> samples, it follows from <a href="#eq1">Equation (1)</a> that</p>
-        <div id="_9ceae334-faaf-4008-2b36-6da77741ed09">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mover accent="true">
-        <mrow>
-          <mi>x</mi>
-        </mrow>
-        <mo>&#xAF;</mo>
+    <mo>.</mo>
+  </mstyle>
+</math></span>  (5)</p></div></div><p id="_239a9df1-f98f-f17c-8e5d-2540fe80218f">This is a useful identity. For the special case of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>m</mi>
+    <mo>=</mo>
+    <mn>2</mn>
+  </mstyle>
+</math></span> samples, it follows from <a href="#eq1">Equation (1)</a> that</p><div id="_e52fc3a3-bdbd-a9de-2d55-552ca34ab0e8"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
       </mover>
-    </mrow>
-    <mrow>
       <mn>1</mn>
-    </mrow>
-  </msub>
-  <mo>&#x2212;</mo>
-  <mover accent="true">
-    <mrow>
-      <mover accent="true">
-        <mrow>
-          <mi>x</mi>
-        </mrow>
-        <mo>&#xAF;</mo>
+    </msub>
+    <mo>−</mo>
+    <mover>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
       </mover>
-    </mrow>
-    <mo>&#xAF;</mo>
-  </mover>
-  <mo>=</mo>
-  <msub>
-    <mrow>
-      <mover accent="true">
-        <mrow>
-          <mi>x</mi>
-        </mrow>
-        <mo>&#xAF;</mo>
+      <mo>¯</mo>
+    </mover>
+    <mo>=</mo>
+    <msub>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
       </mover>
-    </mrow>
-    <mrow>
       <mn>1</mn>
-    </mrow>
-  </msub>
-  <mo>&#x2212;</mo>
-  <mfrac>
-    <mrow>
+    </msub>
+    <mo>−</mo>
+    <mfrac>
       <mn>1</mn>
-    </mrow>
-    <mrow>
       <mstyle mathvariant="italic">
         <mi>N</mi>
       </mstyle>
-    </mrow>
-  </mfrac>
-  <mfenced open="(" close=")">
+    </mfrac>
     <mrow>
+      <mo>(</mo>
       <msub>
-        <mrow>
-          <mi>n</mi>
-        </mrow>
-        <mrow>
-          <mn>1</mn>
-        </mrow>
+        <mi>n</mi>
+        <mn>1</mn>
       </msub>
       <msub>
-        <mrow>
-          <mover accent="true">
-            <mrow>
-              <mi>x</mi>
-            </mrow>
-            <mo>&#xAF;</mo>
-          </mover>
-        </mrow>
-        <mrow>
-          <mn>1</mn>
-        </mrow>
+        <mover>
+          <mi>x</mi>
+          <mo>¯</mo>
+        </mover>
+        <mn>1</mn>
       </msub>
       <mo>+</mo>
       <msub>
-        <mrow>
-          <mi>n</mi>
-        </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
+        <mi>n</mi>
+        <mn>2</mn>
       </msub>
       <msub>
-        <mrow>
-          <mover accent="true">
-            <mrow>
-              <mi>x</mi>
-            </mrow>
-            <mo>&#xAF;</mo>
-          </mover>
-        </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
+        <mover>
+          <mi>x</mi>
+          <mo>¯</mo>
+        </mover>
+        <mn>2</mn>
       </msub>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
+    <mo>=</mo>
+    <mfrac>
       <msub>
-        <mrow>
-          <mi>n</mi>
-        </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
+        <mi>n</mi>
+        <mn>2</mn>
       </msub>
-    </mrow>
-    <mrow>
       <mstyle mathvariant="italic">
         <mi>N</mi>
       </mstyle>
-    </mrow>
-  </mfrac>
-  <mfenced open="(" close=")">
+    </mfrac>
     <mrow>
+      <mo>(</mo>
       <msub>
-        <mrow>
-          <mover accent="true">
-            <mrow>
-              <mi>x</mi>
-            </mrow>
-            <mo>&#xAF;</mo>
-          </mover>
-        </mrow>
-        <mrow>
-          <mn>1</mn>
-        </mrow>
-      </msub>
-      <mo>&#x2212;</mo>
-      <msub>
-        <mrow>
-          <mover accent="true">
-            <mrow>
-              <mi>x</mi>
-            </mrow>
-            <mo>&#xAF;</mo>
-          </mover>
-        </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
-      </msub>
-    </mrow>
-  </mfenced>
-  <mo>,</mo>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <p id="_c066e9ce-abfa-ceda-cfb8-58239e54e258">and similarly</p>
-        <div id="_b51179cd-bea4-b917-fc99-1f25472b4394">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mover accent="true">
-        <mrow>
+        <mover>
           <mi>x</mi>
-        </mrow>
-        <mo>&#xAF;</mo>
-      </mover>
+          <mo>¯</mo>
+        </mover>
+        <mn>1</mn>
+      </msub>
+      <mo>−</mo>
+      <msub>
+        <mover>
+          <mi>x</mi>
+          <mo>¯</mo>
+        </mover>
+        <mn>2</mn>
+      </msub>
+      <mo>)</mo>
     </mrow>
-    <mrow>
+    <mo>,</mo>
+  </mstyle>
+</math></span></p></div></div><p id="_c066e9ce-abfa-ceda-cfb8-58239e54e258">and similarly</p><div id="_abd58463-2143-1769-7ad3-9970dd4de8ba"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
+      </mover>
       <mn>2</mn>
-    </mrow>
-  </msub>
-  <mo>&#x2212;</mo>
-  <mover accent="true">
-    <mrow>
-      <mover accent="true">
-        <mrow>
-          <mi>x</mi>
-        </mrow>
-        <mo>&#xAF;</mo>
+    </msub>
+    <mo>−</mo>
+    <mover>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
       </mover>
-    </mrow>
-    <mo>&#xAF;</mo>
-  </mover>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
+      <mo>¯</mo>
+    </mover>
+    <mo>=</mo>
+    <mfrac>
       <msub>
-        <mrow>
-          <mi>n</mi>
-        </mrow>
-        <mrow>
-          <mn>1</mn>
-        </mrow>
+        <mi>n</mi>
+        <mn>1</mn>
       </msub>
-    </mrow>
-    <mrow>
       <mstyle mathvariant="italic">
         <mi>N</mi>
       </mstyle>
-    </mrow>
-  </mfrac>
-  <mfenced open="(" close=")">
+    </mfrac>
     <mrow>
+      <mo>(</mo>
       <msub>
-        <mrow>
-          <mover accent="true">
-            <mrow>
-              <mi>x</mi>
-            </mrow>
-            <mo>&#xAF;</mo>
-          </mover>
-        </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
+        <mover>
+          <mi>x</mi>
+          <mo>¯</mo>
+        </mover>
+        <mn>2</mn>
       </msub>
-      <mo>&#x2212;</mo>
+      <mo>−</mo>
       <msub>
-        <mrow>
-          <mover accent="true">
-            <mrow>
-              <mi>x</mi>
-            </mrow>
-            <mo>&#xAF;</mo>
-          </mover>
-        </mrow>
-        <mrow>
-          <mn>1</mn>
-        </mrow>
+        <mover>
+          <mi>x</mi>
+          <mo>¯</mo>
+        </mover>
+        <mn>1</mn>
       </msub>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>.</mo>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <p id="_3bc3701e-2aa1-5aea-7b06-b6aae52ce862">Hence, the relation <a href="#eq5">Equation (5)</a> takes the form</p>
-        <div id="eq6">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msup>
-    <mrow>
+    <mo>.</mo>
+  </mstyle>
+</math></span></p></div></div><p id="_3bc3701e-2aa1-5aea-7b06-b6aae52ce862">Hence, the relation <a href="#eq5">Equation (5)</a> takes the form</p><div id="eq6"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msup>
       <mi>s</mi>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
+    </msup>
     <mrow>
+      <mo>(</mo>
       <mi>x</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
+    <mo>=</mo>
+    <mfrac>
       <mn>1</mn>
-    </mrow>
-    <mrow>
       <mrow>
         <mstyle mathvariant="italic">
           <mi>N</mi>
         </mstyle>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
       </mrow>
-    </mrow>
-  </mfrac>
-  <mfenced open="[" close="]">
+    </mfrac>
     <mrow>
-      <mfenced open="(" close=")">
-        <mrow>
-          <msub>
-            <mrow>
-              <mi>n</mi>
-            </mrow>
-            <mrow>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-          <mo>&#x2212;</mo>
+      <mo>[</mo>
+      <mrow>
+        <mo>(</mo>
+        <msub>
+          <mi>n</mi>
           <mn>1</mn>
-        </mrow>
-      </mfenced>
+        </msub>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>)</mo>
+      </mrow>
       <msubsup>
-        <mrow>
-          <mi>s</mi>
-        </mrow>
-        <mrow>
-          <mn>1</mn>
-        </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
+        <mi>s</mi>
+        <mn>1</mn>
+        <mn>2</mn>
       </msubsup>
       <mo>+</mo>
-      <mfenced open="(" close=")">
-        <mrow>
-          <msub>
-            <mrow>
-              <mi>n</mi>
-            </mrow>
-            <mrow>
-              <mn>2</mn>
-            </mrow>
-          </msub>
-          <mo>&#x2212;</mo>
-          <mn>1</mn>
-        </mrow>
-      </mfenced>
+      <mrow>
+        <mo>(</mo>
+        <msub>
+          <mi>n</mi>
+          <mn>2</mn>
+        </msub>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>)</mo>
+      </mrow>
       <msubsup>
-        <mrow>
-          <mi>s</mi>
-        </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
+        <mi>s</mi>
+        <mn>2</mn>
+        <mn>2</mn>
       </msubsup>
       <mo>+</mo>
       <mfrac>
         <mrow>
-          <mrow>
-            <msub>
-              <mrow>
-                <mi>n</mi>
-              </mrow>
-              <mrow>
-                <mn>1</mn>
-              </mrow>
-            </msub>
-            <msub>
-              <mrow>
-                <mi>n</mi>
-              </mrow>
-              <mrow>
-                <mn>2</mn>
-              </mrow>
-            </msub>
-          </mrow>
+          <msub>
+            <mi>n</mi>
+            <mn>1</mn>
+          </msub>
+          <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+          </msub>
         </mrow>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>N</mi>
-          </mstyle>
-        </mrow>
+        <mstyle mathvariant="italic">
+          <mi>N</mi>
+        </mstyle>
       </mfrac>
       <msup>
         <mrow>
-          <mfenced open="(" close=")">
-            <mrow>
-              <msub>
-                <mrow>
-                  <mover accent="true">
-                    <mrow>
-                      <mi>x</mi>
-                    </mrow>
-                    <mo>&#xAF;</mo>
-                  </mover>
-                </mrow>
-                <mrow>
-                  <mn>1</mn>
-                </mrow>
-              </msub>
-              <mo>&#x2212;</mo>
-              <msub>
-                <mrow>
-                  <mover accent="true">
-                    <mrow>
-                      <mi>x</mi>
-                    </mrow>
-                    <mo>&#xAF;</mo>
-                  </mover>
-                </mrow>
-                <mrow>
-                  <mn>2</mn>
-                </mrow>
-              </msub>
-            </mrow>
-          </mfenced>
+          <mo>(</mo>
+          <msub>
+            <mover>
+              <mi>x</mi>
+              <mo>¯</mo>
+            </mover>
+            <mn>1</mn>
+          </msub>
+          <mo>−</mo>
+          <msub>
+            <mover>
+              <mi>x</mi>
+              <mo>¯</mo>
+            </mover>
+            <mn>2</mn>
+          </msub>
+          <mo>)</mo>
         </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
+        <mn>2</mn>
       </msup>
+      <mo>]</mo>
     </mrow>
-  </mfenced>
-  <mo>,</mo>
-</math></span>&#xA0; (6)</p>
-          </div>
-        </div>
-        <p id="_e528e6ec-e081-462f-b046-ddbc0f7e3688">in agreement with a result given in <a href="#muller">[1]</a>.</p>
-        <p id="_1f9ee9b6-e8f5-386b-947d-b33174ece8de">This procedure can be taken a step furthero To see this, let us recall the general formula for the variance <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msup>
-    <mrow>
+    <mo>,</mo>
+  </mstyle>
+</math></span>  (6)</p></div></div><p id="_e528e6ec-e081-462f-b046-ddbc0f7e3688">in agreement with a result given in <a href="#muller">[1]</a>.</p><p id="_df9e2435-8912-efbc-2e5f-cfa686e839b9">This procedure can be taken a step furthero To see this, let us recall the general formula for the variance <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msup>
       <mi>s</mi>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
+    </msup>
     <mrow>
-      <mover accent="true">
-        <mrow>
-          <mi>y</mi>
-        </mrow>
-        <mo>&#xAF;</mo>
+      <mo>(</mo>
+      <mover>
+        <mi>y</mi>
+        <mo>¯</mo>
       </mover>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
+  </mstyle>
 </math></span> of a weighted mean value <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mover accent="true">
-    <mrow>
+  <mstyle displaystyle="false">
+    <mover>
       <mi>y</mi>
-    </mrow>
-    <mo>&#xAF;</mo>
-  </mover>
+      <mo>¯</mo>
+    </mover>
+  </mstyle>
 </math></span>, based on m measured results <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+  <mstyle displaystyle="false">
+    <msub>
       <mi>y</mi>
-    </mrow>
-    <mrow>
       <mi>k</mi>
-    </mrow>
-  </msub>
+    </msub>
+  </mstyle>
 </math></span> with statistical weights <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+  <mstyle displaystyle="false">
+    <msub>
       <mi>g</mi>
-    </mrow>
-    <mrow>
       <mi>k</mi>
-    </mrow>
-  </msub>
-</math></span>. This expression is known to be given by</p>
-        <div id="eq7">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msup>
-    <mrow>
+    </msub>
+  </mstyle>
+</math></span>. This expression is known to be given by</p><div id="eq7"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msup>
       <mi>s</mi>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
+    </msup>
     <mrow>
-      <mover accent="true">
-        <mrow>
-          <mi>y</mi>
-        </mrow>
-        <mo>&#xAF;</mo>
+      <mo>(</mo>
+      <mover>
+        <mi>y</mi>
+        <mo>¯</mo>
       </mover>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
+    <mo>=</mo>
+    <mfrac>
       <mrow>
-        <munderover>
-          <mrow>
-            <mo>&#x2211;</mo>
-          </mrow>
-          <mrow>
+        <mrow>
+          <munderover>
+            <mo>∑</mo>
             <mrow>
               <mi>k</mi>
               <mo>=</mo>
               <mn>1</mn>
             </mrow>
-          </mrow>
-          <mrow>
             <mi>m</mi>
-          </mrow>
-        </munderover>
-        <msub>
-          <mrow>
+          </munderover>
+          <msub>
             <mi>g</mi>
-          </mrow>
-          <mrow>
             <mi>k</mi>
-          </mrow>
-        </msub>
+          </msub>
+        </mrow>
         <msup>
           <mrow>
-            <mfenced open="(" close=")">
-              <mrow>
-                <msub>
-                  <mrow>
-                    <mi>y</mi>
-                  </mrow>
-                  <mrow>
-                    <mi>k</mi>
-                  </mrow>
-                </msub>
-                <mo>&#x2212;</mo>
-                <mover accent="true">
-                  <mrow>
-                    <mi>y</mi>
-                  </mrow>
-                  <mo>&#xAF;</mo>
-                </mover>
-              </mrow>
-            </mfenced>
+            <mo>(</mo>
+            <msub>
+              <mi>y</mi>
+              <mi>k</mi>
+            </msub>
+            <mo>−</mo>
+            <mover>
+              <mi>y</mi>
+              <mo>¯</mo>
+            </mover>
+            <mo>)</mo>
           </mrow>
-          <mrow>
-            <mn>2</mn>
-          </mrow>
+          <mn>2</mn>
         </msup>
       </mrow>
-    </mrow>
-    <mrow>
       <mrow>
-        <mfenced open="(" close=")">
-          <mrow>
-            <mi>m</mi>
-            <mo>&#x2212;</mo>
-            <mn>1</mn>
-          </mrow>
-        </mfenced>
-        <munderover>
-          <mrow>
-            <mo>&#x2211;</mo>
-          </mrow>
-          <mrow>
+        <mrow>
+          <mo>(</mo>
+          <mi>m</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+          <mo>)</mo>
+        </mrow>
+        <mrow>
+          <munderover>
+            <mo>∑</mo>
             <mrow>
               <mi>k</mi>
               <mo>=</mo>
               <mn>1</mn>
             </mrow>
-          </mrow>
-          <mrow>
             <mi>m</mi>
-          </mrow>
-        </munderover>
-        <msub>
-          <mrow>
-            <mi>g</mi>
-          </mrow>
-          <mrow>
-            <mi>k</mi>
-          </mrow>
-        </msub>
-      </mrow>
-    </mrow>
-  </mfrac>
-  <mo>.</mo>
-</math></span>&#xA0; (7)</p>
-          </div>
-        </div>
-        <p id="_24cae887-0082-2dd5-dbb6-628100e1ea68">Since in our case, i.e. for the measurement <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mover accent="true">
-        <mrow>
-          <mi>x</mi>
-        </mrow>
-        <mo>&#xAF;</mo>
-      </mover>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-</math></span> the sample sizes <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-    <mrow>
-      <mi>k</mi>
-    </mrow>
-  </msub>
-</math></span> correspond to the weights <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mi>g</mi>
-    </mrow>
-    <mrow>
-      <mi>k</mi>
-    </mrow>
-  </msub>
-</math></span> we have the relation</p>
-        <div id="_05fbf933-8478-3fd6-3bdf-349d8200c1a2">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mi>m</mi>
-    </mrow>
-  </munderover>
-  <msub>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-  <msup>
-    <mrow>
-      <mfenced open="(" close=")">
-        <mrow>
+          </munderover>
           <msub>
-            <mrow>
-              <mover accent="true">
-                <mrow>
-                  <mi>x</mi>
-                </mrow>
-                <mo>&#xAF;</mo>
-              </mover>
-            </mrow>
-            <mrow>
-              <mi>j</mi>
-            </mrow>
+            <mi>g</mi>
+            <mi>k</mi>
           </msub>
-          <mo>&#x2212;</mo>
-          <mover accent="true">
-            <mrow>
-              <mover accent="true">
-                <mrow>
-                  <mi>x</mi>
-                </mrow>
-                <mo>&#xAF;</mo>
-              </mover>
-            </mrow>
-            <mo>&#xAF;</mo>
-          </mover>
         </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msup>
-  <mo>=</mo>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mi>m</mi>
-      <mo>&#x2212;</mo>
-      <mn>1</mn>
-    </mrow>
-  </mfenced>
-  <munder>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </munder>
-  <msub>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-  <mo>&#x22C5;</mo>
-  <msup>
-    <mrow>
-      <mi>s</mi>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mover accent="true">
-        <mrow>
-          <mover accent="true">
-            <mrow>
-              <mi>x</mi>
-            </mrow>
-            <mo>&#xAF;</mo>
-          </mover>
-        </mrow>
-        <mo>&#xAF;</mo>
-      </mover>
-    </mrow>
-  </mfenced>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div id="eq8">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo>=</mo>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mi>m</mi>
-      <mo>&#x2212;</mo>
-      <mn>1</mn>
-    </mrow>
-  </mfenced>
-  <mo>&#x22C5;</mo>
-  <msup>
-    <mrow>
-      <mi>s</mi>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mi>x</mi>
-    </mrow>
-  </mfenced>
-  <mo>,</mo>
-</math></span>&#xA0; (8)</p>
-          </div>
-        </div>
-        <p id="_13a3efb0-ee14-8770-5bbe-125b16bc4aea">as <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <munder>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </munder>
-  <msub>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mstyle mathvariant="italic">
-    <mi>N</mi>
+      </mrow>
+    </mfrac>
+    <mo>.</mo>
   </mstyle>
-</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msup>
-    <mrow>
-      <mi>s</mi>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mover accent="true">
-        <mrow>
-          <mover accent="true">
-            <mrow>
-              <mi>x</mi>
-            </mrow>
-            <mo>&#xAF;</mo>
-          </mover>
-        </mrow>
-        <mo>&#xAF;</mo>
+</math></span>  (7)</p></div></div><p id="_5a134319-a510-33ff-6243-5a9ac87d9d8d">Since in our case, i.e. for the measurement <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
       </mover>
-    </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <msup>
-    <mrow>
-      <mi>s</mi>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mi>x</mi>
-    </mrow>
-  </mfenced>
-  <mo>/</mo>
-  <mstyle mathvariant="italic">
-    <mi>N</mi>
-  </mstyle>
-</math></span>.</p>
-        <p id="_71198cd1-4f4f-5060-e74d-5ae6eee78b2d">Note, however, that the last equation is not an identity: it is a statistical relation. Thus, it does not always hold numerically. It is true on the average and requires that experimental conditions do not change.</p>
-        <p id="_4d74340c-1754-07d1-0de9-4a960ddfd66f">If we take advantage of <a href="#eq8">Equation (8)</a>, <a href="#eq5">Equation (5)</a> can be brought into the form</p>
-        <div id="_70980eb2-452b-596c-58af-f3b8931d4b82">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mfenced open="(" close=")">
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>N</mi>
-      </mstyle>
-      <mo>&#x2212;</mo>
-      <mn>1</mn>
-    </mrow>
-  </mfenced>
-  <mo>&#x22C5;</mo>
-  <msup>
-    <mrow>
-      <mi>s</mi>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mi>x</mi>
-    </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <munder>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
       <mi>j</mi>
-    </mrow>
-  </munder>
-  <mfenced open="(" close=")">
+    </msub>
+  </mstyle>
+</math></span> the sample sizes <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>n</mi>
+      <mi>k</mi>
+    </msub>
+  </mstyle>
+</math></span> correspond to the weights <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>g</mi>
+      <mi>k</mi>
+    </msub>
+  </mstyle>
+</math></span> we have the relation</p><div id="_967e753c-dd57-ff6a-4b02-e0b0614ef29b"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
     <mrow>
-      <msub>
-        <mrow>
-          <mi>n</mi>
-        </mrow>
+      <munderover>
+        <mo>∑</mo>
         <mrow>
           <mi>j</mi>
-        </mrow>
-      </msub>
-      <mo>&#x2212;</mo>
-      <mn>1</mn>
-    </mrow>
-  </mfenced>
-  <mo>&#x22C5;</mo>
-  <msubsup>
-    <mrow>
-      <mi>s</mi>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msubsup>
-  <mo>+</mo>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mi>m</mi>
-      <mo>&#x2212;</mo>
-      <mn>1</mn>
-    </mrow>
-  </mfenced>
-  <mo>&#x22C5;</mo>
-  <msup>
-    <mrow>
-      <mi>s</mi>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mi>x</mi>
-    </mrow>
-  </mfenced>
-  <mo>,</mo>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <p id="_37ae6528-76b4-ee4f-075a-1fc19b4a7971">or</p>
-        <div id="_bf0db77e-7d6c-d542-a981-5b0e129b1b40">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msup>
-    <mrow>
-      <mi>s</mi>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mi>x</mi>
-    </mrow>
-  </mfenced>
-  <mfenced open="[" close="]">
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>N</mi>
-      </mstyle>
-      <mo>&#x2212;</mo>
-      <mn>1</mn>
-      <mo>&#x2212;</mo>
-      <mfenced open="(" close=")">
-        <mrow>
-          <mi>m</mi>
-          <mo>&#x2212;</mo>
+          <mo>=</mo>
           <mn>1</mn>
         </mrow>
-      </mfenced>
-    </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <munder>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </munder>
-  <mfenced open="(" close=")">
-    <mrow>
+        <mi>m</mi>
+      </munderover>
       <msub>
-        <mrow>
-          <mi>n</mi>
-        </mrow>
-        <mrow>
-          <mi>j</mi>
-        </mrow>
+        <mi>n</mi>
+        <mi>j</mi>
       </msub>
-      <mo>&#x2212;</mo>
-      <mn>1</mn>
     </mrow>
-  </mfenced>
-  <mo>&#x22C5;</mo>
-  <msubsup>
-    <mrow>
-      <mi>s</mi>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msubsup>
-  <mo>.</mo>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <p id="_c09615c8-e5a8-a5ac-f156-e2c1cae4f62c">Hence, we arrive at the general formula</p>
-        <div id="eq9">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msup>
-    <mrow>
-      <mi>s</mi>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mi>x</mi>
-    </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
+    <msup>
       <mrow>
-        <munderover>
-          <mrow>
-            <mo>&#x2211;</mo>
-          </mrow>
-          <mrow>
+        <mo>(</mo>
+        <msub>
+          <mover>
+            <mi>x</mi>
+            <mo>¯</mo>
+          </mover>
+          <mi>j</mi>
+        </msub>
+        <mo>−</mo>
+        <mover>
+          <mover>
+            <mi>x</mi>
+            <mo>¯</mo>
+          </mover>
+          <mo>¯</mo>
+        </mover>
+        <mo>)</mo>
+      </mrow>
+      <mn>2</mn>
+    </msup>
+    <mo>=</mo>
+    <mrow>
+      <mo>(</mo>
+      <mi>m</mi>
+      <mo>−</mo>
+      <mn>1</mn>
+      <mo>)</mo>
+    </mrow>
+    <mrow>
+      <munder>
+        <mo>∑</mo>
+        <mi>j</mi>
+      </munder>
+      <msub>
+        <mi>n</mi>
+        <mi>j</mi>
+      </msub>
+    </mrow>
+    <mo>⋅</mo>
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mover>
+        <mover>
+          <mi>x</mi>
+          <mo>¯</mo>
+        </mover>
+        <mo>¯</mo>
+      </mover>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math></span></p></div></div><div id="eq8"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <mrow>
+      <mo>(</mo>
+      <mi>m</mi>
+      <mo>−</mo>
+      <mn>1</mn>
+      <mo>)</mo>
+    </mrow>
+    <mo>⋅</mo>
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>,</mo>
+  </mstyle>
+</math></span>  (8)</p></div></div><p id="_1dd414d7-0ad5-33ca-cd87-73ccf68a319d">as <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mrow>
+      <munder>
+        <mo>∑</mo>
+        <mi>j</mi>
+      </munder>
+      <msub>
+        <mi>n</mi>
+        <mi>j</mi>
+      </msub>
+    </mrow>
+    <mo>=</mo>
+    <mstyle mathvariant="italic">
+      <mi>N</mi>
+    </mstyle>
+  </mstyle>
+</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mover>
+        <mover>
+          <mi>x</mi>
+          <mo>¯</mo>
+        </mover>
+        <mo>¯</mo>
+      </mover>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>/</mo>
+    <mstyle mathvariant="italic">
+      <mi>N</mi>
+    </mstyle>
+  </mstyle>
+</math></span>.</p><p id="_71198cd1-4f4f-5060-e74d-5ae6eee78b2d">Note, however, that the last equation is not an identity: it is a statistical relation. Thus, it does not always hold numerically. It is true on the average and requires that experimental conditions do not change.</p><p id="_4d74340c-1754-07d1-0de9-4a960ddfd66f">If we take advantage of <a href="#eq8">Equation (8)</a>, <a href="#eq5">Equation (5)</a> can be brought into the form</p><div id="_d172e29d-b5a1-3cf4-56a9-f17bcf99562b"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>N</mi>
+      </mstyle>
+      <mo>−</mo>
+      <mn>1</mn>
+      <mo>)</mo>
+    </mrow>
+    <mo>⋅</mo>
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mrow>
+      <munder>
+        <mo>∑</mo>
+        <mi>j</mi>
+      </munder>
+      <mrow>
+        <mo>(</mo>
+        <msub>
+          <mi>n</mi>
+          <mi>j</mi>
+        </msub>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+    <mo>⋅</mo>
+    <msubsup>
+      <mi>s</mi>
+      <mi>j</mi>
+      <mn>2</mn>
+    </msubsup>
+    <mo>+</mo>
+    <mrow>
+      <mo>(</mo>
+      <mi>m</mi>
+      <mo>−</mo>
+      <mn>1</mn>
+      <mo>)</mo>
+    </mrow>
+    <mo>⋅</mo>
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>,</mo>
+  </mstyle>
+</math></span></p></div></div><p id="_37ae6528-76b4-ee4f-075a-1fc19b4a7971">or</p><div id="_9d24e3e8-7e6b-2ed2-6c40-b37aea14ddfa"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mrow>
+      <mo>[</mo>
+      <mstyle mathvariant="italic">
+        <mi>N</mi>
+      </mstyle>
+      <mo>−</mo>
+      <mn>1</mn>
+      <mo>−</mo>
+      <mrow>
+        <mo>(</mo>
+        <mi>m</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>)</mo>
+      </mrow>
+      <mo>]</mo>
+    </mrow>
+    <mo>=</mo>
+    <mrow>
+      <munder>
+        <mo>∑</mo>
+        <mi>j</mi>
+      </munder>
+      <mrow>
+        <mo>(</mo>
+        <msub>
+          <mi>n</mi>
+          <mi>j</mi>
+        </msub>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+    <mo>⋅</mo>
+    <msubsup>
+      <mi>s</mi>
+      <mi>j</mi>
+      <mn>2</mn>
+    </msubsup>
+    <mo>.</mo>
+  </mstyle>
+</math></span></p></div></div><p id="_c09615c8-e5a8-a5ac-f156-e2c1cae4f62c">Hence, we arrive at the general formula</p><div id="eq9"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mrow>
+          <munderover>
+            <mo>∑</mo>
             <mrow>
               <mi>j</mi>
               <mo>=</mo>
               <mn>1</mn>
             </mrow>
-          </mrow>
-          <mrow>
             <mi>m</mi>
-          </mrow>
-        </munderover>
-        <mfenced open="(" close=")">
+          </munderover>
           <mrow>
+            <mo>(</mo>
             <msub>
-              <mrow>
-                <mi>n</mi>
-              </mrow>
-              <mrow>
-                <mi>j</mi>
-              </mrow>
+              <mi>n</mi>
+              <mi>j</mi>
             </msub>
-            <mo>&#x2212;</mo>
+            <mo>−</mo>
             <mn>1</mn>
+            <mo>)</mo>
           </mrow>
-        </mfenced>
-        <mo>&#x22C5;</mo>
+        </mrow>
+        <mo>⋅</mo>
         <msubsup>
-          <mrow>
-            <mi>s</mi>
-          </mrow>
-          <mrow>
-            <mi>j</mi>
-          </mrow>
-          <mrow>
-            <mn>2</mn>
-          </mrow>
+          <mi>s</mi>
+          <mi>j</mi>
+          <mn>2</mn>
         </msubsup>
       </mrow>
-    </mrow>
-    <mrow>
       <mrow>
         <mstyle mathvariant="italic">
           <mi>N</mi>
         </mstyle>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mi>m</mi>
       </mrow>
-    </mrow>
-  </mfrac>
-  <mo>,</mo>
-</math></span>&#xA0; (9)</p>
-          </div>
-        </div>
-        <p id="_497df159-cf55-9034-2cba-0a22b18e8396">which allows us to obtain the required variance from those measured in the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>m</mi>
+    </mfrac>
+    <mo>,</mo>
+  </mstyle>
+</math></span>  (9)</p></div></div><p id="_7ee0b420-664e-b5c1-d117-cb101017eade">which allows us to obtain the required variance from those measured in the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>m</mi>
+  </mstyle>
 </math></span> samples. This form is quite remarkable in that the experimental mean values <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mover accent="true">
-        <mrow>
-          <mi>x</mi>
-        </mrow>
-        <mo>&#xAF;</mo>
+  <mstyle displaystyle="false">
+    <msub>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
       </mover>
-    </mrow>
-    <mrow>
       <mi>j</mi>
-    </mrow>
-  </msub>
-</math></span>, present in <a href="#eq5">Equation (5)</a>, have disappeared.</p>
-        <p id="_20d84fc5-3d18-932a-e525-b8b5da098c42">For samples of equal size (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+    </msub>
+  </mstyle>
+</math></span>, present in <a href="#eq5">Equation (5)</a>, have disappeared.</p><p id="_953580ed-5dde-291c-dcb4-f5960fe3b342">For samples of equal size (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
       <mi>n</mi>
-    </mrow>
-    <mrow>
       <mi>j</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mi>n</mi>
-</math></span>) we are readily led to the expression</p>
-        <div id="eq10">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msup>
-    <mrow>
+    </msub>
+    <mo>=</mo>
+    <mi>n</mi>
+  </mstyle>
+</math></span>) we are readily led to the expression</p><div id="eq10"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msup>
       <mi>s</mi>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
+    </msup>
     <mrow>
+      <mo>(</mo>
       <mi>x</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
+    <mo>=</mo>
+    <mfrac>
       <mn>1</mn>
-    </mrow>
-    <mrow>
       <mi>m</mi>
-    </mrow>
-  </mfrac>
-  <munderover>
+    </mfrac>
     <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>m</mi>
+      </munderover>
       <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>1</mn>
+        <msubsup>
+          <mi>s</mi>
+          <mi>j</mi>
+          <mn>2</mn>
+        </msubsup>
+        <mo>,</mo>
       </mrow>
     </mrow>
-    <mrow>
-      <mi>m</mi>
-    </mrow>
-  </munderover>
-  <msubsup>
-    <mrow>
-      <mi>s</mi>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msubsup>
-  <mo>,</mo>
-</math></span>&#xA0; (10)</p>
-          </div>
-        </div>
-        <p id="_7036d15c-85ea-8702-139c-f591be0da365">for which even a knowledge of the sample size is no longer required.</p>
-        <p id="_9ffc4bfe-7463-b917-affb-c6b7dba7ccb6">A comparison of <a href="#eq10">Equation (10)</a> with <a href="#eq3">Equation (3)</a> shows that, at least for equal groups of measurements obtained in stable conditions, pooled estimates of both the expectation value and the variance are obtained by simply forming arithmetical means. The reader, in hindsight, should feel free to find this result either trivial or quite remarkable. It is likely, although not proven, that analogous relations hold for the central moments of higher order.</p>
-      </div>
-      <br />
-      <div><h1 class="Section3" id="toc1">References</h1>
-<p id="muller" class="Biblio">[1]&#xA0;  J.W. M&#xFC;ller: &#x201C;Moments d&#x2019;&#xE9;chantillons superpos&#xE9;s&#x201D;, BIPM WPN-215 (1980).</p>
+  </mstyle>
+</math></span>  (10)</p></div></div><p id="_7036d15c-85ea-8702-139c-f591be0da365">for which even a knowledge of the sample size is no longer required.</p><p id="_9ffc4bfe-7463-b917-affb-c6b7dba7ccb6">A comparison of <a href="#eq10">Equation (10)</a> with <a href="#eq3">Equation (3)</a> shows that, at least for equal groups of measurements obtained in stable conditions, pooled estimates of both the expectation value and the variance are obtained by simply forming arithmetical means. The reader, in hindsight, should feel free to find this result either trivial or quite remarkable. It is likely, although not proven, that analogous relations hold for the central moments of higher order.</p></div><br /><div><h1 class="Section3" id="_240c5710-d148-4927-8638-3e9ba75bff04">References</h1>
+<p id="muller" class="Biblio">[1]  J.W. Müller: “Moments d’échantillons superposés”, BIPM WPN-215 (1980).</p>
 
-</div>
-    </main>
-  <script type="text/x-mathjax-config">
+</div></main><script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     "HTML-CSS": { preferredFont: "STIX" },
     asciimath2jax: { delimiters: [['(#(', ')#)']] }
  });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>  <script>
+  <script>
     $("#toc").on('click', 'li', function(e) {
     $(this).parent().find('li.toc-active').removeClass('toc-active');
     $(this).addClass('toc-active');
@@ -3374,5 +2718,4 @@ $('#toggle').on('click', function(){
 anchors.add('h1, h2, h3, h4');
 </script>
 
-</body>
-</html>
+</body></html>

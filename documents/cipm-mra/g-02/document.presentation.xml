@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bipm-standard xmlns="https://www.metanorma.org/ns/bipm" type="presentation" version="2.1.7">
+<bipm-standard xmlns="https://www.metanorma.org/ns/bipm" type="presentation" version="2.4.0" schema-version="v1.3.0">
 <bibdata type="standard">
-<title language="en" format="text/plain" type="main">Guidelines for the monitoring and reporting of the operation of quality systems by RMOs</title>
+<title language="en" format="text/plain" type="title-main">Guidelines for the monitoring and reporting of the operation of quality systems by RMOs</title>
 
 <docidentifier type="BIPM">BIPM CIPM MRA-G-02</docidentifier><docnumber>CIPM MRA-G-02</docnumber><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
@@ -10,50 +10,452 @@
 <abbreviation>BIPM</abbreviation></organization></contributor><edition language="">3</edition><edition language="en">third edition</edition><version><revision-date>2010-10</revision-date></version><language current="true">en</language><script current="true">Latn</script><status><stage>in-force</stage></status><copyright><from>2010</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem><date type="circulated"/><version/></bibitem>
-</relation><ext><doctype>cipm-mra</doctype><editorialgroup><committee acronym=""/></editorialgroup><structuredidentifier><docnumber>CIPM MRA-G-02</docnumber></structuredidentifier></ext></bibdata><localized-strings><localized-string key="scope" language="en">Scope</localized-string><localized-string key="symbolsabbrev" language="en">Symbols and abbreviated terms</localized-string><localized-string key="abbrev" language="en">Abbreviated terms</localized-string><localized-string key="symbols" language="en">Symbols</localized-string><localized-string key="table_of_contents" language="en">Contents</localized-string><localized-string key="introduction" language="en">Introduction</localized-string><localized-string key="foreword" language="en">Foreword</localized-string><localized-string key="abstract" language="en">Abstract</localized-string><localized-string key="acknowledgements" language="en">Acknowledgements</localized-string><localized-string key="termsdef" language="en">Terms and definitions</localized-string><localized-string key="termsdefsymbolsabbrev" language="en">Terms, definitions, symbols and abbreviated terms</localized-string><localized-string key="termsdefsymbols" language="en">Terms, definitions and symbols</localized-string><localized-string key="termsdefabbrev" language="en">Terms, definitions and abbreviated terms</localized-string><localized-string key="normref" language="en">Normative references</localized-string><localized-string key="bibliography" language="en">References</localized-string><localized-string key="preface" language="en">Preface</localized-string><localized-string key="clause" language="en">Chapter</localized-string><localized-string key="annex" language="en">Appendix</localized-string><localized-string key="appendix" language="en">Annex</localized-string><localized-string key="no_terms_boilerplate" language="en"><p>No terms and definitions are listed in this document.</p>
+</relation><ext><doctype>cipm-mra</doctype><editorialgroup><committee acronym=""/></editorialgroup><structuredidentifier><docnumber>CIPM MRA-G-02</docnumber></structuredidentifier></ext></bibdata><localized-strings><localized-string key="scope" language="en">Scope</localized-string><localized-string key="symbolsabbrev" language="en">Symbols and abbreviated terms</localized-string><localized-string key="abbrev" language="en">Abbreviated terms</localized-string><localized-string key="symbols" language="en">Symbols</localized-string><localized-string key="table_of_contents" language="en">Contents</localized-string><localized-string key="introduction" language="en">Introduction</localized-string><localized-string key="foreword" language="en">Foreword</localized-string><localized-string key="abstract" language="en">Abstract</localized-string><localized-string key="acknowledgements" language="en">Acknowledgements</localized-string><localized-string key="termsdef" language="en">Terms and definitions</localized-string><localized-string key="termsdefsymbolsabbrev" language="en">Terms, definitions, symbols and abbreviated terms</localized-string><localized-string key="termsdefsymbols" language="en">Terms, definitions and symbols</localized-string><localized-string key="termsdefabbrev" language="en">Terms, definitions and abbreviated terms</localized-string><localized-string key="normref" language="en">Normative references</localized-string><localized-string key="bibliography" language="en">References</localized-string><localized-string key="preface" language="en">Preface</localized-string><localized-string key="clause" language="en">Chapter</localized-string><localized-string key="annex" language="en">Appendix</localized-string><localized-string key="appendix" language="en">Annex</localized-string><localized-string key="continued" language="en">continued</localized-string><localized-string key="no_terms_boilerplate" language="en"><p>No terms and definitions are listed in this document.</p>
 </localized-string><localized-string key="internal_terms_boilerplate" language="en"><p>For the purposes of this document, 
     the following terms and definitions apply.</p>
 </localized-string><localized-string key="norm_with_refs_pref" language="en">The following referenced documents are indispensable for the application of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</localized-string><localized-string key="norm_empty_pref" language="en">There are no normative references in this document.</localized-string><localized-string key="external_terms_boilerplate" language="en"><p>For the purposes of this document, 
   the terms and definitions given in % apply.</p>
 </localized-string><localized-string key="internal_external_terms_boilerplate" language="en"><p>For the purposes of this document, the terms and definitions 
   given in % and the following apply.</p>
-</localized-string><localized-string key="term_defined_in" language="en">[term defined in %]</localized-string><localized-string key="binary_and" language="en">%1 and %2</localized-string><localized-string key="multiple_and" language="en">%1, and %2</localized-string><localized-string key="binary_or" language="en">%1 or %2</localized-string><localized-string key="multiple_or" language="en">%1, or %2</localized-string><localized-string key="chain_and" language="en">%1 and %2</localized-string><localized-string key="chain_or" language="en">%1 or %2</localized-string><localized-string key="chain_from" language="en">%1 from %2</localized-string><localized-string key="chain_to" language="en">%1 to %2</localized-string><localized-string key="SpelloutRules" language="en">spellout-ordinal</localized-string><localized-string key="note" language="en">NOTE</localized-string><localized-string key="note_xref" language="en">Note</localized-string><localized-string key="termnote" language="en">Note % to entry</localized-string><localized-string key="list" language="en">List</localized-string><localized-string key="deflist" language="en">Definition List</localized-string><localized-string key="figure" language="en">Figure</localized-string><localized-string key="formula" language="en">Equation</localized-string><localized-string key="inequality" language="en">Inequality</localized-string><localized-string key="table" language="en">Table</localized-string><localized-string key="requirement" language="en">Requirement</localized-string><localized-string key="recommendation" language="en">Recommendation</localized-string><localized-string key="permission" language="en">Permission</localized-string><localized-string key="recommendationtest" language="en">Recommendation test</localized-string><localized-string key="requirementtest" language="en">Requirement test</localized-string><localized-string key="permissiontest" language="en">Permission test</localized-string><localized-string key="recommendationclass" language="en">Recommendations class</localized-string><localized-string key="requirementclass" language="en">Requirements class</localized-string><localized-string key="permissionclass" language="en">Permissions class</localized-string><localized-string key="abstracttest" language="en">Abstract test</localized-string><localized-string key="conformanceclass" language="en">Conformance class</localized-string><localized-string key="key" language="en">Key</localized-string><localized-string key="example" language="en">EXAMPLE</localized-string><localized-string key="example_xref" language="en">Example</localized-string><localized-string key="where" language="en">where</localized-string><localized-string key="wholeoftext" language="en">Whole of text</localized-string><localized-string key="draft_label" language="en">draft</localized-string><localized-string key="inform_annex" language="en">informative</localized-string><localized-string key="norm_annex" language="en">normative</localized-string><localized-string key="modified" language="en">modified</localized-string><localized-string key="deprecated" language="en">DEPRECATED</localized-string><localized-string key="source" language="en">Adapted from</localized-string><localized-string key="and" language="en">and</localized-string><localized-string key="all_parts" language="en">All Parts</localized-string><localized-string key="edition_ordinal" language="en">%Spellout edition</localized-string><localized-string key="edition" language="en">edition</localized-string><localized-string key="version" language="en">version</localized-string><localized-string key="toc_figures" language="en">List of figures</localized-string><localized-string key="toc_tables" language="en">List of tables</localized-string><localized-string key="toc_recommendations" language="en">List of recommendations</localized-string><localized-string key="month_january" language="en">January</localized-string><localized-string key="month_february" language="en">February</localized-string><localized-string key="month_march" language="en">March</localized-string><localized-string key="month_april" language="en">April</localized-string><localized-string key="month_may" language="en">May</localized-string><localized-string key="month_june" language="en">June</localized-string><localized-string key="month_july" language="en">July</localized-string><localized-string key="month_august" language="en">August</localized-string><localized-string key="month_september" language="en">September</localized-string><localized-string key="month_october" language="en">October</localized-string><localized-string key="month_november" language="en">November</localized-string><localized-string key="month_december" language="en">December</localized-string><localized-string key="obligation" language="en">Obligation</localized-string><localized-string key="subject" language="en">Subject</localized-string><localized-string key="inherits" language="en">Inherits</localized-string><localized-string key="admonition.danger" language="en">Danger</localized-string><localized-string key="admonition.warning" language="en">Warning</localized-string><localized-string key="admonition.caution" language="en">Caution</localized-string><localized-string key="admonition.important" language="en">Important</localized-string><localized-string key="admonition.safety_precautions" language="en">Safety Precautions</localized-string><localized-string key="admonition.editorial" language="en">Editorial Note</localized-string><localized-string key="locality.section" language="en">Section</localized-string><localized-string key="locality.clause" language="en">Clause</localized-string><localized-string key="locality.part" language="en">Part</localized-string><localized-string key="locality.paragraph" language="en">Paragraph</localized-string><localized-string key="locality.chapter" language="en">Chapter</localized-string><localized-string key="locality.page" language="en">Page</localized-string><localized-string key="locality.table" language="en">Table</localized-string><localized-string key="locality.annex" language="en">Annex</localized-string><localized-string key="locality.figure" language="en">Figure</localized-string><localized-string key="locality.example" language="en">Example</localized-string><localized-string key="locality.note" language="en">Note</localized-string><localized-string key="locality.formula" language="en">Formula</localized-string><localized-string key="grammar_abbrevs.masculine" language="en">m</localized-string><localized-string key="grammar_abbrevs.feminine" language="en">f</localized-string><localized-string key="grammar_abbrevs.neuter" language="en">n</localized-string><localized-string key="grammar_abbrevs.common" language="en">common</localized-string><localized-string key="grammar_abbrevs.singular" language="en">sg</localized-string><localized-string key="grammar_abbrevs.dual" language="en">dual</localized-string><localized-string key="grammar_abbrevs.pl" language="en">pl</localized-string><localized-string key="grammar_abbrevs.isPreposition" language="en">prep</localized-string><localized-string key="grammar_abbrevs.isParticiple" language="en">part</localized-string><localized-string key="grammar_abbrevs.isAdjective" language="en">adj</localized-string><localized-string key="grammar_abbrevs.isAdverb" language="en">adv</localized-string><localized-string key="grammar_abbrevs.isNoun" language="en">noun</localized-string><localized-string key="grammar_abbrevs.isVerb" language="en">verb</localized-string><localized-string key="relatedterms.deprecates" language="en">deprecates</localized-string><localized-string key="relatedterms.supersedes" language="en">supersedes</localized-string><localized-string key="relatedterms.narrower" language="en">narrower</localized-string><localized-string key="relatedterms.broader" language="en">broader</localized-string><localized-string key="relatedterms.equivalent" language="en">equivalent</localized-string><localized-string key="relatedterms.compare" language="en">compare</localized-string><localized-string key="relatedterms.contrast" language="en">contrast</localized-string><localized-string key="relatedterms.see" language="en">see</localized-string><localized-string key="relatedterms.seealso" language="en">see also</localized-string><localized-string key="Clause.sg" language="en">Clause</localized-string><localized-string key="Clause.pl" language="en">Clauses</localized-string><localized-string key="Annex.sg" language="en">Annex</localized-string><localized-string key="Annex.pl" language="en">Annexes</localized-string><localized-string key="Appendix.sg" language="en">Appendix</localized-string><localized-string key="Appendix.pl" language="en">Appendixes</localized-string><localized-string key="Note.sg" language="en">Note</localized-string><localized-string key="Note.pl" language="en">Notes</localized-string><localized-string key="Note_%_to_entry.sg" language="en">Note % to entry</localized-string><localized-string key="Note_%_to_entry.pl" language="en">Notes % to entry</localized-string><localized-string key="List.sg" language="en">List</localized-string><localized-string key="List.pl" language="en">Lists</localized-string><localized-string key="Figure.sg" language="en">Figure</localized-string><localized-string key="Figure.pl" language="en">Figures</localized-string><localized-string key="Formula.sg" language="en">Formula</localized-string><localized-string key="Formula.pl" language="en">Formulas</localized-string><localized-string key="Table.sg" language="en">Table</localized-string><localized-string key="Table.pl" language="en">Tables</localized-string><localized-string key="Requirement.sg" language="en">Requirement</localized-string><localized-string key="Requirement.pl" language="en">Requirements</localized-string><localized-string key="Recommendation.sg" language="en">Recommendation</localized-string><localized-string key="Recommendation.pl" language="en">Recommendations</localized-string><localized-string key="Permission.sg" language="en">Permission</localized-string><localized-string key="Permission.pl" language="en">Permissions</localized-string><localized-string key="Example.sg" language="en">Example</localized-string><localized-string key="Example.pl" language="en">Examples</localized-string><localized-string key="Part.sg" language="en">Part</localized-string><localized-string key="Part.pl" language="en">Parts</localized-string><localized-string key="Section.sg" language="en">Section</localized-string><localized-string key="Section.pl" language="en">Sections</localized-string><localized-string key="Paragraph.sg" language="en">Paragraph</localized-string><localized-string key="Paragraph.pl" language="en">Paragraphs</localized-string><localized-string key="Chapter.sg" language="en">Chapter</localized-string><localized-string key="Chapter.pl" language="en">Chapters</localized-string><localized-string key="Page.sg" language="en">Page</localized-string><localized-string key="Page.pl" language="en">Pages</localized-string><localized-string key="iso_annex" language="en">Annex</localized-string><localized-string key="see" language="en">see</localized-string><localized-string key="see_also" language="en">see also</localized-string><localized-string key="subclause" language="en">Section</localized-string><localized-string key="clause_jcgm" language="en">Clause</localized-string><localized-string key="subclause_jcgm" language="en">Clause</localized-string><localized-string key="index" language="en">Index</localized-string><localized-string key="all_rights_reserved" language="en">All rights reserved</localized-string><localized-string key="language" language="en">en</localized-string><localized-string key="script" language="en">Latn</localized-string></localized-strings>
-<boilerplate>
-  <copyright-statement>
-    <clause>
-      <p align="center" id="_0b66959d-d1f0-ebce-1d48-d89a6e2eddd6"> © Bureau International des Poids et Mesures 2010 all rights reserved</p>
-    </clause>
-  </copyright-statement>
-  <license-statement>
-    <clause>
-      <title depth="1">Copyright statement</title>
-      <p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<link target="http://creativecommons.org/licenses/by/4.0/"/>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
-    </clause>
-  </license-statement>
-  <feedback-statement>
-    <p id="_bd0b4a04-1c9b-db4f-f27f-b98101e93f33">BIPM<br/>
-      Pavillon de Breteuil<br/>
-      F-92312 Sèvres Cedex<br/>
-      FRANCE</p>
-  </feedback-statement>
-</boilerplate>
+</localized-string><localized-string key="term_defined_in" language="en">(%)</localized-string><localized-string key="binary_and" language="en">%1 and %2</localized-string><localized-string key="multiple_and" language="en">%1, and %2</localized-string><localized-string key="binary_or" language="en">%1 or %2</localized-string><localized-string key="multiple_or" language="en">%1, or %2</localized-string><localized-string key="chain_and" language="en">%1 and %2</localized-string><localized-string key="chain_or" language="en">%1 or %2</localized-string><localized-string key="chain_from" language="en">%1 from %2</localized-string><localized-string key="chain_to" language="en">%1 to %2</localized-string><localized-string key="nested_xref" language="en">%1, %2</localized-string><localized-string key="list_nested_xref" language="en">%1 %2</localized-string><localized-string key="SpelloutRules" language="en">spellout-ordinal</localized-string><localized-string key="note" language="en">Note:</localized-string><localized-string key="note_xref" language="en">Note</localized-string><localized-string key="termnote" language="en">Note % to entry:</localized-string><localized-string key="list" language="en">List</localized-string><localized-string key="deflist" language="en">Definition List</localized-string><localized-string key="figure" language="en">Figure</localized-string><localized-string key="diagram" language="en">Diagram</localized-string><localized-string key="formula" language="en">Equation</localized-string><localized-string key="inequality" language="en">Inequality</localized-string><localized-string key="table" language="en">Table</localized-string><localized-string key="requirement" language="en">Requirement</localized-string><localized-string key="recommendation" language="en">Recommendation</localized-string><localized-string key="permission" language="en">Permission</localized-string><localized-string key="box" language="en">Box</localized-string><localized-string key="recommendationtest" language="en">Recommendation test</localized-string><localized-string key="requirementtest" language="en">Requirement test</localized-string><localized-string key="permissiontest" language="en">Permission test</localized-string><localized-string key="recommendationclass" language="en">Recommendations class</localized-string><localized-string key="requirementclass" language="en">Requirements class</localized-string><localized-string key="permissionclass" language="en">Permissions class</localized-string><localized-string key="abstracttest" language="en">Abstract test</localized-string><localized-string key="conformanceclass" language="en">Conformance class</localized-string><localized-string key="key" language="en">Key</localized-string><localized-string key="example" language="en">EXAMPLE</localized-string><localized-string key="example_xref" language="en">Example</localized-string><localized-string key="where" language="en">where</localized-string><localized-string key="where_one" language="en">where</localized-string><localized-string key="wholeoftext" language="en">Whole of text</localized-string><localized-string key="draft_label" language="en">draft</localized-string><localized-string key="inform_annex" language="en">informative</localized-string><localized-string key="norm_annex" language="en">normative</localized-string><localized-string key="modified" language="en">modified</localized-string><localized-string key="adapted" language="en">adapted</localized-string><localized-string key="deprecated" language="en">DEPRECATED</localized-string><localized-string key="and" language="en">and</localized-string><localized-string key="all_parts" language="en">All Parts</localized-string><localized-string key="edition_ordinal" language="en">%Spellout edition</localized-string><localized-string key="edition" language="en">edition</localized-string><localized-string key="version" language="en">version</localized-string><localized-string key="toc_figures" language="en">List of figures</localized-string><localized-string key="toc_tables" language="en">List of tables</localized-string><localized-string key="toc_recommendations" language="en">List of recommendations</localized-string><localized-string key="month_january" language="en">January</localized-string><localized-string key="month_february" language="en">February</localized-string><localized-string key="month_march" language="en">March</localized-string><localized-string key="month_april" language="en">April</localized-string><localized-string key="month_may" language="en">May</localized-string><localized-string key="month_june" language="en">June</localized-string><localized-string key="month_july" language="en">July</localized-string><localized-string key="month_august" language="en">August</localized-string><localized-string key="month_september" language="en">September</localized-string><localized-string key="month_october" language="en">October</localized-string><localized-string key="month_november" language="en">November</localized-string><localized-string key="month_december" language="en">December</localized-string><localized-string key="obligation" language="en">Obligation</localized-string><localized-string key="admonition.danger" language="en">Danger</localized-string><localized-string key="admonition.warning" language="en">Warning</localized-string><localized-string key="admonition.caution" language="en">Caution</localized-string><localized-string key="admonition.important" language="en">Important</localized-string><localized-string key="admonition.safety_precautions" language="en">Safety Precautions</localized-string><localized-string key="admonition.editorial" language="en">Editorial Note</localized-string><localized-string key="locality.section" language="en">Section</localized-string><localized-string key="locality.clause" language="en">Clause</localized-string><localized-string key="locality.part" language="en">Part</localized-string><localized-string key="locality.paragraph" language="en">Paragraph</localized-string><localized-string key="locality.chapter" language="en">Chapter</localized-string><localized-string key="locality.page" language="en">Page</localized-string><localized-string key="locality.table" language="en">Table</localized-string><localized-string key="locality.annex" language="en">Annex</localized-string><localized-string key="locality.figure" language="en">Figure</localized-string><localized-string key="locality.example" language="en">Example</localized-string><localized-string key="locality.note" language="en">Note</localized-string><localized-string key="locality.formula" language="en">Formula</localized-string><localized-string key="grammar_abbrevs.masculine" language="en">m</localized-string><localized-string key="grammar_abbrevs.feminine" language="en">f</localized-string><localized-string key="grammar_abbrevs.neuter" language="en">n</localized-string><localized-string key="grammar_abbrevs.common" language="en">common</localized-string><localized-string key="grammar_abbrevs.singular" language="en">sg</localized-string><localized-string key="grammar_abbrevs.dual" language="en">dual</localized-string><localized-string key="grammar_abbrevs.pl" language="en">pl</localized-string><localized-string key="grammar_abbrevs.isPreposition" language="en">prep</localized-string><localized-string key="grammar_abbrevs.isParticiple" language="en">part</localized-string><localized-string key="grammar_abbrevs.isAdjective" language="en">adj</localized-string><localized-string key="grammar_abbrevs.isAdverb" language="en">adv</localized-string><localized-string key="grammar_abbrevs.isNoun" language="en">noun</localized-string><localized-string key="grammar_abbrevs.isVerb" language="en">verb</localized-string><localized-string key="relatedterms.deprecates" language="en">deprecates</localized-string><localized-string key="relatedterms.supersedes" language="en">supersedes</localized-string><localized-string key="relatedterms.narrower" language="en">narrower</localized-string><localized-string key="relatedterms.broader" language="en">broader</localized-string><localized-string key="relatedterms.equivalent" language="en">equivalent</localized-string><localized-string key="relatedterms.compare" language="en">compare</localized-string><localized-string key="relatedterms.contrast" language="en">contrast</localized-string><localized-string key="relatedterms.see" language="en">see</localized-string><localized-string key="relatedterms.seealso" language="en">see also</localized-string><localized-string key="Clause.sg" language="en">Clause</localized-string><localized-string key="Clause.pl" language="en">Clauses</localized-string><localized-string key="Annex.sg" language="en">Annex</localized-string><localized-string key="Annex.pl" language="en">Annexes</localized-string><localized-string key="Appendix.sg" language="en">Appendix</localized-string><localized-string key="Appendix.pl" language="en">Appendixes</localized-string><localized-string key="Note.sg" language="en">Note</localized-string><localized-string key="Note.pl" language="en">Notes</localized-string><localized-string key="Note_%_to_entry.sg" language="en">Note % to entry</localized-string><localized-string key="Note_%_to_entry.pl" language="en">Notes % to entry</localized-string><localized-string key="List.sg" language="en">List</localized-string><localized-string key="List.pl" language="en">Lists</localized-string><localized-string key="Figure.sg" language="en">Figure</localized-string><localized-string key="Figure.pl" language="en">Figures</localized-string><localized-string key="Formula.sg" language="en">Formula</localized-string><localized-string key="Formula.pl" language="en">Formulas</localized-string><localized-string key="Table.sg" language="en">Table</localized-string><localized-string key="Table.pl" language="en">Tables</localized-string><localized-string key="Requirement.sg" language="en">Requirement</localized-string><localized-string key="Requirement.pl" language="en">Requirements</localized-string><localized-string key="Recommendation.sg" language="en">Recommendation</localized-string><localized-string key="Recommendation.pl" language="en">Recommendations</localized-string><localized-string key="Permission.sg" language="en">Permission</localized-string><localized-string key="Permission.pl" language="en">Permissions</localized-string><localized-string key="Example.sg" language="en">Example</localized-string><localized-string key="Example.pl" language="en">Examples</localized-string><localized-string key="Part.sg" language="en">Part</localized-string><localized-string key="Part.pl" language="en">Parts</localized-string><localized-string key="Section.sg" language="en">Section</localized-string><localized-string key="Section.pl" language="en">Sections</localized-string><localized-string key="Paragraph.sg" language="en">Paragraph</localized-string><localized-string key="Paragraph.pl" language="en">Paragraphs</localized-string><localized-string key="Chapter.sg" language="en">Chapter</localized-string><localized-string key="Chapter.pl" language="en">Chapters</localized-string><localized-string key="Page.sg" language="en">Page</localized-string><localized-string key="Page.pl" language="en">Pages</localized-string><localized-string key="iso_annex" language="en">Annex</localized-string><localized-string key="see" language="en">see</localized-string><localized-string key="see_also" language="en">see also</localized-string><localized-string key="subclause" language="en">Section</localized-string><localized-string key="clause_jcgm" language="en">Clause</localized-string><localized-string key="subclause_jcgm" language="en">Clause</localized-string><localized-string key="index" language="en">Index</localized-string><localized-string key="all_rights_reserved" language="en">All rights reserved</localized-string><localized-string key="adapted_from" language="en">Adapted from: </localized-string><localized-string key="modified_from" language="en">Modified from: </localized-string><localized-string key="prefacenote" language="en">NOTE:</localized-string><localized-string key="listnote" language="en">Note:</localized-string><localized-string key="language" language="en">en</localized-string><localized-string key="script" language="en">Latn</localized-string></localized-strings><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata><metanorma><source><semantic__bipm-standard type="semantic" version="2.4.0" schema-version="v1.3.0">
+<semantic__bibdata type="standard">
+<semantic__title language="en" format="text/plain" type="title-main">Guidelines for the monitoring and reporting of the operation of quality systems by RMOs</semantic__title>
 
-<sections><clause id="_introduction" obligation="normative" displayorder="1">
+<semantic__docidentifier type="BIPM">BIPM CIPM MRA-G-02</semantic__docidentifier><semantic__docnumber>CIPM MRA-G-02</semantic__docnumber><semantic__contributor><semantic__role type="author"/><semantic__organization>
+<semantic__name>Bureau International des Poids et Mesures</semantic__name>
+<semantic__abbreviation>BIPM</semantic__abbreviation></semantic__organization></semantic__contributor><semantic__contributor><semantic__role type="publisher"/><semantic__organization>
+<semantic__name>Bureau International des Poids et Mesures</semantic__name>
+<semantic__abbreviation>BIPM</semantic__abbreviation></semantic__organization></semantic__contributor><semantic__edition>3</semantic__edition><semantic__version><semantic__revision-date>2010-10</semantic__revision-date></semantic__version><semantic__language>en</semantic__language><semantic__script>Latn</semantic__script><semantic__status><semantic__stage>in-force</semantic__stage></semantic__status><semantic__copyright><semantic__from>2010</semantic__from><semantic__owner><semantic__organization>
+<semantic__name>Bureau International des Poids et Mesures</semantic__name>
+<semantic__abbreviation>BIPM</semantic__abbreviation></semantic__organization></semantic__owner></semantic__copyright><semantic__relation type="supersedes"><semantic__bibitem><semantic__date type="circulated"/><semantic__version/></semantic__bibitem>
+</semantic__relation><semantic__ext><semantic__doctype>cipm-mra</semantic__doctype><semantic__editorialgroup><semantic__committee acronym=""/></semantic__editorialgroup><semantic__structuredidentifier><semantic__docnumber>CIPM MRA-G-02</semantic__docnumber></semantic__structuredidentifier></semantic__ext></semantic__bibdata><semantic__metanorma-extension><semantic__presentation-metadata><semantic__name>TOC Heading Levels</semantic__name><semantic__value>2</semantic__value></semantic__presentation-metadata><semantic__presentation-metadata><semantic__name>HTML TOC Heading Levels</semantic__name><semantic__value>2</semantic__value></semantic__presentation-metadata><semantic__presentation-metadata><semantic__name>DOC TOC Heading Levels</semantic__name><semantic__value>2</semantic__value></semantic__presentation-metadata><semantic__presentation-metadata><semantic__name>PDF TOC Heading Levels</semantic__name><semantic__value>2</semantic__value></semantic__presentation-metadata></semantic__metanorma-extension>
+<semantic__boilerplate><semantic__copyright-statement>
+
+<semantic__clause id="semantic___be208fe5-3a88-9314-b00d-a553e152379c" obligation="normative">
+<semantic__p id="semantic___e6111812-61a2-7226-8889-021612627512" align="center">© Bureau International des Poids et Mesures 2010 all rights reserved</semantic__p>
+</semantic__clause>
+</semantic__copyright-statement>
+
+<semantic__license-statement>
+
+<semantic__clause id="semantic___copyright_statement_2" obligation="normative">
+<semantic__title>Copyright statement</semantic__title>
+<semantic__p id="semantic___a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<semantic__link target="http://creativecommons.org/licenses/by/4.0/:"/>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</semantic__p>
+</semantic__clause>
+</semantic__license-statement>
+
+<semantic__feedback-statement>
+
+<semantic__p id="semantic___e6428749-2432-0772-4c8e-ed6c34018916">BIPM<semantic__br/>
+Pavillon de Breteuil<semantic__br/>
+F-92312 Sèvres Cedex<semantic__br/>
+FRANCE</semantic__p>
+</semantic__feedback-statement>
+</semantic__boilerplate><semantic__sections><semantic__clause id="semantic___introduction" obligation="normative">
+<semantic__title>Introduction</semantic__title>
+<semantic__p id="semantic___53a8665a-e38d-0200-4a19-c85cc646bbc4">A central component of the CIPM MRA requires that signatory NMIs establish and maintain a Quality System (QS). Unlike the CMC situation, however, the CIPM MRA does not explicitly specify how signatory NMIs review, gain confidence and accept each other’s quality systems.</semantic__p>
+
+<semantic__p id="semantic___1c53629a-026a-a76f-9b1b-c4ffd6f14489">With regard to the establishment of a QS, the CIPM MRA provides for the following methods:</semantic__p>
+
+<semantic__ol id="semantic___8e5e97c7-345e-9024-bcc7-199744bda43a" type="arabic"><semantic__li><semantic__p id="semantic___7d2e88f6-b460-bd49-67ce-d8f8a2efc088"><semantic__em>an NMI that chooses for its calibration and measurement services a quality system that meets the requirements of ISO Guide 25 or equivalent for an NMI, assessed by an accreditation body fulfilling the requirements of ISO Guide 58, declares its calibration measurement capabilities and submits them to the local RMO for review and transmission to the Joint Committee for analysis and inclusion in Appendix C.</semantic__em></semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___fe13636f-b6df-65c9-d974-b84044c3036a"><semantic__em>an NMI that chooses to use a different way of assuring quality or chooses a different quality system, or ISO Guide 25 without third-party assessment, for its calibration and measurement services declares its calibration and measurement capabilities and submits them to the local RMO for review and transmission to the Joint Committee for analysis and inclusion in Appendix C.</semantic__em></semantic__p>
+</semantic__li>
+</semantic__ol>
+
+<semantic__p id="semantic___266458f8-1981-e929-0bf6-23abc18df68a"><semantic__em>Demonstration of competence and capability may require visits and examination of procedures by an NMI and/or by peers selected by the local RMO.</semantic__em></semantic__p>
+</semantic__clause>
+
+<semantic__clause id="semantic___review_guidelines" obligation="normative">
+<semantic__title>Review Guidelines</semantic__title>
+<semantic__p id="semantic___b777f439-2d33-2a02-432d-7004dc77aa61">Each RMOs should have an open process in place for the monitoring and review of the QS<semantic__fn reference="1"><semantic__p id="semantic___34ea1be9-9294-59c3-cb29-be88246d7705">In this document, QS means a quality system that meets the requirements of ISO/IEC 17025 or equivalent or a different way of assuring quality or a different quality system, as described in the MRA.</semantic__p>
+</semantic__fn> of each of their member NMIs and DIs and to to report on their acceptance or otherwise to the JCRB. The process followed for the review is decided by each RMO and it shall satisfy at least the following requirements.</semantic__p>
+
+<semantic__ul id="semantic___41b41609-5dda-5e5e-aff9-c5089b3b0fe5"><semantic__li><semantic__p id="semantic___5b3abb54-e970-dc21-ea62-1fdf8392315c">The review processes should include the presentation of each member NMIs and DIs’ QS to a panel of experts. The initial and periodic presentations of the QS of DI to the corresponding QS review panel must be done directly by the responsible person of the DI and not through its NMI. In the same sense, the QS annual reports must also be prepared and submitted directly by the DI.</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___1186801e-ef8b-7cf6-f787-6cb768895f82">The RMO must satisfy itself through its review process that the QS operated by the NMI or DI has an effective and durable system in place for dealing with corrective actions, non-conforming work and complaints.</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___9bad16f5-86c0-51ad-bead-ec48fe627e97">The NMIs should submit a full description of their QS to the RMO, for its calibration and measurement service. Minimum features to be included are:</semantic__p>
+<semantic__p id="semantic___b2857f18-974c-b335-dc6d-6988429fe4af" align="left">organogram of the NMI ;<semantic__br/>
+quality system management mechanisms ;<semantic__br/>
+detailed table of contents of the quality manual;<semantic__br/>
+list of administrative and technical procedures;<semantic__br/>
+table of cross references between ISO/IEC17025 and the quality documentation of the NMI;<semantic__br/>
+list of calibration capabilities covered by the quality system;<semantic__br/>
+customer complaints – process employed and statistics;<semantic__br/>
+non conforming work – process employed &amp; corrective actions;<semantic__br/>
+report on internal audits ;</semantic__p>
+
+<semantic__ul id="semantic___af74f582-5df1-9662-adea-8771b888d5aa"><semantic__li><semantic__p id="semantic___d2229f3e-9607-3421-6b4f-dcd9d9004f3f">status of management reviews.</semantic__p>
+</semantic__li>
+</semantic__ul>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___cdc4b69c-0dd2-4542-ddb5-88398f3cc0d7">If considered necessary, the RMO may request that review visits by ‘peers’ be undertaken, in order that the NMI may demonstrate confidence and capability in their claimed CMCs. The NMI itself may request the review visits by peers. Where such visits take place, the RMO must ensure that the ‘peers’ have the necessary experience and are suitably qualified and independent.</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___f63e80f5-0dcc-3e48-889e-a4d701d7c4b1">The RMO must have a process in place for the on-going monitoring of the QS of the NMIs. This process should aim to ensure that:</semantic__p>
+<semantic__ul id="semantic___b1d6023a-dba8-0b4a-483e-05400d979f83"><semantic__li><semantic__p id="semantic___c1e32724-0623-0b03-0842-2962b634ce06">the accreditation or self declaration continues to be valid;</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___2b4a36e4-6d64-6057-c0d3-17693b079a59">the QS continues to cover the declared CMCs;</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___3d9df715-3050-40c6-caec-3edb32aea5bb">major extensions and modifications to QS (including changes to key staff) have been notified to the RMO;</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___4aca0732-3341-107e-ecf2-073bcedc6fbf">a general review of the QS is undertaken at a maximum interval of five years.</semantic__p>
+</semantic__li>
+</semantic__ul>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___9b628b6d-4dde-12a7-887f-db27c8c6f132">In addition to the requirements of the QS, the review process may also take into account:</semantic__p>
+<semantic__ul id="semantic___87e96780-bf84-a2d5-25a5-6fa411645ac6"><semantic__li><semantic__p id="semantic___aaf3d017-de11-4863-1264-76dec079f112">RMO projects and activities ;</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___6e6b2338-2738-54cc-ce37-5aeec2f9ee6d">other available knowledge and experience;participation in scientific and training activities, visits and consultation with technical experts from other RMOs.</semantic__p>
+</semantic__li>
+</semantic__ul>
+</semantic__li>
+</semantic__ul>
+</semantic__clause>
+
+<semantic__clause id="semantic___requirements_for_the_qs" obligation="normative">
+<semantic__title>Requirements for the QS</semantic__title>
+<semantic__p id="semantic___3c509fc1-646b-55bf-7650-37d256bb707b">The QS operated by the NMI should be:</semantic__p>
+
+<semantic__ul id="semantic___3f368e9f-2a72-e8e7-3c14-b9b27bcad230"><semantic__li><semantic__p id="semantic___58d7d7b7-9139-7c6b-fa0b-fca747fb5c4b">accredited to ISO/IEC 17025 for calibration laboratories or equivalent for an NMI, or</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___1e13f321-39d6-f7f3-18c6-9f6137ca973d">self declared to ISO/IEC 17025 or a different quality system.</semantic__p>
+</semantic__li>
+</semantic__ul>
+
+<semantic__p id="semantic___b080d8b5-ba67-d595-8e34-42715a452cb9">The QS should cover all declared CMCs</semantic__p>
+
+<semantic__clause id="semantic___qs_assessed_by_accreditation_body" obligation="normative">
+<semantic__title>QS assessed by Accreditation Body</semantic__title>
+<semantic__ul id="semantic___ee72f57c-28b1-8c33-fc36-761387cad72a"><semantic__li><semantic__p id="semantic___f2ed0e88-291d-dc38-78e6-8812e2673510">The claimed CMC uncertainty must not be smaller than the accredited uncertainties documented in the scope of accreditation</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___bef72b2c-eaef-d904-08d9-a16654181e65">The NMI must submit the name of the accreditation body and the names of the technical assessors and the lead assessor who were involved in the assessment of the NMIs capabilities.</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___62d7fcaa-1001-e25c-0deb-a10ec3c2f8ad">The accreditation body should operate according to ISO/IEC 17011(draft) and should be a signatory to the ILAC MRA.</semantic__p>
+</semantic__li>
+</semantic__ul>
+</semantic__clause>
+
+<semantic__clause id="semantic___self_declared_qs" obligation="normative">
+<semantic__title>Self declared QS</semantic__title>
+<semantic__ul id="semantic___71a2f48c-2089-7e1a-1f79-3221916685a3"><semantic__li><semantic__p id="semantic___2121d70f-78cc-61b2-691d-4c4bd7b22b43">Where the QS is based on ISO/IEC 17025 the RMO must satisfy itself that the quality system complies with the standard.</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___df651bbb-b98e-9b24-a146-8cb0b9b0c08a">Where the QS is not based on ISO/IEC 17025 the following must be addressed:</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___8ff9093e-dd09-b818-26f5-6afadcceaac9">Organizational and Management requirements including:</semantic__p>
+<semantic__ul id="semantic___f7b5999f-1fe0-097d-92cd-62d19d1f22c4"><semantic__li><semantic__p id="semantic___37054182-436e-c7c0-2cb3-232518527dc8">quality manual ;</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___034df850-3bff-1627-ed6b-2ceb3b4f8885">document control process ;</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___44b796bb-9662-8acb-fdf8-27ee353e3f47">contract review ;</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___add6ff63-6dd9-724e-9802-ddaf69ec746c">complaints ;</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___8a01dce8-02cd-c84b-9a06-d14f8dabb55d">control of non conforming work;</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___9be4c748-0ab0-fbab-c3c2-4f11f20f1c22">corrective and preventative actions ;</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___0c57da47-ef30-7593-b0b4-210b70717410">internal audits and management review.</semantic__p>
+</semantic__li>
+</semantic__ul>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___93b04a33-0460-c40a-9b1f-a62e47a46512">Technical requirements including:</semantic__p>
+<semantic__ul id="semantic___5d397c60-1609-aa4d-a53d-19f2163a63a6"><semantic__li><semantic__p id="semantic___4c1be353-a725-1ab4-4091-ae12e6785531">Personnel</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___9327aba9-33c6-e4a2-3823-c7626b33c07a">Accommodation and environment conditions</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___4488248f-ded5-5156-79f5-045fbc0a75a3">Test and calibration methods and method validation</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___2833d157-ffbc-56cc-f34f-3f628a9fa234">Equipment</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___c665b6da-3f77-4ea1-c206-7acda49cc069">Calibration and measurement traceability</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___3c2668a0-c637-d16d-ed38-1c5f02806863">Assuring the quality of results</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___c6ce5652-7246-f719-834b-665bdde63816">Reporting of results</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___b445b4f8-5d80-70c2-e46f-badcfd6e8050">Sampling and handling of items (where applicable).</semantic__p>
+</semantic__li>
+</semantic__ul>
+</semantic__li>
+</semantic__ul>
+</semantic__clause>
+</semantic__clause>
+
+<semantic__clause id="semantic___report_guidelines" obligation="normative">
+<semantic__title>Report Guidelines</semantic__title>
+<semantic__p id="semantic___ddf43e6f-b161-de97-2936-5e4d1240b178">As part of the regular reports to the JCRB, the RMOs must provide annual summary reports on the status of the QS of the NMIs and DIs in their region,.</semantic__p>
+
+<semantic__p id="semantic___a0067477-cd43-e0ce-918f-997c58752d09">The report should include:</semantic__p>
+
+<semantic__ul id="semantic___fa95a395-4d36-c713-d9ac-61184834659d"><semantic__li><semantic__p id="semantic___b61ab278-b5d8-7cee-a8ae-1e373e5645ed">summary of the RMO’s QS review process;</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___a26e5c7e-1774-b757-f99b-6207b8f4943c">whether and when each member NMIs’ QS was approved by the RMO (necessary details of each NMIs’ QS status, e.g. path a, b, or c, can be provided meanwhile);</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___942147e3-1fd8-ae62-6d4d-136edc0c2095">major changes in the member NMIs’ QS that may affect the validity of CMCs, like changes in key personnel, new installations or equipment, etc.</semantic__p>
+</semantic__li>
+<semantic__li><semantic__p id="semantic___6bb60cc6-f063-69c2-722e-2fb1c8f9af38">other relevant information, which will help build inter-regional confidence (eg training courses/workshops on QS, exchange of information between NMIs on QS, interaction with other RMOs on QS)</semantic__p>
+</semantic__li>
+</semantic__ul>
+</semantic__clause>
+
+<semantic__clause id="semantic___periodic_reviews_of_the_quality_management_systems" obligation="normative">
+<semantic__title>Periodic Reviews of the Quality Management Systems</semantic__title>
+<semantic__p id="semantic___7157baf6-6e85-3660-28f5-45dfb709f776">The quality management systems implemented to support the calibration and measurement capabilities of the NMIs and DIs must undergo a full review with a period not longer than five years. The individual RMOs are responsible for this review, under the auspices of their respective quality system working groups.</semantic__p>
+
+<semantic__p id="semantic___7044bc41-79e3-ba5d-b0fd-45e9aa1dc2d1">This comprehensive periodic review includes examination of evidence for the continued validity and vitality of published CMCs.</semantic__p>
+
+<semantic__p id="semantic___ac9744a2-9bc2-b1f4-119b-a32ac26bd353">In addition to the 5-year review of the supporting QMS, CMCs published in the KCDB undergo continual monitoring to ensure their validity. NMIs and DIs are responsible for demonstrating that they are maintaining quality systems, including regular review of their services. All DIs and NMIs with published CMCs submit annual quality reports to their RMOs which include full disclosure of any issues (e.g., departure of key staff, loss of facilities and equipment, poor performance in comparisons with other NMIs and DIs, etc.) that would affect published CMCs.</semantic__p>
+</semantic__clause>
+
+<semantic__clause id="semantic___list_of_acronyms" obligation="normative">
+<semantic__title>List of Acronyms</semantic__title>
+<semantic__dl id="semantic___3d1df77d-8ee7-f8b2-287f-ac4b8d8da28e"><semantic__dt>CIPM MRA</semantic__dt>
+<semantic__dd><semantic__p id="semantic___55c4fab5-3a68-e279-8d04-6ed464fceb0b">Mutual Recognition Arrangement</semantic__p>
+</semantic__dd>
+<semantic__dt>CMC</semantic__dt>
+<semantic__dd><semantic__p id="semantic___d3e3ad74-a469-38c2-8524-4bae4f6d0bf4">Calibration and Measurement Capability</semantic__p>
+</semantic__dd>
+<semantic__dt>JCRB</semantic__dt>
+<semantic__dd><semantic__p id="semantic___a08acc93-c44b-2901-ae03-d08d834bb461">Joint Committee of the RMOs and the BIPM</semantic__p>
+</semantic__dd>
+<semantic__dt>NMI</semantic__dt>
+<semantic__dd><semantic__p id="semantic___7f3657fe-56c6-b61d-e5ce-6fbcfd8a2074">National Metrology Institute</semantic__p>
+</semantic__dd>
+<semantic__dt>QS</semantic__dt>
+<semantic__dd><semantic__p id="semantic___a6f41c7e-9bea-0526-c796-8d87d9aea9e2">Quality System</semantic__p>
+</semantic__dd>
+<semantic__dt>RMO</semantic__dt>
+<semantic__dd><semantic__p id="semantic___137a3dda-dd1f-9b1a-cda7-682b3aadc5b9">Regional Metrology Organization</semantic__p>
+</semantic__dd>
+</semantic__dl>
+</semantic__clause>
+
+<semantic__clause id="semantic___revision_history" obligation="normative">
+<semantic__title>Revision History</semantic__title>
+<semantic__table id="semantic___86811fae-84c4-cbcf-3ff1-562668bde6f3" unnumbered="true"><semantic__tbody><semantic__tr><semantic__td valign="top" align="center"><semantic__p id="semantic___0f51ccfb-4bd1-a7a8-d05d-a680e3dbbde3">Version number</semantic__p>
+</semantic__td>
+<semantic__td valign="top" align="center"><semantic__p id="semantic___cb005b87-0103-ae38-fa4b-73bcc6b7d4bd">Date of Issue/Review</semantic__p>
+</semantic__td>
+<semantic__td valign="top" align="center"><semantic__p id="semantic___4902821f-e047-9d09-3876-6637a7c19928">Summary of change</semantic__p>
+</semantic__td>
+</semantic__tr><semantic__tr><semantic__td valign="top" align="left">2</semantic__td>
+<semantic__td valign="top" align="left">2008-11-18</semantic__td>
+<semantic__td valign="top" align="left"><semantic__p id="semantic___952f6422-6041-7b4f-eafb-746ead364d34">Initially approved as JCRB 10/8 (1c)<semantic__br/>
+Reformatted by JCRB Executive Secretary, November 2008</semantic__p>
+</semantic__td>
+</semantic__tr><semantic__tr><semantic__td valign="top" rowspan="2" align="left">3</semantic__td>
+<semantic__td valign="top" align="left">2010-09-29</semantic__td>
+<semantic__td valign="top" align="left"><semantic__p id="semantic___8b61fde4-2097-4524-6135-b3ecb1c23ab0">General review, new chapters 3 and 5. Approved by the JCRB.</semantic__p>
+</semantic__td>
+</semantic__tr><semantic__tr><semantic__td valign="top" align="left">2010-10-15</semantic__td>
+<semantic__td valign="top" align="left">Changes approved by CIPM.</semantic__td>
+</semantic__tr></semantic__tbody>
+</semantic__table>
+</semantic__clause>
+</semantic__sections>
+<semantic__doccontrol displayorder="999">
+<semantic__title>Document Control</semantic__title>
+<semantic__table unnumbered="true"><semantic__tbody>
+<semantic__tr><semantic__th>Authors:</semantic__th><semantic__td/><semantic__td/></semantic__tr>
+<semantic__tr><semantic__td> </semantic__td><semantic__td/>
+<semantic__td/></semantic__tr>
+  
+</semantic__tbody></semantic__table></semantic__doccontrol>
+</semantic__bipm-standard></source></metanorma><render><preprocess-xslt format="xml">
+  <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="no"/>
+  <xsl:template match="@* | node()"><xsl:copy><xsl:apply-templates select="@* | node()"/></xsl:copy></xsl:template>
+<xsl:template match="*[local-name() = 'passthrough']">
+  <xsl:if test="contains(@formats,',xml,')"> <!-- delimited -->
+  <xsl:copy><xsl:apply-templates select="@* | node()"/></xsl:copy>
+  </xsl:if>
+</xsl:template>
+
+</xsl:stylesheet>
+
+</preprocess-xslt>
+
+<preprocess-xslt format="xml">
+  <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="no"/>
+  <xsl:template match="@* | node()"><xsl:copy><xsl:apply-templates select="@* | node()"/></xsl:copy></xsl:template>
+<xsl:template match="*[local-name() = 'math-with-linebreak']">
+
+</xsl:template>
+<xsl:template match="*[local-name() = 'math-no-linebreak']">
+<xsl:apply-templates select="node()"/>
+</xsl:template>
+
+</xsl:stylesheet>
+
+</preprocess-xslt>
+
+<preprocess-xslt format="rxl">
+  <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="no"/>
+  <xsl:template match="@* | node()"><xsl:copy><xsl:apply-templates select="@* | node()"/></xsl:copy></xsl:template>
+<xsl:template match="*[local-name() = 'passthrough']">
+  <xsl:if test="contains(@formats,',rxl,')"> <!-- delimited -->
+  <xsl:copy><xsl:apply-templates select="@* | node()"/></xsl:copy>
+  </xsl:if>
+</xsl:template>
+
+</xsl:stylesheet>
+
+</preprocess-xslt>
+
+<preprocess-xslt format="rxl">
+  <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="no"/>
+  <xsl:template match="@* | node()"><xsl:copy><xsl:apply-templates select="@* | node()"/></xsl:copy></xsl:template>
+<xsl:template match="*[local-name() = 'math-with-linebreak']">
+
+</xsl:template>
+<xsl:template match="*[local-name() = 'math-no-linebreak']">
+<xsl:apply-templates select="node()"/>
+</xsl:template>
+
+</xsl:stylesheet>
+
+</preprocess-xslt>
+
+<preprocess-xslt format="html">
+  <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="no"/>
+  <xsl:template match="@* | node()"><xsl:copy><xsl:apply-templates select="@* | node()"/></xsl:copy></xsl:template>
+<xsl:template match="*[local-name() = 'passthrough']">
+  <xsl:if test="contains(@formats,',html,')"> <!-- delimited -->
+  <xsl:copy><xsl:apply-templates select="@* | node()"/></xsl:copy>
+  </xsl:if>
+</xsl:template>
+
+</xsl:stylesheet>
+
+</preprocess-xslt>
+
+<preprocess-xslt format="html">
+  <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="no"/>
+  <xsl:template match="@* | node()"><xsl:copy><xsl:apply-templates select="@* | node()"/></xsl:copy></xsl:template>
+<xsl:template match="*[local-name() = 'math-with-linebreak']">
+
+</xsl:template>
+<xsl:template match="*[local-name() = 'math-no-linebreak']">
+<xsl:apply-templates select="node()"/>
+</xsl:template>
+
+</xsl:stylesheet>
+
+</preprocess-xslt>
+
+<preprocess-xslt format="pdf">
+  <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="no"/>
+  <xsl:template match="@* | node()"><xsl:copy><xsl:apply-templates select="@* | node()"/></xsl:copy></xsl:template>
+<xsl:template match="*[local-name() = 'passthrough']">
+  <xsl:if test="contains(@formats,',pdf,')"> <!-- delimited -->
+  <xsl:copy><xsl:apply-templates select="@* | node()"/></xsl:copy>
+  </xsl:if>
+</xsl:template>
+
+</xsl:stylesheet>
+
+</preprocess-xslt>
+
+<preprocess-xslt format="pdf">
+  <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" version="1.0">
+  <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="no"/>
+  <xsl:template match="@* | node()"><xsl:copy><xsl:apply-templates select="@* | node()"/></xsl:copy></xsl:template>
+<xsl:template match="*[local-name() = 'math-with-linebreak']">
+
+</xsl:template>
+<xsl:template match="*[local-name() = 'math-no-linebreak']">
+<xsl:apply-templates select="node()"/>
+</xsl:template>
+
+</xsl:stylesheet>
+
+</preprocess-xslt>
+</render><source-highlighter-css>sourcecode table td { padding: 5px; }
+sourcecode table pre { margin: 0; }
+sourcecode, sourcecode .w {
+  color: #444444;
+}
+sourcecode .cp {
+  color: #CC00A3;
+}
+sourcecode .cs {
+  color: #CC00A3;
+}
+sourcecode .c, sourcecode .ch, sourcecode .cd, sourcecode .cm, sourcecode .cpf, sourcecode .c1 {
+  color: #FF0000;
+}
+sourcecode .kc {
+  color: #C34E00;
+}
+sourcecode .kd {
+  color: #0000FF;
+}
+sourcecode .kr {
+  color: #007575;
+}
+sourcecode .k, sourcecode .kn, sourcecode .kp, sourcecode .kt, sourcecode .kv {
+  color: #0000FF;
+}
+sourcecode .s, sourcecode .sb, sourcecode .sc, sourcecode .ld, sourcecode .sd, sourcecode .s2, sourcecode .se, sourcecode .sh, sourcecode .si, sourcecode .sx, sourcecode .sr, sourcecode .s1, sourcecode .ss {
+  color: #009C00;
+}
+sourcecode .sa {
+  color: #0000FF;
+}
+sourcecode .nb, sourcecode .bp {
+  color: #C34E00;
+}
+sourcecode .nt {
+  color: #0000FF;
+}
+
+</source-highlighter-css></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_be208fe5-3a88-9314-b00d-a553e152379c" obligation="normative">
+<p id="_e6111812-61a2-7226-8889-021612627512" align="center">© Bureau International des Poids et Mesures 2010 all rights reserved</p>
+</clause>
+</copyright-statement>
+
+<license-statement>
+
+<clause id="_copyright_statement_2" obligation="normative">
+<title depth="1">Copyright statement</title>
+<p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<link target="http://creativecommons.org/licenses/by/4.0/:"/>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
+</clause>
+</license-statement>
+
+<feedback-statement>
+
+<p id="_e6428749-2432-0772-4c8e-ed6c34018916">BIPM<br/>
+Pavillon de Breteuil<br/>
+F-92312 Sèvres Cedex<br/>
+FRANCE</p>
+</feedback-statement>
+</boilerplate><preface><clause type="toc" id="_945c9cad-a866-4ee1-8101-32f981d88beb" displayorder="1"><title depth="1">Contents</title></clause>
+ </preface><sections><clause id="_introduction" obligation="normative" displayorder="2">
 <title depth="1">1.<tab/>Introduction</title>
 <p id="_53a8665a-e38d-0200-4a19-c85cc646bbc4">A central component of the CIPM MRA requires that signatory NMIs establish and maintain a Quality System (QS). Unlike the CMC situation, however, the CIPM MRA does not explicitly specify how signatory NMIs review, gain confidence and accept each other’s quality systems.</p>
 
 <p id="_1c53629a-026a-a76f-9b1b-c4ffd6f14489">With regard to the establishment of a QS, the CIPM MRA provides for the following methods:</p>
 
-<ol id="_8e5e97c7-345e-9024-bcc7-199744bda43a" type="arabic"><li><p id="_7d2e88f6-b460-bd49-67ce-d8f8a2efc088"><em>an NMI that chooses for its calibration and measurement services a quality system that meets the requirements of ISO Guide 25 or equivalent for an NMI, assessed by an accreditation body fulfilling the requirements of ISO Guide 58, declares its calibration measurement capabilities and submits them to the local RMO for review and transmission to the Joint Committee for analysis and inclusion in Appendix C.</em></p>
+<ol id="_8e5e97c7-345e-9024-bcc7-199744bda43a" type="arabic"><li id="_679d76fe-630c-4c99-8bbb-38ca86739eef" label="1"><p id="_7d2e88f6-b460-bd49-67ce-d8f8a2efc088"><em>an NMI that chooses for its calibration and measurement services a quality system that meets the requirements of ISO Guide 25 or equivalent for an NMI, assessed by an accreditation body fulfilling the requirements of ISO Guide 58, declares its calibration measurement capabilities and submits them to the local RMO for review and transmission to the Joint Committee for analysis and inclusion in Appendix C.</em></p>
 </li>
-<li><p id="_fe13636f-b6df-65c9-d974-b84044c3036a"><em>an NMI that chooses to use a different way of assuring quality or chooses a different quality system, or ISO Guide 25 without third-party assessment, for its calibration and measurement services declares its calibration and measurement capabilities and submits them to the local RMO for review and transmission to the Joint Committee for analysis and inclusion in Appendix C.</em></p>
+<li id="_b8693c6e-8fbb-4e8e-ba7a-fa5e90404f72" label="2"><p id="_fe13636f-b6df-65c9-d974-b84044c3036a"><em>an NMI that chooses to use a different way of assuring quality or chooses a different quality system, or ISO Guide 25 without third-party assessment, for its calibration and measurement services declares its calibration and measurement capabilities and submits them to the local RMO for review and transmission to the Joint Committee for analysis and inclusion in Appendix C.</em></p>
 </li>
 </ol>
 
 <p id="_266458f8-1981-e929-0bf6-23abc18df68a"><em>Demonstration of competence and capability may require visits and examination of procedures by an NMI and/or by peers selected by the local RMO.</em></p>
 </clause>
 
-<clause id="_review_guidelines" obligation="normative" displayorder="2">
+<clause id="_review_guidelines" obligation="normative" displayorder="3">
 <title depth="1">2.<tab/>Review Guidelines</title>
 <p id="_b777f439-2d33-2a02-432d-7004dc77aa61">Each RMOs should have an open process in place for the monitoring and review of the QS<fn reference="1"><p id="_34ea1be9-9294-59c3-cb29-be88246d7705">In this document, QS means a quality system that meets the requirements of ISO/IEC 17025 or equivalent or a different way of assuring quality or a different quality system, as described in the MRA.</p>
 </fn> of each of their member NMIs and DIs and to to report on their acceptance or otherwise to the JCRB. The process followed for the review is decided by each RMO and it shall satisfy at least the following requirements.</p>
@@ -100,7 +502,7 @@ report on internal audits ;</p>
 </ul>
 </clause>
 
-<clause id="_requirements_for_the_qs" obligation="normative" displayorder="3">
+<clause id="_requirements_for_the_qs" obligation="normative" displayorder="4">
 <title depth="1">3.<tab/>Requirements for the QS</title>
 <p id="_3c509fc1-646b-55bf-7650-37d256bb707b">The QS operated by the NMI should be:</p>
 
@@ -169,7 +571,7 @@ report on internal audits ;</p>
 </clause>
 </clause>
 
-<clause id="_report_guidelines" obligation="normative" displayorder="4">
+<clause id="_report_guidelines" obligation="normative" displayorder="5">
 <title depth="1">4.<tab/>Report Guidelines</title>
 <p id="_ddf43e6f-b161-de97-2936-5e4d1240b178">As part of the regular reports to the JCRB, the RMOs must provide annual summary reports on the status of the QS of the NMIs and DIs in their region,.</p>
 
@@ -186,7 +588,7 @@ report on internal audits ;</p>
 </ul>
 </clause>
 
-<clause id="_periodic_reviews_of_the_quality_management_systems" obligation="normative" displayorder="5">
+<clause id="_periodic_reviews_of_the_quality_management_systems" obligation="normative" displayorder="6">
 <title depth="1">5.<tab/>Periodic Reviews of the Quality Management Systems</title>
 <p id="_7157baf6-6e85-3660-28f5-45dfb709f776">The quality management systems implemented to support the calibration and measurement capabilities of the NMIs and DIs must undergo a full review with a period not longer than five years. The individual RMOs are responsible for this review, under the auspices of their respective quality system working groups.</p>
 
@@ -195,7 +597,7 @@ report on internal audits ;</p>
 <p id="_ac9744a2-9bc2-b1f4-119b-a32ac26bd353">In addition to the 5-year review of the supporting QMS, CMCs published in the KCDB undergo continual monitoring to ensure their validity. NMIs and DIs are responsible for demonstrating that they are maintaining quality systems, including regular review of their services. All DIs and NMIs with published CMCs submit annual quality reports to their RMOs which include full disclosure of any issues (e.g., departure of key staff, loss of facilities and equipment, poor performance in comparisons with other NMIs and DIs, etc.) that would affect published CMCs.</p>
 </clause>
 
-<clause id="_list_of_acronyms" obligation="normative" displayorder="6">
+<clause id="_list_of_acronyms" obligation="normative" displayorder="7">
 <title depth="1">6.<tab/>List of Acronyms</title>
 <dl id="_3d1df77d-8ee7-f8b2-287f-ac4b8d8da28e"><dt>CIPM MRA</dt>
 <dd><p id="_55c4fab5-3a68-e279-8d04-6ed464fceb0b">Mutual Recognition Arrangement</p>
@@ -218,7 +620,7 @@ report on internal audits ;</p>
 </dl>
 </clause>
 
-<clause id="_revision_history" obligation="normative" displayorder="7">
+<clause id="_revision_history" obligation="normative" displayorder="8">
 <title depth="1">7.<tab/>Revision History</title>
 <table id="_86811fae-84c4-cbcf-3ff1-562668bde6f3" unnumbered="true"><tbody><tr><td valign="top" align="center"><p id="_0f51ccfb-4bd1-a7a8-d05d-a680e3dbbde3">Version number</p>
 </td>
@@ -241,7 +643,7 @@ Reformatted by JCRB Executive Secretary, November 2008</p>
 </table>
 </clause>
 </sections>
-<doccontrol>
+<doccontrol displayorder="999">
 <title>Document Control</title>
 <table unnumbered="true"><tbody>
 <tr><th>Authors:</th><td/><td/></tr>

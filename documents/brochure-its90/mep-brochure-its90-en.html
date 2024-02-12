@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en" xml:lang="en">
-  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
+<html lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
   <!--
 @charset "UTF-8";
 /*
@@ -103,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 
 blockquote, q {
   quotes: none; }
-  blockquote:before, blockquote:after, q:before, q:after {
+  blockquote::before, blockquote::after, q::before, q::after {
     content: '';
     content: none; }
 
@@ -126,8 +125,16 @@ b, strong {
 div.document-stage-band, div.document-type-band {
   background-color: #333333; }
 
-a.FootnoteRef + a.FootnoteRef:before {
+a.FootnoteRef + a.FootnoteRef::before {
   content: ", ";
+  vertical-align: super; }
+
+a.TableFootnoteRef + a.TableFootnoteRef::before {
+  content: ", ";
+  vertical-align: super; }
+
+a.TableFootnoteRef, span.TableFootnoteRef,
+a.FootnoteRef, span.FootnoteRef {
   vertical-align: super; }
 
 .addition {
@@ -136,6 +143,43 @@ a.FootnoteRef + a.FootnoteRef:before {
 .deletion {
   color: red;
   text-decoration: line-through; }
+
+ruby {
+  ruby-position: over;
+  -webkit-ruby-position: before; }
+
+ruby ruby {
+  ruby-position: under;
+  -webkit-ruby-position: after; }
+
+/* code highlighting with line numbers */
+table.rouge-line-table td.rouge-gutter {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-right: 1em; }
+
+table.rouge-line-table td.rouge-code {
+  -moz-user-select: all;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all; }
+
+table.rouge-line-table,
+table.rouge-line-table th,
+table.rouge-line-table td {
+  width: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%; }
+
+table.rouge-line-table pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;
+  font-size: 100%; }
 
 #brochure-band {
   background-color: #0AC442; }
@@ -271,6 +315,12 @@ main {
     padding-left: 30px; }
   #toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
     padding-left: 50px; }
+  #toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+    padding-left: 70px; }
+  #toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+    padding-left: 90px; }
+  #toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+    padding-left: 110px; }
   #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
     background: #6C734A;
     box-shadow: inset -5px 0px 10px -5px #6C734A !important; }
@@ -377,12 +427,16 @@ div.figure {
     font-weight: 700;
     font-size: 1em;
     text-align: center; }
-  div.figure > img {
+  div.figure > img, div.figure > svg {
     margin-left: auto;
     margin-right: auto;
     display: block;
     max-width: 100%;
     height: auto; }
+
+table div.figure {
+  padding: 0;
+  margin: 0; }
 
 /*
     Document types + stages
@@ -549,8 +603,11 @@ a:hover {
   background: #6C734A;
   box-shadow: 3px 0 0 #6C734A, -3px 0 0 #6C734A; }
 
-::selection,
-::-moz-selection {
+*::selection {
+  background: #6C734A;
+  color: white; }
+
+*::-moz-selection {
   background: #6C734A;
   color: white; }
 
@@ -563,7 +620,7 @@ ul, ol {
 ul li {
   list-style: none; }
 
-ul li:before {
+ul li::before {
   content: "—";
   display: inline-block;
   width: 1em;
@@ -587,7 +644,7 @@ ol ul > li:first-child {
 #toc-list li {
   list-style-type: none; }
 
-#toc li:before {
+#toc li::before {
   content: " ";
   display: none; }
 
@@ -608,13 +665,13 @@ ol[class="alphabet"] > li {
 ol[class="alphabet"] ol[class="alphabet"] > li {
   list-style: inherit; }
 
-ol[class="alphabet"] > li:before {
+ol[class="alphabet"] > li::before {
   counter-increment: alphabet;
   content: counter(alphabet, lower-alpha) ") ";
   position: absolute;
   left: -1.4em; }
 
-ol[class="alphabet"] ol[class="alphabet"] > li:before {
+ol[class="alphabet"] ol[class="alphabet"] > li::before {
   counter-increment: none;
   content: initial; }
 
@@ -628,13 +685,13 @@ ol[class="roman"] > li {
 ol[class="roman"] ol[class="roman"] > li {
   list-style: inherit; }
 
-ol[class="roman"] > li:before {
+ol[class="roman"] > li::before {
   counter-increment: roman;
   content: "(" counter(roman, lower-roman) ") ";
   position: absolute;
   left: -2.0em; }
 
-ol[class="roman"] ol[class="roman"] > li:before {
+ol[class="roman"] ol[class="roman"] > li::before {
   counter-increment: none;
   content: initial; }
 
@@ -748,7 +805,7 @@ table {
   table th, table td {
     padding: 1em; }
   table td.header {
-    font-weigth: 400; }
+    font-weight: 400; }
 
 p.TableTitle {
   text-align: center;
@@ -1022,7 +1079,46 @@ To top button
     display: none; } }
 
 -->
-</style><title>The International Temperature Scale of 1990 (ITS-90)</title>
+</style><style><!--pre.sourcecode table td { padding: 5px; }
+pre.sourcecode table pre { margin: 0; }
+pre.sourcecode, pre.sourcecode .w {
+  color: #444444;
+}
+pre.sourcecode .cp {
+  color: #CC00A3;
+}
+pre.sourcecode .cs {
+  color: #CC00A3;
+}
+pre.sourcecode .c, pre.sourcecode .ch, pre.sourcecode .cd, pre.sourcecode .cm, pre.sourcecode .cpf, pre.sourcecode .c1 {
+  color: #FF0000;
+}
+pre.sourcecode .kc {
+  color: #C34E00;
+}
+pre.sourcecode .kd {
+  color: #0000FF;
+}
+pre.sourcecode .kr {
+  color: #007575;
+}
+pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
+  color: #0000FF;
+}
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .ld, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+  color: #009C00;
+}
+pre.sourcecode .sa {
+  color: #0000FF;
+}
+pre.sourcecode .nb, pre.sourcecode .bp {
+  color: #C34E00;
+}
+pre.sourcecode .nt {
+  color: #0000FF;
+}
+
+--></style><title>The International Temperature Scale of 1990 (ITS-90)</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--TOC script import-->
@@ -1031,15 +1127,13 @@ To top button
 </script>
 
 <!--Google fonts-->
-<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" />
 
 <!--Font awesome import for the link icon-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
 <style class="anchorjs"></style>
-</link></link></link></head>
-  <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
-    <div class="title-section"><div class="document-stage-band" id="in-force-band">
+</head><body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container"><div class="title-section"><div class="document-stage-band" id="in-force-band">
     <p class="document-stage">In Force</p>
 </div>
 
@@ -1049,7 +1143,7 @@ To top button
 
 
 
-  <div id="toggle"> <span>&#x2022;</span> </div>
+  <div id="toggle"> <span>•</span> </div>
 
   <header>
 
@@ -1071,7 +1165,7 @@ To top button
     <div class="coverpage-title">
       
       <span class="title-third">The International Temperature Scale of 1990 (ITS-90)</span>
-      <span class="title-third">&#xC9;chelle Internationale de Temp&#xE9;rature De 1990 (EIT-90)</span><br />
+      <span class="title-third">Échelle Internationale de Température De 1990 (EIT-90)</span><br />
       <span class="title-first">Part 1: </span><br />
       <span class="title-second">Partie 1: </span>       
       
@@ -1125,7 +1219,7 @@ To top button
   
 
   <div class="coverpage-tc-name">
-    <span>CCT</span>
+    <span>CCT: Consultative Committee for Thermometry</span>
   </div>
  
   
@@ -1152,23 +1246,26 @@ To top button
 <div class="info-section">
 <div class="copyright">
 <div class="boilerplate-copyright">
-    <div>
-      <p id="_1c2a0a3a-5acb-bafa-ee34-545d68b5dba3" style="text-align:center;"> &#xA9; Bureau International des Poids et Mesures 2017 all rights reserved</p>
-    </div>
-  </div>
-  <div class="boilerplate-license">
-    <div><h1 class="IntroTitle">Copyright statement</h1>
 
-      <p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
-    </div>
-  </div>
+<div id="_0e09b624-560f-9546-c838-d78c80b718c4">
+<p id="_ebab9ed3-4164-b906-3c50-5dd8c2470e43" style="text-align:center;">© Bureau International des Poids et Mesures 2017 all rights reserved</p>
+</div>
+</div>
+  <div class="boilerplate-license">
+
+<div id="_copyright_statement_2"><h1 class="IntroTitle">Copyright statement</h1>
+
+<p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/:">http://creativecommons.org/licenses/by/4.0/:</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
+</div>
+</div>
   <div id="boilerplate-legal-destination"></div>
 <div class="boilerplate-feedback">
-    <p id="_bd0b4a04-1c9b-db4f-f27f-b98101e93f33">BIPM<br />
-      Pavillon de Breteuil<br />
-      F-92312 S&#xE8;vres Cedex<br />
-      FRANCE</p>
-  </div>
+
+<p id="_e6428749-2432-0772-4c8e-ed6c34018916">BIPM<br />
+Pavillon de Breteuil<br />
+F-92312 Sèvres Cedex<br />
+FRANCE</p>
+</div>
 </div>
 
 <div class="rule"></div>
@@ -1177,1215 +1274,996 @@ To top button
 
 
 </div>
-</header>
-      
-    </div>
-    <br />
-    <div class="prefatory-section"><nav>
-  <h1 id="content">Contents</h1>
-  <div id="toc"><ul><li class="h1"><a href="#toc0">      Abstract</a></li><li class="h1"><a href="#toc1">      1.&#xA0; Isotopic composition and corrections for the triple point of water</a></li><li class="h1"><a href="#toc2">      2.&#xA0; Isotopic composition and corrections for the triple point of equilibrium hydrogen</a></li><li class="h1"><a href="#toc3">      3.&#xA0; Isotopic composition for the vapour-pressure points of equilibrium hydrogen</a></li><li class="h1"><a href="#toc4">      4.&#xA0; Isotopic composition and corrections for the triple point of neon</a></li><li class="h1"><a href="#toc5">      References</a></li></ul></div>
+</header></div><br /><div class="prefatory-section"><nav>
+  <div id="toc"><h1 class="IntroTitle">Contents</h1><ul><li class="h1"><a href="#_0b34443e-bfac-4e8d-a9c3-7066b03c06fc">      Abstract</a></li>
+<li class="h1"><a href="#_2da2b107-2510-4471-a3f1-1cd266114b4f">      1.  Isotopic composition and corrections for the triple point of water</a></li>
+<li class="h1"><a href="#_a18fded0-914d-4c57-b90d-7d1f21de0eff">      2.  Isotopic composition and corrections for the triple point of equilibrium hydrogen</a></li>
+<li class="h1"><a href="#_9ddb15f3-0840-45ea-88ce-40090e3d7467">      3.  Isotopic composition for the vapour-pressure points of equilibrium hydrogen</a></li>
+<li class="h1"><a href="#_4d9fc094-a71f-4f28-999b-40873c526110">      4.  Isotopic composition and corrections for the triple point of neon</a></li>
+<li class="h1"><a href="#_2808c6c4-f49c-4388-976c-c685c391a72a">      References</a></li></ul></div>
 
 </nav>
 
 
 <div class="rule toc"></div>
+</div><br /><main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button><div class="authority">
 
-      
-    </div>
-    <br />
-    <main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-      <div class="authority">
-  
-  
-  
-</div>
-      <br />
-      <div class="Section3" id="_abstract">
-        <h1 class="IntroTitle" id="toc0">Abstract</h1>
-        <p id="_d27ce58c-8061-4492-1406-417bb75c45e9">This Technical Annex includes specifications beyond the definitions in the text of the International Temperature Scale of 1990 (ITS-90) that are deemed essential for the unambiguous realization of the ITS-90. Specifications within the Technical Annex are considered mandatory extensions of the text of the ITS-90.</p>
-        <p id="_cf26fcc7-f174-7741-43f5-df4a03ee51a7">For material taken directly from the text of the ITS-90, the <i>mise en pratique</i> refers to &#x201C;defined&#x201D; or &#x201C;assigned&#x201D; values or procedures. Where additional material other than the ITS-90 text has been deemed essential for inclusion in the Technical Annex, the <i>mise en pratique</i> of the definition of the kelvin refers to &#x201C;specified&#x201D; values or procedures.</p>
-      </div>
-      <p class="zzSTDTitle1">The International Temperature Scale of 1990 (ITS-90)</p>
-      <div id="_isotopic_composition_and_corrections_for_the_triple_point_of_water">
-        <h1 id="toc1">1.&#xA0; Isotopic composition and corrections for the triple point of water</h1>
-        <p id="_d72d073b-f6a3-bfc7-a8dc-2cf39eb6f219">The effects of isotopic composition on the triple point of water (TPW) are discussed in detail in [<a href="#White2010">White and Tew 2010</a>, <a href="#Ripple2005">Ripple <i>et al.</i> 2005</a>].</p>
-        <p id="_1fb90754-a593-73f4-4f63-e0265faa0eae">The international science community, through the International Atomic Energy Agency, uses a defined Standard Mean Ocean Water (SMOW) as a point of reference for studies in the isotopic composition of waters. In practice, measurements of isotopic composition are made with respect to Vienna-SMOW (VSMOW) and Standard Light Antarctic Precipitation (SLAP) [Gonfiantini 1978, <a href="#Li1988">Li <i>et al.</i> 1988</a>]; two widely distributed standard reference water samples that span the isotopic range of naturally occurring samples. The International Union of Pure and Applied Chemistry (IUPAC) recommended the following amount-of-substance ratios for VSMOW, based on the most reliable measurements available [De <a href="#Laeter2003">Laeter <i>et al.</i> 2003</a>]:</p>
-        <div id="_4b1996b3-120d-74da-559a-2e9a774e6d67">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mfenced open="(" close=")">
-        <mrow>
-          <msup>
-            <mrow>
-              <mtext></mtext>
-            </mrow>
-            <mrow>
-              <mn>2</mn>
-            </mrow>
-          </msup>
-          <mtext>H</mtext>
-          <mo>/</mo>
-          <msup>
-            <mrow>
-              <mtext></mtext>
-            </mrow>
-            <mrow>
-              <mn>1</mn>
-            </mrow>
-          </msup>
-          <mtext>H</mtext>
-        </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
+
+
+
+</div><br /><br /><div id="_abstract" class="Section3"><h1 class="IntroTitle" id="_0b34443e-bfac-4e8d-a9c3-7066b03c06fc">Abstract</h1><p id="_d27ce58c-8061-4492-1406-417bb75c45e9">This Technical Annex includes specifications beyond the definitions in the text of the International Temperature Scale of 1990 (ITS-90) that are deemed essential for the unambiguous realization of the ITS-90. Specifications within the Technical Annex are considered mandatory extensions of the text of the ITS-90.</p><p id="_cf26fcc7-f174-7741-43f5-df4a03ee51a7">For material taken directly from the text of the ITS-90, the <i>mise en pratique</i> refers to “defined” or “assigned” values or procedures. Where additional material other than the ITS-90 text has been deemed essential for inclusion in the Technical Annex, the <i>mise en pratique</i> of the definition of the kelvin refers to “specified” values or procedures.</p></div><div id="_isotopic_composition_and_corrections_for_the_triple_point_of_water"><h1 id="_2da2b107-2510-4471-a3f1-1cd266114b4f">1.  Isotopic composition and corrections for the triple point of water</h1><p id="_d72d073b-f6a3-bfc7-a8dc-2cf39eb6f219">The effects of isotopic composition on the triple point of water (TPW) are discussed in detail in [<a href="#White2010">White and Tew 2010</a>, <a href="#Ripple2005">Ripple <i>et al.</i> 2005</a>].</p><p id="_1fb90754-a593-73f4-4f63-e0265faa0eae">The international science community, through the International Atomic Energy Agency, uses a defined Standard Mean Ocean Water (SMOW) as a point of reference for studies in the isotopic composition of waters. In practice, measurements of isotopic composition are made with respect to Vienna-SMOW (VSMOW) and Standard Light Antarctic Precipitation (SLAP) [Gonfiantini 1978, <a href="#Li1988">Li <i>et al.</i> 1988</a>]; two widely distributed standard reference water samples that span the isotopic range of naturally occurring samples. The International Union of Pure and Applied Chemistry (IUPAC) recommended the following amount-of-substance ratios for VSMOW, based on the most reliable measurements available [De <a href="#Laeter2003">Laeter <i>et al.</i> 2003</a>]:</p><div id="_f0fdb78a-3326-d366-b6f3-6e382f4cf60e"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mrow>
+        <mo>(</mo>
+        <msup>
+          <mtext></mtext>
+          <mn>2</mn>
+        </msup>
+        <mtext>H</mtext>
+        <mo>/</mo>
+        <msup>
+          <mtext></mtext>
+          <mn>1</mn>
+        </msup>
+        <mtext>H</mtext>
+        <mo>)</mo>
+      </mrow>
       <mtext>VSMOW</mtext>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mn>0.000&#xA0;155&#xA0;76</mn>
-  <mfenced open="(" close=")">
+    </msub>
+    <mo>=</mo>
+    <mn>0.000 155 76</mn>
     <mrow>
+      <mo>(</mo>
       <mn>5</mn>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>,</mo>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div id="_1a93f9cf-7d26-972c-fd9d-04c7143d6030">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mfenced open="(" close=")">
-        <mrow>
-          <msup>
-            <mrow>
-              <mtext></mtext>
-            </mrow>
-            <mrow>
-              <mn>18</mn>
-            </mrow>
-          </msup>
-          <mtext>O</mtext>
-          <mo>/</mo>
-          <msup>
-            <mrow>
-              <mtext></mtext>
-            </mrow>
-            <mrow>
-              <mn>16</mn>
-            </mrow>
-          </msup>
-          <mtext>O</mtext>
-        </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
-      <mtext>VSMOW</mtext>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mn>0.002&#xA0;005&#xA0;2</mn>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mn>5</mn>
-    </mrow>
-  </mfenced>
-  <mo>,</mo>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div id="_91b43dbd-3d9f-6e1b-dacc-fe3a35a81a44">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mfenced open="(" close=")">
-        <mrow>
-          <msup>
-            <mrow>
-              <mtext></mtext>
-            </mrow>
-            <mrow>
-              <mn>17</mn>
-            </mrow>
-          </msup>
-          <mtext>O</mtext>
-          <mo>/</mo>
-          <msup>
-            <mrow>
-              <mtext></mtext>
-            </mrow>
-            <mrow>
-              <mn>16</mn>
-            </mrow>
-          </msup>
-          <mtext>O</mtext>
-        </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
-      <mtext>VSMOW</mtext>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mn>0.000&#xA0;379&#xA0;9</mn>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mn>9</mn>
-    </mrow>
-  </mfenced>
-  <mo>.</mo>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <p id="_61725507-be31-3b82-904b-98d8a79996fc">For the purposes of thermometry, these absolute values are specified for the isotopic composition of the water used for realizing the definition of the kelvin with the assigned temperature <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>T</mi></mstyle></mrow><mrow><mn>90</mn></mrow></msub><mfenced open="(" close=")"><mrow><mtext>TPW</mtext></mrow></mfenced><mo>=</mo><mn>273.16</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
-
-
-
-
-
-
-
-
-
-</math></span>. However, variations in isotopic composition of water can be measured much more accurately in relative mode (that is, relative to that of VSMOW) than in absolute mode. This is the reason why the scale definition for isotope values of water is still artefact-based. Isotopic deviations of artefact VSMOW from SMOW are negligible when expressed as an equivalent change in the TPW temperature.</p>
-        <p id="_78a6f34c-5fb9-d6d3-192f-5cc921e45cbc">Variations in amount-of-substance ratios are conventionally reported as deviations from VSMOW, such as</p>
-        <div id="_d3d29231-9dfc-418c-ced8-e0771d218bde">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B4;</mi>
+    <mo>,</mo>
   </mstyle>
-  <msup>
+</math></span></p></div></div><div id="_176f49a4-f86d-e7b6-a8c9-092c3bbd33ce"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mrow>
+        <mo>(</mo>
+        <msup>
+          <mtext></mtext>
+          <mn>18</mn>
+        </msup>
+        <mtext>O</mtext>
+        <mo>/</mo>
+        <msup>
+          <mtext></mtext>
+          <mn>16</mn>
+        </msup>
+        <mtext>O</mtext>
+        <mo>)</mo>
+      </mrow>
+      <mtext>VSMOW</mtext>
+    </msub>
+    <mo>=</mo>
+    <mn>0.002 0052</mn>
     <mrow>
+      <mo>(</mo>
+      <mn>5</mn>
+      <mo>)</mo>
+    </mrow>
+    <mo>,</mo>
+  </mstyle>
+</math></span></p></div></div><div id="_0e117dcf-93d5-4389-e1bc-233964b56f3c"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mrow>
+        <mo>(</mo>
+        <msup>
+          <mtext></mtext>
+          <mn>17</mn>
+        </msup>
+        <mtext>O</mtext>
+        <mo>/</mo>
+        <msup>
+          <mtext></mtext>
+          <mn>16</mn>
+        </msup>
+        <mtext>O</mtext>
+        <mo>)</mo>
+      </mrow>
+      <mtext>VSMOW</mtext>
+    </msub>
+    <mo>=</mo>
+    <mn>0.000 3799</mn>
+    <mrow>
+      <mo>(</mo>
+      <mn>9</mn>
+      <mo>)</mo>
+    </mrow>
+    <mo>.</mo>
+  </mstyle>
+</math></span></p></div></div><p id="_bae8f1b8-a2c0-3a6d-cfed-c942073191bb">For the purposes of thermometry, these absolute values are specified for the isotopic composition of the water used for realizing the definition of the kelvin with the assigned temperature <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mtext>TPW</mtext>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mn>273.16</mn>
+    <mstyle mathvariant="normal">
+      <mi>K</mi>
+    </mstyle>
+  </mstyle>
+</math></span>. However, variations in isotopic composition of water can be measured much more accurately in relative mode (that is, relative to that of VSMOW) than in absolute mode. This is the reason why the scale definition for isotope values of water is still artefact-based. Isotopic deviations of artefact VSMOW from SMOW are negligible when expressed as an equivalent change in the TPW temperature.</p><p id="_78a6f34c-5fb9-d6d3-192f-5cc921e45cbc">Variations in amount-of-substance ratios are conventionally reported as deviations from VSMOW, such as</p><div id="_8a1e272c-5547-7bd1-3055-c335ed104390"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mstyle mathvariant="italic">
+      <mi>δ</mi>
+    </mstyle>
+    <msup>
       <mtext></mtext>
-    </mrow>
-    <mrow>
       <mn>18</mn>
-    </mrow>
-  </msup>
-  <msub>
-    <mrow>
+    </msup>
+    <msub>
       <mtext>O</mtext>
-    </mrow>
-    <mrow>
       <mtext>CAL</mtext>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mfenced open="[" close="]">
+    </msub>
+    <mo>=</mo>
     <mrow>
+      <mo>[</mo>
       <mfrac>
-        <mrow>
-          <mrow>
-            <msub>
-              <mrow>
-                <mfenced open="(" close=")">
-                  <mrow>
-                    <msup>
-                      <mrow>
-                        <mtext></mtext>
-                      </mrow>
-                      <mrow>
-                        <mn>18</mn>
-                      </mrow>
-                    </msup>
-                    <mtext>O</mtext>
-                    <mo>/</mo>
-                    <msup>
-                      <mrow>
-                        <mtext></mtext>
-                      </mrow>
-                      <mrow>
-                        <mn>16</mn>
-                      </mrow>
-                    </msup>
-                    <mtext>O</mtext>
-                  </mrow>
-                </mfenced>
-              </mrow>
-              <mrow>
-                <mtext>sample</mtext>
-              </mrow>
-            </msub>
-            <mo>&#x2212;</mo>
-            <msub>
-              <mrow>
-                <mfenced open="(" close=")">
-                  <mrow>
-                    <msup>
-                      <mrow>
-                        <mtext></mtext>
-                      </mrow>
-                      <mrow>
-                        <mn>18</mn>
-                      </mrow>
-                    </msup>
-                    <mtext>O</mtext>
-                    <mo>/</mo>
-                    <msup>
-                      <mrow>
-                        <mtext></mtext>
-                      </mrow>
-                      <mrow>
-                        <mn>16</mn>
-                      </mrow>
-                    </msup>
-                    <mtext>O</mtext>
-                  </mrow>
-                </mfenced>
-              </mrow>
-              <mrow>
-                <mtext>VSMOW</mtext>
-              </mrow>
-            </msub>
-          </mrow>
-        </mrow>
         <mrow>
           <msub>
             <mrow>
-              <mfenced open="(" close=")">
-                <mrow>
-                  <msup>
-                    <mrow>
-                      <mtext></mtext>
-                    </mrow>
-                    <mrow>
-                      <mn>18</mn>
-                    </mrow>
-                  </msup>
-                  <mtext>O</mtext>
-                  <mo>/</mo>
-                  <msup>
-                    <mrow>
-                      <mtext></mtext>
-                    </mrow>
-                    <mrow>
-                      <mn>16</mn>
-                    </mrow>
-                  </msup>
-                  <mtext>O</mtext>
-                </mrow>
-              </mfenced>
+              <mo>(</mo>
+              <msup>
+                <mtext></mtext>
+                <mn>18</mn>
+              </msup>
+              <mtext>O</mtext>
+              <mo>/</mo>
+              <msup>
+                <mtext></mtext>
+                <mn>16</mn>
+              </msup>
+              <mtext>O</mtext>
+              <mo>)</mo>
             </mrow>
+            <mtext>sample</mtext>
+          </msub>
+          <mo>−</mo>
+          <msub>
             <mrow>
-              <mtext>VSMOW</mtext>
+              <mo>(</mo>
+              <msup>
+                <mtext></mtext>
+                <mn>18</mn>
+              </msup>
+              <mtext>O</mtext>
+              <mo>/</mo>
+              <msup>
+                <mtext></mtext>
+                <mn>16</mn>
+              </msup>
+              <mtext>O</mtext>
+              <mo>)</mo>
             </mrow>
+            <mtext>VSMOW</mtext>
           </msub>
         </mrow>
+        <msub>
+          <mrow>
+            <mo>(</mo>
+            <msup>
+              <mtext></mtext>
+              <mn>18</mn>
+            </msup>
+            <mtext>O</mtext>
+            <mo>/</mo>
+            <msup>
+              <mtext></mtext>
+              <mn>16</mn>
+            </msup>
+            <mtext>O</mtext>
+            <mo>)</mo>
+          </mrow>
+          <mtext>VSMOW</mtext>
+        </msub>
       </mfrac>
+      <mo>]</mo>
     </mrow>
-  </mfenced>
-  <mo>,</mo>
-</math></span>&#xA0; (1)</p>
-          </div>
-        </div>
-        <p id="_0b677fa9-be2f-a494-493a-cb4907615a9f">and similarly for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B4;</mi>
+    <mo>,</mo>
   </mstyle>
-  <mtext>D</mtext>
+</math></span>  (1)</p></div></div><p id="_efd0af32-fa8f-1a67-7df5-c39e974698a4">and similarly for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>δ</mi>
+    </mstyle>
+    <mtext>D</mtext>
+  </mstyle>
 </math></span> (where symbol <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mtext>D</mtext>
+  <mstyle displaystyle="false">
+    <mtext>D</mtext>
+  </mstyle>
 </math></span> designates <sup>2</sup>H, and symbol H will subsequently designate <sup>1</sup>H) and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B4;</mi>
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>δ</mi>
+    </mstyle>
   </mstyle>
 </math></span><sup>17</sup>O. The subscript CAL emphasizes that the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B4;</mi>
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>δ</mi>
+    </mstyle>
   </mstyle>
-</math></span>-value has been determined with respect to VSMOW. Usually the results are in the parts-per-thousand range, so are expressed in permil (per thousand, &#x2030;).</p>
-        <p id="_d734534e-9f97-fd9d-636e-214d01b1fbad">Besides VSMOW, to further improve the inter-laboratory reproducibility of the water isotopic composition measurements, SLAP is also used to define the scale. The <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B4;</mi>
+</math></span>-value has been determined with respect to VSMOW. Usually the results are in the parts-per-thousand range, so are expressed in permil (per thousand, ‰).</p><p id="_e2458757-4b66-0578-970a-5668873009f7">Besides VSMOW, to further improve the inter-laboratory reproducibility of the water isotopic composition measurements, SLAP is also used to define the scale. The <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>δ</mi>
+    </mstyle>
   </mstyle>
 </math></span>-values of SLAP have been defined based on consensus between expert laboratories taking part in a large international intercomparison [Gonfiantini, 1984]. They are <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B4;</mi>
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>δ</mi>
+    </mstyle>
+    <mtext>D</mtext>
+    <mo>=</mo>
+    <mo>−</mo>
+    <mn>428</mn>
+    <mi>‰</mi>
   </mstyle>
-  <mtext>D</mtext>
-  <mo>=</mo>
-  <mo>&#x2212;</mo>
-  <mn>428</mn>
-  <mo>&#x2030;</mo>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B4;</mi>
-  </mstyle>
-  <msup>
-    <mrow>
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>δ</mi>
+    </mstyle>
+    <msup>
       <mtext></mtext>
-    </mrow>
-    <mrow>
       <mn>18</mn>
-    </mrow>
-  </msup>
-  <mtext>O</mtext>
-  <mo>=</mo>
-  <mo>&#x2212;</mo>
-  <mn>55.5</mn>
-  <mo>&#x2030;</mo>
-</math></span> with respect to VSMOW. These consensus values are used in the definition of the so-called normalized VSMOW-SLAP scale:</p>
-        <div id="_2d217fac-a1b5-e9eb-f333-30e1d9a9e367">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B4;</mi>
+    </msup>
+    <mtext>O</mtext>
+    <mo>=</mo>
+    <mo>−</mo>
+    <mn>55.5</mn>
+    <mi>‰</mi>
   </mstyle>
-  <msup>
-    <mrow>
+</math></span> with respect to VSMOW. These consensus values are used in the definition of the so-called normalized VSMOW-SLAP scale:</p><div id="_e4bc50c5-b79b-8c87-8b89-3487bc134c25"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mstyle mathvariant="italic">
+      <mi>δ</mi>
+    </mstyle>
+    <msup>
       <mtext></mtext>
-    </mrow>
-    <mrow>
       <mn>18</mn>
-    </mrow>
-  </msup>
-  <mtext>O</mtext>
-  <msub>
-    <mrow>
-      <mfenced open="(" close=")">
-        <mrow>
-          <mtext>sample</mtext>
-        </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
+    </msup>
+    <mtext>O</mtext>
+    <msub>
+      <mrow>
+        <mo>(</mo>
+        <mtext>sample</mtext>
+        <mo>)</mo>
+      </mrow>
       <mtext>NORM</mtext>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mfenced open="[" close="]">
+    </msub>
+    <mo>=</mo>
     <mrow>
+      <mo>[</mo>
       <mstyle mathvariant="italic">
-        <mi>&#x3B4;</mi>
+        <mi>δ</mi>
       </mstyle>
       <msup>
-        <mrow>
-          <mtext></mtext>
-        </mrow>
-        <mrow>
-          <mn>18</mn>
-        </mrow>
+        <mtext></mtext>
+        <mn>18</mn>
       </msup>
       <mtext>O</mtext>
       <msub>
         <mrow>
-          <mfenced open="(" close=")">
-            <mrow>
-              <mtext>sample</mtext>
-            </mrow>
-          </mfenced>
+          <mo>(</mo>
+          <mtext>sample</mtext>
+          <mo>)</mo>
         </mrow>
-        <mrow>
-          <mtext>CAL</mtext>
-        </mrow>
+        <mtext>CAL</mtext>
       </msub>
       <mfrac>
         <mrow>
-          <mfenced open="{" close="}">
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mrow>
-                    <mo>&#x2212;</mo>
-                    <mn>0.055&#xA0;5</mn>
-                  </mrow>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
+          <mo>(</mo>
+          <mo>−</mo>
+          <mn>0.0555</mn>
+          <mo>)</mo>
         </mrow>
         <mrow>
-          <mrow>
-            <mi mathvariant="normal">&#x3B4;</mi>
-            <msup>
-              <mrow>
-                <mtext></mtext>
-              </mrow>
-              <mrow>
-                <mn>18</mn>
-              </mrow>
-            </msup>
-            <mtext>O</mtext>
-            <msub>
-              <mrow>
-                <mfenced open="(" close=")">
-                  <mrow>
-                    <mtext>SLAP</mtext>
-                  </mrow>
-                </mfenced>
-              </mrow>
-              <mrow>
-                <mtext>CAL</mtext>
-              </mrow>
-            </msub>
-          </mrow>
+          <mi mathvariant="normal">δ</mi>
+          <msup>
+            <mtext></mtext>
+            <mn>18</mn>
+          </msup>
+          <mtext>O</mtext>
+          <msub>
+            <mrow>
+              <mo>(</mo>
+              <mtext>SLAP</mtext>
+              <mo>)</mo>
+            </mrow>
+            <mtext>CAL</mtext>
+          </msub>
         </mrow>
       </mfrac>
+      <mo>]</mo>
     </mrow>
-  </mfenced>
-  <mo>,</mo>
-</math></span>&#xA0; (2)</p>
-          </div>
-        </div>
-        <p id="_e790df78-8575-99e2-4d76-ba98f538eec3">and similarly for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B4;</mi>
+    <mo>,</mo>
   </mstyle>
-  <mtext>D</mtext>
+</math></span>  (2)</p></div></div><p id="_560281c2-72c2-1411-c217-076e63726a3a">and similarly for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>δ</mi>
+    </mstyle>
+    <mtext>D</mtext>
+  </mstyle>
 </math></span>, with the value <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo>&#x2212;</mo>
-  <mn>0.428</mn>
+  <mstyle displaystyle="false">
+    <mo>−</mo>
+    <mn>0.428</mn>
+  </mstyle>
 </math></span> in the nominator. All isotope laboratories usually report their isotope <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B4;</mi>
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>δ</mi>
+    </mstyle>
   </mstyle>
-</math></span>-values for water in this normalized way.</p>
-        <p id="_f6c5db3c-83dc-47b7-0870-474bf0eaaa30">For all naturally occurring surface waters, the isotopic composition is sufficiently close to that of VSMOW, and the correlation between the <sup>18</sup>O and the <sup>17</sup>O contents is so strong [<a href="#Meijer1998">Meijer and Li 1998</a>] that the effect of the isotopes on the TPW temperature can be specified by a linear function of only the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B4;</mi>
+</math></span>-values for water in this normalized way.</p><p id="_3ca2dcbb-0a39-b97c-9129-7e92939373e2">For all naturally occurring surface waters, the isotopic composition is sufficiently close to that of VSMOW, and the correlation between the <sup>18</sup>O and the <sup>17</sup>O contents is so strong [<a href="#Meijer1998">Meijer and Li 1998</a>] that the effect of the isotopes on the TPW temperature can be specified by a linear function of only the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>δ</mi>
+    </mstyle>
+    <mtext>D</mtext>
   </mstyle>
-  <mtext>D</mtext>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B4;</mi>
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>δ</mi>
+    </mstyle>
   </mstyle>
-</math></span><sup>18</sup>O values:</p>
-        <div id="_7926933d-f83f-9d95-d18e-aabd64143924">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+</math></span><sup>18</sup>O values:</p><div id="_62908040-728d-238c-3aad-4866a54beff5"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>T</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mtext>meas</mtext>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <msub>
-    <mrow>
+    </msub>
+    <mo>=</mo>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>T</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>90</mn>
-    </mrow>
-  </msub>
-  <mfenced open="(" close=")">
+    </msub>
     <mrow>
+      <mo>(</mo>
       <mtext>TPW</mtext>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>+</mo>
-  <mstyle mathvariant="italic">
-    <mi>A</mi>
-  </mstyle>
-  <mfenced open="(" close=")">
+    <mo>+</mo>
+    <mstyle mathvariant="italic">
+      <mi>A</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mtext>D</mtext>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>&#x22C5;</mo>
-  <mstyle mathvariant="italic">
-    <mi>&#x3B4;</mi>
-  </mstyle>
-  <mtext>D</mtext>
-  <mo>+</mo>
-  <mstyle mathvariant="italic">
-    <mi>A</mi>
-  </mstyle>
-  <mfenced open="(" close=")">
+    <mo>⋅</mo>
+    <mstyle mathvariant="italic">
+      <mi>δ</mi>
+    </mstyle>
+    <mtext>D</mtext>
+    <mo>+</mo>
+    <mstyle mathvariant="italic">
+      <mi>A</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mtext>O</mtext>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>&#x22C5;</mo>
-  <msup>
-    <mrow>
+    <mo>⋅</mo>
+    <msup>
       <mstyle mathvariant="italic">
-        <mi>&#x3B4;</mi>
+        <mi>δ</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>18</mn>
-    </mrow>
-  </msup>
-  <mtext>O</mtext>
-  <mo>,</mo>
-</math></span>&#xA0; (3)</p>
-          </div>
-        </div>
-        <p id="_ee9cf287-be07-3f43-d05d-e1020e3256dd">where the last term on the right accounts for both the <sup>18</sup>O and the <sup>17</sup>O effects, but requires only the knowledge of the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B4;</mi>
+    </msup>
+    <mtext>O</mtext>
+    <mo>,</mo>
   </mstyle>
-</math></span><sup>18</sup>O value. The most precise set of isotopic depression constants presently available, and those specified for use with the ITS-90, are by Faghihi <i>et al.</i> (<a href="#Faghihi2015a">2015a</a> and <a href="#Faghihi2015b">2015b</a>). These values are: <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>A</mi></mstyle><mfenced open="(" close=")"><mrow><mtext>D</mtext></mrow></mfenced><mo>=</mo><mn>673</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_uK"><mi mathvariant="normal">&#xB5;K</mi></mrow>
-
-
-
-
-
-
-
-
-</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>A</mi></mstyle><mfenced open="(" close=")"><mrow><mtext>O</mtext></mrow></mfenced><mo>=</mo><mn>630</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_uK"><mi mathvariant="normal">&#xB5;K</mi></mrow>
-
-
-
-
-
-
-
-
-</math></span>, withestimated standard uncertainties of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>4</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_uK"><mi mathvariant="normal">&#xB5;K</mi></mrow>
-
-
-
-
-
-
-
-
-</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_uK"><mi mathvariant="normal">&#xB5;K</mi></mrow>
-
-
-
-
-
-
-
-
+</math></span>  (3)</p></div></div><p id="_14debd8c-3db2-d1e6-eb07-a85471965c82">where the last term on the right accounts for both the <sup>18</sup>O and the <sup>17</sup>O effects, but requires only the knowledge of the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>δ</mi>
+    </mstyle>
+  </mstyle>
+</math></span><sup>18</sup>O value. The most precise set of isotopic depression constants presently available, and those specified for use with the ITS-90, are by Faghihi <i>et al.</i> (<a href="#Faghihi2015a">2015a</a> and <a href="#Faghihi2015b">2015b</a>). These values are: <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>A</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mtext>D</mtext>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mn>673</mn>
+    <mstyle mathvariant="normal">
+      <mi>µK</mi>
+    </mstyle>
+  </mstyle>
+</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>A</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mtext>O</mtext>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mn>630</mn>
+    <mstyle mathvariant="normal">
+      <mi>µK</mi>
+    </mstyle>
+  </mstyle>
+</math></span>, withestimated standard uncertainties of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>4</mn>
+    <mstyle mathvariant="normal">
+      <mi>µK</mi>
+    </mstyle>
+  </mstyle>
+</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>10</mn>
+    <mstyle mathvariant="normal">
+      <mi>µK</mi>
+    </mstyle>
+  </mstyle>
 </math></span>, respectively. These values have been derived using <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi mathvariant="normal">&#x3B4;</mi>
-</math></span>-values expressed on the normalized VSMOW-SLAP scale.</p>
-        <p id="_1ec0ef93-9a64-cf75-5f61-2f8454b08b80">The practice, introduced by some manufacturers, of adding enriched water to the initial source water to compensate for the isotope depletion taking place during the purification process is not recommended. After adding enriched water, full isotope analysis including the difficult measurement of &#x3B4;<sup>17</sup>O is required, with less accurate and less reliable results. For TPW cells manufactured with addition of enriched water, the following correction equation is recommended:</p>
-        <div id="_4418492c-fecf-c466-3906-935275502031">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+  <mstyle displaystyle="false">
+    <mi mathvariant="normal">δ</mi>
+  </mstyle>
+</math></span>-values expressed on the normalized VSMOW-SLAP scale.</p><p id="_1ec0ef93-9a64-cf75-5f61-2f8454b08b80">The practice, introduced by some manufacturers, of adding enriched water to the initial source water to compensate for the isotope depletion taking place during the purification process is not recommended. After adding enriched water, full isotope analysis including the difficult measurement of δ<sup>17</sup>O is required, with less accurate and less reliable results. For TPW cells manufactured with addition of enriched water, the following correction equation is recommended:</p><div id="_4748aeda-5e8c-d1b6-5863-bc6e5a79d8b5"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>T</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mtext>meas</mtext>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <msub>
-    <mrow>
+    </msub>
+    <mo>=</mo>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>T</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>90</mn>
-    </mrow>
-  </msub>
-  <mfenced open="(" close=")">
+    </msub>
     <mrow>
+      <mo>(</mo>
       <mtext>TPW</mtext>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>+</mo>
-  <mstyle mathvariant="italic">
-    <mi>A</mi>
-  </mstyle>
-  <mfenced open="(" close=")">
+    <mo>+</mo>
+    <mstyle mathvariant="italic">
+      <mi>A</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mtext>D</mtext>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>&#x22C5;</mo>
-  <mstyle mathvariant="italic">
-    <mi>&#x3B4;</mi>
-  </mstyle>
-  <mtext>D</mtext>
-  <mo>+</mo>
-  <mstyle mathvariant="italic">
-    <mi>A</mi>
-  </mstyle>
-  <mfenced open="(" close=")">
+    <mo>⋅</mo>
+    <mstyle mathvariant="italic">
+      <mi>δ</mi>
+    </mstyle>
+    <mtext>D</mtext>
+    <mo>+</mo>
+    <mstyle mathvariant="italic">
+      <mi>A</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mtext>O</mtext>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>&#x22C5;</mo>
-  <mstyle mathvariant="italic">
-    <mi>&#x3B4;</mi>
-  </mstyle>
-  <msup>
-    <mrow>
+    <mo>⋅</mo>
+    <mstyle mathvariant="italic">
+      <mi>δ</mi>
+    </mstyle>
+    <msup>
       <mtext></mtext>
-    </mrow>
-    <mrow>
       <mn>18</mn>
-    </mrow>
-  </msup>
-  <mtext>O</mtext>
-  <mo>+</mo>
-  <mstyle mathvariant="italic">
-    <mi>A</mi>
-  </mstyle>
-  <mfenced open="(" close=")">
+    </msup>
+    <mtext>O</mtext>
+    <mo>+</mo>
+    <mstyle mathvariant="italic">
+      <mi>A</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <msup>
-        <mrow>
-          <mtext></mtext>
-        </mrow>
-        <mrow>
-          <mn>17</mn>
-        </mrow>
+        <mtext></mtext>
+        <mn>17</mn>
       </msup>
       <mtext>O</mtext>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mfenced open="{" close="}">
     <mrow>
+      <mo>{</mo>
       <mstyle mathvariant="italic">
-        <mi>&#x3B4;</mi>
+        <mi>δ</mi>
       </mstyle>
       <msup>
-        <mrow>
-          <mtext></mtext>
-        </mrow>
-        <mrow>
-          <mn>17</mn>
-        </mrow>
+        <mtext></mtext>
+        <mn>17</mn>
       </msup>
       <mtext>O</mtext>
-      <mo>&#x2212;</mo>
-      <mfenced open="[" close="]">
-        <mrow>
-          <msup>
-            <mrow>
-              <mfenced open="(" close=")">
-                <mrow>
-                  <mn>1</mn>
-                  <mo>+</mo>
-                  <mstyle mathvariant="italic">
-                    <mi>&#x3B4;</mi>
-                  </mstyle>
-                  <msup>
-                    <mrow>
-                      <mtext></mtext>
-                    </mrow>
-                    <mrow>
-                      <mn>18</mn>
-                    </mrow>
-                  </msup>
-                  <mtext>O</mtext>
-                </mrow>
-              </mfenced>
-            </mrow>
-            <mrow>
-              <mn>0.528</mn>
-            </mrow>
-          </msup>
-          <mo>&#x2212;</mo>
-          <mn>1</mn>
-        </mrow>
-      </mfenced>
+      <mo>−</mo>
+      <mrow>
+        <mo>[</mo>
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <mn>1</mn>
+            <mo>+</mo>
+            <mstyle mathvariant="italic">
+              <mi>δ</mi>
+            </mstyle>
+            <msup>
+              <mtext></mtext>
+              <mn>18</mn>
+            </msup>
+            <mtext>O</mtext>
+            <mo>)</mo>
+          </mrow>
+          <mn>0.528</mn>
+        </msup>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>]</mo>
+      </mrow>
+      <mo>}</mo>
     </mrow>
-  </mfenced>
-  <mo>,</mo>
-</math></span>&#xA0; (4)</p>
-          </div>
-        </div>
-        <p id="_9c818208-58bc-e1e3-9922-21c884c2c73a">where the coefficient <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>A</mi></mstyle><mfenced open="(" close=")"><mrow><msup><mrow><mtext></mtext></mrow><mrow><mn>17</mn></mrow></msup><mtext>O</mtext></mrow></mfenced><mo>=</mo><mn>60</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_uK"><mi mathvariant="normal">&#xB5;K</mi></mrow>
-
-
-
-
-
-
-
-
-</math></span> given by <a href="#White2010">White and Tew (2010)</a> has an estimated standard uncertainty of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_uK"><mi mathvariant="normal">&#xB5;K</mi></mrow>
-
-
-
-
-
-
-
-
-</math></span>.</p>
-        <p id="_f589851e-8273-21cd-f8a8-b970df0793fe">It should be noted that the original references VSMOW and SLAP water are exhausted. Their successors, VSMOW2 and SLAP2 have been prepared with utmost care to resemble the originals to within the uncertainties. Only for SLAP2 the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B4;</mi>
+    <mo>,</mo>
   </mstyle>
-  <mtext>D</mtext>
-</math></span> value is -427.5 &#x2030; instead of -428 &#x2030;.</p>
-      </div>
-      <div id="_isotopic_composition_and_corrections_for_the_triple_point_of_equilibrium_hydrogen">
-        <h1 id="toc2">2.&#xA0; Isotopic composition and corrections for the triple point of equilibrium hydrogen</h1>
-        <p id="_11499d80-26a8-82f0-34d9-38747a259f70">The effects of isotopic composition on the triple point of equilibrium hydrogen (e-H<sub>2</sub> TP) and uncertainties related to these effects are discussed in detail in [<a href="#Steur2005">Steur <i>et al.</i> 2005</a>, <a href="#Fellmuth2005">Fellmuth <i>et al.</i> 2005</a>].</p>
-        <p id="_ad50e375-03f0-12ad-684c-aefb9ec1515c">The isotopic composition of commercially available hydrogen varies from an amount-of-substance ratio of about 27 micromole of D per mole of H to about 150 micromole of D per mole of H. It has been established that the discrepancies previously found at the triple point are mainly due to the variable deuterium content in the hydrogen used for its realization [<a href="#Pavese2000">Pavese and Tew 2000</a>, <a href="#Pavese2002">Pavese <i>et al.</i> 2002</a>].</p>
-        <p id="_2f96c99f-ee02-c16c-51bb-3a2a8161a6f3">It is therefore specified that the ITS-90 temperature assigned to the triple point of equilibrium hydrogen, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>T</mi></mstyle></mrow><mrow><mn>90</mn></mrow></msub><mfenced open="(" close=")"><mrow><msub><mrow><mtext>e-H</mtext></mrow><mrow><mn>2</mn></mrow></msub><mtext>&#xA0;TP</mtext></mrow></mfenced><mo>=</mo><mn>13.803&#xA0;3</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
-
-
-
-
-
-
-
-
-
-</math></span>, is taken to refer to an amount-of-substance ratio of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mn>0.000&#xA0;089&#xA0;02</mn>
-</math></span> mole of D per mole of H. This is the isotopic ratio determined for SLAP [<a href="#Gonfiantini1978">Gonfiantini 1978</a>].</p>
-        <p id="_3b2e60be-f2b4-2bc4-f048-c2017c254f10">To correct to the isotopic reference ratio, the following function is specified:</p>
-        <div id="_cc3b2bfd-a0b7-7dfe-9872-6b4d627b36c6">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
+</math></span>  (4)</p></div></div><p id="_cbfe6b28-577e-f0b4-c491-16433e446c37">where the coefficient <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>A</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
+      <msup>
+        <mtext></mtext>
+        <mn>17</mn>
+      </msup>
+      <mtext>O</mtext>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mn>60</mn>
+    <mstyle mathvariant="normal">
+      <mi>µK</mi>
+    </mstyle>
+  </mstyle>
+</math></span> given by <a href="#White2010">White and Tew (2010)</a> has an estimated standard uncertainty of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>1</mn>
+    <mstyle mathvariant="normal">
+      <mi>µK</mi>
+    </mstyle>
+  </mstyle>
+</math></span>.</p><p id="_f6538ba6-0afa-097c-fa21-c370acf0c1d4">It should be noted that the original references VSMOW and SLAP water are exhausted. Their successors, VSMOW2 and SLAP2 have been prepared with utmost care to resemble the originals to within the uncertainties. Only for SLAP2 the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>δ</mi>
+    </mstyle>
+    <mtext>D</mtext>
+  </mstyle>
+</math></span> value is -427.5 ‰ instead of -428 ‰.</p></div><div id="_isotopic_composition_and_corrections_for_the_triple_point_of_equilibrium_hydrogen"><h1 id="_a18fded0-914d-4c57-b90d-7d1f21de0eff">2.  Isotopic composition and corrections for the triple point of equilibrium hydrogen</h1><p id="_11499d80-26a8-82f0-34d9-38747a259f70">The effects of isotopic composition on the triple point of equilibrium hydrogen (e-H<sub>2</sub> TP) and uncertainties related to these effects are discussed in detail in [<a href="#Steur2005">Steur <i>et al.</i> 2005</a>, <a href="#Fellmuth2005">Fellmuth <i>et al.</i> 2005</a>].</p><p id="_ad50e375-03f0-12ad-684c-aefb9ec1515c">The isotopic composition of commercially available hydrogen varies from an amount-of-substance ratio of about 27 micromole of D per mole of H to about 150 micromole of D per mole of H. It has been established that the discrepancies previously found at the triple point are mainly due to the variable deuterium content in the hydrogen used for its realization [<a href="#Pavese2000">Pavese and Tew 2000</a>, <a href="#Pavese2002">Pavese <i>et al.</i> 2002</a>].</p><p id="_90dbf37f-1463-9ac2-7cd7-6e41f73ef988">It is therefore specified that the ITS-90 temperature assigned to the triple point of equilibrium hydrogen, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>T</mi>
       </mstyle>
-    </mrow>
-    <mrow>
-      <mtext>meas</mtext>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>T</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
       <mn>90</mn>
-    </mrow>
-  </msub>
-  <mfenced open="(" close=")">
+    </msub>
     <mrow>
+      <mo>(</mo>
       <msub>
-        <mrow>
-          <mtext>e-H</mtext>
-        </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
+        <mtext>e-H</mtext>
+        <mn>2</mn>
+      </msub>
+      <mtext> TP</mtext>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mn>13.8033</mn>
+    <mstyle mathvariant="normal">
+      <mi>K</mi>
+    </mstyle>
+  </mstyle>
+</math></span>, is taken to refer to an amount-of-substance ratio of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>0.000 089 02</mn>
+  </mstyle>
+</math></span> mole of D per mole of H. This is the isotopic ratio determined for SLAP [<a href="#Gonfiantini1978">Gonfiantini 1978</a>].</p><p id="_3b2e60be-f2b4-2bc4-f048-c2017c254f10">To correct to the isotopic reference ratio, the following function is specified:</p><div id="_556a60ce-8b5c-af5b-76ee-c7850e092d7e"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mtext>meas</mtext>
+    </msub>
+    <mo>=</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mtext>e-H</mtext>
+        <mn>2</mn>
       </msub>
       <mtext>TP</mtext>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>+</mo>
-  <msub>
-    <mrow>
+    <mo>+</mo>
+    <msub>
       <mi>k</mi>
-    </mrow>
-    <mrow>
       <mtext>D</mtext>
-    </mrow>
-  </msub>
-  <mfenced open="(" close=")">
+    </msub>
     <mrow>
+      <mo>(</mo>
       <mi>x</mi>
-      <mo>&#x2212;</mo>
+      <mo>−</mo>
       <msub>
-        <mrow>
-          <mi>x</mi>
-        </mrow>
-        <mrow>
-          <mn>0</mn>
-        </mrow>
+        <mi>x</mi>
+        <mn>0</mn>
       </msub>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>,</mo>
-</math></span>&#xA0; (5)</p>
-          </div>
-        </div>
-        <p id="_610a7d18-6469-30cb-0498-b96ef6b5308e">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>x</mi>
-</math></span> denotes the amount-of-substance ratio of the sample in micromole D per mole H, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>x</mi></mrow><mrow><mn>0</mn></mrow></msub><mo>=</mo><mn>89.02</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_umol/mol"><mi mathvariant="normal">&#xB5;mol</mi><mo>/</mo><mi mathvariant="normal">mol</mi></mrow>
-
-
-
-
-
-
-
-
-</math></span> in the reference ratio specified above, and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mi>k</mi>
-    </mrow>
-    <mrow>
-      <mtext>D</mtext>
-    </mrow>
-  </msub>
-</math></span> the triple-pointtemperature variation as a function of the deuterium ratio (the slope). The current value for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mi>k</mi>
-    </mrow>
-    <mrow>
-      <mtext>D</mtext>
-    </mrow>
-  </msub>
-</math></span>, specified for the ITS-90, was determined by Fellmuth <i>et al.</i> [<a href="#Fellmuth2005">Fellmuth <i>et al.</i> 2005</a>] as <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mtext>D</mtext></mrow></msub><mo>=</mo><mn>5.42</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_uK"><mi mathvariant="normal">&#xB5;K</mi></mrow>
-
-
-
-
-
-
-
-
-<mo>/</mo><mfenced open="(" close=")"><mrow><mrow xref="U_umol"><mi mathvariant="normal">&#xB5;mol</mi></mrow>
-
-
-
-
-
-
-
-
-<mo>/</mo><mrow xref="U_NISTu6"><mi mathvariant="normal">mol</mi></mrow>
-
-
-
-
-
-
-
-
-
-</mrow></mfenced></math></span> with an estimated standard uncertainty of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0.31</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_uK"><mi mathvariant="normal">&#xB5;K</mi></mrow>
-
-
-
-
-
-
-
-
-<mo>/</mo><mfenced open="(" close=")"><mrow><mrow xref="U_umol"><mi mathvariant="normal">&#xB5;mol</mi></mrow>
-
-
-
-
-
-
-
-
-<mo>/</mo><mrow xref="U_NISTu6"><mi mathvariant="normal">mol</mi></mrow>
-
-
-
-
-
-
-
-
-
-</mrow></mfenced></math></span>.</p>
-      </div>
-      <div id="_isotopic_composition_for_the_vapour_pressure_points_of_equilibrium_hydrogen">
-        <h1 id="toc3">3.&#xA0; Isotopic composition for the vapour-pressure points of equilibrium hydrogen</h1>
-        <p id="_c27f5418-b26c-3ee0-7980-d2d0162ce3bc">The effects of isotopic composition on the vapour-pressure points of equilibrium hydrogen and the uncertainties related to these effects are discussed in detail in [<a href="#Steur2005">Steur <i>et al.</i> 2005</a>].</p>
-        <p id="_99166f79-5457-b1c6-b3e3-a6359c41fff1">Isotopic fractionation manifests itself as a difference of as much as <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0.4</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_mK"><mi mathvariant="normal">mK</mi></mrow>
-
-
-
-
-
-
-
-
-</math></span> between the dew point (vanishingly small liquid fraction) and the bubble point (vanishingly small vapour fraction) [<a href="#Pavese2002">Pavese <i>et al.</i> 2002</a>].</p>
-        <p id="_b2682b8b-0f1f-6837-bbec-747db097eb31">To reduce the effect of isotopic fractionation while maintaining coherence over the entire vapour-pressure range (i.e., including the triple point), it is therefore specified that the ITS-90 relations for the vapour pressure of equilibrium hydrogen are referenced to an amount-of-substance ratio of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mn>0.000&#xA0;089&#xA0;02</mn>
-</math></span> mole D per mole H, i.e. the isotopic ratio determined for SLAP.</p>
-      </div>
-      <div id="_isotopic_composition_and_corrections_for_the_triple_point_of_neon">
-        <h1 id="toc4">4.&#xA0; Isotopic composition and corrections for the triple point of neon</h1>
-        <p id="_5b659e17-645d-5cf3-1c82-c9616a1f8eb2">The effects of isotopic composition on the triple point of neon (Ne TP) and uncertainties related to these effects are discussed in detail in [<a href="#Pavese2013">Pavese <i>et al.</i> 2013</a>, <a href="#Steur2012">Steur <i>et al.</i> 2012</a>].</p>
-        <p id="_9ee4e44b-8fdb-01e4-fea3-c2b6308e96ed">The isotopic composition of commercially available neon varies from an amount-of-substance ratio of about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mn>0.091&#xA0;5</mn>
-</math></span> mole of <sup>22</sup>Ne per mole of Ne to about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mn>0.094&#xA0;8</mn>
-</math></span> mole of <sup>22</sup>Ne per mole of Ne, and about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mn>0.002&#xA0;7</mn>
-</math></span> mole of <sup>21</sup>Ne per mole of Ne to about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mn>0.002&#xA0;8</mn>
-</math></span> mole of <sup>21</sup>Ne per mole of Ne. It has been established that the discrepancies previously found at the triple point are mainly due to the variable <sup>22</sup>Ne content in the neon used for its realization [<a href="#Pavese2008a">Pavese <i>et al.</i> 2008a</a>, <a href="#Pavese2008b">Pavese <i>et al.</i> 2008b</a>].</p>
-        <p id="_820b5f4e-af28-d18b-608d-409b39e3333c">It is therefore specified that the ITS-90 temperature assigned to the triple point of neon, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>T</mi></mstyle></mrow><mrow><mn>90</mn></mrow></msub><mfenced open="(" close=")"><mrow><mtext>Ne TP</mtext></mrow></mfenced><mo>=</mo><mn>24.665&#xA0;1</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
-
-
-
-
-
-
-
-
-
-</math></span>, is taken to refer to amount-of-substance ratios of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mn>0.092&#xA0;5</mn>
-</math></span> mole of <sup>22</sup>Ne per mole of Ne and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mn>0.002&#xA0;7</mn>
-</math></span> mole of <sup>21</sup>Ne per mole of Ne. This is the IUPAC isotopic composition [<a href="#Wieser2011">Wieser and Coplen 2011</a>].</p>
-        <p id="_3d53a48b-0a8e-98c2-bad1-f34281c018a1">To correct for the isotopic reference ratios, the following function is specified (pseudo-binary approach):</p>
-        <div id="_1b64dfca-2523-c210-9468-9419fd369d21">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>T</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mtext>meas</mtext>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>T</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>90</mn>
-    </mrow>
-  </msub>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mtext>Ne TP</mtext>
-    </mrow>
-  </mfenced>
-  <mo>+</mo>
-  <msub>
-    <mrow>
-      <mi>k</mi>
-    </mrow>
-    <mrow>
+    <mo>,</mo>
+  </mstyle>
+</math></span>  (5)</p></div></div><p id="_6ab73113-9657-028f-9c92-3a2e59ccd21c">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>x</mi>
+  </mstyle>
+</math></span> denotes the amount-of-substance ratio of the sample in micromole D per mole H, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>x</mi>
       <mn>0</mn>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <msub>
+    </msub>
+    <mo>=</mo>
+    <mn>89.02</mn>
     <mrow>
-      <mi>k</mi>
-    </mrow>
-    <mrow>
-      <mn>1</mn>
-    </mrow>
-  </msub>
-  <mfenced open="(" close=")">
-    <mrow>
+      <mstyle mathvariant="normal">
+        <mi>µmol</mi>
+      </mstyle>
+      <mo>⋅</mo>
       <msup>
+        <mstyle mathvariant="normal">
+          <mi>mol</mi>
+        </mstyle>
         <mrow>
-          <mtext></mtext>
+          <mo>−</mo>
+          <mn>1</mn>
         </mrow>
-        <mrow>
-          <mn>22</mn>
-        </mrow>
+      </msup>
+    </mrow>
+  </mstyle>
+</math></span> in the reference ratio specified above, and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>k</mi>
+      <mtext>D</mtext>
+    </msub>
+  </mstyle>
+</math></span> the triple-pointtemperature variation as a function of the deuterium ratio (the slope). The current value for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>k</mi>
+      <mtext>D</mtext>
+    </msub>
+  </mstyle>
+</math></span>, specified for the ITS-90, was determined by Fellmuth <i>et al.</i> [<a href="#Fellmuth2005">Fellmuth <i>et al.</i> 2005</a>] as <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>k</mi>
+      <mtext>D</mtext>
+    </msub>
+    <mo>=</mo>
+    <mn>5.42</mn>
+    <mstyle mathvariant="normal">
+      <mi>µK</mi>
+    </mstyle>
+    <mo>/</mo>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="normal">
+        <mi>µmol</mi>
+      </mstyle>
+      <mo>/</mo>
+      <mstyle mathvariant="normal">
+        <mi>mol</mi>
+      </mstyle>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math></span> with an estimated standard uncertainty of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>0.31</mn>
+    <mstyle mathvariant="normal">
+      <mi>µK</mi>
+    </mstyle>
+    <mo>/</mo>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="normal">
+        <mi>µmol</mi>
+      </mstyle>
+      <mo>/</mo>
+      <mstyle mathvariant="normal">
+        <mi>mol</mi>
+      </mstyle>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math></span>.</p></div><div id="_isotopic_composition_for_the_vapour_pressure_points_of_equilibrium_hydrogen"><h1 id="_9ddb15f3-0840-45ea-88ce-40090e3d7467">3.  Isotopic composition for the vapour-pressure points of equilibrium hydrogen</h1><p id="_c27f5418-b26c-3ee0-7980-d2d0162ce3bc">The effects of isotopic composition on the vapour-pressure points of equilibrium hydrogen and the uncertainties related to these effects are discussed in detail in [<a href="#Steur2005">Steur <i>et al.</i> 2005</a>].</p><p id="_f4f35241-43bb-c548-a2f6-7821faa9a54f">Isotopic fractionation manifests itself as a difference of as much as <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>0.4</mn>
+    <mstyle mathvariant="normal">
+      <mi>mK</mi>
+    </mstyle>
+  </mstyle>
+</math></span> between the dew point (vanishingly small liquid fraction) and the bubble point (vanishingly small vapour fraction) [<a href="#Pavese2002">Pavese <i>et al.</i> 2002</a>].</p><p id="_e5f1edda-6b76-3161-7f5c-b58a8d7f765d">To reduce the effect of isotopic fractionation while maintaining coherence over the entire vapour-pressure range (i.e., including the triple point), it is therefore specified that the ITS-90 relations for the vapour pressure of equilibrium hydrogen are referenced to an amount-of-substance ratio of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>0.000 089 02</mn>
+  </mstyle>
+</math></span> mole D per mole H, i.e. the isotopic ratio determined for SLAP.</p></div><div id="_isotopic_composition_and_corrections_for_the_triple_point_of_neon"><h1 id="_4d9fc094-a71f-4f28-999b-40873c526110">4.  Isotopic composition and corrections for the triple point of neon</h1><p id="_5b659e17-645d-5cf3-1c82-c9616a1f8eb2">The effects of isotopic composition on the triple point of neon (Ne TP) and uncertainties related to these effects are discussed in detail in [<a href="#Pavese2013">Pavese <i>et al.</i> 2013</a>, <a href="#Steur2012">Steur <i>et al.</i> 2012</a>].</p><p id="_3b57d088-fb95-a270-47c7-1fdd5065f41d">The isotopic composition of commercially available neon varies from an amount-of-substance ratio of about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>0.0915</mn>
+  </mstyle>
+</math></span> mole of <sup>22</sup>Ne per mole of Ne to about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>0.0948</mn>
+  </mstyle>
+</math></span> mole of <sup>22</sup>Ne per mole of Ne, and about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>0.0027</mn>
+  </mstyle>
+</math></span> mole of <sup>21</sup>Ne per mole of Ne to about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>0.0028</mn>
+  </mstyle>
+</math></span> mole of <sup>21</sup>Ne per mole of Ne. It has been established that the discrepancies previously found at the triple point are mainly due to the variable <sup>22</sup>Ne content in the neon used for its realization [<a href="#Pavese2008a">Pavese <i>et al.</i> 2008a</a>, <a href="#Pavese2008b">Pavese <i>et al.</i> 2008b</a>].</p><p id="_0fe35f38-075a-6f92-a42f-8021e2a51c75">It is therefore specified that the ITS-90 temperature assigned to the triple point of neon, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mtext>Ne TP</mtext>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mn>24.6651</mn>
+    <mstyle mathvariant="normal">
+      <mi>K</mi>
+    </mstyle>
+  </mstyle>
+</math></span>, is taken to refer to amount-of-substance ratios of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>0.0925</mn>
+  </mstyle>
+</math></span> mole of <sup>22</sup>Ne per mole of Ne and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>0.0027</mn>
+  </mstyle>
+</math></span> mole of <sup>21</sup>Ne per mole of Ne. This is the IUPAC isotopic composition [<a href="#Wieser2011">Wieser and Coplen 2011</a>].</p><p id="_3d53a48b-0a8e-98c2-bad1-f34281c018a1">To correct for the isotopic reference ratios, the following function is specified (pseudo-binary approach):</p><div id="_45b4625b-6264-8d73-18b9-77cf247f47d4"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mtext>meas</mtext>
+    </msub>
+    <mo>=</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mtext>Ne TP</mtext>
+      <mo>)</mo>
+    </mrow>
+    <mo>+</mo>
+    <msub>
+      <mi>k</mi>
+      <mn>0</mn>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mi>k</mi>
+      <mn>1</mn>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <msup>
+        <mtext></mtext>
+        <mn>22</mn>
       </msup>
       <mi>x</mi>
       <mo>+</mo>
       <msup>
-        <mrow>
-          <mtext></mtext>
-        </mrow>
-        <mrow>
-          <mn>21</mn>
-        </mrow>
+        <mtext></mtext>
+        <mn>21</mn>
       </msup>
       <mi>x</mi>
       <mo>/</mo>
       <mn>2</mn>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>+</mo>
-  <msub>
-    <mrow>
+    <mo>+</mo>
+    <msub>
       <mi>k</mi>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msub>
-  <msup>
-    <mrow>
-      <mfenced open="(" close=")">
-        <mrow>
-          <msup>
-            <mrow>
-              <mtext></mtext>
-            </mrow>
-            <mrow>
-              <mn>22</mn>
-            </mrow>
-          </msup>
-          <mi>x</mi>
-          <mo>+</mo>
-          <msup>
-            <mrow>
-              <mtext></mtext>
-            </mrow>
-            <mrow>
-              <mn>21</mn>
-            </mrow>
-          </msup>
-          <mi>x</mi>
-          <mo>/</mo>
-          <mn>2</mn>
-        </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
+    </msub>
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <msup>
+          <mtext></mtext>
+          <mn>22</mn>
+        </msup>
+        <mi>x</mi>
+        <mo>+</mo>
+        <msup>
+          <mtext></mtext>
+          <mn>21</mn>
+        </msup>
+        <mi>x</mi>
+        <mo>/</mo>
+        <mn>2</mn>
+        <mo>)</mo>
+      </mrow>
       <mn>2</mn>
-    </mrow>
-  </msup>
-  <mo>,</mo>
-</math></span>&#xA0; (6)</p>
-          </div>
-        </div>
-        <p id="_90cfc9a1-4f76-539d-bc68-853b5cdfa5a8">where <sup>22</sup><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>x</mi>
+    </msup>
+    <mo>,</mo>
+  </mstyle>
+</math></span>  (6)</p></div></div><p id="_2f5b5f73-fe88-2657-efc5-4f625bff01ba">where <sup>22</sup><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>x</mi>
+  </mstyle>
 </math></span> and <sup>21</sup><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>x</mi>
-</math></span> denote the amount-of-substance ratios of the sample for <sup>22</sup>Ne and <sup>21</sup>Ne, respectively. The current values for the coefficients, specified for the ITS-90, are given by Pavese <i>et al.</i> [<a href="#Pavese2013">Pavese <i>et al.</i> 2013</a>] as <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mn>0</mn></mrow></msub><mo>=</mo><mo>&#x2212;</mo><mn>0.013&#xA0;82</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
-
-
-
-
-
-
-
-
-
-</math></span>, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mn>1</mn></mrow></msub><mo>=</mo><mn>0.147&#xA0;350</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
-
-
-
-
-
-
-
-
-
-</math></span>, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>k</mi></mrow><mrow><mn>2</mn></mrow></msub><mo>=</mo><mo>&#x2013;</mo><mn>0.000&#xA0;779</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_NISTu5"><mi mathvariant="normal">K</mi></mrow>
-
-
-
-
-
-
-
-
-
-</math></span> (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+  <mstyle displaystyle="false">
+    <mi>x</mi>
+  </mstyle>
+</math></span> denote the amount-of-substance ratios of the sample for <sup>22</sup>Ne and <sup>21</sup>Ne, respectively. The current values for the coefficients, specified for the ITS-90, are given by Pavese <i>et al.</i> [<a href="#Pavese2013">Pavese <i>et al.</i> 2013</a>] as <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
       <mi>k</mi>
-    </mrow>
-    <mrow>
-      <mn>1</mn>
-    </mrow>
-  </msub>
-</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mi>k</mi>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msub>
-</math></span> are rounded to six decimal figures which influences the correction by less than <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_uK"><mi mathvariant="normal">&#xB5;K</mi></mrow>
-
-
-
-
-
-
-
-
-</math></span>). The estimated standard uncertainty of the slope of the function amounts to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>400</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_uK"><mi mathvariant="normal">&#xB5;K</mi></mrow>
-
-
-
-
-
-
-
-
-</math></span> for a quasi IUPAC isotopic composition, and to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>200</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_uK"><mi mathvariant="normal">&#xB5;K</mi></mrow>
-
-
-
-
-
-
-
-
-</math></span> for a quasi-pure <sup>20</sup>Ne [<a href="#Steur2012">Steur <i>et al.</i> 2012</a>]. If the neon fixed point of the ITS-90 is realized via the triple point of <sup>20</sup>Ne, an uncertainty in <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mi>k</mi>
-    </mrow>
-    <mrow>
       <mn>0</mn>
-    </mrow>
-  </msub>
-</math></span> amounting to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>30</mn><mo rspace="thickmathspace">&#x2062;</mo><mrow xref="U_uK"><mi mathvariant="normal">&#xB5;K</mi></mrow>
-
-
-
-
-
-
-
-
-</math></span> has also to be considered.</p>
-      </div>
-      <br />
-      <div><h1 class="Section3" id="toc5">References</h1>
-<p id="De2003" class="Biblio">[1]&#xA0;  De Laeter J.R., B&#xF6;hlke J.K.,De Bi&#xE8;vre P., Hidaka H., Peiser H.S., Rosman K.J.R., Taylor P.D.P., 2003, <i>Pure Appl. Chem.</i>, <b>75</b>, 683-800.</p><p id="Faghihi2015a" class="Biblio">[2]&#xA0;  Faghihi V., Peruzzi A., Aerts-Bijma A.T., Jansen H.G., Spriensma J.J., van Geel J., Meijer H.A.J., 2015a, <i>Metrologia</i>, <b>52</b>, 819-826.</p><p id="Faghihi2015b" class="Biblio">[3]&#xA0;  Faghihi V., Kozicki M., Aerts-Bijma A.T., Jansen H.G., Spriensma J.J., Peruzzi A., Meijer H.A.J., 2015b, <i>Metrologia</i>, <b>52</b>, 827-834.</p><p id="FellmuthB2005" class="Biblio">[4]&#xA0;  FellmuthB., Wolber L., Hermier Y., Pavese F., Steur P.P.M., Peroni I., Szmyrka-Grzebyk A., Lipinski L., Tew W.L., Nakano T., Sakurai H., Tamura O., Head D., Hill K.D., Steele A.G., 2005, <i>Metrologia</i>, <b>42</b>, 171-193.</p><p id="Gonfiantini1978" class="Biblio">[5]&#xA0;  Gonfiantini R., 1978, <i>Nature</i>, <b>271</b>, 534-536.</p><p id="Gonfiantini2010" class="Biblio">[6]&#xA0;  Gonfiantini R., 2010, Report on an advisory group meeting on stable isotope reference samples for geochemical and hydrochemical investigations, <i>IAEA Report to the Director General</i>.</p><p id="Li1613" class="Biblio">[7]&#xA0;  Li W.J., Ni B.L., Jin D.Q., Chang T.L., 1988, <i>Kexue Tongbao</i> (Chinese Science Bulletin), <b>33</b>, 1610-1613.</p><p id="Meijer1998" class="Biblio">[8]&#xA0;  Meijer H.A.J., Li W., 1998, <i>Isot. Environ. Health Stud.</i>, <b>34</b>, 349</p><p id="Pavese2000" class="Biblio">[9]&#xA0;  Pavese F., Tew W.L., 2000, &#x201C;On the isotopic composition of commercial hydrogen vs &#x2018;natural isotopic composition&#x2019; and the problems for the ITS-90 definition&#x201D;, Comit&#xE9; Consultatif de Thermom&#xE9;trie, Working Document CCT/2000-19.</p><p id="Pavese2001" class="Biblio">[10]&#xA0;  Pavese F., Tew W.L., Steele A., 2002 &#x201C;Archival and theoretical considerations for isotopic dependence in the e-H<sub>2</sub> fixed points&#x201D;, In: <i>TEMPMEKO 2001, 8th International Symposium on Temperature and Thermal Measurements in Industry and Science</i>, eds.Fellmuth <i>et al.</i> (VDI/VDE, Berlin), 429-434.</p><p id="Pavese2008a" class="Biblio">[11]&#xA0;  Pavese F., Fellmuth B., Hill, K.D., Head D., Hermier Y., Lipinski L., Nakano T., Peruzzi A., Sakurai H., Szmyrka-Grzebyk A., Steele A.G., Steur P.P.M., Tamura O., Tew W.L., Valkiers. S., Wolber. L., 2008a, <i>Int. J. Thermophys.</i>, <b>29</b>, 57-66.</p><p id="Pavese2008b" class="Biblio">[12]&#xA0;  Pavese F., Fellmuth B., Hill K.D., Head D., Hermier Y., Lipinski L., Nakano T., Peruzzi A., Sakurai H., Szmyrka-Grzebyk A., Steele A.G., Steur P.P.M., Tamura O., Tew W.L., Valkiers S., Wolber L., 2008b, &#x201C;Status of progress towards the determination of the relationship between neon triple-point temperature <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+    </msub>
+    <mo>=</mo>
+    <mo>−</mo>
+    <mn>0.013 82</mn>
+    <mstyle mathvariant="normal">
+      <mi>K</mi>
+    </mstyle>
+  </mstyle>
+</math></span>, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>k</mi>
+      <mn>1</mn>
+    </msub>
+    <mo>=</mo>
+    <mn>0.147 350</mn>
+    <mstyle mathvariant="normal">
+      <mi>K</mi>
+    </mstyle>
+  </mstyle>
+</math></span>, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>k</mi>
+      <mn>2</mn>
+    </msub>
+    <mo>=</mo>
+    <mi>–</mi>
+    <mn>0.000 779</mn>
+    <mstyle mathvariant="normal">
+      <mi>K</mi>
+    </mstyle>
+  </mstyle>
+</math></span> (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>k</mi>
+      <mn>1</mn>
+    </msub>
+  </mstyle>
+</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>k</mi>
+      <mn>2</mn>
+    </msub>
+  </mstyle>
+</math></span> are rounded to six decimal figures which influences the correction by less than <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>1</mn>
+    <mstyle mathvariant="normal">
+      <mi>µK</mi>
+    </mstyle>
+  </mstyle>
+</math></span>). The estimated standard uncertainty of the slope of the function amounts to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>400</mn>
+    <mstyle mathvariant="normal">
+      <mi>µK</mi>
+    </mstyle>
+  </mstyle>
+</math></span> for a quasi IUPAC isotopic composition, and to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>200</mn>
+    <mstyle mathvariant="normal">
+      <mi>µK</mi>
+    </mstyle>
+  </mstyle>
+</math></span> for a quasi-pure <sup>20</sup>Ne [<a href="#Steur2012">Steur <i>et al.</i> 2012</a>]. If the neon fixed point of the ITS-90 is realized via the triple point of <sup>20</sup>Ne, an uncertainty in <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>k</mi>
+      <mn>0</mn>
+    </msub>
+  </mstyle>
+</math></span> amounting to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>30</mn>
+    <mstyle mathvariant="normal">
+      <mi>µK</mi>
+    </mstyle>
+  </mstyle>
+</math></span> has also to be considered.</p></div><br /><div><h1 class="Section3" id="_2808c6c4-f49c-4388-976c-c685c391a72a">References</h1>
+<p id="De2003" class="Biblio">[1]  De Laeter J.R., Böhlke J.K.,De Bièvre P., Hidaka H., Peiser H.S., Rosman K.J.R., Taylor P.D.P., 2003, <i>Pure Appl. Chem.</i>, <b>75</b>, 683-800.</p><p id="Faghihi2015a" class="Biblio">[2]  Faghihi V., Peruzzi A., Aerts-Bijma A.T., Jansen H.G., Spriensma J.J., van Geel J., Meijer H.A.J., 2015a, <i>Metrologia</i>, <b>52</b>, 819-826.</p><p id="Faghihi2015b" class="Biblio">[3]  Faghihi V., Kozicki M., Aerts-Bijma A.T., Jansen H.G., Spriensma J.J., Peruzzi A., Meijer H.A.J., 2015b, <i>Metrologia</i>, <b>52</b>, 827-834.</p><p id="FellmuthB2005" class="Biblio">[4]  FellmuthB., Wolber L., Hermier Y., Pavese F., Steur P.P.M., Peroni I., Szmyrka-Grzebyk A., Lipinski L., Tew W.L., Nakano T., Sakurai H., Tamura O., Head D., Hill K.D., Steele A.G., 2005, <i>Metrologia</i>, <b>42</b>, 171-193.</p><p id="Gonfiantini1978" class="Biblio">[5]  Gonfiantini R., 1978, <i>Nature</i>, <b>271</b>, 534-536.</p><p id="Gonfiantini2010" class="Biblio">[6]  Gonfiantini R., 2010, Report on an advisory group meeting on stable isotope reference samples for geochemical and hydrochemical investigations, <i>IAEA Report to the Director General</i>.</p><p id="Li1613" class="Biblio">[7]  Li W.J., Ni B.L., Jin D.Q., Chang T.L., 1988, <i>Kexue Tongbao</i> (Chinese Science Bulletin), <b>33</b>, 1610-1613.</p><p id="Meijer1998" class="Biblio">[8]  Meijer H.A.J., Li W., 1998, <i>Isot. Environ. Health Stud.</i>, <b>34</b>, 349</p><p id="Pavese2000" class="Biblio">[9]  Pavese F., Tew W.L., 2000, “On the isotopic composition of commercial hydrogen vs ‘natural isotopic composition’ and the problems for the ITS-90 definition”, Comité Consultatif de Thermométrie, Working Document CCT/2000-19.</p><p id="Pavese2001" class="Biblio">[10]  Pavese F., Tew W.L., Steele A., 2002 “Archival and theoretical considerations for isotopic dependence in the e-H<sub>2</sub> fixed points”, In: <i>TEMPMEKO 2001, 8th International Symposium on Temperature and Thermal Measurements in Industry and Science</i>, eds.Fellmuth <i>et al.</i> (VDI/VDE, Berlin), 429-434.</p><p id="Pavese2008a" class="Biblio">[11]  Pavese F., Fellmuth B., Hill, K.D., Head D., Hermier Y., Lipinski L., Nakano T., Peruzzi A., Sakurai H., Szmyrka-Grzebyk A., Steele A.G., Steur P.P.M., Tamura O., Tew W.L., Valkiers. S., Wolber. L., 2008a, <i>Int. J. Thermophys.</i>, <b>29</b>, 57-66.</p><p id="Pavese2008b" class="Biblio">[12]  Pavese F., Fellmuth B., Hill K.D., Head D., Hermier Y., Lipinski L., Nakano T., Peruzzi A., Sakurai H., Szmyrka-Grzebyk A., Steele A.G., Steur P.P.M., Tamura O., Tew W.L., Valkiers S., Wolber L., 2008b, “Status of progress towards the determination of the relationship between neon triple-point temperature <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>T</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mtext>tp</mtext>
-    </mrow>
-  </msub>
+    </msub>
+  </mstyle>
 </math></span> and isotopic amount composition <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>x</mi>
-</math></span>&#x201D;, Comit&#xE9; Consultatif de Thermom&#xE9;trie, Working Document CCT/08-06.</p><p id="Pavese2013" class="Biblio">[13]&#xA0;  Pavese F., Steur P.P.M., Hermier Y., Hill K.D., Kim J.S., Lipinski L., Nagao K., Nakano T., Peruzzi A., Sparasci F., Szmyrka-Grzebyk A., Tamura O., Tew W.L., Valkiers S., van Geel J., 2013, &#x201C;Dependence of the Triple Point Temperature of Neon on Isotopic Composition and its Implications for the ITS-90&#x201D;, In: <i>Temperature: Its Measurement and Control in Science and Industry</i>, Vol. 8.</p><p id="Ripple2005" class="Biblio">[14]&#xA0;  Ripple D.C., Gam K.S., Hermier Y., Hill K.D., Rusby R.L., Steele A.G., Steur P.P.M., Stock M., Strouse G.F., White D.R., 2005, &#x201C;Summary of Facts Relating to Isotopic Effects and the Triple Point of Water: Report of the ad hoc Task Group on the Triple Point of Water&#x201D;, Comit&#xE9; Consultatif de Thermom&#xE9;trie, Working Document CCT/05-07.</p><p id="Steur2005" class="Biblio">[15]&#xA0;  Steur P.P.M., Fellmuth B., Gam K.S., Hermier Y., Hill K.D., Pokhodun A.I., Ripple D.C., 2005, &#x201C;Isotopic Effects in the Hydrogen Fixed Points: Report to the CCT&#x201D;, Comit&#xE9; Consultatif de Thermom&#xE9;trie, Working Document CCT/05-06.</p><p id="Steur2012" class="Biblio">[16]&#xA0;  Steur P.P.M., Pavese F., Fellmuth B., Hermier Y., Hill K.D., Kim J.S., Lipinski L., Nagao K., Nakano T., Peruzzi A., Sparasci F., Szmyrka-Grzebyk A., Tamura O., Tew W.L., Valkiers S., van Geel J., 2012, &#x201C;Isotopic Effects in the Neon Fixed Point&#x201D;, Comit&#xE9; Consultatif de Thermom&#xE9;trie, Working Document CCT/12-21/rev.</p><p id="White2010" class="Biblio">[17]&#xA0;  White D.R., Tew W.L., 2010, <i>Int. J. Thermophys.</i>, <b>31</b>, 1644-1653.</p><p id="Wieser2011" class="Biblio">[18]&#xA0;  Wieser M.E., Coplen T. B., 2011, <i>Pure Appl. Chem.</i>, <b>83</b>, 359-396.</p>
+  <mstyle displaystyle="false">
+    <mi>x</mi>
+  </mstyle>
+</math></span>“, Comité Consultatif de Thermométrie, Working Document CCT/08-06.</p><p id="Pavese2013" class="Biblio">[13]  Pavese F., Steur P.P.M., Hermier Y., Hill K.D., Kim J.S., Lipinski L., Nagao K., Nakano T., Peruzzi A., Sparasci F., Szmyrka-Grzebyk A., Tamura O., Tew W.L., Valkiers S., van Geel J., 2013, “Dependence of the Triple Point Temperature of Neon on Isotopic Composition and its Implications for the ITS-90”, In: <i>Temperature: Its Measurement and Control in Science and Industry</i>, Vol. 8.</p><p id="Ripple2005" class="Biblio">[14]  Ripple D.C., Gam K.S., Hermier Y., Hill K.D., Rusby R.L., Steele A.G., Steur P.P.M., Stock M., Strouse G.F., White D.R., 2005, “Summary of Facts Relating to Isotopic Effects and the Triple Point of Water: Report of the ad hoc Task Group on the Triple Point of Water”, Comité Consultatif de Thermométrie, Working Document CCT/05-07.</p><p id="Steur2005" class="Biblio">[15]  Steur P.P.M., Fellmuth B., Gam K.S., Hermier Y., Hill K.D., Pokhodun A.I., Ripple D.C., 2005, “Isotopic Effects in the Hydrogen Fixed Points: Report to the CCT”, Comité Consultatif de Thermométrie, Working Document CCT/05-06.</p><p id="Steur2012" class="Biblio">[16]  Steur P.P.M., Pavese F., Fellmuth B., Hermier Y., Hill K.D., Kim J.S., Lipinski L., Nagao K., Nakano T., Peruzzi A., Sparasci F., Szmyrka-Grzebyk A., Tamura O., Tew W.L., Valkiers S., van Geel J., 2012, “Isotopic Effects in the Neon Fixed Point”, Comité Consultatif de Thermométrie, Working Document CCT/12-21/rev.</p><p id="White2010" class="Biblio">[17]  White D.R., Tew W.L., 2010, <i>Int. J. Thermophys.</i>, <b>31</b>, 1644-1653.</p><p id="Wieser2011" class="Biblio">[18]  Wieser M.E., Coplen T. B., 2011, <i>Pure Appl. Chem.</i>, <b>83</b>, 359-396.</p>
 
 
 
@@ -2404,16 +2282,14 @@ To top button
 
 
 
-</div>
-    </main>
-  <script type="text/x-mathjax-config">
+</div></main><script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     "HTML-CSS": { preferredFont: "STIX" },
     asciimath2jax: { delimiters: [['(#(', ')#)']] }
  });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>  <script>
+  <script>
     $("#toc").on('click', 'li', function(e) {
     $(this).parent().find('li.toc-active').removeClass('toc-active');
     $(this).addClass('toc-active');
@@ -2483,5 +2359,4 @@ $('#toggle').on('click', function(){
 anchors.add('h1, h2, h3, h4');
 </script>
 
-</body>
-</html>
+</body></html>

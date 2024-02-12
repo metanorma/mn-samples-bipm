@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en" xml:lang="en">
-  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
+<html lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
   <!--
 @charset "UTF-8";
 /*
@@ -103,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 
 blockquote, q {
   quotes: none; }
-  blockquote:before, blockquote:after, q:before, q:after {
+  blockquote::before, blockquote::after, q::before, q::after {
     content: '';
     content: none; }
 
@@ -126,8 +125,16 @@ b, strong {
 div.document-stage-band, div.document-type-band {
   background-color: #333333; }
 
-a.FootnoteRef + a.FootnoteRef:before {
+a.FootnoteRef + a.FootnoteRef::before {
   content: ", ";
+  vertical-align: super; }
+
+a.TableFootnoteRef + a.TableFootnoteRef::before {
+  content: ", ";
+  vertical-align: super; }
+
+a.TableFootnoteRef, span.TableFootnoteRef,
+a.FootnoteRef, span.FootnoteRef {
   vertical-align: super; }
 
 .addition {
@@ -136,6 +143,43 @@ a.FootnoteRef + a.FootnoteRef:before {
 .deletion {
   color: red;
   text-decoration: line-through; }
+
+ruby {
+  ruby-position: over;
+  -webkit-ruby-position: before; }
+
+ruby ruby {
+  ruby-position: under;
+  -webkit-ruby-position: after; }
+
+/* code highlighting with line numbers */
+table.rouge-line-table td.rouge-gutter {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-right: 1em; }
+
+table.rouge-line-table td.rouge-code {
+  -moz-user-select: all;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all; }
+
+table.rouge-line-table,
+table.rouge-line-table th,
+table.rouge-line-table td {
+  width: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%; }
+
+table.rouge-line-table pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;
+  font-size: 100%; }
 
 #brochure-band {
   background-color: #0AC442; }
@@ -271,6 +315,12 @@ main {
     padding-left: 30px; }
   #toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
     padding-left: 50px; }
+  #toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+    padding-left: 70px; }
+  #toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+    padding-left: 90px; }
+  #toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+    padding-left: 110px; }
   #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
     background: #6C734A;
     box-shadow: inset -5px 0px 10px -5px #6C734A !important; }
@@ -377,12 +427,16 @@ div.figure {
     font-weight: 700;
     font-size: 1em;
     text-align: center; }
-  div.figure > img {
+  div.figure > img, div.figure > svg {
     margin-left: auto;
     margin-right: auto;
     display: block;
     max-width: 100%;
     height: auto; }
+
+table div.figure {
+  padding: 0;
+  margin: 0; }
 
 /*
     Document types + stages
@@ -549,8 +603,11 @@ a:hover {
   background: #6C734A;
   box-shadow: 3px 0 0 #6C734A, -3px 0 0 #6C734A; }
 
-::selection,
-::-moz-selection {
+*::selection {
+  background: #6C734A;
+  color: white; }
+
+*::-moz-selection {
   background: #6C734A;
   color: white; }
 
@@ -563,7 +620,7 @@ ul, ol {
 ul li {
   list-style: none; }
 
-ul li:before {
+ul li::before {
   content: "—";
   display: inline-block;
   width: 1em;
@@ -587,7 +644,7 @@ ol ul > li:first-child {
 #toc-list li {
   list-style-type: none; }
 
-#toc li:before {
+#toc li::before {
   content: " ";
   display: none; }
 
@@ -608,13 +665,13 @@ ol[class="alphabet"] > li {
 ol[class="alphabet"] ol[class="alphabet"] > li {
   list-style: inherit; }
 
-ol[class="alphabet"] > li:before {
+ol[class="alphabet"] > li::before {
   counter-increment: alphabet;
   content: counter(alphabet, lower-alpha) ") ";
   position: absolute;
   left: -1.4em; }
 
-ol[class="alphabet"] ol[class="alphabet"] > li:before {
+ol[class="alphabet"] ol[class="alphabet"] > li::before {
   counter-increment: none;
   content: initial; }
 
@@ -628,13 +685,13 @@ ol[class="roman"] > li {
 ol[class="roman"] ol[class="roman"] > li {
   list-style: inherit; }
 
-ol[class="roman"] > li:before {
+ol[class="roman"] > li::before {
   counter-increment: roman;
   content: "(" counter(roman, lower-roman) ") ";
   position: absolute;
   left: -2.0em; }
 
-ol[class="roman"] ol[class="roman"] > li:before {
+ol[class="roman"] ol[class="roman"] > li::before {
   counter-increment: none;
   content: initial; }
 
@@ -748,7 +805,7 @@ table {
   table th, table td {
     padding: 1em; }
   table td.header {
-    font-weigth: 400; }
+    font-weight: 400; }
 
 p.TableTitle {
   text-align: center;
@@ -1022,7 +1079,46 @@ To top button
     display: none; } }
 
 -->
-</style><title>Traceability Statements&#x2009;&#x2014;&#x2009;References to the JCTLM</title>
+</style><style><!--pre.sourcecode table td { padding: 5px; }
+pre.sourcecode table pre { margin: 0; }
+pre.sourcecode, pre.sourcecode .w {
+  color: #444444;
+}
+pre.sourcecode .cp {
+  color: #CC00A3;
+}
+pre.sourcecode .cs {
+  color: #CC00A3;
+}
+pre.sourcecode .c, pre.sourcecode .ch, pre.sourcecode .cd, pre.sourcecode .cm, pre.sourcecode .cpf, pre.sourcecode .c1 {
+  color: #FF0000;
+}
+pre.sourcecode .kc {
+  color: #C34E00;
+}
+pre.sourcecode .kd {
+  color: #0000FF;
+}
+pre.sourcecode .kr {
+  color: #007575;
+}
+pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
+  color: #0000FF;
+}
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .ld, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+  color: #009C00;
+}
+pre.sourcecode .sa {
+  color: #0000FF;
+}
+pre.sourcecode .nb, pre.sourcecode .bp {
+  color: #C34E00;
+}
+pre.sourcecode .nt {
+  color: #0000FF;
+}
+
+--></style><title>Traceability Statements — References to the JCTLM</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--TOC script import-->
@@ -1031,15 +1127,13 @@ To top button
 </script>
 
 <!--Google fonts-->
-<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" />
 
 <!--Font awesome import for the link icon-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
 <style class="anchorjs"></style>
-</link></link></link></head>
-  <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
-    <div class="title-section"><div class="document-stage-band" id="in-force-band">
+</head><body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container"><div class="title-section"><div class="document-stage-band" id="in-force-band">
     <p class="document-stage">In Force</p>
 </div>
 
@@ -1049,7 +1143,7 @@ To top button
 
 
 
-  <div id="toggle"> <span>&#x2022;</span> </div>
+  <div id="toggle"> <span>•</span> </div>
 
   <header>
 
@@ -1061,7 +1155,7 @@ To top button
     <div class="doc-number">
       <span class="docnumber">BIPM JCTLM_EXE_15-03</span>
       <span class="docnumber-separator">:</span>
-      <span class="docyear">2022 </span>
+      <span class="docyear">2024 </span>
     </div>
 
     <div class="coverpage-logo">
@@ -1070,21 +1164,21 @@ To top button
 
     <div class="coverpage-title">
       
-      <span class="title-first">Traceability Statements&#x2009;&#x2014;&#x2009;References to the JCTLM</span><br />
+      <span class="title-first">Traceability Statements — References to the JCTLM</span><br />
       <span class="title-second"></span>
       
     </div>
   </div>
 
   <div class="coverpage-logo">
-    <span>Bureau International de Poids et Mesures 2022</span>
+    <span>Bureau International de Poids et Mesures 2024</span>
     
   </div>
 
   
 
   <div class="coverpage-tc-name">
-    <span>JCTLM</span>
+    <span>JCTLM: Joint Committee for Traceability in Laboratory Medicine</span>
   </div>
  
   
@@ -1112,23 +1206,26 @@ To top button
 <div class="info-section">
 <div class="copyright">
 <div class="boilerplate-copyright">
-    <div>
-      <p id="_80ce6c3b-8926-8053-c802-b356c78bf05d" style="text-align:center;"> &#xA9; Bureau International des Poids et Mesures 2022 all rights reserved</p>
-    </div>
-  </div>
-  <div class="boilerplate-license">
-    <div><h1 class="IntroTitle">Copyright statement</h1>
 
-      <p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
-    </div>
-  </div>
+<div id="_7a8983bf-2c15-b86a-8f41-000d2ab18778">
+<p id="_a6a45ff7-2b35-044c-5792-0da089ed1061" style="text-align:center;">© Bureau International des Poids et Mesures 2024 all rights reserved</p>
+</div>
+</div>
+  <div class="boilerplate-license">
+
+<div id="_copyright_statement_2"><h1 class="IntroTitle">Copyright statement</h1>
+
+<p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/:">http://creativecommons.org/licenses/by/4.0/:</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
+</div>
+</div>
   <div id="boilerplate-legal-destination"></div>
 <div class="boilerplate-feedback">
-    <p id="_bd0b4a04-1c9b-db4f-f27f-b98101e93f33">BIPM<br />
-      Pavillon de Breteuil<br />
-      F-92312 S&#xE8;vres Cedex<br />
-      FRANCE</p>
-  </div>
+
+<p id="_e6428749-2432-0772-4c8e-ed6c34018916">BIPM<br />
+Pavillon de Breteuil<br />
+F-92312 Sèvres Cedex<br />
+FRANCE</p>
+</div>
 </div>
 
 <div class="rule"></div>
@@ -1137,85 +1234,52 @@ To top button
 
 
 </div>
-</div></header>
-      
-    </div>
-    <br />
-    <div class="prefatory-section"><nav>
-  <h1 id="content">Contents</h1>
-  <div id="toc"><ul><li class="h1"><a href="#toc0">      1.&#xA0; Summary</a></li><li class="h1"><a href="#toc1">      2.&#xA0; Preamble</a></li><li class="h1"><a href="#toc2">      3.&#xA0; Principles</a></li><li class="h1"><a href="#toc3">      4.&#xA0; Examples</a></li><li class="h2"><a href="#toc4">      4.1.&#xA0; References to materials</a></li><li class="h2"><a href="#toc5">      4.2.&#xA0; References to methods</a></li><li class="h2"><a href="#toc6">      4.3.&#xA0; References to methods and materials</a></li><li class="h1"><a href="#toc7">      5.&#xA0; Unacceptable Statements</a></li></ul></div>
+</div></header></div><br /><div class="prefatory-section"><nav>
+  <div id="toc"><h1 class="IntroTitle">Contents</h1><ul><li class="h1"><a href="#_7548e672-27d6-4423-9ee3-c79290625e1f">      1.  Summary</a></li>
+<li class="h1"><a href="#_4f2c23d9-b3c3-4c7c-9066-eb70a1df7cd1">      2.  Preamble</a></li>
+<li class="h1"><a href="#_beaa3c4b-0642-4581-b1cf-df2185df2796">      3.  Principles</a></li>
+<li class="h1"><a href="#_e1515043-10c2-4417-9297-d26d432ee885">      4.  Examples</a></li>
+<li class="h2"><a href="#_a49ddf21-cdc1-4997-9093-9abddf2a28c3">      4.1.  References to materials</a></li>
+<li class="h2"><a href="#_045541f9-08e3-4b00-89fd-d523373ab366">      4.2.  References to methods</a></li>
+<li class="h2"><a href="#_4df019fd-b41d-41cb-b699-0ef6c036f350">      4.3.  References to methods and materials</a></li>
+<li class="h1"><a href="#_e3cb0206-404d-4d8f-a1c5-2e7adbe1c5e0">      5.  Unacceptable Statements</a></li></ul></div>
 
 </nav>
 
 
 <div class="rule toc"></div>
+</div><br /><main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button><div class="authority">
 
-      
-    </div>
-    <br />
-    <main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-      <div class="authority">
-  
-  
-  
-</div>
-      <p class="zzSTDTitle1">Traceability Statements&#x2009;&#x2014;&#x2009;References to the JCTLM</p>
-      <div id="_summary">
-        <h1 id="toc0">1.&#xA0; Summary</h1>
-        <p id="_15430364-c702-7a71-10dd-51043330bcd9">This document provides advice to manufacturers and others on the appropriate manner to make reference to JCTLM-listing of reference materials, methods and services in any documentation in which information on metrological traceability is included.</p>
-      </div>
-      <div id="_preamble">
-        <h1 id="toc1">2.&#xA0; Preamble</h1>
-        <p id="_e6242212-d145-0552-00f6-1f599429d4a8">One of the primary activities of the JCTLM is to maintain a database of higher order reference materials, reference methods and reference measurement services (materials, methods and services). The purpose of this database is to provide a listing of the reference materials, methods and services which have been reviewed and found to meet the requirements of the relevant harmonized standards (see <a href="https://www.bipm.org/utils/common/pdf/JCTLM/JCTLM-framework.pdf">https://www.bipm.org/utils/common/pdf/JCTLM/JCTLM-framework.pdf</a>) for use at the top of traceability chains for in-vitro diagnostic assays. It is also the purpose of the JCTLM to promote and support the implementation of metrological traceability.</p>
-        <p id="_92b8e5dc-7dc8-b1c9-319b-2071ecafa04b">The JCTLM Executive Committee believes that when reference materials, methods or services listed in the JCTLM Database, have been used appropriately to establish traceable measurement results, there is benefit in including this information in manufacturers&#x2019; metrological traceability statements or in other relevant manufacturers&#x2019; documents. The aim of these references would be to provide purchasers of kits assurance of the quality of the highest order metrological items referred to in the traceability chain for their test kit.</p>
-        <p id="_5afcc6a1-63d1-2bf6-8bdb-49da1b945e7c">Traceability statements are also made for values assigned to other materials such as controls and quality assurance (proficiency testing) material. Reference to the JCTLM-listing of reference materials, methods and services would provide important information for users of these products.</p>
-        <p id="_249cd319-e6ef-cc3c-f090-e0ba28d0dbf7">This document has been developed to provide advice to manufacturers and others in the appropriate manner to make reference to JCTLM-listing of reference materials, methods and services in any documentation in which information on metrological traceability is provided.</p>
-      </div>
-      <div id="_principles">
-        <h1 id="toc2">3.&#xA0; Principles</h1>
-        <p id="_b38a0f18-f698-1501-6cd5-722cc52d4f70">A traceability statement will include reference to a material and/or method to which the results are traceable. The principle of referring to the JCTLM-listing of these elements is to clearly indicate that the material or method is currently listed on the database, or was listed a time relevant to the procedures described in the statement. The material or method should be clearly identified by name and source with an additional note indicating JCTLM-listing. The reference to the JCTLM must be specifically related to the identity of the material or method. With regard to listed methods, a clear indication should be made as to whether the analyses using the method were performed by a JCTLM-listed reference measurement service provider or in another facility.</p>
-        <p id="_b10dc4e4-294d-8b84-280c-cc89ba0ac8ee">The terminology used to describe the material, method or service should be sufficiently close to that used in the JCTLM database to avoid any possibility of confusion as to the identity of the material, method or service.</p>
-        <p id="_759de7c5-cfba-47da-528d-d1fb2ea68494">The use of the Term &#x2018;JCTLM&#x2019; should not be used in any manner which suggests that other procedures or materials used in establishing the traceability chain, or the entirety of the traceability chain are in any way endorsed or supported by the JCTLM.</p>
-      </div>
-      <div id="_examples">
-        <h1 id="toc3">4.&#xA0; Examples</h1>
-        <div id="_references_to_materials"><h2 id="toc4">4.1.&#xA0; References to materials</h2>
+
+
+
+</div><br /><div id="_summary"><h1 id="_7548e672-27d6-4423-9ee3-c79290625e1f">1.  Summary</h1><p id="_15430364-c702-7a71-10dd-51043330bcd9">This document provides advice to manufacturers and others on the appropriate manner to make reference to JCTLM-listing of reference materials, methods and services in any documentation in which information on metrological traceability is included.</p></div><div id="_preamble"><h1 id="_4f2c23d9-b3c3-4c7c-9066-eb70a1df7cd1">2.  Preamble</h1><p id="_e6242212-d145-0552-00f6-1f599429d4a8">One of the primary activities of the JCTLM is to maintain a database of higher order reference materials, reference methods and reference measurement services (materials, methods and services). The purpose of this database is to provide a listing of the reference materials, methods and services which have been reviewed and found to meet the requirements of the relevant harmonized standards (see <a href="https://www.bipm.org/utils/common/pdf/JCTLM/JCTLM-framework.pdf">https://www.bipm.org/utils/common/pdf/JCTLM/JCTLM-framework.pdf</a>) for use at the top of traceability chains for in-vitro diagnostic assays. It is also the purpose of the JCTLM to promote and support the implementation of metrological traceability.</p><p id="_92b8e5dc-7dc8-b1c9-319b-2071ecafa04b">The JCTLM Executive Committee believes that when reference materials, methods or services listed in the JCTLM Database, have been used appropriately to establish traceable measurement results, there is benefit in including this information in manufacturers’ metrological traceability statements or in other relevant manufacturers’ documents. The aim of these references would be to provide purchasers of kits assurance of the quality of the highest order metrological items referred to in the traceability chain for their test kit.</p><p id="_5afcc6a1-63d1-2bf6-8bdb-49da1b945e7c">Traceability statements are also made for values assigned to other materials such as controls and quality assurance (proficiency testing) material. Reference to the JCTLM-listing of reference materials, methods and services would provide important information for users of these products.</p><p id="_249cd319-e6ef-cc3c-f090-e0ba28d0dbf7">This document has been developed to provide advice to manufacturers and others in the appropriate manner to make reference to JCTLM-listing of reference materials, methods and services in any documentation in which information on metrological traceability is provided.</p></div><div id="_principles"><h1 id="_beaa3c4b-0642-4581-b1cf-df2185df2796">3.  Principles</h1><p id="_b38a0f18-f698-1501-6cd5-722cc52d4f70">A traceability statement will include reference to a material and/or method to which the results are traceable. The principle of referring to the JCTLM-listing of these elements is to clearly indicate that the material or method is currently listed on the database, or was listed a time relevant to the procedures described in the statement. The material or method should be clearly identified by name and source with an additional note indicating JCTLM-listing. The reference to the JCTLM must be specifically related to the identity of the material or method. With regard to listed methods, a clear indication should be made as to whether the analyses using the method were performed by a JCTLM-listed reference measurement service provider or in another facility.</p><p id="_b10dc4e4-294d-8b84-280c-cc89ba0ac8ee">The terminology used to describe the material, method or service should be sufficiently close to that used in the JCTLM database to avoid any possibility of confusion as to the identity of the material, method or service.</p><p id="_759de7c5-cfba-47da-528d-d1fb2ea68494">The use of the Term ‘JCTLM’ should not be used in any manner which suggests that other procedures or materials used in establishing the traceability chain, or the entirety of the traceability chain are in any way endorsed or supported by the JCTLM.</p></div><div id="_examples"><h1 id="_e1515043-10c2-4417-9297-d26d432ee885">4.  Examples</h1><div id="_references_to_materials"><h2 id="_a49ddf21-cdc1-4997-9093-9abddf2a28c3">4.1.  References to materials</h2>
 
 <dl id="_5b9af750-92ab-e014-b57b-6f26ce6d78ca"><dt><p>As a sentence</p></dt><dd><p id="_7ae49b7a-b98a-dfd5-4bcb-4339de4b0921">Measurement results are traceable to SRM 912a (NIST, USA). This material is/was listed on the JCTLM database.</p>
 </dd><dt><p>As a phrase</p></dt><dd><p id="_da4b81a8-2d84-da61-6d65-d6fb3b7beca1">Measurement results are traceable to SRM 912a, a JCTLM-listed reference material.</p>
 </dd></dl>
-</div>
-        <div id="_references_to_methods"><h2 id="toc5">4.2.&#xA0; References to methods</h2>
+</div><div id="_references_to_methods"><h2 id="_045541f9-08e3-4b00-89fd-d523373ab366">4.2.  References to methods</h2>
 
-<dl id="_9cd43b92-78cd-400c-df20-5fb747b365dd"><dt><p>As a Sentence</p></dt><dd><p id="_fa59cd65-e403-a320-b997-3171df22107e">The values generated by the method are traceable to the IFCC reference method. This reference method was listed on the JCTLM database at the time of method comparison and calibration performed by a JCTLM-listed Reference Measurement Service Provider.</p>
+<dl id="_b2ec079c-3d7f-bf81-7ec7-5dd040169b61"><dt><p>As a Sentence</p></dt><dd><p id="_fa59cd65-e403-a320-b997-3171df22107e">The values generated by the method are traceable to the IFCC reference method. This reference method was listed on the JCTLM database at the time of method comparison and calibration performed by a JCTLM-listed Reference Measurement Service Provider.</p>
 </dd><dt><p>As a phrase</p></dt><dd><p id="_ed1de303-21f9-781b-d329-a0bd3b6ca793">Traceable to the IFCC reference method (JCTLM-listed).</p>
-</dd></dl>
+</dd></dl><div id="_1ca7f49e-86fe-2d46-62f0-e1c2ea3fee3b" class="Note"><p><span class="note_label">Note:</span>  A reference to a method alone is sufficient only in cases where the method defines the measurand. Examples of this are the liver enzymes AST and ALT. Where a method is calibrated using a material, the material should also be identified.</p></div><div id="_41855d7e-523d-46d5-9065-5816ea3d0756" class="Note"><p><span class="note_label">Note:</span>  The method should be supported by a statement indicating whether the testing was performed by a JCTLM-listed reference measurement service provider or other facility. Identification of the service provider is desirable, but optional.</p></div>
 
-<div id="_f0d9fdc0-df0d-c4e3-4b66-e5e16a3c2969" class="Note"><p><span class="note_label">NOTE  1</span>&#xA0; A reference to a method alone is sufficient only in cases where the method defines the measurand. Examples of this are the liver enzymes AST and ALT. Where a method is calibrated using a material, the material should also be identified.</p></div>
 
-<div id="_1f149333-0339-df51-5b61-dfbaf6f68576" class="Note"><p><span class="note_label">NOTE  2</span>&#xA0; The method should be supported by a statement indicating whether the testing was performed by a JCTLM-listed reference measurement service provider or other facility. Identification of the service provider is desirable, but optional.</p></div>
-</div>
-        <div id="_references_to_methods_and_materials"><h2 id="toc6">4.3.&#xA0; References to methods and materials</h2>
+
+
+</div><div id="_references_to_methods_and_materials"><h2 id="_4df019fd-b41d-41cb-b699-0ef6c036f350">4.3.  References to methods and materials</h2>
 
 <dl id="_fe4f60c1-02c3-7af2-0966-9020cb432bec"><dt><p>As a Sentence</p></dt><dd><p id="_b3bc7127-21c6-273d-f8be-0facf825531c">The values assigned to the calibrators are traceable to SRM 914a using Isotope Dilution Mass Spectrometry. The reference material and method are JCTLM-listed and the method was performed by a JCTLM-listed Reference Measurement Service Provider.</p>
 </dd><dt><p>As a phrase</p></dt><dd><p id="_8467d9f7-ef59-9f57-0633-eef4515e1521">Traceable to SRM 914a (NIST, USA) using Isotope Dilution Mass Spectrometry (JCTLM-listed method) performed by a JCTLM-listed Reference Measurement Service Provider.</p>
 </dd></dl>
-</div>
-      </div>
-      <div id="_unacceptable_statements">
-        <h1 id="toc7">5.&#xA0; Unacceptable Statements</h1>
-        <p id="_5444927e-88e3-6a70-0198-4d27944a708d">Any statement which conveys, or appears to convey approval by the JCTLM of any other facet of the traceability statement other than the identity of the material, method or measurement service is unacceptable.</p>
-        <p id="_3b3de574-fbbb-fec7-0086-d659a487e542">It is acceptable to note that a JCTLM-listed material, procedure or measurement service was not available at the time of calibrator value assignment. This may be done in order to assure customers that an opportunity for higher-order traceability has not been overlooked.</p>
-      </div>
-    </main>
-  <script type="text/x-mathjax-config">
+</div></div><div id="_unacceptable_statements"><h1 id="_e3cb0206-404d-4d8f-a1c5-2e7adbe1c5e0">5.  Unacceptable Statements</h1><p id="_5444927e-88e3-6a70-0198-4d27944a708d">Any statement which conveys, or appears to convey approval by the JCTLM of any other facet of the traceability statement other than the identity of the material, method or measurement service is unacceptable.</p><p id="_3b3de574-fbbb-fec7-0086-d659a487e542">It is acceptable to note that a JCTLM-listed material, procedure or measurement service was not available at the time of calibrator value assignment. This may be done in order to assure customers that an opportunity for higher-order traceability has not been overlooked.</p></div></main><script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     "HTML-CSS": { preferredFont: "STIX" },
     asciimath2jax: { delimiters: [['(#(', ')#)']] }
  });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>  <script>
+  <script>
     $("#toc").on('click', 'li', function(e) {
     $(this).parent().find('li.toc-active').removeClass('toc-active');
     $(this).addClass('toc-active');
@@ -1285,5 +1349,4 @@ $('#toggle').on('click', function(){
 anchors.add('h1, h2, h3, h4');
 </script>
 
-</body>
-</html>
+</body></html>

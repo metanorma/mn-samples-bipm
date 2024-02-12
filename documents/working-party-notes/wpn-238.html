@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en" xml:lang="en">
-  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
+<html lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
   <!--
 @charset "UTF-8";
 /*
@@ -103,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 
 blockquote, q {
   quotes: none; }
-  blockquote:before, blockquote:after, q:before, q:after {
+  blockquote::before, blockquote::after, q::before, q::after {
     content: '';
     content: none; }
 
@@ -126,8 +125,16 @@ b, strong {
 div.document-stage-band, div.document-type-band {
   background-color: #333333; }
 
-a.FootnoteRef + a.FootnoteRef:before {
+a.FootnoteRef + a.FootnoteRef::before {
   content: ", ";
+  vertical-align: super; }
+
+a.TableFootnoteRef + a.TableFootnoteRef::before {
+  content: ", ";
+  vertical-align: super; }
+
+a.TableFootnoteRef, span.TableFootnoteRef,
+a.FootnoteRef, span.FootnoteRef {
   vertical-align: super; }
 
 .addition {
@@ -136,6 +143,43 @@ a.FootnoteRef + a.FootnoteRef:before {
 .deletion {
   color: red;
   text-decoration: line-through; }
+
+ruby {
+  ruby-position: over;
+  -webkit-ruby-position: before; }
+
+ruby ruby {
+  ruby-position: under;
+  -webkit-ruby-position: after; }
+
+/* code highlighting with line numbers */
+table.rouge-line-table td.rouge-gutter {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-right: 1em; }
+
+table.rouge-line-table td.rouge-code {
+  -moz-user-select: all;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all; }
+
+table.rouge-line-table,
+table.rouge-line-table th,
+table.rouge-line-table td {
+  width: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%; }
+
+table.rouge-line-table pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;
+  font-size: 100%; }
 
 #brochure-band {
   background-color: #0AC442; }
@@ -271,6 +315,12 @@ main {
     padding-left: 30px; }
   #toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
     padding-left: 50px; }
+  #toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+    padding-left: 70px; }
+  #toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+    padding-left: 90px; }
+  #toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+    padding-left: 110px; }
   #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
     background: #6C734A;
     box-shadow: inset -5px 0px 10px -5px #6C734A !important; }
@@ -377,12 +427,16 @@ div.figure {
     font-weight: 700;
     font-size: 1em;
     text-align: center; }
-  div.figure > img {
+  div.figure > img, div.figure > svg {
     margin-left: auto;
     margin-right: auto;
     display: block;
     max-width: 100%;
     height: auto; }
+
+table div.figure {
+  padding: 0;
+  margin: 0; }
 
 /*
     Document types + stages
@@ -549,8 +603,11 @@ a:hover {
   background: #6C734A;
   box-shadow: 3px 0 0 #6C734A, -3px 0 0 #6C734A; }
 
-::selection,
-::-moz-selection {
+*::selection {
+  background: #6C734A;
+  color: white; }
+
+*::-moz-selection {
   background: #6C734A;
   color: white; }
 
@@ -563,7 +620,7 @@ ul, ol {
 ul li {
   list-style: none; }
 
-ul li:before {
+ul li::before {
   content: "—";
   display: inline-block;
   width: 1em;
@@ -587,7 +644,7 @@ ol ul > li:first-child {
 #toc-list li {
   list-style-type: none; }
 
-#toc li:before {
+#toc li::before {
   content: " ";
   display: none; }
 
@@ -608,13 +665,13 @@ ol[class="alphabet"] > li {
 ol[class="alphabet"] ol[class="alphabet"] > li {
   list-style: inherit; }
 
-ol[class="alphabet"] > li:before {
+ol[class="alphabet"] > li::before {
   counter-increment: alphabet;
   content: counter(alphabet, lower-alpha) ") ";
   position: absolute;
   left: -1.4em; }
 
-ol[class="alphabet"] ol[class="alphabet"] > li:before {
+ol[class="alphabet"] ol[class="alphabet"] > li::before {
   counter-increment: none;
   content: initial; }
 
@@ -628,13 +685,13 @@ ol[class="roman"] > li {
 ol[class="roman"] ol[class="roman"] > li {
   list-style: inherit; }
 
-ol[class="roman"] > li:before {
+ol[class="roman"] > li::before {
   counter-increment: roman;
   content: "(" counter(roman, lower-roman) ") ";
   position: absolute;
   left: -2.0em; }
 
-ol[class="roman"] ol[class="roman"] > li:before {
+ol[class="roman"] ol[class="roman"] > li::before {
   counter-increment: none;
   content: initial; }
 
@@ -748,7 +805,7 @@ table {
   table th, table td {
     padding: 1em; }
   table td.header {
-    font-weigth: 400; }
+    font-weight: 400; }
 
 p.TableTitle {
   text-align: center;
@@ -1022,7 +1079,66 @@ To top button
     display: none; } }
 
 -->
-</style><title>The relation between the numbers Mr and Bj</title>
+</style><style><!--pre.sourcecode table td { padding: 5px; }
+pre.sourcecode table pre { margin: 0; }
+pre.sourcecode, pre.sourcecode .w {
+  color: #444444;
+}
+pre.sourcecode .cp {
+  color: #CC00A3;
+}
+pre.sourcecode .cs {
+  color: #CC00A3;
+}
+pre.sourcecode .c, pre.sourcecode .ch, pre.sourcecode .cd, pre.sourcecode .cm, pre.sourcecode .cpf, pre.sourcecode .c1 {
+  color: #FF0000;
+}
+pre.sourcecode .kc {
+  color: #C34E00;
+}
+pre.sourcecode .kd {
+  color: #0000FF;
+}
+pre.sourcecode .kr {
+  color: #007575;
+}
+pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
+  color: #0000FF;
+}
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .ld, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+  color: #009C00;
+}
+pre.sourcecode .sa {
+  color: #0000FF;
+}
+pre.sourcecode .nb, pre.sourcecode .bp {
+  color: #C34E00;
+}
+pre.sourcecode .nt {
+  color: #0000FF;
+}
+
+--></style><title>The relation between the numbers 
+  
+    
+      
+        M
+      
+      r
+    
+  
+
+ii(M)_r and 
+  
+    
+      
+        B
+      
+      j
+    
+  
+
+ii(B)_j</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--TOC script import-->
@@ -1031,15 +1147,13 @@ To top button
 </script>
 
 <!--Google fonts-->
-<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" />
 
 <!--Font awesome import for the link icon-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
 <style class="anchorjs"></style>
-</link></link></link></head>
-  <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
-    <div class="title-section"><div class="document-stage-band" id="in-force-band">
+</head><body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container"><div class="title-section"><div class="document-stage-band" id="in-force-band">
     <p class="document-stage">In Force</p>
 </div>
 
@@ -1049,7 +1163,7 @@ To top button
 
 
 
-  <div id="toggle"> <span>&#x2022;</span> </div>
+  <div id="toggle"> <span>•</span> </div>
 
   <header>
 
@@ -1070,7 +1184,27 @@ To top button
 
     <div class="coverpage-title">
       
-      <span class="title-first">The relation between the numbers Mr and Bj</span><br />
+      <span class="title-first">The relation between the numbers 
+  
+    
+      
+        M
+      
+      r
+    
+  
+
+ii(M)_r and 
+  
+    
+      
+        B
+      
+      j
+    
+  
+
+ii(B)_j</span><br />
       <span class="title-second"></span>
       
     </div>
@@ -1090,7 +1224,7 @@ To top button
   
   <div class="coverpage-tc-name">
     
-    <span>J&#xF6;rg W. M&#xFC;ller ().
+    <span>Jörg W. Müller ().
   </span>
   
 
@@ -1112,23 +1246,26 @@ To top button
 <div class="info-section">
 <div class="copyright">
 <div class="boilerplate-copyright">
-    <div>
-      <p id="_2de5ab92-ce9a-3864-9f9f-cc0c00a0c4fd" style="text-align:center;"> &#xA9; Bureau International des Poids et Mesures 1995 all rights reserved</p>
-    </div>
-  </div>
-  <div class="boilerplate-license">
-    <div><h1 class="IntroTitle">Copyright statement</h1>
 
-      <p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
-    </div>
-  </div>
+<div id="_a169629f-474b-fdd7-d400-79f7ad5566b8">
+<p id="_81443509-4136-2455-6ffc-c9427bd095e2" style="text-align:center;">© Bureau International des Poids et Mesures 1995 all rights reserved</p>
+</div>
+</div>
+  <div class="boilerplate-license">
+
+<div id="_copyright_statement_2"><h1 class="IntroTitle">Copyright statement</h1>
+
+<p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/:">http://creativecommons.org/licenses/by/4.0/:</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
+</div>
+</div>
   <div id="boilerplate-legal-destination"></div>
 <div class="boilerplate-feedback">
-    <p id="_bd0b4a04-1c9b-db4f-f27f-b98101e93f33">BIPM<br />
-      Pavillon de Breteuil<br />
-      F-92312 S&#xE8;vres Cedex<br />
-      FRANCE</p>
-  </div>
+
+<p id="_e6428749-2432-0772-4c8e-ed6c34018916">BIPM<br />
+Pavillon de Breteuil<br />
+F-92312 Sèvres Cedex<br />
+FRANCE</p>
+</div>
 </div>
 
 <div class="rule"></div>
@@ -1137,1708 +1274,1190 @@ To top button
 
 
 </div>
-</div></header>
-      
-    </div>
-    <br />
-    <div class="prefatory-section"><nav>
-  <h1 id="content">Contents</h1>
-  <div id="toc"><ul><li class="h1"><a href="#toc0">      1.&#xA0; The relation between the numbers <span class="stem">
-  <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+</div></header></div><br /><div class="prefatory-section"><nav>
+  <div id="toc"><h1 class="IntroTitle">Contents</h1><ul><li class="h1"><a href="#_69db9e69-9532-415d-9fe5-e78534e3ed55">      1.  The relation between the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>M</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>r</mi>
-    </mrow>
-  </msub>
-</math>
-</span> and <span class="stem">
-  <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+    </msub>
+  </mstyle>
+</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>B</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>j</mi>
-    </mrow>
-  </msub>
-</math>
-</span></a></li><li class="h1"><a href="#toc1">      References</a></li></ul></div>
+    </msub>
+  </mstyle>
+</math></span></a></li>
+<li class="h1"><a href="#_da2f42c3-2bce-4254-b9b8-8f14761ab8c2">      References</a></li></ul></div>
 
 </nav>
 
 
 <div class="rule toc"></div>
+</div><br /><main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button><div class="authority">
 
-      
-    </div>
-    <br />
-    <main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-      <div class="authority">
-  
-  
-  
-</div>
-      <p class="zzSTDTitle1">The relation between the numbers Mr and Bj</p>
-      <div id="_the_relation_between_the_numbers_iim_r_and_iib_j">
-        <h1 id="toc0">1.&#xA0; The relation between the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+
+
+
+</div><br /><div id="_the_relation_between_the_numbers_iim_r_and_iib_j"><h1 id="_69db9e69-9532-415d-9fe5-e78534e3ed55">1.  The relation between the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>M</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>r</mi>
-    </mrow>
-  </msub>
+    </msub>
+  </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+  <mstyle displaystyle="false">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>B</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>j</mi>
-    </mrow>
-  </msub>
-</math></span></h1>
-        <p id="_b3c3ae70-4905-e4bd-f3e2-0d2f6336217d">In our recent study <a href="#muller">[1]</a> on alternate sums of powers of integers, i.e. of sums of the type</p>
-        <div id="eq1">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+    </msub>
+  </mstyle>
+</math></span></h1><p id="_b3c3ae70-4905-e4bd-f3e2-0d2f6336217d">In our recent study <a href="#muller">[1]</a> on alternate sums of powers of integers, i.e. of sums of the type</p><div id="eq1"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
       <mtext></mtext>
-    </mrow>
-    <mrow>
       <mi>r</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mo>&#x2124;</mo>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </munderover>
-  <msup>
-    <mrow>
-      <mfenced open="(" close=")">
-        <mrow>
-          <mo>&#x2212;</mo>
-          <mn>1</mn>
-        </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msup>
-  <msup>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msup>
-  <mo>,</mo>
-  <mtext>&#xA0;with&#xA0;</mtext>
-  <mi>r</mi>
-  <mo>=</mo>
-  <mn>1</mn>
-  <mo>,</mo>
-  <mn>2</mn>
-  <mo>,</mo>
-  <mo>&#x2026;</mo>
-  <mo>,</mo>
-</math></span>&#xA0; (1)</p>
-          </div>
-        </div>
-        <p id="_d0c26d69-63a5-fda2-a991-905ddcf3ab3e">it was shown that they can be expressed in the form</p>
-        <div id="eq2">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mtext></mtext>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mo>&#x2124;</mo>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>r</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-  </munderover>
-  <msub>
-    <mrow>
-      <mtext></mtext>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3BC;</mi>
+    </msub>
+    <msub>
+      <mstyle mathvariant="double-struck">
+        <mi>Z</mi>
       </mstyle>
-    </mrow>
+      <mi>n</mi>
+    </msub>
+    <mo>=</mo>
     <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-  <msup>
-    <mrow>
-      <mi>t</mi>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msup>
-  <mo>+</mo>
-  <mfrac>
-    <mrow>
-      <mn>1</mn>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </mfrac>
-  <msup>
-    <mrow>
-      <mfenced open="(" close=")">
+      <munderover>
+        <mo>∑</mo>
         <mrow>
-          <mo>&#x2212;</mo>
+          <mi>j</mi>
+          <mo>=</mo>
           <mn>1</mn>
         </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </msup>
-  <msup>
-    <mrow>
-      <mfenced open="(" close=")">
+        <mi>n</mi>
+      </munderover>
+      <msup>
         <mrow>
-          <mn>2</mn>
-          <mi>t</mi>
+          <mo>(</mo>
+          <mo>−</mo>
+          <mn>1</mn>
+          <mo>)</mo>
         </mrow>
-      </mfenced>
+        <mi>j</mi>
+      </msup>
     </mrow>
-    <mrow>
+    <msup>
+      <mi>j</mi>
       <mi>r</mi>
-    </mrow>
-  </msup>
-  <mo>,</mo>
-</math></span>&#xA0; (2)</p>
-          </div>
-        </div>
-        <p id="_b1588164-4122-9fec-f3a2-69cee2de534a">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>t</mi>
-  <mo>=</mo>
-  <mfenced open="[" close="]">
+    </msup>
+    <mo>, </mo>
+    <mtext> with </mtext>
+    <mi>r</mi>
+    <mo>=</mo>
+    <mn>1</mn>
+    <mo>,</mo>
+    <mn>2</mn>
+    <mo>,</mo>
+    <mo>…</mo>
+    <mo>,</mo>
+  </mstyle>
+</math></span>  (1)</p></div></div><p id="_d0c26d69-63a5-fda2-a991-905ddcf3ab3e">it was shown that they can be expressed in the form</p><div id="eq2"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mtext></mtext>
+      <mi>r</mi>
+    </msub>
+    <msub>
+      <mstyle mathvariant="double-struck">
+        <mi>Z</mi>
+      </mstyle>
+      <mi>n</mi>
+    </msub>
+    <mo>=</mo>
     <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mrow>
+          <mi>r</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+        </mrow>
+      </munderover>
+      <msub>
+        <mtext></mtext>
+        <mi>r</mi>
+      </msub>
+    </mrow>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>μ</mi>
+      </mstyle>
+      <mi>j</mi>
+    </msub>
+    <msup>
+      <mi>t</mi>
+      <mi>j</mi>
+    </msup>
+    <mo>+</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>)</mo>
+      </mrow>
+      <mi>n</mi>
+    </msup>
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <mn>2</mn>
+        <mi>t</mi>
+        <mo>)</mo>
+      </mrow>
+      <mi>r</mi>
+    </msup>
+    <mo>,</mo>
+  </mstyle>
+</math></span>  (2)</p></div></div><p id="_3304e346-bf7b-da88-8f04-00afa72b9c5c">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>t</mi>
+    <mo>=</mo>
+    <mrow>
+      <mo>[</mo>
       <mfrac>
         <mrow>
-          <mrow>
-            <mi>n</mi>
-            <mo>+</mo>
-            <mn>1</mn>
-          </mrow>
+          <mi>n</mi>
+          <mo>+</mo>
+          <mn>1</mn>
         </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
+        <mn>2</mn>
       </mfrac>
+      <mo>]</mo>
     </mrow>
-  </mfenced>
+  </mstyle>
 </math></span> is given by the number of terms in <a href="#eq1">Equation (1)</a>, while <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+  <mstyle displaystyle="false">
+    <msub>
       <mtext></mtext>
-    </mrow>
-    <mrow>
       <mi>r</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3BC;</mi>
+        <mi>μ</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>j</mi>
-    </mrow>
-  </msub>
-</math></span> are coefficients that have been tabulated.</p>
-        <p id="_8aa8abc5-3cf7-59f9-fdbb-0060b4581b0c">We found that these coefficients can be expressed by the &#x201C;basic&#x201D; integers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+    </msub>
+  </mstyle>
+</math></span> are coefficients that have been tabulated.</p><p id="_46146918-dc1f-d214-93a1-afec593d49b9">We found that these coefficients can be expressed by the “basic” integers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>M</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>r</mi>
-    </mrow>
-  </msub>
-  <mo>&#x2261;</mo>
-  <msub>
-    <mrow>
+    </msub>
+    <mo>≡</mo>
+    <msub>
       <mtext></mtext>
-    </mrow>
-    <mrow>
       <mi>r</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3BC;</mi>
+        <mi>μ</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>1</mn>
-    </mrow>
-  </msub>
-</math></span>, since</p>
-        <div id="eq3">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+    </msub>
+  </mstyle>
+</math></span>, since</p><div id="eq3"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
       <mtext></mtext>
-    </mrow>
-    <mrow>
       <mi>r</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3BC;</mi>
+        <mi>μ</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>j</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
+    </msub>
+    <mo>=</mo>
+    <mfrac>
       <mrow>
         <msup>
+          <mn>2</mn>
           <mrow>
-            <mn>2</mn>
-          </mrow>
-          <mrow>
-            <mrow>
-              <mi>j</mi>
-              <mo>&#x2212;</mo>
-              <mn>1</mn>
-            </mrow>
+            <mi>j</mi>
+            <mo>−</mo>
+            <mn>1</mn>
           </mrow>
         </msup>
         <mi>r</mi>
-        <mo>!</mo>
+        <mi>!</mi>
       </mrow>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>j</mi>
-        <mo>!</mo>
-        <mfenced open="(" close=")">
-          <mrow>
-            <mi>r</mi>
-            <mo>&#x2212;</mo>
-            <mi>j</mi>
-            <mo>+</mo>
-            <mn>1</mn>
-          </mrow>
-        </mfenced>
-        <mo>!</mo>
+        <mi>!</mi>
+        <mrow>
+          <mo>(</mo>
+          <mi>r</mi>
+          <mo>−</mo>
+          <mi>j</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+          <mo>)</mo>
+        </mrow>
+        <mi>!</mi>
       </mrow>
-    </mrow>
-  </mfrac>
-  <msub>
-    <mrow>
+    </mfrac>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>M</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>r</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mi>j</mi>
         <mo>+</mo>
         <mn>1</mn>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>,</mo>
-  <mtext>&#xA0;for&#xA0;</mtext>
-  <mi>r</mi>
-  <mo>&#x3e;</mo>
-  <mi>j</mi>
-</math></span>&#xA0; (3)</p>
-          </div>
-        </div>
-        <p id="_a556e4d7-cf2a-bbf4-e6cc-cd7b624c6d47">The alternate sum <a href="#eq1">Equation (1)</a>, written in powers of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>t</mi>
+    </msub>
+    <mo>,</mo>
+    <mtext> for </mtext>
+    <mi>r</mi>
+    <mo>&#x3e;</mo>
+    <mi>j</mi>
+  </mstyle>
+</math></span>  (3)</p></div></div><p id="_aa062cb6-1b4c-fdb0-de9a-9d58e6168bdf">The alternate sum <a href="#eq1">Equation (1)</a>, written in powers of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>t</mi>
+  </mstyle>
 </math></span>, thus begins for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>r</mi>
-</math></span> even with</p>
-        <div id="eq4">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+  <mstyle displaystyle="false">
+    <mi>r</mi>
+  </mstyle>
+</math></span> even with</p><div id="eq4"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
       <mtext></mtext>
-    </mrow>
-    <mrow>
       <mi>r</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mo>&#x2124;</mo>
-    </mrow>
-    <mrow>
+    </msub>
+    <msub>
+      <mstyle mathvariant="double-struck">
+        <mi>Z</mi>
+      </mstyle>
       <mi>n</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <msub>
-    <mrow>
+    </msub>
+    <mo>=</mo>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>M</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>r</mi>
-    </mrow>
-  </msub>
-  <mi>t</mi>
-  <mo>+</mo>
-  <msub>
-    <mrow>
+    </msub>
+    <mi>t</mi>
+    <mo>+</mo>
+    <msub>
       <mtext></mtext>
-    </mrow>
-    <mrow>
       <mi>r</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3BC;</mi>
+        <mi>μ</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msub>
-  <msup>
-    <mrow>
+    </msub>
+    <msup>
       <mi>t</mi>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msup>
-  <mo>+</mo>
-  <mo>&#x2026;</mo>
-  <mo>,</mo>
-</math></span>&#xA0; (4)</p>
-          </div>
-        </div>
-        <p id="_bc4b10b7-8130-1a1b-3776-a7ad9e940890">whereas for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>r</mi>
+    </msup>
+    <mo>+</mo>
+    <mo>…</mo>
+    <mo>,</mo>
+  </mstyle>
+</math></span>  (4)</p></div></div><p id="_77e46907-274a-764a-ddbb-f5c89207a5cb">whereas for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>r</mi>
+  </mstyle>
 </math></span> odd there is no term proportional to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>t</mi>
-</math></span>.</p>
-        <p id="_9b353682-7b07-d5d0-a88a-f464b48dff7e">It appears that the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+  <mstyle displaystyle="false">
+    <mi>t</mi>
+  </mstyle>
+</math></span>.</p><p id="_82800867-733a-4028-677e-8e96d4b91284">It appears that the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>M</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>r</mi>
-    </mrow>
-  </msub>
+    </msub>
+  </mstyle>
 </math></span> play a role similar to that of the well-known Bernoulli numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+  <mstyle displaystyle="false">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>B</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>j</mi>
-    </mrow>
-  </msub>
-</math></span> which occur in the study of the sums</p>
-        <div id="eq5">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+    </msub>
+  </mstyle>
+</math></span> which occur in the study of the sums</p><div id="eq5"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
       <mtext></mtext>
-    </mrow>
-    <mrow>
       <mi>r</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>S</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>n</mi>
-    </mrow>
-  </msub>
-  <mo>&#x2261;</mo>
-  <munderover>
+    </msub>
+    <mo>≡</mo>
     <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </munderover>
-  <msup>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msup>
-  <mo>.</mo>
-</math></span>&#xA0; (5)</p>
-          </div>
-        </div>
-        <p id="_7c7f55be-5a30-a345-a6a9-ba12d41215dc">Some similarities between the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>B</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>M</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msub>
-</math></span> have already been noted in <a href="#muller">[1]</a>, but it has not been possible to establish a clear link between the two series. It is the purpose of the present Note to make up for this deficiency. Some familiarity with <a href="#muller">[1]</a> will make the reading easier.</p>
-        <p id="_62e1cdb8-3dfd-c7f2-d321-ddd2d56caa8f">The idea is to use the fact that the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>M</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msub>
-</math></span> are the coefficients of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>t</mi>
-</math></span>, as shown in <a href="#eq4">Equation (4)</a>. If we can subdivide <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mtext></mtext>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mo>&#x2124;</mo>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </msub>
-</math></span> into a sum of contributions of type <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mtext></mtext>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>S</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </msub>
-</math></span> and determine the coefficients of the linear terms <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>t</mi>
-</math></span> (in which the Bernoulli numbers occur), it must be possible to obtain the required relation by comparison of the respective coefficients.</p>
-        <p id="_6a18ad0a-dbda-8276-aa1e-8634e5380f22">Let us begin by decomposing the alternate sum <a href="#eq1">Equation (1)</a> in a suitable way&#x2009;&#x2014;&#x2009;the very  rearrangement we tried to avoid in <a href="#muller">[1]</a>. Since <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>n</mi>
-</math></span> is even, we can put <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>n</mi>
-  <mo>/</mo>
-  <mn>2</mn>
-  <mo>=</mo>
-  <mi>t</mi>
-</math></span>. Then</p>
-        <div id="eq6">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mtext></mtext>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mo>&#x2124;</mo>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mi>t</mi>
-    </mrow>
-  </munderover>
-  <msup>
-    <mrow>
-      <mfenced open="(" close=")">
+      <munderover>
+        <mo>∑</mo>
         <mrow>
-          <mn>2</mn>
           <mi>j</mi>
-        </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msup>
-  <mo>&#x2212;</mo>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mi>t</mi>
-    </mrow>
-  </munderover>
-  <msup>
-    <mrow>
-      <mfenced open="(" close=")">
-        <mrow>
-          <mn>2</mn>
-          <mi>j</mi>
-          <mo>&#x2212;</mo>
+          <mo>=</mo>
           <mn>1</mn>
         </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msup>
-</math></span>&#xA0; (6)</p>
-          </div>
-        </div>
-        <div id="_24dff6cb-c193-59de-9a0c-fcc4e6e685b3">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo>=</mo>
-  <msup>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msup>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
+        <mi>n</mi>
+      </munderover>
+      <msup>
         <mi>j</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mi>t</mi>
-    </mrow>
-  </munderover>
-  <msup>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msup>
-  <mo>&#x2212;</mo>
-  <msup>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msup>
-  <msup>
-    <mrow>
-      <mfenced open="(" close=")">
-        <mrow>
-          <mfrac>
-            <mrow>
-              <mn>1</mn>
-            </mrow>
-            <mrow>
-              <mn>2</mn>
-            </mrow>
-          </mfrac>
-        </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msup>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mi>t</mi>
-    </mrow>
-  </munderover>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>k</mi>
-        <mo>=</mo>
-        <mn>0</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </munderover>
-  <mfenced open="(" close=")">
-    <mtable>
-      <mtr>
-        <mtd>
-          <mi>r</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>k</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-  </mfenced>
-  <msup>
-    <mrow>
-      <mfenced open="(" close=")">
-        <mrow>
-          <mo>&#x2212;</mo>
-          <mn>2</mn>
-        </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
-      <mi>k</mi>
-    </mrow>
-  </msup>
-  <msup>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-    <mrow>
-      <mi>k</mi>
-    </mrow>
-  </msup>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div id="_ee1dde97-68f9-0285-8d75-148e7634de10">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo>=</mo>
-  <msup>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msup>
-  <msub>
-    <mrow>
-      <mtext></mtext>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>S</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </msub>
-  <mo>&#x2212;</mo>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>k</mi>
-        <mo>=</mo>
-        <mn>0</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </munderover>
-  <mfenced open="(" close=")">
-    <mtable>
-      <mtr>
-        <mtd>
-          <mi>r</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>k</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-  </mfenced>
-  <msup>
-    <mrow>
-      <mfenced open="(" close=")">
-        <mrow>
-          <mo>&#x2212;</mo>
-          <mn>2</mn>
-        </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
-      <mi>k</mi>
-    </mrow>
-  </msup>
-  <msub>
-    <mrow>
-      <mtext></mtext>
-    </mrow>
-    <mrow>
-      <mi>k</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>S</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </msub>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div id="_1464ef96-7651-4248-63a1-12e9249dcd2d">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo>=</mo>
-  <mo>&#x2212;</mo>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>k</mi>
-        <mo>=</mo>
-        <mn>0</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mrow>
         <mi>r</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-      </mrow>
+      </msup>
     </mrow>
-  </munderover>
-  <mfenced open="(" close=")">
-    <mtable>
-      <mtr>
-        <mtd>
-          <mi>r</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>k</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-  </mfenced>
-  <msup>
-    <mrow>
-      <mfenced open="(" close=")">
-        <mrow>
-          <mo>&#x2212;</mo>
-          <mn>2</mn>
-        </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
-      <mi>k</mi>
-    </mrow>
-  </msup>
-  <msub>
-    <mrow>
-      <mtext></mtext>
-    </mrow>
-    <mrow>
-      <mi>k</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>S</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </msub>
-  <mo>.</mo>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <p id="_18640f1c-49b6-7a05-bf51-b9995c41f003">Let us now look at the development of a Bernoullian sum <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mtext></mtext>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>S</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </msub>
-</math></span>. From relation (23) given in <a href="#muller">[1]</a> we conclude that, for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>r</mi>
-  <mo>&#x2265;</mo>
-  <mn>2</mn>
-</math></span> and even,</p>
-        <div id="eq7">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mtext></mtext>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>S</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mo>&#x2026;</mo>
-  <mo>+</mo>
-  <mfrac>
-    <mrow>
-      <mn>1</mn>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </mfrac>
-  <mfenced open="(" close=")">
-    <mtable>
-      <mtr>
-        <mtd>
-          <mi>r</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mrow>
-            <mi>r</mi>
-            <mo>&#x2212;</mo>
-            <mn>1</mn>
-          </mrow>
-        </mtd>
-      </mtr>
-    </mtable>
-  </mfenced>
-  <msub>
-    <mrow>
+    <mo>.</mo>
+  </mstyle>
+</math></span>  (5)</p></div></div><p id="_216b38f8-88ac-c1c2-2ecc-7902bd8034f0">Some similarities between the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>B</mi>
       </mstyle>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msub>
-  <msup>
-    <mrow>
-      <mi>t</mi>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>r</mi>
-        <mo>+</mo>
-        <mn>1</mn>
-        <mo>&#x2212;</mo>
-        <mi>r</mi>
-      </mrow>
-    </mrow>
-  </msup>
-  <mo>=</mo>
-  <mo>&#x2026;</mo>
-  <mo>+</mo>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>B</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msub>
-  <mi>t</mi>
-  <mo>.</mo>
-</math></span>&#xA0; (7)</p>
-          </div>
-        </div>
-        <p id="_649fde06-a2f1-a662-7036-cfa570b4baba">We note in passing that <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mtext></mtext>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>S</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </msub>
-</math></span> with <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>r</mi>
-</math></span> odd has no terms proportional to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>t</mi>
-</math></span> as the development stops at <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msup>
-    <mrow>
-      <mi>t</mi>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msup>
-</math></span>, exactly as for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mtext></mtext>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mo>&#x2124;</mo>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </msub>
-</math></span>.</p>
-        <p id="_53a9a873-9e61-226b-c713-db8f1acd697a">The two cases with <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>r</mi>
-  <mo>=</mo>
-  <mn>0</mn>
+      <mi>j</mi>
+    </msub>
+  </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>r</mi>
-  <mo>=</mo>
-  <mn>1</mn>
-</math></span> appearing in <a href="#eq6">Equation (6)</a> have to be treated separately. One finds</p>
-        <div id="eq8">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mtext></mtext>
-    </mrow>
-    <mrow>
-      <mn>0</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>S</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mi>t</mi>
-</math></span>&#xA0; (8)</p>
-          </div>
-        </div>
-        <p id="_ddb95597-c09a-e5cf-9138-c2b11309256d">and</p>
-        <div id="_cc948f5c-e639-b15b-61fd-957283e43c6b">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mtext></mtext>
-    </mrow>
-    <mrow>
-      <mn>1</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>S</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mfrac>
-    <mrow>
-      <mn>1</mn>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </mfrac>
-  <mi>t</mi>
-  <mo>+</mo>
-  <mfrac>
-    <mrow>
-      <mn>1</mn>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </mfrac>
-  <msup>
-    <mrow>
-      <mi>t</mi>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msup>
-  <mo>.</mo>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <p id="_d88ac9e2-1cae-757e-8212-af0be9a51f6c">A look at <a href="#eq4">Equation (4)</a> shows that the value of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+  <mstyle displaystyle="false">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>M</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>r</mi>
-    </mrow>
-  </msub>
-</math></span> can be obtained from <a href="#eq6">Equation (6)</a> by assembling the coefficients of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>t</mi>
-</math></span> appearing in <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+    </msub>
+  </mstyle>
+</math></span> have already been noted in <a href="#muller">[1]</a>, but it has not been possible to establish a clear link between the two series. It is the purpose of the present Note to make up for this deficiency. Some familiarity with <a href="#muller">[1]</a> will make the reading easier.</p><p id="_c825430d-3e91-e626-5a22-a92c1fee067a">The idea is to use the fact that the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>M</mi>
+      </mstyle>
+      <mi>r</mi>
+    </msub>
+  </mstyle>
+</math></span> are the coefficients of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>t</mi>
+  </mstyle>
+</math></span>, as shown in <a href="#eq4">Equation (4)</a>. If we can subdivide <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
       <mtext></mtext>
-    </mrow>
-    <mrow>
-      <mi>k</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+      <mi>r</mi>
+    </msub>
+    <msub>
+      <mstyle mathvariant="double-struck">
+        <mi>Z</mi>
+      </mstyle>
+      <mi>n</mi>
+    </msub>
+  </mstyle>
+</math></span> into a sum of contributions of type <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mtext></mtext>
+      <mi>r</mi>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>S</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>n</mi>
-    </mrow>
-  </msub>
-</math></span>. Writing <a href="#eq6">Equation (6)</a> as</p>
-        <div id="eq9">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+    </msub>
+  </mstyle>
+</math></span> and determine the coefficients of the linear terms <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>t</mi>
+  </mstyle>
+</math></span> (in which the Bernoulli numbers occur), it must be possible to obtain the required relation by comparison of the respective coefficients.</p><p id="_d90ae285-a6b6-b7cc-c697-2a8280e4a551">Let us begin by decomposing the alternate sum <a href="#eq1">Equation (1)</a> in a suitable way — the very  rearrangement we tried to avoid in <a href="#muller">[1]</a>. Since <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>n</mi>
+  </mstyle>
+</math></span> is even, we can put <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>n</mi>
+    <mo>/</mo>
+    <mn>2</mn>
+    <mo>=</mo>
+    <mi>t</mi>
+  </mstyle>
+</math></span>. Then</p><div id="eq6"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
       <mtext></mtext>
-    </mrow>
-    <mrow>
       <mi>r</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mo>&#x2124;</mo>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mo>&#x2212;</mo>
-  <msub>
-    <mrow>
-      <mtext></mtext>
-    </mrow>
-    <mrow>
-      <mn>0</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>S</mi>
+    </msub>
+    <msub>
+      <mstyle mathvariant="double-struck">
+        <mi>Z</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>n</mi>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <mn>2</mn>
-  <msub>
+    </msub>
+    <mo>=</mo>
     <mrow>
-      <mi>r</mi>
-    </mrow>
-    <mrow>
-      <mn>1</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>S</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </msub>
-  <mo>&#x2212;</mo>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>k</mi>
-        <mo>=</mo>
-        <mn>2</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>r</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-  </munderover>
-  <mfenced open="(" close=")">
-    <mtable>
-      <mtr>
-        <mtd>
-          <mi>r</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>k</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-  </mfenced>
-  <msup>
-    <mrow>
-      <mfenced open="(" close=")">
+      <munderover>
+        <mo>∑</mo>
         <mrow>
-          <mo>&#x2212;</mo>
-          <mn>2</mn>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
         </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
-      <mi>k</mi>
-    </mrow>
-  </msup>
-  <msub>
-    <mrow>
-      <mtext></mtext>
-    </mrow>
-    <mrow>
-      <mi>k</mi>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>S</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>n</mi>
-    </mrow>
-  </msub>
-  <mo>,</mo>
-</math></span>&#xA0; (9)</p>
-          </div>
-        </div>
-        <p id="_ce0c15bb-ca23-dbd5-1029-9c6ba837d654">we find, with <a href="#eq7">Equation (7)</a> and <a href="#eq8">Equation (8)</a>,</p>
-        <div id="eq10">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>M</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mo>&#x2212;</mo>
-  <mn>1</mn>
-  <mo>+</mo>
-  <mn>2</mn>
-  <mi>r</mi>
-  <mfrac>
-    <mrow>
-      <mn>1</mn>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </mfrac>
-  <mo>&#x2212;</mo>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>2</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>r</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-  </munderover>
-  <mfenced open="(" close=")">
-    <mtable>
-      <mtr>
-        <mtd>
-          <mi>r</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>j</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-  </mfenced>
-  <msup>
-    <mrow>
-      <mfenced open="(" close=")">
-        <mrow>
-          <mo>&#x2212;</mo>
-          <mn>2</mn>
-        </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msup>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>B</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-</math></span>&#xA0; (10)</p>
-          </div>
-        </div>
-        <div id="_c95b14f6-8aa6-28b6-3c21-198d91cb334b">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo>=</mo>
-  <mi>r</mi>
-  <mo>&#x2212;</mo>
-  <mn>1</mn>
-  <mo>&#x2212;</mo>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>2</mn>
-        <mtext>, (even)</mtext>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>r</mi>
-        <mo>&#x2212;</mo>
-        <mn>2</mn>
-      </mrow>
-    </mrow>
-  </munderover>
-  <msup>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
-    <mtable>
-      <mtr>
-        <mtd>
-          <mi>r</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>j</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-  </mfenced>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>B</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-  <mo>,</mo>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <p id="_31ffb0c0-a450-9507-cd4e-9c4ac9e99b61">This is the relation looked for. It shows that the two series of numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>M</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </msub>
-</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>B</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-</math></span> are indeed closely linked, and relation <a href="#eq10">Equation (10)</a> is even somewhat reminiscent of the recurrence formula (18) found previously in <a href="#muller">[1]</a>. It may be worthwhile noting that the sum in <a href="#eq10">Equation (10)</a> yields an even integer.</p>
-        <p id="_3d8bab65-0f28-3ca9-6ddd-7ad1475ba6b2">Let us check (10) with three practical applications.</p>
-        <ul id="_6db2c6ea-dec1-bbad-5138-292773365c8e"><li><p id="_100c8c78-5303-4785-83a7-f6163d3b2123">For = 8:</p>
-<div id="_26a04941-7df7-89da-3f7a-2a76e2722f3b"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>M</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>8</mn>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mn>8</mn>
-  <mo>&#x2212;</mo>
-  <mn>1</mn>
-  <mo>&#x2212;</mo>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>2</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mn>6</mn>
-    </mrow>
-  </munderover>
-  <msup>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
-    <mtable>
-      <mtr>
-        <mtd>
-          <mn>8</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>j</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-  </mfenced>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>B</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-</math></span></p></div></div>
-
-<div id="_36726a0f-7c1c-679b-98e9-bf4d0f7b9cb6"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo>=</mo>
-  <mn>7</mn>
-  <mo>&#x2212;</mo>
-  <mfenced open="[" close="]">
-    <mrow>
+        <mi>t</mi>
+      </munderover>
       <msup>
         <mrow>
+          <mo>(</mo>
+          <mn>2</mn>
+          <mi>j</mi>
+          <mo>)</mo>
+        </mrow>
+        <mi>r</mi>
+      </msup>
+    </mrow>
+    <mo>−</mo>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>t</mi>
+      </munderover>
+      <msup>
+        <mrow>
+          <mo>(</mo>
+          <mn>2</mn>
+          <mi>j</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+          <mo>)</mo>
+        </mrow>
+        <mi>r</mi>
+      </msup>
+    </mrow>
+  </mstyle>
+</math></span>  (6)</p></div></div><div id="_7048015a-27ee-ccc8-d180-a375df04a1d3"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <msup>
+      <mn>2</mn>
+      <mi>r</mi>
+    </msup>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>t</mi>
+      </munderover>
+      <msup>
+        <mi>j</mi>
+        <mi>r</mi>
+      </msup>
+    </mrow>
+    <mo>−</mo>
+    <msup>
+      <mn>2</mn>
+      <mi>r</mi>
+    </msup>
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mn>2</mn>
+        </mfrac>
+        <mo>)</mo>
+      </mrow>
+      <mi>r</mi>
+    </msup>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>t</mi>
+      </munderover>
+      <mrow>
+        <munderover>
+          <mo>∑</mo>
+          <mrow>
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mi>r</mi>
+        </munderover>
+        <mrow>
+          <mo>(</mo>
+          <mtable>
+            <mtr>
+              <mtd>
+                <mi>r</mi>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mi>k</mi>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <mo>−</mo>
+        <mn>2</mn>
+        <mo>)</mo>
+      </mrow>
+      <mi>k</mi>
+    </msup>
+    <msup>
+      <mi>j</mi>
+      <mi>k</mi>
+    </msup>
+  </mstyle>
+</math></span></p></div></div><div id="_86311335-5eef-ed60-3a3b-764ddd911a52"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <msup>
+      <mn>2</mn>
+      <mi>r</mi>
+    </msup>
+    <msub>
+      <mtext></mtext>
+      <mi>r</mi>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>S</mi>
+      </mstyle>
+      <mi>n</mi>
+    </msub>
+    <mo>−</mo>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>k</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+        </mrow>
+        <mi>r</mi>
+      </munderover>
+      <mrow>
+        <mo>(</mo>
+        <mtable>
+          <mtr>
+            <mtd>
+              <mi>r</mi>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mi>k</mi>
+            </mtd>
+          </mtr>
+        </mtable>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <mo>−</mo>
+        <mn>2</mn>
+        <mo>)</mo>
+      </mrow>
+      <mi>k</mi>
+    </msup>
+    <msub>
+      <mtext></mtext>
+      <mi>k</mi>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>S</mi>
+      </mstyle>
+      <mi>n</mi>
+    </msub>
+  </mstyle>
+</math></span></p></div></div><div id="_66db95d6-4fde-c0b2-3134-d1903d6185ad"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <mo>−</mo>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>k</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+        </mrow>
+        <mrow>
+          <mi>r</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+        </mrow>
+      </munderover>
+      <mrow>
+        <mo>(</mo>
+        <mtable>
+          <mtr>
+            <mtd>
+              <mi>r</mi>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mi>k</mi>
+            </mtd>
+          </mtr>
+        </mtable>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <mo>−</mo>
+        <mn>2</mn>
+        <mo>)</mo>
+      </mrow>
+      <mi>k</mi>
+    </msup>
+    <msub>
+      <mtext></mtext>
+      <mi>k</mi>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>S</mi>
+      </mstyle>
+      <mi>n</mi>
+    </msub>
+    <mo>.</mo>
+  </mstyle>
+</math></span></p></div></div><p id="_cda1789e-5278-0fb9-7d5a-fffdc995b797">Let us now look at the development of a Bernoullian sum <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mtext></mtext>
+      <mi>r</mi>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>S</mi>
+      </mstyle>
+      <mi>n</mi>
+    </msub>
+  </mstyle>
+</math></span>. From relation (23) given in <a href="#muller">[1]</a> we conclude that, for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>r</mi>
+    <mo>≥</mo>
+    <mn>2</mn>
+  </mstyle>
+</math></span> and even,</p><div id="eq7"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mtext></mtext>
+      <mi>r</mi>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>S</mi>
+      </mstyle>
+      <mi>n</mi>
+    </msub>
+    <mo>=</mo>
+    <mo>…</mo>
+    <mo>+</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mi>r</mi>
+    </mfrac>
+    <mrow>
+      <mrow>
+        <mo>(</mo>
+        <mtable>
+          <mtr>
+            <mtd>
+              <mi>r</mi>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mi>r</mi>
+              <mo>−</mo>
+              <mn>1</mn>
+            </mtd>
+          </mtr>
+        </mtable>
+        <mo>)</mo>
+      </mrow>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>B</mi>
+        </mstyle>
+        <mi>r</mi>
+      </msub>
+      <msup>
+        <mi>t</mi>
+        <mrow>
+          <mi>r</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+          <mo>−</mo>
+          <mi>r</mi>
+        </mrow>
+      </msup>
+      <mo>=</mo>
+      <mo>…</mo>
+      <mo>+</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>B</mi>
+        </mstyle>
+        <mi>r</mi>
+      </msub>
+      <mi>t</mi>
+      <mo>.</mo>
+    </mrow>
+  </mstyle>
+</math></span>  (7)</p></div></div><p id="_acd29f24-52b2-03f9-fa74-6f2e8ba6be13">We note in passing that <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mtext></mtext>
+      <mi>r</mi>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>S</mi>
+      </mstyle>
+      <mi>n</mi>
+    </msub>
+  </mstyle>
+</math></span> with <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>r</mi>
+  </mstyle>
+</math></span> odd has no terms proportional to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>t</mi>
+  </mstyle>
+</math></span> as the development stops at <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msup>
+      <mi>t</mi>
+      <mn>2</mn>
+    </msup>
+  </mstyle>
+</math></span>, exactly as for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mtext></mtext>
+      <mi>r</mi>
+    </msub>
+    <msub>
+      <mstyle mathvariant="double-struck">
+        <mi>Z</mi>
+      </mstyle>
+      <mi>n</mi>
+    </msub>
+  </mstyle>
+</math></span>.</p><p id="_3265aa69-d38f-9d70-4b13-0e81ca144272">The two cases with <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>r</mi>
+    <mo>=</mo>
+    <mn>0</mn>
+  </mstyle>
+</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>r</mi>
+    <mo>=</mo>
+    <mn>1</mn>
+  </mstyle>
+</math></span> appearing in <a href="#eq6">Equation (6)</a> have to be treated separately. One finds</p><div id="eq8"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mtext></mtext>
+      <mn>0</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>S</mi>
+      </mstyle>
+      <mi>n</mi>
+    </msub>
+    <mo>=</mo>
+    <mi>t</mi>
+  </mstyle>
+</math></span>  (8)</p></div></div><p id="_ddb95597-c09a-e5cf-9138-c2b11309256d">and</p><div id="_c6aa3c7e-1e30-9836-7230-292bb1ad8df0"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mtext></mtext>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>S</mi>
+      </mstyle>
+      <mi>n</mi>
+    </msub>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+    <mi>t</mi>
+    <mo>+</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+    <msup>
+      <mi>t</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>.</mo>
+  </mstyle>
+</math></span></p></div></div><p id="_9545efdd-d7a3-5d53-2f06-adc9840a6dc7">A look at <a href="#eq4">Equation (4)</a> shows that the value of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>M</mi>
+      </mstyle>
+      <mi>r</mi>
+    </msub>
+  </mstyle>
+</math></span> can be obtained from <a href="#eq6">Equation (6)</a> by assembling the coefficients of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>t</mi>
+  </mstyle>
+</math></span> appearing in <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mtext></mtext>
+      <mi>k</mi>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>S</mi>
+      </mstyle>
+      <mi>n</mi>
+    </msub>
+  </mstyle>
+</math></span>. Writing <a href="#eq6">Equation (6)</a> as</p><div id="eq9"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mtext></mtext>
+      <mi>r</mi>
+    </msub>
+    <msub>
+      <mstyle mathvariant="double-struck">
+        <mi>Z</mi>
+      </mstyle>
+      <mi>n</mi>
+    </msub>
+    <mo>=</mo>
+    <mo>−</mo>
+    <msub>
+      <mtext></mtext>
+      <mn>0</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>S</mi>
+      </mstyle>
+      <mi>n</mi>
+    </msub>
+    <mo>+</mo>
+    <mn>2</mn>
+    <msub>
+      <mi>r</mi>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>S</mi>
+      </mstyle>
+      <mi>n</mi>
+    </msub>
+    <mo>−</mo>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>k</mi>
+          <mo>=</mo>
           <mn>2</mn>
         </mrow>
         <mrow>
+          <mi>r</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+        </mrow>
+      </munderover>
+      <mrow>
+        <mo>(</mo>
+        <mtable>
+          <mtr>
+            <mtd>
+              <mi>r</mi>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mi>k</mi>
+            </mtd>
+          </mtr>
+        </mtable>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <mo>−</mo>
+        <mn>2</mn>
+        <mo>)</mo>
+      </mrow>
+      <mi>k</mi>
+    </msup>
+    <msub>
+      <mtext></mtext>
+      <mi>k</mi>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>S</mi>
+      </mstyle>
+      <mi>n</mi>
+    </msub>
+    <mo>,</mo>
+  </mstyle>
+</math></span>  (9)</p></div></div><p id="_ce0c15bb-ca23-dbd5-1029-9c6ba837d654">we find, with <a href="#eq7">Equation (7)</a> and <a href="#eq8">Equation (8)</a>,</p><div id="eq10"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>M</mi>
+      </mstyle>
+      <mi>r</mi>
+    </msub>
+    <mo>=</mo>
+    <mo>−</mo>
+    <mn>1</mn>
+    <mo>+</mo>
+    <mn>2</mn>
+    <mi>r</mi>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+    <mo>−</mo>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
           <mn>2</mn>
         </mrow>
+        <mrow>
+          <mi>r</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+        </mrow>
+      </munderover>
+      <mrow>
+        <mo>(</mo>
+        <mtable>
+          <mtr>
+            <mtd>
+              <mi>r</mi>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mi>j</mi>
+            </mtd>
+          </mtr>
+        </mtable>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <mo>−</mo>
+        <mn>2</mn>
+        <mo>)</mo>
+      </mrow>
+      <mi>j</mi>
+    </msup>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mi>j</mi>
+    </msub>
+  </mstyle>
+</math></span>  (10)</p></div></div><div id="_1fee6e05-e532-6162-e736-f2036b2bf94c"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <mi>r</mi>
+    <mo>−</mo>
+    <mn>1</mn>
+    <mo>−</mo>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>2</mn>
+          <mtext>, (even)</mtext>
+        </mrow>
+        <mrow>
+          <mi>r</mi>
+          <mo>−</mo>
+          <mn>2</mn>
+        </mrow>
+      </munderover>
+      <msup>
+        <mn>2</mn>
+        <mi>j</mi>
       </msup>
-      <mfenced open="(" close=")">
+    </mrow>
+    <mrow>
+      <mrow>
+        <mo>(</mo>
+        <mtable>
+          <mtr>
+            <mtd>
+              <mi>r</mi>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mi>j</mi>
+            </mtd>
+          </mtr>
+        </mtable>
+        <mo>)</mo>
+      </mrow>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>B</mi>
+        </mstyle>
+        <mi>j</mi>
+      </msub>
+      <mo>,</mo>
+    </mrow>
+  </mstyle>
+</math></span></p></div></div><p id="_56c6e577-9e9e-6f11-3dcc-8253fe1b48ed">This is the relation looked for. It shows that the two series of numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>M</mi>
+      </mstyle>
+      <mi>r</mi>
+    </msub>
+  </mstyle>
+</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mi>j</mi>
+    </msub>
+  </mstyle>
+</math></span> are indeed closely linked, and relation <a href="#eq10">Equation (10)</a> is even somewhat reminiscent of the recurrence formula (18) found previously in <a href="#muller">[1]</a>. It may be worthwhile noting that the sum in <a href="#eq10">Equation (10)</a> yields an even integer.</p><p id="_3d8bab65-0f28-3ca9-6ddd-7ad1475ba6b2">Let us check (10) with three practical applications.</p><ul id="_7db7dc15-0b67-04e2-2cc1-6e840cee72ed"><li><p id="_100c8c78-5303-4785-83a7-f6163d3b2123">For = 8:</p>
+<div id="_2db848d0-ac8f-6861-3d2d-1ee2a963229e"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>M</mi>
+      </mstyle>
+      <mn>8</mn>
+    </msub>
+    <mo>=</mo>
+    <mn>8</mn>
+    <mo>−</mo>
+    <mn>1</mn>
+    <mo>−</mo>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>2</mn>
+        </mrow>
+        <mn>6</mn>
+      </munderover>
+      <msup>
+        <mn>2</mn>
+        <mi>j</mi>
+      </msup>
+    </mrow>
+    <mrow>
+      <mrow>
+        <mo>(</mo>
         <mtable>
           <mtr>
             <mtd>
@@ -2847,321 +2466,317 @@ To top button
           </mtr>
           <mtr>
             <mtd>
-              <mn>2</mn>
+              <mi>j</mi>
             </mtd>
           </mtr>
         </mtable>
-      </mfenced>
+        <mo>)</mo>
+      </mrow>
       <msub>
+        <mstyle mathvariant="italic">
+          <mi>B</mi>
+        </mstyle>
+        <mi>j</mi>
+      </msub>
+    </mrow>
+  </mstyle>
+</math></span></p></div></div>
+
+<div id="_f8cc0016-2027-e841-03de-f2722596d8ff"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <mn>7</mn>
+    <mo>−</mo>
+    <mrow>
+      <mo>[</mo>
+      <msup>
+        <mn>2</mn>
+        <mn>2</mn>
+      </msup>
+      <mrow>
         <mrow>
+          <mo>(</mo>
+          <mtable>
+            <mtr>
+              <mtd>
+                <mn>8</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mn>2</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+          <mo>)</mo>
+        </mrow>
+        <msub>
           <mstyle mathvariant="italic">
             <mi>B</mi>
           </mstyle>
-        </mrow>
-        <mrow>
           <mn>2</mn>
-        </mrow>
-      </msub>
-      <mo>+</mo>
-      <msup>
-        <mrow>
+        </msub>
+        <mo>+</mo>
+        <msup>
           <mn>2</mn>
+          <mn>4</mn>
+        </msup>
+        <mrow>
+          <mrow>
+            <mo>(</mo>
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mn>8</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>4</mn>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo>)</mo>
+          </mrow>
+          <mo>+</mo>
+          <msup>
+            <mn>2</mn>
+            <mn>6</mn>
+          </msup>
+          <mrow>
+            <mrow>
+              <mo>(</mo>
+              <mtable>
+                <mtr>
+                  <mtd>
+                    <mn>8</mn>
+                  </mtd>
+                </mtr>
+                <mtr>
+                  <mtd>
+                    <mn>8</mn>
+                  </mtd>
+                </mtr>
+              </mtable>
+              <mo>)</mo>
+            </mrow>
+            <msub>
+              <mstyle mathvariant="italic">
+                <mi>B</mi>
+              </mstyle>
+              <mn>6</mn>
+            </msub>
+          </mrow>
         </mrow>
+      </mrow>
+      <mo>]</mo>
+    </mrow>
+  </mstyle>
+</math></span></p></div></div>
+
+<div id="_acb47707-f72e-bcb7-cbfb-6593149f8e2c"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <mn>7</mn>
+    <mo>−</mo>
+    <mrow>
+      <mo>[</mo>
+      <mfrac>
         <mrow>
           <mn>4</mn>
+          <mn>28</mn>
         </mrow>
-      </msup>
-      <mfenced open="(" close=")">
-        <mtable>
-          <mtr>
-            <mtd>
-              <mn>8</mn>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mn>4</mn>
-            </mtd>
-          </mtr>
-        </mtable>
-      </mfenced>
-      <mo>+</mo>
-      <msup>
+        <mn>6</mn>
+      </mfrac>
+      <mo>−</mo>
+      <mfrac>
         <mrow>
+          <mn>16</mn>
+          <mn>70</mn>
+        </mrow>
+        <mn>30</mn>
+      </mfrac>
+      <mo>+</mo>
+      <mfrac>
+        <mrow>
+          <mn>64</mn>
+          <mn>28</mn>
+        </mrow>
+        <mn>42</mn>
+      </mfrac>
+      <mo>]</mo>
+    </mrow>
+    <mo>=</mo>
+    <mo>−</mo>
+    <mn>17</mn>
+    <mo>;</mo>
+  </mstyle>
+</math></span></p></div></div>
+</li>
+<li><p id="_225ee818-429b-05d2-7755-2582080faae9">for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>r</mi>
+    <mo>=</mo>
+    <mn>10</mn>
+  </mstyle>
+</math></span> :</p>
+<div id="_8763ab9b-7558-07e9-05f6-afa06c3632ed"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>M</mi>
+      </mstyle>
+      <mn>10</mn>
+    </msub>
+    <mo>=</mo>
+    <mn>10</mn>
+    <mo>−</mo>
+    <mn>1</mn>
+    <mo>−</mo>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
           <mn>2</mn>
         </mrow>
-        <mrow>
-          <mn>6</mn>
-        </mrow>
+        <mn>8</mn>
+      </munderover>
+      <msup>
+        <mn>2</mn>
+        <mi>j</mi>
       </msup>
-      <mfenced open="(" close=")">
+    </mrow>
+    <mrow>
+      <mrow>
+        <mo>(</mo>
         <mtable>
           <mtr>
             <mtd>
-              <mn>8</mn>
+              <mn>10</mn>
             </mtd>
           </mtr>
           <mtr>
             <mtd>
-              <mn>8</mn>
+              <mi>j</mi>
             </mtd>
           </mtr>
         </mtable>
-      </mfenced>
+        <mo>)</mo>
+      </mrow>
       <msub>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>B</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mn>6</mn>
-        </mrow>
+        <mstyle mathvariant="italic">
+          <mi>B</mi>
+        </mstyle>
+        <mi>j</mi>
       </msub>
+      <mo>=</mo>
+      <mo>…</mo>
+      <mo>=</mo>
+      <mn>155</mn>
+      <mo>;</mo>
     </mrow>
-  </mfenced>
-</math></span></p></div></div>
-
-<div id="_181287b2-ddfd-55b9-27cb-68e789aa2874"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo>=</mo>
-  <mn>7</mn>
-  <mo>&#x2212;</mo>
-  <mfenced open="[" close="]">
-    <mrow>
-      <mfrac>
-        <mrow>
-          <mrow>
-            <mn>4</mn>
-            <mn>28</mn>
-          </mrow>
-        </mrow>
-        <mrow>
-          <mn>6</mn>
-        </mrow>
-      </mfrac>
-      <mo>&#x2212;</mo>
-      <mfrac>
-        <mrow>
-          <mrow>
-            <mn>16</mn>
-            <mn>70</mn>
-          </mrow>
-        </mrow>
-        <mrow>
-          <mn>30</mn>
-        </mrow>
-      </mfrac>
-      <mo>+</mo>
-      <mfrac>
-        <mrow>
-          <mrow>
-            <mn>64</mn>
-            <mn>28</mn>
-          </mrow>
-        </mrow>
-        <mrow>
-          <mn>42</mn>
-        </mrow>
-      </mfrac>
-    </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <mo>&#x2212;</mo>
-  <mn>17</mn>
-  <mo>;</mo>
+  </mstyle>
 </math></span></p></div></div>
 </li>
-<li><p id="_c067ae69-145a-0911-40bf-d6baaffe4486">for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>r</mi>
-  <mo>=</mo>
-  <mn>10</mn>
+<li><p id="_3b1b2b42-49c6-67c7-a127-5d4355b2f0d4">for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>r</mi>
+    <mo>=</mo>
+    <mn>12</mn>
+  </mstyle>
 </math></span> :</p>
-<div id="_081c8686-a643-f4ca-ebad-51436d6d1039"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+<div id="_cdd0e9bf-11ff-c436-6ce6-7df1645942af"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>M</mi>
       </mstyle>
-    </mrow>
-    <mrow>
-      <mn>10</mn>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mn>10</mn>
-  <mo>&#x2212;</mo>
-  <mn>1</mn>
-  <mo>&#x2212;</mo>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>2</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mn>8</mn>
-    </mrow>
-  </munderover>
-  <msup>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
-    <mtable>
-      <mtr>
-        <mtd>
-          <mn>10</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>j</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-  </mfenced>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>B</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mo>&#x2026;</mo>
-  <mo>=</mo>
-  <mn>155</mn>
-  <mo>;</mo>
-</math></span></p></div></div>
-</li>
-<li><p id="_25c1008a-90ff-5d5f-265d-f45fd5c58bb9">for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>r</mi>
-  <mo>=</mo>
-  <mn>12</mn>
-</math></span> :</p>
-<div id="_0f727ce5-3aae-8a05-7842-9df131cef448"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>M</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
       <mn>12</mn>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mn>11</mn>
-  <mo>&#x2212;</mo>
-  <munderover>
+    </msub>
+    <mo>=</mo>
+    <mn>11</mn>
+    <mo>−</mo>
     <mrow>
-      <mo>&#x2211;</mo>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>2</mn>
+        </mrow>
+        <mn>10</mn>
+      </munderover>
+      <msup>
+        <mn>2</mn>
+        <mi>j</mi>
+      </msup>
     </mrow>
     <mrow>
       <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>2</mn>
+        <mo>(</mo>
+        <mtable>
+          <mtr>
+            <mtd>
+              <mn>12</mn>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mi>j</mi>
+            </mtd>
+          </mtr>
+        </mtable>
+        <mo>)</mo>
       </mrow>
-    </mrow>
-    <mrow>
-      <mn>10</mn>
-    </mrow>
-  </munderover>
-  <msup>
-    <mrow>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>B</mi>
+        </mstyle>
+        <mi>j</mi>
+      </msub>
+      <mo>=</mo>
+      <mo>…</mo>
+      <mo>=</mo>
+      <mo>−</mo>
       <mn>2</mn>
+      <mtext> </mtext>
+      <mn>73</mn>
     </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msup>
-  <mfenced open="(" close=")">
-    <mtable>
-      <mtr>
-        <mtd>
-          <mn>12</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>j</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-  </mfenced>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>B</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mo>&#x2026;</mo>
-  <mo>=</mo>
-  <mo>&#x2212;</mo>
-  <mn>2</mn>
-  <mtext>&#xA0;</mtext>
-  <mn>73</mn>
+  </mstyle>
 </math></span></p></div></div>
 </li>
-</ul>
-        <p id="_cbef5634-add7-a036-1b11-ce078d15352d">All these results agree with the numerical values given in <a href="#muller">[1]</a>.</p>
-        <p id="_258d50bc-4ff5-bca9-2d01-73337c8ce6cd">Obviously, the existence of the new relation <a href="#eq10">Equation (10)</a> does not me an that the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+</ul><p id="_cbef5634-add7-a036-1b11-ce078d15352d">All these results agree with the numerical values given in <a href="#muller">[1]</a>.</p><p id="_51f995a6-741f-6020-557b-cb51adbe0f94">Obviously, the existence of the new relation <a href="#eq10">Equation (10)</a> does not me an that the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>M</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>r</mi>
-    </mrow>
-  </msub>
+    </msub>
+  </mstyle>
 </math></span> become superfluous; their practical usefulness is obvious in <a href="#muller">[1]</a>. In any case, <a href="#eq10">Equation (10)</a> is a very useful tool for their numerical evaluation, since it is a simple relation making use only of the Bernoulli numbers, which are readily available in tabular form, for example up to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+  <mstyle displaystyle="false">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>B</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>60</mn>
-    </mrow>
-  </msub>
-</math></span> in <a href="#abramowitz">[2]</a>.</p>
-      </div>
-      <br />
-      <div><h1 class="Section3" id="toc1">References</h1>
-<p id="muller" class="Biblio">[1]&#xA0;  J.W. M&#xFC;ller: &#x201C;Sums of alternate powers&#x2009;&#x2014;&#x2009;an empirical approach&#x201D;, Rapport BIPM-94/14 (1994)</p><p id="abramowitz" class="Biblio">[2]&#xA0;  &#x201C;Handbook of Mathematical Functions&#x201D;, eg. .. by M. Abramowitz and I.A. Stegun, NBS, AMS 55 (GPO, Washington, 1964)</p>
+    </msub>
+  </mstyle>
+</math></span> in <a href="#abramowitz">[2]</a>.</p></div><br /><div><h1 class="Section3" id="_da2f42c3-2bce-4254-b9b8-8f14761ab8c2">References</h1>
+<p id="muller" class="Biblio">[1]  J.W. Müller: “Sums of alternate powers — an empirical approach”, Rapport BIPM-94/14 (1994)</p><p id="abramowitz" class="Biblio">[2]  “Handbook of Mathematical Functions”, eg. .. by M. Abramowitz and I.A. Stegun, NBS, AMS 55 (GPO, Washington, 1964)</p>
 
 
-</div>
-    </main>
-  <script type="text/x-mathjax-config">
+</div></main><script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     "HTML-CSS": { preferredFont: "STIX" },
     asciimath2jax: { delimiters: [['(#(', ')#)']] }
  });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>  <script>
+  <script>
     $("#toc").on('click', 'li', function(e) {
     $(this).parent().find('li.toc-active').removeClass('toc-active');
     $(this).addClass('toc-active');
@@ -3231,5 +2846,4 @@ $('#toggle').on('click', function(){
 anchors.add('h1, h2, h3, h4');
 </script>
 
-</body>
-</html>
+</body></html>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bipm-standard xmlns="https://www.metanorma.org/ns/bipm" type="semantic" version="2.1.7">
+<bipm-standard xmlns="https://www.metanorma.org/ns/bipm" type="semantic" version="2.4.0" schema-version="v1.3.0">
 <bibdata type="standard">
-<title language="en" format="text/plain" type="main">A note on recurrences</title>
+<title language="en" format="text/plain" type="title-main">A note on recurrences</title>
 
 <docidentifier type="BIPM">BIPM 237</docidentifier><docnumber>237</docnumber><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
@@ -12,87 +12,736 @@
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><version><revision-date>02-1994</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>1994</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>brochure</doctype><editorialgroup><committee acronym=""/></editorialgroup><structuredidentifier><docnumber>237</docnumber></structuredidentifier></ext></bibdata>
-<boilerplate>
-  <copyright-statement>
-    <clause>
-      <p align="center" id="_0dd006fd-16b3-d120-2572-c8e47957095b"> © Bureau International des Poids et Mesures 1994 all rights reserved</p>
-    </clause>
-  </copyright-statement>
-  <license-statement>
-    <clause>
-      <title>Copyright statement</title>
-      <p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<link target="http://creativecommons.org/licenses/by/4.0/"/>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
-    </clause>
-  </license-statement>
-  <feedback-statement>
-    <p id="_bd0b4a04-1c9b-db4f-f27f-b98101e93f33">BIPM<br/>
-      Pavillon de Breteuil<br/>
-      F-92312 Sèvres Cedex<br/>
-      FRANCE</p>
-  </feedback-statement>
-</boilerplate>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>brochure</doctype><editorialgroup><committee acronym=""/></editorialgroup><structuredidentifier><docnumber>237</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
 
-<sections><clause id="_a_note_on_recurrences" obligation="normative">
+<clause id="_b0a86778-d57f-10e5-00de-eaceae7eb1e4" obligation="normative">
+<p id="_430786ef-b110-cd29-e4b3-3312d5e854ce" align="center">© Bureau International des Poids et Mesures 1994 all rights reserved</p>
+</clause>
+</copyright-statement>
+
+<license-statement>
+
+<clause id="_copyright_statement_2" obligation="normative">
+<title>Copyright statement</title>
+<p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<link target="http://creativecommons.org/licenses/by/4.0/:"/>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
+</clause>
+</license-statement>
+
+<feedback-statement>
+
+<p id="_e6428749-2432-0772-4c8e-ed6c34018916">BIPM<br/>
+Pavillon de Breteuil<br/>
+F-92312 Sèvres Cedex<br/>
+FRANCE</p>
+</feedback-statement>
+</boilerplate><sections><clause id="_a_note_on_recurrences" obligation="normative">
 <title>A note on recurrences</title>
 <p id="_5b85f9ce-c9fb-0284-886a-51b569c84a0c">Algebraic rearrangements are invariably dull to perform. In addition, they require permanent attention if we want to avoid any error that would render the final result useless. Occasionally, one encounters in such calculations a small problem which may be worth a few moments’ thought.</p>
 
 <p id="_6f30049c-40f9-d2de-0040-2e06863c771e">Thus, in the lengthy attempt to evaluate parities for observed counts, when the original Poisson process has been distorted by an extendable dead time, a problem was met which involves summing over alternate moments, defined <eref type="inline" bibitemid="bipm92-5" citeas="[1]"/> by</p>
 
-<formula id="eq1"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msubsup><mrow><mi>m</mi></mrow><mrow><mi>r</mi></mrow><mrow><mo>±</mo></mrow></msubsup><mo>=</mo><munderover><mrow><mo>∑</mo></mrow><mrow><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow></mrow><mrow><mo>∞</mo></mrow></munderover><msup><mrow><mfenced open="(" close=")"><mrow><mo>−</mo><mn>1</mn></mrow></mfenced></mrow><mrow><mi>k</mi></mrow></msup><msup><mrow><mi>k</mi></mrow><mrow><mi>r</mi></mrow></msup><msub><mrow><mi>p</mi></mrow><mrow><mi>k</mi></mrow></msub><mo>.</mo></math></stem></formula>
+<formula id="eq1"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msubsup>
+      <mi>m</mi>
+      <mi>r</mi>
+      <mo>±</mo>
+    </msubsup>
+    <mo>=</mo>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>k</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+        </mrow>
+        <mo>∞</mo>
+      </munderover>
+      <msup>
+        <mrow>
+          <mo>(</mo>
+          <mo>−</mo>
+          <mn>1</mn>
+          <mo>)</mo>
+        </mrow>
+        <mi>k</mi>
+      </msup>
+    </mrow>
+    <msup>
+      <mi>k</mi>
+      <mi>r</mi>
+    </msup>
+    <msub>
+      <mi>p</mi>
+      <mi>k</mi>
+    </msub>
+    <mo>.</mo>
+  </mstyle>
+</math>
+<asciimath>m_r^(+-) = sum_(k=0)^oo (-1)^k k^r p_k .</asciimath></stem></formula>
 
-<p id="_89eccd79-239b-21f9-3222-e62d503bc5b8">If the probabilities <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mi>p</mi></mrow><mrow><mi>k</mi></mrow></msub></math></stem> follow the Poisson law (with mean value <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>μ</mi></mstyle></math></stem>), the moment of order <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi><mo>≥</mo><mn>1</mn></math></stem> is known <eref type="inline" bibitemid="bipm92-5" citeas="[1]"/> to be</p>
+<p id="_68a1bf7e-2d75-32f1-60b8-6cac1cc26588">If the probabilities <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>p</mi>
+      <mi>k</mi>
+    </msub>
+  </mstyle>
+</math>
+<asciimath>p_k</asciimath></stem> follow the Poisson law (with mean value <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>μ</mi>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>ii(mu)</asciimath></stem>), the moment of order <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>r</mi>
+    <mo>≥</mo>
+    <mn>1</mn>
+  </mstyle>
+</math>
+<asciimath>r &gt;= 1</asciimath></stem> is known <eref type="inline" bibitemid="bipm92-5" citeas="[1]"/> to be</p>
 
-<formula id="eq2"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msubsup><mrow><mi>m</mi></mrow><mrow><mi>r</mi></mrow><mrow><mo>±</mo></mrow></msubsup><mo>=</mo><msup><mrow><mi>e</mi></mrow><mrow><mrow><mo>−</mo><mn>2</mn><mstyle mathvariant="italic"><mi>μ</mi></mstyle></mrow></mrow></msup><munderover><mrow><mo>∑</mo></mrow><mrow><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow></mrow><mrow><mi>r</mi></mrow></munderover><mi mathvariant="normal">S</mi><mfenced open="(" close=")"><mrow><mi>r</mi><mo>,</mo><mi>j</mi></mrow></mfenced><msup><mrow><mfenced open="(" close=")"><mrow><mo>−</mo><mstyle mathvariant="italic"><mi>μ</mi></mstyle></mrow></mfenced></mrow><mrow><mi>j</mi></mrow></msup><mo>,</mo></math></stem></formula>
+<formula id="eq2"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msubsup>
+      <mi>m</mi>
+      <mi>r</mi>
+      <mo>±</mo>
+    </msubsup>
+    <mo>=</mo>
+    <msup>
+      <mi>e</mi>
+      <mrow>
+        <mo>−</mo>
+        <mn>2</mn>
+        <mstyle mathvariant="italic">
+          <mi>μ</mi>
+        </mstyle>
+      </mrow>
+    </msup>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>r</mi>
+      </munderover>
+      <mi mathvariant="normal">S</mi>
+    </mrow>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>,</mo>
+      <mi>j</mi>
+      <mo>)</mo>
+    </mrow>
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <mo>−</mo>
+        <mstyle mathvariant="italic">
+          <mi>μ</mi>
+        </mstyle>
+        <mo>)</mo>
+      </mrow>
+      <mi>j</mi>
+    </msup>
+    <mo>,</mo>
+  </mstyle>
+</math>
+<asciimath>m_r^(+-) = e^(-2 ii(mu)) sum_(j=1)^r S(r,j) (-ii(mu))^j ,</asciimath></stem></formula>
 
-<p id="_6a7f49c1-5f2a-88ff-4e80-2dd69ca9c2b9">where <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>S</mi></mstyle></math></stem> is a Stirling number of the second kind <eref type="inline" bibitemid="riordan" citeas="[2]"/>.</p>
+<p id="_569eaed9-714d-ed3d-2ee0-6a2274f8454f">where <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>ii(S)</asciimath></stem> is a Stirling number of the second kind <eref type="inline" bibitemid="riordan" citeas="[2]"/>.</p>
 
 <p id="_c199f666-794d-c4ba-b289-ad23c838a36a">In the problem encountered, the expression to be evaluated is of the form</p>
 
-<formula id="_14cdf594-394e-dec8-0503-33270e925824" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>F</mi></mstyle><mo>=</mo><munderover><mrow><mo>∑</mo></mrow><mrow><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow></mrow><mrow><mrow><mi>r</mi><mo>−</mo><mn>1</mn></mrow></mrow></munderover><mfenced open="(" close=")"><mtable><mtr><mtd><mrow><mi>r</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mi>j</mi></mtd></mtr></mtable></mfenced><msubsup><mrow><mi>m</mi></mrow><mrow><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></mrow><mrow><mo>±</mo></mrow></msubsup><mo>,</mo></math></stem></formula>
+<formula id="_d6aa447e-b4ff-12c5-d76e-54b314054786" unnumbered="true"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mstyle mathvariant="italic">
+      <mi>F</mi>
+    </mstyle>
+    <mo>=</mo>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+        </mrow>
+        <mrow>
+          <mi>r</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+        </mrow>
+      </munderover>
+      <mrow>
+        <mo>(</mo>
+        <mtable>
+          <mtr>
+            <mtd>
+              <mi>r</mi>
+              <mo>−</mo>
+              <mn>1</mn>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mi>j</mi>
+            </mtd>
+          </mtr>
+        </mtable>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+    <msubsup>
+      <mi>m</mi>
+      <mrow>
+        <mi>j</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+      <mo>±</mo>
+    </msubsup>
+    <mo>,</mo>
+  </mstyle>
+</math>
+<asciimath>ii(F) = sum_(j=0)^(r-1) ((r-1),(j)) m_(j+1)^(+-) ,</asciimath></stem></formula>
 
 <p id="_90569e92-996a-cf4c-c9dd-9119c52325ea">which can be rearranged to become</p>
 
-<formula id="_5a85e1cd-ebb1-02a5-429f-763be38da620" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>F</mi></mstyle><mo>=</mo><msup><mrow><mi>e</mi></mrow><mrow><mrow><mo>−</mo><mn>2</mn><mstyle mathvariant="italic"><mi>μ</mi></mstyle></mrow></mrow></msup><munderover><mrow><mo>∑</mo></mrow><mrow><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow></mrow><mrow><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></mrow></munderover><msup><mrow><mfenced open="(" close=")"><mrow><mo>−</mo><mstyle mathvariant="italic"><mi>μ</mi></mstyle></mrow></mfenced></mrow><mrow><mi>k</mi></mrow></msup><mstyle mathvariant="italic"><mi>T</mi></mstyle><mfenced open="(" close=")"><mrow><mi>r</mi><mo>,</mo><mi>k</mi></mrow></mfenced><mo>,</mo></math></stem></formula>
+<formula id="_19f250fa-9be7-80e6-bfe3-93ce9742991e" unnumbered="true"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mstyle mathvariant="italic">
+      <mi>F</mi>
+    </mstyle>
+    <mo>=</mo>
+    <msup>
+      <mi>e</mi>
+      <mrow>
+        <mo>−</mo>
+        <mn>2</mn>
+        <mstyle mathvariant="italic">
+          <mi>μ</mi>
+        </mstyle>
+      </mrow>
+    </msup>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>k</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mrow>
+          <mi>j</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+        </mrow>
+      </munderover>
+      <msup>
+        <mrow>
+          <mo>(</mo>
+          <mo>−</mo>
+          <mstyle mathvariant="italic">
+            <mi>μ</mi>
+          </mstyle>
+          <mo>)</mo>
+        </mrow>
+        <mi>k</mi>
+      </msup>
+    </mrow>
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>,</mo>
+  </mstyle>
+</math>
+<asciimath>ii(F) = e^(-2 ii(mu)) sum_(k=1)^(j+1) (-ii(mu))^k ii(T)(r,k) ,</asciimath></stem></formula>
 
 <p id="_eee7253b-97e6-72ba-2642-ed9c828dc245">where</p>
 
-<formula id="eq3"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>T</mi></mstyle><mfenced open="(" close=")"><mrow><mi>r</mi><mo>,</mo><mi>k</mi></mrow></mfenced><mo>=</mo><munderover><mrow><mo>∑</mo></mrow><mrow><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow></mrow><mrow><mrow><mi>r</mi><mo>−</mo><mn>1</mn></mrow></mrow></munderover><mfenced open="(" close=")"><mtable><mtr><mtd><mrow><mi>r</mi><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mi>j</mi></mtd></mtr></mtable></mfenced><mstyle mathvariant="italic"><mi>S</mi></mstyle><mfenced open="(" close=")"><mrow><mi>j</mi><mo>+</mo><mn>1</mn><mo>,</mo><mi>k</mi></mrow></mfenced></math></stem></formula>
+<formula id="eq3"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+        </mrow>
+        <mrow>
+          <mi>r</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+        </mrow>
+      </munderover>
+      <mrow>
+        <mo>(</mo>
+        <mtable>
+          <mtr>
+            <mtd>
+              <mi>r</mi>
+              <mo>−</mo>
+              <mn>1</mn>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mi>j</mi>
+            </mtd>
+          </mtr>
+        </mtable>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mi>j</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math>
+<asciimath>ii(T)(r,k) = sum_(j=0)^(r-1) ((r-1),(j)) ii(S)(j+1,k)</asciimath></stem></formula>
 
 <p id="_94cfe3d1-7e5a-f819-a0fe-28f7889aad6a">is now the quantity in which we are interested.</p>
 
 <p id="_1c72ecf4-50ac-82d3-a40a-dbf1a5e3a8b1">Consider, for the sake of curiosity, both the binomial coefficients and the Stirling
 numbers as triangular matrices of infinite order. In a simplified notation, these are</p>
 
-<formula id="_51323ad2-33ec-9a03-23d2-7adf5adb0c08" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><munder accentunder="true"><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mo>_</mo></munder><mo>=</mo><mfenced open="[" close="]"><mtable><mtr><mtd><mn>1</mn></mtd><mtd/><mtd/><mtd/><mtd/></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd/><mtd/><mtd/></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd/><mtd/></mtr><mtr><mtd><mstyle mathcolor="#ff0000"><mn>1</mn></mstyle></mtd><mtd><mstyle mathcolor="#ff0000"><mn>3</mn></mstyle></mtd><mtd><mstyle mathcolor="#ff0000"><mn>3</mn></mstyle></mtd><mtd><mstyle mathcolor="#ff0000"><mn>1</mn></mstyle></mtd><mtd/></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>6</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd/><mtd/><mtd><mo>…</mo></mtd><mtd/><mtd/></mtr></mtable></mfenced></math></stem></formula>
+<formula id="_90bbdfb7-0854-242b-dec8-72206098139a" unnumbered="true"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <munder>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mo>̲</mo>
+    </munder>
+    <mo>=</mo>
+    <mrow>
+      <mo>[</mo>
+      <mtable>
+        <mtr>
+          <mtd>
+            <mn>1</mn>
+          </mtd>
+          <mtd/>
+          <mtd/>
+          <mtd/>
+          <mtd/>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mn>1</mn>
+          </mtd>
+          <mtd>
+            <mn>1</mn>
+          </mtd>
+          <mtd/>
+          <mtd/>
+          <mtd/>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mn>1</mn>
+          </mtd>
+          <mtd>
+            <mn>2</mn>
+          </mtd>
+          <mtd>
+            <mn>1</mn>
+          </mtd>
+          <mtd/>
+          <mtd/>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mstyle mathcolor="red">
+              <mn>1</mn>
+            </mstyle>
+          </mtd>
+          <mtd>
+            <mstyle mathcolor="red">
+              <mn>3</mn>
+            </mstyle>
+          </mtd>
+          <mtd>
+            <mstyle mathcolor="red">
+              <mn>3</mn>
+            </mstyle>
+          </mtd>
+          <mtd>
+            <mstyle mathcolor="red">
+              <mn>1</mn>
+            </mstyle>
+          </mtd>
+          <mtd/>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mn>1</mn>
+          </mtd>
+          <mtd>
+            <mn>4</mn>
+          </mtd>
+          <mtd>
+            <mn>6</mn>
+          </mtd>
+          <mtd>
+            <mn>4</mn>
+          </mtd>
+          <mtd>
+            <mn>1</mn>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd/>
+          <mtd/>
+          <mtd>
+            <mo>…</mo>
+          </mtd>
+          <mtd/>
+          <mtd/>
+        </mtr>
+      </mtable>
+      <mo>]</mo>
+    </mrow>
+  </mstyle>
+</math>
+<asciimath>ul (ii(B)) = [[1,,,,], [1,1,,,], [1,2,1,,], [color(red)(1),color(red)(3),color(red)(3),color(red)(1),], [1,4,6,4,1], [,,...,,]]</asciimath></stem></formula>
 
-<p id="_375c5727-ac55-c823-778e-4146819d9c5a"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#ff0000"><mrow><mi>r</mi><mo>=</mo><mn>4</mn></mrow></mstyle></math></stem></p>
+<p id="_05fea92f-b90f-1075-cd53-ac5ec2d23423"><stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathcolor="red">
+      <mrow>
+        <mi>r</mi>
+        <mo>=</mo>
+        <mn>4</mn>
+      </mrow>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>color(red)(r=4)</asciimath></stem></p>
 
 <p id="_71780ee1-1d5a-011d-05d0-13faf5c25f8a">and</p>
 
-<formula id="_a28263a6-a7de-4b0b-9ef6-61674916ac3b" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><munder accentunder="true"><mrow><mstyle mathvariant="italic"><mi>S</mi></mstyle></mrow><mo>_</mo></munder><mo>=</mo><mfenced open="[" close="]"><mtable><mtr><mtd><mn>1</mn></mtd><mtd/><mtd/><mtd/><mtd/></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mstyle mathcolor="#ff0000"><mn>1</mn></mstyle></mtd><mtd/><mtd/><mtd/></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mstyle mathcolor="#ff0000"><mn>3</mn></mstyle></mtd><mtd><mn>1</mn></mtd><mtd/><mtd/></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mstyle mathcolor="#ff0000"><mn>7</mn></mstyle></mtd><mtd><mn>6</mn></mtd><mtd><mn>1</mn></mtd><mtd/></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>15</mn></mtd><mtd><mn>25</mn></mtd><mtd><mn>10</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd/><mtd/><mtd><mo>…</mo></mtd><mtd/><mtd/></mtr></mtable></mfenced><mo>,</mo></math></stem></formula>
+<formula id="_1d1646b3-b106-9417-4a16-d761e878ab2d" unnumbered="true"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <munder>
+      <mstyle mathvariant="italic">
+        <mi>S</mi>
+      </mstyle>
+      <mo>̲</mo>
+    </munder>
+    <mo>=</mo>
+    <mrow>
+      <mrow>
+        <mo>[</mo>
+        <mtable>
+          <mtr>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+            <mtd/>
+            <mtd/>
+            <mtd/>
+            <mtd/>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+            <mtd>
+              <mstyle mathcolor="red">
+                <mn>1</mn>
+              </mstyle>
+            </mtd>
+            <mtd/>
+            <mtd/>
+            <mtd/>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+            <mtd>
+              <mstyle mathcolor="red">
+                <mn>3</mn>
+              </mstyle>
+            </mtd>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+            <mtd/>
+            <mtd/>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+            <mtd>
+              <mstyle mathcolor="red">
+                <mn>7</mn>
+              </mstyle>
+            </mtd>
+            <mtd>
+              <mn>6</mn>
+            </mtd>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+            <mtd/>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+            <mtd>
+              <mn>15</mn>
+            </mtd>
+            <mtd>
+              <mn>25</mn>
+            </mtd>
+            <mtd>
+              <mn>10</mn>
+            </mtd>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd/>
+            <mtd/>
+            <mtd>
+              <mo>…</mo>
+            </mtd>
+            <mtd/>
+            <mtd/>
+          </mtr>
+        </mtable>
+        <mo>]</mo>
+      </mrow>
+      <mo>,</mo>
+    </mrow>
+  </mstyle>
+</math>
+<asciimath>ul (ii(S)) = [[1,,,,], [1,color(red)(1),,,], [1,color(red)(3),1,,], [1,color(red)(7),6,1,], [1,15,25,10,1], [,,...,,]] ,</asciimath></stem></formula>
 
-<p id="_0ef3c350-d087-5eb2-96d3-b82b217a2147"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathcolor="#ff0000"><mrow><mi>k</mi><mo>=</mo><mn>2</mn></mrow></mstyle></math></stem></p>
+<p id="_8249cbe4-e8b2-db8b-1d5c-a9da1747fde1"><stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathcolor="red">
+      <mrow>
+        <mi>k</mi>
+        <mo>=</mo>
+        <mn>2</mn>
+      </mrow>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>color(red)(k=2)</asciimath></stem></p>
 
-<p id="_6b114df7-13a4-8c92-13d8-914e25f8f062">where we have put <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mfenced open="(" close=")"><mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable></mfenced><mo>=</mo><mn>1</mn></math></stem> and omitted the Stirling numbers <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>S</mi></mstyle><mfenced open="(" close=")"><mrow><mi>j</mi><mo>,</mo><mn>0</mn></mrow></mfenced></math></stem> as they are not needed in <xref target="eq3"/>.</p>
+<p id="_b3211ba7-2fb3-4274-96c0-ef645dd7fce1">where we have put <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mrow>
+      <mo>(</mo>
+      <mtable>
+        <mtr>
+          <mtd>
+            <mn>0</mn>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mn>0</mn>
+          </mtd>
+        </mtr>
+      </mtable>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mn>1</mn>
+  </mstyle>
+</math>
+<asciimath>((0),(0)) = 1</asciimath></stem> and omitted the Stirling numbers <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mi>j</mi>
+      <mo>,</mo>
+      <mn>0</mn>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math>
+<asciimath>ii(S)(j,0)</asciimath></stem> as they are not needed in <xref target="eq3"/>.</p>
 
-<p id="_463001fd-cbfa-0790-ae50-a6a665190ec8">If we choose, for example. the values <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi><mo>=</mo><mn>4</mn></math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi><mo>=</mo><mn>2</mn></math></stem>, the evaluation of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>T</mi></mstyle><mfenced open="(" close=")"><mrow><mn>4</mn><mo>,</mo><mn>2</mn></mrow></mfenced></math></stem>, according to <xref target="eq3"/>, involves pairwise multiplication of the terms within rectangles in the above matrices. It is readily seen that this corresponds to a matrix multiplication; hence we can write symbolically</p>
+<p id="_5cf85946-3a6d-0ace-d136-4180e52e5c9e">If we choose, for example. the values <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>r</mi>
+    <mo>=</mo>
+    <mn>4</mn>
+  </mstyle>
+</math>
+<asciimath>r = 4</asciimath></stem> and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>k</mi>
+    <mo>=</mo>
+    <mn>2</mn>
+  </mstyle>
+</math>
+<asciimath>k = 2</asciimath></stem>, the evaluation of <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mn>4</mn>
+      <mo>,</mo>
+      <mn>2</mn>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math>
+<asciimath>ii(T)(4,2)</asciimath></stem>, according to <xref target="eq3"/>, involves pairwise multiplication of the terms within rectangles in the above matrices. It is readily seen that this corresponds to a matrix multiplication; hence we can write symbolically</p>
 
-<formula id="eq4"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><munder accentunder="true"><mrow><mstyle mathvariant="italic"><mi>T</mi></mstyle></mrow><mo>_</mo></munder><mo>=</mo><munder accentunder="true"><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mo>_</mo></munder><mo>×</mo><munder accentunder="true"><mrow><mstyle mathvariant="italic"><mi>S</mi></mstyle></mrow><mo>_</mo></munder><mo>,</mo></math></stem></formula>
+<formula id="eq4"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <munder>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mo>̲</mo>
+    </munder>
+    <mo>=</mo>
+    <munder>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mo>̲</mo>
+    </munder>
+    <mo>×</mo>
+    <munder>
+      <mstyle mathvariant="italic">
+        <mi>S</mi>
+      </mstyle>
+      <mo>̲</mo>
+    </munder>
+    <mo>,</mo>
+  </mstyle>
+</math>
+<asciimath>ul (ii(T)) = ul (ii(B)) xx ul (ii(S)) ,</asciimath></stem></formula>
 
-<p id="_4285b3d3-0fad-4b3d-0812-bfab75c90daf">where <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><munder accentunder="true"><mrow><mstyle mathvariant="italic"><mi>T</mi></mstyle></mrow><mo>_</mo></munder></math></stem> is now also a matrix.</p>
+<p id="_bb06b665-15db-8843-7302-78159f2ca93a">where <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <munder>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mo>̲</mo>
+    </munder>
+  </mstyle>
+</math>
+<asciimath>ul (ii(T))</asciimath></stem> is now also a matrix.</p>
 
-<p id="_8e72cf13-3595-c562-2f91-2bde2b1a82cf">If we evaluate, for a few arguments, the numerical values of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>T</mi></mstyle><mfenced open="(" close=")"><mrow><mi>r</mi><mo>,</mo><mi>k</mi></mrow></mfenced></math></stem>, we find the coefficients assembled in <xref target="table1"/>.</p>
+<p id="_d06428a3-d802-9ac1-f698-42686c055d31">If we evaluate, for a few arguments, the numerical values of <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math>
+<asciimath>ii(T)(r,k)</asciimath></stem>, we find the coefficients assembled in <xref target="table1"/>.</p>
 
 <table id="table1">
-<name>Some numerical values of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>T</mi></mstyle><mfenced open="(" close=")"><mrow><mi>r</mi><mo>,</mo><mi>k</mi></mrow></mfenced></math></stem>.</name>
-<tbody><tr><td valign="top" align="left"/><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi><mo>=</mo><mn>1</mn></math></stem></td>
+<name>Some numerical values of <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math>
+<asciimath>ii(T)(r,k)</asciimath></stem>.</name>
+<tbody><tr><td valign="top" align="left"/><td valign="top" align="left"><stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>k</mi>
+    <mo>=</mo>
+    <mn>1</mn>
+  </mstyle>
+</math>
+<asciimath>k = 1</asciimath></stem></td>
 <td valign="top" align="left">2</td>
 <td valign="top" align="left">3</td>
 <td valign="top" align="left">4</td>
 <td valign="top" align="left">5</td>
 <td valign="top" align="left">6</td>
-</tr><tr><td valign="top" align="left"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi><mo>=</mo><mi>l</mi></math></stem></td>
+</tr><tr><td valign="top" align="left"><stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>r</mi>
+    <mo>=</mo>
+    <mi>l</mi>
+  </mstyle>
+</math>
+<asciimath>r=l</asciimath></stem></td>
 <td valign="top" align="left">1</td>
 <td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/><td valign="top" align="left"/></tr><tr><td valign="top" align="left">2</td>
 <td valign="top" align="left">2</td>
@@ -122,70 +771,1722 @@ numbers as triangular matrices of infinite order. In a simplified notation, thes
 </tr></tbody>
 </table>
 
-<p id="_1e6ac60c-1977-d9c0-4c1b-5c1d9b36d798">A closer inspection of <xref target="table1"/> reveals that its values follow a simple recurrence relation<fn reference="1"><p id="_e938bf7f-1f5a-3007-99a6-1d75008538e5">Note that the quantities <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>T</mi></mstyle><mfenced open="(" close=")"><mrow><mi>r</mi><mo>,</mo><mi>k</mi></mrow></mfenced></math></stem> are identical with coefficients that have been listed before in another context <eref type="inline" bibitemid="bipm92-9" citeas="[3]"/>, and which were then denoted by <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub><mfenced open="(" close=")"><mrow><mi>r</mi><mo>,</mo><mn>2</mn></mrow></mfenced></math></stem>. The correspondence is <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub><mfenced open="(" close=")"><mrow><mi>r</mi><mo>,</mo><mn>2</mn></mrow></mfenced><mo>=</mo><mstyle mathvariant="italic"><mi>T</mi></mstyle><mfenced open="(" close=")"><mrow><mi>r</mi><mo>+</mo><mn>1</mn><mo>,</mo><mi>j</mi><mo>+</mo><mn>1</mn></mrow></mfenced></math></stem>. In fact, it now turns out that all the coefficients evaluated in <eref type="inline" bibitemid="bipm92-9" citeas="[3]"/> allow simple recurrences, namely (in the original notation) <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub><mfenced open="(" close=")"><mrow><mi>r</mi><mo>,</mo><mi>t</mi></mrow></mfenced><mo>=</mo><mi>t</mi><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub><mfenced open="(" close=")"><mrow><mi>r</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>t</mi></mrow></mfenced><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub><mfenced open="(" close=")"><mrow><mi>r</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>t</mi></mrow></mfenced></math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub><mfenced open="(" close=")"><mrow><mi>r</mi><mo>,</mo><mi>t</mi></mrow></mfenced><mo>=</mo><mfenced open="(" close=")"><mrow><mi>j</mi><mo>+</mo><mi>t</mi></mrow></mfenced><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mi>j</mi></mrow></msub><mfenced open="(" close=")"><mrow><mi>r</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>t</mi></mrow></mfenced><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub><mfenced open="(" close=")"><mrow><mi>r</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>t</mi></mrow></mfenced></math></stem>, a property which has not been recognized previously. These relations also provide a convenient means for checking the numerical values.</p>
+<p id="_3f4bb0b2-5a69-83c8-5e75-ca18d7a80613">A closer inspection of <xref target="table1"/> reveals that its values follow a simple recurrence relation<fn reference="1"><p id="_0abfcf7c-f437-2f5c-6786-2f94b76f88fa">Note that the quantities <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math>
+<asciimath>ii(T)(r,k)</asciimath></stem> are identical with coefficients that have been listed before in another context <eref type="inline" bibitemid="bipm92-9" citeas="[3]"/>, and which were then denoted by <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mi>j</mi>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>,</mo>
+      <mn>2</mn>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math>
+<asciimath>ii(beta)_j(r,2)</asciimath></stem>. The correspondence is <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mi>j</mi>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>,</mo>
+      <mn>2</mn>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo>, </mo>
+      <mi>j</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math>
+<asciimath>ii(beta)_j(r,2) = ii(T)(r+1, j+1)</asciimath></stem>. In fact, it now turns out that all the coefficients evaluated in <eref type="inline" bibitemid="bipm92-9" citeas="[3]"/> allow simple recurrences, namely (in the original notation) <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mi>j</mi>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>,</mo>
+      <mi>t</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mi>t</mi>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mi>j</mi>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>−</mo>
+      <mn>1</mn>
+      <mo>,</mo>
+      <mi>t</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mrow>
+        <mi>j</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>−</mo>
+      <mn>1</mn>
+      <mo>,</mo>
+      <mi>t</mi>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math>
+<asciimath>ii(alpha)_j(r,t) = t ii(alpha)_j(r-1,t) + ii(alpha)_(j-1)(r-1,t)</asciimath></stem> and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mi>j</mi>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>,</mo>
+      <mi>t</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mrow>
+      <mo>(</mo>
+      <mi>j</mi>
+      <mo>+</mo>
+      <mi>t</mi>
+      <mo>)</mo>
+    </mrow>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mi>j</mi>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>−</mo>
+      <mn>1</mn>
+      <mo>,</mo>
+      <mi>t</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mrow>
+        <mi>j</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>−</mo>
+      <mn>1</mn>
+      <mo>,</mo>
+      <mi>t</mi>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math>
+<asciimath>ii(beta)_j(r,t) = (j+t) ii(beta)_j(r-1,t) + ii(beta)_(j-1)(r-1,t)</asciimath></stem>, a property which has not been recognized previously. These relations also provide a convenient means for checking the numerical values.</p>
 </fn>, namely</p>
 
-<formula id="eq5"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>T</mi></mstyle><mfenced open="(" close=")"><mrow><mi>r</mi><mo>,</mo><mi>k</mi></mrow></mfenced><mo>=</mo><mfenced open="(" close=")"><mrow><mi>k</mi><mo>+</mo><mi>l</mi></mrow></mfenced><mstyle mathvariant="italic"><mi>T</mi></mstyle><mfenced open="(" close=")"><mrow><mi>r</mi><mo>−</mo><mi>l</mi><mo>,</mo><mi>k</mi></mrow></mfenced><mo>+</mo><mstyle mathvariant="italic"><mi>T</mi></mstyle><mfenced open="(" close=")"><mrow><mi>r</mi><mo>−</mo><mi>l</mi><mo>,</mo><mi>k</mi><mo>−</mo><mi>l</mi></mrow></mfenced><mo>.</mo></math></stem></formula>
+<formula id="eq5"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mrow>
+      <mo>(</mo>
+      <mi>k</mi>
+      <mo>+</mo>
+      <mi>l</mi>
+      <mo>)</mo>
+    </mrow>
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>−</mo>
+      <mi>l</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>+</mo>
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>−</mo>
+      <mi>l</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo>−</mo>
+      <mi>l</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>.</mo>
+  </mstyle>
+</math>
+<asciimath>ii(T)(r,k) = (k+l) ii(T)(r-l,k) + ii(T)(r-l,k-l) .</asciimath></stem></formula>
 
 <p id="_4c22a10e-683a-680d-cd45-def1a8e17969">This reminds us of the fact that there exist similar recurrences for the binomial coefficients and for the Stirling numbers. These are known to be</p>
 
-<formula id="_5c8e5b87-503d-1fd6-301d-6f82b8202692" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>B</mi></mstyle><mfenced open="(" close=")"><mrow><mi>n</mi><mo>,</mo><mi>k</mi></mrow></mfenced><mo>=</mo><mstyle mathvariant="italic"><mi>B</mi></mstyle><mfenced open="(" close=")"><mrow><mi>n</mi><mo>−</mo><mi>l</mi><mo>,</mo><mi>k</mi></mrow></mfenced><mo>+</mo><mstyle mathvariant="italic"><mi>B</mi></mstyle><mfenced open="(" close=")"><mrow><mi>n</mi><mo>−</mo><mi>l</mi><mo>,</mo><mi>k</mi><mo>−</mo><mi>l</mi></mrow></mfenced></math></stem></formula>
+<formula id="_fa3e9f39-7d2f-c797-b217-879b30d36b90" unnumbered="true"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mstyle mathvariant="italic">
+      <mi>B</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mi>n</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mstyle mathvariant="italic">
+      <mi>B</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mi>n</mi>
+      <mo>−</mo>
+      <mi>l</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>+</mo>
+    <mstyle mathvariant="italic">
+      <mi>B</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mi>n</mi>
+      <mo>−</mo>
+      <mi>l</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo>−</mo>
+      <mi>l</mi>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math>
+<asciimath>ii(B)(n,k) = ii(B)(n-l,k) + ii(B)(n-l,k-l)</asciimath></stem></formula>
 
 <p id="_ad49855a-55ea-5612-5561-21af9eebd7f4">and</p>
 
-<formula id="eq6"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>S</mi></mstyle><mfenced open="(" close=")"><mrow><mi>n</mi><mo>,</mo><mi>k</mi></mrow></mfenced><mo>=</mo><mi>k</mi><mstyle mathvariant="italic"><mi>S</mi></mstyle><mfenced open="(" close=")"><mrow><mi>n</mi><mo>−</mo><mi>l</mi><mo>,</mo><mi>k</mi></mrow></mfenced><mo>+</mo><mstyle mathvariant="italic"><mi>S</mi></mstyle><mfenced open="(" close=")"><mrow><mi>n</mi><mo>−</mo><mi>l</mi><mo>,</mo><mi>k</mi><mo>−</mo><mi>l</mi></mrow></mfenced><mo>,</mo></math></stem></formula>
+<formula id="eq6"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mi>n</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mi>k</mi>
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mi>n</mi>
+      <mo>−</mo>
+      <mi>l</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>+</mo>
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mi>n</mi>
+      <mo>−</mo>
+      <mi>l</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo>−</mo>
+      <mi>l</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>,</mo>
+  </mstyle>
+</math>
+<asciimath>ii(S)(n,k) = k ii(S)(n-l,k) + ii(S)(n-l,k-l) ,</asciimath></stem></formula>
 
 <p id="_b70fbe32-16b0-b65a-77b2-61ba231467fd">respectively.</p>
 
 <p id="_c06f964d-c1dd-746d-3721-00df0cf5a9d4">A comparison with <xref target="eq5"/> and <xref target="eq4"/> immediately raises the question whether the “transfer’ of recurrences is a general feature of matrix multiplication.</p>
 
-<p id="_4351a13a-1a4d-6d30-c838-cc4eabe9a981">To approach this problem, consider a general matrix multiplication <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><munder accentunder="true"><mrow><mstyle mathvariant="italic"><mi>A</mi></mstyle></mrow><mo>_</mo></munder><mo>×</mo><munder accentunder="true"><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mo>_</mo></munder><mo>=</mo><munder accentunder="true"><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mo>_</mo></munder></math></stem> and start with the assumed recurrences</p>
+<p id="_5228d829-2e09-ce76-880d-a154d1c95860">To approach this problem, consider a general matrix multiplication <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <munder>
+      <mstyle mathvariant="italic">
+        <mi>A</mi>
+      </mstyle>
+      <mo>̲</mo>
+    </munder>
+    <mo>×</mo>
+    <munder>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mo>̲</mo>
+    </munder>
+    <mo>=</mo>
+    <munder>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mo>̲</mo>
+    </munder>
+  </mstyle>
+</math>
+<asciimath>ul (ii(A)) xx ul (ii(B)) = ul (ii(C))</asciimath></stem> and start with the assumed recurrences</p>
 
-<formula id="_042093b2-d6fc-08e4-51d5-c4111ec78f26" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>A</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></mrow></msub><mo>=</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>A</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>j</mi></mrow></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>A</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>j</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub><mo>,</mo></math></stem></formula>
+<formula id="_c01daf91-1bf7-a347-d306-518f4c31e480" unnumbered="true"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>A</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>,</mo>
+        <mi>j</mi>
+      </mrow>
+    </msub>
+    <mo>=</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>A</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>j</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>A</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>j</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo>,</mo>
+  </mstyle>
+</math>
+<asciimath>ii(A)_(i,j) = ii(alpha)_1 ii(A)_(i-1,j) + ii(alpha)_2 ii(A)_(i-1,j-1) ,</asciimath></stem></formula>
 
-<formula id="eq7"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mrow><mi>j</mi><mo>,</mo><mi>k</mi></mrow></mrow></msub><mo>=</mo><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mrow><mi>j</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi></mrow></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mrow><mi>j</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub><mo>.</mo></math></stem></formula>
+<formula id="eq7"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mrow>
+        <mi>j</mi>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>=</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mrow>
+        <mi>j</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mrow>
+        <mi>j</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo>.</mo>
+  </mstyle>
+</math>
+<asciimath>ii(B)_(j,k) = ii(beta)_1 ii(B)_(j-1,k) + ii(beta)_2 ii(B)_(j-1,k-1) .</asciimath></stem></formula>
 
-<p id="_91ef396b-b392-4405-00d9-46692137e28d">This gives for the element <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>,</mo><mi>k</mi></mrow></mrow></msub></math></stem> of the product matrix</p>
+<p id="_005ba7ce-e44a-08d3-26ce-2317574f0d54">This gives for the element <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+  </mstyle>
+</math>
+<asciimath>ii(C)_(i,k)</asciimath></stem> of the product matrix</p>
 
-<formula id="_0888d225-fdc1-ad7f-cb69-6dbeab1e1c4c" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>,</mo><mi>k</mi></mrow></mrow></msub><mo>=</mo><munder><mrow><mo>∑</mo></mrow><mrow><mi>j</mi></mrow></munder><msub><mrow><mstyle mathvariant="italic"><mi>A</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mrow><mi>j</mi><mo>,</mo><mi>k</mi></mrow></mrow></msub></math></stem></formula>
+<formula id="_5418eb43-e64c-22fe-055a-945bd645def6" unnumbered="true"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>=</mo>
+    <mrow>
+      <munder>
+        <mo>∑</mo>
+        <mi>j</mi>
+      </munder>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>A</mi>
+        </mstyle>
+        <mrow>
+          <mi>i</mi>
+          <mo>,</mo>
+          <mi>j</mi>
+        </mrow>
+      </msub>
+    </mrow>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mrow>
+        <mi>j</mi>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+  </mstyle>
+</math>
+<asciimath>ii(C)_(i,k) = sum_j ii(A)_(i,j) ii(B)_(j,k)</asciimath></stem></formula>
 
-<formula id="_fe7f81e5-fac9-b253-459e-6ae9400399e8" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>=</mo><munder><mrow><mo>∑</mo></mrow><mrow><mi>j</mi></mrow></munder><mfenced open="(" close=")"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>A</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>j</mi></mrow></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>A</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>j</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></mrow></mfenced><mfenced open="(" close=")"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mrow><mi>j</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi></mrow></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mrow><mi>j</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></mrow></mfenced></math></stem></formula>
+<formula id="_87f60106-fdc3-183e-e266-7b1aaa2a583c" unnumbered="true"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <mrow>
+      <munder>
+        <mo>∑</mo>
+        <mi>j</mi>
+      </munder>
+      <mrow>
+        <mo>(</mo>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>α</mi>
+          </mstyle>
+          <mn>1</mn>
+        </msub>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>A</mi>
+          </mstyle>
+          <mrow>
+            <mi>i</mi>
+            <mo>−</mo>
+            <mn>1</mn>
+            <mo>,</mo>
+            <mi>j</mi>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>α</mi>
+          </mstyle>
+          <mn>2</mn>
+        </msub>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>A</mi>
+          </mstyle>
+          <mrow>
+            <mi>i</mi>
+            <mo>−</mo>
+            <mn>1</mn>
+            <mo>,</mo>
+            <mi>j</mi>
+            <mo>−</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>β</mi>
+        </mstyle>
+        <mn>1</mn>
+      </msub>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>B</mi>
+        </mstyle>
+        <mrow>
+          <mi>j</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mi>k</mi>
+        </mrow>
+      </msub>
+      <mo>+</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>β</mi>
+        </mstyle>
+        <mn>2</mn>
+      </msub>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>B</mi>
+        </mstyle>
+        <mrow>
+          <mi>j</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mi>k</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+        </mrow>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math>
+<asciimath>= sum_j (ii(alpha)_1 ii(A)_(i-1,j) + ii(alpha)_2 ii(A)_(i-1,j-1)) (ii(beta)_1 ii(B)_(j-1,k) + ii(beta)_2 ii(B)_(j-1,k-1))</asciimath></stem></formula>
 
-<formula id="_d929d866-6133-f1d4-48a2-bd6975ee56af" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>=</mo><mo>∑</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>A</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>j</mi></mrow></mrow></msub><mfenced open="(" close=")"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mrow><mi>j</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi></mrow></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mrow><mi>j</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></mrow></mfenced><mo>+</mo><mo>∑</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>A</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>j</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mrow><mi>j</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi></mrow></mrow></msub><mo>+</mo><mo>∑</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>A</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>j</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mrow><mi>j</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></math></stem></formula>
+<formula id="_5665116d-06d7-3258-139c-8f87180802fc" unnumbered="true"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <mo>∑</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>A</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>j</mi>
+      </mrow>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>β</mi>
+        </mstyle>
+        <mn>1</mn>
+      </msub>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>B</mi>
+        </mstyle>
+        <mrow>
+          <mi>j</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mi>k</mi>
+        </mrow>
+      </msub>
+      <mo>+</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>β</mi>
+        </mstyle>
+        <mn>2</mn>
+      </msub>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>B</mi>
+        </mstyle>
+        <mrow>
+          <mi>j</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mi>k</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+        </mrow>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+    <mo>+</mo>
+    <mo>∑</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>A</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>j</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mrow>
+        <mi>j</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <mo>∑</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>A</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>j</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mrow>
+        <mi>j</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+  </mstyle>
+</math>
+<asciimath>= sum ii(alpha)_1 ii(A)_(i-1,j) (ii(beta)_1 ii(B)_(j-1,k) + ii(beta)_2 ii(B)_(j-1,k-1)) + sum ii(alpha)_2 ii(A)_(i-1,j-1) ii(beta)_1 ii(B)_(j-1,k) + sum ii(alpha)_2 ii(A)_(i-1,j-1) ii(beta)_2 ii(B)_(j-1,k-1)</asciimath></stem></formula>
 
-<formula id="_eb4bf08f-4fca-540a-4ccc-ab244a13fdff" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>=</mo><mo>∑</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>A</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>j</mi></mrow></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mrow><mi>j</mi><mo>,</mo><mi>k</mi></mrow></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi></mrow></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></math></stem></formula>
+<formula id="_7d8d18ff-97aa-58db-7502-b1184bd9c3a2" unnumbered="true"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <mo>∑</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>A</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>j</mi>
+      </mrow>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mrow>
+        <mi>j</mi>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+  </mstyle>
+</math>
+<asciimath>= sum ii(alpha)_1 ii(A)_(i-1,j) ii(B)_(j,k) + ii(alpha)_2 ii(beta)_1 ii(C)_(i-1,k) + ii(alpha)_2 ii(beta)_2 ii(C)_(i-1,k-1)</asciimath></stem></formula>
 
-<formula id="_536d3d13-39f2-e4d5-df99-ff61969dfc5f" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>=</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi></mrow></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi></mrow></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></math></stem></formula>
+<formula id="_b82258c2-0aa0-70b2-d20e-b8a0b8eda2fa" unnumbered="true"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+  </mstyle>
+</math>
+<asciimath>= ii(alpha)_1 ii(C)_(i-1,k) + ii(alpha)_2 ii(beta)_1 ii(C)_(i-1,k) + ii(alpha)_2 ii(beta)_2 ii(C)_(i-1,k-1)</asciimath></stem></formula>
 
-<formula id="eq8"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>=</mo><mfenced open="(" close=")"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub></mrow></mfenced><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi></mrow></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></math></stem></formula>
+<formula id="eq8"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>α</mi>
+        </mstyle>
+        <mn>1</mn>
+      </msub>
+      <mo>+</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>α</mi>
+        </mstyle>
+        <mn>2</mn>
+      </msub>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>β</mi>
+        </mstyle>
+        <mn>1</mn>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+  </mstyle>
+</math>
+<asciimath>= (ii(alpha)_1 + ii(alpha)_2 ii(beta)_1) ii(C)_(i-1,k) + ii(alpha)_2 ii(beta)_2 ii(C)_(i-1,k-1)</asciimath></stem></formula>
 
-<p id="_169f6fe4-df95-376f-8304-00f296058d47">As expected, we return to the situation given in <xref target="eq5"/> by putting <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><mo>=</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><mo>=</mo><mn>1</mn><mo>,</mo><mtext> </mtext><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><mo>=</mo><mi>k</mi></math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><mo>=</mo><mn>1</mn></math></stem>.</p>
+<p id="_38edf70f-1d76-7f21-d4b5-0e703f421cbe">As expected, we return to the situation given in <xref target="eq5"/> by putting <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <mo>=</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <mo>=</mo>
+    <mn>1</mn>
+    <mo>,</mo>
+    <mtext> </mtext>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <mo>=</mo>
+    <mi>k</mi>
+  </mstyle>
+</math>
+<asciimath>ii(alpha)_1 = ii(alpha)_2 = 1," "ii(beta)_1 = k</asciimath></stem> and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <mo>=</mo>
+    <mn>1</mn>
+  </mstyle>
+</math>
+<asciimath>ii(beta)_2 = 1</asciimath></stem>.</p>
 
-<p id="_f5984bd2-082b-f800-f903-3d2be276cb6a">It is interesting to note in <xref target="eq8"/> that the coefficients <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>γ</mi></mstyle></math></stem>, for the product element</p>
+<p id="_d1a1832f-44c4-92bc-5b5d-63c712996e6b">It is interesting to note in <xref target="eq8"/> that the coefficients <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>γ</mi>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>ii(gamma)</asciimath></stem>, for the product element</p>
 
-<formula id="eq9"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>,</mo><mi>k</mi></mrow></mrow></msub><mo>=</mo><msub><mrow><mstyle mathvariant="italic"><mi>γ</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi></mrow></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>γ</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub><mo>,</mo></math></stem></formula>
+<formula id="eq9"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>=</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>γ</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>γ</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo>,</mo>
+  </mstyle>
+</math>
+<asciimath>ii(C)_(i,k) = ii(gamma)_1 ii(C)_(i-1,k) + ii(gamma)_2 ii(C)_(i-1,k-1) ,</asciimath></stem></formula>
 
-<p id="_a1514304-1ef6-ca86-66ae-bc090bb670a6">involve not only sums, but also products of the coefficients <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>α</mi></mstyle></math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>β</mi></mstyle></math></stem>. The coefficients <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>γ</mi></mstyle></math></stem> are thus not symmetric in <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>α</mi></mstyle></math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>β</mi></mstyle></math></stem>.</p>
+<p id="_5b4d3971-2753-a764-3fc3-e92bc77e5215">involve not only sums, but also products of the coefficients <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>α</mi>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>ii(alpha)</asciimath></stem> and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>β</mi>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>ii(beta)</asciimath></stem>. The coefficients <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>γ</mi>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>ii(gamma)</asciimath></stem> are thus not symmetric in <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>α</mi>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>ii(alpha)</asciimath></stem> and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>β</mi>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>ii(beta)</asciimath></stem>.</p>
 
 <p id="_4a52c97e-88af-7f64-f25a-84ecf132aefb">It may therefore be worthwhile also to consider triple recurrences, i.e. relations of the form</p>
 
-<formula id="_1b358aaa-9cf3-3e9e-6f1b-ddc6536e1af3" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>A</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></mrow></msub><mo>=</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>A</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>j</mi></mrow></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>A</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>j</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>3</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>A</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>j</mi><mo>−</mo><mn>2</mn></mrow></mrow></msub><mo>,</mo></math></stem></formula>
+<formula id="_0558f815-40e9-d59f-8eb5-727f2733bd6f" unnumbered="true"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>A</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>,</mo>
+        <mi>j</mi>
+      </mrow>
+    </msub>
+    <mo>=</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>A</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>j</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>A</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>j</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>3</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>A</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>j</mi>
+        <mo>−</mo>
+        <mn>2</mn>
+      </mrow>
+    </msub>
+    <mo>,</mo>
+  </mstyle>
+</math>
+<asciimath>ii(A)_(i,j) = ii(alpha)_1 ii(A)_(i-1,j) + ii(alpha)_2 ii(A)_(i-1,j-1) + ii(alpha)_3 ii(A)_(i-1,j-2) ,</asciimath></stem></formula>
 
-<formula id="eq10"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mrow><mi>j</mi><mo>,</mo><mi>k</mi></mrow></mrow></msub><mo>=</mo><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mrow><mi>j</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi></mrow></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mrow><mi>j</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>3</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>B</mi></mstyle></mrow><mrow><mrow><mi>j</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi><mo>−</mo><mn>2</mn></mrow></mrow></msub><mo>.</mo></math></stem></formula>
+<formula id="eq10"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mrow>
+        <mi>j</mi>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>=</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mrow>
+        <mi>j</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mrow>
+        <mi>j</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>3</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mrow>
+        <mi>j</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+        <mo>−</mo>
+        <mn>2</mn>
+      </mrow>
+    </msub>
+    <mo>.</mo>
+  </mstyle>
+</math>
+<asciimath>ii(B)_(j,k) = ii(beta)_1 ii(B)_(j-1,k) + ii(beta)_2 ii(B)_(j-1,k-1) + ii(beta)_3 ii(B)_(j-1,k-2) .</asciimath></stem></formula>
 
-<p id="_6b123362-e4f8-dc5f-e059-153311e1b22f">After a similar, although longer calculation, we can show that the form of the product element <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>,</mo><mi>k</mi></mrow></mrow></msub></math></stem> is</p>
+<p id="_2eeef99d-eb7b-77a3-264d-a57ae17cf382">After a similar, although longer calculation, we can show that the form of the product element <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+  </mstyle>
+</math>
+<asciimath>ii(C)_(i,k)</asciimath></stem> is</p>
 
-<formula id="_8ba9f62d-ba59-ddf7-c05f-b38b7ce863a2" unnumbered="true"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>,</mo><mi>k</mi></mrow></mrow></msub><mo>=</mo><mfenced open="[" close="]"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub><mfenced open="(" close=")"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>3</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub></mrow></mfenced></mrow></mfenced><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi></mrow></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><mfenced open="(" close=")"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><mo>+</mo><mn>2</mn><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>3</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub></mrow></mfenced><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></math></stem></formula>
+<formula id="_785adc59-cbf9-0ecf-aa75-7a5530a72333" unnumbered="true"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>=</mo>
+    <mrow>
+      <mo>[</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>α</mi>
+        </mstyle>
+        <mn>1</mn>
+      </msub>
+      <mo>+</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>β</mi>
+        </mstyle>
+        <mn>1</mn>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>α</mi>
+          </mstyle>
+          <mn>2</mn>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>α</mi>
+          </mstyle>
+          <mn>3</mn>
+        </msub>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>β</mi>
+          </mstyle>
+          <mn>1</mn>
+        </msub>
+        <mo>)</mo>
+      </mrow>
+      <mo>]</mo>
+    </mrow>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>α</mi>
+        </mstyle>
+        <mn>2</mn>
+      </msub>
+      <mo>+</mo>
+      <mn>2</mn>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>α</mi>
+        </mstyle>
+        <mn>3</mn>
+      </msub>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>β</mi>
+        </mstyle>
+        <mn>1</mn>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+  </mstyle>
+</math>
+<asciimath>ii(C)_(i,k) = [ii(alpha)_1 + ii(beta)_1(ii(alpha)_2 + ii(alpha)_3 ii(beta)_1)] ii(C)_(i-1,k) + ii(beta)_2 (ii(alpha)_2 + 2 ii(alpha)_3 ii(beta)_1) ii(C)_(i-1,k-1)</asciimath></stem></formula>
 
-<formula id="eq11"><stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>+</mo><mfenced open="[" close="]"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>3</mn></mrow></msub><mfenced open="(" close=")"><mrow><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><mo>+</mo><mn>2</mn><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>3</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>1</mn></mrow></msub></mrow></mfenced><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>3</mn></mrow></msub><msubsup><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>2</mn></mrow><mrow><mn>2</mn></mrow></msubsup></mrow></mfenced><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi><mo>−</mo><mn>2</mn></mrow></mrow></msub><mo>+</mo><mn>2</mn><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>3</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>2</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>3</mn></mrow></msub><msub><mrow><mstyle mathvariant="italic"><mi>C</mi></mstyle></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi><mo>−</mo><mn>3</mn></mrow></mrow></msub><mo>+</mo><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>3</mn></mrow></msub><msubsup><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>3</mn></mrow><mrow><mn>2</mn></mrow></msubsup><msub><mrow><mi mathvariant="normal">C</mi></mrow><mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>k</mi><mo>−</mo><mn>4</mn></mrow></mrow></msub><mo>.</mo></math></stem></formula>
+<formula id="eq11"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>+</mo>
+    <mrow>
+      <mo>[</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>β</mi>
+        </mstyle>
+        <mn>3</mn>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>α</mi>
+          </mstyle>
+          <mn>2</mn>
+        </msub>
+        <mo>+</mo>
+        <mn>2</mn>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>α</mi>
+          </mstyle>
+          <mn>3</mn>
+        </msub>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>β</mi>
+          </mstyle>
+          <mn>1</mn>
+        </msub>
+        <mo>)</mo>
+      </mrow>
+      <mo>+</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>α</mi>
+        </mstyle>
+        <mn>3</mn>
+      </msub>
+      <msubsup>
+        <mstyle mathvariant="italic">
+          <mi>β</mi>
+        </mstyle>
+        <mn>2</mn>
+        <mn>2</mn>
+      </msubsup>
+      <mo>]</mo>
+    </mrow>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+        <mo>−</mo>
+        <mn>2</mn>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <mn>2</mn>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>3</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>3</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+        <mo>−</mo>
+        <mn>3</mn>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>3</mn>
+    </msub>
+    <msubsup>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>3</mn>
+      <mn>2</mn>
+    </msubsup>
+    <msub>
+      <mi mathvariant="normal">C</mi>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+        <mo>−</mo>
+        <mn>4</mn>
+      </mrow>
+    </msub>
+    <mo>.</mo>
+  </mstyle>
+</math>
+<asciimath>+ [ii(beta)_3(ii(alpha)_2 + 2 ii(alpha)_3 ii(beta)_1) + ii(alpha)_3 ii(beta)_2^2] ii(C)_(i-1,k-2) + 2 ii(alpha)_3 ii(beta)_2 ii(beta)_3 ii(C)_(i-1,k-3) + ii(alpha)_3 ii(beta)_3^2 C_(i-1,k-4) .</asciimath></stem></formula>
 
-<p id="_b1dae9ab-9aaf-ef78-1709-c8e37b8069a1">Obviously, for <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow><mstyle mathvariant="italic"><mi>α</mi></mstyle></mrow><mrow><mn>3</mn></mrow></msub><mo>=</mo><msub><mrow><mstyle mathvariant="italic"><mi>β</mi></mstyle></mrow><mrow><mn>3</mn></mrow></msub><mo>=</mo><mn>0</mn></math></stem> this reduces to <xref target="eq8"/>.</p>
+<p id="_5e23f7f6-5f98-abad-188b-9c184a4aa462">Obviously, for <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>3</mn>
+    </msub>
+    <mo>=</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>3</mn>
+    </msub>
+    <mo>=</mo>
+    <mn>0</mn>
+  </mstyle>
+</math>
+<asciimath>ii(alpha)_3 = ii(beta)_3 = 0</asciimath></stem> this reduces to <xref target="eq8"/>.</p>
 
-<p id="_b4d6d864-0a7a-e558-0fe0-3363bad0a93b">It is worth noting that not only the new coefficients <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>γ</mi></mstyle></math></stem>, introduced in <xref target="eq9"/>, become more complicated, but also that their number no longer agrees with those of <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>α</mi></mstyle></math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>β</mi></mstyle></math></stem>.</p>
+<p id="_477cab8a-bb9a-1188-898b-1a2af0cf3133">It is worth noting that not only the new coefficients <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>γ</mi>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>ii(gamma)</asciimath></stem>, introduced in <xref target="eq9"/>, become more complicated, but also that their number no longer agrees with those of <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>α</mi>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>ii(alpha)</asciimath></stem> and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>β</mi>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>ii(beta)</asciimath></stem>.</p>
 
-<p id="_e4e63b85-3546-91f6-b817-479df13a587c">I have just been informed by Mme M. Boutillon, a colleague at the BIPM, that the following general rule holds: If the recurrence formulae for both <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>A</mi></mstyle></math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>B</mi></mstyle></math></stem> have <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi></math></stem> terms (in <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>α</mi></mstyle></math></stem> and <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>β</mi></mstyle></math></stem>), the recurrence for <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>C</mi></mstyle></math></stem> includes <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mfenced open="(" close=")"><mrow><mi>m</mi><mo>−</mo><mn>1</mn></mrow></mfenced></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>1</mn></math></stem> terms (<stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="italic"><mi>γ</mi></mstyle></math></stem>).</p>
+<p id="_458e998a-a1fe-12a2-ff1f-857ba68b2a62">I have just been informed by Mme M. Boutillon, a colleague at the BIPM, that the following general rule holds: If the recurrence formulae for both <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>A</mi>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>ii(A)</asciimath></stem> and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>B</mi>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>ii(B)</asciimath></stem> have <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>m</mi>
+  </mstyle>
+</math>
+<asciimath>m</asciimath></stem> terms (in <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>α</mi>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>ii(alpha)</asciimath></stem> and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>β</mi>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>ii(beta)</asciimath></stem>), the recurrence for <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>C</mi>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>ii(C)</asciimath></stem> includes <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <mi>m</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>)</mo>
+      </mrow>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mn>1</mn>
+  </mstyle>
+</math>
+<asciimath>(m-1)^2+1</asciimath></stem> terms (<stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>γ</mi>
+    </mstyle>
+  </mstyle>
+</math>
+<asciimath>ii(gamma)</asciimath></stem>).</p>
 
-<p id="_06abc6c5-344e-86f9-6134-9533a3b6e0f8">This nice result explains why we find five terms in the product of triple recursions <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mfenced open="(" close=")"><mrow><mi>m</mi><mo>=</mo><mn>3</mn></mrow></mfenced></math></stem>. In addition, it shows that only in the case of a double recursion <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mfenced open="(" close=")"><mrow><mi>m</mi><mo>=</mo><mn>2</mn></mrow></mfenced></math></stem> — the case <stem type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi><mo>=</mo><mn>1</mn></math></stem> is of no interest — the elements of the product matrix have the same number of terms in the recurrence.</p>
+<p id="_4d10258b-ab1c-f554-afb3-22449a3bc307">This nice result explains why we find five terms in the product of triple recursions <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mrow>
+      <mo>(</mo>
+      <mi>m</mi>
+      <mo>=</mo>
+      <mn>3</mn>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math>
+<asciimath>(m=3)</asciimath></stem>. In addition, it shows that only in the case of a double recursion <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mrow>
+      <mo>(</mo>
+      <mi>m</mi>
+      <mo>=</mo>
+      <mn>2</mn>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math>
+<asciimath>(m=2)</asciimath></stem> — the case <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>m</mi>
+    <mo>=</mo>
+    <mn>1</mn>
+  </mstyle>
+</math>
+<asciimath>m = 1</asciimath></stem> is of no interest — the elements of the product matrix have the same number of terms in the recurrence.</p>
 </clause>
 
 

@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en" xml:lang="en">
-  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
+<html lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
   <!--
 @charset "UTF-8";
 /*
@@ -103,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 
 blockquote, q {
   quotes: none; }
-  blockquote:before, blockquote:after, q:before, q:after {
+  blockquote::before, blockquote::after, q::before, q::after {
     content: '';
     content: none; }
 
@@ -126,8 +125,16 @@ b, strong {
 div.document-stage-band, div.document-type-band {
   background-color: #333333; }
 
-a.FootnoteRef + a.FootnoteRef:before {
+a.FootnoteRef + a.FootnoteRef::before {
   content: ", ";
+  vertical-align: super; }
+
+a.TableFootnoteRef + a.TableFootnoteRef::before {
+  content: ", ";
+  vertical-align: super; }
+
+a.TableFootnoteRef, span.TableFootnoteRef,
+a.FootnoteRef, span.FootnoteRef {
   vertical-align: super; }
 
 .addition {
@@ -136,6 +143,43 @@ a.FootnoteRef + a.FootnoteRef:before {
 .deletion {
   color: red;
   text-decoration: line-through; }
+
+ruby {
+  ruby-position: over;
+  -webkit-ruby-position: before; }
+
+ruby ruby {
+  ruby-position: under;
+  -webkit-ruby-position: after; }
+
+/* code highlighting with line numbers */
+table.rouge-line-table td.rouge-gutter {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-right: 1em; }
+
+table.rouge-line-table td.rouge-code {
+  -moz-user-select: all;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all; }
+
+table.rouge-line-table,
+table.rouge-line-table th,
+table.rouge-line-table td {
+  width: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%; }
+
+table.rouge-line-table pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;
+  font-size: 100%; }
 
 #brochure-band {
   background-color: #0AC442; }
@@ -271,6 +315,12 @@ main {
     padding-left: 30px; }
   #toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
     padding-left: 50px; }
+  #toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+    padding-left: 70px; }
+  #toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+    padding-left: 90px; }
+  #toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+    padding-left: 110px; }
   #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
     background: #6C734A;
     box-shadow: inset -5px 0px 10px -5px #6C734A !important; }
@@ -377,12 +427,16 @@ div.figure {
     font-weight: 700;
     font-size: 1em;
     text-align: center; }
-  div.figure > img {
+  div.figure > img, div.figure > svg {
     margin-left: auto;
     margin-right: auto;
     display: block;
     max-width: 100%;
     height: auto; }
+
+table div.figure {
+  padding: 0;
+  margin: 0; }
 
 /*
     Document types + stages
@@ -549,8 +603,11 @@ a:hover {
   background: #6C734A;
   box-shadow: 3px 0 0 #6C734A, -3px 0 0 #6C734A; }
 
-::selection,
-::-moz-selection {
+*::selection {
+  background: #6C734A;
+  color: white; }
+
+*::-moz-selection {
   background: #6C734A;
   color: white; }
 
@@ -563,7 +620,7 @@ ul, ol {
 ul li {
   list-style: none; }
 
-ul li:before {
+ul li::before {
   content: "—";
   display: inline-block;
   width: 1em;
@@ -587,7 +644,7 @@ ol ul > li:first-child {
 #toc-list li {
   list-style-type: none; }
 
-#toc li:before {
+#toc li::before {
   content: " ";
   display: none; }
 
@@ -608,13 +665,13 @@ ol[class="alphabet"] > li {
 ol[class="alphabet"] ol[class="alphabet"] > li {
   list-style: inherit; }
 
-ol[class="alphabet"] > li:before {
+ol[class="alphabet"] > li::before {
   counter-increment: alphabet;
   content: counter(alphabet, lower-alpha) ") ";
   position: absolute;
   left: -1.4em; }
 
-ol[class="alphabet"] ol[class="alphabet"] > li:before {
+ol[class="alphabet"] ol[class="alphabet"] > li::before {
   counter-increment: none;
   content: initial; }
 
@@ -628,13 +685,13 @@ ol[class="roman"] > li {
 ol[class="roman"] ol[class="roman"] > li {
   list-style: inherit; }
 
-ol[class="roman"] > li:before {
+ol[class="roman"] > li::before {
   counter-increment: roman;
   content: "(" counter(roman, lower-roman) ") ";
   position: absolute;
   left: -2.0em; }
 
-ol[class="roman"] ol[class="roman"] > li:before {
+ol[class="roman"] ol[class="roman"] > li::before {
   counter-increment: none;
   content: initial; }
 
@@ -748,7 +805,7 @@ table {
   table th, table td {
     padding: 1em; }
   table td.header {
-    font-weigth: 400; }
+    font-weight: 400; }
 
 p.TableTitle {
   text-align: center;
@@ -1022,7 +1079,46 @@ To top button
     display: none; } }
 
 -->
-</style><title>A note on recurrences</title>
+</style><style><!--pre.sourcecode table td { padding: 5px; }
+pre.sourcecode table pre { margin: 0; }
+pre.sourcecode, pre.sourcecode .w {
+  color: #444444;
+}
+pre.sourcecode .cp {
+  color: #CC00A3;
+}
+pre.sourcecode .cs {
+  color: #CC00A3;
+}
+pre.sourcecode .c, pre.sourcecode .ch, pre.sourcecode .cd, pre.sourcecode .cm, pre.sourcecode .cpf, pre.sourcecode .c1 {
+  color: #FF0000;
+}
+pre.sourcecode .kc {
+  color: #C34E00;
+}
+pre.sourcecode .kd {
+  color: #0000FF;
+}
+pre.sourcecode .kr {
+  color: #007575;
+}
+pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
+  color: #0000FF;
+}
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .ld, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+  color: #009C00;
+}
+pre.sourcecode .sa {
+  color: #0000FF;
+}
+pre.sourcecode .nb, pre.sourcecode .bp {
+  color: #C34E00;
+}
+pre.sourcecode .nt {
+  color: #0000FF;
+}
+
+--></style><title>A note on recurrences</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--TOC script import-->
@@ -1031,15 +1127,13 @@ To top button
 </script>
 
 <!--Google fonts-->
-<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" />
 
 <!--Font awesome import for the link icon-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
 <style class="anchorjs"></style>
-</link></link></link></head>
-  <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
-    <div class="title-section"><div class="document-stage-band" id="in-force-band">
+</head><body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container"><div class="title-section"><div class="document-stage-band" id="in-force-band">
     <p class="document-stage">In Force</p>
 </div>
 
@@ -1049,7 +1143,7 @@ To top button
 
 
 
-  <div id="toggle"> <span>&#x2022;</span> </div>
+  <div id="toggle"> <span>•</span> </div>
 
   <header>
 
@@ -1090,7 +1184,7 @@ To top button
   
   <div class="coverpage-tc-name">
     
-    <span>J&#xF6;rg W. M&#xFC;ller ().
+    <span>Jörg W. Müller ().
   </span>
   
 
@@ -1112,23 +1206,26 @@ To top button
 <div class="info-section">
 <div class="copyright">
 <div class="boilerplate-copyright">
-    <div>
-      <p id="_0dd006fd-16b3-d120-2572-c8e47957095b" style="text-align:center;"> &#xA9; Bureau International des Poids et Mesures 1994 all rights reserved</p>
-    </div>
-  </div>
-  <div class="boilerplate-license">
-    <div><h1 class="IntroTitle">Copyright statement</h1>
 
-      <p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
-    </div>
-  </div>
+<div id="_b0a86778-d57f-10e5-00de-eaceae7eb1e4">
+<p id="_430786ef-b110-cd29-e4b3-3312d5e854ce" style="text-align:center;">© Bureau International des Poids et Mesures 1994 all rights reserved</p>
+</div>
+</div>
+  <div class="boilerplate-license">
+
+<div id="_copyright_statement_2"><h1 class="IntroTitle">Copyright statement</h1>
+
+<p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/:">http://creativecommons.org/licenses/by/4.0/:</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
+</div>
+</div>
   <div id="boilerplate-legal-destination"></div>
 <div class="boilerplate-feedback">
-    <p id="_bd0b4a04-1c9b-db4f-f27f-b98101e93f33">BIPM<br />
-      Pavillon de Breteuil<br />
-      F-92312 S&#xE8;vres Cedex<br />
-      FRANCE</p>
-  </div>
+
+<p id="_e6428749-2432-0772-4c8e-ed6c34018916">BIPM<br />
+Pavillon de Breteuil<br />
+F-92312 Sèvres Cedex<br />
+FRANCE</p>
+</div>
 </div>
 
 <div class="rule"></div>
@@ -1137,2997 +1234,2262 @@ To top button
 
 
 </div>
-</div></header>
-      
-    </div>
-    <br />
-    <div class="prefatory-section"><nav>
-  <h1 id="content">Contents</h1>
-  <div id="toc"><ul><li class="h1"><a href="#toc0">      1.&#xA0; A note on recurrences</a></li><li class="h1"><a href="#toc1">      References</a></li></ul></div>
+</div></header></div><br /><div class="prefatory-section"><nav>
+  <div id="toc"><h1 class="IntroTitle">Contents</h1><ul><li class="h1"><a href="#_aee34fd6-5b01-472b-841a-742ec504df8b">      1.  A note on recurrences</a></li>
+<li class="h1"><a href="#_aa566f4d-f6eb-452d-a3f7-20bd72ea1dbc">      References</a></li></ul></div>
 
 </nav>
 
 
 <div class="rule toc"></div>
+</div><br /><main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button><div class="authority">
 
-      
-    </div>
-    <br />
-    <main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-      <div class="authority">
-  
-  
-  
-</div>
-      <p class="zzSTDTitle1">A note on recurrences</p>
-      <div id="_a_note_on_recurrences">
-        <h1 id="toc0">1.&#xA0; A note on recurrences</h1>
-        <p id="_5b85f9ce-c9fb-0284-886a-51b569c84a0c">Algebraic rearrangements are invariably dull to perform. In addition, they require permanent attention if we want to avoid any error that would render the final result useless. Occasionally, one encounters in such calculations a small problem which may be worth a few moments&#x2019; thought.</p>
-        <p id="_6f30049c-40f9-d2de-0040-2e06863c771e">Thus, in the lengthy attempt to evaluate parities for observed counts, when the original Poisson process has been distorted by an extendable dead time, a problem was met which involves summing over alternate moments, defined <a href="#bipm92-5">[1]</a> by</p>
-        <div id="eq1">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msubsup>
-    <mrow>
+
+
+
+</div><br /><div id="_a_note_on_recurrences"><h1 id="_aee34fd6-5b01-472b-841a-742ec504df8b">1.  A note on recurrences</h1><p id="_5b85f9ce-c9fb-0284-886a-51b569c84a0c">Algebraic rearrangements are invariably dull to perform. In addition, they require permanent attention if we want to avoid any error that would render the final result useless. Occasionally, one encounters in such calculations a small problem which may be worth a few moments’ thought.</p><p id="_6f30049c-40f9-d2de-0040-2e06863c771e">Thus, in the lengthy attempt to evaluate parities for observed counts, when the original Poisson process has been distorted by an extendable dead time, a problem was met which involves summing over alternate moments, defined <a href="#bipm92-5">[1]</a> by</p><div id="eq1"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msubsup>
       <mi>m</mi>
-    </mrow>
-    <mrow>
       <mi>r</mi>
-    </mrow>
+      <mo>±</mo>
+    </msubsup>
+    <mo>=</mo>
     <mrow>
-      <mo>&#xB1;</mo>
-    </mrow>
-  </msubsup>
-  <mo>=</mo>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>k</mi>
-        <mo>=</mo>
-        <mn>0</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mo>&#x221E;</mo>
-    </mrow>
-  </munderover>
-  <msup>
-    <mrow>
-      <mfenced open="(" close=")">
+      <munderover>
+        <mo>∑</mo>
         <mrow>
-          <mo>&#x2212;</mo>
-          <mn>1</mn>
+          <mi>k</mi>
+          <mo>=</mo>
+          <mn>0</mn>
         </mrow>
-      </mfenced>
+        <mo>∞</mo>
+      </munderover>
+      <msup>
+        <mrow>
+          <mo>(</mo>
+          <mo>−</mo>
+          <mn>1</mn>
+          <mo>)</mo>
+        </mrow>
+        <mi>k</mi>
+      </msup>
     </mrow>
-    <mrow>
+    <msup>
       <mi>k</mi>
-    </mrow>
-  </msup>
-  <msup>
-    <mrow>
-      <mi>k</mi>
-    </mrow>
-    <mrow>
       <mi>r</mi>
-    </mrow>
-  </msup>
-  <msub>
-    <mrow>
+    </msup>
+    <msub>
       <mi>p</mi>
-    </mrow>
-    <mrow>
       <mi>k</mi>
-    </mrow>
-  </msub>
-  <mo>.</mo>
-</math></span>&#xA0; (1)</p>
-          </div>
-        </div>
-        <p id="_89eccd79-239b-21f9-3222-e62d503bc5b8">If the probabilities <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+    </msub>
+    <mo>.</mo>
+  </mstyle>
+</math></span>  (1)</p></div></div><p id="_68a1bf7e-2d75-32f1-60b8-6cac1cc26588">If the probabilities <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
       <mi>p</mi>
-    </mrow>
-    <mrow>
       <mi>k</mi>
-    </mrow>
-  </msub>
+    </msub>
+  </mstyle>
 </math></span> follow the Poisson law (with mean value <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3BC;</mi>
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>μ</mi>
+    </mstyle>
   </mstyle>
 </math></span>), the moment of order <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>r</mi>
-  <mo>&#x2265;</mo>
-  <mn>1</mn>
-</math></span> is known <a href="#bipm92-5">[1]</a> to be</p>
-        <div id="eq2">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msubsup>
-    <mrow>
+  <mstyle displaystyle="false">
+    <mi>r</mi>
+    <mo>≥</mo>
+    <mn>1</mn>
+  </mstyle>
+</math></span> is known <a href="#bipm92-5">[1]</a> to be</p><div id="eq2"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msubsup>
       <mi>m</mi>
-    </mrow>
-    <mrow>
       <mi>r</mi>
-    </mrow>
-    <mrow>
-      <mo>&#xB1;</mo>
-    </mrow>
-  </msubsup>
-  <mo>=</mo>
-  <msup>
-    <mrow>
+      <mo>±</mo>
+    </msubsup>
+    <mo>=</mo>
+    <msup>
       <mi>e</mi>
-    </mrow>
-    <mrow>
       <mrow>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>2</mn>
         <mstyle mathvariant="italic">
-          <mi>&#x3BC;</mi>
+          <mi>μ</mi>
         </mstyle>
       </mrow>
-    </mrow>
-  </msup>
-  <munderover>
+    </msup>
     <mrow>
-      <mo>&#x2211;</mo>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>r</mi>
+      </munderover>
+      <mi mathvariant="normal">S</mi>
     </mrow>
     <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mi>r</mi>
-    </mrow>
-  </munderover>
-  <mi mathvariant="normal">S</mi>
-  <mfenced open="(" close=")">
-    <mrow>
+      <mo>(</mo>
       <mi>r</mi>
       <mo>,</mo>
       <mi>j</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <msup>
-    <mrow>
-      <mfenced open="(" close=")">
-        <mrow>
-          <mo>&#x2212;</mo>
-          <mstyle mathvariant="italic">
-            <mi>&#x3BC;</mi>
-          </mstyle>
-        </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <mo>−</mo>
+        <mstyle mathvariant="italic">
+          <mi>μ</mi>
+        </mstyle>
+        <mo>)</mo>
+      </mrow>
       <mi>j</mi>
-    </mrow>
-  </msup>
-  <mo>,</mo>
-</math></span>&#xA0; (2)</p>
-          </div>
-        </div>
-        <p id="_6a7f49c1-5f2a-88ff-4e80-2dd69ca9c2b9">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>S</mi>
+    </msup>
+    <mo>,</mo>
   </mstyle>
-</math></span> is a Stirling number of the second kind <a href="#riordan">[2]</a>.</p>
-        <p id="_c199f666-794d-c4ba-b289-ad23c838a36a">In the problem encountered, the expression to be evaluated is of the form</p>
-        <div id="_14cdf594-394e-dec8-0503-33270e925824">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>F</mi>
+</math></span>  (2)</p></div></div><p id="_569eaed9-714d-ed3d-2ee0-6a2274f8454f">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
   </mstyle>
-  <mo>=</mo>
-  <munderover>
+</math></span> is a Stirling number of the second kind <a href="#riordan">[2]</a>.</p><p id="_c199f666-794d-c4ba-b289-ad23c838a36a">In the problem encountered, the expression to be evaluated is of the form</p><div id="_d6aa447e-b4ff-12c5-d76e-54b314054786"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mstyle mathvariant="italic">
+      <mi>F</mi>
+    </mstyle>
+    <mo>=</mo>
     <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>0</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>r</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-  </munderover>
-  <mfenced open="(" close=")">
-    <mtable>
-      <mtr>
-        <mtd>
-          <mrow>
-            <mi>r</mi>
-            <mo>&#x2212;</mo>
-            <mn>1</mn>
-          </mrow>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
           <mi>j</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-  </mfenced>
-  <msubsup>
-    <mrow>
-      <mi>m</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+        </mrow>
+        <mrow>
+          <mi>r</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+        </mrow>
+      </munderover>
+      <mrow>
+        <mo>(</mo>
+        <mtable>
+          <mtr>
+            <mtd>
+              <mi>r</mi>
+              <mo>−</mo>
+              <mn>1</mn>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mi>j</mi>
+            </mtd>
+          </mtr>
+        </mtable>
+        <mo>)</mo>
+      </mrow>
     </mrow>
-    <mrow>
+    <msubsup>
+      <mi>m</mi>
       <mrow>
         <mi>j</mi>
         <mo>+</mo>
         <mn>1</mn>
       </mrow>
-    </mrow>
-    <mrow>
-      <mo>&#xB1;</mo>
-    </mrow>
-  </msubsup>
-  <mo>,</mo>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <p id="_90569e92-996a-cf4c-c9dd-9119c52325ea">which can be rearranged to become</p>
-        <div id="_5a85e1cd-ebb1-02a5-429f-763be38da620">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>F</mi>
+      <mo>±</mo>
+    </msubsup>
+    <mo>,</mo>
   </mstyle>
-  <mo>=</mo>
-  <msup>
-    <mrow>
+</math></span></p></div></div><p id="_90569e92-996a-cf4c-c9dd-9119c52325ea">which can be rearranged to become</p><div id="_19f250fa-9be7-80e6-bfe3-93ce9742991e"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mstyle mathvariant="italic">
+      <mi>F</mi>
+    </mstyle>
+    <mo>=</mo>
+    <msup>
       <mi>e</mi>
-    </mrow>
-    <mrow>
       <mrow>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>2</mn>
         <mstyle mathvariant="italic">
-          <mi>&#x3BC;</mi>
+          <mi>μ</mi>
         </mstyle>
       </mrow>
-    </mrow>
-  </msup>
-  <munderover>
+    </msup>
     <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>k</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mrow>
+          <mi>j</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+        </mrow>
+      </munderover>
+      <msup>
+        <mrow>
+          <mo>(</mo>
+          <mo>−</mo>
+          <mstyle mathvariant="italic">
+            <mi>μ</mi>
+          </mstyle>
+          <mo>)</mo>
+        </mrow>
         <mi>k</mi>
-        <mo>=</mo>
-        <mn>1</mn>
-      </mrow>
+      </msup>
     </mrow>
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
     <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>+</mo>
-        <mn>1</mn>
-      </mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo>)</mo>
     </mrow>
-  </munderover>
-  <msup>
+    <mo>,</mo>
+  </mstyle>
+</math></span></p></div></div><p id="_eee7253b-97e6-72ba-2642-ed9c828dc245">where</p><div id="eq3"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
     <mrow>
-      <mfenced open="(" close=")">
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>,</mo>
+      <mi>k</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
         <mrow>
-          <mo>&#x2212;</mo>
-          <mstyle mathvariant="italic">
-            <mi>&#x3BC;</mi>
-          </mstyle>
-        </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
-      <mi>k</mi>
-    </mrow>
-  </msup>
-  <mstyle mathvariant="italic">
-    <mi>T</mi>
-  </mstyle>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mi>r</mi>
-      <mo>,</mo>
-      <mi>k</mi>
-    </mrow>
-  </mfenced>
-  <mo>,</mo>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <p id="_eee7253b-97e6-72ba-2642-ed9c828dc245">where</p>
-        <div id="eq3">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>T</mi>
-  </mstyle>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mi>r</mi>
-      <mo>,</mo>
-      <mi>k</mi>
-    </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <munderover>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>=</mo>
-        <mn>0</mn>
-      </mrow>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>r</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-  </munderover>
-  <mfenced open="(" close=")">
-    <mtable>
-      <mtr>
-        <mtd>
-          <mrow>
-            <mi>r</mi>
-            <mo>&#x2212;</mo>
-            <mn>1</mn>
-          </mrow>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
           <mi>j</mi>
-        </mtd>
-      </mtr>
-    </mtable>
-  </mfenced>
-  <mstyle mathvariant="italic">
-    <mi>S</mi>
-  </mstyle>
-  <mfenced open="(" close=")">
+          <mo>=</mo>
+          <mn>0</mn>
+        </mrow>
+        <mrow>
+          <mi>r</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+        </mrow>
+      </munderover>
+      <mrow>
+        <mo>(</mo>
+        <mtable>
+          <mtr>
+            <mtd>
+              <mi>r</mi>
+              <mo>−</mo>
+              <mn>1</mn>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mi>j</mi>
+            </mtd>
+          </mtr>
+        </mtable>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mi>j</mi>
       <mo>+</mo>
       <mn>1</mn>
       <mo>,</mo>
       <mi>k</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-</math></span>&#xA0; (3)</p>
-          </div>
-        </div>
-        <p id="_94cfe3d1-7e5a-f819-a0fe-28f7889aad6a">is now the quantity in which we are interested.</p>
-        <p id="_1c72ecf4-50ac-82d3-a40a-dbf1a5e3a8b1">Consider, for the sake of curiosity, both the binomial coefficients and the Stirling
-numbers as triangular matrices of infinite order. In a simplified notation, these are</p>
-        <div id="_51323ad2-33ec-9a03-23d2-7adf5adb0c08">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <munder accentunder="true">
-    <mrow>
+  </mstyle>
+</math></span>  (3)</p></div></div><p id="_94cfe3d1-7e5a-f819-a0fe-28f7889aad6a">is now the quantity in which we are interested.</p><p id="_1c72ecf4-50ac-82d3-a40a-dbf1a5e3a8b1">Consider, for the sake of curiosity, both the binomial coefficients and the Stirling
+numbers as triangular matrices of infinite order. In a simplified notation, these are</p><div id="_90bbdfb7-0854-242b-dec8-72206098139a"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <munder>
       <mstyle mathvariant="italic">
         <mi>B</mi>
       </mstyle>
-    </mrow>
-    <mo>_</mo>
-  </munder>
-  <mo>=</mo>
-  <mfenced open="[" close="]">
-    <mtable>
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd></mtd>
-        <mtd></mtd>
-        <mtd></mtd>
-        <mtd></mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd></mtd>
-        <mtd></mtd>
-        <mtd></mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mn>2</mn>
-        </mtd>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd></mtd>
-        <mtd></mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mstyle mathcolor="#ff0000">
-            <mn>1</mn>
-          </mstyle>
-        </mtd>
-        <mtd>
-          <mstyle mathcolor="#ff0000">
-            <mn>3</mn>
-          </mstyle>
-        </mtd>
-        <mtd>
-          <mstyle mathcolor="#ff0000">
-            <mn>3</mn>
-          </mstyle>
-        </mtd>
-        <mtd>
-          <mstyle mathcolor="#ff0000">
-            <mn>1</mn>
-          </mstyle>
-        </mtd>
-        <mtd></mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mn>4</mn>
-        </mtd>
-        <mtd>
-          <mn>6</mn>
-        </mtd>
-        <mtd>
-          <mn>4</mn>
-        </mtd>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd></mtd>
-        <mtd></mtd>
-        <mtd>
-          <mo>&#x2026;</mo>
-        </mtd>
-        <mtd></mtd>
-        <mtd></mtd>
-      </mtr>
-    </mtable>
-  </mfenced>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <p id="_375c5727-ac55-c823-778e-4146819d9c5a">
-          <span class="stem">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathcolor="#ff0000">
+      <mo>̲</mo>
+    </munder>
+    <mo>=</mo>
     <mrow>
-      <mi>r</mi>
-      <mo>=</mo>
-      <mn>4</mn>
+      <mo>[</mo>
+      <mtable>
+        <mtr>
+          <mtd>
+            <mn>1</mn>
+          </mtd>
+          <mtd></mtd>
+          <mtd></mtd>
+          <mtd></mtd>
+          <mtd></mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mn>1</mn>
+          </mtd>
+          <mtd>
+            <mn>1</mn>
+          </mtd>
+          <mtd></mtd>
+          <mtd></mtd>
+          <mtd></mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mn>1</mn>
+          </mtd>
+          <mtd>
+            <mn>2</mn>
+          </mtd>
+          <mtd>
+            <mn>1</mn>
+          </mtd>
+          <mtd></mtd>
+          <mtd></mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mstyle mathcolor="red">
+              <mn>1</mn>
+            </mstyle>
+          </mtd>
+          <mtd>
+            <mstyle mathcolor="red">
+              <mn>3</mn>
+            </mstyle>
+          </mtd>
+          <mtd>
+            <mstyle mathcolor="red">
+              <mn>3</mn>
+            </mstyle>
+          </mtd>
+          <mtd>
+            <mstyle mathcolor="red">
+              <mn>1</mn>
+            </mstyle>
+          </mtd>
+          <mtd></mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mn>1</mn>
+          </mtd>
+          <mtd>
+            <mn>4</mn>
+          </mtd>
+          <mtd>
+            <mn>6</mn>
+          </mtd>
+          <mtd>
+            <mn>4</mn>
+          </mtd>
+          <mtd>
+            <mn>1</mn>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd></mtd>
+          <mtd></mtd>
+          <mtd>
+            <mo>…</mo>
+          </mtd>
+          <mtd></mtd>
+          <mtd></mtd>
+        </mtr>
+      </mtable>
+      <mo>]</mo>
     </mrow>
   </mstyle>
-</math>
-          </span>
-        </p>
-        <p id="_71780ee1-1d5a-011d-05d0-13faf5c25f8a">and</p>
-        <div id="_a28263a6-a7de-4b0b-9ef6-61674916ac3b">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <munder accentunder="true">
-    <mrow>
+</math></span></p></div></div><p id="_05fea92f-b90f-1075-cd53-ac5ec2d23423"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathcolor="red">
+      <mrow>
+        <mi>r</mi>
+        <mo>=</mo>
+        <mn>4</mn>
+      </mrow>
+    </mstyle>
+  </mstyle>
+</math></span></p><p id="_71780ee1-1d5a-011d-05d0-13faf5c25f8a">and</p><div id="_1d1646b3-b106-9417-4a16-d761e878ab2d"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <munder>
       <mstyle mathvariant="italic">
         <mi>S</mi>
       </mstyle>
-    </mrow>
-    <mo>_</mo>
-  </munder>
-  <mo>=</mo>
-  <mfenced open="[" close="]">
-    <mtable>
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd></mtd>
-        <mtd></mtd>
-        <mtd></mtd>
-        <mtd></mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mstyle mathcolor="#ff0000">
-            <mn>1</mn>
-          </mstyle>
-        </mtd>
-        <mtd></mtd>
-        <mtd></mtd>
-        <mtd></mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mstyle mathcolor="#ff0000">
-            <mn>3</mn>
-          </mstyle>
-        </mtd>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd></mtd>
-        <mtd></mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mstyle mathcolor="#ff0000">
-            <mn>7</mn>
-          </mstyle>
-        </mtd>
-        <mtd>
-          <mn>6</mn>
-        </mtd>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd></mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-        <mtd>
-          <mn>15</mn>
-        </mtd>
-        <mtd>
-          <mn>25</mn>
-        </mtd>
-        <mtd>
-          <mn>10</mn>
-        </mtd>
-        <mtd>
-          <mn>1</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd></mtd>
-        <mtd></mtd>
-        <mtd>
-          <mo>&#x2026;</mo>
-        </mtd>
-        <mtd></mtd>
-        <mtd></mtd>
-      </mtr>
-    </mtable>
-  </mfenced>
-  <mo>,</mo>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <p id="_0ef3c350-d087-5eb2-96d3-b82b217a2147">
-          <span class="stem">
-            <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathcolor="#ff0000">
+      <mo>̲</mo>
+    </munder>
+    <mo>=</mo>
     <mrow>
-      <mi>k</mi>
-      <mo>=</mo>
-      <mn>2</mn>
+      <mrow>
+        <mo>[</mo>
+        <mtable>
+          <mtr>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+            <mtd></mtd>
+            <mtd></mtd>
+            <mtd></mtd>
+            <mtd></mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+            <mtd>
+              <mstyle mathcolor="red">
+                <mn>1</mn>
+              </mstyle>
+            </mtd>
+            <mtd></mtd>
+            <mtd></mtd>
+            <mtd></mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+            <mtd>
+              <mstyle mathcolor="red">
+                <mn>3</mn>
+              </mstyle>
+            </mtd>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+            <mtd></mtd>
+            <mtd></mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+            <mtd>
+              <mstyle mathcolor="red">
+                <mn>7</mn>
+              </mstyle>
+            </mtd>
+            <mtd>
+              <mn>6</mn>
+            </mtd>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+            <mtd></mtd>
+          </mtr>
+          <mtr>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+            <mtd>
+              <mn>15</mn>
+            </mtd>
+            <mtd>
+              <mn>25</mn>
+            </mtd>
+            <mtd>
+              <mn>10</mn>
+            </mtd>
+            <mtd>
+              <mn>1</mn>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd></mtd>
+            <mtd></mtd>
+            <mtd>
+              <mo>…</mo>
+            </mtd>
+            <mtd></mtd>
+            <mtd></mtd>
+          </mtr>
+        </mtable>
+        <mo>]</mo>
+      </mrow>
+      <mo>,</mo>
     </mrow>
   </mstyle>
-</math>
-          </span>
-        </p>
-        <p id="_6b114df7-13a4-8c92-13d8-914e25f8f062">where we have put <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mfenced open="(" close=")">
-    <mtable>
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-      </mtr>
-    </mtable>
-  </mfenced>
-  <mo>=</mo>
-  <mn>1</mn>
+</math></span></p></div></div><p id="_8249cbe4-e8b2-db8b-1d5c-a9da1747fde1"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathcolor="red">
+      <mrow>
+        <mi>k</mi>
+        <mo>=</mo>
+        <mn>2</mn>
+      </mrow>
+    </mstyle>
+  </mstyle>
+</math></span></p><p id="_b3211ba7-2fb3-4274-96c0-ef645dd7fce1">where we have put <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mrow>
+      <mo>(</mo>
+      <mtable>
+        <mtr>
+          <mtd>
+            <mn>0</mn>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd>
+            <mn>0</mn>
+          </mtd>
+        </mtr>
+      </mtable>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mn>1</mn>
+  </mstyle>
 </math></span> and omitted the Stirling numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>S</mi>
-  </mstyle>
-  <mfenced open="(" close=")">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mi>j</mi>
       <mo>,</mo>
       <mn>0</mn>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-</math></span> as they are not needed in <a href="#eq3">Equation (3)</a>.</p>
-        <p id="_463001fd-cbfa-0790-ae50-a6a665190ec8">If we choose, for example. the values <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>r</mi>
-  <mo>=</mo>
-  <mn>4</mn>
-</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>k</mi>
-  <mo>=</mo>
-  <mn>2</mn>
-</math></span>, the evaluation of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>T</mi>
   </mstyle>
-  <mfenced open="(" close=")">
+</math></span> as they are not needed in <a href="#eq3">Equation (3)</a>.</p><p id="_5cf85946-3a6d-0ace-d136-4180e52e5c9e">If we choose, for example. the values <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>r</mi>
+    <mo>=</mo>
+    <mn>4</mn>
+  </mstyle>
+</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>k</mi>
+    <mo>=</mo>
+    <mn>2</mn>
+  </mstyle>
+</math></span>, the evaluation of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mn>4</mn>
       <mo>,</mo>
       <mn>2</mn>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-</math></span>, according to <a href="#eq3">Equation (3)</a>, involves pairwise multiplication of the terms within rectangles in the above matrices. It is readily seen that this corresponds to a matrix multiplication; hence we can write symbolically</p>
-        <div id="eq4">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <munder accentunder="true">
-    <mrow>
+  </mstyle>
+</math></span>, according to <a href="#eq3">Equation (3)</a>, involves pairwise multiplication of the terms within rectangles in the above matrices. It is readily seen that this corresponds to a matrix multiplication; hence we can write symbolically</p><div id="eq4"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <munder>
       <mstyle mathvariant="italic">
         <mi>T</mi>
       </mstyle>
-    </mrow>
-    <mo>_</mo>
-  </munder>
-  <mo>=</mo>
-  <munder accentunder="true">
-    <mrow>
+      <mo>̲</mo>
+    </munder>
+    <mo>=</mo>
+    <munder>
       <mstyle mathvariant="italic">
         <mi>B</mi>
       </mstyle>
-    </mrow>
-    <mo>_</mo>
-  </munder>
-  <mo>&#xD7;</mo>
-  <munder accentunder="true">
-    <mrow>
+      <mo>̲</mo>
+    </munder>
+    <mo>×</mo>
+    <munder>
       <mstyle mathvariant="italic">
         <mi>S</mi>
       </mstyle>
-    </mrow>
-    <mo>_</mo>
-  </munder>
-  <mo>,</mo>
-</math></span>&#xA0; (4)</p>
-          </div>
-        </div>
-        <p id="_4285b3d3-0fad-4b3d-0812-bfab75c90daf">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <munder accentunder="true">
-    <mrow>
+      <mo>̲</mo>
+    </munder>
+    <mo>,</mo>
+  </mstyle>
+</math></span>  (4)</p></div></div><p id="_bb06b665-15db-8843-7302-78159f2ca93a">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <munder>
       <mstyle mathvariant="italic">
         <mi>T</mi>
       </mstyle>
-    </mrow>
-    <mo>_</mo>
-  </munder>
-</math></span> is now also a matrix.</p>
-        <p id="_8e72cf13-3595-c562-2f91-2bde2b1a82cf">If we evaluate, for a few arguments, the numerical values of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>T</mi>
+      <mo>̲</mo>
+    </munder>
   </mstyle>
-  <mfenced open="(" close=")">
+</math></span> is now also a matrix.</p><p id="_d06428a3-d802-9ac1-f698-42686c055d31">If we evaluate, for a few arguments, the numerical values of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mi>r</mi>
       <mo>,</mo>
       <mi>k</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-</math></span>, we find the coefficients assembled in <a href="#table1">Table 1</a>.</p>
-        <p class="TableTitle" style="text-align:center;">Table 1.&#xA0; Some numerical values of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>T</mi>
   </mstyle>
-  <mfenced open="(" close=")">
+</math></span>, we find the coefficients assembled in <a href="#table1">Table 1</a>.</p><p class="TableTitle" style="text-align:center;">Table 1.  Some numerical values of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mi>r</mi>
       <mo>,</mo>
       <mi>k</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-</math></span>.</p>
-        <table id="table1" class="MsoISOTable" style="border-width:1px;border-spacing:0;">
-          <tbody>
-            <tr>
-              <td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"></td>
-              <td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">
-                <span class="stem">
-                  <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>k</mi>
-  <mo>=</mo>
-  <mn>1</mn>
-</math>
-                </span>
-              </td>
-              <td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">2</td>
-              <td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">3</td>
-              <td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">4</td>
-              <td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">5</td>
-              <td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">6</td>
-            </tr>
-            <tr>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">
-                <span class="stem">
-                  <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>r</mi>
-  <mo>=</mo>
-  <mi>l</mi>
-</math>
-                </span>
-              </td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">1</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td>
-            </tr>
-            <tr>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">2</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">2</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">1</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td>
-            </tr>
-            <tr>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">3</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">4</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">5</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">1</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td>
-            </tr>
-            <tr>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">4</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">8</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">19</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">9</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">1</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td>
-            </tr>
-            <tr>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">5</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">16</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">65</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">55</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">14</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">1</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td>
-            </tr>
-            <tr>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">6</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">32</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">211</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">285</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">125</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">20</td>
-              <td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">1</td>
-            </tr>
-          </tbody>
-        </table>
-        <p id="_1e6ac60c-1977-d9c0-4c1b-5c1d9b36d798">A closer inspection of <a href="#table1">Table 1</a> reveals that its values follow a simple recurrence relation<a class="FootnoteRef" href="#fn:1" id="fnref:1"><sup>1</sup></a>, namely</p>
-        <div id="eq5">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>T</mi>
   </mstyle>
-  <mfenced open="(" close=")">
+</math></span>.</p><table id="table1" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><tbody><tr><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>k</mi>
+    <mo>=</mo>
+    <mn>1</mn>
+  </mstyle>
+</math></span></td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">2</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">3</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">4</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">5</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">6</td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>r</mi>
+    <mo>=</mo>
+    <mi>l</mi>
+  </mstyle>
+</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">1</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">2</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">2</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">1</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">3</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">4</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">5</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">1</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">4</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">8</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">19</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">9</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">1</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">5</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">16</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">65</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">55</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">14</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">1</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">6</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">32</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">211</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">285</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">125</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">20</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">1</td></tr></tbody></table><p id="_3f4bb0b2-5a69-83c8-5e75-ca18d7a80613">A closer inspection of <a href="#table1">Table 1</a> reveals that its values follow a simple recurrence relation<a class="FootnoteRef" href="#fn:1" id="fnref:1"><sup>1</sup></a>, namely</p><div id="eq5"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mi>r</mi>
       <mo>,</mo>
       <mi>k</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <mfenced open="(" close=")">
+    <mo>=</mo>
     <mrow>
+      <mo>(</mo>
       <mi>k</mi>
       <mo>+</mo>
       <mi>l</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mstyle mathvariant="italic">
-    <mi>T</mi>
-  </mstyle>
-  <mfenced open="(" close=")">
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mi>r</mi>
-      <mo>&#x2212;</mo>
+      <mo>−</mo>
       <mi>l</mi>
       <mo>,</mo>
       <mi>k</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>+</mo>
-  <mstyle mathvariant="italic">
-    <mi>T</mi>
-  </mstyle>
-  <mfenced open="(" close=")">
+    <mo>+</mo>
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mi>r</mi>
-      <mo>&#x2212;</mo>
+      <mo>−</mo>
       <mi>l</mi>
       <mo>,</mo>
       <mi>k</mi>
-      <mo>&#x2212;</mo>
+      <mo>−</mo>
       <mi>l</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>.</mo>
-</math></span>&#xA0; (5)</p>
-          </div>
-        </div>
-        <p id="_4c22a10e-683a-680d-cd45-def1a8e17969">This reminds us of the fact that there exist similar recurrences for the binomial coefficients and for the Stirling numbers. These are known to be</p>
-        <div id="_5c8e5b87-503d-1fd6-301d-6f82b8202692">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>B</mi>
+    <mo>.</mo>
   </mstyle>
-  <mfenced open="(" close=")">
+</math></span>  (5)</p></div></div><p id="_4c22a10e-683a-680d-cd45-def1a8e17969">This reminds us of the fact that there exist similar recurrences for the binomial coefficients and for the Stirling numbers. These are known to be</p><div id="_fa3e9f39-7d2f-c797-b217-879b30d36b90"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mstyle mathvariant="italic">
+      <mi>B</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mi>n</mi>
       <mo>,</mo>
       <mi>k</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <mstyle mathvariant="italic">
-    <mi>B</mi>
-  </mstyle>
-  <mfenced open="(" close=")">
+    <mo>=</mo>
+    <mstyle mathvariant="italic">
+      <mi>B</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mi>n</mi>
-      <mo>&#x2212;</mo>
+      <mo>−</mo>
       <mi>l</mi>
       <mo>,</mo>
       <mi>k</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>+</mo>
-  <mstyle mathvariant="italic">
-    <mi>B</mi>
-  </mstyle>
-  <mfenced open="(" close=")">
+    <mo>+</mo>
+    <mstyle mathvariant="italic">
+      <mi>B</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mi>n</mi>
-      <mo>&#x2212;</mo>
+      <mo>−</mo>
       <mi>l</mi>
       <mo>,</mo>
       <mi>k</mi>
-      <mo>&#x2212;</mo>
+      <mo>−</mo>
       <mi>l</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <p id="_ad49855a-55ea-5612-5561-21af9eebd7f4">and</p>
-        <div id="eq6">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>S</mi>
   </mstyle>
-  <mfenced open="(" close=")">
+</math></span></p></div></div><p id="_ad49855a-55ea-5612-5561-21af9eebd7f4">and</p><div id="eq6"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mi>n</mi>
       <mo>,</mo>
       <mi>k</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <mi>k</mi>
-  <mstyle mathvariant="italic">
-    <mi>S</mi>
-  </mstyle>
-  <mfenced open="(" close=")">
+    <mo>=</mo>
+    <mi>k</mi>
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mi>n</mi>
-      <mo>&#x2212;</mo>
+      <mo>−</mo>
       <mi>l</mi>
       <mo>,</mo>
       <mi>k</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>+</mo>
-  <mstyle mathvariant="italic">
-    <mi>S</mi>
-  </mstyle>
-  <mfenced open="(" close=")">
+    <mo>+</mo>
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mi>n</mi>
-      <mo>&#x2212;</mo>
+      <mo>−</mo>
       <mi>l</mi>
       <mo>,</mo>
       <mi>k</mi>
-      <mo>&#x2212;</mo>
+      <mo>−</mo>
       <mi>l</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>,</mo>
-</math></span>&#xA0; (6)</p>
-          </div>
-        </div>
-        <p id="_b70fbe32-16b0-b65a-77b2-61ba231467fd">respectively.</p>
-        <p id="_c06f964d-c1dd-746d-3721-00df0cf5a9d4">A comparison with <a href="#eq5">Equation (5)</a> and <a href="#eq4">Equation (4)</a> immediately raises the question whether the &#x201C;transfer&#x2019; of recurrences is a general feature of matrix multiplication.</p>
-        <p id="_4351a13a-1a4d-6d30-c838-cc4eabe9a981">To approach this problem, consider a general matrix multiplication <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <munder accentunder="true">
-    <mrow>
+    <mo>,</mo>
+  </mstyle>
+</math></span>  (6)</p></div></div><p id="_b70fbe32-16b0-b65a-77b2-61ba231467fd">respectively.</p><p id="_c06f964d-c1dd-746d-3721-00df0cf5a9d4">A comparison with <a href="#eq5">Equation (5)</a> and <a href="#eq4">Equation (4)</a> immediately raises the question whether the “transfer’ of recurrences is a general feature of matrix multiplication.</p><p id="_5228d829-2e09-ce76-880d-a154d1c95860">To approach this problem, consider a general matrix multiplication <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <munder>
       <mstyle mathvariant="italic">
         <mi>A</mi>
       </mstyle>
-    </mrow>
-    <mo>_</mo>
-  </munder>
-  <mo>&#xD7;</mo>
-  <munder accentunder="true">
-    <mrow>
+      <mo>̲</mo>
+    </munder>
+    <mo>×</mo>
+    <munder>
       <mstyle mathvariant="italic">
         <mi>B</mi>
       </mstyle>
-    </mrow>
-    <mo>_</mo>
-  </munder>
-  <mo>=</mo>
-  <munder accentunder="true">
-    <mrow>
+      <mo>̲</mo>
+    </munder>
+    <mo>=</mo>
+    <munder>
       <mstyle mathvariant="italic">
         <mi>C</mi>
       </mstyle>
-    </mrow>
-    <mo>_</mo>
-  </munder>
-</math></span> and start with the assumed recurrences</p>
-        <div id="_042093b2-d6fc-08e4-51d5-c4111ec78f26">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+      <mo>̲</mo>
+    </munder>
+  </mstyle>
+</math></span> and start with the assumed recurrences</p><div id="_c01daf91-1bf7-a347-d306-518f4c31e480"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>A</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
         <mo>,</mo>
         <mi>j</mi>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <msub>
-    <mrow>
+    </msub>
+    <mo>=</mo>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
+        <mi>α</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>1</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>A</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
         <mo>,</mo>
         <mi>j</mi>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <msub>
-    <mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
+        <mi>α</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>A</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
         <mo>,</mo>
         <mi>j</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>,</mo>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div id="eq7">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+    </msub>
+    <mo>,</mo>
+  </mstyle>
+</math></span></p></div></div><div id="eq7"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>B</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>j</mi>
         <mo>,</mo>
         <mi>k</mi>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <msub>
-    <mrow>
+    </msub>
+    <mo>=</mo>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
+        <mi>β</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>1</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>B</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>j</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
         <mo>,</mo>
         <mi>k</mi>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <msub>
-    <mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
+        <mi>β</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>B</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>j</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
         <mo>,</mo>
         <mi>k</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>.</mo>
-</math></span>&#xA0; (7)</p>
-          </div>
-        </div>
-        <p id="_91ef396b-b392-4405-00d9-46692137e28d">This gives for the element <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+    </msub>
+    <mo>.</mo>
+  </mstyle>
+</math></span>  (7)</p></div></div><p id="_005ba7ce-e44a-08d3-26ce-2317574f0d54">This gives for the element <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>C</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
         <mo>,</mo>
         <mi>k</mi>
       </mrow>
-    </mrow>
-  </msub>
-</math></span> of the product matrix</p>
-        <div id="_0888d225-fdc1-ad7f-cb69-6dbeab1e1c4c">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+    </msub>
+  </mstyle>
+</math></span> of the product matrix</p><div id="_5418eb43-e64c-22fe-055a-945bd645def6"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>C</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
         <mo>,</mo>
         <mi>k</mi>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <munder>
+    </msub>
+    <mo>=</mo>
     <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </munder>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>A</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
-        <mo>,</mo>
+      <munder>
+        <mo>∑</mo>
         <mi>j</mi>
-      </mrow>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>B</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>,</mo>
-        <mi>k</mi>
-      </mrow>
-    </mrow>
-  </msub>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div id="_fe7f81e5-fac9-b253-459e-6ae9400399e8">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo>=</mo>
-  <munder>
-    <mrow>
-      <mo>&#x2211;</mo>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </munder>
-  <mfenced open="(" close=")">
-    <mrow>
+      </munder>
       <msub>
+        <mstyle mathvariant="italic">
+          <mi>A</mi>
+        </mstyle>
         <mrow>
-          <mstyle mathvariant="italic">
-            <mi>&#x3B1;</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mn>1</mn>
+          <mi>i</mi>
+          <mo>,</mo>
+          <mi>j</mi>
         </mrow>
       </msub>
-      <msub>
-        <mrow>
+    </mrow>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mrow>
+        <mi>j</mi>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+  </mstyle>
+</math></span></p></div></div><div id="_87f60106-fdc3-183e-e266-7b1aaa2a583c"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <mrow>
+      <munder>
+        <mo>∑</mo>
+        <mi>j</mi>
+      </munder>
+      <mrow>
+        <mo>(</mo>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>α</mi>
+          </mstyle>
+          <mn>1</mn>
+        </msub>
+        <msub>
           <mstyle mathvariant="italic">
             <mi>A</mi>
           </mstyle>
-        </mrow>
-        <mrow>
           <mrow>
             <mi>i</mi>
-            <mo>&#x2212;</mo>
+            <mo>−</mo>
             <mn>1</mn>
             <mo>,</mo>
             <mi>j</mi>
           </mrow>
-        </mrow>
-      </msub>
-      <mo>+</mo>
-      <msub>
-        <mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
           <mstyle mathvariant="italic">
-            <mi>&#x3B1;</mi>
+            <mi>α</mi>
           </mstyle>
-        </mrow>
-        <mrow>
           <mn>2</mn>
-        </mrow>
-      </msub>
-      <msub>
-        <mrow>
+        </msub>
+        <msub>
           <mstyle mathvariant="italic">
             <mi>A</mi>
           </mstyle>
-        </mrow>
-        <mrow>
           <mrow>
             <mi>i</mi>
-            <mo>&#x2212;</mo>
+            <mo>−</mo>
             <mn>1</mn>
             <mo>,</mo>
             <mi>j</mi>
-            <mo>&#x2212;</mo>
+            <mo>−</mo>
             <mn>1</mn>
           </mrow>
-        </mrow>
-      </msub>
+        </msub>
+        <mo>)</mo>
+      </mrow>
     </mrow>
-  </mfenced>
-  <mfenced open="(" close=")">
     <mrow>
+      <mo>(</mo>
       <msub>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>&#x3B2;</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mn>1</mn>
-        </mrow>
+        <mstyle mathvariant="italic">
+          <mi>β</mi>
+        </mstyle>
+        <mn>1</mn>
       </msub>
       <msub>
+        <mstyle mathvariant="italic">
+          <mi>B</mi>
+        </mstyle>
         <mrow>
-          <mstyle mathvariant="italic">
-            <mi>B</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mrow>
-            <mi>j</mi>
-            <mo>&#x2212;</mo>
-            <mn>1</mn>
-            <mo>,</mo>
-            <mi>k</mi>
-          </mrow>
+          <mi>j</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mi>k</mi>
         </mrow>
       </msub>
       <mo>+</mo>
       <msub>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>&#x3B2;</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
+        <mstyle mathvariant="italic">
+          <mi>β</mi>
+        </mstyle>
+        <mn>2</mn>
       </msub>
       <msub>
+        <mstyle mathvariant="italic">
+          <mi>B</mi>
+        </mstyle>
         <mrow>
-          <mstyle mathvariant="italic">
-            <mi>B</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mrow>
-            <mi>j</mi>
-            <mo>&#x2212;</mo>
-            <mn>1</mn>
-            <mo>,</mo>
-            <mi>k</mi>
-            <mo>&#x2212;</mo>
-            <mn>1</mn>
-          </mrow>
-        </mrow>
-      </msub>
-    </mrow>
-  </mfenced>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div id="_d929d866-6133-f1d4-48a2-bd6975ee56af">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo>=</mo>
-  <mo>&#x2211;</mo>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>1</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>A</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-        <mo>,</mo>
-        <mi>j</mi>
-      </mrow>
-    </mrow>
-  </msub>
-  <mfenced open="(" close=")">
-    <mrow>
-      <msub>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>&#x3B2;</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
+          <mi>j</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mi>k</mi>
+          <mo>−</mo>
           <mn>1</mn>
         </mrow>
       </msub>
-      <msub>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>B</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mrow>
-            <mi>j</mi>
-            <mo>&#x2212;</mo>
-            <mn>1</mn>
-            <mo>,</mo>
-            <mi>k</mi>
-          </mrow>
-        </mrow>
-      </msub>
-      <mo>+</mo>
-      <msub>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>&#x3B2;</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
-      </msub>
-      <msub>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>B</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mrow>
-            <mi>j</mi>
-            <mo>&#x2212;</mo>
-            <mn>1</mn>
-            <mo>,</mo>
-            <mi>k</mi>
-            <mo>&#x2212;</mo>
-            <mn>1</mn>
-          </mrow>
-        </mrow>
-      </msub>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>+</mo>
-  <mo>&#x2211;</mo>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>A</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-        <mo>,</mo>
-        <mi>j</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>1</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>B</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-        <mo>,</mo>
-        <mi>k</mi>
-      </mrow>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <mo>&#x2211;</mo>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>A</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-        <mo>,</mo>
-        <mi>j</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>B</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-        <mo>,</mo>
-        <mi>k</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-  </msub>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div id="_eb4bf08f-4fca-540a-4ccc-ab244a13fdff">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo>=</mo>
-  <mo>&#x2211;</mo>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>1</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>A</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-        <mo>,</mo>
-        <mi>j</mi>
-      </mrow>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>B</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>j</mi>
-        <mo>,</mo>
-        <mi>k</mi>
-      </mrow>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>1</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>C</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-        <mo>,</mo>
-        <mi>k</mi>
-      </mrow>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>C</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-        <mo>,</mo>
-        <mi>k</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-  </msub>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div id="_536d3d13-39f2-e4d5-df99-ff61969dfc5f">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo>=</mo>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>1</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>C</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-        <mo>,</mo>
-        <mi>k</mi>
-      </mrow>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>1</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>C</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-        <mo>,</mo>
-        <mi>k</mi>
-      </mrow>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>C</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-        <mo>,</mo>
-        <mi>k</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-  </msub>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div id="eq8">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo>=</mo>
-  <mfenced open="(" close=")">
-    <mrow>
-      <msub>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>&#x3B1;</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mn>1</mn>
-        </mrow>
-      </msub>
-      <mo>+</mo>
-      <msub>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>&#x3B1;</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
-      </msub>
-      <msub>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>&#x3B2;</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mn>1</mn>
-        </mrow>
-      </msub>
-    </mrow>
-  </mfenced>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>C</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-        <mo>,</mo>
-        <mi>k</mi>
-      </mrow>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>C</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-        <mo>,</mo>
-        <mi>k</mi>
-        <mo>&#x2212;</mo>
-        <mn>1</mn>
-      </mrow>
-    </mrow>
-  </msub>
-</math></span>&#xA0; (8)</p>
-          </div>
-        </div>
-        <p id="_169f6fe4-df95-376f-8304-00f296058d47">As expected, we return to the situation given in <a href="#eq5">Equation (5)</a> by putting <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>1</mn>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mn>1</mn>
-  <mo>,</mo>
-  <mtext>&#xA0;</mtext>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>1</mn>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mi>k</mi>
-</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mn>2</mn>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mn>1</mn>
-</math></span>.</p>
-        <p id="_f5984bd2-082b-f800-f903-3d2be276cb6a">It is interesting to note in <a href="#eq8">Equation (8)</a> that the coefficients <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B3;</mi>
   </mstyle>
-</math></span>, for the product element</p>
-        <div id="eq9">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+</math></span></p></div></div><div id="_5665116d-06d7-3258-139c-8f87180802fc"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <mo>∑</mo>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>C</mi>
+        <mi>α</mi>
       </mstyle>
-    </mrow>
-    <mrow>
-      <mrow>
-        <mi>i</mi>
-        <mo>,</mo>
-        <mi>k</mi>
-      </mrow>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B3;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
       <mn>1</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>C</mi>
+        <mi>A</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
         <mo>,</mo>
-        <mi>k</mi>
+        <mi>j</mi>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <msub>
+    </msub>
     <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>β</mi>
+        </mstyle>
+        <mn>1</mn>
+      </msub>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>B</mi>
+        </mstyle>
+        <mrow>
+          <mi>j</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mi>k</mi>
+        </mrow>
+      </msub>
+      <mo>+</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>β</mi>
+        </mstyle>
+        <mn>2</mn>
+      </msub>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>B</mi>
+        </mstyle>
+        <mrow>
+          <mi>j</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+          <mo>,</mo>
+          <mi>k</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+        </mrow>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+    <mo>+</mo>
+    <mo>∑</mo>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B3;</mi>
+        <mi>α</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>C</mi>
+        <mi>A</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>j</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mrow>
+        <mi>j</mi>
+        <mo>−</mo>
         <mn>1</mn>
         <mo>,</mo>
         <mi>k</mi>
-        <mo>&#x2212;</mo>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <mo>∑</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>A</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>j</mi>
+        <mo>−</mo>
         <mn>1</mn>
       </mrow>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mrow>
+        <mi>j</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+  </mstyle>
+</math></span></p></div></div><div id="_7d8d18ff-97aa-58db-7502-b1184bd9c3a2"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <mo>∑</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>A</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>j</mi>
+      </mrow>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mrow>
+        <mi>j</mi>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+  </mstyle>
+</math></span></p></div></div><div id="_b82258c2-0aa0-70b2-d20e-b8a0b8eda2fa"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+  </mstyle>
+</math></span></p></div></div><div id="eq8"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>α</mi>
+        </mstyle>
+        <mn>1</mn>
+      </msub>
+      <mo>+</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>α</mi>
+        </mstyle>
+        <mn>2</mn>
+      </msub>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>β</mi>
+        </mstyle>
+        <mn>1</mn>
+      </msub>
+      <mo>)</mo>
     </mrow>
-  </msub>
-  <mo>,</mo>
-</math></span>&#xA0; (9)</p>
-          </div>
-        </div>
-        <p id="_a1514304-1ef6-ca86-66ae-bc090bb670a6">involve not only sums, but also products of the coefficients <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B1;</mi>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+  </mstyle>
+</math></span>  (8)</p></div></div><p id="_38edf70f-1d76-7f21-d4b5-0e703f421cbe">As expected, we return to the situation given in <a href="#eq5">Equation (5)</a> by putting <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <mo>=</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>α</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <mo>=</mo>
+    <mn>1</mn>
+    <mo>,</mo>
+    <mtext> </mtext>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <mo>=</mo>
+    <mi>k</mi>
   </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B2;</mi>
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <mo>=</mo>
+    <mn>1</mn>
+  </mstyle>
+</math></span>.</p><p id="_d1a1832f-44c4-92bc-5b5d-63c712996e6b">It is interesting to note in <a href="#eq8">Equation (8)</a> that the coefficients <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>γ</mi>
+    </mstyle>
+  </mstyle>
+</math></span>, for the product element</p><div id="eq9"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>=</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>γ</mi>
+      </mstyle>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>γ</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msub>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>C</mi>
+      </mstyle>
+      <mrow>
+        <mi>i</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mi>k</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo>,</mo>
+  </mstyle>
+</math></span>  (9)</p></div></div><p id="_5b4d3971-2753-a764-3fc3-e92bc77e5215">involve not only sums, but also products of the coefficients <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>α</mi>
+    </mstyle>
+  </mstyle>
+</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>β</mi>
+    </mstyle>
   </mstyle>
 </math></span>. The coefficients <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B3;</mi>
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>γ</mi>
+    </mstyle>
   </mstyle>
 </math></span> are thus not symmetric in <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B1;</mi>
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>α</mi>
+    </mstyle>
   </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B2;</mi>
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>β</mi>
+    </mstyle>
   </mstyle>
-</math></span>.</p>
-        <p id="_4a52c97e-88af-7f64-f25a-84ecf132aefb">It may therefore be worthwhile also to consider triple recurrences, i.e. relations of the form</p>
-        <div id="_1b358aaa-9cf3-3e9e-6f1b-ddc6536e1af3">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+</math></span>.</p><p id="_4a52c97e-88af-7f64-f25a-84ecf132aefb">It may therefore be worthwhile also to consider triple recurrences, i.e. relations of the form</p><div id="_0558f815-40e9-d59f-8eb5-727f2733bd6f"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>A</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
         <mo>,</mo>
         <mi>j</mi>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <msub>
-    <mrow>
+    </msub>
+    <mo>=</mo>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
+        <mi>α</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>1</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>A</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
         <mo>,</mo>
         <mi>j</mi>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <msub>
-    <mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
+        <mi>α</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>A</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
         <mo>,</mo>
         <mi>j</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <msub>
-    <mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
+        <mi>α</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>3</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>A</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
         <mo>,</mo>
         <mi>j</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>2</mn>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>,</mo>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div id="eq10">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+    </msub>
+    <mo>,</mo>
+  </mstyle>
+</math></span></p></div></div><div id="eq10"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>B</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>j</mi>
         <mo>,</mo>
         <mi>k</mi>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <msub>
-    <mrow>
+    </msub>
+    <mo>=</mo>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
+        <mi>β</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>1</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>B</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>j</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
         <mo>,</mo>
         <mi>k</mi>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <msub>
-    <mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
+        <mi>β</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>B</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>j</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
         <mo>,</mo>
         <mi>k</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <msub>
-    <mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
+        <mi>β</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>3</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>B</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>j</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
         <mo>,</mo>
         <mi>k</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>2</mn>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>.</mo>
-</math></span>&#xA0; (10)</p>
-          </div>
-        </div>
-        <p id="_6b123362-e4f8-dc5f-e059-153311e1b22f">After a similar, although longer calculation, we can show that the form of the product element <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+    </msub>
+    <mo>.</mo>
+  </mstyle>
+</math></span>  (10)</p></div></div><p id="_2eeef99d-eb7b-77a3-264d-a57ae17cf382">After a similar, although longer calculation, we can show that the form of the product element <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>C</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
         <mo>,</mo>
         <mi>k</mi>
       </mrow>
-    </mrow>
-  </msub>
-</math></span> is</p>
-        <div id="_8ba9f62d-ba59-ddf7-c05f-b38b7ce863a2">
-          <div class="formula">
-            <p>
-              <span class="stem">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+    </msub>
+  </mstyle>
+</math></span> is</p><div id="_785adc59-cbf9-0ecf-aa75-7a5530a72333"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
       <mstyle mathvariant="italic">
         <mi>C</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
         <mo>,</mo>
         <mi>k</mi>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mfenced open="[" close="]">
+    </msub>
+    <mo>=</mo>
     <mrow>
+      <mo>[</mo>
       <msub>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>&#x3B1;</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mn>1</mn>
-        </mrow>
+        <mstyle mathvariant="italic">
+          <mi>α</mi>
+        </mstyle>
+        <mn>1</mn>
       </msub>
       <mo>+</mo>
       <msub>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>&#x3B2;</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mn>1</mn>
-        </mrow>
+        <mstyle mathvariant="italic">
+          <mi>β</mi>
+        </mstyle>
+        <mn>1</mn>
       </msub>
-      <mfenced open="(" close=")">
-        <mrow>
-          <msub>
-            <mrow>
-              <mstyle mathvariant="italic">
-                <mi>&#x3B1;</mi>
-              </mstyle>
-            </mrow>
-            <mrow>
-              <mn>2</mn>
-            </mrow>
-          </msub>
-          <mo>+</mo>
-          <msub>
-            <mrow>
-              <mstyle mathvariant="italic">
-                <mi>&#x3B1;</mi>
-              </mstyle>
-            </mrow>
-            <mrow>
-              <mn>3</mn>
-            </mrow>
-          </msub>
-          <msub>
-            <mrow>
-              <mstyle mathvariant="italic">
-                <mi>&#x3B2;</mi>
-              </mstyle>
-            </mrow>
-            <mrow>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mrow>
-      </mfenced>
+      <mrow>
+        <mo>(</mo>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>α</mi>
+          </mstyle>
+          <mn>2</mn>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>α</mi>
+          </mstyle>
+          <mn>3</mn>
+        </msub>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>β</mi>
+          </mstyle>
+          <mn>1</mn>
+        </msub>
+        <mo>)</mo>
+      </mrow>
+      <mo>]</mo>
     </mrow>
-  </mfenced>
-  <msub>
-    <mrow>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>C</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
         <mo>,</mo>
         <mi>k</mi>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <msub>
-    <mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
+        <mi>β</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msub>
-  <mfenced open="(" close=")">
+    </msub>
     <mrow>
+      <mo>(</mo>
       <msub>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>&#x3B1;</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
+        <mstyle mathvariant="italic">
+          <mi>α</mi>
+        </mstyle>
+        <mn>2</mn>
       </msub>
       <mo>+</mo>
       <mn>2</mn>
       <msub>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>&#x3B1;</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mn>3</mn>
-        </mrow>
+        <mstyle mathvariant="italic">
+          <mi>α</mi>
+        </mstyle>
+        <mn>3</mn>
       </msub>
       <msub>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>&#x3B2;</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mn>1</mn>
-        </mrow>
+        <mstyle mathvariant="italic">
+          <mi>β</mi>
+        </mstyle>
+        <mn>1</mn>
       </msub>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <msub>
-    <mrow>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>C</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
         <mo>,</mo>
         <mi>k</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
       </mrow>
-    </mrow>
-  </msub>
-</math>
-              </span>
-            </p>
-          </div>
-        </div>
-        <div id="eq11">
-          <div class="formula">
-            <p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mo>+</mo>
-  <mfenced open="[" close="]">
+    </msub>
+  </mstyle>
+</math></span></p></div></div><div id="eq11"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>+</mo>
     <mrow>
+      <mo>[</mo>
       <msub>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>&#x3B2;</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mn>3</mn>
-        </mrow>
+        <mstyle mathvariant="italic">
+          <mi>β</mi>
+        </mstyle>
+        <mn>3</mn>
       </msub>
-      <mfenced open="(" close=")">
-        <mrow>
-          <msub>
-            <mrow>
-              <mstyle mathvariant="italic">
-                <mi>&#x3B1;</mi>
-              </mstyle>
-            </mrow>
-            <mrow>
-              <mn>2</mn>
-            </mrow>
-          </msub>
-          <mo>+</mo>
+      <mrow>
+        <mo>(</mo>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>α</mi>
+          </mstyle>
           <mn>2</mn>
-          <msub>
-            <mrow>
-              <mstyle mathvariant="italic">
-                <mi>&#x3B1;</mi>
-              </mstyle>
-            </mrow>
-            <mrow>
-              <mn>3</mn>
-            </mrow>
-          </msub>
-          <msub>
-            <mrow>
-              <mstyle mathvariant="italic">
-                <mi>&#x3B2;</mi>
-              </mstyle>
-            </mrow>
-            <mrow>
-              <mn>1</mn>
-            </mrow>
-          </msub>
-        </mrow>
-      </mfenced>
+        </msub>
+        <mo>+</mo>
+        <mn>2</mn>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>α</mi>
+          </mstyle>
+          <mn>3</mn>
+        </msub>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>β</mi>
+          </mstyle>
+          <mn>1</mn>
+        </msub>
+        <mo>)</mo>
+      </mrow>
       <mo>+</mo>
       <msub>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>&#x3B1;</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mn>3</mn>
-        </mrow>
+        <mstyle mathvariant="italic">
+          <mi>α</mi>
+        </mstyle>
+        <mn>3</mn>
       </msub>
       <msubsup>
-        <mrow>
-          <mstyle mathvariant="italic">
-            <mi>&#x3B2;</mi>
-          </mstyle>
-        </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
+        <mstyle mathvariant="italic">
+          <mi>β</mi>
+        </mstyle>
+        <mn>2</mn>
+        <mn>2</mn>
       </msubsup>
+      <mo>]</mo>
     </mrow>
-  </mfenced>
-  <msub>
-    <mrow>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>C</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
         <mo>,</mo>
         <mi>k</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>2</mn>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <mn>2</mn>
-  <msub>
-    <mrow>
+    </msub>
+    <mo>+</mo>
+    <mn>2</mn>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
+        <mi>α</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>3</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
+        <mi>β</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
+        <mi>β</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>3</mn>
-    </mrow>
-  </msub>
-  <msub>
-    <mrow>
+    </msub>
+    <msub>
       <mstyle mathvariant="italic">
         <mi>C</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
         <mo>,</mo>
         <mi>k</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>3</mn>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <msub>
-    <mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
+        <mi>α</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>3</mn>
-    </mrow>
-  </msub>
-  <msubsup>
-    <mrow>
+    </msub>
+    <msubsup>
       <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
+        <mi>β</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>3</mn>
-    </mrow>
-    <mrow>
       <mn>2</mn>
-    </mrow>
-  </msubsup>
-  <msub>
-    <mrow>
+    </msubsup>
+    <msub>
       <mi mathvariant="normal">C</mi>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>i</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
         <mo>,</mo>
         <mi>k</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>4</mn>
       </mrow>
-    </mrow>
-  </msub>
-  <mo>.</mo>
-</math></span>&#xA0; (11)</p>
-          </div>
-        </div>
-        <p id="_b1dae9ab-9aaf-ef78-1709-c8e37b8069a1">Obviously, for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+    </msub>
+    <mo>.</mo>
+  </mstyle>
+</math></span>  (11)</p></div></div><p id="_5e23f7f6-5f98-abad-188b-9c184a4aa462">Obviously, for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
+        <mi>α</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>3</mn>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <msub>
-    <mrow>
+    </msub>
+    <mo>=</mo>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
+        <mi>β</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mn>3</mn>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <mn>0</mn>
-</math></span> this reduces to <a href="#eq8">Equation (8)</a>.</p>
-        <p id="_b4d6d864-0a7a-e558-0fe0-3363bad0a93b">It is worth noting that not only the new coefficients <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B3;</mi>
+    </msub>
+    <mo>=</mo>
+    <mn>0</mn>
+  </mstyle>
+</math></span> this reduces to <a href="#eq8">Equation (8)</a>.</p><p id="_477cab8a-bb9a-1188-898b-1a2af0cf3133">It is worth noting that not only the new coefficients <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>γ</mi>
+    </mstyle>
   </mstyle>
 </math></span>, introduced in <a href="#eq9">Equation (9)</a>, become more complicated, but also that their number no longer agrees with those of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B1;</mi>
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>α</mi>
+    </mstyle>
   </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B2;</mi>
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>β</mi>
+    </mstyle>
   </mstyle>
-</math></span>.</p>
-        <p id="_e4e63b85-3546-91f6-b817-479df13a587c">I have just been informed by Mme M. Boutillon, a colleague at the BIPM, that the following general rule holds: If the recurrence formulae for both <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>A</mi>
+</math></span>.</p><p id="_458e998a-a1fe-12a2-ff1f-857ba68b2a62">I have just been informed by Mme M. Boutillon, a colleague at the BIPM, that the following general rule holds: If the recurrence formulae for both <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>A</mi>
+    </mstyle>
   </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>B</mi>
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>B</mi>
+    </mstyle>
   </mstyle>
 </math></span> have <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>m</mi>
+  <mstyle displaystyle="false">
+    <mi>m</mi>
+  </mstyle>
 </math></span> terms (in <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B1;</mi>
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>α</mi>
+    </mstyle>
   </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B2;</mi>
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>β</mi>
+    </mstyle>
   </mstyle>
 </math></span>), the recurrence for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>C</mi>
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>C</mi>
+    </mstyle>
   </mstyle>
 </math></span> includes <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msup>
-    <mrow>
-      <mfenced open="(" close=")">
-        <mrow>
-          <mi>m</mi>
-          <mo>&#x2212;</mo>
-          <mn>1</mn>
-        </mrow>
-      </mfenced>
-    </mrow>
-    <mrow>
+  <mstyle displaystyle="false">
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <mi>m</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>)</mo>
+      </mrow>
       <mn>2</mn>
-    </mrow>
-  </msup>
-  <mo>+</mo>
-  <mn>1</mn>
-</math></span> terms (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>&#x3B3;</mi>
+    </msup>
+    <mo>+</mo>
+    <mn>1</mn>
   </mstyle>
-</math></span>).</p>
-        <p id="_06abc6c5-344e-86f9-6134-9533a3b6e0f8">This nice result explains why we find five terms in the product of triple recursions <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mfenced open="(" close=")">
+</math></span> terms (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>γ</mi>
+    </mstyle>
+  </mstyle>
+</math></span>).</p><p id="_4d10258b-ab1c-f554-afb3-22449a3bc307">This nice result explains why we find five terms in the product of triple recursions <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
     <mrow>
+      <mo>(</mo>
       <mi>m</mi>
       <mo>=</mo>
       <mn>3</mn>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
+  </mstyle>
 </math></span>. In addition, it shows that only in the case of a double recursion <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mfenced open="(" close=")">
+  <mstyle displaystyle="false">
     <mrow>
+      <mo>(</mo>
       <mi>m</mi>
       <mo>=</mo>
       <mn>2</mn>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-</math></span>&#x2009;&#x2014;&#x2009;the case <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>m</mi>
-  <mo>=</mo>
-  <mn>1</mn>
-</math></span> is of no interest&#x2009;&#x2014;&#x2009;the elements of the product matrix have the same number of terms in the recurrence.</p>
-      </div>
-      <br />
-      <div><h1 class="Section3" id="toc1">References</h1>
-<p id="bipm92-5" class="Biblio">[1]&#xA0;  J.W. M&#xFC;ller: &#x201C;Alternate moments and parity moments&#x201D;, Rapport bipm92-5 (1992)</p><p id="riordan" class="Biblio">[2]&#xA0;  J. Riordan: &#x201C;An Introduction to Combinatorial Analysis&#x201D; (Wiley, New York, 1958)</p><p id="bipm92-9" class="Biblio">[3]&#xA0;  J.W. M&#xFC;ller: &#x201C;Shifted developments of power functions&#x201D;, Rapport bipm92-9 (1992)</p>
-
-
-
-</div>
-      <aside id="fn:1" class="footnote"><p id="_e938bf7f-1f5a-3007-99a6-1d75008538e5"><a class="FootnoteRef" href="#fn:1"><sup>1</sup></a>Note that the quantities <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle mathvariant="italic">
-    <mi>T</mi>
   </mstyle>
-  <mfenced open="(" close=")">
+</math></span> — the case <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>m</mi>
+    <mo>=</mo>
+    <mn>1</mn>
+  </mstyle>
+</math></span> is of no interest — the elements of the product matrix have the same number of terms in the recurrence.</p></div><br /><div><h1 class="Section3" id="_aa566f4d-f6eb-452d-a3f7-20bd72ea1dbc">References</h1>
+<p id="bipm92-5" class="Biblio">[1]  J.W. Müller: “Alternate moments and parity moments”, Rapport bipm92-5 (1992)</p><p id="riordan" class="Biblio">[2]  J. Riordan: “An Introduction to Combinatorial Analysis” (Wiley, New York, 1958)</p><p id="bipm92-9" class="Biblio">[3]  J.W. Müller: “Shifted developments of power functions”, Rapport bipm92-9 (1992)</p>
+
+
+
+</div><aside id="fn:1" class="footnote"><p id="_0abfcf7c-f437-2f5c-6786-2f94b76f88fa"><a class="FootnoteRef" href="#fn:1"><sup>1</sup></a>Note that the quantities <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
     <mrow>
+      <mo>(</mo>
       <mi>r</mi>
       <mo>,</mo>
       <mi>k</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-</math></span> are identical with coefficients that have been listed before in another context <a href="#bipm92-9">[3]</a>, and which were then denoted by <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mi>r</mi>
-      <mo>,</mo>
-      <mn>2</mn>
-    </mrow>
-  </mfenced>
-</math></span>. The correspondence is <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
-      <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
-      </mstyle>
-    </mrow>
-    <mrow>
-      <mi>j</mi>
-    </mrow>
-  </msub>
-  <mfenced open="(" close=")">
-    <mrow>
-      <mi>r</mi>
-      <mo>,</mo>
-      <mn>2</mn>
-    </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <mstyle mathvariant="italic">
-    <mi>T</mi>
   </mstyle>
-  <mfenced open="(" close=")">
+</math></span> are identical with coefficients that have been listed before in another context <a href="#bipm92-9">[3]</a>, and which were then denoted by <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mi>j</mi>
+    </msub>
     <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>,</mo>
+      <mn>2</mn>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math></span>. The correspondence is <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>β</mi>
+      </mstyle>
+      <mi>j</mi>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mi>r</mi>
+      <mo>,</mo>
+      <mn>2</mn>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mstyle mathvariant="italic">
+      <mi>T</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
       <mi>r</mi>
       <mo>+</mo>
       <mn>1</mn>
-      <mo>,</mo>
+      <mo>, </mo>
       <mi>j</mi>
       <mo>+</mo>
       <mn>1</mn>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
+  </mstyle>
 </math></span>. In fact, it now turns out that all the coefficients evaluated in <a href="#bipm92-9">[3]</a> allow simple recurrences, namely (in the original notation) <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+  <mstyle displaystyle="false">
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
+        <mi>α</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>j</mi>
-    </mrow>
-  </msub>
-  <mfenced open="(" close=")">
+    </msub>
     <mrow>
+      <mo>(</mo>
       <mi>r</mi>
       <mo>,</mo>
       <mi>t</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <mi>t</mi>
-  <msub>
-    <mrow>
+    <mo>=</mo>
+    <mi>t</mi>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
+        <mi>α</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>j</mi>
-    </mrow>
-  </msub>
-  <mfenced open="(" close=")">
+    </msub>
     <mrow>
+      <mo>(</mo>
       <mi>r</mi>
-      <mo>&#x2212;</mo>
+      <mo>−</mo>
       <mn>1</mn>
       <mo>,</mo>
       <mi>t</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>+</mo>
-  <msub>
-    <mrow>
+    <mo>+</mo>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B1;</mi>
+        <mi>α</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>j</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
       </mrow>
-    </mrow>
-  </msub>
-  <mfenced open="(" close=")">
+    </msub>
     <mrow>
+      <mo>(</mo>
       <mi>r</mi>
-      <mo>&#x2212;</mo>
+      <mo>−</mo>
       <mn>1</mn>
       <mo>,</mo>
       <mi>t</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
+  </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mrow>
+  <mstyle displaystyle="false">
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
+        <mi>β</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>j</mi>
-    </mrow>
-  </msub>
-  <mfenced open="(" close=")">
+    </msub>
     <mrow>
+      <mo>(</mo>
       <mi>r</mi>
       <mo>,</mo>
       <mi>t</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>=</mo>
-  <mfenced open="(" close=")">
+    <mo>=</mo>
     <mrow>
+      <mo>(</mo>
       <mi>j</mi>
       <mo>+</mo>
       <mi>t</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <msub>
-    <mrow>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
+        <mi>β</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mi>j</mi>
-    </mrow>
-  </msub>
-  <mfenced open="(" close=")">
+    </msub>
     <mrow>
+      <mo>(</mo>
       <mi>r</mi>
-      <mo>&#x2212;</mo>
+      <mo>−</mo>
       <mn>1</mn>
       <mo>,</mo>
       <mi>t</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
-  <mo>+</mo>
-  <msub>
-    <mrow>
+    <mo>+</mo>
+    <msub>
       <mstyle mathvariant="italic">
-        <mi>&#x3B2;</mi>
+        <mi>β</mi>
       </mstyle>
-    </mrow>
-    <mrow>
       <mrow>
         <mi>j</mi>
-        <mo>&#x2212;</mo>
+        <mo>−</mo>
         <mn>1</mn>
       </mrow>
-    </mrow>
-  </msub>
-  <mfenced open="(" close=")">
+    </msub>
     <mrow>
+      <mo>(</mo>
       <mi>r</mi>
-      <mo>&#x2212;</mo>
+      <mo>−</mo>
       <mn>1</mn>
       <mo>,</mo>
       <mi>t</mi>
+      <mo>)</mo>
     </mrow>
-  </mfenced>
+  </mstyle>
 </math></span>, a property which has not been recognized previously. These relations also provide a convenient means for checking the numerical values.</p>
-<a href="#fnref:1">&#x21A9;</a></aside>
-    </main>
-  <script type="text/x-mathjax-config">
+<a href="#fnref:1">↩</a></aside></main><script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     "HTML-CSS": { preferredFont: "STIX" },
     asciimath2jax: { delimiters: [['(#(', ')#)']] }
  });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>  <script>
+  <script>
     $("#toc").on('click', 'li', function(e) {
     $(this).parent().find('li.toc-active').removeClass('toc-active');
     $(this).addClass('toc-active');
@@ -4197,5 +3559,4 @@ $('#toggle').on('click', function(){
 anchors.add('h1, h2, h3, h4');
 </script>
 
-</body>
-</html>
+</body></html>
