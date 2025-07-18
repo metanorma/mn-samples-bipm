@@ -24,7 +24,8 @@ figure, figcaption, footer, header, hgroup,
 menu, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -40,7 +41,8 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   border: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -55,7 +57,8 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 html, body, div, span, applet, object, iframe,
 p, blockquote,
@@ -70,87 +73,115 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 code, pre, tt, kbd, samp {
   font-family: "Space Mono",monospace;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 code *, pre *, tt *, kbd *, samp * {
   font-family: "Space Mono",monospace !important;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 p code, dt code, li code, label code, legend code, caption code, th code, td code,
 p tt, dt tt, li tt, label tt, legend tt, caption tt, th tt, td tt,
 p kbd, dt kbd, li kbd, label kbd, legend kbd, caption kbd, th kbd, td kbd,
 p samp, dt samp, li samp, label samp, legend samp, caption samp, th samp, td samp {
-  font-size: ; }
+  font-size: ;
+}
+
+sub, sup {
+  font-size: 0.75em;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 blockquote, q {
-  quotes: none; }
-  blockquote::before, blockquote::after, q::before, q::after {
-    content: '';
-    content: none; }
+  quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+  content: "";
+  content: none;
+}
 
 .h2Annex {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 dl {
   display: grid;
-  grid-template-columns: max-content auto; }
-  dl dt p, dl dd p {
-    margin-top: 0; }
-  dl dt {
-    grid-column-start: 1; }
-  dl dd {
-    grid-column-start: 2; }
+  grid-template-columns: max-content auto;
+}
+dl dt p, dl dd p {
+  margin-top: 0;
+}
+dl dt {
+  grid-column-start: 1;
+}
+dl dd {
+  grid-column-start: 2;
+}
 
 b, strong {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 div.document-stage-band, div.document-type-band {
-  background-color: #333333; }
+  background-color: #333333;
+}
 
 a.FootnoteRef + a.FootnoteRef::before {
   content: ", ";
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 a.TableFootnoteRef + a.TableFootnoteRef::before {
   content: ", ";
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 a.TableFootnoteRef, span.TableFootnoteRef,
 a.FootnoteRef, span.FootnoteRef {
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 .addition {
-  color: blue; }
+  color: blue;
+}
 
 .deletion {
   color: red;
-  text-decoration: line-through; }
+  text-decoration: line-through;
+}
 
 ruby {
   ruby-position: over;
-  -webkit-ruby-position: before; }
+  -webkit-ruby-position: before;
+}
 
 ruby ruby {
   ruby-position: under;
-  -webkit-ruby-position: after; }
+  -webkit-ruby-position: after;
+}
 
 /* code highlighting with line numbers */
 table.rouge-line-table td.rouge-gutter {
@@ -158,13 +189,15 @@ table.rouge-line-table td.rouge-gutter {
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  padding-right: 1em; }
+  padding-right: 1em;
+}
 
 table.rouge-line-table td.rouge-code {
   -moz-user-select: all;
   -ms-user-select: all;
   -webkit-user-select: all;
-  user-select: all; }
+  user-select: all;
+}
 
 table.rouge-line-table,
 table.rouge-line-table th,
@@ -173,103 +206,268 @@ table.rouge-line-table td {
   border: none;
   margin: 0;
   padding: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 table.rouge-line-table pre {
   margin: 0;
   padding: 0;
   overflow-x: visible;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
-#brochure-band {
-  background-color: #0AC442; }
+/* header § links */
+a.header {
+  color: inherit;
+  text-decoration: none;
+}
 
-#brochure {
-  border-bottom: solid 3px #0AC442; }
+a.header:hover {
+  color: #a53221 !important;
+  background: inherit;
+  box-shadow: none;
+}
 
-#mise-en-pratique-band {
-  background-color: #540D6E; }
+a.header:visited {
+  color: inherit;
+  text-decoration: none;
+}
 
-#mise-en-pratique {
-  border-bottom: solid 3px #540D6E; }
+a.anchor {
+  position: absolute;
+  z-index: 1001;
+  width: 1.5ex;
+  margin-left: -1.5ex;
+  display: block;
+  text-decoration: none !important;
+  visibility: hidden;
+  text-align: center;
+  font-weight: 400;
+}
 
-#rapport-band {
-  background-color: #D183C9; }
+a.anchor::before {
+  content: "§";
+  font-size: 0.85em;
+  display: block;
+  padding-top: 0.1em;
+}
 
-#rapport {
-  border-bottom: solid 3px #D183C9; }
+a.anchor:hover {
+  color: #a53221;
+  background: inherit;
+  box-shadow: none;
+}
 
-#monographie-band {
-  background-color: #65AFFF; }
+h1 > a.anchor:hover,
+h2 > a.anchor:hover,
+h3 > a.anchor:hover,
+h4 > a.anchor:hover,
+h5 > a.anchor:hover,
+h6 > a.anchor:hover,
+.inline-header > a.anchor:hover,
+h1:hover > a.anchor,
+h2:hover > a.anchor,
+h3:hover > a.anchor,
+h4:hover > a.anchor,
+h5:hover > a.anchor,
+h6:hover > a.anchor,
+.inline-header:hover > a.anchor {
+  visibility: visible;
+}
 
-#monographie {
-  border-bottom: solid 3px #65AFFF; }
+/* collapsible snippets: collapsible before hidable */
+.hidable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 3px 0;
+  margin: 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: "▼";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.active:after {
+  content: "▲";
+}
+
+/* collapsible: */
+.collapsible + .hidable {
+  margin-top: 0;
+}
+
+.collapsible:not(.active) + .hidable {
+  overflow: hidden;
+  padding: 0;
+}
+
+.svg-container {
+  width: 100%; /* or any desired width */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+svg {
+  width: 100%;
+  height: auto; /* ← key to maintaining aspect ratio */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+#standard-band {
+  background-color: #0AC442;
+}
+
+#standard {
+  border-bottom: solid 3px #0AC442;
+}
+
+#directive-band {
+  background-color: #540D6E;
+}
+
+#directive {
+  border-bottom: solid 3px #540D6E;
+}
 
 #guide-band {
-  background-color: #3A405A; }
+  background-color: #D183C9;
+}
 
 #guide {
-  border-bottom: solid 3px #3A405A; }
+  border-bottom: solid 3px #D183C9;
+}
 
-#meeting-report-band {
-  background-color: #F26430; }
+#specification-band {
+  background-color: #65AFFF;
+}
 
-#meeting-report {
-  border-bottom: solid 3px #F26430; }
+#specification {
+  border-bottom: solid 3px #65AFFF;
+}
 
-#technical-report-band {
-  background-color: #C84630; }
+#report-band {
+  background-color: #3A405A;
+}
 
-#technical-report {
-  border-bottom: solid 3px #C84630; }
+#report {
+  border-bottom: solid 3px #3A405A;
+}
 
-#working-part-note-band {
-  background-color: #BFAE48; }
+#amendment-band {
+  background-color: #F26430;
+}
 
-#working-part-note {
-  border-bottom: solid 3px #BFAE48; }
+#amendment {
+  border-bottom: solid 3px #F26430;
+}
 
-#strategy-band {
-  background-color: #BD9391; }
+#corrigendum-band {
+  background-color: #C84630;
+}
 
-#strategy {
-  border-bottom: solid 3px #BD9391; }
+#corrigendum {
+  border-bottom: solid 3px #C84630;
+}
 
-#cipm-mra-band {
-  background-color: #004E64; }
+#administrative-band {
+  background-color: #BFAE48;
+}
 
-#cipm-mra {
-  border-bottom: solid 3px #004E64; }
+#administrative {
+  border-bottom: solid 3px #BFAE48;
+}
 
-#resolution-band {
-  background-color: #53C170; }
+#advisory-band {
+  background-color: #BD9391;
+}
 
-#resolution {
-  border-bottom: solid 3px #53C170; }
+#advisory {
+  border-bottom: solid 3px #BD9391;
+}
 
-#draft-proposal-band {
-  background-color: #39A0ED; }
+#proposal-band {
+  background-color: #39A0ED;
+}
 
-#draft-proposal {
-  border-bottom: solid 3px #39A0ED; }
+#proposal {
+  border-bottom: solid 3px #39A0ED;
+}
 
-#draft-development-band {
-  background-color: #2D7393; }
+#working-draft-band {
+  background-color: #2D7393;
+}
 
-#draft-development {
-  border-bottom: solid 3px #2D7393; }
+#working-draft {
+  border-bottom: solid 3px #2D7393;
+}
 
-#in-force-band {
-  background-color: #53C170; }
+#committee-draft-band {
+  background-color: #2A6B7C;
+}
 
-#in-force {
-  border-bottom: solid 3px #53C170; }
+#committee-draft {
+  border-bottom: solid 3px #2A6B7C;
+}
 
-#retired-band {
-  background-color: #2E382E; }
+#draft-standard-band {
+  background-color: #1C7F7A;
+}
 
-#retired {
-  border-bottom: solid 3px #2E382E; }
+#draft-standard {
+  border-bottom: solid 3px #1C7F7A;
+}
+
+#final-draft-band {
+  background-color: #53C170;
+}
+
+#final-draft {
+  border-bottom: solid 3px #53C170;
+}
+
+#published-band {
+  background-color: #069E2D;
+}
+
+#published {
+  border-bottom: solid 3px #069E2D;
+}
+
+#withdrawn-band {
+  background-color: #004E64;
+}
+
+#withdrawn {
+  border-bottom: solid 3px #004E64;
+}
+
+#cancelled-band {
+  background-color: #2E382E;
+}
+
+#cancelled {
+  border-bottom: solid 3px #2E382E;
+}
 
 /*
     1. HTML & Body
@@ -283,83 +481,111 @@ body {
   line-height: 1.4em;
   color: #1d1d1d;
   background-color: #ffffff;
-  font-weight: 400; }
-  body main {
-    margin: 0 3em 0 6em; }
-  body pre * {
-    font-family: Times New Roman !important; }
+  font-weight: 400;
+}
+body main {
+  margin: 0 3em 0 6em;
+}
+body pre * {
+  font-family: Times New Roman !important;
+}
 
 main {
-  margin: 0 3em 0 6em; }
+  margin: 0 3em 0 6em;
+}
 
 /*
     2. Responsive navigation layout
 */
 #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
   font-family: Times New Roman;
-  font-weight: 400; }
-  #toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-    #toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
-      padding: 5px 10px; }
-    #toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
-      color: #485094;
-      text-decoration: none;
-      display: block; }
-      #toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
-        box-shadow: none;
-        color: #485094; }
-  #toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
-    padding-left: 30px; }
-  #toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
-    padding-left: 50px; }
-  #toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
-    padding-left: 70px; }
-  #toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
-    padding-left: 90px; }
-  #toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
-    padding-left: 110px; }
+  font-weight: 400;
+}
+#toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
+  padding: 5px 10px;
+}
+#toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
+  color: #485094;
+  text-decoration: none;
+  display: block;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: #485094;
+}
+#toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
+  padding-left: 30px;
+}
+#toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
+  padding-left: 50px;
+}
+#toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+  padding-left: 70px;
+}
+#toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+  padding-left: 90px;
+}
+#toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+  padding-left: 110px;
+}
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  background: #6C734A;
+  box-shadow: inset -5px 0px 10px -5px #6C734A !important;
+}
+#toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: #485094;
+}
+@media print {
   #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-    background: #6C734A;
-    box-shadow: inset -5px 0px 10px -5px #6C734A !important; }
-    #toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-      color: #485094; }
-  @media print {
-    #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-      background: white;
-      box-shadow: none !important; }
-    #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
-      color: #485094; }
-    #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-      color: black; } }
-  @media screen and (max-width: 768px) {
-    #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
-      padding: 0 1.5em;
-      overflow: visible; } }
+    background: white;
+    box-shadow: none !important;
+  }
   #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
-    color: white; }
-  #toc .toc-active,
-  #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active,
-  #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-    box-shadow: none !important; }
-    #toc .toc-active a,
-    #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a,
-    #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-      color: white;
-      background: none;
-      box-shadow: none; }
-  #toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
-    text-transform: uppercase; }
-  #toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
-    box-shadow: none;
-    color: white; }
+    color: #485094;
+  }
+  #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+    color: black;
+  }
+}
+@media screen and (max-width: 768px) {
+  #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    padding: 0 1.5em;
+    overflow: visible;
+  }
+}
+#toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
+  color: white;
+}
+#toc .toc-active,
+#toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active,
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  box-shadow: none !important;
+}
+#toc .toc-active a,
+#toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a,
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: white;
+  background: none;
+  box-shadow: none;
+}
+#toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
+  text-transform: uppercase;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: white;
+}
 
 #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 @media screen and (min-width: 768px) {
   nav {
@@ -370,9 +596,10 @@ main {
     width: 323px;
     font-size: 0.9em;
     overflow: auto;
-    padding: 0 0 0 45px;
-    background-color: #f7f7f7; } }
-
+    padding: 0 0 0 30px;
+    background-color: #f7f7f7;
+  }
+}
 @media print {
   nav {
     position: relative;
@@ -381,7 +608,9 @@ main {
     overflow: auto;
     padding: 0;
     margin-right: 0;
-    background-color: white; } }
+    background-color: white;
+  }
+}
 
 @media screen and (min-width: 768px) {
   #toggle {
@@ -391,52 +620,65 @@ main {
     background-color: #6C734A;
     color: white !important;
     cursor: pointer;
-    z-index: 100; }
-    #toggle span {
-      text-align: center;
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%); } }
-
+    z-index: 100;
+  }
+  #toggle span {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
 @media screen and (max-width: 768px) {
   #toggle {
-    display: none; } }
-
+    display: none;
+  }
+}
 @media print {
   #toggle {
-    display: none; } }
+    display: none;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .container {
-    padding-left: 360px; }
+    padding-left: 360px;
+  }
   .rule.toc {
-    display: none; }
+    display: none;
+  }
   h1.toc-contents {
-    margin-top: 1em; }
+    margin-top: 1em;
+  }
   ul#toc-list, ul#toc-list > :is(.h1, .h2, .h3, .h4, .h5, .h6) {
     padding: 0;
-    margin: 0; } }
-
+    margin: 0;
+  }
+}
 div.figure {
   line-height: 1.6em;
   padding: 1.5em;
   margin: 2em 0 1em 0;
-  overflow: auto; }
-  div.figure .FigureTitle, div.figure .figure-title {
-    font-weight: 700;
-    font-size: 1em;
-    text-align: center; }
-  div.figure > img, div.figure > svg {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    max-width: 100%;
-    height: auto; }
+  overflow: auto;
+}
+div.figure .FigureTitle, div.figure .figure-title {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+div.figure > img, div.figure > svg {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 table div.figure {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 /*
     Document types + stages
@@ -447,30 +689,35 @@ table div.figure {
   height: 100%;
   position: fixed;
   display: block;
-  z-index: 102; }
-  .document-type-band > :first-child {
-    position: relative;
-    width: 25px;
-    font-weight: 400;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    margin: 0;
-    margin-left: 6px;
-    writing-mode: tb-rl;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    white-space: nowrap;
-    display: block;
-    bottom: 0; }
-  @media print {
-    .document-type-band {
-      display: none; } }
-  .document-type-band .document-type {
-    top: 20px; }
+  z-index: 102;
+}
+.document-type-band > :first-child {
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-type-band {
+    display: none;
+  }
+}
+.document-type-band .document-type {
+  top: 20px;
+}
 
 .document-stage-band {
   left: 0;
@@ -479,31 +726,37 @@ table div.figure {
   position: fixed;
   display: block;
   z-index: 101;
-  box-shadow: -5px 0px 10px #1d1d1d; }
-  .document-stage-band > :first-child {
-    position: relative;
-    width: 25px;
-    font-weight: 400;
-    height: 150;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    margin: 0;
-    margin-left: 6px;
-    writing-mode: tb-rl;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    white-space: nowrap;
-    display: block;
-    bottom: 0; }
-  @media print {
-    .document-stage-band {
-      display: none; } }
+  box-shadow: -5px 0px 10px #1d1d1d;
+}
 .document-stage-band > :first-child {
-  font-weight: 300; }
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  height: 150;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-stage-band {
+    display: none;
+  }
+}
+
+.document-stage-band > :first-child {
+  font-weight: 300;
+}
 
 p.document-stage {
   position: relative;
@@ -523,21 +776,25 @@ p.document-stage {
   -o-transform: rotate(180deg);
   white-space: nowrap;
   display: block;
-  bottom: 0; }
+  bottom: 0;
+}
 
 #governance-band p.document-type {
-  height: 230px !important; }
+  height: 230px !important;
+}
 
 p.document-stage {
   font-weight: 300;
-  height: 160px; }
+  height: 160px;
+}
 
 .coverpage-maturity {
   font-family: Times New Roman;
   font-weight: 400;
   font-size: 1em;
   margin: 0 0 2em 0;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 /*
     3. TYPOGRAPHY
@@ -550,150 +807,186 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #6C734A;
   font-weight: 300;
   margin-top: 1.6em;
-  margin-bottom: 0.3em; }
+  margin-bottom: 0.3em;
+}
 
 h1, .h1 {
   font-size: 1.6em;
   text-transform: uppercase;
-  margin-top: 2em; }
+  margin-top: 2em;
+}
 
-h1#content, #content.h1 {
-  margin-top: 2em; }
+h1#content, .h1#content {
+  margin-top: 2em;
+}
 
 h2, .h2 {
   margin-top: 1.3em;
   font-size: 1.3em;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 h3, .h3 {
   margin-top: 1.1em;
   font-size: 1.1em;
-  font-weight: 100; }
+  font-weight: 100;
+}
 
 .TermNum {
-  font-weight: 100; }
+  font-weight: 100;
+}
 
 .TermNum, .Terms, .AltTerms {
-  color: #6C734A; }
+  color: #6C734A;
+}
 
 h2.TermNum {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 p.Terms {
   font-size: 1.1em;
   line-height: 1.5em;
-  margin: 0; }
+  margin: 0;
+}
 
 p.AltTerms {
   /*
-    font-style: italic;
-     */
+  font-style: italic;
+   */
   font-size: 1.1em;
-  margin: 0; }
+  margin: 0;
+}
 
 /*
     3.2 Links
 */
 a, a:visited {
   text-decoration: none;
-  color: #485094; }
+  color: #485094;
+}
 
 a:hover {
   color: white;
   background: #6C734A;
-  box-shadow: 3px 0 0 #6C734A, -3px 0 0 #6C734A; }
+  box-shadow: 3px 0 0 #6C734A, -3px 0 0 #6C734A;
+}
 
 *::selection {
   background: #6C734A;
-  color: white; }
+  color: white;
+}
 
 *::-moz-selection {
   background: #6C734A;
-  color: white; }
+  color: white;
+}
 
 /*
     3.3 Lists
 */
 ul, ol {
-  margin-left: 1.2em; }
+  margin-left: 1.2em;
+}
 
 ul li {
-  list-style: none; }
+  list-style: none;
+}
 
 ul li::before {
   content: "—";
   display: inline-block;
   width: 1em;
-  margin-left: -1.2em; }
+  margin-left: -1.2em;
+}
 
 ul li p {
-  display: inline; }
+  display: inline;
+}
 
 ul > li:first-child {
-  margin-top: 1em; }
+  margin-top: 1em;
+}
 
 ul ul > li:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 ol ul > li:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 #toc-list ul {
-  margin-bottom: 0.25em; }
+  margin-bottom: 0.25em;
+}
 
 #toc-list li {
-  list-style-type: none; }
+  list-style-type: none;
+}
 
 #toc li::before {
   content: " ";
-  display: none; }
+  display: none;
+}
 
 /* https://github.com/metanorma/metanorma-bipm/issues/47 */
-ol[class="alphabet"] {
-  counter-reset: alphabet; }
+ol[class=alphabet] {
+  counter-reset: alphabet;
+}
 
-ol[class="roman"] {
-  counter-reset: roman; }
+ol[class=roman] {
+  counter-reset: roman;
+}
 
-ol[class="alphabet"] ol[class="alphabet"] {
-  counter-reset: none; }
+ol[class=alphabet] ol[class=alphabet] {
+  counter-reset: none;
+}
 
-ol[class="alphabet"] > li {
+ol[class=alphabet] > li {
   list-style: none;
-  position: relative; }
+  position: relative;
+}
 
-ol[class="alphabet"] ol[class="alphabet"] > li {
-  list-style: inherit; }
+ol[class=alphabet] ol[class=alphabet] > li {
+  list-style: inherit;
+}
 
-ol[class="alphabet"] > li::before {
+ol[class=alphabet] > li::before {
   counter-increment: alphabet;
   content: counter(alphabet, lower-alpha) ") ";
   position: absolute;
-  left: -1.4em; }
+  left: -1.4em;
+}
 
-ol[class="alphabet"] ol[class="alphabet"] > li::before {
+ol[class=alphabet] ol[class=alphabet] > li::before {
   counter-increment: none;
-  content: initial; }
+  content: initial;
+}
 
-ol[class="roman"] ol[class="roman"] {
-  counter-reset: none; }
+ol[class=roman] ol[class=roman] {
+  counter-reset: none;
+}
 
-ol[class="roman"] > li {
+ol[class=roman] > li {
   list-style: none;
-  position: relative; }
+  position: relative;
+}
 
-ol[class="roman"] ol[class="roman"] > li {
-  list-style: inherit; }
+ol[class=roman] ol[class=roman] > li {
+  list-style: inherit;
+}
 
-ol[class="roman"] > li::before {
+ol[class=roman] > li::before {
   counter-increment: roman;
   content: "(" counter(roman, lower-roman) ") ";
   position: absolute;
-  left: -2.0em; }
+  left: -2em;
+}
 
-ol[class="roman"] ol[class="roman"] > li::before {
+ol[class=roman] ol[class=roman] > li::before {
   counter-increment: none;
-  content: initial; }
+  content: initial;
+}
 
 /*
     3.4 Rules
@@ -702,14 +995,16 @@ ol[class="roman"] ol[class="roman"] > li::before {
   width: 100%;
   height: 1px;
   background-color: #0e1a85;
-  margin: 2em 0; }
+  margin: 2em 0;
+}
 
 /*
     3.5 Bibliograhy
 */
 p.Biblio, p.NormRef {
   margin-top: 1em;
-  margin-left: 2em; }
+  margin-left: 2em;
+}
 
 /*
     3.6 Source Code + figures
@@ -722,39 +1017,46 @@ pre,
   line-height: 1.6em;
   padding: 1.5em;
   margin: 2em 0 1em 0;
-  overflow: auto; }
-  .figure .SourceTitle,
-  pre .SourceTitle,
-  .pseudocode .SourceTitle {
-    font-weight: 700;
-    font-size: 1em;
-    text-align: center; }
+  overflow: auto;
+}
+.figure .SourceTitle,
+pre .SourceTitle,
+.pseudocode .SourceTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
 
 pre {
   font-family: "Space Mono",monospace;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 .AdmonitionTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .RecommendationTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .ListTitle {
   font-weight: 700;
   font-size: 1em;
   text-align: center;
-  text-align: left; }
+  text-align: left;
+}
 
 .FigureTitle,
 .SourceTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 /*
     3.7 Notes
@@ -763,9 +1065,11 @@ pre {
   background-color: #fff495;
   color: #47430c;
   padding: 1.2em;
-  margin: 1em 0 1em 0; }
-  .Note p {
-    margin: 0; }
+  margin: 1em 0 1em 0;
+}
+.Note p {
+  margin: 0;
+}
 
 /*
     3.8 Examples
@@ -776,18 +1080,23 @@ pre {
   margin: 2em 0 1em 0;
   text-align: left;
   color: #424242;
-  padding-left: 2.7em; }
-  .example p {
-    margin: 0; }
-  .example .example-title {
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-left: -1.5em; }
-  .example .example-title {
-    margin-top: 0; }
-  .example pre,
-  .example .pseudocode {
-    background: none; }
+  padding-left: 2.7em;
+}
+.example p {
+  margin: 0;
+}
+.example .example-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: -1.5em;
+}
+.example .example-title {
+  margin-top: 0;
+}
+.example pre,
+.example .pseudocode {
+  background: none;
+}
 
 /*
     3.9 Tables
@@ -798,29 +1107,36 @@ table {
   margin: 1em 0 2em 0;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 2em; }
-  table, table th, table td {
-    border: 1px solid black;
-    font-size: 0.95em; }
-  table th, table td {
-    padding: 1em; }
-  table td.header {
-    font-weight: 400; }
+  padding-right: 2em;
+}
+table, table th, table td {
+  border: 1px solid black;
+  font-size: 0.95em;
+}
+table th, table td {
+  padding: 1em;
+}
+table td.header {
+  font-weight: 400;
+}
 
 p.TableTitle {
   text-align: center;
   margin-top: 2.5em;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 /*
   3.10 Footnotes
 */
 a.footnote-number {
   vertical-align: super;
-  font-size: 0.8em; }
+  font-size: 0.8em;
+}
 
 .footnote {
-  font-size: 0.9em; }
+  font-size: 0.9em;
+}
 
 /*
     3.11 Blockquotes
@@ -832,7 +1148,8 @@ a.footnote-number {
   padding: 1.5em;
   margin-top: 2em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 /*
     3.12 Formulas
@@ -841,7 +1158,8 @@ a.footnote-number {
   background-color: #f7f7f7;
   padding: 1.5em;
   margin-top: 2em;
-  text-align: center; }
+  text-align: center;
+}
 
 /*
     3.13 Contact Info
@@ -853,41 +1171,49 @@ a.footnote-number {
   text-align: left;
   border: #6C734A solid 2px;
   color: #6C734A !important;
-  border-radius: 25px; }
+  border-radius: 25px;
+}
 
 .contact-info a,
 .contact-info a:hover {
-  color: #6C734A; }
+  color: #6C734A;
+}
 
 .contact-info p, .contact-info a {
   font-family: "Space Mono",monospace;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 .contact-info .name {
   font-weight: 700;
   font-size: 1.2em;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 .contact-info .address {
   font-size: 1em;
   line-height: 1.3em;
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 /*
     Keywords
 */
 span.keyword {
-  font-weight: 600; }
+  font-weight: 600;
+}
 
 /*
     Paragraphs
 */
 p {
   margin-top: 1em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+}
 
 h2 p, .h2 p {
-  display: inline; }
+  display: inline;
+}
 
 /*
     4.0 Page header
@@ -897,24 +1223,28 @@ h2 p, .h2 p {
 */
 .icon-svg {
   width: 100%;
-  color: #5ecf86; }
+  color: #5ecf86;
+}
 
 .wrapper-top {
   background: linear-gradient(200deg, #007864, #6C734A);
   color: #ffffff;
   padding: 2em 0;
-  width: 100%; }
+  width: 100%;
+}
 
 .wrapper-top-bottom {
   width: 0;
   height: 0;
   border-top: 100px solid #6C734A;
   border-right: 100px solid transparent;
-  position: absolute; }
+  position: absolute;
+}
 
 .doc-number {
   font-size: 0.5em;
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 .coverpage-title {
   padding-bottom: 0.5em;
@@ -924,53 +1254,65 @@ h2 p, .h2 p {
   font-weight: 100;
   padding-left: 1em;
   padding-right: 1em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .WordSection11 {
-  padding: 0 2em 0 3em; }
+  padding: 0 2em 0 3em;
+}
 
 .info-section {
-  padding: 0 2em 0 5em; }
+  padding: 0 2em 0 5em;
+}
 
 .prefatory-section {
-  padding: 0 3em 0 6em; }
+  padding: 0 3em 0 6em;
+}
 
 .zzSTDTitle1, .MsoCommentText {
-  display: none; }
+  display: none;
+}
 
 .coverpage {
   text-align: center;
-  padding-left: 1.5em; }
+  padding-left: 1.5em;
+}
 
 .coverpage-logo span, .coverpage-tc-name span {
   font-family: Times New Roman;
   text-transform: none;
-  font-weight: 300; }
+  font-weight: 300;
+}
 
 .coverpage-tc-name {
   font-size: 1.2em;
   line-height: 1.2em;
-  margin: 0.25em 0; }
+  margin: 0.25em 0;
+}
 
 /*
     4.2 Document Identity
 */
 .coverpage-doc-identity {
   font-size: 2em;
-  line-height: 2em; }
+  line-height: 2em;
+}
 
 .coverpage-title .title-second {
-  font-size: 0.8em; }
+  font-size: 0.8em;
+}
 
 .coverpage-title .title-third {
-  font-size: 0.6em; }
+  font-size: 0.6em;
+}
 
 .coverpage-stage-block {
   font-family: Times New Roman;
   font-weight: 600;
   font-size: 1.25em;
   margin: 2em 0em 2em 0em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 /*
     4.3 Draft Warning
@@ -981,13 +1323,15 @@ h2 p, .h2 p {
   margin: 1em 2em;
   color: #485094;
   padding: 2em 1em 1em 1em;
-  border-radius: 25px; }
+  border-radius: 25px;
+}
 
 .coverpage-warning .title {
   font-family: Times New Roman;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+}
 
 /*
     4.4 Copyright
@@ -995,7 +1339,8 @@ h2 p, .h2 p {
 .copyright {
   padding: 1em;
   font-size: 0.9em;
-  text-align: left; }
+  text-align: left;
+}
 
 /*  .copyright .name, .copyright .address {color: #485094;} */
 /*
@@ -1021,62 +1366,84 @@ To top button
   cursor: pointer;
   padding: 10px 15px 10px 15px;
   border-radius: 4px;
-  text-transform: uppercase; }
-  #myBtn:hover {
-    opacity: 1; }
-  @media print {
-    #myBtn {
-      display: none; } }
-  #myBtn a.anchorjs-link:hover {
-    background: none;
-    color: #485094;
-    box-shadow: none; }
+  text-transform: uppercase;
+}
+#myBtn:hover {
+  opacity: 1;
+}
+@media print {
+  #myBtn {
+    display: none;
+  }
+}
+#myBtn a.anchorjs-link:hover {
+  background: none;
+  color: #485094;
+  box-shadow: none;
+}
 
 @page {
-  margin: 2cm 1cm; }
-
+  margin: 2cm 1cm;
+}
 @media print {
   .document-info, nav, .copyright {
-    page-break-before: always; }
+    page-break-before: always;
+  }
   h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
     page-break-after: avoid;
-    margin-top: 1.2em; }
+    margin-top: 1.2em;
+  }
   .note, .figure, pre, .pseudocode, table {
-    page-break-inside: avoid; }
+    page-break-inside: avoid;
+  }
   .info-section {
-    display: none; }
+    display: none;
+  }
   .coverpage {
-    height: 23cm; }
+    height: 23cm;
+  }
   .wrapper-top {
     top: 0;
     padding-top: 4cm;
-    padding-bottom: 4cm; }
+    padding-bottom: 4cm;
+  }
   .wrapper-top-bottom {
-    margin-top: -5px; }
+    margin-top: -5px;
+  }
   #toggle, .document-stage-band,
   .document-type-band, button#myBtn {
-    display: none; }
+    display: none;
+  }
   .container {
-    padding-left: 0; }
+    padding-left: 0;
+  }
   h1.content, .h1.content {
     margin-top: 2em;
-    line-height: 2.5em; }
+    line-height: 2.5em;
+  }
   h1, .h1 {
     font-size: 1.5em;
-    line-height: 1.5; }
+    line-height: 1.5;
+  }
   h2, .h2 {
-    font-size: 1.2em; }
+    font-size: 1.2em;
+  }
   h3, .h3 {
-    font-size: 1em; }
+    font-size: 1em;
+  }
   .Note {
     background-color: #fff495;
     color: #47430c;
     padding: 5px;
-    margin: 2em 0 1em 0; }
+    margin: 2em 0 1em 0;
+  }
   .Note p {
-    padding: 0 5px 0 5px; }
+    padding: 0 5px 0 5px;
+  }
   .wrapper-top-bottom {
-    display: none; } }
+    display: none;
+  }
+}
 
 -->
 </style><style><!--pre.sourcecode table td { padding: 5px; }
@@ -1118,7 +1485,8 @@ pre.sourcecode .nt {
   color: #0000FF;
 }
 
---></style><title>The relation between the numbers <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+--></style><title>The relation between the numbers <stem block="false" type="MathML">
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1128,7 +1496,9 @@ pre.sourcecode .nt {
     </msub>
   </mstyle>
 </math>
-<asciimath>ii(M)_r</asciimath></stem> and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <asciimath>ii(M)_r</asciimath>
+</stem> and <stem block="false" type="MathML">
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1138,7 +1508,8 @@ pre.sourcecode .nt {
     </msub>
   </mstyle>
 </math>
-<asciimath>ii(B)_j</asciimath></stem></title>
+  <asciimath>ii(B)_j</asciimath>
+</stem></title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--TOC script import-->
@@ -1176,6 +1547,10 @@ pre.sourcecode .nt {
       <span class="docnumber">BIPM 238</span>
       <span class="docnumber-separator">:</span>
       <span class="docyear">1995 </span>
+      
+      
+      <br />Date: 01-1995
+      
     </div>
 
     <div class="coverpage-logo">
@@ -1184,7 +1559,8 @@ pre.sourcecode .nt {
 
     <div class="coverpage-title">
       
-      <span class="title-first">The relation between the numbers <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+      <span class="title-first">The relation between the numbers <stem block="false" type="MathML">
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1194,7 +1570,9 @@ pre.sourcecode .nt {
     </msub>
   </mstyle>
 </math>
-<asciimath>ii(M)_r</asciimath></stem> and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <asciimath>ii(M)_r</asciimath>
+</stem> and <stem block="false" type="MathML">
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1204,7 +1582,8 @@ pre.sourcecode .nt {
     </msub>
   </mstyle>
 </math>
-<asciimath>ii(B)_j</asciimath></stem></span><br />
+  <asciimath>ii(B)_j</asciimath>
+</stem></span><br />
       <span class="title-second"></span>
       
     </div>
@@ -1224,8 +1603,10 @@ pre.sourcecode .nt {
   
   <div class="coverpage-tc-name">
     
-    <span>Jörg W. Müller ().
-  </span>
+    <span>Jörg W. Müller</span>.
+  </div>
+  
+
   
 
   
@@ -1247,24 +1628,21 @@ pre.sourcecode .nt {
 <div class="copyright">
 <div class="boilerplate-copyright">
 
-<div id="_a169629f-474b-fdd7-d400-79f7ad5566b8">
-<p id="_81443509-4136-2455-6ffc-c9427bd095e2" style="text-align:center;">© Bureau International des Poids et Mesures 1995 all rights reserved</p>
+<div id="_2f3c2470-f378-fa9e-1da5-209083dad90b">
+<p id="_4beb3a0d-0fba-fd28-5948-ebf44a6f3b01" style="text-align:center;">© Bureau International des Poids et Mesures 1995 all rights reserved</p>
 </div>
 </div>
   <div class="boilerplate-license">
 
-<div id="_copyright_statement_2"><h1 class="IntroTitle">Copyright statement</h1>
+<div id="_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a"><h1 class="IntroTitle"><a class="anchor" href="#_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a"></a><a class="header" href="#_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a">Copyright statement</a></h1>
 
-<p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/:">http://creativecommons.org/licenses/by/4.0/:</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
+<p id="_50719790-3c5b-c213-8298-0631d690bc21">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/:">http://creativecommons.org/licenses/by/4.0/:</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
 </div>
 </div>
   <div id="boilerplate-legal-destination"></div>
 <div class="boilerplate-feedback">
 
-<p id="_e6428749-2432-0772-4c8e-ed6c34018916">BIPM<br />
-Pavillon de Breteuil<br />
-F-92312 Sèvres Cedex<br />
-FRANCE</p>
+<p id="_5926bc3f-b367-69e7-6cc6-442a91e32db2">BIPM<br /> Pavillon de Breteuil<br /> F-92312 Sèvres Cedex<br /> FRANCE</p>
 </div>
 </div>
 
@@ -1274,8 +1652,11 @@ FRANCE</p>
 
 
 </div>
-</div></header></div><br /><div class="prefatory-section"><nav>
-  <div id="toc"><h1 class="IntroTitle">Contents</h1><ul><li class="h1"><a href="#_438d977b-3b68-4025-b784-5e546fb9c237">      1.  The relation between the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</header></div><br /><div class="prefatory-section"><nav>
+  <div id="toc"><h1 class="IntroTitle"><a class="anchor" href="#_5c1a45ef-0335-c28e-3f58-6bf64e3f6a5a"></a><a class="header" href="#_5c1a45ef-0335-c28e-3f58-6bf64e3f6a5a">Contents</a></h1><ul><li class="h1"><a href="#_98ac3f7d-9323-ec1b-09ce-344753661aa8">      
+  
+  1.  The relation between the numbers <span class="stem">
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1284,7 +1665,9 @@ FRANCE</p>
       <mi>r</mi>
     </msub>
   </mstyle>
-</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math>
+</span> and <span class="stem">
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1293,8 +1676,10 @@ FRANCE</p>
       <mi>j</mi>
     </msub>
   </mstyle>
-</math></span></a></li>
-<li class="h1"><a href="#_3e0459cb-c070-459f-b99f-63c4b6f8e0f3">      References</a></li></ul></div>
+</math>
+</span>
+</a></li>
+<li class="h1"><a href="#_a0f100e3-b003-429e-bd5b-acbbbda1f695">      References</a></li></ul></div>
 
 </nav>
 
@@ -1305,7 +1690,8 @@ FRANCE</p>
 
 
 
-</div><br /><div id="_the_relation_between_the_numbers_iim_r_and_iib_j"><h1 id="_438d977b-3b68-4025-b784-5e546fb9c237">1.  The relation between the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</div><br /><div id="_98ac3f7d-9323-ec1b-09ce-344753661aa8"><h1 id="_322f8a58-7d09-48bf-a381-384a043313e8"><a class="anchor" href="#_98ac3f7d-9323-ec1b-09ce-344753661aa8"></a><a class="header" href="#_98ac3f7d-9323-ec1b-09ce-344753661aa8">1.  The relation between the numbers <span class="stem">
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1314,7 +1700,9 @@ FRANCE</p>
       <mi>r</mi>
     </msub>
   </mstyle>
-</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math>
+</span> and <span class="stem">
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1323,7 +1711,8 @@ FRANCE</p>
       <mi>j</mi>
     </msub>
   </mstyle>
-</math></span></h1><p id="_b3c3ae70-4905-e4bd-f3e2-0d2f6336217d">In our recent study <a href="#muller">[1]</a> on alternate sums of powers of integers, i.e. of sums of the type</p><div id="eq1"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math>
+</span></a></h1><p id="_9acad5fb-6d48-5b0b-5a8b-712df7cde80c">In our recent study <a href="#muller">[1]</a> on alternate sums of powers of integers, i.e. of sums of the type</p><div id="eq1"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mtext></mtext>
@@ -1360,7 +1749,7 @@ FRANCE</p>
       <mi>j</mi>
       <mi>r</mi>
     </msup>
-    <mo>, </mo>
+    <mo>,</mo>
     <mtext> with </mtext>
     <mi>r</mi>
     <mo>=</mo>
@@ -1371,7 +1760,7 @@ FRANCE</p>
     <mo>…</mo>
     <mo>,</mo>
   </mstyle>
-</math></span>  (1)</p></div></div><p id="_d0c26d69-63a5-fda2-a991-905ddcf3ab3e">it was shown that they can be expressed in the form</p><div id="eq2"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (1)</p></div></div><p id="_426a5884-6aa0-a7f3-a7f7-e08984555164">it was shown that they can be expressed in the form</p><div id="eq2"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mtext></mtext>
@@ -1438,7 +1827,7 @@ FRANCE</p>
     </msup>
     <mo>,</mo>
   </mstyle>
-</math></span>  (2)</p></div></div><p id="_3304e346-bf7b-da88-8f04-00afa72b9c5c">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (2)</p></div></div><p id="_770eacc9-51e0-94db-e0ca-d51926b6a5ee">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>t</mi>
     <mo>=</mo>
@@ -1468,7 +1857,7 @@ FRANCE</p>
       <mi>j</mi>
     </msub>
   </mstyle>
-</math></span> are coefficients that have been tabulated.</p><p id="_46146918-dc1f-d214-93a1-afec593d49b9">We found that these coefficients can be expressed by the “basic” integers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> are coefficients that have been tabulated.</p><p id="_5996e92b-94e3-065a-8aab-0fe79a39404c">We found that these coefficients can be expressed by the “basic” integers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1476,7 +1865,7 @@ FRANCE</p>
       </mstyle>
       <mi>r</mi>
     </msub>
-    <mo>≡</mo>
+    <mi>≡</mi>
     <msub>
       <mtext></mtext>
       <mi>r</mi>
@@ -1547,7 +1936,7 @@ FRANCE</p>
     <mo>&#x3e;</mo>
     <mi>j</mi>
   </mstyle>
-</math></span>  (3)</p></div></div><p id="_aa062cb6-1b4c-fdb0-de9a-9d58e6168bdf">The alternate sum <a href="#eq1">Equation (1)</a>, written in powers of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (3)</p></div></div><p id="_4b8bab92-ff1e-59ad-0466-3604fa6f3120">The alternate sum <a href="#eq1">Equation (1)</a>, written in powers of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>t</mi>
   </mstyle>
@@ -1594,7 +1983,7 @@ FRANCE</p>
     <mo>…</mo>
     <mo>,</mo>
   </mstyle>
-</math></span>  (4)</p></div></div><p id="_77e46907-274a-764a-ddbb-f5c89207a5cb">whereas for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (4)</p></div></div><p id="_85dec4de-9ebf-7855-3f30-382ded896ea0">whereas for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>r</mi>
   </mstyle>
@@ -1602,7 +1991,7 @@ FRANCE</p>
   <mstyle displaystyle="false">
     <mi>t</mi>
   </mstyle>
-</math></span>.</p><p id="_82800867-733a-4028-677e-8e96d4b91284">It appears that the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>.</p><p id="_61bf5f61-e970-9fd0-49b1-f27e03c220e1">It appears that the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1632,7 +2021,7 @@ FRANCE</p>
       </mstyle>
       <mi>n</mi>
     </msub>
-    <mo>≡</mo>
+    <mi>≡</mi>
     <mrow>
       <munderover>
         <mo>∑</mo>
@@ -1650,7 +2039,7 @@ FRANCE</p>
     </mrow>
     <mo>.</mo>
   </mstyle>
-</math></span>  (5)</p></div></div><p id="_216b38f8-88ac-c1c2-2ecc-7902bd8034f0">Some similarities between the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (5)</p></div></div><p id="_50104412-d6e4-3e90-1503-10cf92cf5b03">Some similarities between the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1668,7 +2057,7 @@ FRANCE</p>
       <mi>r</mi>
     </msub>
   </mstyle>
-</math></span> have already been noted in <a href="#muller">[1]</a>, but it has not been possible to establish a clear link between the two series. It is the purpose of the present Note to make up for this deficiency. Some familiarity with <a href="#muller">[1]</a> will make the reading easier.</p><p id="_c825430d-3e91-e626-5a22-a92c1fee067a">The idea is to use the fact that the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> have already been noted in <a href="#muller">[1]</a>, but it has not been possible to establish a clear link between the two series. It is the purpose of the present Note to make up for this deficiency. Some familiarity with <a href="#muller">[1]</a> will make the reading easier.</p><p id="_1ea0147a-93a0-1b57-8927-42894721fca1">The idea is to use the fact that the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1711,7 +2100,7 @@ FRANCE</p>
   <mstyle displaystyle="false">
     <mi>t</mi>
   </mstyle>
-</math></span> (in which the Bernoulli numbers occur), it must be possible to obtain the required relation by comparison of the respective coefficients.</p><p id="_d90ae285-a6b6-b7cc-c697-2a8280e4a551">Let us begin by decomposing the alternate sum <a href="#eq1">Equation (1)</a> in a suitable way — the very  rearrangement we tried to avoid in <a href="#muller">[1]</a>. Since <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> (in which the Bernoulli numbers occur), it must be possible to obtain the required relation by comparison of the respective coefficients.</p><p id="_2041301c-8939-877e-8c43-85302d3d6c49">Let us begin by decomposing the alternate sum <a href="#eq1">Equation (1)</a> in a suitable way — the very  rearrangement we tried to avoid in <a href="#muller">[1]</a>. Since <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>n</mi>
   </mstyle>
@@ -1780,7 +2169,7 @@ FRANCE</p>
       </msup>
     </mrow>
   </mstyle>
-</math></span>  (6)</p></div></div><div id="_7048015a-27ee-ccc8-d180-a375df04a1d3"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (6)</p></div></div><div id="_c24e040f-c92e-a60e-d8e6-bc7271555164"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mo>=</mo>
     <msup>
@@ -1870,7 +2259,7 @@ FRANCE</p>
       <mi>k</mi>
     </msup>
   </mstyle>
-</math></span></p></div></div><div id="_86311335-5eef-ed60-3a3b-764ddd911a52"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><div id="_210ee7b6-1144-d61b-9080-c994c982ea48"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mo>=</mo>
     <msup>
@@ -1935,7 +2324,7 @@ FRANCE</p>
       <mi>n</mi>
     </msub>
   </mstyle>
-</math></span></p></div></div><div id="_66db95d6-4fde-c0b2-3134-d1903d6185ad"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><div id="_431b59cd-3332-7f29-d05a-9859e1566cb5"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mo>=</mo>
     <mo>−</mo>
@@ -1991,7 +2380,7 @@ FRANCE</p>
     </msub>
     <mo>.</mo>
   </mstyle>
-</math></span></p></div></div><p id="_cda1789e-5278-0fb9-7d5a-fffdc995b797">Let us now look at the development of a Bernoullian sum <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_bc327c39-e0cb-eb1f-5b30-35c4643e9270">Let us now look at the development of a Bernoullian sum <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mtext></mtext>
@@ -2007,7 +2396,7 @@ FRANCE</p>
 </math></span>. From relation (23) given in <a href="#muller">[1]</a> we conclude that, for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>r</mi>
-    <mo>≥</mo>
+    <mi>≥</mi>
     <mn>2</mn>
   </mstyle>
 </math></span> and even,</p><div id="eq7"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -2077,7 +2466,7 @@ FRANCE</p>
       <mo>.</mo>
     </mrow>
   </mstyle>
-</math></span>  (7)</p></div></div><p id="_acd29f24-52b2-03f9-fa74-6f2e8ba6be13">We note in passing that <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (7)</p></div></div><p id="_a93e8573-9e58-c38d-baa3-d740a607ee29">We note in passing that <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mtext></mtext>
@@ -2118,7 +2507,7 @@ FRANCE</p>
       <mi>n</mi>
     </msub>
   </mstyle>
-</math></span>.</p><p id="_3265aa69-d38f-9d70-4b13-0e81ca144272">The two cases with <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>.</p><p id="_b91cbb28-2905-5eac-c18b-b526c0a651ef">The two cases with <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>r</mi>
     <mo>=</mo>
@@ -2145,7 +2534,7 @@ FRANCE</p>
     <mo>=</mo>
     <mi>t</mi>
   </mstyle>
-</math></span>  (8)</p></div></div><p id="_ddb95597-c09a-e5cf-9138-c2b11309256d">and</p><div id="_c6aa3c7e-1e30-9836-7230-292bb1ad8df0"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (8)</p></div></div><p id="_0c81fb3f-5f17-aac4-dc53-84b4cc0ced6a">and</p><div id="_e900a288-82e4-9572-44ee-0a874f32f701"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mtext></mtext>
@@ -2174,7 +2563,7 @@ FRANCE</p>
     </msup>
     <mo>.</mo>
   </mstyle>
-</math></span></p></div></div><p id="_9545efdd-d7a3-5d53-2f06-adc9840a6dc7">A look at <a href="#eq4">Equation (4)</a> shows that the value of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_dcecd890-a689-054d-4416-0728ff9a7217">A look at <a href="#eq4">Equation (4)</a> shows that the value of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -2289,7 +2678,7 @@ FRANCE</p>
     </msub>
     <mo>,</mo>
   </mstyle>
-</math></span>  (9)</p></div></div><p id="_ce0c15bb-ca23-dbd5-1029-9c6ba837d654">we find, with <a href="#eq7">Equation (7)</a> and <a href="#eq8">Equation (8)</a>,</p><div id="eq10"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (9)</p></div></div><p id="_aa18797a-6f71-b8e4-fbf6-75ba8f5de8f6">we find, with <a href="#eq7">Equation (7)</a> and <a href="#eq8">Equation (8)</a>,</p><div id="eq10"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mstyle mathvariant="italic">
@@ -2355,7 +2744,7 @@ FRANCE</p>
       <mi>j</mi>
     </msub>
   </mstyle>
-</math></span>  (10)</p></div></div><div id="_1fee6e05-e532-6162-e736-f2036b2bf94c"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (10)</p></div></div><div id="_ce089db9-0b3a-14cf-baf9-745b871542a2"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mo>=</mo>
     <mi>r</mi>
@@ -2408,7 +2797,7 @@ FRANCE</p>
       <mo>,</mo>
     </mrow>
   </mstyle>
-</math></span></p></div></div><p id="_56c6e577-9e9e-6f11-3dcc-8253fe1b48ed">This is the relation looked for. It shows that the two series of numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_50f19933-d90f-6054-cbf3-ce7f16ac7341">This is the relation looked for. It shows that the two series of numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -2426,8 +2815,8 @@ FRANCE</p>
       <mi>j</mi>
     </msub>
   </mstyle>
-</math></span> are indeed closely linked, and relation <a href="#eq10">Equation (10)</a> is even somewhat reminiscent of the recurrence formula (18) found previously in <a href="#muller">[1]</a>. It may be worthwhile noting that the sum in <a href="#eq10">Equation (10)</a> yields an even integer.</p><p id="_3d8bab65-0f28-3ca9-6ddd-7ad1475ba6b2">Let us check (10) with three practical applications.</p><ul id="_7db7dc15-0b67-04e2-2cc1-6e840cee72ed"><li><p id="_100c8c78-5303-4785-83a7-f6163d3b2123">For = 8:</p>
-<div id="_2db848d0-ac8f-6861-3d2d-1ee2a963229e"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> are indeed closely linked, and relation <a href="#eq10">Equation (10)</a> is even somewhat reminiscent of the recurrence formula (18) found previously in <a href="#muller">[1]</a>. It may be worthwhile noting that the sum in <a href="#eq10">Equation (10)</a> yields an even integer.</p><p id="_a6e1813d-4235-1631-5c4c-1036857e42d0">Let us check (10) with three practical applications.</p><div class="ul_wrap"><ul id="_7c842938-3000-e2ba-46f6-5fd200731cf4"><li id="_f52821e2-26c3-e5af-550a-3178f0574ded"><p id="_5b52cbdf-49db-17fe-3bf1-cc12d1c1360f">For = 8:</p>
+<div id="_e3d7e762-64f7-1b37-cadf-34e9c3cb2172"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mstyle mathvariant="italic">
@@ -2482,7 +2871,7 @@ FRANCE</p>
   </mstyle>
 </math></span></p></div></div>
 
-<div id="_f8cc0016-2027-e841-03de-f2722596d8ff"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<div id="_0612f999-d82a-8ea0-880d-dbaa15f1a4ce"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mo>=</mo>
     <mn>7</mn>
@@ -2574,7 +2963,7 @@ FRANCE</p>
   </mstyle>
 </math></span></p></div></div>
 
-<div id="_acb47707-f72e-bcb7-cbfb-6593149f8e2c"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<div id="_d6e8ed20-fa8e-255d-974b-f3a34875b398"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mo>=</mo>
     <mn>7</mn>
@@ -2613,14 +3002,14 @@ FRANCE</p>
   </mstyle>
 </math></span></p></div></div>
 </li>
-<li><p id="_225ee818-429b-05d2-7755-2582080faae9">for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<li id="_1eab40d5-ee3a-ce92-31d4-8fb9ad887a12"><p id="_1c580993-c6c7-7d2d-39b0-831aa2354143">for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>r</mi>
     <mo>=</mo>
     <mn>10</mn>
   </mstyle>
 </math></span> :</p>
-<div id="_8763ab9b-7558-07e9-05f6-afa06c3632ed"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<div id="_c4bb661e-8470-1bf9-aa88-7bde7d16f27b"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mstyle mathvariant="italic">
@@ -2680,14 +3069,14 @@ FRANCE</p>
   </mstyle>
 </math></span></p></div></div>
 </li>
-<li><p id="_3b1b2b42-49c6-67c7-a127-5d4355b2f0d4">for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<li id="_5afbc5da-3821-c54a-cfbc-2c71e795f15c"><p id="_5ab34cc4-59c6-206f-b5e1-718c3c273265">for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>r</mi>
     <mo>=</mo>
     <mn>12</mn>
   </mstyle>
 </math></span> :</p>
-<div id="_cdd0e9bf-11ff-c436-6ce6-7df1645942af"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<div id="_50f86f9e-1e0e-921e-ef12-a82a6596164f"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mstyle mathvariant="italic">
@@ -2742,12 +3131,12 @@ FRANCE</p>
       <mo>−</mo>
       <mn>2</mn>
       <mtext> </mtext>
-      <mn>73</mn>
+      <mn>073</mn>
     </mrow>
   </mstyle>
 </math></span></p></div></div>
 </li>
-</ul><p id="_cbef5634-add7-a036-1b11-ce078d15352d">All these results agree with the numerical values given in <a href="#muller">[1]</a>.</p><p id="_51f995a6-741f-6020-557b-cb51adbe0f94">Obviously, the existence of the new relation <a href="#eq10">Equation (10)</a> does not me an that the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</ul></div><p id="_e7312b1b-1561-92cb-b071-6b9904035a09">All these results agree with the numerical values given in <a href="#muller">[1]</a>.</p><p id="_ade44e65-901c-50b8-8323-02b12824e22e">Obviously, the existence of the new relation <a href="#eq10">Equation (10)</a> does not me an that the numbers <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -2765,15 +3154,26 @@ FRANCE</p>
       <mn>60</mn>
     </msub>
   </mstyle>
-</math></span> in <a href="#abramowitz">[2]</a>.</p></div><br /><div><h1 class="Section3" id="_3e0459cb-c070-459f-b99f-63c4b6f8e0f3">References</h1>
+</math></span> in <a href="#abramowitz">[2]</a>.</p></div><br /><div><h1 class="Section3" id="_a0f100e3-b003-429e-bd5b-acbbbda1f695">References</h1>
 <p id="muller" class="Biblio">[1]  J.W. Müller: “Sums of alternate powers — an empirical approach”, Rapport BIPM-94/14 (1994)</p><p id="abramowitz" class="Biblio">[2]  “Handbook of Mathematical Functions”, eg. .. by M. Abramowitz and I.A. Stegun, NBS, AMS 55 (GPO, Washington, 1964)</p>
 
 
 </div></main><script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    "HTML-CSS": { preferredFont: "STIX" },
+    "HTML-CSS": {
+      preferredFont: "STIX",
+      linebreaks: {
+        automatic: true,
+        width: "container"  // or specify something like "90%"/"30em"
+      }
+    },
+    MathML: {
+      linebreaks: {
+        automatic: true
+      }
+    },
     asciimath2jax: { delimiters: [['(#(', ')#)']] }
- });
+  });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
   <script>
@@ -2783,26 +3183,40 @@ FRANCE</p>
 });
   </script>
 
-<script>
-  //TOC toggle animation
-$('#toggle').on('click', function(){
-    if( $('nav').is(':visible') ) {
-        $('nav').animate({ 'left': '-353px' }, 'slow', function(){
-            $('nav').hide();
+  <script>
+    //TOC toggle animation
+    (function() {
+      const jqNav = $('nav');
+      const jqBody = $('body');
+      const jqToggle = $('#toggle');
+      const animationSpeed = 'slow';
+
+      jqToggle.on('click', function() {
+        const isNavVisible = jqNav.is(':visible');
+        const fullNavWidth = jqNav.outerWidth();
+        const navLeft = isNavVisible ? '-' + fullNavWidth + 'px' : '0px';
+        const bodyMarginLeft = isNavVisible ? '0px' : fullNavWidth + 'px';
+
+        // Stop current animations
+        jqNav.stop(true, true);
+        jqBody.stop(true, true);
+
+        if(!isNavVisible) {
+            jqNav.show();
+        }
+        jqNav.animate({'left': navLeft}, animationSpeed, function() {
+          if(isNavVisible) {jqNav.hide()}
         });
-        $('.container').animate({ 'padding-left': '31px' }, 'slow');
-    }
-    else {
-        $('nav').show();
-        $('nav').animate({ 'left': '0px' }, 'slow');
-    }
-});
-</script>
+        jqBody.animate({'marginLeft': bodyMarginLeft}, animationSpeed);
+
+      });
+    })();
+  </script>
 
 <script>
     // Scroll to top button
     window.onscroll = function() {scrollFunction()};
-    
+
     function scrollFunction() {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             document.getElementById("myBtn").style.display = "block";
@@ -2810,7 +3224,7 @@ $('#toggle').on('click', function(){
             document.getElementById("myBtn").style.display = "none";
         }
     }
-    
+
     // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
         document.body.scrollTop = 0;
@@ -2818,6 +3232,132 @@ $('#toggle').on('click', function(){
     }
     </script>
 
+<script>
+/*
+  $(document).ready(function() {
+	  $('[id^=toc]').each(function ()
+	  {
+	     var currentToc = $(this);
+       var url = window.location.href;
+            currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "'></a>");
+	  });
+});
+*/
+</script>
+
+  <script>
+    document.querySelectorAll('*|svg a').forEach(function(item) {
+      var loc = item.getAttribute('href');
+      if (loc !== null && loc.startsWith('#')) {
+  item.setAttribute('href', location.pathname + loc);
+      }
+});
+  </script>
+
+
+<script>
+
+// jQuery Inline Footnotes v1.0.3
+// Copyright (c) 2011 Vesa Vänskä, released under the MIT License.
+
+// Generated by CoffeeScript 1.6.1
+(function() {
+
+  (function($) {
+    $.inlineFootnote = function(el, options) {
+      var _this = this;
+      this.el = $(el);
+      this.el.data("inlineFootnote", this);
+      this.initialize = function() {
+        this.options = $.extend({}, $.inlineFootnote.defaultOptions, options);
+        this.footnoteId = this.el.attr("href").match(/#(.*)/)[1];
+        if (this.footnoteId) {
+          this.el.mouseenter(this.openBox);
+          return $("body").mousemove(this.closeBox);
+        }
+      };
+      this.openBox = function(event) {
+        var footnoteContent, linkOffset;
+        if (!_this.box) {
+          footnoteContent = $("[id='" + _this.footnoteId + "']").children().filter(":not('" + _this.options.hideFromContent + "')");
+          linkOffset = _this.el.offset();
+          _this.box = $("<div />", {
+            id: _this.options.boxId,
+            html: footnoteContent.clone().find(_this.options.hideFromContent).remove().end(),
+            css: {
+              position: "absolute",
+              top: linkOffset.top,
+              left: linkOffset.left + _this.el.outerWidth()
+            }
+          }).appendTo("body");
+          return _this.positionBox();
+        }
+      };
+      this.closeBox = function(event) {
+        if (_this.box) {
+          if (_this.isHoveringFootnote(event)) {
+            clearTimeout(_this.closeTimeout);
+            return _this.closeTimeout = null;
+          } else {
+            if (!_this.closeTimeout) {
+              return _this.closeTimeout = setTimeout((function() {
+                _this.box.remove();
+                return _this.box = null;
+              }), _this.options.hideDelay);
+            }
+          }
+        }
+      };
+      this.isHoveringFootnote = function(event) {
+        return this.box.is(event.target) || $(event.target).closest(this.box).length > 0 || event.target === this.el[0];
+      };
+      this.positionBox = function() {
+        var boxHorizontalPadding, boxLeft, boxWidth, linkLeftOffset, windowWidth;
+        boxHorizontalPadding = parseInt(this.box.css("padding-left")) + parseInt(this.box.css("padding-right"));
+        linkLeftOffset = this.el.offset().left;
+        windowWidth = $(window).width();
+        if ((windowWidth / 2) > linkLeftOffset) {
+          boxLeft = linkLeftOffset + 20;
+          boxWidth = windowWidth - boxLeft - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+        } else {
+          boxWidth = linkLeftOffset - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+          boxLeft = linkLeftOffset - boxWidth - this.options.boxMargin * 2;
+        }
+        return this.box.css({
+          width: boxWidth,
+          left: boxLeft
+        });
+      };
+      return this.initialize();
+    };
+    $.inlineFootnote.defaultOptions = {
+      boxMargin: 20,
+      hideDelay: 200,
+      hideFromContent: "[rel=footnote]",
+      maximumBoxWidth: 500,
+      boxId: "footnote_box"
+    };
+    return $.fn.inlineFootnote = function(options) {
+      return this.each(function() {
+        return new $.inlineFootnote(this, options);
+      });
+    };
+  })(jQuery);
+
+}).call(this);
+</script>
+
+<script>
+      $(function() {
+        $("[rel=footnote]").inlineFootnote();
+        });
+</script>
   <script>
 // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
 //
@@ -2829,21 +3369,29 @@ $('#toggle').on('click', function(){
 !function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function f(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.base=A.hasOwnProperty("base")?A.base:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64,A.titleText=A.hasOwnProperty("titleText")?A.titleText:""}function p(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}this.options=A||{},this.elements=[],f(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var e,t,i,n,o,s,a,r,c,h,l,u,d=[];if(f(this.options),"touch"===(l=this.options.visible)&&(l=this.isTouchDevice()?"always":"hover"),0===(e=p(A=A||"h2, h3, h4, h5, h6")).length)return this;for(!function(){if(null!==document.head.querySelector("style.anchorjs"))return;var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"],style'))?document.head.appendChild(e):document.head.insertBefore(e,A);e.sheet.insertRule(".anchorjs-link{opacity:0;text-decoration:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}",e.sheet.cssRules.length),e.sheet.insertRule(":hover>.anchorjs-link,.anchorjs-link:focus{opacity:1}",e.sheet.cssRules.length),e.sheet.insertRule("[data-anchorjs-icon]::after{content:attr(data-anchorjs-icon)}",e.sheet.cssRules.length),e.sheet.insertRule('@font-face{font-family:anchorjs-icons;src:url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype")}',e.sheet.cssRules.length)}(),t=document.querySelectorAll("[id]"),i=[].map.call(t,function(A){return A.id}),o=0;o<e.length;o++)if(this.hasAnchorJSLink(e[o]))d.push(o);else{if(e[o].hasAttribute("id"))n=e[o].getAttribute("id");else if(e[o].hasAttribute("data-anchor-id"))n=e[o].getAttribute("data-anchor-id");else{for(c=r=this.urlify(e[o].textContent),a=0;void 0!==s&&(c=r+"-"+a),a+=1,-1!==(s=i.indexOf(c)););s=void 0,i.push(c),e[o].setAttribute("id",c),n=c}(h=document.createElement("a")).className="anchorjs-link "+this.options.class,h.setAttribute("aria-label",this.options.ariaLabel),h.setAttribute("data-anchorjs-icon",this.options.icon),this.options.titleText&&(h.title=this.options.titleText),u=document.querySelector("base")?window.location.pathname+window.location.search:"",u=this.options.base||u,h.href=u+"#"+n,"always"===l&&(h.style.opacity="1"),""===this.options.icon&&(h.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(h.style.lineHeight="inherit")),"left"===this.options.placement?(h.style.position="absolute",h.style.marginLeft="-1em",h.style.paddingRight="0.5em",e[o].insertBefore(h,e[o].firstChild)):(h.style.paddingLeft="0.375em",e[o].appendChild(h))}for(o=0;o<d.length;o++)e.splice(d[o]-o,1);return this.elements=this.elements.concat(e),this},this.remove=function(A){for(var e,t,i=p(A),n=0;n<i.length;n++)(t=i[n].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(i[n]))&&this.elements.splice(e,1),i[n].removeChild(t));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){return this.options.truncate||f(this.options),A.trim().replace(/\'/gi,"").replace(/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&-1<(" "+A.firstChild.className+" ").indexOf(" anchorjs-link "),t=A.lastChild&&-1<(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ");return e||t||!1}}});
 // @license-end
   </script>
-  <script>
-/*
-  $(document).ready(function() {
-          $('[id^=toc]').each(function ()
-          {
-             var currentToc = $(this);
-       var url = window.location.href;
-             currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "' </a>");
-          });
-});
-*/
+    <script>
   anchors.options = {
   placement: 'left'
 };
 anchors.add('h1, h2, h3, h4');
+</script>
+
+<script>
+// use .collapsible element to toggle visibility of element following it
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
 </script>
 
 </body></html>

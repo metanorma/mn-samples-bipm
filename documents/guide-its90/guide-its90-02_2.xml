@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bipm-standard xmlns="https://www.metanorma.org/ns/bipm" type="semantic" version="2.4.2" schema-version="v1.3.0">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.0" schema-version="v2.0.8" flavor="bipm">
 <bibdata type="standard">
 <title language="en" format="text/plain" type="title-main">Guide to the Realization of the ITS-90</title>
 
 <title language="en" format="text/plain" type="title-part">Triple Point of Water</title>
 
-<docidentifier type="BIPM">BIPM GUIDE-ITS-90</docidentifier><docnumber>GUIDE-ITS-90</docnumber><contributor><role type="author"/><organization>
+<docidentifier primary="true" type="BIPM">BIPM GUIDE-ITS-90 2.2</docidentifier><docidentifier type="BIPM-parent-document">BIPM GUIDE-ITS-90</docidentifier><docnumber>GUIDE-ITS-90</docnumber><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"/><person>
 <name><completename>A. Peruzzi</completename></name>
@@ -19,156 +19,352 @@
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2018-01-01</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2018</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>guide</doctype><editorialgroup><committee acronym="CCT"><variant language="en" script="Latn">Consultative Committee for Thermometry</variant></committee><workgroup acronym="CCT-TG-K">Task Group for the Realization of the Kelvin</workgroup></editorialgroup><si-aspect>K_k</si-aspect><structuredidentifier><docnumber>GUIDE-ITS-90</docnumber><part>2.2</part></structuredidentifier></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>guide</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="CCT" language="en" script="Latn">Consultative Committee for Thermometry</committee><workgroup acronym="CCT-TG-K">Task Group for the Realization of the Kelvin</workgroup></editorialgroup><structuredidentifier><docnumber>GUIDE-ITS-90</docnumber><part>2.2</part></structuredidentifier><si-aspect>K_k</si-aspect></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd10" id="U_cm3">
+        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitName lang="en">cm^3</UnitName>
+        <UnitSymbol type="HTML">cm
+          <sup>3</sup>
+        </UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <msup>
+              <mrow>
+                <mi mathvariant="normal">cm</mi>
+              </mrow>
+              <mrow>
+                <mn>3</mn>
+              </mrow>
+            </msup>
+          </math>
+        </UnitSymbol>
+        <RootUnits>
+          <EnumeratedRootUnit unit="meter" prefix="c" powerNumerator="3"/>
+        </RootUnits>
+      </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu23">
+        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitName lang="en">degree Celsius</UnitName>
+        <UnitSymbol type="HTML">°C</UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi mathvariant="normal">°C</mi>
+          </math>
+        </UnitSymbol>
+      </Unit><Unit dimensionURL="#NISTd5" id="U_mK">
+        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitName lang="en">mK</UnitName>
+        <UnitSymbol type="HTML">mK</UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi mathvariant="normal">mK</mi>
+          </math>
+        </UnitSymbol>
+        <RootUnits>
+          <EnumeratedRootUnit unit="kelvin" prefix="m"/>
+        </RootUnits>
+      </Unit><Unit dimensionURL="#NISTd5" id="U_uK">
+        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitName lang="en">uK</UnitName>
+        <UnitSymbol type="HTML">K</UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi mathvariant="normal">µK</mi>
+          </math>
+        </UnitSymbol>
+        <RootUnits>
+          <EnumeratedRootUnit unit="kelvin" prefix="u"/>
+        </RootUnits>
+      </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5">
+        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitName lang="en">kelvin</UnitName>
+        <UnitSymbol type="HTML">K</UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi mathvariant="normal">K</mi>
+          </math>
+        </UnitSymbol>
+      </Unit><Unit dimensionURL="#NISTd6" id="U_umol">
+        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitName lang="en">umol</UnitName>
+        <UnitSymbol type="HTML">mol</UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi mathvariant="normal">µmol</mi>
+          </math>
+        </UnitSymbol>
+        <RootUnits>
+          <EnumeratedRootUnit unit="mole" prefix="u"/>
+        </RootUnits>
+      </Unit><Unit dimensionURL="#D_N-1" id="U_mol-1">
+        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitName lang="en">mol^-1</UnitName>
+        <UnitSymbol type="HTML">mol
+          <sup>−1</sup>
+        </UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <msup>
+              <mrow>
+                <mi mathvariant="normal">mol</mi>
+              </mrow>
+              <mrow>
+                <mo>−</mo>
+                <mn>1</mn>
+              </mrow>
+            </msup>
+          </math>
+        </UnitSymbol>
+      </Unit><Unit dimensionURL="#D_L-1Theta" id="U_K.m-1">
+        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitName lang="en">K*m^-1</UnitName>
+        <UnitSymbol type="HTML">K m
+          <sup>−1</sup>
+        </UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi mathvariant="normal">K</mi>
+            <mo rspace="thickmathspace">⁢</mo>
+            <msup>
+              <mrow>
+                <mi mathvariant="normal">m</mi>
+              </mrow>
+              <mrow>
+                <mo>−</mo>
+                <mn>1</mn>
+              </mrow>
+            </msup>
+          </math>
+        </UnitSymbol>
+        <RootUnits>
+          <EnumeratedRootUnit unit="kelvin"/>
+          <EnumeratedRootUnit unit="meter" powerNumerator="-1"/>
+        </RootUnits>
+      </Unit><Unit dimensionURL="#NISTd1" id="U_mm">
+        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitName lang="en">mm</UnitName>
+        <UnitSymbol type="HTML">mm</UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi mathvariant="normal">mm</mi>
+          </math>
+        </UnitSymbol>
+        <RootUnits>
+          <EnumeratedRootUnit unit="meter" prefix="m"/>
+        </RootUnits>
+      </Unit><Unit id="U_NISTu365">
+        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitName lang="en">milliliter</UnitName>
+        <UnitSymbol type="HTML">ml</UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi mathvariant="normal">ml</mi>
+          </math>
+        </UnitSymbol>
+        <RootUnits>
+          <EnumeratedRootUnit unit="liter" prefix="m"/>
+        </RootUnits>
+      </Unit></UnitSet><QuantitySet><Quantity id="NISTq34" quantityType="base" dimensionURL="#NISTd5">
+        <QuantityName lang="en-US">Celsius temperature</QuantityName>
+      </Quantity><Quantity id="NISTq5" quantityType="base" dimensionURL="#NISTd5">
+        <QuantityName lang="en-US">thermodynamic temperature</QuantityName>
+      </Quantity><Quantity id="NISTq10" quantityType="base" dimensionURL="#NISTd10">
+        <QuantityName lang="en-US">volume</QuantityName>
+      </Quantity></QuantitySet><DimensionSet><Dimension id="NISTd10">
+        <Length symbol="L" powerNumerator="3"/>
+      </Dimension><Dimension id="NISTd5">
+        <ThermodynamicTemperature symbol="Theta" powerNumerator="1"/>
+      </Dimension><Dimension id="NISTd6">
+        <AmountOfSubstance symbol="N" powerNumerator="1"/>
+      </Dimension><Dimension id="D_N-1">
+        <AmountOfSubstance symbol="N" powerNumerator="-1"/>
+      </Dimension><Dimension id="D_L-1Theta">
+        <Length symbol="L" powerNumerator="-1"/>
+        <ThermodynamicTemperature symbol="Theta" powerNumerator="1"/>
+      </Dimension><Dimension id="NISTd1">
+        <Length symbol="L" powerNumerator="1"/>
+      </Dimension></DimensionSet><PrefixSet><Prefix prefixBase="10" prefixPower="-2" id="NISTp10_-2">
+        <PrefixName lang="en">centi</PrefixName>
+        <PrefixSymbol type="ASCII">c</PrefixSymbol>
+        <PrefixSymbol type="unicode">c</PrefixSymbol>
+        <PrefixSymbol type="LaTeX">c</PrefixSymbol>
+        <PrefixSymbol type="HTML">c</PrefixSymbol>
+      </Prefix><Prefix prefixBase="10" prefixPower="-3" id="NISTp10_-3">
+        <PrefixName lang="en">milli</PrefixName>
+        <PrefixSymbol type="ASCII">m</PrefixSymbol>
+        <PrefixSymbol type="unicode">m</PrefixSymbol>
+        <PrefixSymbol type="LaTeX">m</PrefixSymbol>
+        <PrefixSymbol type="HTML">m</PrefixSymbol>
+      </Prefix><Prefix prefixBase="10" prefixPower="-6" id="NISTp10_-6">
+        <PrefixName lang="en">micro</PrefixName>
+        <PrefixSymbol type="ASCII">u</PrefixSymbol>
+        <PrefixSymbol type="unicode">μ</PrefixSymbol>
+        <PrefixSymbol type="LaTeX">$mu$</PrefixSymbol>
+        <PrefixSymbol type="HTML">µ</PrefixSymbol>
+      </Prefix></PrefixSet></UnitsML><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
 <boilerplate><copyright-statement>
 
-<clause id="_cecc83a2-d85d-5f11-e3c0-981d7fdd40f0" obligation="normative">
-<p id="_82270594-079d-0090-7f27-dcb401b8f3d8" align="center">© Bureau International des Poids et Mesures 2018 all rights reserved</p>
+<clause id="_c20d5871-59c5-1abb-69c4-33074d4f09d9" obligation="normative">
+<p id="_f81d45d4-b556-ed46-e7c4-9e11a649f5b7" align="center">© Bureau International des Poids et Mesures 2018 all rights reserved</p>
 </clause>
 </copyright-statement>
 
 <license-statement>
 
-<clause id="_copyright_statement_2" obligation="normative">
-<title>Copyright statement</title>
-<p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<link target="http://creativecommons.org/licenses/by/4.0/:"/>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
+<clause id="_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a" obligation="normative">
+<title id="_29f75465-0cf3-76fd-bc56-6b3aa457ee69">Copyright statement</title>
+<p id="_50719790-3c5b-c213-8298-0631d690bc21">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<link target="http://creativecommons.org/licenses/by/4.0/:"/>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
 </clause>
 </license-statement>
 
 <feedback-statement>
 
-<p id="_e6428749-2432-0772-4c8e-ed6c34018916">BIPM<br/>
-Pavillon de Breteuil<br/>
-F-92312 Sèvres Cedex<br/>
-FRANCE</p>
+<p id="_5926bc3f-b367-69e7-6cc6-442a91e32db2">BIPM<br/> Pavillon de Breteuil<br/> F-92312 Sèvres Cedex<br/> FRANCE</p>
 </feedback-statement>
-</boilerplate><preface><clause id="_abstract" obligation="informative">
-<title>Abstract</title>
-<p id="_fae8daf6-367f-ea36-abba-344b43f544de">This paper is a part of guidelines, prepared on behalf of the Consultative Committee for Thermometry, on the methods how to realize the International Temperature Scale of 1990.</p>
+</boilerplate><preface><clause id="_6eae0a02-80c8-9c67-88e2-d2e1455ae876" obligation="informative">
+<title id="_96c37ea0-349a-9de6-49a8-8389d810efa5">Abstract</title>
+<p id="_96263176-918d-385b-de4d-488a7d2111c6">This paper is a part of guidelines, prepared on behalf of the Consultative Committee for Thermometry, on the methods how to realize the International Temperature Scale of 1990.</p>
 
-<p id="_416477ad-fa5a-5ce2-06c7-1444327280b3">It discusses all major issues linked to the triple point of water when used as a fixed point for the realization of the kelvin.</p>
+<p id="_eee7f7ef-b82d-d2de-4eb2-865aed9e525f">It discusses all major issues linked to the triple point of water when used as a fixed point for the realization of the kelvin.</p>
 </clause></preface><sections>
 
-<clause id="_introduction" obligation="normative">
-<title>Introduction</title>
-<p id="_ba08421e-675d-189f-8c51-0972190a8b87">The triple point of water (TPW) is the unique physical state of water in which all three phases (solid, liquid and vapour) coexist at thermodynamic equilibrium. The TPW is realized in practice by using TPW cells in sealed borosilicate glass- or fused-silica-envelopes containing from <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<clause id="_e2db39a5-79fc-cf00-1d07-a985c6913eea" obligation="normative">
+<title id="_46069e95-51f4-1e9a-f2b9-70fe751a0935">Introduction</title>
+<p id="_6f2cf063-191f-d4fb-da0f-9b00908a2190">The triple point of water (TPW) is the unique physical state of water in which all three phases (solid, liquid and vapour) coexist at thermodynamic equilibrium. The TPW is realized in practice by using TPW cells in sealed borosilicate glass- or fused-silica-envelopes containing from <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>400</mn>
-    <msup>
-      <mstyle mathvariant="normal">
-        <mi>cm</mi>
-      </mstyle>
-      <mn>3</mn>
-    </msup>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_cm3">
+      <msup>
+        <mstyle mathvariant="normal">
+          <mi>cm</mi>
+        </mstyle>
+        <mn>3</mn>
+      </msup>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>400 "unitsml(cm^3)"</asciimath></stem> to <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>400 "unitsml(cm^3)"</asciimath></stem> to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>500</mn>
-    <msup>
-      <mstyle mathvariant="normal">
-        <mi>cm</mi>
-      </mstyle>
-      <mn>3</mn>
-    </msup>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_cm3">
+      <msup>
+        <mstyle mathvariant="normal">
+          <mi>cm</mi>
+        </mstyle>
+        <mn>3</mn>
+      </msup>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>500 "unitsml(cm^3)"</asciimath></stem> of high-purity water. A re-entrant well, located along the axis of the cell, allows for insertion of the Standard Platinum Resistance Thermometer (SPRT) to be calibrated. An ice mantle is produced around the thermometer well by one of the methods described in Subsection 5.1. After creating the ice mantle, the cell is accommodated in a water maintenance bath controlled at a temperature close to <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>500 "unitsml(cm^3)"</asciimath></stem> of high-purity water. A re-entrant well, located along the axis of the cell, allows for insertion of the Standard Platinum Resistance Thermometer (SPRT) to be calibrated. An ice mantle is produced around the thermometer well by one of the methods described in Subsection 5.1. After creating the ice mantle, the cell is accommodated in a water maintenance bath controlled at a temperature close to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.01</mn>
-    <mstyle mathvariant="normal">
-      <mi>°C</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>0.01 "unitsml(degC)"</asciimath></stem> (typically within few <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>0.01 "unitsml(degC)"</asciimath></stem> (typically within few <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>"unitsml(mK)"</asciimath></stem>) or in a Dewar flask containing crushed ice, and the equilibrium between the three phases is automatically established within the cell and can be maintained for many weeks.</p>
+</math><asciimath>"unitsml(mK)"</asciimath></stem>) or in a Dewar flask containing crushed ice, and the equilibrium between the three phases is automatically established within the cell and can be maintained for many weeks.</p>
 </clause>
 
-<clause id="_manufacture_of_a_triple_point_of_water_cell" obligation="normative">
-<title>Manufacture of a triple point of water cell</title>
-<p id="_153329cb-1374-d9a1-41f0-2c2a5ee3039c">The main steps in the manufacture of a TPW cell cover:</p>
+<clause id="_fc7f7f7e-009a-6f55-665a-fdfcd923898f" obligation="normative">
+<title id="_6009efb2-964b-737c-a552-53b800e78d38">Manufacture of a triple point of water cell</title>
+<p id="_7a8a2b68-fb9c-0158-8537-1536a64e9335">The main steps in the manufacture of a TPW cell cover:</p>
 
-<ul id="_4101d7a4-c194-f68d-473d-7378117e630c"><li><p id="_d93fbb8f-3d82-a3e1-08c4-693810666467">The cell envelope (borosilicate or fused-silica) which is annealed to release strains and leak-tested to ensure that it is vacuum tight.</p>
+<ul id="_65950683-bc78-07d8-0c40-430c2c9300da"><li><p id="_70c1e145-0192-2af2-36b1-31981ff31aba">The cell envelope (borosilicate or fused-silica) which is annealed to release strains and leak-tested to ensure that it is vacuum tight.</p>
 </li>
-<li><p id="_5f7fb129-c2eb-da8b-7a36-559140003c30">A thoroughly cleaned and pre-conditioned cell-envelope to prevent its inner surface from dissolution into the water.</p>
+<li><p id="_e5dcea27-0232-dc46-f67f-25a849885239">A thoroughly cleaned and pre-conditioned cell-envelope to prevent its inner surface from dissolution into the water.</p>
 </li>
-<li><p id="_442f65f7-f926-8d15-462a-64517b0400a5">A high-purity source water which is distilled, degassed and transferred into the cell envelope by distillation or by gravity.</p>
+<li><p id="_003ff43c-394a-4e58-1981-2069a0166805">A high-purity source water which is distilled, degassed and transferred into the cell envelope by distillation or by gravity.</p>
 </li>
-<li><p id="_997cb8cd-1bf2-54e1-699a-e5d9c7b35ba2">Flame-sealing of the cell at a constricted section of the filling tube.</p>
+<li><p id="_612752b3-d047-da3c-2b27-67c81cba3883">Flame-sealing of the cell at a constricted section of the filling tube.</p>
 </li>
-<li><p id="_83443dd4-316d-4d8f-2bbb-3e04f2ecff8f">An isotopic and chemical analysis of a sample of the same water sealed in the cell.</p>
+<li><p id="_e4d06f53-00b8-8615-a765-4035e62c9d29">An isotopic and chemical analysis of a sample of the same water sealed in the cell.</p>
 </li>
 </ul>
 
-<p id="_11f709a6-2a0a-30ac-485a-36c8d882f0bf">Details of the manufacturing process of TPW cells can be found in [<eref type="inline" bibitemid="Barber1954" citeas="[4]">Barber <em>et al.</em> 1954</eref>, <xref target="de2002">de Groot <em>et al.</em> 2002</xref>, <eref type="inline" bibitemid="Ya2005" citeas="[52]">Ya <em>et al.</em> 2005</eref>, <eref type="inline" bibitemid="Uytun2003" citeas="[47]">Uytun <em>et al.</em> 2003</eref>]. Though some NMIs, mainly for research purposes, still manufacture TPW cells (CENAM, NIM, NMIJ, UME, VNIIM and VSL), nowadays the common choice for most users is to purchase TPW cells commercially available from different suppliers.</p>
+<p id="_b1609cd5-a703-3959-9ed9-5248a282f8e0">Details of the manufacturing process of TPW cells can be found in [<eref type="inline" bibitemid="Barber1954" citeas="[4]"><display-text>Barber <em>et al.</em> 1954</display-text></eref>, <xref target="de2002"><display-text>de Groot <em>et al.</em> 2002</display-text></xref>, <eref type="inline" bibitemid="Ya2005" citeas="[52]"><display-text>Ya <em>et al.</em> 2005</display-text></eref>, <eref type="inline" bibitemid="Uytun2003" citeas="[47]"><display-text>Uytun <em>et al.</em> 2003</display-text></eref>]. Though some NMIs, mainly for research purposes, still manufacture TPW cells (CENAM, NIM, NMIJ, UME, VNIIM and VSL), nowadays the common choice for most users is to purchase TPW cells commercially available from different suppliers.</p>
 </clause>
 
-<clause id="_isotopic_composition_of_the_cell_water" obligation="normative">
-<title>Isotopic composition of the cell water</title>
-<p id="_a215f9c8-fc5d-9bf2-f83b-50420f539a70">Natural water is a mixture of four main isotopologues: <sup>1</sup>H<sub>2</sub><sup>16</sup>O, <sup>1</sup>H<sub>2</sub><sup>17</sup>O, <sup>1</sup>H<sub>2</sub><sup>18</sup>O and <sup>2</sup>H<sup>1</sup>H<sup>16</sup>O. The <em>Mise en Pratique for the definition of the kelvin</em>, MeP-K [<eref type="inline" bibitemid="BIPM2011" citeas="[5]">BIPM 2011</eref>] requires the water in the TPW cell to have the isotopic composition:</p>
+<clause id="_1ffdf2a3-d2c5-506a-c2e5-e573cf73f0bd" obligation="normative">
+<title id="_0b2effdc-de60-3a39-daf8-9ead69752553">Isotopic composition of the cell water</title>
+<p id="_fcb6cdc2-7a0a-be5b-b7f9-4be6dd879da1">Natural water is a mixture of four main isotopologues: <sup>1</sup>H<sub>2</sub><sup>16</sup>O, <sup>1</sup>H<sub>2</sub><sup>17</sup>O, <sup>1</sup>H<sub>2</sub><sup>18</sup>O and <sup>2</sup>H<sup>1</sup>H<sup>16</sup>O. The <em>Mise en Pratique for the definition of the kelvin</em>, MeP-K [<eref type="inline" bibitemid="BIPM2011" citeas="[5]"><display-text>BIPM 2011</display-text></eref>] requires the water in the TPW cell to have the isotopic composition:</p>
 
-<p id="_b6a13d5b-dbbf-1b7c-a333-bdb56a7ce8a8" align="left"><stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.00015576</mn>
-  </mstyle>
-</math>
-<asciimath>0.00015576</asciimath></stem> mole of <sup>2</sup>H per mole of <sup>1</sup>H,</p>
+<p id="_dec20d63-76a5-ef1a-1fb4-843f4e08771a" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="false"><mn>0.00015576</mn></mstyle></math><asciimath>0.00015576</asciimath></stem> mole of <sup>2</sup>H per mole of <sup>1</sup>H,</p>
 
-<p id="_7c920c2c-f6a3-10ff-52a2-9569afc811c8"><stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.0003799</mn>
-  </mstyle>
-</math>
-<asciimath>0.0003799</asciimath></stem> mole of <sup>17</sup>O per mole of <sup>16</sup>O, and</p>
+<p id="_0384999c-7189-f96a-6554-9321043d552b"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="false"><mn>0.0003799</mn></mstyle></math><asciimath>0.0003799</asciimath></stem> mole of <sup>17</sup>O per mole of <sup>16</sup>O, and</p>
 
-<p id="_eafff544-ec78-cf8a-40e4-bbec894371ae"><stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.0020052</mn>
-  </mstyle>
-</math>
-<asciimath>0.0020052</asciimath></stem> mole of <sup>18</sup>O per mole of <sup>16</sup>O,</p>
+<p id="_96ff7f44-a119-6b05-8896-aac88334ef31"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="false"><mn>0.0020052</mn></mstyle></math><asciimath>0.0020052</asciimath></stem> mole of <sup>18</sup>O per mole of <sup>16</sup>O,</p>
 
-<p id="_192f47aa-45d5-c3a3-4d81-17f2e9393076">which are the amount-of-substance ratios of Vienna Standard Mean Ocean Water (VSMOW), based on the best measurement available [<xref target="de2003">De Laeter <em>et al.</em> 2003</xref>].</p>
+<p id="_497c5ed3-4c62-ac5d-9469-62006e08aed0">which are the amount-of-substance ratios of Vienna Standard Mean Ocean Water (VSMOW), based on the best measurement available [<xref target="de2003"><display-text>De Laeter <em>et al.</em> 2003</display-text></xref>].</p>
 
-<p id="_86fe1119-3985-1376-bde0-d836ebf50219">Natural fractionation effects ensure that most of the continental surface (fresh) water, from which cells are made, is depleted in the heavy isotope <sup>2</sup>H (indicated with <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_4feebf2e-219d-246a-13e9-bd74b6bf912e">Natural fractionation effects ensure that most of the continental surface (fresh) water, from which cells are made, is depleted in the heavy isotope <sup>2</sup>H (indicated with <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mtext>D</mtext>
   </mstyle>
-</math>
-<asciimath>"D"</asciimath></stem> in the following) and, to a lesser extent, <sup>18</sup>O and <sup>17</sup>O, with a strong dependence on the latitude, altitude and season at the location of the precipitation [<eref type="inline" bibitemid="Bowen2003" citeas="[6]">Bowen and Revenaugh 2003</eref>]. During the distillation and degassing processes in the manufacture of the cells, the water may be further depleted or enriched [<eref type="inline" bibitemid="Nicholas1997" citeas="[36]">Nicholas <em>et al.</em> 1997</eref>, <eref type="inline" bibitemid="Peruzzi2007" citeas="[37]">Peruzzi <em>et al.</em> 2007</eref>]. The combination of these effects leads to cells that allow realizing temperatures typically ranging between <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>"D"</asciimath></stem> in the following) and, to a lesser extent, <sup>18</sup>O and <sup>17</sup>O, with a strong dependence on the latitude, altitude and season at the location of the precipitation [<eref type="inline" bibitemid="Bowen2003" citeas="[6]"><display-text>Bowen and Revenaugh 2003</display-text></eref>]. During the distillation and degassing processes in the manufacture of the cells, the water may be further depleted or enriched [<eref type="inline" bibitemid="Nicholas1997" citeas="[36]"><display-text>Nicholas <em>et al.</em> 1997</display-text></eref>, <eref type="inline" bibitemid="Peruzzi2007" citeas="[37]"><display-text>Peruzzi <em>et al.</em> 2007</display-text></eref>]. The combination of these effects leads to cells that allow realizing temperatures typically ranging between <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>110</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>110 "unitsml(uK)"</asciimath></stem> below to <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>110 "unitsml(uK)"</asciimath></stem> below to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>10</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>10 "unitsml(uK)"</asciimath></stem> above the temperature realized with VSMOW water. Because of the dependence on source water and processing, the isotopic depression in cells is highly dependent on the cell manufacturer. Recently some manufacturers have adapted their manufacturing processes to obtain cells with water close to the VSMOW definition. The best of these cells may have an isotopic composition within <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>10 "unitsml(uK)"</asciimath></stem> above the temperature realized with VSMOW water. Because of the dependence on source water and processing, the isotopic depression in cells is highly dependent on the cell manufacturer. Recently some manufacturers have adapted their manufacturing processes to obtain cells with water close to the VSMOW definition. The best of these cells may have an isotopic composition within <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>10</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>10 "unitsml(uK)"</asciimath></stem> temperature equivalent of the ideal [<eref type="inline" bibitemid="Strouse2007" citeas="[44]">Strouse and Zhao 2007</eref>, <eref type="inline" bibitemid="Tavener2007" citeas="[46]">Tavener 2007</eref>].</p>
+</math><asciimath>10 "unitsml(uK)"</asciimath></stem> temperature equivalent of the ideal [<eref type="inline" bibitemid="Strouse2007" citeas="[44]"><display-text>Strouse and Zhao 2007</display-text></eref>, <eref type="inline" bibitemid="Tavener2007" citeas="[46]"><display-text>Tavener 2007</display-text></eref>].</p>
 
-<p id="_782b9dce-83b2-cf03-6ca6-1d634fa400b4">Ideally, the isotopic composition of the cell water should be measured by taking a sample after the cell has been sealed [<eref type="inline" bibitemid="Nicholas1997" citeas="[36]">Nicholas <em>et al.</em> 1997</eref>, <eref type="inline" bibitemid="Strouse2007" citeas="[44]">Strouse and Zhao 2007</eref>], and a correction <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_384eb5c8-2adb-200c-2ff7-2dceb589a679">Ideally, the isotopic composition of the cell water should be measured by taking a sample after the cell has been sealed [<eref type="inline" bibitemid="Nicholas1997" citeas="[36]"><display-text>Nicholas <em>et al.</em> 1997</display-text></eref>, <eref type="inline" bibitemid="Strouse2007" citeas="[44]"><display-text>Strouse and Zhao 2007</display-text></eref>], and a correction <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">Δ</mi>
     <msub>
@@ -178,32 +374,27 @@ FRANCE</p>
       <mtext>iso</mtext>
     </msub>
   </mstyle>
-</math>
-<asciimath>Delta ii(T)_{"iso"}</asciimath></stem> should be applied, that takes into account the deviation of the cell water from the VSMOW isotopic composition.</p>
+</math><asciimath>Delta ii(T)_{"iso"}</asciimath></stem> should be applied, that takes into account the deviation of the cell water from the VSMOW isotopic composition.</p>
 
-<p id="_280c200a-ea8c-fb67-990e-4556f372654d">The deviation of the cell water from VSMOW is conventionally expressed in terms of <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_4075ab3a-f4a4-1421-67c2-66930d1502a3">The deviation of the cell water from VSMOW is conventionally expressed in terms of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem>D, <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>delta</asciimath></stem>D, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem><sup>18</sup>O and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>delta</asciimath></stem><sup>18</sup>O and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem><sup>17</sup>O (called “<stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>delta</asciimath></stem><sup>17</sup>O (called “<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem>-values”):</p>
+</math><asciimath>delta</asciimath></stem>-values”):</p>
 
-<formula id="_2f5e8378-af3b-252d-3f76-e4a3bf492b9a"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<formula id="_804acc69-9781-990d-4573-515742ddfe7a"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mi mathvariant="normal">δ</mi>
     <msup>
@@ -275,49 +466,41 @@ FRANCE</p>
       </msub>
     </mfrac>
   </mstyle>
-</math>
-<asciimath>delta ""^{18}"O"_{"CAL"} = {(""^{18}"O" // ""^{16}"O")_{"sample"} -  (""^{18}"O" // ""^{16}"O")_{"VSMOW"}} / {(""^{18}"O" // ""^{16}"O")_{"VSMOW"}}</asciimath></stem></formula>
+</math><asciimath>delta ""^{18}"O"_{"CAL"} = {(""^{18}"O" // ""^{16}"O")_{"sample"} -  (""^{18}"O" // ""^{16}"O")_{"VSMOW"}} / {(""^{18}"O" // ""^{16}"O")_{"VSMOW"}}</asciimath></stem></formula>
 
-<p id="_5832510d-756c-113a-152d-326e2972463f">and similarly for <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_20e4b2f8-7e74-806f-a3ab-16d0719940a4">and similarly for <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem>D and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>delta</asciimath></stem>D and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem><sup>17</sup>O. The subscription CAL emphasizes that the <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>delta</asciimath></stem><sup>17</sup>O. The subscription CAL emphasizes that the <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem>-value has been determined with respect to VSMOW. For all natural waters, the <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>delta</asciimath></stem>-value has been determined with respect to VSMOW. For all natural waters, the <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem>-values are in the parts-per-thousand range, so are expressed in permil (‰, per thousand); they are usually negative for most cells.</p>
+</math><asciimath>delta</asciimath></stem>-values are in the parts-per-thousand range, so are expressed in permil (‰, per thousand); they are usually negative for most cells.</p>
 
-<p id="_32245bb0-1b6f-2a61-61fb-288726459a22">Besides VSMOW, to further improve the inter-laboratory reproducibility of the water isotopic composition measurements, Standard Light Antarctic Precipitation (SLAP) water [<eref type="inline" bibitemid="Gonfiantini1978" citeas="[18]">Gonfiantini 1978</eref>, <eref type="inline" bibitemid="Li1988" citeas="[27]">Li <em>et al.</em> 1988</eref>] is also used to define the scale. The <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_880e0c97-520c-7037-ee80-aeb065d0969e">Besides VSMOW, to further improve the inter-laboratory reproducibility of the water isotopic composition measurements, Standard Light Antarctic Precipitation (SLAP) water [<eref type="inline" bibitemid="Gonfiantini1978" citeas="[18]"><display-text>Gonfiantini 1978</display-text></eref>, <eref type="inline" bibitemid="Li1988" citeas="[27]"><display-text>Li <em>et al.</em> 1988</display-text></eref>] is also used to define the scale. The <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem>-values of SLAP have been defined based on consensus between expert laboratories taking part in a large international intercomparison [Gonfiantini, 1984]. They are <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>delta</asciimath></stem>-values of SLAP have been defined based on consensus between expert laboratories taking part in a large international intercomparison [Gonfiantini, 1984]. They are <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem>D = -428 ‰ and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>delta</asciimath></stem>D = -428 ‰ and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem><sup>18</sup>O = -55.5 ‰ with respect to VSMOW. These consensus values are used in the definition of the so-called normalized VSMOW-SLAP scale:</p>
+</math><asciimath>delta</asciimath></stem><sup>18</sup>O = -55.5 ‰ with respect to VSMOW. These consensus values are used in the definition of the so-called normalized VSMOW-SLAP scale:</p>
 
-<formula id="_692b095b-67a3-0bea-4f94-ebf470dbda8e"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<formula id="_6bbde2d9-803a-a5d9-3766-a315d4efd5c4"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mi mathvariant="normal">δ</mi>
     <msup>
@@ -377,28 +560,19 @@ FRANCE</p>
       <mo>]</mo>
     </mrow>
   </mstyle>
-</math>
-<asciimath>delta ""^{18}"O" ("sample")_{"NORM"} = [delta ""^{18}"O" ("sample")_{"CAL"} {(-0.0555)} / {delta ""^{18}"O"("SLAP")_"CAL" } ]</asciimath></stem></formula>
+</math><asciimath>delta ""^{18}"O" ("sample")_{"NORM"} = [delta ""^{18}"O" ("sample")_{"CAL"} {(-0.0555)} / {delta ""^{18}"O"("SLAP")_"CAL" } ]</asciimath></stem></formula>
 
-<p id="_2161f72b-aa78-558b-7b9c-77e9b8a98e92">and similarly for D, with the value <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mo>−</mo>
-    <mn>0.428</mn>
-  </mstyle>
-</math>
-<asciimath>-0.428</asciimath></stem> in the nominator. All isotope laboratories usually report their isotope <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_9efb36cf-5679-081e-9caa-684c71ef3f51">and similarly for D, with the value <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="false"><mn>-0.428</mn></mstyle></math><asciimath>-0.428</asciimath></stem> in the nominator. All isotope laboratories usually report their isotope <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem>-values for water in this normalized way. It should be noted that the original reference VSMOW and SLAP waters are exhausted. Their successors, VSMOW2 and SLAP2 have been prepared with utmost care to resemble the originals to within the uncertainties. Only for SLAP2 the <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>delta</asciimath></stem>-values for water in this normalized way. It should be noted that the original reference VSMOW and SLAP waters are exhausted. Their successors, VSMOW2 and SLAP2 have been prepared with utmost care to resemble the originals to within the uncertainties. Only for SLAP2 the <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem>D value is -427.5 ‰ instead of -428 ‰.</p>
+</math><asciimath>delta</asciimath></stem>D value is -427.5 ‰ instead of -428 ‰.</p>
 
-<p id="_0eb0b58d-9db4-92cd-1225-6825fb689d84">For all naturally occurring surface waters, the isotopic composition is sufficiently close to that of VSMOW, and the correlation between the <sup>18</sup>O and the <sup>17</sup>O contents is so strong [<eref type="inline" bibitemid="Meijer1998" citeas="[32]">Meijer and Li 1998</eref>] that the correction <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_640ada4f-8d98-2a81-f78a-466577461c00">For all naturally occurring surface waters, the isotopic composition is sufficiently close to that of VSMOW, and the correlation between the <sup>18</sup>O and the <sup>17</sup>O contents is so strong [<eref type="inline" bibitemid="Meijer1998" citeas="[32]"><display-text>Meijer and Li 1998</display-text></eref>] that the correction <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">Δ</mi>
     <msub>
@@ -408,20 +582,17 @@ FRANCE</p>
       <mtext>iso</mtext>
     </msub>
   </mstyle>
-</math>
-<asciimath>Delta ii(T)_{"iso"}</asciimath></stem> to be applied to the triple-point temperature realized by a sample water can be specified by a linear function of only the <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>Delta ii(T)_{"iso"}</asciimath></stem> to be applied to the triple-point temperature realized by a sample water can be specified by a linear function of only the <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem>D and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>delta</asciimath></stem>D and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem><sup>18</sup>O values:</p>
+</math><asciimath>delta</asciimath></stem><sup>18</sup>O values:</p>
 
-<formula id="_12476177-803c-842d-71b7-ce471400d108"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<formula id="_67ee56fb-ca25-da09-42b4-1f451cdd33f8"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mi mathvariant="normal">Δ</mi>
     <msub>
@@ -457,27 +628,23 @@ FRANCE</p>
     <mtext>O</mtext>
     <mo>,</mo>
   </mstyle>
-</math>
-<asciimath>Delta ii(T)_{"iso"} = - ii(A)_{"D"} * delta "D" - ii(A)_{"O"} * delta ""^{18}"O",</asciimath></stem></formula>
+</math><asciimath>Delta ii(T)_{"iso"} = - ii(A)_{"D"} * delta "D" - ii(A)_{"O"} * delta ""^{18}"O",</asciimath></stem></formula>
 
-<p id="_9691eac6-7fa2-7ff9-8520-129a884ae816">where the last term on the right accounts for both the <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_d48b9bd2-34a0-b1de-4e96-091728e6637a">where the last term on the right accounts for both the <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem><sup>17</sup>O and the <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>delta</asciimath></stem><sup>17</sup>O and the <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem><sup>18</sup>O effects, but requires only the knowledge of the <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>delta</asciimath></stem><sup>18</sup>O effects, but requires only the knowledge of the <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem><sup>18</sup>O.</p>
+</math><asciimath>delta</asciimath></stem><sup>18</sup>O.</p>
 
-<p id="_42477eb1-c1ea-2c16-176d-340febd9e44a">The most precise set of isotopic depression constants presently available, and those specified for use with the ITS-90, are by Faghihi <em>et al</em>. (<eref type="inline" bibitemid="Faghihi2015a" citeas="[13]">2015a</eref> and <eref type="inline" bibitemid="Faghihi2015b" citeas="[14]">2015b</eref>). These values are: <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_bd6ea255-3d0b-95f8-7a56-0c1ab3d3d0b3">The most precise set of isotopic depression constants presently available, and those specified for use with the ITS-90, are by Faghihi <em>et al</em>. (<eref type="inline" bibitemid="Faghihi2015a" citeas="[13]"><display-text>2015a</display-text></eref> and <eref type="inline" bibitemid="Faghihi2015b" citeas="[14]"><display-text>2015b</display-text></eref>). These values are: <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -487,12 +654,17 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mn>673</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>ii(A)_{"D"} = 673 "unitsml(uK)"</asciimath></stem> and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>ii(A)_{"D"} = 673 "unitsml(uK)"</asciimath></stem> and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -502,35 +674,49 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mn>630</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>ii(A)_{"O"} = 630 "unitsml(uK)"</asciimath></stem>, with estimated standard uncertainties of <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>ii(A)_{"O"} = 630 "unitsml(uK)"</asciimath></stem>, with estimated standard uncertainties of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>4 "unitsml(uK)"</asciimath></stem> and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>4 "unitsml(uK)"</asciimath></stem> and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>10</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>10 "unitsml(uK)"</asciimath></stem>, respectively.</p>
+</math><asciimath>10 "unitsml(uK)"</asciimath></stem>, respectively.</p>
 
-<p id="_b71d8ce2-2089-8317-7121-70e1590827a3">The uncertainty in the isotope correction is usually dominated by the uncertainties in <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_a2e44b82-09c7-eeec-0921-5448f8b8d1fd">The uncertainty in the isotope correction is usually dominated by the uncertainties in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem>D and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>delta</asciimath></stem>D and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -539,28 +725,37 @@ FRANCE</p>
       <mtext>D</mtext>
     </msub>
   </mstyle>
-</math>
-<asciimath>ii(A)_{"D"}</asciimath></stem>. For cells not more than <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>ii(A)_{"D"}</asciimath></stem>. For cells not more than <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>100</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>100 "unitsml(uK)"</asciimath></stem> different from VSMOW, the uncertainties in the corrections are less than <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>100 "unitsml(uK)"</asciimath></stem> different from VSMOW, the uncertainties in the corrections are less than <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>2</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>2 "unitsml(uK)"</asciimath></stem> at most, so are generally negligible.</p>
+</math><asciimath>2 "unitsml(uK)"</asciimath></stem> at most, so are generally negligible.</p>
 
-<p id="_7922a580-78c7-28e7-b2f9-8d3b51fc16d6">The practice by some TPW cell manufacturers of adding un-natural, isotope-enriched waters to the initial source waters, to compensate for isotope depletion taking place during the purification process, is not recommended. After adding such enriched waters, the isotopic correction cannot be calculated using the recommended formula above and must be evaluated with the following instead:</p>
+<p id="_2e4c003b-54c6-2bf2-1280-ae2be81dbf99">The practice by some TPW cell manufacturers of adding un-natural, isotope-enriched waters to the initial source waters, to compensate for isotope depletion taking place during the purification process, is not recommended. After adding such enriched waters, the isotopic correction cannot be calculated using the recommended formula above and must be evaluated with the following instead:</p>
 
-<formula id="_026448d1-eb4b-a9cb-6d25-5ea117d9c0cd"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<formula id="_6858f427-772d-ce4a-f058-6b62e63efcd1"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mi mathvariant="normal">Δ</mi>
     <msub>
@@ -636,25 +831,21 @@ FRANCE</p>
     </mrow>
     <mo>,</mo>
   </mstyle>
-</math>
-<asciimath>Delta ii(T)_{"iso"} = - ii(A)_{"D"} * delta "D" - ii(A)_{"O"} * delta ""^{18}"O" - ii(A)_{17} * {delta ""^{17}"O" - [(1 + delta ""^{18}"O")^{0.528} - 1]},</asciimath></stem></formula>
+</math><asciimath>Delta ii(T)_{"iso"} = - ii(A)_{"D"} * delta "D" - ii(A)_{"O"} * delta ""^{18}"O" - ii(A)_{17} * {delta ""^{17}"O" - [(1 + delta ""^{18}"O")^{0.528} - 1]},</asciimath></stem></formula>
 
-<p id="_f48f53b6-7364-b352-4987-8425b1d0506d">which requires full isotopic analysis (<stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_a790f01a-7ce0-ec23-705e-0b6142ee956e">which requires full isotopic analysis (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem>D, <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>delta</asciimath></stem>D, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem><sup>18</sup>O and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>delta</asciimath></stem><sup>18</sup>O and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math>
-<asciimath>delta</asciimath></stem><sup>17</sup>O) and the use of a third depression coefficient <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>delta</asciimath></stem><sup>17</sup>O) and the use of a third depression coefficient <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -664,203 +855,298 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mn>60</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>ii(A)_{17} = 60 "unitsml(uK)"</asciimath></stem>, with estimated standard uncertainty of <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>ii(A)_{17} = 60 "unitsml(uK)"</asciimath></stem>, with estimated standard uncertainty of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>1 "unitsml(uK)"</asciimath></stem> [<eref type="inline" bibitemid="White2010" citeas="[50]">White and Tew 2010</eref>].</p>
+</math><asciimath>1 "unitsml(uK)"</asciimath></stem> [<eref type="inline" bibitemid="White2010" citeas="[50]"><display-text>White and Tew 2010</display-text></eref>].</p>
 
-<p id="_0652c356-efe5-f357-7317-7c5d2983ed2c">Most TPW cells made from continental fresh water can be expected to be within the temperature equivalents <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_800f6893-8e12-733c-9cd7-5ccd3f25ee0c">Most TPW cells made from continental fresh water can be expected to be within the temperature equivalents <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mo>−</mo>
     <mn>110</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>-110 "unitsml(uK)"</asciimath></stem> and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>-110 "unitsml(uK)"</asciimath></stem> and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mo>+</mo>
     <mn>10</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>+10 "unitsml(uK)"</asciimath></stem> of VSMOW, so a correction of <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>+10 "unitsml(uK)"</asciimath></stem> of VSMOW, so a correction of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mo>+</mo>
     <mn>50</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>+50 "unitsml(uK)"</asciimath></stem> and a standard uncertainty of <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>+50 "unitsml(uK)"</asciimath></stem> and a standard uncertainty of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>35</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>35 "unitsml(uK)"</asciimath></stem> will account for typical variations in isotopic composition. Such a simple alternative is acceptable where no isotopic information is available.</p>
+</math><asciimath>35 "unitsml(uK)"</asciimath></stem> will account for typical variations in isotopic composition. Such a simple alternative is acceptable where no isotopic information is available.</p>
 
-<p id="_99fba536-4b0e-70ee-c802-dda2bdb8157e">A further, smaller, isotopic effect occurs with isotopic fractionation between water and ice when the cell is in use [<eref type="inline" bibitemid="Nicholas1997" citeas="[36]">Nicholas <em>et al.</em> 1997</eref>]. In theory, the effect causes the temperature to be dependent on the frozen fraction and ranges from no effect for zero frozen fraction to about <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_c14ec70e-b98d-54ba-8c47-6ac4dda46492">A further, smaller, isotopic effect occurs with isotopic fractionation between water and ice when the cell is in use [<eref type="inline" bibitemid="Nicholas1997" citeas="[36]"><display-text>Nicholas <em>et al.</em> 1997</display-text></eref>]. In theory, the effect causes the temperature to be dependent on the frozen fraction and ranges from no effect for zero frozen fraction to about <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mo>−</mo>
     <mn>15</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>-15 "unitsml(uK)"</asciimath></stem> for a cell nearly fully frozen. In practice, the freezing rates for cells are sufficiently fast and the isotopic equilibration process is so slow that significant fractionation does not occur during the initial freezing of the mantle [<eref type="inline" bibitemid="Ferrick2002" citeas="[15]">Ferrick <em>et al.</em> 2002</eref>]. Measurements of the composition of the water and ice from partly frozen cells support the theory: cell frozen normally over a period of a few hours exhibit isotopic fractionation of no more than <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>-15 "unitsml(uK)"</asciimath></stem> for a cell nearly fully frozen. In practice, the freezing rates for cells are sufficiently fast and the isotopic equilibration process is so slow that significant fractionation does not occur during the initial freezing of the mantle [<eref type="inline" bibitemid="Ferrick2002" citeas="[15]"><display-text>Ferrick <em>et al.</em> 2002</display-text></eref>]. Measurements of the composition of the water and ice from partly frozen cells support the theory: cell frozen normally over a period of a few hours exhibit isotopic fractionation of no more than <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>2</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>2 "unitsml(uK)"</asciimath></stem> [<eref type="inline" bibitemid="Nicholas1997" citeas="[36]">Nicholas <em>et al.</em> 1997</eref>, <eref type="inline" bibitemid="Renaot2005" citeas="[39]">Renaot <em>et al.</em> 2005</eref>]. One cell frozen slowly over a few days exhibitedfractionation of <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>2 "unitsml(uK)"</asciimath></stem> [<eref type="inline" bibitemid="Nicholas1997" citeas="[36]"><display-text>Nicholas <em>et al.</em> 1997</display-text></eref>, <eref type="inline" bibitemid="Renaot2005" citeas="[39]"><display-text>Renaot <em>et al.</em> 2005</display-text></eref>]. One cell frozen slowly over a few days exhibitedfractionation of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>7</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>7 "unitsml(uK)"</asciimath></stem> [<eref type="inline" bibitemid="Tavener2006" citeas="[45]">Tavener 2006</eref>]. However, additional fractionation occurs with freezing at the ice-water interface around the thermometer well. Detailed understanding of the effect of repeated freezing and melting is not known, but it could be responsible for a depression of several microkelvin and some of the observed non-repeatability of cells.</p>
+</math><asciimath>7 "unitsml(uK)"</asciimath></stem> [<eref type="inline" bibitemid="Tavener2006" citeas="[45]"><display-text>Tavener 2006</display-text></eref>]. However, additional fractionation occurs with freezing at the ice-water interface around the thermometer well. Detailed understanding of the effect of repeated freezing and melting is not known, but it could be responsible for a depression of several microkelvin and some of the observed non-repeatability of cells.</p>
 </clause>
 
-<clause id="_impurities" obligation="normative">
-<title>Impurities</title>
-<p id="_2a96715f-4f0e-6105-17f0-5af540673375">The temperature realized by a TPW cell is exactly <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<clause id="_1738092c-e0e0-3a99-93bd-03f52ef34bf3" obligation="normative">
+<title id="_e0f0c583-a6c3-c5e2-dbf4-37c9b9098e87">Impurities</title>
+<p id="_51d676a6-2514-9fb7-0be0-0fae5fde2b44">The temperature realized by a TPW cell is exactly <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>273.16</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>273.16 "unitsml(K)"</asciimath></stem> only for ideally pure VSMOW water. Though extreme care in water purification is taken during the manufacture, the water enclosed within a TPW cell is never completely free of impurities.</p>
+</math><asciimath>273.16 "unitsml(K)"</asciimath></stem> only for ideally pure VSMOW water. Though extreme care in water purification is taken during the manufacture, the water enclosed within a TPW cell is never completely free of impurities.</p>
 
-<p id="_6871b4a9-52b2-409f-1827-8c2a2f32f812">Impurities in the water of TPW cells give rise to the most significant source of uncertainty and constitute the most difficult effect to assess. Recent TPW comparisons [<eref type="inline" bibitemid="Stock2006" citeas="[43]">Stock <em>et al.</em> 2006</eref>, <eref type="inline" bibitemid="Peruzzi2009" citeas="[38]">Peruzzi <em>et al.</em> 2009</eref>] exhibited results dispersed over ranges exceeding <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_0798e1fb-184e-d3fb-db2b-cb3ff2fc2d33">Impurities in the water of TPW cells give rise to the most significant source of uncertainty and constitute the most difficult effect to assess. Recent TPW comparisons [<eref type="inline" bibitemid="Stock2006" citeas="[43]"><display-text>Stock <em>et al.</em> 2006</display-text></eref>, <eref type="inline" bibitemid="Peruzzi2009" citeas="[38]"><display-text>Peruzzi <em>et al.</em> 2009</display-text></eref>] exhibited results dispersed over ranges exceeding <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>200</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>200 "unitsml(uK)"</asciimath></stem>, largely due to impurities.</p>
+</math><asciimath>200 "unitsml(uK)"</asciimath></stem>, largely due to impurities.</p>
 
-<p id="_ccc4b2e4-c129-da18-25fe-b7bec71ac1fe">There are four main sources of impurity in the water of a TPW cell:</p>
+<p id="_82df89c2-8674-7aea-e690-2e2f1ac3aa6e">There are four main sources of impurity in the water of a TPW cell:</p>
 
-<ol id="_55b0b86a-2b84-ad05-175b-7a8676ab1649" type="arabic"><li><p id="_325ed321-e110-1b51-c762-aca4f1ad1e5e">Chemicals used in the cleaning and pre-conditioning of the cell may be a source of contamination. These may include HF, HCl and NH4. Most of these materials have a high dissociation constant, so are detectable from measurements of electrical conductivity [<eref type="inline" bibitemid="Ballico1999" citeas="[3]">Ballico 1999</eref>].</p>
+<ol id="_c1fa7f41-bf44-5637-1bf4-12b4356cee62" type="arabic"><li><p id="_85bd8bd6-9a3b-ae70-9bad-ef38a2bc0e3b">Chemicals used in the cleaning and pre-conditioning of the cell may be a source of contamination. These may include HF, HCl and NH4. Most of these materials have a high dissociation constant, so are detectable from measurements of electrical conductivity [<eref type="inline" bibitemid="Ballico1999" citeas="[3]"><display-text>Ballico 1999</display-text></eref>].</p>
 </li>
-<li><p id="_2daa6fa5-c17f-7562-b57a-265f35ea026a">Borosilicate glass, from which most cells and their manufacturing plant are made, is weakly soluble in water resulting in a temperature depression at the time of manufacture and additional drift with time. In high quality cells, actual depressions at the time of manufacture can be as low as a few microkelvin [<eref type="inline" bibitemid="Peruzzi2007" citeas="[37]">Peruzzi <em>et al.</em> 2007</eref>, <eref type="inline" bibitemid="Strouse2007" citeas="[44]">Strouse and Zhao 2007</eref>]. The drift rates range up to <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<li><p id="_ec8cb376-111a-cfe9-88cd-7fbb34d1bc80">Borosilicate glass, from which most cells and their manufacturing plant are made, is weakly soluble in water resulting in a temperature depression at the time of manufacture and additional drift with time. In high quality cells, actual depressions at the time of manufacture can be as low as a few microkelvin [<eref type="inline" bibitemid="Peruzzi2007" citeas="[37]"><display-text>Peruzzi <em>et al.</em> 2007</display-text></eref>, <eref type="inline" bibitemid="Strouse2007" citeas="[44]"><display-text>Strouse and Zhao 2007</display-text></eref>]. The drift rates range up to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mo>−</mo>
     <mn>20</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
     <mo>/</mo>
     <mtext>year</mtext>
   </mstyle>
-</math>
-<asciimath>-20 "unitsml(uK)"//"year"</asciimath></stem> with a mean rate of <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>-20 "unitsml(uK)"//"year"</asciimath></stem> with a mean rate of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mo>−</mo>
     <mn>4</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
     <mo>/</mo>
     <mtext>year</mtext>
   </mstyle>
-</math>
-<asciimath>-4 "unitsml(uK)"//"year"</asciimath></stem>, although the variation between the cells is very large [<eref type="inline" bibitemid="Hill2001" citeas="[23]">Hill 2001</eref>]. With borosilicate cells, the drift rate is likely to increase with time and is very dependent on the treatment of the glass prior to the manufacture of the cells [<eref type="inline" bibitemid="White2005" citeas="[48]">White <em>et al.</em> 2005</eref>]. Storage of the cells near <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>-4 "unitsml(uK)"//"year"</asciimath></stem>, although the variation between the cells is very large [<eref type="inline" bibitemid="Hill2001" citeas="[23]"><display-text>Hill 2001</display-text></eref>]. With borosilicate cells, the drift rate is likely to increase with time and is very dependent on the treatment of the glass prior to the manufacture of the cells [<eref type="inline" bibitemid="White2005" citeas="[48]"><display-text>White <em>et al.</em> 2005</display-text></eref>]. Storage of the cells near <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
-    <mstyle mathvariant="normal">
-      <mi>°C</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>0 "unitsml(degC)"</asciimath></stem> and manufacture of the cells from fused silica both reduce the drift rate [<eref type="inline" bibitemid="Zief1972" citeas="[55]">Zief and Speights 1972</eref>, <eref type="inline" bibitemid="Strouse2007" citeas="[44]">Strouse and Zhao 2007</eref>]. The use of fused silica cells may, depending on the manufacturing process, result in a higher level of particular impurities and a higher initial impurity level due to the higher temperature required to melt pure silica and seal the cell.</p>
+</math><asciimath>0 "unitsml(degC)"</asciimath></stem> and manufacture of the cells from fused silica both reduce the drift rate [<eref type="inline" bibitemid="Zief1972" citeas="[55]"><display-text>Zief and Speights 1972</display-text></eref>, <eref type="inline" bibitemid="Strouse2007" citeas="[44]"><display-text>Strouse and Zhao 2007</display-text></eref>]. The use of fused silica cells may, depending on the manufacturing process, result in a higher level of particular impurities and a higher initial impurity level due to the higher temperature required to melt pure silica and seal the cell.</p>
 </li>
-<li><p id="_51a7bc3c-af0f-9f72-9fc6-c5b9013989de">Low-volatility compounds in the source water: for example, light hydrocarbons have a similar boiling point to water so distillation may not remove them. The typical magnitude of this impurity effect is unknown, but anecdotal evidence suggests that cells subjected to a prolonged degassing during manufacture (approximately 2 days) can be <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<li><p id="_f2fea133-a02e-16d9-1d4a-f38f1954cc67">Low-volatility compounds in the source water: for example, light hydrocarbons have a similar boiling point to water so distillation may not remove them. The typical magnitude of this impurity effect is unknown, but anecdotal evidence suggests that cells subjected to a prolonged degassing during manufacture (approximately 2 days) can be <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>20</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>20 "unitsml(uK)"</asciimath></stem> higher than other cells, after isotope corrections have been applied.</p>
+</math><asciimath>20 "unitsml(uK)"</asciimath></stem> higher than other cells, after isotope corrections have been applied.</p>
 </li>
-<li><p id="_f80d034b-99a3-960a-75b4-a1100476eb1b">Residual gases in the cell water. However, since one quarter of the difference between the temperature of the ice point and the TPW is due to dissolved gasses [<eref type="inline" bibitemid="Ancsin1982" citeas="[1]">Ancsin 1982</eref>], it can be inferred that any impurity effect due to dissolved gasses is smaller than the residual-gas-pressure effect, which is generally negligible.</p>
+<li><p id="_4e7a4bd3-d1ec-47d2-375c-8816caa7ba76">Residual gases in the cell water. However, since one quarter of the difference between the temperature of the ice point and the TPW is due to dissolved gasses [<eref type="inline" bibitemid="Ancsin1982" citeas="[1]"><display-text>Ancsin 1982</display-text></eref>], it can be inferred that any impurity effect due to dissolved gasses is smaller than the residual-gas-pressure effect, which is generally negligible.</p>
 </li>
 </ol>
 
-<p id="_23631970-5a86-64e3-1f1d-7adf63183525">The preferred method for estimating the influence of impurities and the resulting uncertainties is the “Sum of Individual Estimates” (SIE), see <em>Guide</em> <link target="https://www.bipm.org/utils/common/pdf/ITS-90/Guide_ITS-90_2_1_Impurities_2018.pdf">Section 2.1</link> <em>Influence of impurities</em>, which requires the determination of the concentrations of allthe relevant impurity species by applying an appropriate analysis technique to a representative sample of the cell water.</p>
+<p id="_4d0ad2c5-38a6-e50f-49d0-68ba8c7d1b42">The preferred method for estimating the influence of impurities and the resulting uncertainties is the “Sum of Individual Estimates” (SIE), see <em>Guide</em> <link target="https://www.bipm.org/utils/common/pdf/ITS-90/Guide_ITS-90_2_1_Impurities_2018.pdf">Section 2.1</link> <em>Influence of impurities</em>, which requires the determination of the concentrations of allthe relevant impurity species by applying an appropriate analysis technique to a representative sample of the cell water.</p>
 
-<p id="_51cabd27-4460-292c-03ef-1fa2dd0b1341">Inductively-Coupled Plasma Mass Spectrometry (ICPMS), applied to water samples separated from the cell, showed that the total impurity concentration in high-quality TPW cells can be as low as <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_29e27943-6492-5dcc-2861-806c08e882d2">Inductively-Coupled Plasma Mass Spectrometry (ICPMS), applied to water samples separated from the cell, showed that the total impurity concentration in high-quality TPW cells can be as low as <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.1</mn>
-    <mstyle mathvariant="normal">
-      <mi>µmol</mi>
-    </mstyle>
-    <mo>⋅</mo>
-    <msup>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_umol">
       <mstyle mathvariant="normal">
-        <mi>mol</mi>
+        <mi>µmol</mi>
       </mstyle>
-      <mrow>
-        <mo>−</mo>
-        <mn>1</mn>
-      </mrow>
-    </msup>
+      
+      
+      
+    </mrow>
+    <mo>⋅</mo>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mol-1">
+      <msup>
+        <mstyle mathvariant="normal">
+          <mi>mol</mi>
+        </mstyle>
+        <mrow>
+          <mo>−</mo>
+          <mn>1</mn>
+        </mrow>
+      </msup>
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>0.1 "unitsml(umol)" * "unitsml(mol^-1)"</asciimath></stem> [<eref type="inline" bibitemid="Peruzzi2007" citeas="[37]">Peruzzi <em>et al.</em> 2007</eref>]. ICPMS performed on water from old borosilicate cells resulted in a total impurity concentration of up to <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>0.1 "unitsml(umol)" * "unitsml(mol^-1)"</asciimath></stem> [<eref type="inline" bibitemid="Peruzzi2007" citeas="[37]"><display-text>Peruzzi <em>et al.</em> 2007</display-text></eref>]. ICPMS performed on water from old borosilicate cells resulted in a total impurity concentration of up to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4</mn>
-    <mstyle mathvariant="normal">
-      <mi>µmol</mi>
-    </mstyle>
-    <mo>⋅</mo>
-    <msup>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_umol">
       <mstyle mathvariant="normal">
-        <mi>mol</mi>
+        <mi>µmol</mi>
       </mstyle>
-      <mrow>
-        <mo>−</mo>
-        <mn>1</mn>
-      </mrow>
-    </msup>
+      
+      
+      
+    </mrow>
+    <mo>⋅</mo>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mol-1">
+      <msup>
+        <mstyle mathvariant="normal">
+          <mi>mol</mi>
+        </mstyle>
+        <mrow>
+          <mo>−</mo>
+          <mn>1</mn>
+        </mrow>
+      </msup>
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>4 "unitsml(umol)" * "unitsml(mol^-1)"</asciimath></stem> [<eref type="inline" bibitemid="Hill1999" citeas="[22]">Hill 1999</eref>]. Nevertheless, the results of ICPMS are regarded as semi-quantitative due to intrinsic features of the technique and of the sample preparation. Moreover, ICPMS analysis can detect only a limited number (about 60) of elemental impurities and no organic impurities.</p>
+</math><asciimath>4 "unitsml(umol)" * "unitsml(mol^-1)"</asciimath></stem> [<eref type="inline" bibitemid="Hill1999" citeas="[22]"><display-text>Hill 1999</display-text></eref>]. Nevertheless, the results of ICPMS are regarded as semi-quantitative due to intrinsic features of the technique and of the sample preparation. Moreover, ICPMS analysis can detect only a limited number (about 60) of elemental impurities and no organic impurities.</p>
 
-<p id="_e0fa43df-0de6-871b-7384-7ba4b7961d9f">Impurity fractionation effects (or segregation) between water and ice, similar to those described in the previous subsection (isotopic fractionation), may occur during the preparation of the ice mantle and consequent storage of the cell in the maintenance bath. The size of such effects depends on</p>
+<p id="_abdd23f9-b7d1-2cdd-ee9e-6ebc6d7db812">Impurity fractionation effects (or segregation) between water and ice, similar to those described in the previous subsection (isotopic fractionation), may occur during the preparation of the ice mantle and consequent storage of the cell in the maintenance bath. The size of such effects depends on</p>
 
-<ol id="_6fdf430a-d395-c29d-a198-d1746ac3703a" type="arabic"><li><p id="_a53cbe89-1e86-64f5-50e3-e337eada8a3b">the amount of impurities species,</p>
+<ol id="_d4e9d427-a0ef-24fb-bbd8-4f8eb579685b" type="arabic"><li><p id="_c5cc62c1-30e6-3814-955c-3cef915c40a5">the amount of impurities species,</p>
 </li>
-<li><p id="_c1ceb33d-0021-7aa0-4bcd-4a4999ab0a6c">the equilibrium distribution coefficient <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<li><p id="_b27a9eac-994a-f2c1-65d7-352dff13c125">the equilibrium distribution coefficient <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msubsup>
       <mi>k</mi>
@@ -868,14 +1154,13 @@ FRANCE</p>
       <mi>i</mi>
     </msubsup>
   </mstyle>
-</math>
-<asciimath>k_0^i</asciimath></stem> of the impurities and</p>
+</math><asciimath>k_0^i</asciimath></stem> of the impurities and</p>
 </li>
-<li><p id="_0b9be294-89a6-36ae-c075-99e197fc44ec">the details of freezing (freezing rate, diffusion coefficient of the impurities in the solid and in the liquid, presence of convection during freezing e.g. stirring of the liquid).</p>
+<li><p id="_07ddf46c-9492-28d9-65b3-3773113a6bba">the details of freezing (freezing rate, diffusion coefficient of the impurities in the solid and in the liquid, presence of convection during freezing e.g. stirring of the liquid).</p>
 </li>
 </ol>
 
-<p id="_5403e54a-d1ba-652c-4091-6c91d258309a">Ice was reported not to be able to dissolve any compound, e.g. <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_f709d45f-d71b-ac56-af66-c876cbb5e360">Ice was reported not to be able to dissolve any compound, e.g. <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msubsup>
       <mi>k</mi>
@@ -885,8 +1170,7 @@ FRANCE</p>
     <mo>=</mo>
     <mn>0</mn>
   </mstyle>
-</math>
-<asciimath>k_0^i = 0</asciimath></stem> for any water impurity, except for HCl, HF, NH3, NH4F, LiF, NaF and KF having <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>k_0^i = 0</asciimath></stem> for any water impurity, except for HCl, HF, NH3, NH4F, LiF, NaF and KF having <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msubsup>
       <mi>k</mi>
@@ -896,8 +1180,7 @@ FRANCE</p>
     <mo>≠</mo>
     <mn>0</mn>
   </mstyle>
-</math>
-<asciimath>k_0^i != 0</asciimath></stem> [<eref type="inline" bibitemid="Lliboutry1964" citeas="[30]">Lliboutry 1964</eref>, <eref type="inline" bibitemid="Workman1950" citeas="[51]">Workman and Reynolds 1950</eref>, <eref type="inline" bibitemid="Zaromb1956" citeas="[53]">Zaromb and Brill 1956</eref>, <eref type="inline" bibitemid="Jaccard1961" citeas="[25]">Jaccard and Levi 1961</eref>, <eref type="inline" bibitemid="Brill1957" citeas="[7]">Brill 1957</eref>, <eref type="inline" bibitemid="Granicher1963" citeas="[20]">Granicher 1963</eref>, <eref type="inline" bibitemid="Gross1967" citeas="[21]">Gross 1967</eref>]. Even for such impurities, <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>k_0^i != 0</asciimath></stem> [<eref type="inline" bibitemid="Lliboutry1964" citeas="[30]"><display-text>Lliboutry 1964</display-text></eref>, <eref type="inline" bibitemid="Workman1950" citeas="[51]"><display-text>Workman and Reynolds 1950</display-text></eref>, <eref type="inline" bibitemid="Zaromb1956" citeas="[53]"><display-text>Zaromb and Brill 1956</display-text></eref>, <eref type="inline" bibitemid="Jaccard1961" citeas="[25]"><display-text>Jaccard and Levi 1961</display-text></eref>, <eref type="inline" bibitemid="Brill1957" citeas="[7]"><display-text>Brill 1957</display-text></eref>, <eref type="inline" bibitemid="Granicher1963" citeas="[20]"><display-text>Granicher 1963</display-text></eref>, <eref type="inline" bibitemid="Gross1967" citeas="[21]"><display-text>Gross 1967</display-text></eref>]. Even for such impurities, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msubsup>
       <mi>k</mi>
@@ -908,8 +1191,7 @@ FRANCE</p>
     <mo>&lt;</mo>
     <mn>1</mn>
   </mstyle>
-</math>
-<asciimath>k_0^i &lt; &lt; 1</asciimath></stem> is fulfilled (for example, <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>k_0^i &lt; &lt; 1</asciimath></stem> is fulfilled (for example, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msubsup>
       <mi>k</mi>
@@ -919,8 +1201,7 @@ FRANCE</p>
     <mo>=</mo>
     <mn>0.01</mn>
   </mstyle>
-</math>
-<asciimath>k_0^{"HF"} = 0.01</asciimath></stem> [<eref type="inline" bibitemid="Jaccard1963" citeas="[24]">Jaccard 1963</eref>] and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>k_0^{"HF"} = 0.01</asciimath></stem> [<eref type="inline" bibitemid="Jaccard1963" citeas="[24]"><display-text>Jaccard 1963</display-text></eref>] and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msubsup>
       <mi>k</mi>
@@ -930,8 +1211,7 @@ FRANCE</p>
     <mo>=</mo>
     <mn>0.003</mn>
   </mstyle>
-</math>
-<asciimath>k_0^{"HC1"} = 0.003</asciimath></stem> [<xref target="Leviand1961">Leviand Lubart 1961</xref>]), so it is reasonable to assume <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>k_0^{"HC1"} = 0.003</asciimath></stem> [<xref target="Leviand1961"><display-text>Leviand Lubart 1961</display-text></xref>]), so it is reasonable to assume <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msubsup>
       <mi>k</mi>
@@ -942,8 +1222,7 @@ FRANCE</p>
     <mo>&lt;</mo>
     <mn>1</mn>
   </mstyle>
-</math>
-<asciimath>k_0^i &lt; &lt; 1</asciimath></stem> for any impurity in water and apply Raoult’s law and the Overall Maximum Estimate (OME) method, see again <em>Guide</em> Section 2.1 <em>Influence of impurities</em>, to TPW cells. This means that a plot of themeasured TPW temperature versus the inverse liquid fraction <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>k_0^i &lt; &lt; 1</asciimath></stem> for any impurity in water and apply Raoult’s law and the Overall Maximum Estimate (OME) method, see again <em>Guide</em> Section 2.1 <em>Influence of impurities</em>, to TPW cells. This means that a plot of themeasured TPW temperature versus the inverse liquid fraction <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1</mn>
     <mo>/</mo>
@@ -951,35 +1230,44 @@ FRANCE</p>
       <mi>F</mi>
     </mstyle>
   </mstyle>
-</math>
-<asciimath>1//ii(F)</asciimath></stem> allows the determination of the impurity level and temperature depression [<eref type="inline" bibitemid="Mendez2002" citeas="[34]">Mendez-Lango 2002</eref>].</p>
+</math><asciimath>1//ii(F)</asciimath></stem> allows the determination of the impurity level and temperature depression [<eref type="inline" bibitemid="Mendez2002" citeas="[34]"><display-text>Mendez-Lango 2002</display-text></eref>].</p>
 
-<p id="_18ad1931-b0fd-b29d-eec3-b7869d4acd98">During freezing, the impurities are rejected into the liquid by the solid-liquid interface or trapped in the ice at grain boundaries. When the first ice-water interface is formed around the thermometer well, the ice so formed is pure. Measuring the temperature realized by the cell in this state and again after the cell has been (gently) inverted several times to mix the inner melt with the main body of water, may give an indication of the impurity level [<eref type="inline" bibitemid="ASTM2002" citeas="[2]">ASTM 2002</eref>]. This test must be carried out with the first formation of the ice-water and measurements must be corrected for self heating. A similar effect occurs with extended use of a cell over a week or longer. The water around the well and the main body appear to mix slowly causing a gradual depression of the observed temperature with time [<eref type="inline" bibitemid="Stock2006" citeas="[43]">Stock <em>et al.</em> 2006</eref>].</p>
+<p id="_a9b022f3-4f76-0036-a188-987210596cb6">During freezing, the impurities are rejected into the liquid by the solid-liquid interface or trapped in the ice at grain boundaries. When the first ice-water interface is formed around the thermometer well, the ice so formed is pure. Measuring the temperature realized by the cell in this state and again after the cell has been (gently) inverted several times to mix the inner melt with the main body of water, may give an indication of the impurity level [<eref type="inline" bibitemid="ASTM2002" citeas="[2]"><display-text>ASTM 2002</display-text></eref>]. This test must be carried out with the first formation of the ice-water and measurements must be corrected for self heating. A similar effect occurs with extended use of a cell over a week or longer. The water around the well and the main body appear to mix slowly causing a gradual depression of the observed temperature with time [<eref type="inline" bibitemid="Stock2006" citeas="[43]"><display-text>Stock <em>et al.</em> 2006</display-text></eref>].</p>
 
-<p id="_d7ea129f-2a0b-da89-cb88-2917b94510ab">The smallest uncertainty component due to impurities is achieved in recently manufactured high-quality cells and is probably below <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_0b4ad853-3707-9e1d-8e67-ba6b260557cb">The smallest uncertainty component due to impurities is achieved in recently manufactured high-quality cells and is probably below <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>10</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>10 "unitsml(uK)"</asciimath></stem> [<eref type="inline" bibitemid="Nguyen2007" citeas="[35]">Nguyen and Ballico 2007</eref>, <eref type="inline" bibitemid="Strouse2007" citeas="[44]">Strouse and Zhao 2007</eref>, <eref type="inline" bibitemid="Tavener2007" citeas="[46]">Tavener 2007</eref>]. The dispersion of results in recent international comparisons [<eref type="inline" bibitemid="Stock2006" citeas="[43]">Stock <em>et al.</em> 2006</eref>, <eref type="inline" bibitemid="Peruzzi2009" citeas="[38]">Peruzzi <em>et al.</em> 2009</eref>] suggests that a depression and uncertainty due to impurities of about <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>10 "unitsml(uK)"</asciimath></stem> [<eref type="inline" bibitemid="Nguyen2007" citeas="[35]"><display-text>Nguyen and Ballico 2007</display-text></eref>, <eref type="inline" bibitemid="Strouse2007" citeas="[44]"><display-text>Strouse and Zhao 2007</display-text></eref>, <eref type="inline" bibitemid="Tavener2007" citeas="[46]"><display-text>Tavener 2007</display-text></eref>]. The dispersion of results in recent international comparisons [<eref type="inline" bibitemid="Stock2006" citeas="[43]"><display-text>Stock <em>et al.</em> 2006</display-text></eref>, <eref type="inline" bibitemid="Peruzzi2009" citeas="[38]"><display-text>Peruzzi <em>et al.</em> 2009</display-text></eref>] suggests that a depression and uncertainty due to impurities of about <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>50</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>50 "unitsml(uK)"</asciimath></stem> is more typical for older cells.</p>
+</math><asciimath>50 "unitsml(uK)"</asciimath></stem> is more typical for older cells.</p>
 </clause>
 
-<clause id="_hydrostatic_pressure_effect" obligation="normative">
-<title>Hydrostatic pressure effect</title>
-<p id="_8dca2992-614c-5560-a0d7-fbf793f3c489">The definition of triple point temperature is realized only at the liquid/solid surface in contact with the vapour of the TPW cell but the sensing element of the SPRT is located near the bottom of the thermometer well to provide for adequate immersion. The TPW temperature must therefore be corrected for the hydrostatic pressure difference between the liquid/solid surface and the thermal centre of the SPRT sensing element. The correction is:</p>
+<clause id="_d298459a-1438-a809-2c97-c047d8a36309" obligation="normative">
+<title id="_315fac79-33cd-5cd3-49af-a94585b1cbe0">Hydrostatic pressure effect</title>
+<p id="_2e0af49d-36c3-93b4-acfb-22ccbc738c56">The definition of triple point temperature is realized only at the liquid/solid surface in contact with the vapour of the TPW cell but the sensing element of the SPRT is located near the bottom of the thermometer well to provide for adequate immersion. The TPW temperature must therefore be corrected for the hydrostatic pressure difference between the liquid/solid surface and the thermal centre of the SPRT sensing element. The correction is:</p>
 
-<formula id="_80aba78d-5e70-38aa-8ebb-49e080038cbf"><stem type="MathML" block="true"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<formula id="_01cdc0a0-1026-b4bb-7b1f-43e733dea1d5"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mi mathvariant="normal">Δ</mi>
     <msub>
@@ -1018,10 +1306,9 @@ FRANCE</p>
     </mrow>
     <mo>,</mo>
   </mstyle>
-</math>
-<asciimath>Delta ii(T)_{"hyd"} = - {"d"ii(T)}/{"d"h} * (h_{"liq"} - h_{"SPRT"}),</asciimath></stem></formula>
+</math><asciimath>Delta ii(T)_{"hyd"} = - {"d"ii(T)}/{"d"h} * (h_{"liq"} - h_{"SPRT"}),</asciimath></stem></formula>
 
-<p id="_858dbb3b-1689-f27f-1c96-a1cb01472138">where <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_6f57cac6-ff1c-e68b-9762-6688ed9f62c7">where <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mtext>d</mtext>
     <mstyle mathvariant="italic">
@@ -1031,8 +1318,7 @@ FRANCE</p>
     <mtext>d</mtext>
     <mi>h</mi>
   </mstyle>
-</math>
-<asciimath>"d"ii(T)//"d"h</asciimath></stem> is the hydrostatic pressure coefficient defined by the ITS-90, i.e. <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>"d"ii(T)//"d"h</asciimath></stem> is the hydrostatic pressure coefficient defined by the ITS-90, i.e. <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mo>−</mo>
     <mn>0.73</mn>
@@ -1044,11 +1330,12 @@ FRANCE</p>
         <mn>3</mn>
       </mrow>
     </msup>
-    <mrow>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_K.m-1">
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      <mo>⋅</mo>
+      <mi rspace="thickmathspace">⁢</mi>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
@@ -1058,484 +1345,611 @@ FRANCE</p>
           <mn>1</mn>
         </mrow>
       </msup>
+      
+      
     </mrow>
   </mstyle>
-</math>
-<asciimath>-0.73 * 10^{-3} "unitsml(K*m^-1)"</asciimath></stem>. The difference in vertical elevation between the liquid surface <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>-0.73 * 10^{-3} "unitsml(K*m^-1)"</asciimath></stem>. The difference in vertical elevation between the liquid surface <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>h</mi>
       <mtext>1iq</mtext>
     </msub>
   </mstyle>
-</math>
-<asciimath>h_{"1iq"}</asciimath></stem> and the thermal centre of the SPRT sensing element <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>h_{"1iq"}</asciimath></stem> and the thermal centre of the SPRT sensing element <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>h</mi>
       <mtext>SPRT</mtext>
     </msub>
   </mstyle>
-</math>
-<asciimath>h_{"SPRT"}</asciimath></stem> amounts to <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>200</mn>
-  </mstyle>
-</math>
-<asciimath>200</asciimath></stem> to <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>h_{"SPRT"}</asciimath></stem> amounts to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="false"><mn>200</mn></mstyle></math><asciimath>200</asciimath></stem> to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>300</mn>
-    <mstyle mathvariant="normal">
-      <mi>mm</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mm">
+      <mstyle mathvariant="normal">
+        <mi>mm</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>300 "unitsml(mm)"</asciimath></stem>, depending on the size of the cell, translating into a hydrostatic pressure correction of <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>300 "unitsml(mm)"</asciimath></stem>, depending on the size of the cell, translating into a hydrostatic pressure correction of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>150</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>150 "unitsml(uK)"</asciimath></stem> to <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>150 "unitsml(uK)"</asciimath></stem> to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>220</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>220 "unitsml(uK)"</asciimath></stem>.</p>
+</math><asciimath>220 "unitsml(uK)"</asciimath></stem>.</p>
 
-<p id="_82e3e869-cc4a-a657-fd9a-3e9840be3d67">The uncertainty related to the hydrostatic pressure correction is typically a few <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_40ef84e6-509a-1f75-3910-42c77051a5d2">The uncertainty related to the hydrostatic pressure correction is typically a few <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>"unitsml(uK)"</asciimath></stem> [<eref type="inline" bibitemid="Stock2006" citeas="[43]">Stock <em>et al.</em> 2006</eref>]. When a profile of the TPW temperature as a function of the SPRT immersion is measured (immersion profile, see [<eref type="inline" bibitemid="Stock2006" citeas="[43]">Stock <em>et al.</em> 2006</eref>]), the departure of the measured immersion curve from the expected hydrostatic pressure line provides an estimate of the uncertainty due to immersion and stray thermal effects, see [<eref type="inline" bibitemid="Stock2006" citeas="[43]">Stock <em>et al.</em> 2006</eref>].</p>
+</math><asciimath>"unitsml(uK)"</asciimath></stem> [<eref type="inline" bibitemid="Stock2006" citeas="[43]"><display-text>Stock <em>et al.</em> 2006</display-text></eref>]. When a profile of the TPW temperature as a function of the SPRT immersion is measured (immersion profile, see [<eref type="inline" bibitemid="Stock2006" citeas="[43]"><display-text>Stock <em>et al.</em> 2006</display-text></eref>]), the departure of the measured immersion curve from the expected hydrostatic pressure line provides an estimate of the uncertainty due to immersion and stray thermal effects, see [<eref type="inline" bibitemid="Stock2006" citeas="[43]"><display-text>Stock <em>et al.</em> 2006</display-text></eref>].</p>
 </clause>
 
-<clause id="_realization_of_the_tpw_temperature_in_a_tpw_cell" obligation="normative">
-<title>Realization of the TPW temperature in a TPW cell</title>
-<clause id="_preparation_of_the_ice_mantle" obligation="normative">
-<title>Preparation of the ice mantle</title>
-<p id="_ecf2016d-a3b9-746e-bb17-f20fe9f91882">The standard method for preparing an ice mantle around the thermometer well of a TPW cell is the “inner sheath method” [<eref type="inline" bibitemid="Cox1982" citeas="[8]">Cox and Vaughan 1982</eref>]. With this method, the ice mantle is grown from the inside outward by cooling the thermometer well.</p>
+<clause id="_a1a0556f-0dd3-f162-cc0c-12c9f7e92558" obligation="normative">
+<title id="_6bb5011d-e8f0-1495-0e5a-24ac4996be3a">Realization of the TPW temperature in a TPW cell</title>
+<clause id="_53c649ce-02f1-4f25-75d5-6058d56cab7a" obligation="normative">
+<title id="_8503116a-7cb3-6892-95c8-1c5f5e9dfa74">Preparation of the ice mantle</title>
+<p id="_f5583853-ceec-119c-e94c-b4bee10b4cd8">The standard method for preparing an ice mantle around the thermometer well of a TPW cell is the “inner sheath method” [<eref type="inline" bibitemid="Cox1982" citeas="[8]"><display-text>Cox and Vaughan 1982</display-text></eref>]. With this method, the ice mantle is grown from the inside outward by cooling the thermometer well.</p>
 
-<p id="_69bce6ae-c885-ace8-42c8-ec5d2508e76d">Depending on the coolant used (crushed solid CO<sub>2</sub>, heat pipe immersion cooler, liquid-nitrogen-cooled rod or liquid nitrogen), different variants can be adopted [<eref type="inline" bibitemid="Furukawa1997" citeas="[17]">Furukawa <em>et al.</em> 1997</eref>] which can be summarized as follows:</p>
+<p id="_f37e520a-2408-eaf3-3171-5cf6e22fc98b">Depending on the coolant used (crushed solid CO<sub>2</sub>, heat pipe immersion cooler, liquid-nitrogen-cooled rod or liquid nitrogen), different variants can be adopted [<eref type="inline" bibitemid="Furukawa1997" citeas="[17]"><display-text>Furukawa <em>et al.</em> 1997</display-text></eref>] which can be summarized as follows:</p>
 
-<ol id="_77b31a34-cf14-124f-3939-c531a6cd14fc" type="arabic"><li><p id="_5cdf4d00-907d-714b-570a-c741e97fe144">Crushed solid CO<sub>2</sub>: the thermometer well is filled with crushed solid CO<sub>2</sub> up to the level of the water surface in the cell and solid CO<sub>2</sub> is added to maintain such level until a mantle of desired thickness is formed. Approximately <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<ol id="_6b45621d-0816-08fd-30f2-590d593ac835" type="arabic"><li><p id="_1e282243-98a9-7cdc-3487-6facbd7c22ad">Crushed solid CO<sub>2</sub>: the thermometer well is filled with crushed solid CO<sub>2</sub> up to the level of the water surface in the cell and solid CO<sub>2</sub> is added to maintain such level until a mantle of desired thickness is formed. Approximately <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1</mn>
-    <mstyle mathvariant="normal">
-      <mi>ml</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu365">
+      <mstyle mathvariant="normal">
+        <mi>ml</mi>
+      </mstyle>
+      
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>1 "unitsml(ml)"</asciimath></stem> of ethanol is added to the well prior to (along with) the CO<sub>2</sub> to promote heat transfer and thicker mantle at the bottom.</p>
+</math><asciimath>1 "unitsml(ml)"</asciimath></stem> of ethanol is added to the well prior to (along with) the CO<sub>2</sub> to promote heat transfer and thicker mantle at the bottom.</p>
 </li>
-<li><p id="_1d103b87-4a6e-e3ac-7b41-809d09baf2fb">Heat pipe immersion cooler [<eref type="inline" bibitemid="Evans1969" citeas="[12]">Evans and Sweger 1969</eref>]: approximately <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<li><p id="_75bba4cc-0f74-bc7b-ec59-f5648a526197">Heat pipe immersion cooler [<eref type="inline" bibitemid="Evans1969" citeas="[12]"><display-text>Evans and Sweger 1969</display-text></eref>]: approximately <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1</mn>
-    <mstyle mathvariant="normal">
-      <mi>ml</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu365">
+      <mstyle mathvariant="normal">
+        <mi>ml</mi>
+      </mstyle>
+      
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>1 "unitsml(ml)"</asciimath></stem> of ethanol and <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>1 "unitsml(ml)"</asciimath></stem> of ethanol and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>5</mn>
-    <mstyle mathvariant="normal">
-      <mi>ml</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu365">
+      <mstyle mathvariant="normal">
+        <mi>ml</mi>
+      </mstyle>
+      
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>5 "unitsml(ml)"</asciimath></stem> of finely crushed solid CO<sub>2</sub> are preliminarily added to the thermometer well to promote crystal nucleation, thicker mantle at the bottom and prevent water in the cell from supercooling. The immersion cooler, which consists of a cup for loading the coolant and the heat pipe tube, is then inserted in the thermometer well. The crushed solid CO<sub>2</sub> and ethanol are loaded into the cup of the immersion cooler, and the space between the thermometer well and the heat pipe tube is filled with ethanol up to the level of the water surface in the cell. The heat piping loop initiates, the evaporated refrigerant travels upward to the condenser, the coolant condenses the refrigerant back to liquid, and the liquid travels back down the walls of the tube to the bottom where the cycle restarts, resulting in the formation of the ice mantle.</p>
+</math><asciimath>5 "unitsml(ml)"</asciimath></stem> of finely crushed solid CO<sub>2</sub> are preliminarily added to the thermometer well to promote crystal nucleation, thicker mantle at the bottom and prevent water in the cell from supercooling. The immersion cooler, which consists of a cup for loading the coolant and the heat pipe tube, is then inserted in the thermometer well. The crushed solid CO<sub>2</sub> and ethanol are loaded into the cup of the immersion cooler, and the space between the thermometer well and the heat pipe tube is filled with ethanol up to the level of the water surface in the cell. The heat piping loop initiates, the evaporated refrigerant travels upward to the condenser, the coolant condenses the refrigerant back to liquid, and the liquid travels back down the walls of the tube to the bottom where the cycle restarts, resulting in the formation of the ice mantle.</p>
 </li>
-<li><p id="_4bffc5b9-136a-2ea5-c541-3f4798dcc8e2">Liquid-nitrogen-cooled rod: the thermometer well is filled with ethanol up to the level of the water surface in the cell and a metal (usually copper) rod pre-cooled in liquid nitrogen is inserted into the thermometer well. Several insertions will be needed to produce an adequate mantle and cooling is interrupted for short intervals during the exchange of the cooling rods.</p>
+<li><p id="_0c41ccdc-8b7e-3842-84e3-e036acea6ed3">Liquid-nitrogen-cooled rod: the thermometer well is filled with ethanol up to the level of the water surface in the cell and a metal (usually copper) rod pre-cooled in liquid nitrogen is inserted into the thermometer well. Several insertions will be needed to produce an adequate mantle and cooling is interrupted for short intervals during the exchange of the cooling rods.</p>
 </li>
-<li><p id="_c241e9e2-828b-af83-18e7-9a554dd7942d">Liquid nitrogen. This variant can have, on its turn, different sub-variants:</p>
-<ol id="_c029ae5d-abcb-0faf-f82b-5fa40cd31176" type="alphabet"><li id="item_a"><p id="_ff2d425c-0a0f-5419-e1ad-1df9b6e0605d">Counter flowing cold nitrogen vapours and liquid through a multi-tube cooler inserted in the thermometer well. The cooling provided by the nitrogen counter-flow is transferred to the cell through ethanol filling the space between the cooler and the thermometer well (again up to the level of the water surface in the cell).</p>
+<li><p id="_bf287be7-932e-dacd-25e8-6e424dc4ab7f">Liquid nitrogen. This variant can have, on its turn, different sub-variants:</p>
+<ol id="_0a9744d8-6ebd-dead-458b-5e4e44681cfd" type="alphabet"><li id="_4f6cdb75-6dfc-27f7-305e-bd6e526cdb31" anchor="item_a"><p id="_c7f26bd9-d8e9-46a5-322b-494526313532">Counter flowing cold nitrogen vapours and liquid through a multi-tube cooler inserted in the thermometer well. The cooling provided by the nitrogen counter-flow is transferred to the cell through ethanol filling the space between the cooler and the thermometer well (again up to the level of the water surface in the cell).</p>
 </li>
-<li><p id="_1a8bab05-4f4d-78de-da26-1a417b525529">Similar to <xref target="item_a"/> but return flow of cold nitrogen vapour and liquid takes place directly in the space between the cooler and the thermometer well.</p>
+<li><p id="_ef631ca1-12df-f654-0515-6a1c158377d5">Similar to <xref target="item_a"/> but return flow of cold nitrogen vapour and liquid takes place directly in the space between the cooler and the thermometer well.</p>
 </li>
-<li><p id="_5e597ab9-a92d-3535-db10-69666be5e886">The liquid nitrogen is repeatedly allowed directly in the thermometer well, initially at the bottom and later at higher vertical positions.</p>
+<li><p id="_8159b9fe-1f7b-ac65-1200-fa6d09dfc886">The liquid nitrogen is repeatedly allowed directly in the thermometer well, initially at the bottom and later at higher vertical positions.</p>
 </li>
 </ol>
 </li>
 </ol>
 
-<p id="_8c23bc84-87de-efbb-3d12-7e8838778ce8">In all the variants described above, the cell must be preliminarily pre-cooled to a temperature close to <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_a6e8a744-960a-67a2-96c5-6ea580570e91">In all the variants described above, the cell must be preliminarily pre-cooled to a temperature close to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
-    <mstyle mathvariant="normal">
-      <mi>°C</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>0 "unitsml(degC)"</asciimath></stem>. During cooling, care must be taken to prevent solid bridging of the ice across the top surface (and the consequent possible rupture of the cell). Moreover, it is essential to remove all the water from the thermometer well before preparing the ice mantle, for example by rinsing the thermometer well with high-purity ethanol.</p>
+</math><asciimath>0 "unitsml(degC)"</asciimath></stem>. During cooling, care must be taken to prevent solid bridging of the ice across the top surface (and the consequent possible rupture of the cell). Moreover, it is essential to remove all the water from the thermometer well before preparing the ice mantle, for example by rinsing the thermometer well with high-purity ethanol.</p>
 
-<p id="_7dbab6b9-8cd5-48a3-1fc6-a69795782b79">The time required for forming an ice mantle depends on the variant adopted: approximately 30 minutes for variants 1 and 3, 60 minutes or more for variant 2, 10 minutes to 120 minutes for variant 4.</p>
+<p id="_cac16959-eb2f-31c0-f62a-7eed20a16e96">The time required for forming an ice mantle depends on the variant adopted: approximately 30 minutes for variants 1 and 3, 60 minutes or more for variant 2, 10 minutes to 120 minutes for variant 4.</p>
 
-<p id="_07036a53-ae3b-30b7-8bf7-f06c17c2ff2e">With an alternative non-standard method, known as “outer sheath method” or “mush method”, the ice mantle is grown from the outside inward [<eref type="inline" bibitemid="Cox1982" citeas="[8]">Cox and Vaughan 1982</eref>]. With such method, the water is supercooled several kelvins below the TPW temperature, until crystallization occurs either spontaneously or as a result of shock (e.g. by shaking the cell), indicated by the formation of uniform metastable dendrites (the “mush”) throughout the cell. The cell is then placed in the maintenance bath at a temperature close to <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_a561542a-2636-4686-4da1-a4602c270263">With an alternative non-standard method, known as “outer sheath method” or “mush method”, the ice mantle is grown from the outside inward [<eref type="inline" bibitemid="Cox1982" citeas="[8]"><display-text>Cox and Vaughan 1982</display-text></eref>]. With such method, the water is supercooled several kelvins below the TPW temperature, until crystallization occurs either spontaneously or as a result of shock (e.g. by shaking the cell), indicated by the formation of uniform metastable dendrites (the “mush”) throughout the cell. The cell is then placed in the maintenance bath at a temperature close to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.01</mn>
-    <mstyle mathvariant="normal">
-      <mi>°C</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>0.01 "unitsml(degC)"</asciimath></stem>, which action stabilizes the mush. Though this method has practical advantages and it was shown to agree with the inner sheath method within <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>0.01 "unitsml(degC)"</asciimath></stem>, which action stabilizes the mush. Though this method has practical advantages and it was shown to agree with the inner sheath method within <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.1</mn>
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>0.1 "unitsml(mK)"</asciimath></stem> [<eref type="inline" bibitemid="Cox1982" citeas="[8]">Cox and Vaughan 1982</eref>], its use is usually confined to checking the stability of reference SPRTs in secondary level temperature calibration laboratories [<eref type="inline" bibitemid="Li1999" citeas="[28]">Li and Hirst 1999</eref>, <eref type="inline" bibitemid="Li2001" citeas="[29]">Li <em>et al.</em> 2001</eref>, <eref type="inline" bibitemid="Zhao2005" citeas="[54]">Zhao and Walker 2005</eref>].</p>
+</math><asciimath>0.1 "unitsml(mK)"</asciimath></stem> [<eref type="inline" bibitemid="Cox1982" citeas="[8]"><display-text>Cox and Vaughan 1982</display-text></eref>], its use is usually confined to checking the stability of reference SPRTs in secondary level temperature calibration laboratories [<eref type="inline" bibitemid="Li1999" citeas="[28]"><display-text>Li and Hirst 1999</display-text></eref>, <eref type="inline" bibitemid="Li2001" citeas="[29]"><display-text>Li <em>et al.</em> 2001</display-text></eref>, <eref type="inline" bibitemid="Zhao2005" citeas="[54]"><display-text>Zhao and Walker 2005</display-text></eref>].</p>
 </clause>
 
-<clause id="_aging_of_the_ice_mantle_before_use" obligation="normative">
-<title>Aging of the ice mantle before use</title>
-<p id="_fa92ede0-096c-86ff-1c19-ecb6a70e5c6f">The TPW temperature realized by freshly prepared cells is lower than <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<clause id="_bda87cfd-8e9f-9fc4-1c54-10a56b977ea0" obligation="normative">
+<title id="_4a798d9e-2706-078b-a8dc-d29da2f4a413">Aging of the ice mantle before use</title>
+<p id="_7dde778b-aec5-5baf-5c2f-ca2e1bcb59cc">The TPW temperature realized by freshly prepared cells is lower than <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>273.16</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>273.16 "unitsml(K)"</asciimath></stem>, typically by <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>273.16 "unitsml(K)"</asciimath></stem>, typically by <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.2</mn>
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>0.2 "unitsml(mK)"</asciimath></stem> in cells where the mantle is frozen slowly (e.g. with method 2) and as much as <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>0.2 "unitsml(mK)"</asciimath></stem> in cells where the mantle is frozen slowly (e.g. with method 2) and as much as <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1</mn>
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>1 "unitsml(mK)"</asciimath></stem> for quickly frozen mantles (e.g. method 4) [<eref type="inline" bibitemid="Furukawa1997" citeas="[17]">Furukawa <em>et al.</em> 1997</eref>, <eref type="inline" bibitemid="Furukawa1982" citeas="[16]">Furukawa and Bigge 1982</eref>]. The cause is usually attributed to strains in the ice crystals and a high concentration of crystal defects due to the severe non-equilibrium conditions during the ice formation (see preparation of the ice mantle above). With time and on storage in the maintenance bath near the TPW temperature, the strains are relieved, the crystal defects are healed (this has also a visual confirmation in observing the disappearance of the cracks) and the crystal grains grow in size. The temperature depression effect is reduced to below <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>1 "unitsml(mK)"</asciimath></stem> for quickly frozen mantles (e.g. method 4) [<eref type="inline" bibitemid="Furukawa1997" citeas="[17]"><display-text>Furukawa <em>et al.</em> 1997</display-text></eref>, <eref type="inline" bibitemid="Furukawa1982" citeas="[16]"><display-text>Furukawa and Bigge 1982</display-text></eref>]. The cause is usually attributed to strains in the ice crystals and a high concentration of crystal defects due to the severe non-equilibrium conditions during the ice formation (see preparation of the ice mantle above). With time and on storage in the maintenance bath near the TPW temperature, the strains are relieved, the crystal defects are healed (this has also a visual confirmation in observing the disappearance of the cracks) and the crystal grains grow in size. The temperature depression effect is reduced to below <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>100</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>100 "unitsml(uK)"</asciimath></stem> over 2 or 3 days as the ice anneals, and after one week the effects are below <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>100 "unitsml(uK)"</asciimath></stem> over 2 or 3 days as the ice anneals, and after one week the effects are below <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>30</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>30 "unitsml(uK)"</asciimath></stem>. To achieve temperature stability and reproducibility at the level of <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>30 "unitsml(uK)"</asciimath></stem>. To achieve temperature stability and reproducibility at the level of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>10</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>10 "unitsml(uK)"</asciimath></stem> or so, it is necessary to allow the mantle to anneal for at least 10 days. The recovery of the equilibrium temperature with aging is attributed not only to strain relief but also to the growth of crystal size. The temperature of the ice-water interface on an ice crystal depends on the curvature of the surface of the ice crystal [<eref type="inline" bibitemid="McAllan1982" citeas="[31]">McAllan 1982</eref>]. When the crystals grow in size, the interfacial energy of the crystals decreases and the temperature increases [<eref type="inline" bibitemid="Furukawa1997" citeas="[17]">Furukawa <em>et al.</em> 1997</eref>, <eref type="inline" bibitemid="Mendez1997" citeas="[33]">Mendez-Lango 1997</eref>].</p>
+</math><asciimath>10 "unitsml(uK)"</asciimath></stem> or so, it is necessary to allow the mantle to anneal for at least 10 days. The recovery of the equilibrium temperature with aging is attributed not only to strain relief but also to the growth of crystal size. The temperature of the ice-water interface on an ice crystal depends on the curvature of the surface of the ice crystal [<eref type="inline" bibitemid="McAllan1982" citeas="[31]"><display-text>McAllan 1982</display-text></eref>]. When the crystals grow in size, the interfacial energy of the crystals decreases and the temperature increases [<eref type="inline" bibitemid="Furukawa1997" citeas="[17]"><display-text>Furukawa <em>et al.</em> 1997</display-text></eref>, <eref type="inline" bibitemid="Mendez1997" citeas="[33]"><display-text>Mendez-Lango 1997</display-text></eref>].</p>
 </clause>
 
-<clause id="_generation_of_the_defining_water_ice_interface_inner_melt" obligation="normative">
-<title>Generation of the defining water-ice interface (inner melt)</title>
-<p id="_6e901658-5d8a-c670-cc44-af5af43021bb">After forming the ice mantle, the TPW cell is stored in a maintenance bath, usually at a temperature which is a few <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<clause id="_a4b46fab-4897-e2b6-4ff2-b5eb966235fa" obligation="normative">
+<title id="_2788cfe5-93cb-f7f7-fc1c-5f11950d9de0">Generation of the defining water-ice interface (inner melt)</title>
+<p id="_a808c0ee-0929-7c5b-5854-49c1b27d8bcf">After forming the ice mantle, the TPW cell is stored in a maintenance bath, usually at a temperature which is a few <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>"unitsml(mK)"</asciimath></stem> below <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.01</mn>
-    <mstyle mathvariant="normal">
-      <mi>°C</mi>
-    </mstyle>
-  </mstyle>
-</math>
-<asciimath>0.01 "unitsml(degC)"</asciimath></stem>. Some laboratories prefer to set the maintenance bath at several <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
-  </mstyle>
-</math>
-<asciimath>"unitsml(mK)"</asciimath></stem> above <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>"unitsml(mK)"</asciimath></stem> below <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.01</mn>
-    <mstyle mathvariant="normal">
-      <mi>°C</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>0.01 "unitsml(degC)"</asciimath></stem>, to prevent solid bridging of the ice across the top surface. Before performing measurements, the cell must be stored in the maintenance bath for an amount of time appropriate to the level of accuracy required in the realization of the TPW temperature (see paragraph above).</p>
+</math><asciimath>0.01 "unitsml(degC)"</asciimath></stem>. Some laboratories prefer to set the maintenance bath at several <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>"unitsml(mK)"</asciimath></stem> above <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>0.01</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>0.01 "unitsml(degC)"</asciimath></stem>, to prevent solid bridging of the ice across the top surface. Before performing measurements, the cell must be stored in the maintenance bath for an amount of time appropriate to the level of accuracy required in the realization of the TPW temperature (see paragraph above).</p>
 
-<p id="_600a7b28-3aa6-1848-f558-bc94e217d806">The immersion of the TPW cell in the maintenance bath can be either complete (when the water level of the maintenance bath is above the opening of the thermometer well and the thermometer well is completely filled with bath water) or partial (when the water level of the maintenance bath is below the opening of the thermometer well, and in this case a different liquid, such as ethanol, can be used as thermal exchange between the thermometer and the cell).</p>
+<p id="_429363bd-3616-92ba-098d-b322c4bf77f7">The immersion of the TPW cell in the maintenance bath can be either complete (when the water level of the maintenance bath is above the opening of the thermometer well and the thermometer well is completely filled with bath water) or partial (when the water level of the maintenance bath is below the opening of the thermometer well, and in this case a different liquid, such as ethanol, can be used as thermal exchange between the thermometer and the cell).</p>
 
-<p id="_72ef23fe-1dae-6d4c-cd6d-81ababe6f911">Immediately before the measurement, a second ice-water interface must be formed by melting the ice adjacent to the well surface. This “inner melt” is usually made by inserting a glass rod at ambient temperature into the well for less than a minute. The ice mantle should then rotate freely around the well when a small rotational impulse is given to it.</p>
+<p id="_564cdf57-65fb-7dfa-21e1-a1f04ce49a98">Immediately before the measurement, a second ice-water interface must be formed by melting the ice adjacent to the well surface. This “inner melt” is usually made by inserting a glass rod at ambient temperature into the well for less than a minute. The ice mantle should then rotate freely around the well when a small rotational impulse is given to it.</p>
 
-<p id="_bdf57fdc-633d-de32-3b06-bfccad2c69c4">Sometimes the ice mantle sticks to the well very soon after it is initially melted free. This is probably due to freezing of the top of the inner liquid layer, caused by cooling resulting from heat transferred via the vapour to the cold glass, which can be at <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_505b6821-9d5d-5070-4cf8-a43a31d6f90e">Sometimes the ice mantle sticks to the well very soon after it is initially melted free. This is probably due to freezing of the top of the inner liquid layer, caused by cooling resulting from heat transferred via the vapour to the cold glass, which can be at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
-    <mstyle mathvariant="normal">
-      <mi>°C</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>0 "unitsml(degC)"</asciimath></stem> when maintained in a crushed-ice bath. Consequently, the inner melt should be re-generated on each occasion on which the cell is used and the free rotation of the ice mantle should be verified regularly during the course of the day.</p>
+</math><asciimath>0 "unitsml(degC)"</asciimath></stem> when maintained in a crushed-ice bath. Consequently, the inner melt should be re-generated on each occasion on which the cell is used and the free rotation of the ice mantle should be verified regularly during the course of the day.</p>
 
-<p id="_b9cf668c-8a57-0db6-6532-2aaf74e558b8">If the mantle is not rotating freely, the temperature realized by the cell can be lower than <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_eb0979d9-af37-603f-7dc6-848c1e71d821">If the mantle is not rotating freely, the temperature realized by the cell can be lower than <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.01</mn>
-    <mstyle mathvariant="normal">
-      <mi>°C</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>0.01 "unitsml(degC)"</asciimath></stem> by as much as <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>0.01 "unitsml(degC)"</asciimath></stem> by as much as <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.1</mn>
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>0.1 "unitsml(mK)"</asciimath></stem>. This is caused by the pressure build up in the frozen layer.</p>
+</math><asciimath>0.1 "unitsml(mK)"</asciimath></stem>. This is caused by the pressure build up in the frozen layer.</p>
 </clause>
 
-<clause id="_maintenance_and_lifetime_of_the_ice_mantle" obligation="normative">
-<title>Maintenance and lifetime of the ice mantle</title>
-<p id="_1f0d49a1-bfa2-4b63-ee33-04afa5784a27">A TPW cell can be stored in a maintenance bath at a temperature of <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>2</mn>
-  </mstyle>
-</math>
-<asciimath>2</asciimath></stem> or <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<clause id="_28a5b94c-cd3f-d8d4-63d8-81ed4d96b660" obligation="normative">
+<title id="_02237ab5-f5b3-cf13-5c2a-cb41034e0952">Maintenance and lifetime of the ice mantle</title>
+<p id="_f85f0839-24cd-d868-6eb2-bceceb743e35">A TPW cell can be stored in a maintenance bath at a temperature of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="false"><mn>2</mn></mstyle></math><asciimath>2</asciimath></stem> or <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>3</mn>
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>3 "unitsml(mK)"</asciimath></stem> below <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>3 "unitsml(mK)"</asciimath></stem> below <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.01</mn>
-    <mstyle mathvariant="normal">
-      <mi>°C</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>0.01 "unitsml(degC)"</asciimath></stem> for many weeks. During storage in the maintenance bath, ice will slowly form on the surface of the water in the cell as a result of heat transferred via the vapour to the cold glass. When a cell is not disturbed for several days, the ice will freeze completely across the top surface and must be melted back, for example by warming with the hands, before measurement. Care must be taken to warm the water as little as possible so as not to melt too much of the mantle.</p>
+</math><asciimath>0.01 "unitsml(degC)"</asciimath></stem> for many weeks. During storage in the maintenance bath, ice will slowly form on the surface of the water in the cell as a result of heat transferred via the vapour to the cold glass. When a cell is not disturbed for several days, the ice will freeze completely across the top surface and must be melted back, for example by warming with the hands, before measurement. Care must be taken to warm the water as little as possible so as not to melt too much of the mantle.</p>
 </clause>
 
-<clause id="_operating_conditions" obligation="normative">
-<title>Operating conditions</title>
-<p id="_308c0985-a9d4-d085-e654-e5cc337ec95a">A foam pad can be inserted into the bottom of the thermometer well to cushion the SPRT. It has been shown that the use of the foam pad is also effective in eliminating the effect of the “cold spot” at the point of contact between the ice and the bottom of the thermometer well produced by buoyancy forces on the ice mantle [<eref type="inline" bibitemid="Sakurai2005" citeas="[41]">Sakurai 2005</eref>, <eref type="inline" bibitemid="White2005" citeas="[48]">White and Dransfield 2005</eref>]. A metal or quartz bushing [<eref type="inline" bibitemid="Steur2008" citeas="[42]">Steur and de Dematteis 2008</eref>] can also be inserted to centralize the SPRT in the thermometer well and to enhance the thermal contact of the SPRT with the inner melt of the mantle.</p>
+<clause id="_0c568a65-906f-7385-b751-3d3483f4154b" obligation="normative">
+<title id="_1c18ac1e-a919-f575-e6ac-93738ff33e78">Operating conditions</title>
+<p id="_cf013bb9-0f9c-292d-6f51-25d100f83795">A foam pad can be inserted into the bottom of the thermometer well to cushion the SPRT. It has been shown that the use of the foam pad is also effective in eliminating the effect of the “cold spot” at the point of contact between the ice and the bottom of the thermometer well produced by buoyancy forces on the ice mantle [<eref type="inline" bibitemid="Sakurai2005" citeas="[41]"><display-text>Sakurai 2005</display-text></eref>, <eref type="inline" bibitemid="White2005" citeas="[48]"><display-text>White and Dransfield 2005</display-text></eref>]. A metal or quartz bushing [<eref type="inline" bibitemid="Steur2008" citeas="[42]"><display-text>Steur and de Dematteis 2008</display-text></eref>] can also be inserted to centralize the SPRT in the thermometer well and to enhance the thermal contact of the SPRT with the inner melt of the mantle.</p>
 
-<p id="_36db7279-25cb-5600-1417-150dfe5e2957">Before insertion in the thermometer well, the SPRT should be pre-cooled for at least 5 minutes in an ice bath to approximately <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_e2b93892-6154-da53-2438-35b89e32b7ec">Before insertion in the thermometer well, the SPRT should be pre-cooled for at least 5 minutes in an ice bath to approximately <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
-    <mstyle mathvariant="normal">
-      <mi>°C</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>0 "unitsml(degC)"</asciimath></stem>. When inserting the thermometer in the cell, care must be taken to avoid that ice particles stick to the thermometer and enter the well. Before measurements, a sufficient amount of time should be allowed for thermal equilibrium of the SPRT with the TPW cell. The equilibration time depends on the model of the SPRT and can vary from 15 minutes to one hour.</p>
+</math><asciimath>0 "unitsml(degC)"</asciimath></stem>. When inserting the thermometer in the cell, care must be taken to avoid that ice particles stick to the thermometer and enter the well. Before measurements, a sufficient amount of time should be allowed for thermal equilibrium of the SPRT with the TPW cell. The equilibration time depends on the model of the SPRT and can vary from 15 minutes to one hour.</p>
 
-<p id="_473934b3-c95f-e02f-6ae0-5b24ef8f5c84">In order to avoid light piping, a black cover can be laid on the maintenance bath around the SPRT.</p>
+<p id="_59593d5a-c6bb-28e7-0479-2cfd82837e76">In order to avoid light piping, a black cover can be laid on the maintenance bath around the SPRT.</p>
 </clause>
 </clause>
 
 
-</sections><bibliography><references id="_references" normative="false" obligation="informative">
-<title>References</title><bibitem id="Ancsin1982">
+</sections><bibliography><references id="_ba0e6bbc-c1e2-0270-dc99-c02c115fc225" normative="false" obligation="informative">
+<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="Ancsin1982" id="_b9994e61-7f3a-b6ea-327a-809678e4d11a">
   <formattedref format="application/x-isodoc+xml">Ancsin J (1982) “Melting curves of H<sub>2</sub>O”, <em>Temperature: Its Measurement and Control in Science and Industry</em>, Vol 5, ed. Schooley, J.F., American Institute ofPhysics, New York, pp. 281-284</formattedref>
   <docidentifier type="metanorma">[1]</docidentifier>
-</bibitem><bibitem id="ASTM2002">
+</bibitem><bibitem anchor="ASTM2002" id="_8f1ed9ac-1dda-2ecb-4463-be6599a1dad6">
   <formattedref format="application/x-isodoc+xml">ASTM (2002) “<em>Standard Guide for use of water triple point cells”,</em> E1750-02, American Society for Testing and Materials, West Conshohoken, P.A., USA</formattedref>
   <docidentifier type="metanorma">[2]</docidentifier>
-</bibitem><bibitem id="Ballico1999">
+</bibitem><bibitem anchor="Ballico1999" id="_6244f664-0784-4aa9-837a-31d4c56f582f">
   <formattedref format="application/x-isodoc+xml">Ballico M (1999) <em>Meas. Sci. Technol.</em> <strong>40</strong> L33-L36</formattedref>
   <docidentifier type="metanorma">[3]</docidentifier>
-</bibitem><bibitem id="Barber1954">
+</bibitem><bibitem anchor="Barber1954" id="_d86122d9-5db3-cc58-a199-8a0a87cac44c">
   <formattedref format="application/x-isodoc+xml">Barber C R, Handley R and Herington E F G (1954) “The Preparation and Use of Cells for the Realization of the Triple Point of Water”, <em>Brit. J. Appl. Phys.</em> <strong>5</strong> 1230-1248</formattedref>
   <docidentifier type="metanorma">[4]</docidentifier>
-</bibitem><bibitem id="BIPM2011">
-  <formattedref format="application/x-isodoc+xml">BIPM (2011) Bureau International des Poids et Mesures, Paris, <em>Mise en Pratique for the definition of the Kelvin</em>, <link target="http://www.bipm.org/utils/en/pdf/MeP_K.pdf"><link target="http://www.bipm.org/utils/en/pdf/MeP\_K.pdf"/></link></formattedref>
+</bibitem><bibitem anchor="BIPM2011" id="_eec1167a-c163-5470-e0fb-ee6e38071bef">
+  <formattedref format="application/x-isodoc+xml">BIPM (2011) Bureau International des Poids et Mesures, Paris, <em>Mise en Pratique for the definition of the Kelvin</em>, <link target="http://www.bipm.org/utils/en/pdf/MeP_K.pdf">http://www.bipm.org/utils/en/pdf/MeP\_K.pdf</link></formattedref>
   <docidentifier type="metanorma">[5]</docidentifier>
-</bibitem><bibitem id="Bowen2003">
-  <formattedref format="application/x-isodoc+xml">Bowen G J and Revenaugh J (2003) “Interpolating the isotopic composition of modern meteoric precipitation”, in <em>Water Resources Research,</em> <strong>39</strong>, 10. See also the on-line isotope in precipitation calculator (OIPC) at <link target="http://wateriso.utah.edu/waterisotopes/index.html"><link target="http://wateriso.utah.edu/waterisotopes/index.html"/></link></formattedref>
+</bibitem><bibitem anchor="Bowen2003" id="_7fd56ad3-d54d-347a-b560-3b9ec9d23138">
+  <formattedref format="application/x-isodoc+xml">Bowen G J and Revenaugh J (2003) “Interpolating the isotopic composition of modern meteoric precipitation”, in <em>Water Resources Research,</em> <strong>39</strong>, 10. See also the on-line isotope in precipitation calculator (OIPC) at <link target="http://wateriso.utah.edu/waterisotopes/index.html">http://wateriso.utah.edu/waterisotopes/index.html</link></formattedref>
   <docidentifier type="metanorma">[6]</docidentifier>
-</bibitem><bibitem id="Brill1957">
+</bibitem><bibitem anchor="Brill1957" id="_35accd4f-afb1-cc77-e77d-5c56740721cd">
   <formattedref format="application/x-isodoc+xml">Brill R (1957) <em>SIPRE Rep.</em> <strong>33</strong> 67</formattedref>
   <docidentifier type="metanorma">[7]</docidentifier>
-</bibitem><bibitem id="Cox1982">
+</bibitem><bibitem anchor="Cox1982" id="_a92c178c-8307-f301-d7ba-60e374223074">
   <formattedref format="application/x-isodoc+xml">Cox J D and Vaughan M F (1982) “Temperature fixed points: Evaluation of four types of triple-point cells”, <em>Temperature: Its Measurement and Control in Science and Industry,</em> vol. 5, part 1, ed. by Schooley J.F., AIP, New York, pp. 267-280</formattedref>
   <docidentifier type="metanorma">[8]</docidentifier>
-</bibitem><bibitem id="Craig1961">
+</bibitem><bibitem anchor="Craig1961" id="_aed885fc-8081-89e5-6737-7e133e57f340">
   <formattedref format="application/x-isodoc+xml">Craig H (1961) “Isotope variation in meteoric waters”, <em>Science</em> <strong>133</strong> 1702-1703</formattedref>
   <docidentifier type="metanorma">[9]</docidentifier>
-</bibitem><bibitem id="De2002">
+</bibitem><bibitem anchor="De2002" id="_a5bd76dc-3ce6-2fd8-a9df-cffaecc2e826">
   <formattedref format="application/x-isodoc+xml">De Groot M J, Lacroes N and Dubbeldam J F (2002) “On the Production of Water Triple Point Cells”, <em>Proc. TEMPMEKO 2001,</em> vol. 1, ed. by Fellmuth B, Seidel J, Scholz G, VDE Verlag GmbH, ISBN 3-8007-2676-9, Berlin, pp. 221-226</formattedref>
   <docidentifier type="metanorma">[10]</docidentifier>
-</bibitem><bibitem id="De2003">
+</bibitem><bibitem anchor="De2003" id="_504f76cf-1d51-6efd-f9bc-4584e37b13a2">
   <formattedref format="application/x-isodoc+xml">De Laeter J.R., Böhlke J.K., De Bièvre P., Hidaka H., Peiser H.S., Rosman K.J.R., Taylor P.D.P. (2003) <em>Pure Appl. Chem.</em> <strong>75</strong> 683-800.</formattedref>
   <docidentifier type="metanorma">[11]</docidentifier>
-</bibitem><bibitem id="Evans1969">
+</bibitem><bibitem anchor="Evans1969" id="_108d9ac6-3f39-4a95-963f-21d4dc372ab5">
   <formattedref format="application/x-isodoc+xml">Evans J P and Sweger D M (1969) <em>Rev. Sci. Instrum.</em> <strong>40</strong> 376-377</formattedref>
   <docidentifier type="metanorma">[12]</docidentifier>
-</bibitem><bibitem id="Faghihi2015a">
+</bibitem><bibitem anchor="Faghihi2015a" id="_b5511d63-9ef0-e0df-cfe3-080d2950ff26">
   <formattedref format="application/x-isodoc+xml">Faghihi V., Peruzzi A., Aerts-Bijma A.T., Jansen H.G., Spriensma J.J., van Geel J. and Meijer H.A.J. (2015a) “Accurate experimental determination of the isotope effects on the triple point temperature of water. I. Dependence on the <sup>2</sup>H abundance”, <em>Metrologia</em> <strong>52</strong> 819-826</formattedref>
   <docidentifier type="metanorma">[13]</docidentifier>
-</bibitem><bibitem id="Faghihi2015b">
+</bibitem><bibitem anchor="Faghihi2015b" id="_e050da7b-764b-b774-3862-cad759244777">
   <formattedref format="application/x-isodoc+xml">Faghihi V., Peruzzi A., Aerts-Bijma A.T., Jansen H.G., Spriensma J.J., van Geel J. and Meijer H.A.J. (2015b) “Accurate experimental determination of the isotope effects on the triple point temperature of water. II. Dependence on the <sup>18</sup>O and <sup>17</sup>O abundances”, <em>Metrologia</em> <strong>52</strong> 827-834</formattedref>
   <docidentifier type="metanorma">[14]</docidentifier>
-</bibitem><bibitem id="Ferrick2002">
+</bibitem><bibitem anchor="Ferrick2002" id="_55e4855a-1f28-f86c-b370-c07998b8c234">
   <formattedref format="application/x-isodoc+xml">Ferrick M G, Calkins D J, Perron N M, Cragin, J H and Kendall C (2002) “Diffusion model validation and interpretation of stable isotopes in river and lake ice”, <em>Hydrol. Process</em> <strong>16</strong> 851-872</formattedref>
   <docidentifier type="metanorma">[15]</docidentifier>
-</bibitem><bibitem id="Furukawa1982">
+</bibitem><bibitem anchor="Furukawa1982" id="_1735d816-30da-7602-f588-9b8b88f870d2">
   <formattedref format="application/x-isodoc+xml">Furukawa G T and Bigge W R (1982) “Reproducibility of some triple point of water cells”, <em>Temperature: Its Measurement and Control in Science and Industry</em>, Vol 5, ed. Schooley, J.F., American Institute of Physics, New York, pp. 291-297</formattedref>
   <docidentifier type="metanorma">[16]</docidentifier>
-</bibitem><bibitem id="Furukawa1997">
+</bibitem><bibitem anchor="Furukawa1997" id="_4bed1445-a6b1-0463-952a-436cc83ceb5b">
   <formattedref format="application/x-isodoc+xml">Furukawa G T, Mangum B W and Strouse G F (1997) “Effects of different methods of preparation of ice mantles of triple point of water cells on the temporal behaviour of the triple-point temperatures”, <em>Metrologia</em> <strong>34</strong> 215-233</formattedref>
   <docidentifier type="metanorma">[17]</docidentifier>
-</bibitem><bibitem id="Gonfiantini1978">
+</bibitem><bibitem anchor="Gonfiantini1978" id="_a9d45f6b-cf55-af24-d277-d6717ffbbb11">
   <formattedref format="application/x-isodoc+xml">Gonfiantini R (1978) <em>Nature</em> <strong>271</strong> 534-536</formattedref>
   <docidentifier type="metanorma">[18]</docidentifier>
-</bibitem><bibitem id="Gonfiantini1984">
+</bibitem><bibitem anchor="Gonfiantini1984" id="_696343ed-427a-404a-e15e-6fc3bf8cb27b">
   <formattedref format="application/x-isodoc+xml">Gonfiantini R (1984) Report on an advisory group meeting on stable isotope reference samples for geochemical and hydrochemical investigations, <em>IAEA Report to the Director General</em>.</formattedref>
   <docidentifier type="metanorma">[19]</docidentifier>
-</bibitem><bibitem id="Granicher1963">
+</bibitem><bibitem anchor="Granicher1963" id="_81746d04-aa8f-bf2d-4074-4a94e7607f96">
   <formattedref format="application/x-isodoc+xml">Granicher H (1963) <em>Helv. Phys. Acta</em> <strong>28</strong> 300</formattedref>
   <docidentifier type="metanorma">[20]</docidentifier>
-</bibitem><bibitem id="Gross1967">
+</bibitem><bibitem anchor="Gross1967" id="_5bc3dac6-63f0-7687-216b-4692a699e222">
   <formattedref format="application/x-isodoc+xml">Gross G W (1967) <em>J. Colloid Interface Sci.</em> <strong>25</strong> 270</formattedref>
   <docidentifier type="metanorma">[21]</docidentifier>
-</bibitem><bibitem id="Hill1999">
+</bibitem><bibitem anchor="Hill1999" id="_602ba5a3-57a3-843b-700f-75b0164f5119">
   <formattedref format="application/x-isodoc+xml">Hill K D (1999) “Triple point of water cells and the solubility of borosilicate glass”, <em>Proc. TEMPMEKO’99</em>, ed. J.F. Dubbeldam, M.J. de Groot, IMEKO / NMi VanSwinden Laboratorium, Delft, 68-73</formattedref>
   <docidentifier type="metanorma">[22]</docidentifier>
-</bibitem><bibitem id="Hill2001">
+</bibitem><bibitem anchor="Hill2001" id="_0cdb4621-f981-87e4-9c84-17de0ee527ff">
   <formattedref format="application/x-isodoc+xml">Hill K D (2001) “Is there a long-term drift in triple point of water cells?”, <em>Metrologia</em> <strong>38</strong>. 79-82</formattedref>
   <docidentifier type="metanorma">[23]</docidentifier>
-</bibitem><bibitem id="Jaccard1963">
+</bibitem><bibitem anchor="Jaccard1963" id="_abcf9b47-d130-2ae6-5f1e-0847066507db">
   <formattedref format="application/x-isodoc+xml">Jaccard C (1963) <em>Helv. Phys. Acta</em> <strong>32</strong> 89</formattedref>
   <docidentifier type="metanorma">[24]</docidentifier>
-</bibitem><bibitem id="Jaccard1961">
+</bibitem><bibitem anchor="Jaccard1961" id="_43f910b1-0d36-3220-00b7-8a6161814e7d">
   <formattedref format="application/x-isodoc+xml">Jaccard C and Levi L (1961) <em>Z. Angew. Math. Phys.</em> <strong>12</strong> 70</formattedref>
   <docidentifier type="metanorma">[25]</docidentifier>
-</bibitem><bibitem id="Levi1961">
+</bibitem><bibitem anchor="Levi1961" id="_a7228c0c-3b19-e9ae-636c-e0ef1a17e016">
   <formattedref format="application/x-isodoc+xml">Levi L and Lubart, L (1961) <em>J. Chem. Phys.</em> <strong>58</strong> 836</formattedref>
   <docidentifier type="metanorma">[26]</docidentifier>
-</bibitem><bibitem id="Li1988">
+</bibitem><bibitem anchor="Li1988" id="_91d411f5-d822-1494-f0b8-3460cedb0b65">
   <formattedref format="application/x-isodoc+xml">Li W.J., Ni B.L., Jin D.Q., Chang T.L. (1988) <em>Kexue Tongbao</em> (Chinese Science Bulletin) <strong>33</strong> 1610-1613</formattedref>
   <docidentifier type="metanorma">[27]</docidentifier>
-</bibitem><bibitem id="Li1999">
+</bibitem><bibitem anchor="Li1999" id="_e8bbb8b8-98f2-f237-99a0-2594fc61aee6">
   <formattedref format="application/x-isodoc+xml">Li X and Hirst M (1999) “Fixed points for secondary level calibrations”, <em>Proc. TEMPMEKO’99</em>, ed. J.F. Dubbeldam, M.J. de Groot, IMEKO / NMi VanSwinden Laboratorium, Delft, pp. 74-79</formattedref>
   <docidentifier type="metanorma">[28]</docidentifier>
-</bibitem><bibitem id="Li2001">
+</bibitem><bibitem anchor="Li2001" id="_86098094-57a8-fe69-5030-70db45eea4ef">
   <formattedref format="application/x-isodoc+xml">Li X, Chen D and Zhao M (2001) in <em>Proceedings of 2001 NCSL International Workshop and Symposium,</em> Washington DC, pp. 478-486</formattedref>
   <docidentifier type="metanorma">[29]</docidentifier>
-</bibitem><bibitem id="Lliboutry1964">
+</bibitem><bibitem anchor="Lliboutry1964" id="_6026ad43-4dba-263c-5cfa-2acaa16d8dba">
   <formattedref format="application/x-isodoc+xml">Lliboutry L (1964) in “<em>Traité de Glaciologie</em>”, Masson &amp; Cie éditeurs, Paris, Vol. 1, Chapter 1</formattedref>
   <docidentifier type="metanorma">[30]</docidentifier>
-</bibitem><bibitem id="McAllan1982">
+</bibitem><bibitem anchor="McAllan1982" id="_288fd21d-5020-2e87-1cca-5bbe9b3ae57f">
   <formattedref format="application/x-isodoc+xml">McAllan J V (1982) “The effect of pressure on the water triple point temperature”, <em>Temperature: Its Measurement and Control in Science and Industry</em>, Vol 5, ed. Schooley, J.F., American Institute of Physics, New York, pp. 285-290</formattedref>
   <docidentifier type="metanorma">[31]</docidentifier>
-</bibitem><bibitem id="Meijer1998">
+</bibitem><bibitem anchor="Meijer1998" id="_5acc5b3d-e7dd-7e1e-92b3-ffa72bf13c93">
   <formattedref format="application/x-isodoc+xml">Meijer H A and Li W J (1998) <em>Isotopes Environ. Health Study</em> <strong>34</strong> 349-369</formattedref>
   <docidentifier type="metanorma">[32]</docidentifier>
-</bibitem><bibitem id="Mendez1997">
+</bibitem><bibitem anchor="Mendez1997" id="_53157d6c-e242-ac75-d6dc-104c72558aa1">
   <formattedref format="application/x-isodoc+xml">Mendez-Lango E (1997) “Effect of crystal size, form and stability on the triple point of water”, <em>Proc. TEMPMEKO 1996</em>, ed. by Marcarino, P., Levrotto &amp; Bella, Torino, pp. 57-62</formattedref>
   <docidentifier type="metanorma">[33]</docidentifier>
-</bibitem><bibitem id="Mendez2002">
+</bibitem><bibitem anchor="Mendez2002" id="_351e9268-3801-7630-821d-324ba63faa46">
   <formattedref format="application/x-isodoc+xml">Mendez-Lango E (2002) “A non-destructive method to evaluate the impurity content in triple point of water cells”, <em>Proc. of TEMPMEKO2001,</em> ed. by Fellmuth, B., Seidel, J., Scholz, G., VDE Verlag GmbH, ISBN 3-8007-2676-9, Berlin, pp. 465-470</formattedref>
   <docidentifier type="metanorma">[34]</docidentifier>
-</bibitem><bibitem id="Nguyen2007">
+</bibitem><bibitem anchor="Nguyen2007" id="_1f19abf0-2fc4-09c8-1d47-e1bc442b7b38">
   <formattedref format="application/x-isodoc+xml">Nguyen K and Ballico M (2007) “Comparison of 5 Isotope Corrected water-triple-point cells with the NMIA-2002 WTP ensemble”, <em>Proc. TEMPMEKO 2007, Int. J. Thermophys.</em> <strong>28</strong> 1761-1771</formattedref>
   <docidentifier type="metanorma">[35]</docidentifier>
-</bibitem><bibitem id="Nicholas1997">
+</bibitem><bibitem anchor="Nicholas1997" id="_e2b1a640-fac8-484a-29cd-cef20e9f1966">
   <formattedref format="application/x-isodoc+xml">Nicholas J V, White D R, and Dransfield T D (1997) “Isotope influences on the triple point of water and the definition of the kelvin”, <em>Proc. TEMPMEKO 1996</em>, ed. by Marcarino, P., Levrotto &amp; Bella, Torino, 9-12</formattedref>
   <docidentifier type="metanorma">[36]</docidentifier>
-</bibitem><bibitem id="Peruzzi2007">
+</bibitem><bibitem anchor="Peruzzi2007" id="_828dab80-e93f-1b29-ef0c-fdb28270a7dc">
   <formattedref format="application/x-isodoc+xml">Peruzzi A, Kerkhof O, and De Groot M J (2007) “Isotope and impurity content in water triple-point cells manufactured at NMI VSL”, <em>Proc. TEMPMEKO 2007, Int. J. Thermophys.</em> <strong>28</strong> 1931-1940</formattedref>
   <docidentifier type="metanorma">[37]</docidentifier>
-</bibitem><bibitem id="Peruzzi2009">
+</bibitem><bibitem anchor="Peruzzi2009" id="_1e47f0ac-10b6-b555-40ab-0c2c98e5b00f">
   <formattedref format="application/x-isodoc+xml">Peruzzi A, Bosma R, Kerkhof O, Rosenkranz P, del Campo Maldonado M D, Strnad R, Nielsen J, Anagnostou M, Veliki T, Zvizdic D, Grudnewicz E, Nedea M, Neagu D M, Steur P P M, Filipe E, Lobo I, Antonsen I, Renao E, Heinonen M, Weckstrom T, Bojkovski J, Turzo-Adras E, Nemeth S, White M, Tegeler E, Dobre M, Duri S, Kartal Dogan A, Uytun A, Augevicius V, Pauzha A, Pokhodun A and Simic S (2009) “EURAMET.T-K7 Key Comparison of Water Triple Point Cells”, <em>Metrologia</em> <strong>46</strong> 03001</formattedref>
   <docidentifier type="metanorma">[38]</docidentifier>
-</bibitem><bibitem id="Renaot2005">
+</bibitem><bibitem anchor="Renaot2005" id="_e6e5171f-ebc6-17dc-5c74-240fce7419ae">
   <formattedref format="application/x-isodoc+xml">Renaot E, Valin M H, Bonnier G, Whit M, van der Linden A, Bairy G, Kovacs T, Nemeth S, Bojkovski J, Kuna R, Weckstrom T, Ivarsson J, Rauta C, Helgesen F, Uytun A, Ugur S, Kryl J, Adunka F, Ranostaj J and Duris S. (2005) “Comparison of realizations of the triple point of water (EUROMET Project No 549)”, <em>Proc. TEMPMEKO 2004,</em> ed. by Zvizdic, D., Laboratory for Process Measurement,Faculty of mechanical Engineering and Naval Architecture, Zagreb, pp. 1009-1015</formattedref>
   <docidentifier type="metanorma">[39]</docidentifier>
-</bibitem><bibitem id="Ripple2005">
+</bibitem><bibitem anchor="Ripple2005" id="_6473a5dc-36d8-329a-810e-a197df9db046">
   <formattedref format="application/x-isodoc+xml">Ripple D C, Gam K S, Hermier Y, Hill K, Rusby R, Steele A, Steur P P M, Stock M, Strouse G F and White D R (2005) “Summary of Facts Relating to Isotopic Effects and the Triple Point of Water”, Report of the BIPM CCT ad hoc Task Group on the Triple Point of Water, Document CCT/05-07</formattedref>
   <docidentifier type="metanorma">[40]</docidentifier>
-</bibitem><bibitem id="Sakurai2005">
+</bibitem><bibitem anchor="Sakurai2005" id="_9faa261e-4ed3-5729-975d-61d1df0230f1">
   <formattedref format="application/x-isodoc+xml">Sakurai H (2005) “Hydrostatic Pressure Correction Coefficient of the Triple Point of Water”, Document CCT/05-11 <link target="http://www.bipm.org/cc/CCT/Allowed/23/CCT\_05\_11.pdf"/></formattedref>
   <docidentifier type="metanorma">[41]</docidentifier>
-</bibitem><bibitem id="Steur2008">
+</bibitem><bibitem anchor="Steur2008" id="_307ec2d0-a8fa-4ef9-0b1b-2488bd7c6b7e">
   <formattedref format="application/x-isodoc+xml">Steur P P M and de Dematteis R (2008) <em>Metrologia</em> <strong>45</strong> 529-533</formattedref>
   <docidentifier type="metanorma">[42]</docidentifier>
-</bibitem><bibitem id="Stock2006">
+</bibitem><bibitem anchor="Stock2006" id="_bf89746e-0ec3-dc16-221e-1611b7b5c924">
   <formattedref format="application/x-isodoc+xml">Stock M, Solve S, del Campo D, Chimenti V, E Méndez-Lango, Liedberg H, Steur P P M, Marcarino P, Dematteis , Filipe E, Lobo I, Kang K H, Gam K S, Kim Y-G, Renaot E, Bonnier G, Valin M, White R, Dransfield T D, Duan Y, Xiaoke Y, Strouse G, Ballico M, Sukkar D, Arai M, Mans A, de Groot M, Kerkhof O, Rusby R, Gray J, Head D, Hill K, Tegeler E, Noatsch U, Duris S , Kho H Y, Ugur S, Pokhodun A and Gerasimov S F (2006) “CCT-K7: Key comparison of water triple point cells Report B”, <em>Metrologia</em> <strong>43</strong> 03001</formattedref>
   <docidentifier type="metanorma">[43]</docidentifier>
-</bibitem><bibitem id="Strouse2007">
+</bibitem><bibitem anchor="Strouse2007" id="_6f6027b1-f4f9-75f4-fe0c-542a4e044180">
   <formattedref format="application/x-isodoc+xml">Strouse G F and Zhao M (2007) “The impact of isotopic concentration, impurities and cell aging on the water triple point temperature”, <em>Proc. TEMPMEKO 2007, Int. J. Thermophys.</em> <strong>28</strong> 1913-1922</formattedref>
   <docidentifier type="metanorma">[44]</docidentifier>
-</bibitem><bibitem id="Tavener2006">
+</bibitem><bibitem anchor="Tavener2006" id="_40f69fea-dd14-70e2-13a7-f997583597ee">
   <formattedref format="application/x-isodoc+xml">Tavener, J P (2006) Private communication with White, D.R.</formattedref>
   <docidentifier type="metanorma">[45]</docidentifier>
-</bibitem><bibitem id="Tavener2007">
-  <formattedref format="application/x-isodoc+xml">Tavener J P (2007) “The establishment of ITS-90 water triple point references to <stem type="MathML" block="false"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</bibitem><bibitem anchor="Tavener2007" id="_e2eb6201-0082-0c85-1e58-90fba0420445">
+  <formattedref format="application/x-isodoc+xml">Tavener J P (2007) “The establishment of ITS-90 water triple point references to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mo>±</mo>
     <mn>2</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
   </mstyle>
-</math>
-<asciimath>+- 2 "unitsml(uK)"</asciimath></stem>, and the assessment of 100 water triple point cells made between 2001 and 2006”, <link target="http://www.isotech.co.uk/files/document_library_file-9.pdf">Talk presented at_TEMPMEKO 2007</link></formattedref>
+</math><asciimath>+- 2 "unitsml(uK)"</asciimath></stem>, and the assessment of 100 water triple point cells made between 2001 and 2006”, <link target="http://www.isotech.co.uk/files/document_library_file-9.pdf">Talk presented at_TEMPMEKO 2007</link></formattedref>
   <docidentifier type="metanorma">[46]</docidentifier>
-</bibitem><bibitem id="Uytun2003">
+</bibitem><bibitem anchor="Uytun2003" id="_c2ea52ef-94a4-be6d-685d-34e3f45591d2">
   <formattedref format="application/x-isodoc+xml">Uytun A, Kartal-Dogan A and Ugur S (2003) “Construction and Characterization of the UME Water Triple Point Cells”, XVII IMEKO World Congress, Dubrovnik, Croatia, June pp. 22-28</formattedref>
   <docidentifier type="metanorma">[47]</docidentifier>
-</bibitem><bibitem id="White2005">
+</bibitem><bibitem anchor="White2005" id="_23062d5a-c1c6-e3b0-f7b7-9368bea1e696">
   <formattedref format="application/x-isodoc+xml">White D R, and Dransfield T (2005) “Buoyancy effects on the temperature realized by triple-point-of-water cells”, in <em>Proc. TEMPMEKO 2004,</em> ed. by Zvizdic, D., Laboratory for Process Measurement, Faculty of mechanical Engineering and Naval Architecture, Zagreb, pp. 313-318</formattedref>
   <docidentifier type="metanorma">[48]</docidentifier>
-</bibitem><bibitem id="White2005-2">
+</bibitem><bibitem anchor="White2005-2" id="_dd61f280-605e-849e-8f9c-c3156c9caae9">
   <formattedref format="application/x-isodoc+xml">White D R, Downes C J, Dransfield T D and Mason R S (2005) “Dissolved glass in triple-point-of-water cells”, <em>Proc. TEMPMEKO 2004,</em> ed. by Zvizdic, D., Laboratory for Process Measurement, Faculty of mechanical Engineering and Naval Architecture, Zagreb, pp. 251-256</formattedref>
   <docidentifier type="metanorma">[49]</docidentifier>
-</bibitem><bibitem id="White2010">
+</bibitem><bibitem anchor="White2010" id="_86273a22-b443-df09-8f97-ceb0f64df0fd">
   <formattedref format="application/x-isodoc+xml">White D R and Tew W L (2010) “Improved Estimates of the Isotopic Correction Constants for the Triple Point of Water”, <em>Int. J. Thermophys.</em> <strong>31</strong> 1644-1653</formattedref>
   <docidentifier type="metanorma">[50]</docidentifier>
-</bibitem><bibitem id="Workman1950">
+</bibitem><bibitem anchor="Workman1950" id="_1009d15b-0e69-d2bb-a103-a4b26ae37ec0">
   <formattedref format="application/x-isodoc+xml">Workman E J and Reynolds S E (1950) <em>Phys. Rev.</em> <strong>78</strong> 254</formattedref>
   <docidentifier type="metanorma">[51]</docidentifier>
-</bibitem><bibitem id="Ya2005">
+</bibitem><bibitem anchor="Ya2005" id="_af9e3b8d-f9da-f94b-c986-dbb5676c9a5b">
   <formattedref format="application/x-isodoc+xml">Ya X, Qiu P, Wang Y, Wu H, Feng Y and Zhang J (2005) “NIM Development of Triple Point of Water Cells of High Quality”, <em>Proc. TEMPMEKO 2004,</em> ed. by Zvizdic, D., Laboratory for Process Measurement, Faculty of mechanical Engineering and Naval Architecture, Zagreb, pp. 283-288.</formattedref>
   <docidentifier type="metanorma">[52]</docidentifier>
-</bibitem><bibitem id="Zaromb1956">
+</bibitem><bibitem anchor="Zaromb1956" id="_c1f9f954-d3ac-04ed-1333-d60ab4b58a82">
   <formattedref format="application/x-isodoc+xml">Zaromb S and Brill R (1956) <em>J</em>. <em>Chem. Phys.</em> <strong>24</strong> 895</formattedref>
   <docidentifier type="metanorma">[53]</docidentifier>
-</bibitem><bibitem id="Zhao2005">
+</bibitem><bibitem anchor="Zhao2005" id="_63e80eff-14a3-f9d6-bc74-30d5ca804fe8">
   <formattedref format="application/x-isodoc+xml">Zhao M and Walker R (2005) in <em>Proceedings of 2001 NCSL International Workshop and Symposium,</em> Washington DC, pp. 506-513</formattedref>
   <docidentifier type="metanorma">[54]</docidentifier>
-</bibitem><bibitem id="Zief1972">
+</bibitem><bibitem anchor="Zief1972" id="_b146e59d-a9f4-10ca-914a-b7d49c0a5029">
   <formattedref format="application/x-isodoc+xml">Zief,M and Speights R (1972) in “<em>Ultra-Purity Methods and Techniques</em>”, Marcel Decker, New York, pp. 173-191</formattedref>
   <docidentifier type="metanorma">[55]</docidentifier>
 </bibitem>
@@ -1595,4 +2009,4 @@ FRANCE</p>
 
 
 </references></bibliography>
-</bipm-standard>
+</metanorma>

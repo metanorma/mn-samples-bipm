@@ -24,7 +24,8 @@ figure, figcaption, footer, header, hgroup,
 menu, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -40,7 +41,8 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   border: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -55,7 +57,8 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 html, body, div, span, applet, object, iframe,
 p, blockquote,
@@ -70,87 +73,115 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 code, pre, tt, kbd, samp {
   font-family: "Space Mono",monospace;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 code *, pre *, tt *, kbd *, samp * {
   font-family: "Space Mono",monospace !important;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 p code, dt code, li code, label code, legend code, caption code, th code, td code,
 p tt, dt tt, li tt, label tt, legend tt, caption tt, th tt, td tt,
 p kbd, dt kbd, li kbd, label kbd, legend kbd, caption kbd, th kbd, td kbd,
 p samp, dt samp, li samp, label samp, legend samp, caption samp, th samp, td samp {
-  font-size: ; }
+  font-size: ;
+}
+
+sub, sup {
+  font-size: 0.75em;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 blockquote, q {
-  quotes: none; }
-  blockquote::before, blockquote::after, q::before, q::after {
-    content: '';
-    content: none; }
+  quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+  content: "";
+  content: none;
+}
 
 .h2Annex {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 dl {
   display: grid;
-  grid-template-columns: max-content auto; }
-  dl dt p, dl dd p {
-    margin-top: 0; }
-  dl dt {
-    grid-column-start: 1; }
-  dl dd {
-    grid-column-start: 2; }
+  grid-template-columns: max-content auto;
+}
+dl dt p, dl dd p {
+  margin-top: 0;
+}
+dl dt {
+  grid-column-start: 1;
+}
+dl dd {
+  grid-column-start: 2;
+}
 
 b, strong {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 div.document-stage-band, div.document-type-band {
-  background-color: #333333; }
+  background-color: #333333;
+}
 
 a.FootnoteRef + a.FootnoteRef::before {
   content: ", ";
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 a.TableFootnoteRef + a.TableFootnoteRef::before {
   content: ", ";
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 a.TableFootnoteRef, span.TableFootnoteRef,
 a.FootnoteRef, span.FootnoteRef {
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 .addition {
-  color: blue; }
+  color: blue;
+}
 
 .deletion {
   color: red;
-  text-decoration: line-through; }
+  text-decoration: line-through;
+}
 
 ruby {
   ruby-position: over;
-  -webkit-ruby-position: before; }
+  -webkit-ruby-position: before;
+}
 
 ruby ruby {
   ruby-position: under;
-  -webkit-ruby-position: after; }
+  -webkit-ruby-position: after;
+}
 
 /* code highlighting with line numbers */
 table.rouge-line-table td.rouge-gutter {
@@ -158,13 +189,15 @@ table.rouge-line-table td.rouge-gutter {
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  padding-right: 1em; }
+  padding-right: 1em;
+}
 
 table.rouge-line-table td.rouge-code {
   -moz-user-select: all;
   -ms-user-select: all;
   -webkit-user-select: all;
-  user-select: all; }
+  user-select: all;
+}
 
 table.rouge-line-table,
 table.rouge-line-table th,
@@ -173,103 +206,268 @@ table.rouge-line-table td {
   border: none;
   margin: 0;
   padding: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 table.rouge-line-table pre {
   margin: 0;
   padding: 0;
   overflow-x: visible;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
-#brochure-band {
-  background-color: #0AC442; }
+/* header § links */
+a.header {
+  color: inherit;
+  text-decoration: none;
+}
 
-#brochure {
-  border-bottom: solid 3px #0AC442; }
+a.header:hover {
+  color: #a53221 !important;
+  background: inherit;
+  box-shadow: none;
+}
 
-#mise-en-pratique-band {
-  background-color: #540D6E; }
+a.header:visited {
+  color: inherit;
+  text-decoration: none;
+}
 
-#mise-en-pratique {
-  border-bottom: solid 3px #540D6E; }
+a.anchor {
+  position: absolute;
+  z-index: 1001;
+  width: 1.5ex;
+  margin-left: -1.5ex;
+  display: block;
+  text-decoration: none !important;
+  visibility: hidden;
+  text-align: center;
+  font-weight: 400;
+}
 
-#rapport-band {
-  background-color: #D183C9; }
+a.anchor::before {
+  content: "§";
+  font-size: 0.85em;
+  display: block;
+  padding-top: 0.1em;
+}
 
-#rapport {
-  border-bottom: solid 3px #D183C9; }
+a.anchor:hover {
+  color: #a53221;
+  background: inherit;
+  box-shadow: none;
+}
 
-#monographie-band {
-  background-color: #65AFFF; }
+h1 > a.anchor:hover,
+h2 > a.anchor:hover,
+h3 > a.anchor:hover,
+h4 > a.anchor:hover,
+h5 > a.anchor:hover,
+h6 > a.anchor:hover,
+.inline-header > a.anchor:hover,
+h1:hover > a.anchor,
+h2:hover > a.anchor,
+h3:hover > a.anchor,
+h4:hover > a.anchor,
+h5:hover > a.anchor,
+h6:hover > a.anchor,
+.inline-header:hover > a.anchor {
+  visibility: visible;
+}
 
-#monographie {
-  border-bottom: solid 3px #65AFFF; }
+/* collapsible snippets: collapsible before hidable */
+.hidable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 3px 0;
+  margin: 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: "▼";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.active:after {
+  content: "▲";
+}
+
+/* collapsible: */
+.collapsible + .hidable {
+  margin-top: 0;
+}
+
+.collapsible:not(.active) + .hidable {
+  overflow: hidden;
+  padding: 0;
+}
+
+.svg-container {
+  width: 100%; /* or any desired width */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+svg {
+  width: 100%;
+  height: auto; /* ← key to maintaining aspect ratio */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+#standard-band {
+  background-color: #0AC442;
+}
+
+#standard {
+  border-bottom: solid 3px #0AC442;
+}
+
+#directive-band {
+  background-color: #540D6E;
+}
+
+#directive {
+  border-bottom: solid 3px #540D6E;
+}
 
 #guide-band {
-  background-color: #3A405A; }
+  background-color: #D183C9;
+}
 
 #guide {
-  border-bottom: solid 3px #3A405A; }
+  border-bottom: solid 3px #D183C9;
+}
 
-#meeting-report-band {
-  background-color: #F26430; }
+#specification-band {
+  background-color: #65AFFF;
+}
 
-#meeting-report {
-  border-bottom: solid 3px #F26430; }
+#specification {
+  border-bottom: solid 3px #65AFFF;
+}
 
-#technical-report-band {
-  background-color: #C84630; }
+#report-band {
+  background-color: #3A405A;
+}
 
-#technical-report {
-  border-bottom: solid 3px #C84630; }
+#report {
+  border-bottom: solid 3px #3A405A;
+}
 
-#working-part-note-band {
-  background-color: #BFAE48; }
+#amendment-band {
+  background-color: #F26430;
+}
 
-#working-part-note {
-  border-bottom: solid 3px #BFAE48; }
+#amendment {
+  border-bottom: solid 3px #F26430;
+}
 
-#strategy-band {
-  background-color: #BD9391; }
+#corrigendum-band {
+  background-color: #C84630;
+}
 
-#strategy {
-  border-bottom: solid 3px #BD9391; }
+#corrigendum {
+  border-bottom: solid 3px #C84630;
+}
 
-#cipm-mra-band {
-  background-color: #004E64; }
+#administrative-band {
+  background-color: #BFAE48;
+}
 
-#cipm-mra {
-  border-bottom: solid 3px #004E64; }
+#administrative {
+  border-bottom: solid 3px #BFAE48;
+}
 
-#resolution-band {
-  background-color: #53C170; }
+#advisory-band {
+  background-color: #BD9391;
+}
 
-#resolution {
-  border-bottom: solid 3px #53C170; }
+#advisory {
+  border-bottom: solid 3px #BD9391;
+}
 
-#draft-proposal-band {
-  background-color: #39A0ED; }
+#proposal-band {
+  background-color: #39A0ED;
+}
 
-#draft-proposal {
-  border-bottom: solid 3px #39A0ED; }
+#proposal {
+  border-bottom: solid 3px #39A0ED;
+}
 
-#draft-development-band {
-  background-color: #2D7393; }
+#working-draft-band {
+  background-color: #2D7393;
+}
 
-#draft-development {
-  border-bottom: solid 3px #2D7393; }
+#working-draft {
+  border-bottom: solid 3px #2D7393;
+}
 
-#in-force-band {
-  background-color: #53C170; }
+#committee-draft-band {
+  background-color: #2A6B7C;
+}
 
-#in-force {
-  border-bottom: solid 3px #53C170; }
+#committee-draft {
+  border-bottom: solid 3px #2A6B7C;
+}
 
-#retired-band {
-  background-color: #2E382E; }
+#draft-standard-band {
+  background-color: #1C7F7A;
+}
 
-#retired {
-  border-bottom: solid 3px #2E382E; }
+#draft-standard {
+  border-bottom: solid 3px #1C7F7A;
+}
+
+#final-draft-band {
+  background-color: #53C170;
+}
+
+#final-draft {
+  border-bottom: solid 3px #53C170;
+}
+
+#published-band {
+  background-color: #069E2D;
+}
+
+#published {
+  border-bottom: solid 3px #069E2D;
+}
+
+#withdrawn-band {
+  background-color: #004E64;
+}
+
+#withdrawn {
+  border-bottom: solid 3px #004E64;
+}
+
+#cancelled-band {
+  background-color: #2E382E;
+}
+
+#cancelled {
+  border-bottom: solid 3px #2E382E;
+}
 
 /*
     1. HTML & Body
@@ -283,83 +481,111 @@ body {
   line-height: 1.4em;
   color: #1d1d1d;
   background-color: #ffffff;
-  font-weight: 400; }
-  body main {
-    margin: 0 3em 0 6em; }
-  body pre * {
-    font-family: Times New Roman !important; }
+  font-weight: 400;
+}
+body main {
+  margin: 0 3em 0 6em;
+}
+body pre * {
+  font-family: Times New Roman !important;
+}
 
 main {
-  margin: 0 3em 0 6em; }
+  margin: 0 3em 0 6em;
+}
 
 /*
     2. Responsive navigation layout
 */
 #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
   font-family: Times New Roman;
-  font-weight: 400; }
-  #toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-    #toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
-      padding: 5px 10px; }
-    #toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
-      color: #485094;
-      text-decoration: none;
-      display: block; }
-      #toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
-        box-shadow: none;
-        color: #485094; }
-  #toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
-    padding-left: 30px; }
-  #toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
-    padding-left: 50px; }
-  #toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
-    padding-left: 70px; }
-  #toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
-    padding-left: 90px; }
-  #toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
-    padding-left: 110px; }
+  font-weight: 400;
+}
+#toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
+  padding: 5px 10px;
+}
+#toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
+  color: #485094;
+  text-decoration: none;
+  display: block;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: #485094;
+}
+#toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
+  padding-left: 30px;
+}
+#toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
+  padding-left: 50px;
+}
+#toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+  padding-left: 70px;
+}
+#toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+  padding-left: 90px;
+}
+#toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+  padding-left: 110px;
+}
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  background: #6C734A;
+  box-shadow: inset -5px 0px 10px -5px #6C734A !important;
+}
+#toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: #485094;
+}
+@media print {
   #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-    background: #6C734A;
-    box-shadow: inset -5px 0px 10px -5px #6C734A !important; }
-    #toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-      color: #485094; }
-  @media print {
-    #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-      background: white;
-      box-shadow: none !important; }
-    #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
-      color: #485094; }
-    #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-      color: black; } }
-  @media screen and (max-width: 768px) {
-    #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
-      padding: 0 1.5em;
-      overflow: visible; } }
+    background: white;
+    box-shadow: none !important;
+  }
   #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
-    color: white; }
-  #toc .toc-active,
-  #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active,
-  #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-    box-shadow: none !important; }
-    #toc .toc-active a,
-    #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a,
-    #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-      color: white;
-      background: none;
-      box-shadow: none; }
-  #toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
-    text-transform: uppercase; }
-  #toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
-    box-shadow: none;
-    color: white; }
+    color: #485094;
+  }
+  #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+    color: black;
+  }
+}
+@media screen and (max-width: 768px) {
+  #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    padding: 0 1.5em;
+    overflow: visible;
+  }
+}
+#toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
+  color: white;
+}
+#toc .toc-active,
+#toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active,
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  box-shadow: none !important;
+}
+#toc .toc-active a,
+#toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a,
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: white;
+  background: none;
+  box-shadow: none;
+}
+#toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
+  text-transform: uppercase;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: white;
+}
 
 #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 @media screen and (min-width: 768px) {
   nav {
@@ -370,9 +596,10 @@ main {
     width: 323px;
     font-size: 0.9em;
     overflow: auto;
-    padding: 0 0 0 45px;
-    background-color: #f7f7f7; } }
-
+    padding: 0 0 0 30px;
+    background-color: #f7f7f7;
+  }
+}
 @media print {
   nav {
     position: relative;
@@ -381,7 +608,9 @@ main {
     overflow: auto;
     padding: 0;
     margin-right: 0;
-    background-color: white; } }
+    background-color: white;
+  }
+}
 
 @media screen and (min-width: 768px) {
   #toggle {
@@ -391,52 +620,65 @@ main {
     background-color: #6C734A;
     color: white !important;
     cursor: pointer;
-    z-index: 100; }
-    #toggle span {
-      text-align: center;
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%); } }
-
+    z-index: 100;
+  }
+  #toggle span {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
 @media screen and (max-width: 768px) {
   #toggle {
-    display: none; } }
-
+    display: none;
+  }
+}
 @media print {
   #toggle {
-    display: none; } }
+    display: none;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .container {
-    padding-left: 360px; }
+    padding-left: 360px;
+  }
   .rule.toc {
-    display: none; }
+    display: none;
+  }
   h1.toc-contents {
-    margin-top: 1em; }
+    margin-top: 1em;
+  }
   ul#toc-list, ul#toc-list > :is(.h1, .h2, .h3, .h4, .h5, .h6) {
     padding: 0;
-    margin: 0; } }
-
+    margin: 0;
+  }
+}
 div.figure {
   line-height: 1.6em;
   padding: 1.5em;
   margin: 2em 0 1em 0;
-  overflow: auto; }
-  div.figure .FigureTitle, div.figure .figure-title {
-    font-weight: 700;
-    font-size: 1em;
-    text-align: center; }
-  div.figure > img, div.figure > svg {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    max-width: 100%;
-    height: auto; }
+  overflow: auto;
+}
+div.figure .FigureTitle, div.figure .figure-title {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+div.figure > img, div.figure > svg {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 table div.figure {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 /*
     Document types + stages
@@ -447,30 +689,35 @@ table div.figure {
   height: 100%;
   position: fixed;
   display: block;
-  z-index: 102; }
-  .document-type-band > :first-child {
-    position: relative;
-    width: 25px;
-    font-weight: 400;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    margin: 0;
-    margin-left: 6px;
-    writing-mode: tb-rl;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    white-space: nowrap;
-    display: block;
-    bottom: 0; }
-  @media print {
-    .document-type-band {
-      display: none; } }
-  .document-type-band .document-type {
-    top: 20px; }
+  z-index: 102;
+}
+.document-type-band > :first-child {
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-type-band {
+    display: none;
+  }
+}
+.document-type-band .document-type {
+  top: 20px;
+}
 
 .document-stage-band {
   left: 0;
@@ -479,31 +726,37 @@ table div.figure {
   position: fixed;
   display: block;
   z-index: 101;
-  box-shadow: -5px 0px 10px #1d1d1d; }
-  .document-stage-band > :first-child {
-    position: relative;
-    width: 25px;
-    font-weight: 400;
-    height: 150;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    margin: 0;
-    margin-left: 6px;
-    writing-mode: tb-rl;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    white-space: nowrap;
-    display: block;
-    bottom: 0; }
-  @media print {
-    .document-stage-band {
-      display: none; } }
+  box-shadow: -5px 0px 10px #1d1d1d;
+}
 .document-stage-band > :first-child {
-  font-weight: 300; }
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  height: 150;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-stage-band {
+    display: none;
+  }
+}
+
+.document-stage-band > :first-child {
+  font-weight: 300;
+}
 
 p.document-stage {
   position: relative;
@@ -523,21 +776,25 @@ p.document-stage {
   -o-transform: rotate(180deg);
   white-space: nowrap;
   display: block;
-  bottom: 0; }
+  bottom: 0;
+}
 
 #governance-band p.document-type {
-  height: 230px !important; }
+  height: 230px !important;
+}
 
 p.document-stage {
   font-weight: 300;
-  height: 160px; }
+  height: 160px;
+}
 
 .coverpage-maturity {
   font-family: Times New Roman;
   font-weight: 400;
   font-size: 1em;
   margin: 0 0 2em 0;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 /*
     3. TYPOGRAPHY
@@ -550,150 +807,186 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #6C734A;
   font-weight: 300;
   margin-top: 1.6em;
-  margin-bottom: 0.3em; }
+  margin-bottom: 0.3em;
+}
 
 h1, .h1 {
   font-size: 1.6em;
   text-transform: uppercase;
-  margin-top: 2em; }
+  margin-top: 2em;
+}
 
-h1#content, #content.h1 {
-  margin-top: 2em; }
+h1#content, .h1#content {
+  margin-top: 2em;
+}
 
 h2, .h2 {
   margin-top: 1.3em;
   font-size: 1.3em;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 h3, .h3 {
   margin-top: 1.1em;
   font-size: 1.1em;
-  font-weight: 100; }
+  font-weight: 100;
+}
 
 .TermNum {
-  font-weight: 100; }
+  font-weight: 100;
+}
 
 .TermNum, .Terms, .AltTerms {
-  color: #6C734A; }
+  color: #6C734A;
+}
 
 h2.TermNum {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 p.Terms {
   font-size: 1.1em;
   line-height: 1.5em;
-  margin: 0; }
+  margin: 0;
+}
 
 p.AltTerms {
   /*
-    font-style: italic;
-     */
+  font-style: italic;
+   */
   font-size: 1.1em;
-  margin: 0; }
+  margin: 0;
+}
 
 /*
     3.2 Links
 */
 a, a:visited {
   text-decoration: none;
-  color: #485094; }
+  color: #485094;
+}
 
 a:hover {
   color: white;
   background: #6C734A;
-  box-shadow: 3px 0 0 #6C734A, -3px 0 0 #6C734A; }
+  box-shadow: 3px 0 0 #6C734A, -3px 0 0 #6C734A;
+}
 
 *::selection {
   background: #6C734A;
-  color: white; }
+  color: white;
+}
 
 *::-moz-selection {
   background: #6C734A;
-  color: white; }
+  color: white;
+}
 
 /*
     3.3 Lists
 */
 ul, ol {
-  margin-left: 1.2em; }
+  margin-left: 1.2em;
+}
 
 ul li {
-  list-style: none; }
+  list-style: none;
+}
 
 ul li::before {
   content: "—";
   display: inline-block;
   width: 1em;
-  margin-left: -1.2em; }
+  margin-left: -1.2em;
+}
 
 ul li p {
-  display: inline; }
+  display: inline;
+}
 
 ul > li:first-child {
-  margin-top: 1em; }
+  margin-top: 1em;
+}
 
 ul ul > li:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 ol ul > li:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 #toc-list ul {
-  margin-bottom: 0.25em; }
+  margin-bottom: 0.25em;
+}
 
 #toc-list li {
-  list-style-type: none; }
+  list-style-type: none;
+}
 
 #toc li::before {
   content: " ";
-  display: none; }
+  display: none;
+}
 
 /* https://github.com/metanorma/metanorma-bipm/issues/47 */
-ol[class="alphabet"] {
-  counter-reset: alphabet; }
+ol[class=alphabet] {
+  counter-reset: alphabet;
+}
 
-ol[class="roman"] {
-  counter-reset: roman; }
+ol[class=roman] {
+  counter-reset: roman;
+}
 
-ol[class="alphabet"] ol[class="alphabet"] {
-  counter-reset: none; }
+ol[class=alphabet] ol[class=alphabet] {
+  counter-reset: none;
+}
 
-ol[class="alphabet"] > li {
+ol[class=alphabet] > li {
   list-style: none;
-  position: relative; }
+  position: relative;
+}
 
-ol[class="alphabet"] ol[class="alphabet"] > li {
-  list-style: inherit; }
+ol[class=alphabet] ol[class=alphabet] > li {
+  list-style: inherit;
+}
 
-ol[class="alphabet"] > li::before {
+ol[class=alphabet] > li::before {
   counter-increment: alphabet;
   content: counter(alphabet, lower-alpha) ") ";
   position: absolute;
-  left: -1.4em; }
+  left: -1.4em;
+}
 
-ol[class="alphabet"] ol[class="alphabet"] > li::before {
+ol[class=alphabet] ol[class=alphabet] > li::before {
   counter-increment: none;
-  content: initial; }
+  content: initial;
+}
 
-ol[class="roman"] ol[class="roman"] {
-  counter-reset: none; }
+ol[class=roman] ol[class=roman] {
+  counter-reset: none;
+}
 
-ol[class="roman"] > li {
+ol[class=roman] > li {
   list-style: none;
-  position: relative; }
+  position: relative;
+}
 
-ol[class="roman"] ol[class="roman"] > li {
-  list-style: inherit; }
+ol[class=roman] ol[class=roman] > li {
+  list-style: inherit;
+}
 
-ol[class="roman"] > li::before {
+ol[class=roman] > li::before {
   counter-increment: roman;
   content: "(" counter(roman, lower-roman) ") ";
   position: absolute;
-  left: -2.0em; }
+  left: -2em;
+}
 
-ol[class="roman"] ol[class="roman"] > li::before {
+ol[class=roman] ol[class=roman] > li::before {
   counter-increment: none;
-  content: initial; }
+  content: initial;
+}
 
 /*
     3.4 Rules
@@ -702,14 +995,16 @@ ol[class="roman"] ol[class="roman"] > li::before {
   width: 100%;
   height: 1px;
   background-color: #0e1a85;
-  margin: 2em 0; }
+  margin: 2em 0;
+}
 
 /*
     3.5 Bibliograhy
 */
 p.Biblio, p.NormRef {
   margin-top: 1em;
-  margin-left: 2em; }
+  margin-left: 2em;
+}
 
 /*
     3.6 Source Code + figures
@@ -722,39 +1017,46 @@ pre,
   line-height: 1.6em;
   padding: 1.5em;
   margin: 2em 0 1em 0;
-  overflow: auto; }
-  .figure .SourceTitle,
-  pre .SourceTitle,
-  .pseudocode .SourceTitle {
-    font-weight: 700;
-    font-size: 1em;
-    text-align: center; }
+  overflow: auto;
+}
+.figure .SourceTitle,
+pre .SourceTitle,
+.pseudocode .SourceTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
 
 pre {
   font-family: "Space Mono",monospace;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 .AdmonitionTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .RecommendationTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .ListTitle {
   font-weight: 700;
   font-size: 1em;
   text-align: center;
-  text-align: left; }
+  text-align: left;
+}
 
 .FigureTitle,
 .SourceTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 /*
     3.7 Notes
@@ -763,9 +1065,11 @@ pre {
   background-color: #fff495;
   color: #47430c;
   padding: 1.2em;
-  margin: 1em 0 1em 0; }
-  .Note p {
-    margin: 0; }
+  margin: 1em 0 1em 0;
+}
+.Note p {
+  margin: 0;
+}
 
 /*
     3.8 Examples
@@ -776,18 +1080,23 @@ pre {
   margin: 2em 0 1em 0;
   text-align: left;
   color: #424242;
-  padding-left: 2.7em; }
-  .example p {
-    margin: 0; }
-  .example .example-title {
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-left: -1.5em; }
-  .example .example-title {
-    margin-top: 0; }
-  .example pre,
-  .example .pseudocode {
-    background: none; }
+  padding-left: 2.7em;
+}
+.example p {
+  margin: 0;
+}
+.example .example-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: -1.5em;
+}
+.example .example-title {
+  margin-top: 0;
+}
+.example pre,
+.example .pseudocode {
+  background: none;
+}
 
 /*
     3.9 Tables
@@ -798,29 +1107,36 @@ table {
   margin: 1em 0 2em 0;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 2em; }
-  table, table th, table td {
-    border: 1px solid black;
-    font-size: 0.95em; }
-  table th, table td {
-    padding: 1em; }
-  table td.header {
-    font-weight: 400; }
+  padding-right: 2em;
+}
+table, table th, table td {
+  border: 1px solid black;
+  font-size: 0.95em;
+}
+table th, table td {
+  padding: 1em;
+}
+table td.header {
+  font-weight: 400;
+}
 
 p.TableTitle {
   text-align: center;
   margin-top: 2.5em;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 /*
   3.10 Footnotes
 */
 a.footnote-number {
   vertical-align: super;
-  font-size: 0.8em; }
+  font-size: 0.8em;
+}
 
 .footnote {
-  font-size: 0.9em; }
+  font-size: 0.9em;
+}
 
 /*
     3.11 Blockquotes
@@ -832,7 +1148,8 @@ a.footnote-number {
   padding: 1.5em;
   margin-top: 2em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 /*
     3.12 Formulas
@@ -841,7 +1158,8 @@ a.footnote-number {
   background-color: #f7f7f7;
   padding: 1.5em;
   margin-top: 2em;
-  text-align: center; }
+  text-align: center;
+}
 
 /*
     3.13 Contact Info
@@ -853,41 +1171,49 @@ a.footnote-number {
   text-align: left;
   border: #6C734A solid 2px;
   color: #6C734A !important;
-  border-radius: 25px; }
+  border-radius: 25px;
+}
 
 .contact-info a,
 .contact-info a:hover {
-  color: #6C734A; }
+  color: #6C734A;
+}
 
 .contact-info p, .contact-info a {
   font-family: "Space Mono",monospace;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 .contact-info .name {
   font-weight: 700;
   font-size: 1.2em;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 .contact-info .address {
   font-size: 1em;
   line-height: 1.3em;
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 /*
     Keywords
 */
 span.keyword {
-  font-weight: 600; }
+  font-weight: 600;
+}
 
 /*
     Paragraphs
 */
 p {
   margin-top: 1em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+}
 
 h2 p, .h2 p {
-  display: inline; }
+  display: inline;
+}
 
 /*
     4.0 Page header
@@ -897,24 +1223,28 @@ h2 p, .h2 p {
 */
 .icon-svg {
   width: 100%;
-  color: #5ecf86; }
+  color: #5ecf86;
+}
 
 .wrapper-top {
   background: linear-gradient(200deg, #007864, #6C734A);
   color: #ffffff;
   padding: 2em 0;
-  width: 100%; }
+  width: 100%;
+}
 
 .wrapper-top-bottom {
   width: 0;
   height: 0;
   border-top: 100px solid #6C734A;
   border-right: 100px solid transparent;
-  position: absolute; }
+  position: absolute;
+}
 
 .doc-number {
   font-size: 0.5em;
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 .coverpage-title {
   padding-bottom: 0.5em;
@@ -924,53 +1254,65 @@ h2 p, .h2 p {
   font-weight: 100;
   padding-left: 1em;
   padding-right: 1em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .WordSection11 {
-  padding: 0 2em 0 3em; }
+  padding: 0 2em 0 3em;
+}
 
 .info-section {
-  padding: 0 2em 0 5em; }
+  padding: 0 2em 0 5em;
+}
 
 .prefatory-section {
-  padding: 0 3em 0 6em; }
+  padding: 0 3em 0 6em;
+}
 
 .zzSTDTitle1, .MsoCommentText {
-  display: none; }
+  display: none;
+}
 
 .coverpage {
   text-align: center;
-  padding-left: 1.5em; }
+  padding-left: 1.5em;
+}
 
 .coverpage-logo span, .coverpage-tc-name span {
   font-family: Times New Roman;
   text-transform: none;
-  font-weight: 300; }
+  font-weight: 300;
+}
 
 .coverpage-tc-name {
   font-size: 1.2em;
   line-height: 1.2em;
-  margin: 0.25em 0; }
+  margin: 0.25em 0;
+}
 
 /*
     4.2 Document Identity
 */
 .coverpage-doc-identity {
   font-size: 2em;
-  line-height: 2em; }
+  line-height: 2em;
+}
 
 .coverpage-title .title-second {
-  font-size: 0.8em; }
+  font-size: 0.8em;
+}
 
 .coverpage-title .title-third {
-  font-size: 0.6em; }
+  font-size: 0.6em;
+}
 
 .coverpage-stage-block {
   font-family: Times New Roman;
   font-weight: 600;
   font-size: 1.25em;
   margin: 2em 0em 2em 0em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 /*
     4.3 Draft Warning
@@ -981,13 +1323,15 @@ h2 p, .h2 p {
   margin: 1em 2em;
   color: #485094;
   padding: 2em 1em 1em 1em;
-  border-radius: 25px; }
+  border-radius: 25px;
+}
 
 .coverpage-warning .title {
   font-family: Times New Roman;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+}
 
 /*
     4.4 Copyright
@@ -995,7 +1339,8 @@ h2 p, .h2 p {
 .copyright {
   padding: 1em;
   font-size: 0.9em;
-  text-align: left; }
+  text-align: left;
+}
 
 /*  .copyright .name, .copyright .address {color: #485094;} */
 /*
@@ -1021,62 +1366,84 @@ To top button
   cursor: pointer;
   padding: 10px 15px 10px 15px;
   border-radius: 4px;
-  text-transform: uppercase; }
-  #myBtn:hover {
-    opacity: 1; }
-  @media print {
-    #myBtn {
-      display: none; } }
-  #myBtn a.anchorjs-link:hover {
-    background: none;
-    color: #485094;
-    box-shadow: none; }
+  text-transform: uppercase;
+}
+#myBtn:hover {
+  opacity: 1;
+}
+@media print {
+  #myBtn {
+    display: none;
+  }
+}
+#myBtn a.anchorjs-link:hover {
+  background: none;
+  color: #485094;
+  box-shadow: none;
+}
 
 @page {
-  margin: 2cm 1cm; }
-
+  margin: 2cm 1cm;
+}
 @media print {
   .document-info, nav, .copyright {
-    page-break-before: always; }
+    page-break-before: always;
+  }
   h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
     page-break-after: avoid;
-    margin-top: 1.2em; }
+    margin-top: 1.2em;
+  }
   .note, .figure, pre, .pseudocode, table {
-    page-break-inside: avoid; }
+    page-break-inside: avoid;
+  }
   .info-section {
-    display: none; }
+    display: none;
+  }
   .coverpage {
-    height: 23cm; }
+    height: 23cm;
+  }
   .wrapper-top {
     top: 0;
     padding-top: 4cm;
-    padding-bottom: 4cm; }
+    padding-bottom: 4cm;
+  }
   .wrapper-top-bottom {
-    margin-top: -5px; }
+    margin-top: -5px;
+  }
   #toggle, .document-stage-band,
   .document-type-band, button#myBtn {
-    display: none; }
+    display: none;
+  }
   .container {
-    padding-left: 0; }
+    padding-left: 0;
+  }
   h1.content, .h1.content {
     margin-top: 2em;
-    line-height: 2.5em; }
+    line-height: 2.5em;
+  }
   h1, .h1 {
     font-size: 1.5em;
-    line-height: 1.5; }
+    line-height: 1.5;
+  }
   h2, .h2 {
-    font-size: 1.2em; }
+    font-size: 1.2em;
+  }
   h3, .h3 {
-    font-size: 1em; }
+    font-size: 1em;
+  }
   .Note {
     background-color: #fff495;
     color: #47430c;
     padding: 5px;
-    margin: 2em 0 1em 0; }
+    margin: 2em 0 1em 0;
+  }
   .Note p {
-    padding: 0 5px 0 5px; }
+    padding: 0 5px 0 5px;
+  }
   .wrapper-top-bottom {
-    display: none; } }
+    display: none;
+  }
+}
 
 -->
 </style><style><!--pre.sourcecode table td { padding: 5px; }
@@ -1156,6 +1523,10 @@ pre.sourcecode .nt {
       <span class="docnumber">BIPM CIPM MRA-G-02</span>
       <span class="docnumber-separator">:</span>
       <span class="docyear">2010 </span>
+      
+      
+      <br />Date: 2010-10
+      
     </div>
 
     <div class="coverpage-logo">
@@ -1189,6 +1560,8 @@ pre.sourcecode .nt {
 
   
 
+  
+
   </div>
 
     <div class="wrapper-top-bottom"></div>
@@ -1206,24 +1579,21 @@ pre.sourcecode .nt {
 <div class="copyright">
 <div class="boilerplate-copyright">
 
-<div id="_be208fe5-3a88-9314-b00d-a553e152379c">
-<p id="_e6111812-61a2-7226-8889-021612627512" style="text-align:center;">© Bureau International des Poids et Mesures 2010 all rights reserved</p>
+<div id="_2f904213-2689-9e05-b2e6-6bd909c8c4da">
+<p id="_a4d4855a-6342-25bb-4427-db9bc8559236" style="text-align:center;">© Bureau International des Poids et Mesures 2010 all rights reserved</p>
 </div>
 </div>
   <div class="boilerplate-license">
 
-<div id="_copyright_statement_2"><h1 class="IntroTitle">Copyright statement</h1>
+<div id="_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a"><h1 class="IntroTitle"><a class="anchor" href="#_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a"></a><a class="header" href="#_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a">Copyright statement</a></h1>
 
-<p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/:">http://creativecommons.org/licenses/by/4.0/:</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
+<p id="_50719790-3c5b-c213-8298-0631d690bc21">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/:">http://creativecommons.org/licenses/by/4.0/:</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
 </div>
 </div>
   <div id="boilerplate-legal-destination"></div>
 <div class="boilerplate-feedback">
 
-<p id="_e6428749-2432-0772-4c8e-ed6c34018916">BIPM<br />
-Pavillon de Breteuil<br />
-F-92312 Sèvres Cedex<br />
-FRANCE</p>
+<p id="_5926bc3f-b367-69e7-6cc6-442a91e32db2">BIPM<br /> Pavillon de Breteuil<br /> F-92312 Sèvres Cedex<br /> FRANCE</p>
 </div>
 </div>
 
@@ -1234,16 +1604,46 @@ FRANCE</p>
 
 </div>
 </header></div><br /><div class="prefatory-section"><nav>
-  <div id="toc"><h1 class="IntroTitle">Contents</h1><ul><li class="h1"><a href="#_3aef5195-602f-4b26-afba-00da97a45fda">      1.  Introduction</a></li>
-<li class="h1"><a href="#_3d81e5d4-b15b-49bb-912b-eca84f7c2ddc">      2.  Review Guidelines</a></li>
-<li class="h1"><a href="#_bfe6afc3-c2aa-4c7a-ad47-a983250546f0">      3.  Requirements for the QS</a></li>
-<li class="h2"><a href="#_b04e1fd5-9962-44bb-9a77-a355cc5c74df">      3.1.  QS assessed by Accreditation Body</a></li>
-<li class="h2"><a href="#_5c912143-4191-445d-94ef-288c7d82acd5">      3.2.  Self declared QS</a></li>
-<li class="h1"><a href="#_ede7f84d-71ac-4972-b5db-3b346f326ced">      4.  Report Guidelines</a></li>
-<li class="h1"><a href="#_a08e8c9d-98a7-496a-b3e1-048bc8ab22f0">      5.  Periodic Reviews of the Quality Management Systems</a></li>
-<li class="h1"><a href="#_7eb1ba0f-2d7f-48bd-9015-7fb54272f4a8">      6.  List of Acronyms</a></li>
-<li class="h1"><a href="#_2e696def-2d27-4c3a-ae21-b255a99c37ba">      7.  Revision History</a></li>
-<li class="h1"><a href="#_a82699d8-6121-41c0-bf83-4681c1383390">      Document Control</a></li></ul></div>
+  <div id="toc"><h1 class="IntroTitle"><a class="anchor" href="#_5c1a45ef-0335-c28e-3f58-6bf64e3f6a5a"></a><a class="header" href="#_5c1a45ef-0335-c28e-3f58-6bf64e3f6a5a">Contents</a></h1><ul><li class="h1"><a href="#_d7454094-3555-5f86-c2db-204ad5b30e18">      
+  
+  1.  Introduction
+</a></li>
+<li class="h1"><a href="#_70b21385-c8d6-fab0-dc33-7ad20d587179">      
+  
+  2.  Review Guidelines
+</a></li>
+<li class="h1"><a href="#_3f485c00-94c9-d06b-d0a4-37644f11d3c7">      
+  
+  3.  Requirements for the QS
+</a></li>
+<li class="h2"><a href="#_8e3f582c-d2ed-9ee5-534b-8ec2a7e556a8">      
+  
+  3.1.  QS assessed by Accreditation Body
+</a></li>
+<li class="h2"><a href="#_de122a5a-21a2-310b-2c9d-67f3a89794c8">      
+  
+  3.2.  Self declared QS
+</a></li>
+<li class="h1"><a href="#_2ffc4474-3a7a-8f81-5104-1ceb2dc0f752">      
+  
+  4.  Report Guidelines
+</a></li>
+<li class="h1"><a href="#_63041fff-289d-009a-3f22-6a37c59a3f4a">      
+  
+  5.  Periodic Reviews of the Quality Management Systems
+</a></li>
+<li class="h1"><a href="#_375709e5-0e4d-d26f-4c15-d6a7cab419cf">      
+  
+  6.  List of Acronyms
+</a></li>
+<li class="h1"><a href="#_28e7e997-cce5-674f-812a-388c5eedfc20">      
+  
+  7.  Revision History
+</a></li>
+<li class="h1"><a href="#_3fa785d1-17bb-fafd-6b1e-4be00094a1db">      
+  
+  Document Control
+</a></li></ul></div>
 
 </nav>
 
@@ -1254,133 +1654,133 @@ FRANCE</p>
 
 
 
-</div><br /><div id="_introduction"><h1 id="_3aef5195-602f-4b26-afba-00da97a45fda">1.  Introduction</h1><p id="_53a8665a-e38d-0200-4a19-c85cc646bbc4">A central component of the CIPM MRA requires that signatory NMIs establish and maintain a Quality System (QS). Unlike the CMC situation, however, the CIPM MRA does not explicitly specify how signatory NMIs review, gain confidence and accept each other’s quality systems.</p><p id="_1c53629a-026a-a76f-9b1b-c4ffd6f14489">With regard to the establishment of a QS, the CIPM MRA provides for the following methods:</p><ol type="1" id="_8e5e97c7-345e-9024-bcc7-199744bda43a"><li id="_1b6e906c-99d6-437b-9c03-8eef6c8bab8b"><p id="_7d2e88f6-b460-bd49-67ce-d8f8a2efc088"><i>an NMI that chooses for its calibration and measurement services a quality system that meets the requirements of ISO Guide 25 or equivalent for an NMI, assessed by an accreditation body fulfilling the requirements of ISO Guide 58, declares its calibration measurement capabilities and submits them to the local RMO for review and transmission to the Joint Committee for analysis and inclusion in Appendix C.</i></p>
+</div><br /><div id="_d7454094-3555-5f86-c2db-204ad5b30e18"><h1 id="_70e8d727-82cc-4928-8fe7-8c843739534c"><a class="anchor" href="#_d7454094-3555-5f86-c2db-204ad5b30e18"></a><a class="header" href="#_d7454094-3555-5f86-c2db-204ad5b30e18">1.  Introduction</a></h1><p id="_6af66ba9-e55d-70c0-a690-52a77c39bb93">A central component of the CIPM MRA requires that signatory NMIs establish and maintain a Quality System (QS). Unlike the CMC situation, however, the CIPM MRA does not explicitly specify how signatory NMIs review, gain confidence and accept each other’s quality systems.</p><p id="_ace2d76c-9c51-87d7-99c8-04a03059116f">With regard to the establishment of a QS, the CIPM MRA provides for the following methods:</p><div class="ol_wrap"><ol type="1" id="_5d0b7c08-e220-eb06-4d11-adb82f42fef8"><li id="_910ca6c8-e304-8c17-9b2c-b7adb5aa9485"><p id="_5f2f8b91-f144-bd9b-300d-0c2916bf6226"><i>an NMI that chooses for its calibration and measurement services a quality system that meets the requirements of ISO Guide 25 or equivalent for an NMI, assessed by an accreditation body fulfilling the requirements of ISO Guide 58, declares its calibration measurement capabilities and submits them to the local RMO for review and transmission to the Joint Committee for analysis and inclusion in Appendix C.</i></p>
 </li>
-<li id="_84e0c61b-c8b3-41d7-92a5-210766ec4690"><p id="_fe13636f-b6df-65c9-d974-b84044c3036a"><i>an NMI that chooses to use a different way of assuring quality or chooses a different quality system, or ISO Guide 25 without third-party assessment, for its calibration and measurement services declares its calibration and measurement capabilities and submits them to the local RMO for review and transmission to the Joint Committee for analysis and inclusion in Appendix C.</i></p>
+<li id="_1cd4a677-3d98-3b89-2bec-a45e0d871876"><p id="_808f7e48-d233-36ff-bc98-0c36114e34bb"><i>an NMI that chooses to use a different way of assuring quality or chooses a different quality system, or ISO Guide 25 without third-party assessment, for its calibration and measurement services declares its calibration and measurement capabilities and submits them to the local RMO for review and transmission to the Joint Committee for analysis and inclusion in Appendix C.</i></p>
 </li>
-</ol><p id="_266458f8-1981-e929-0bf6-23abc18df68a"><i>Demonstration of competence and capability may require visits and examination of procedures by an NMI and/or by peers selected by the local RMO.</i></p></div><div id="_review_guidelines"><h1 id="_3d81e5d4-b15b-49bb-912b-eca84f7c2ddc">2.  Review Guidelines</h1><p id="_b777f439-2d33-2a02-432d-7004dc77aa61">Each RMOs should have an open process in place for the monitoring and review of the QS<a class="FootnoteRef" href="#fn:1" id="fnref:1"><sup>1</sup></a> of each of their member NMIs and DIs and to to report on their acceptance or otherwise to the JCRB. The process followed for the review is decided by each RMO and it shall satisfy at least the following requirements.</p><ul id="_41b41609-5dda-5e5e-aff9-c5089b3b0fe5"><li><p id="_5b3abb54-e970-dc21-ea62-1fdf8392315c">The review processes should include the presentation of each member NMIs and DIs’ QS to a panel of experts. The initial and periodic presentations of the QS of DI to the corresponding QS review panel must be done directly by the responsible person of the DI and not through its NMI. In the same sense, the QS annual reports must also be prepared and submitted directly by the DI.</p>
+</ol></div><p id="_2a090071-fde8-c603-f7fd-e64ce8f4aa43"><i>Demonstration of competence and capability may require visits and examination of procedures by an NMI and/or by peers selected by the local RMO.</i></p></div><div id="_70b21385-c8d6-fab0-dc33-7ad20d587179"><h1 id="_f854cbef-7078-4ab1-a652-3e7d53669e67"><a class="anchor" href="#_70b21385-c8d6-fab0-dc33-7ad20d587179"></a><a class="header" href="#_70b21385-c8d6-fab0-dc33-7ad20d587179">2.  Review Guidelines</a></h1><p id="_ca35aad8-4c43-52a1-c088-d12265f2199d">Each RMOs should have an open process in place for the monitoring and review of the QS<a class="FootnoteRef" href="#fn:_19df7152-681e-42c0-0da5-3c1140843bbc" id="fnref:1"><sup>1</sup></a> of each of their member NMIs and DIs and to to report on their acceptance or otherwise to the JCRB. The process followed for the review is decided by each RMO and it shall satisfy at least the following requirements.</p><div class="ul_wrap"><ul id="_17b019a4-4128-f0f5-eea3-9d3e4eed9f9e"><li id="_308c5b45-1a9f-492e-bb4e-a982dbee1932"><p id="_365532ed-19d5-f181-6d1a-c04beb1087a5">The review processes should include the presentation of each member NMIs and DIs’ QS to a panel of experts. The initial and periodic presentations of the QS of DI to the corresponding QS review panel must be done directly by the responsible person of the DI and not through its NMI. In the same sense, the QS annual reports must also be prepared and submitted directly by the DI.</p>
 </li>
-<li><p id="_1186801e-ef8b-7cf6-f787-6cb768895f82">The RMO must satisfy itself through its review process that the QS operated by the NMI or DI has an effective and durable system in place for dealing with corrective actions, non-conforming work and complaints.</p>
+<li id="_b5c243ae-4ca0-ab98-b087-a6a69650fe6f"><p id="_20c38793-0f90-3065-9c88-d1d2017d86b9">The RMO must satisfy itself through its review process that the QS operated by the NMI or DI has an effective and durable system in place for dealing with corrective actions, non-conforming work and complaints.</p>
 </li>
-<li><p id="_9bad16f5-86c0-51ad-bead-ec48fe627e97">The NMIs should submit a full description of their QS to the RMO, for its calibration and measurement service. Minimum features to be included are:</p>
-<p id="_b2857f18-974c-b335-dc6d-6988429fe4af" style="text-align:left;">organogram of the NMI ;<br />
-quality system management mechanisms ;<br />
-detailed table of contents of the quality manual;<br />
-list of administrative and technical procedures;<br />
-table of cross references between ISO/IEC17025 and the quality documentation of the NMI;<br />
-list of calibration capabilities covered by the quality system;<br />
-customer complaints – process employed and statistics;<br />
-non conforming work – process employed &#x26; corrective actions;<br />
-report on internal audits ;</p>
+<li id="_589770a5-19f3-7223-f932-130368fa8402"><p id="_45695eda-f708-84a5-0557-01dbe985281f">The NMIs should submit a full description of their QS to the RMO, for its calibration and measurement service. Minimum features to be included are:</p>
+<p id="_68b72191-5b72-3b80-c436-b55cf147957e" style="text-align:left;">organogram of the NMI ;<br /> quality system management mechanisms ;<br /> detailed table of contents of the quality manual;<br /> list of administrative and technical procedures;<br /> table of cross references between ISO/IEC17025 and the quality documentation of the NMI;<br /> list of calibration capabilities covered by the quality system;<br /> customer complaints – process employed and statistics;<br /> non conforming work – process employed &#x26; corrective actions;<br /> report on internal audits ;</p>
 
-<ul id="_af74f582-5df1-9662-adea-8771b888d5aa"><li><p id="_d2229f3e-9607-3421-6b4f-dcd9d9004f3f">status of management reviews.</p>
+<div class="ul_wrap"><ul id="_0b75ca69-49ce-41c3-7e30-122b5e4827f8"><li id="_2521b304-5977-ca95-8f65-477c9db767bb"><p id="_5de4683c-c94e-7f74-4ef3-fdeaf99327a7">status of management reviews.</p>
 </li>
-</ul>
+</ul></div>
 </li>
-<li><p id="_cdc4b69c-0dd2-4542-ddb5-88398f3cc0d7">If considered necessary, the RMO may request that review visits by ‘peers’ be undertaken, in order that the NMI may demonstrate confidence and capability in their claimed CMCs. The NMI itself may request the review visits by peers. Where such visits take place, the RMO must ensure that the ‘peers’ have the necessary experience and are suitably qualified and independent.</p>
+<li id="_3661a540-71aa-1869-e647-c73e1cf28c4a"><p id="_76f55c0a-6574-613a-c4bb-c28fecdb74da">If considered necessary, the RMO may request that review visits by ‘peers’ be undertaken, in order that the NMI may demonstrate confidence and capability in their claimed CMCs. The NMI itself may request the review visits by peers. Where such visits take place, the RMO must ensure that the ‘peers’ have the necessary experience and are suitably qualified and independent.</p>
 </li>
-<li><p id="_f63e80f5-0dcc-3e48-889e-a4d701d7c4b1">The RMO must have a process in place for the on-going monitoring of the QS of the NMIs. This process should aim to ensure that:</p>
-<ul id="_b1d6023a-dba8-0b4a-483e-05400d979f83"><li><p id="_c1e32724-0623-0b03-0842-2962b634ce06">the accreditation or self declaration continues to be valid;</p>
+<li id="_13b98c92-999d-bb5e-23a1-a4de97c0e1da"><p id="_dbbdf5a9-5235-3baf-10cf-7e57adc12f00">The RMO must have a process in place for the on-going monitoring of the QS of the NMIs. This process should aim to ensure that:</p>
+<div class="ul_wrap"><ul id="_24fe238b-4a81-8d14-6def-9087b6336c4f"><li id="_07ea141d-1158-b993-023e-3987ef0bc3f2"><p id="_cded5a22-db3f-d2c2-bf48-79be46e49783">the accreditation or self declaration continues to be valid;</p>
 </li>
-<li><p id="_2b4a36e4-6d64-6057-c0d3-17693b079a59">the QS continues to cover the declared CMCs;</p>
+<li id="_08a69eae-59c4-fe5c-3497-64bc8bd00100"><p id="_eb2184f0-adc7-d73d-38fd-095d89df32ed">the QS continues to cover the declared CMCs;</p>
 </li>
-<li><p id="_3d9df715-3050-40c6-caec-3edb32aea5bb">major extensions and modifications to QS (including changes to key staff) have been notified to the RMO;</p>
+<li id="_a6e93960-5aa2-462e-a80a-a5730215b0e8"><p id="_e599df3f-15d5-74b9-1c01-a0f88b84f829">major extensions and modifications to QS (including changes to key staff) have been notified to the RMO;</p>
 </li>
-<li><p id="_4aca0732-3341-107e-ecf2-073bcedc6fbf">a general review of the QS is undertaken at a maximum interval of five years.</p>
+<li id="_d15b5d19-3125-1e0c-a548-09160a84d05f"><p id="_0f257963-f02d-8497-2341-baadde78e14c">a general review of the QS is undertaken at a maximum interval of five years.</p>
 </li>
-</ul>
+</ul></div>
 </li>
-<li><p id="_9b628b6d-4dde-12a7-887f-db27c8c6f132">In addition to the requirements of the QS, the review process may also take into account:</p>
-<ul id="_87e96780-bf84-a2d5-25a5-6fa411645ac6"><li><p id="_aaf3d017-de11-4863-1264-76dec079f112">RMO projects and activities ;</p>
+<li id="_7dd0d546-16ee-c528-3818-1dfe5b968ec5"><p id="_fa85de93-0bdc-a106-2664-2d91513228c1">In addition to the requirements of the QS, the review process may also take into account:</p>
+<div class="ul_wrap"><ul id="_ee1cc242-6875-4138-30fb-d657216469eb"><li id="_90a70425-9f1c-0436-4eef-175a76c660dd"><p id="_5b31c6f5-a048-48aa-d617-51e58eb178d7">RMO projects and activities ;</p>
 </li>
-<li><p id="_6e6b2338-2738-54cc-ce37-5aeec2f9ee6d">other available knowledge and experience;participation in scientific and training activities, visits and consultation with technical experts from other RMOs.</p>
+<li id="_92d2512f-06b8-60d0-6528-cbf902f27a6a"><p id="_7a3af490-04dd-b8a9-c4bb-87f6b14ad90b">other available knowledge and experience;participation in scientific and training activities, visits and consultation with technical experts from other RMOs.</p>
 </li>
-</ul>
+</ul></div>
 </li>
-</ul></div><div id="_requirements_for_the_qs"><h1 id="_bfe6afc3-c2aa-4c7a-ad47-a983250546f0">3.  Requirements for the QS</h1><p id="_3c509fc1-646b-55bf-7650-37d256bb707b">The QS operated by the NMI should be:</p><ul id="_3f368e9f-2a72-e8e7-3c14-b9b27bcad230"><li><p id="_58d7d7b7-9139-7c6b-fa0b-fca747fb5c4b">accredited to ISO/IEC 17025 for calibration laboratories or equivalent for an NMI, or</p>
+</ul></div><aside id="fn:_19df7152-681e-42c0-0da5-3c1140843bbc" class="footnote"><p id="_019110d3-3cc5-f607-8c46-265909ed806f"><a class="FootnoteRef" href="#fn:_19df7152-681e-42c0-0da5-3c1140843bbc"><sup>1</sup></a>In this document, QS means a quality system that meets the requirements of ISO/IEC 17025 or equivalent or a different way of assuring quality or a different quality system, as described in the MRA.</p>
+<a href="#fnref:1">↩</a></aside></div><div id="_3f485c00-94c9-d06b-d0a4-37644f11d3c7"><h1 id="_c9ce762a-9933-4819-ade9-de01d4963a44"><a class="anchor" href="#_3f485c00-94c9-d06b-d0a4-37644f11d3c7"></a><a class="header" href="#_3f485c00-94c9-d06b-d0a4-37644f11d3c7">3.  Requirements for the QS</a></h1><p id="_ccc57db5-d74c-cf7e-2e1d-6d50d5147a81">The QS operated by the NMI should be:</p><div class="ul_wrap"><ul id="_7ae05dc9-0e72-d81d-294f-3ffb4f5a3f2b"><li id="_25aaa64e-eb0e-727e-a8ff-805c78b88647"><p id="_37125bba-defb-622e-30c3-7069e222d7b6">accredited to ISO/IEC 17025 for calibration laboratories or equivalent for an NMI, or</p>
 </li>
-<li><p id="_1e13f321-39d6-f7f3-18c6-9f6137ca973d">self declared to ISO/IEC 17025 or a different quality system.</p>
+<li id="_4ab3e9db-fc34-4833-a533-0ecad4bab35a"><p id="_e58333a2-9fd2-b2fd-882e-dcc2968d729a">self declared to ISO/IEC 17025 or a different quality system.</p>
 </li>
-</ul><p id="_b080d8b5-ba67-d595-8e34-42715a452cb9">The QS should cover all declared CMCs</p><div id="_qs_assessed_by_accreditation_body"><h2 id="_b04e1fd5-9962-44bb-9a77-a355cc5c74df">3.1.  QS assessed by Accreditation Body</h2>
+</ul></div><p id="_7324489d-766c-3d21-1fb0-9b04b59b9328">The QS should cover all declared CMCs</p><div id="_8e3f582c-d2ed-9ee5-534b-8ec2a7e556a8"><h2 id="_898ad084-d356-4ed8-ba4a-72da628dcd3d"><a class="anchor" href="#_8e3f582c-d2ed-9ee5-534b-8ec2a7e556a8"></a><a class="header" href="#_8e3f582c-d2ed-9ee5-534b-8ec2a7e556a8">3.1.  QS assessed by Accreditation Body</a></h2>
 
-<ul id="_ee72f57c-28b1-8c33-fc36-761387cad72a"><li><p id="_f2ed0e88-291d-dc38-78e6-8812e2673510">The claimed CMC uncertainty must not be smaller than the accredited uncertainties documented in the scope of accreditation</p>
+<div class="ul_wrap"><ul id="_d0e1f533-e032-fb2e-7318-aa7ac4f1251b"><li id="_8c3b01c7-0a66-a231-7a6c-e648d22d14ee"><p id="_57c4f051-0628-bf57-2248-f1c3ea7c0e85">The claimed CMC uncertainty must not be smaller than the accredited uncertainties documented in the scope of accreditation</p>
 </li>
-<li><p id="_bef72b2c-eaef-d904-08d9-a16654181e65">The NMI must submit the name of the accreditation body and the names of the technical assessors and the lead assessor who were involved in the assessment of the NMIs capabilities.</p>
+<li id="_434eac50-5544-2780-35cc-d6e5bc40f2ce"><p id="_a9864d8f-9bfb-27b0-c91e-6ec4ecc94058">The NMI must submit the name of the accreditation body and the names of the technical assessors and the lead assessor who were involved in the assessment of the NMIs capabilities.</p>
 </li>
-<li><p id="_62d7fcaa-1001-e25c-0deb-a10ec3c2f8ad">The accreditation body should operate according to ISO/IEC 17011(draft) and should be a signatory to the ILAC MRA.</p>
+<li id="_c2c94e41-f80b-719f-9d53-cd7154f1fd9e"><p id="_73eaa86f-efd1-b611-9194-204f2779b205">The accreditation body should operate according to ISO/IEC 17011(draft) and should be a signatory to the ILAC MRA.</p>
 </li>
-</ul>
-</div><div id="_self_declared_qs"><h2 id="_5c912143-4191-445d-94ef-288c7d82acd5">3.2.  Self declared QS</h2>
+</ul></div>
+</div><div id="_de122a5a-21a2-310b-2c9d-67f3a89794c8"><h2 id="_d770da34-30a8-47c7-82c0-b9e0a6ec94b5"><a class="anchor" href="#_de122a5a-21a2-310b-2c9d-67f3a89794c8"></a><a class="header" href="#_de122a5a-21a2-310b-2c9d-67f3a89794c8">3.2.  Self declared QS</a></h2>
 
-<ul id="_71a2f48c-2089-7e1a-1f79-3221916685a3"><li><p id="_2121d70f-78cc-61b2-691d-4c4bd7b22b43">Where the QS is based on ISO/IEC 17025 the RMO must satisfy itself that the quality system complies with the standard.</p>
+<div class="ul_wrap"><ul id="_3253f492-0fa9-c4a9-ae56-05868ebea486"><li id="_295502fa-ff49-8228-2b41-2ab8d2add152"><p id="_673e4fcc-0a8a-a5bd-8ec5-0aaf994470c2">Where the QS is based on ISO/IEC 17025 the RMO must satisfy itself that the quality system complies with the standard.</p>
 </li>
-<li><p id="_df651bbb-b98e-9b24-a146-8cb0b9b0c08a">Where the QS is not based on ISO/IEC 17025 the following must be addressed:</p>
+<li id="_44afe6fe-6dcf-2f46-867a-1a6a02c99337"><p id="_f64820ff-9806-0568-bb9d-0fc8c5af1992">Where the QS is not based on ISO/IEC 17025 the following must be addressed:</p>
 </li>
-<li><p id="_8ff9093e-dd09-b818-26f5-6afadcceaac9">Organizational and Management requirements including:</p>
-<ul id="_f7b5999f-1fe0-097d-92cd-62d19d1f22c4"><li><p id="_37054182-436e-c7c0-2cb3-232518527dc8">quality manual ;</p>
+<li id="_5d3ff3aa-0705-5a28-1def-7527cabd2a92"><p id="_849874a5-98fd-0037-73e4-f07ea7c3e1ff">Organizational and Management requirements including:</p>
+<div class="ul_wrap"><ul id="_26e064c1-d85b-fe0f-9c83-de45e9dd74c4"><li id="_daffa1c7-8d68-8ed8-84bd-6dad6070f532"><p id="_93666062-669a-2dcc-5f49-42f44eedc34f">quality manual ;</p>
 </li>
-<li><p id="_034df850-3bff-1627-ed6b-2ceb3b4f8885">document control process ;</p>
+<li id="_7fa90c34-ae84-783b-b109-8d02ed15d8b8"><p id="_e74a7f66-c167-8ca7-5bef-96f515ed2899">document control process ;</p>
 </li>
-<li><p id="_44b796bb-9662-8acb-fdf8-27ee353e3f47">contract review ;</p>
+<li id="_bdb0543e-3a5f-b28b-209a-199f35cc01ad"><p id="_0cabe05d-533f-039c-2a5a-16817a752557">contract review ;</p>
 </li>
-<li><p id="_add6ff63-6dd9-724e-9802-ddaf69ec746c">complaints ;</p>
+<li id="_9fc912b7-b225-15cd-ec68-de11abb62d79"><p id="_c3a86937-29da-9939-5d5d-b8789c18a7c7">complaints ;</p>
 </li>
-<li><p id="_8a01dce8-02cd-c84b-9a06-d14f8dabb55d">control of non conforming work;</p>
+<li id="_c6f4af93-5fe5-c733-87a3-148e96017f1a"><p id="_9963ed3f-4aa5-a6a5-79f0-6718aa64c859">control of non conforming work;</p>
 </li>
-<li><p id="_9be4c748-0ab0-fbab-c3c2-4f11f20f1c22">corrective and preventative actions ;</p>
+<li id="_48e4afec-5504-597c-c553-e6af22885250"><p id="_b3d1a307-e259-553a-16c8-5327ca739f5f">corrective and preventative actions ;</p>
 </li>
-<li><p id="_0c57da47-ef30-7593-b0b4-210b70717410">internal audits and management review.</p>
+<li id="_e57f5d1b-fc9b-79b6-8531-5b7e23c89791"><p id="_d35225d7-d64b-3642-e9cc-5f6a1842dfdf">internal audits and management review.</p>
 </li>
-</ul>
+</ul></div>
 </li>
-<li><p id="_93b04a33-0460-c40a-9b1f-a62e47a46512">Technical requirements including:</p>
-<ul id="_5d397c60-1609-aa4d-a53d-19f2163a63a6"><li><p id="_4c1be353-a725-1ab4-4091-ae12e6785531">Personnel</p>
+<li id="_0a373a0e-42aa-0c78-85c6-6a45970d6661"><p id="_940ffdaa-9517-4187-4677-5c6a20d9cd37">Technical requirements including:</p>
+<div class="ul_wrap"><ul id="_c8724bf4-a78f-ec50-ccfe-7b89b075084b"><li id="_cca9fa58-203b-162c-d8b3-ebeaa39db79e"><p id="_6cd75b43-88a9-35b5-e447-b2605435388f">Personnel</p>
 </li>
-<li><p id="_9327aba9-33c6-e4a2-3823-c7626b33c07a">Accommodation and environment conditions</p>
+<li id="_2bf7d052-17e0-54cd-d018-e757550112d9"><p id="_165efd58-582f-51f5-212d-3ca9008b7317">Accommodation and environment conditions</p>
 </li>
-<li><p id="_4488248f-ded5-5156-79f5-045fbc0a75a3">Test and calibration methods and method validation</p>
+<li id="_706aa474-00bf-8172-9f5b-b69a46f07b25"><p id="_e8bc726a-4830-dcc4-d658-879e5395fa0a">Test and calibration methods and method validation</p>
 </li>
-<li><p id="_2833d157-ffbc-56cc-f34f-3f628a9fa234">Equipment</p>
+<li id="_aa29d9dd-9f10-9ad8-43d3-b6ed889842a3"><p id="_307c6ad5-df6d-db74-b5b1-a0d719854e79">Equipment</p>
 </li>
-<li><p id="_c665b6da-3f77-4ea1-c206-7acda49cc069">Calibration and measurement traceability</p>
+<li id="_950b882d-a5f3-0a16-2ffd-f559fdc86300"><p id="_fe0bc815-0402-34b1-1cef-2d945292b8d5">Calibration and measurement traceability</p>
 </li>
-<li><p id="_3c2668a0-c637-d16d-ed38-1c5f02806863">Assuring the quality of results</p>
+<li id="_5014f5af-2f9e-f7d8-a861-92119806a727"><p id="_8d2f1861-d546-e9b6-ad26-fe0686f4532f">Assuring the quality of results</p>
 </li>
-<li><p id="_c6ce5652-7246-f719-834b-665bdde63816">Reporting of results</p>
+<li id="_ae353b70-be1c-d52d-2e7f-f169f4036537"><p id="_b211507f-48c0-c680-e144-0ed3f64ff6d0">Reporting of results</p>
 </li>
-<li><p id="_b445b4f8-5d80-70c2-e46f-badcfd6e8050">Sampling and handling of items (where applicable).</p>
+<li id="_2791e536-d57f-90e5-e852-1d1cd338f36a"><p id="_8bfaba3e-f13c-97db-8dc5-4ecf66678fa6">Sampling and handling of items (where applicable).</p>
 </li>
-</ul>
+</ul></div>
 </li>
-</ul>
-</div></div><div id="_report_guidelines"><h1 id="_ede7f84d-71ac-4972-b5db-3b346f326ced">4.  Report Guidelines</h1><p id="_ddf43e6f-b161-de97-2936-5e4d1240b178">As part of the regular reports to the JCRB, the RMOs must provide annual summary reports on the status of the QS of the NMIs and DIs in their region,.</p><p id="_a0067477-cd43-e0ce-918f-997c58752d09">The report should include:</p><ul id="_fa95a395-4d36-c713-d9ac-61184834659d"><li><p id="_b61ab278-b5d8-7cee-a8ae-1e373e5645ed">summary of the RMO’s QS review process;</p>
+</ul></div>
+</div></div><div id="_2ffc4474-3a7a-8f81-5104-1ceb2dc0f752"><h1 id="_f7be9d01-6c93-4bf0-97e8-bab83bde8f29"><a class="anchor" href="#_2ffc4474-3a7a-8f81-5104-1ceb2dc0f752"></a><a class="header" href="#_2ffc4474-3a7a-8f81-5104-1ceb2dc0f752">4.  Report Guidelines</a></h1><p id="_50d1696b-4419-40bf-88de-b9b60fe6dd38">As part of the regular reports to the JCRB, the RMOs must provide annual summary reports on the status of the QS of the NMIs and DIs in their region,.</p><p id="_307c6a58-132e-2187-f35a-1f9adabcfc70">The report should include:</p><div class="ul_wrap"><ul id="_96522c11-6876-5a76-725e-ac75d561e5c5"><li id="_f6992d7e-2b21-85b8-311f-e587f7471ec4"><p id="_6510a8d7-7398-77d1-2e1d-4a46eb65bc13">summary of the RMO’s QS review process;</p>
 </li>
-<li><p id="_a26e5c7e-1774-b757-f99b-6207b8f4943c">whether and when each member NMIs’ QS was approved by the RMO (necessary details of each NMIs’ QS status, e.g. path a, b, or c, can be provided meanwhile);</p>
+<li id="_d4ffefc9-a78f-5c22-7628-650ba293a92b"><p id="_65af2a95-fa1e-0858-9008-97417fbe88ef">whether and when each member NMIs’ QS was approved by the RMO (necessary details of each NMIs’ QS status, e.g. path a, b, or c, can be provided meanwhile);</p>
 </li>
-<li><p id="_942147e3-1fd8-ae62-6d4d-136edc0c2095">major changes in the member NMIs’ QS that may affect the validity of CMCs, like changes in key personnel, new installations or equipment, etc.</p>
+<li id="_4d0dd03e-b5de-73be-64eb-90ddc9522eff"><p id="_6d88ed17-1a6b-f77b-9401-5892b139b6fd">major changes in the member NMIs’ QS that may affect the validity of CMCs, like changes in key personnel, new installations or equipment, etc.</p>
 </li>
-<li><p id="_6bb60cc6-f063-69c2-722e-2fb1c8f9af38">other relevant information, which will help build inter-regional confidence (eg training courses/workshops on QS, exchange of information between NMIs on QS, interaction with other RMOs on QS)</p>
+<li id="_a37e9636-b261-95d2-80b8-5d71a09b7494"><p id="_667f1148-e94d-d56e-0e59-703ea9078215">other relevant information, which will help build inter-regional confidence (eg training courses/workshops on QS, exchange of information between NMIs on QS, interaction with other RMOs on QS)</p>
 </li>
-</ul></div><div id="_periodic_reviews_of_the_quality_management_systems"><h1 id="_a08e8c9d-98a7-496a-b3e1-048bc8ab22f0">5.  Periodic Reviews of the Quality Management Systems</h1><p id="_7157baf6-6e85-3660-28f5-45dfb709f776">The quality management systems implemented to support the calibration and measurement capabilities of the NMIs and DIs must undergo a full review with a period not longer than five years. The individual RMOs are responsible for this review, under the auspices of their respective quality system working groups.</p><p id="_7044bc41-79e3-ba5d-b0fd-45e9aa1dc2d1">This comprehensive periodic review includes examination of evidence for the continued validity and vitality of published CMCs.</p><p id="_ac9744a2-9bc2-b1f4-119b-a32ac26bd353">In addition to the 5-year review of the supporting QMS, CMCs published in the KCDB undergo continual monitoring to ensure their validity. NMIs and DIs are responsible for demonstrating that they are maintaining quality systems, including regular review of their services. All DIs and NMIs with published CMCs submit annual quality reports to their RMOs which include full disclosure of any issues (e.g., departure of key staff, loss of facilities and equipment, poor performance in comparisons with other NMIs and DIs, etc.) that would affect published CMCs.</p></div><div id="_list_of_acronyms"><h1 id="_7eb1ba0f-2d7f-48bd-9015-7fb54272f4a8">6.  List of Acronyms</h1><dl id="_3d1df77d-8ee7-f8b2-287f-ac4b8d8da28e"><dt><p>CIPM MRA</p></dt><dd><p id="_55c4fab5-3a68-e279-8d04-6ed464fceb0b">Mutual Recognition Arrangement</p>
-</dd><dt><p>CMC</p></dt><dd><p id="_d3e3ad74-a469-38c2-8524-4bae4f6d0bf4">Calibration and Measurement Capability</p>
-</dd><dt><p>JCRB</p></dt><dd><p id="_a08acc93-c44b-2901-ae03-d08d834bb461">Joint Committee of the RMOs and the BIPM</p>
-</dd><dt><p>NMI</p></dt><dd><p id="_7f3657fe-56c6-b61d-e5ce-6fbcfd8a2074">National Metrology Institute</p>
-</dd><dt><p>QS</p></dt><dd><p id="_a6f41c7e-9bea-0526-c796-8d87d9aea9e2">Quality System</p>
-</dd><dt><p>RMO</p></dt><dd><p id="_137a3dda-dd1f-9b1a-cda7-682b3aadc5b9">Regional Metrology Organization</p>
-</dd></dl></div><div id="_revision_history"><h1 id="_2e696def-2d27-4c3a-ae21-b255a99c37ba">7.  Revision History</h1><table id="_86811fae-84c4-cbcf-3ff1-562668bde6f3" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><tbody><tr><td style="text-align:center;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_0f51ccfb-4bd1-a7a8-d05d-a680e3dbbde3">Version number</p>
-</td><td style="text-align:center;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_cb005b87-0103-ae38-fa4b-73bcc6b7d4bd">Date of Issue/Review</p>
-</td><td style="text-align:center;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_4902821f-e047-9d09-3876-6637a7c19928">Summary of change</p>
-</td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">2</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">2008-11-18</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_952f6422-6041-7b4f-eafb-746ead364d34">Initially approved as JCRB 10/8 (1c)<br />
-Reformatted by JCRB Executive Secretary, November 2008</p>
-</td></tr><tr><td rowspan="2" style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">3</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">2010-09-29</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_8b61fde4-2097-4524-6135-b3ecb1c23ab0">General review, new chapters 3 and 5. Approved by the JCRB.</p>
-</td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">2010-10-15</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">Changes approved by CIPM.</td></tr></tbody></table></div><div class="doccontrol"><h1 id="_a82699d8-6121-41c0-bf83-4681c1383390">Document Control</h1>
-
-<table class="MsoISOTable" style="border-width:1px;border-spacing:0;"><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Authors:</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"></td><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"></td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"> </td><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"></td><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"></td></tr></tbody></table></div><aside id="fn:1" class="footnote"><p id="_34ea1be9-9294-59c3-cb29-be88246d7705"><a class="FootnoteRef" href="#fn:1"><sup>1</sup></a>In this document, QS means a quality system that meets the requirements of ISO/IEC 17025 or equivalent or a different way of assuring quality or a different quality system, as described in the MRA.</p>
-<a href="#fnref:1">↩</a></aside></main><script type="text/x-mathjax-config">
+</ul></div></div><div id="_63041fff-289d-009a-3f22-6a37c59a3f4a"><h1 id="_2957be9d-1eeb-4536-9ef5-5bb7fb349adc"><a class="anchor" href="#_63041fff-289d-009a-3f22-6a37c59a3f4a"></a><a class="header" href="#_63041fff-289d-009a-3f22-6a37c59a3f4a">5.  Periodic Reviews of the Quality Management Systems</a></h1><p id="_95bb1caf-d236-b90a-1303-81b7874f1804">The quality management systems implemented to support the calibration and measurement capabilities of the NMIs and DIs must undergo a full review with a period not longer than five years. The individual RMOs are responsible for this review, under the auspices of their respective quality system working groups.</p><p id="_e6c0468b-2c44-cd80-e757-26fa5d49931a">This comprehensive periodic review includes examination of evidence for the continued validity and vitality of published CMCs.</p><p id="_70ccd961-3508-7a5e-0d44-46eabb05d995">In addition to the 5-year review of the supporting QMS, CMCs published in the KCDB undergo continual monitoring to ensure their validity. NMIs and DIs are responsible for demonstrating that they are maintaining quality systems, including regular review of their services. All DIs and NMIs with published CMCs submit annual quality reports to their RMOs which include full disclosure of any issues (e.g., departure of key staff, loss of facilities and equipment, poor performance in comparisons with other NMIs and DIs, etc.) that would affect published CMCs.</p></div><div id="_375709e5-0e4d-d26f-4c15-d6a7cab419cf"><h1 id="_2745b168-a3dd-4d7b-9c96-d8306dcddfff"><a class="anchor" href="#_375709e5-0e4d-d26f-4c15-d6a7cab419cf"></a><a class="header" href="#_375709e5-0e4d-d26f-4c15-d6a7cab419cf">6.  List of Acronyms</a></h1><div class="figdl"><dl id="_b72fb9d5-594e-0f12-fc03-04fdcd3466a3"><dt><p>CIPM MRA</p></dt><dd id="_50338932-629f-cf7d-c795-f14af7bc8a89"><p id="_fac1ffbc-6376-f430-97fd-f567bde26a4a">Mutual Recognition Arrangement</p>
+</dd><dt><p>CMC</p></dt><dd id="_0b4d09df-b821-cbbf-7d86-0f78644fec92"><p id="_6a1a0f2d-9c48-18cf-f093-02a300db5815">Calibration and Measurement Capability</p>
+</dd><dt><p>JCRB</p></dt><dd id="_def8c0dd-12b0-93a9-c4a3-29f8d20ea032"><p id="_461b5050-c5b0-3d18-9c9b-56cf78574114">Joint Committee of the RMOs and the BIPM</p>
+</dd><dt><p>NMI</p></dt><dd id="_3d8de392-dca7-85ea-6c07-8a3e912bdbb2"><p id="_907ec886-a71e-c1b6-a47a-04097243ed92">National Metrology Institute</p>
+</dd><dt><p>QS</p></dt><dd id="_8b132d4f-781b-a49e-d351-52cdfdf47dc8"><p id="_f7843cd0-0c9b-6f5d-cf5f-dbf248416ee5">Quality System</p>
+</dd><dt><p>RMO</p></dt><dd id="_0d7e68e4-e326-a2e7-79f8-ca9cefd50d60"><p id="_4d329082-b209-a62a-9b9a-88f7bc6dbd1d">Regional Metrology Organization</p>
+</dd></dl></div></div><div id="_28e7e997-cce5-674f-812a-388c5eedfc20"><h1 id="_ff85d83d-4513-4fd7-bd00-ea1364552e58"><a class="anchor" href="#_28e7e997-cce5-674f-812a-388c5eedfc20"></a><a class="header" href="#_28e7e997-cce5-674f-812a-388c5eedfc20">7.  Revision History</a></h1><table id="_083c5ae1-15af-88ba-d90b-5bcf67b61d23" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><tbody><tr><td style="text-align:center;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_5aaf68de-cc4a-1daf-1cb1-1f4c2af9121a">Version number</p>
+</td><td style="text-align:center;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_ffa47df4-2bce-97bd-0bcb-fdd5c87dec50">Date of Issue/Review</p>
+</td><td style="text-align:center;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_12978a80-9ef4-d6ac-caed-eef6330aceb6">Summary of change</p>
+</td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">2</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">2008-11-18</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_ecec3496-e6e6-5a72-639b-84c45553382a">Initially approved as JCRB 10/8 (1c)<br /> Reformatted by JCRB Executive Secretary, November 2008</p>
+</td></tr><tr><td rowspan="2" style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">3</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">2010-09-29</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_d4f11b01-edda-a68c-58c9-b388980034fe">General review, new chapters 3 and 5. Approved by the JCRB.</p>
+</td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">2010-10-15</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">Changes approved by CIPM.</td></tr></tbody></table></div><br /><div class="Section3" id="_3fa785d1-17bb-fafd-6b1e-4be00094a1db"><h1 class="IntroTitle" id="_92dc97da-1ee0-44fe-97a7-65be8f2339b1"><a class="anchor" href="#_3fa785d1-17bb-fafd-6b1e-4be00094a1db"></a><a class="header" href="#_3fa785d1-17bb-fafd-6b1e-4be00094a1db">Document Control</a></h1><table id="_d84f441b-c8d8-8c4e-b890-fe279eb21adf" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Authors:</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"></td><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"></td></tr><tr><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"> </td><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"></td><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"></td></tr></tbody></table></div></main><script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    "HTML-CSS": { preferredFont: "STIX" },
+    "HTML-CSS": {
+      preferredFont: "STIX",
+      linebreaks: {
+        automatic: true,
+        width: "container"  // or specify something like "90%"/"30em"
+      }
+    },
+    MathML: {
+      linebreaks: {
+        automatic: true
+      }
+    },
     asciimath2jax: { delimiters: [['(#(', ')#)']] }
- });
+  });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
   <script>
@@ -1390,26 +1790,40 @@ Reformatted by JCRB Executive Secretary, November 2008</p>
 });
   </script>
 
-<script>
-  //TOC toggle animation
-$('#toggle').on('click', function(){
-    if( $('nav').is(':visible') ) {
-        $('nav').animate({ 'left': '-353px' }, 'slow', function(){
-            $('nav').hide();
+  <script>
+    //TOC toggle animation
+    (function() {
+      const jqNav = $('nav');
+      const jqBody = $('body');
+      const jqToggle = $('#toggle');
+      const animationSpeed = 'slow';
+
+      jqToggle.on('click', function() {
+        const isNavVisible = jqNav.is(':visible');
+        const fullNavWidth = jqNav.outerWidth();
+        const navLeft = isNavVisible ? '-' + fullNavWidth + 'px' : '0px';
+        const bodyMarginLeft = isNavVisible ? '0px' : fullNavWidth + 'px';
+
+        // Stop current animations
+        jqNav.stop(true, true);
+        jqBody.stop(true, true);
+
+        if(!isNavVisible) {
+            jqNav.show();
+        }
+        jqNav.animate({'left': navLeft}, animationSpeed, function() {
+          if(isNavVisible) {jqNav.hide()}
         });
-        $('.container').animate({ 'padding-left': '31px' }, 'slow');
-    }
-    else {
-        $('nav').show();
-        $('nav').animate({ 'left': '0px' }, 'slow');
-    }
-});
-</script>
+        jqBody.animate({'marginLeft': bodyMarginLeft}, animationSpeed);
+
+      });
+    })();
+  </script>
 
 <script>
     // Scroll to top button
     window.onscroll = function() {scrollFunction()};
-    
+
     function scrollFunction() {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             document.getElementById("myBtn").style.display = "block";
@@ -1417,7 +1831,7 @@ $('#toggle').on('click', function(){
             document.getElementById("myBtn").style.display = "none";
         }
     }
-    
+
     // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
         document.body.scrollTop = 0;
@@ -1425,6 +1839,132 @@ $('#toggle').on('click', function(){
     }
     </script>
 
+<script>
+/*
+  $(document).ready(function() {
+	  $('[id^=toc]').each(function ()
+	  {
+	     var currentToc = $(this);
+       var url = window.location.href;
+            currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "'></a>");
+	  });
+});
+*/
+</script>
+
+  <script>
+    document.querySelectorAll('*|svg a').forEach(function(item) {
+      var loc = item.getAttribute('href');
+      if (loc !== null && loc.startsWith('#')) {
+  item.setAttribute('href', location.pathname + loc);
+      }
+});
+  </script>
+
+
+<script>
+
+// jQuery Inline Footnotes v1.0.3
+// Copyright (c) 2011 Vesa Vänskä, released under the MIT License.
+
+// Generated by CoffeeScript 1.6.1
+(function() {
+
+  (function($) {
+    $.inlineFootnote = function(el, options) {
+      var _this = this;
+      this.el = $(el);
+      this.el.data("inlineFootnote", this);
+      this.initialize = function() {
+        this.options = $.extend({}, $.inlineFootnote.defaultOptions, options);
+        this.footnoteId = this.el.attr("href").match(/#(.*)/)[1];
+        if (this.footnoteId) {
+          this.el.mouseenter(this.openBox);
+          return $("body").mousemove(this.closeBox);
+        }
+      };
+      this.openBox = function(event) {
+        var footnoteContent, linkOffset;
+        if (!_this.box) {
+          footnoteContent = $("[id='" + _this.footnoteId + "']").children().filter(":not('" + _this.options.hideFromContent + "')");
+          linkOffset = _this.el.offset();
+          _this.box = $("<div />", {
+            id: _this.options.boxId,
+            html: footnoteContent.clone().find(_this.options.hideFromContent).remove().end(),
+            css: {
+              position: "absolute",
+              top: linkOffset.top,
+              left: linkOffset.left + _this.el.outerWidth()
+            }
+          }).appendTo("body");
+          return _this.positionBox();
+        }
+      };
+      this.closeBox = function(event) {
+        if (_this.box) {
+          if (_this.isHoveringFootnote(event)) {
+            clearTimeout(_this.closeTimeout);
+            return _this.closeTimeout = null;
+          } else {
+            if (!_this.closeTimeout) {
+              return _this.closeTimeout = setTimeout((function() {
+                _this.box.remove();
+                return _this.box = null;
+              }), _this.options.hideDelay);
+            }
+          }
+        }
+      };
+      this.isHoveringFootnote = function(event) {
+        return this.box.is(event.target) || $(event.target).closest(this.box).length > 0 || event.target === this.el[0];
+      };
+      this.positionBox = function() {
+        var boxHorizontalPadding, boxLeft, boxWidth, linkLeftOffset, windowWidth;
+        boxHorizontalPadding = parseInt(this.box.css("padding-left")) + parseInt(this.box.css("padding-right"));
+        linkLeftOffset = this.el.offset().left;
+        windowWidth = $(window).width();
+        if ((windowWidth / 2) > linkLeftOffset) {
+          boxLeft = linkLeftOffset + 20;
+          boxWidth = windowWidth - boxLeft - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+        } else {
+          boxWidth = linkLeftOffset - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+          boxLeft = linkLeftOffset - boxWidth - this.options.boxMargin * 2;
+        }
+        return this.box.css({
+          width: boxWidth,
+          left: boxLeft
+        });
+      };
+      return this.initialize();
+    };
+    $.inlineFootnote.defaultOptions = {
+      boxMargin: 20,
+      hideDelay: 200,
+      hideFromContent: "[rel=footnote]",
+      maximumBoxWidth: 500,
+      boxId: "footnote_box"
+    };
+    return $.fn.inlineFootnote = function(options) {
+      return this.each(function() {
+        return new $.inlineFootnote(this, options);
+      });
+    };
+  })(jQuery);
+
+}).call(this);
+</script>
+
+<script>
+      $(function() {
+        $("[rel=footnote]").inlineFootnote();
+        });
+</script>
   <script>
 // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
 //
@@ -1436,21 +1976,29 @@ $('#toggle').on('click', function(){
 !function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function f(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.base=A.hasOwnProperty("base")?A.base:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64,A.titleText=A.hasOwnProperty("titleText")?A.titleText:""}function p(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}this.options=A||{},this.elements=[],f(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var e,t,i,n,o,s,a,r,c,h,l,u,d=[];if(f(this.options),"touch"===(l=this.options.visible)&&(l=this.isTouchDevice()?"always":"hover"),0===(e=p(A=A||"h2, h3, h4, h5, h6")).length)return this;for(!function(){if(null!==document.head.querySelector("style.anchorjs"))return;var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"],style'))?document.head.appendChild(e):document.head.insertBefore(e,A);e.sheet.insertRule(".anchorjs-link{opacity:0;text-decoration:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}",e.sheet.cssRules.length),e.sheet.insertRule(":hover>.anchorjs-link,.anchorjs-link:focus{opacity:1}",e.sheet.cssRules.length),e.sheet.insertRule("[data-anchorjs-icon]::after{content:attr(data-anchorjs-icon)}",e.sheet.cssRules.length),e.sheet.insertRule('@font-face{font-family:anchorjs-icons;src:url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype")}',e.sheet.cssRules.length)}(),t=document.querySelectorAll("[id]"),i=[].map.call(t,function(A){return A.id}),o=0;o<e.length;o++)if(this.hasAnchorJSLink(e[o]))d.push(o);else{if(e[o].hasAttribute("id"))n=e[o].getAttribute("id");else if(e[o].hasAttribute("data-anchor-id"))n=e[o].getAttribute("data-anchor-id");else{for(c=r=this.urlify(e[o].textContent),a=0;void 0!==s&&(c=r+"-"+a),a+=1,-1!==(s=i.indexOf(c)););s=void 0,i.push(c),e[o].setAttribute("id",c),n=c}(h=document.createElement("a")).className="anchorjs-link "+this.options.class,h.setAttribute("aria-label",this.options.ariaLabel),h.setAttribute("data-anchorjs-icon",this.options.icon),this.options.titleText&&(h.title=this.options.titleText),u=document.querySelector("base")?window.location.pathname+window.location.search:"",u=this.options.base||u,h.href=u+"#"+n,"always"===l&&(h.style.opacity="1"),""===this.options.icon&&(h.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(h.style.lineHeight="inherit")),"left"===this.options.placement?(h.style.position="absolute",h.style.marginLeft="-1em",h.style.paddingRight="0.5em",e[o].insertBefore(h,e[o].firstChild)):(h.style.paddingLeft="0.375em",e[o].appendChild(h))}for(o=0;o<d.length;o++)e.splice(d[o]-o,1);return this.elements=this.elements.concat(e),this},this.remove=function(A){for(var e,t,i=p(A),n=0;n<i.length;n++)(t=i[n].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(i[n]))&&this.elements.splice(e,1),i[n].removeChild(t));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){return this.options.truncate||f(this.options),A.trim().replace(/\'/gi,"").replace(/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&-1<(" "+A.firstChild.className+" ").indexOf(" anchorjs-link "),t=A.lastChild&&-1<(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ");return e||t||!1}}});
 // @license-end
   </script>
-  <script>
-/*
-  $(document).ready(function() {
-          $('[id^=toc]').each(function ()
-          {
-             var currentToc = $(this);
-       var url = window.location.href;
-             currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "' </a>");
-          });
-});
-*/
+    <script>
   anchors.options = {
   placement: 'left'
 };
 anchors.add('h1, h2, h3, h4');
+</script>
+
+<script>
+// use .collapsible element to toggle visibility of element following it
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
 </script>
 
 </body></html>

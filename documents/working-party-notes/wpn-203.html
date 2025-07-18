@@ -24,7 +24,8 @@ figure, figcaption, footer, header, hgroup,
 menu, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -40,7 +41,8 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   border: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -55,7 +57,8 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 html, body, div, span, applet, object, iframe,
 p, blockquote,
@@ -70,87 +73,115 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 code, pre, tt, kbd, samp {
   font-family: "Space Mono",monospace;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 code *, pre *, tt *, kbd *, samp * {
   font-family: "Space Mono",monospace !important;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 p code, dt code, li code, label code, legend code, caption code, th code, td code,
 p tt, dt tt, li tt, label tt, legend tt, caption tt, th tt, td tt,
 p kbd, dt kbd, li kbd, label kbd, legend kbd, caption kbd, th kbd, td kbd,
 p samp, dt samp, li samp, label samp, legend samp, caption samp, th samp, td samp {
-  font-size: ; }
+  font-size: ;
+}
+
+sub, sup {
+  font-size: 0.75em;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 blockquote, q {
-  quotes: none; }
-  blockquote::before, blockquote::after, q::before, q::after {
-    content: '';
-    content: none; }
+  quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+  content: "";
+  content: none;
+}
 
 .h2Annex {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 dl {
   display: grid;
-  grid-template-columns: max-content auto; }
-  dl dt p, dl dd p {
-    margin-top: 0; }
-  dl dt {
-    grid-column-start: 1; }
-  dl dd {
-    grid-column-start: 2; }
+  grid-template-columns: max-content auto;
+}
+dl dt p, dl dd p {
+  margin-top: 0;
+}
+dl dt {
+  grid-column-start: 1;
+}
+dl dd {
+  grid-column-start: 2;
+}
 
 b, strong {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 div.document-stage-band, div.document-type-band {
-  background-color: #333333; }
+  background-color: #333333;
+}
 
 a.FootnoteRef + a.FootnoteRef::before {
   content: ", ";
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 a.TableFootnoteRef + a.TableFootnoteRef::before {
   content: ", ";
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 a.TableFootnoteRef, span.TableFootnoteRef,
 a.FootnoteRef, span.FootnoteRef {
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 .addition {
-  color: blue; }
+  color: blue;
+}
 
 .deletion {
   color: red;
-  text-decoration: line-through; }
+  text-decoration: line-through;
+}
 
 ruby {
   ruby-position: over;
-  -webkit-ruby-position: before; }
+  -webkit-ruby-position: before;
+}
 
 ruby ruby {
   ruby-position: under;
-  -webkit-ruby-position: after; }
+  -webkit-ruby-position: after;
+}
 
 /* code highlighting with line numbers */
 table.rouge-line-table td.rouge-gutter {
@@ -158,13 +189,15 @@ table.rouge-line-table td.rouge-gutter {
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  padding-right: 1em; }
+  padding-right: 1em;
+}
 
 table.rouge-line-table td.rouge-code {
   -moz-user-select: all;
   -ms-user-select: all;
   -webkit-user-select: all;
-  user-select: all; }
+  user-select: all;
+}
 
 table.rouge-line-table,
 table.rouge-line-table th,
@@ -173,103 +206,268 @@ table.rouge-line-table td {
   border: none;
   margin: 0;
   padding: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 table.rouge-line-table pre {
   margin: 0;
   padding: 0;
   overflow-x: visible;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
-#brochure-band {
-  background-color: #0AC442; }
+/* header § links */
+a.header {
+  color: inherit;
+  text-decoration: none;
+}
 
-#brochure {
-  border-bottom: solid 3px #0AC442; }
+a.header:hover {
+  color: #a53221 !important;
+  background: inherit;
+  box-shadow: none;
+}
 
-#mise-en-pratique-band {
-  background-color: #540D6E; }
+a.header:visited {
+  color: inherit;
+  text-decoration: none;
+}
 
-#mise-en-pratique {
-  border-bottom: solid 3px #540D6E; }
+a.anchor {
+  position: absolute;
+  z-index: 1001;
+  width: 1.5ex;
+  margin-left: -1.5ex;
+  display: block;
+  text-decoration: none !important;
+  visibility: hidden;
+  text-align: center;
+  font-weight: 400;
+}
 
-#rapport-band {
-  background-color: #D183C9; }
+a.anchor::before {
+  content: "§";
+  font-size: 0.85em;
+  display: block;
+  padding-top: 0.1em;
+}
 
-#rapport {
-  border-bottom: solid 3px #D183C9; }
+a.anchor:hover {
+  color: #a53221;
+  background: inherit;
+  box-shadow: none;
+}
 
-#monographie-band {
-  background-color: #65AFFF; }
+h1 > a.anchor:hover,
+h2 > a.anchor:hover,
+h3 > a.anchor:hover,
+h4 > a.anchor:hover,
+h5 > a.anchor:hover,
+h6 > a.anchor:hover,
+.inline-header > a.anchor:hover,
+h1:hover > a.anchor,
+h2:hover > a.anchor,
+h3:hover > a.anchor,
+h4:hover > a.anchor,
+h5:hover > a.anchor,
+h6:hover > a.anchor,
+.inline-header:hover > a.anchor {
+  visibility: visible;
+}
 
-#monographie {
-  border-bottom: solid 3px #65AFFF; }
+/* collapsible snippets: collapsible before hidable */
+.hidable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 3px 0;
+  margin: 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: "▼";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.active:after {
+  content: "▲";
+}
+
+/* collapsible: */
+.collapsible + .hidable {
+  margin-top: 0;
+}
+
+.collapsible:not(.active) + .hidable {
+  overflow: hidden;
+  padding: 0;
+}
+
+.svg-container {
+  width: 100%; /* or any desired width */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+svg {
+  width: 100%;
+  height: auto; /* ← key to maintaining aspect ratio */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+#standard-band {
+  background-color: #0AC442;
+}
+
+#standard {
+  border-bottom: solid 3px #0AC442;
+}
+
+#directive-band {
+  background-color: #540D6E;
+}
+
+#directive {
+  border-bottom: solid 3px #540D6E;
+}
 
 #guide-band {
-  background-color: #3A405A; }
+  background-color: #D183C9;
+}
 
 #guide {
-  border-bottom: solid 3px #3A405A; }
+  border-bottom: solid 3px #D183C9;
+}
 
-#meeting-report-band {
-  background-color: #F26430; }
+#specification-band {
+  background-color: #65AFFF;
+}
 
-#meeting-report {
-  border-bottom: solid 3px #F26430; }
+#specification {
+  border-bottom: solid 3px #65AFFF;
+}
 
-#technical-report-band {
-  background-color: #C84630; }
+#report-band {
+  background-color: #3A405A;
+}
 
-#technical-report {
-  border-bottom: solid 3px #C84630; }
+#report {
+  border-bottom: solid 3px #3A405A;
+}
 
-#working-part-note-band {
-  background-color: #BFAE48; }
+#amendment-band {
+  background-color: #F26430;
+}
 
-#working-part-note {
-  border-bottom: solid 3px #BFAE48; }
+#amendment {
+  border-bottom: solid 3px #F26430;
+}
 
-#strategy-band {
-  background-color: #BD9391; }
+#corrigendum-band {
+  background-color: #C84630;
+}
 
-#strategy {
-  border-bottom: solid 3px #BD9391; }
+#corrigendum {
+  border-bottom: solid 3px #C84630;
+}
 
-#cipm-mra-band {
-  background-color: #004E64; }
+#administrative-band {
+  background-color: #BFAE48;
+}
 
-#cipm-mra {
-  border-bottom: solid 3px #004E64; }
+#administrative {
+  border-bottom: solid 3px #BFAE48;
+}
 
-#resolution-band {
-  background-color: #53C170; }
+#advisory-band {
+  background-color: #BD9391;
+}
 
-#resolution {
-  border-bottom: solid 3px #53C170; }
+#advisory {
+  border-bottom: solid 3px #BD9391;
+}
 
-#draft-proposal-band {
-  background-color: #39A0ED; }
+#proposal-band {
+  background-color: #39A0ED;
+}
 
-#draft-proposal {
-  border-bottom: solid 3px #39A0ED; }
+#proposal {
+  border-bottom: solid 3px #39A0ED;
+}
 
-#draft-development-band {
-  background-color: #2D7393; }
+#working-draft-band {
+  background-color: #2D7393;
+}
 
-#draft-development {
-  border-bottom: solid 3px #2D7393; }
+#working-draft {
+  border-bottom: solid 3px #2D7393;
+}
 
-#in-force-band {
-  background-color: #53C170; }
+#committee-draft-band {
+  background-color: #2A6B7C;
+}
 
-#in-force {
-  border-bottom: solid 3px #53C170; }
+#committee-draft {
+  border-bottom: solid 3px #2A6B7C;
+}
 
-#retired-band {
-  background-color: #2E382E; }
+#draft-standard-band {
+  background-color: #1C7F7A;
+}
 
-#retired {
-  border-bottom: solid 3px #2E382E; }
+#draft-standard {
+  border-bottom: solid 3px #1C7F7A;
+}
+
+#final-draft-band {
+  background-color: #53C170;
+}
+
+#final-draft {
+  border-bottom: solid 3px #53C170;
+}
+
+#published-band {
+  background-color: #069E2D;
+}
+
+#published {
+  border-bottom: solid 3px #069E2D;
+}
+
+#withdrawn-band {
+  background-color: #004E64;
+}
+
+#withdrawn {
+  border-bottom: solid 3px #004E64;
+}
+
+#cancelled-band {
+  background-color: #2E382E;
+}
+
+#cancelled {
+  border-bottom: solid 3px #2E382E;
+}
 
 /*
     1. HTML & Body
@@ -283,83 +481,111 @@ body {
   line-height: 1.4em;
   color: #1d1d1d;
   background-color: #ffffff;
-  font-weight: 400; }
-  body main {
-    margin: 0 3em 0 6em; }
-  body pre * {
-    font-family: Times New Roman !important; }
+  font-weight: 400;
+}
+body main {
+  margin: 0 3em 0 6em;
+}
+body pre * {
+  font-family: Times New Roman !important;
+}
 
 main {
-  margin: 0 3em 0 6em; }
+  margin: 0 3em 0 6em;
+}
 
 /*
     2. Responsive navigation layout
 */
 #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
   font-family: Times New Roman;
-  font-weight: 400; }
-  #toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-    #toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
-      padding: 5px 10px; }
-    #toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
-      color: #485094;
-      text-decoration: none;
-      display: block; }
-      #toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
-        box-shadow: none;
-        color: #485094; }
-  #toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
-    padding-left: 30px; }
-  #toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
-    padding-left: 50px; }
-  #toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
-    padding-left: 70px; }
-  #toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
-    padding-left: 90px; }
-  #toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
-    padding-left: 110px; }
+  font-weight: 400;
+}
+#toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
+  padding: 5px 10px;
+}
+#toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
+  color: #485094;
+  text-decoration: none;
+  display: block;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: #485094;
+}
+#toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
+  padding-left: 30px;
+}
+#toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
+  padding-left: 50px;
+}
+#toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+  padding-left: 70px;
+}
+#toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+  padding-left: 90px;
+}
+#toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+  padding-left: 110px;
+}
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  background: #6C734A;
+  box-shadow: inset -5px 0px 10px -5px #6C734A !important;
+}
+#toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: #485094;
+}
+@media print {
   #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-    background: #6C734A;
-    box-shadow: inset -5px 0px 10px -5px #6C734A !important; }
-    #toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-      color: #485094; }
-  @media print {
-    #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-      background: white;
-      box-shadow: none !important; }
-    #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
-      color: #485094; }
-    #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-      color: black; } }
-  @media screen and (max-width: 768px) {
-    #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
-      padding: 0 1.5em;
-      overflow: visible; } }
+    background: white;
+    box-shadow: none !important;
+  }
   #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
-    color: white; }
-  #toc .toc-active,
-  #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active,
-  #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-    box-shadow: none !important; }
-    #toc .toc-active a,
-    #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a,
-    #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-      color: white;
-      background: none;
-      box-shadow: none; }
-  #toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
-    text-transform: uppercase; }
-  #toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
-    box-shadow: none;
-    color: white; }
+    color: #485094;
+  }
+  #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+    color: black;
+  }
+}
+@media screen and (max-width: 768px) {
+  #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    padding: 0 1.5em;
+    overflow: visible;
+  }
+}
+#toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
+  color: white;
+}
+#toc .toc-active,
+#toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active,
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  box-shadow: none !important;
+}
+#toc .toc-active a,
+#toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a,
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: white;
+  background: none;
+  box-shadow: none;
+}
+#toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
+  text-transform: uppercase;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: white;
+}
 
 #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 @media screen and (min-width: 768px) {
   nav {
@@ -370,9 +596,10 @@ main {
     width: 323px;
     font-size: 0.9em;
     overflow: auto;
-    padding: 0 0 0 45px;
-    background-color: #f7f7f7; } }
-
+    padding: 0 0 0 30px;
+    background-color: #f7f7f7;
+  }
+}
 @media print {
   nav {
     position: relative;
@@ -381,7 +608,9 @@ main {
     overflow: auto;
     padding: 0;
     margin-right: 0;
-    background-color: white; } }
+    background-color: white;
+  }
+}
 
 @media screen and (min-width: 768px) {
   #toggle {
@@ -391,52 +620,65 @@ main {
     background-color: #6C734A;
     color: white !important;
     cursor: pointer;
-    z-index: 100; }
-    #toggle span {
-      text-align: center;
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%); } }
-
+    z-index: 100;
+  }
+  #toggle span {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
 @media screen and (max-width: 768px) {
   #toggle {
-    display: none; } }
-
+    display: none;
+  }
+}
 @media print {
   #toggle {
-    display: none; } }
+    display: none;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .container {
-    padding-left: 360px; }
+    padding-left: 360px;
+  }
   .rule.toc {
-    display: none; }
+    display: none;
+  }
   h1.toc-contents {
-    margin-top: 1em; }
+    margin-top: 1em;
+  }
   ul#toc-list, ul#toc-list > :is(.h1, .h2, .h3, .h4, .h5, .h6) {
     padding: 0;
-    margin: 0; } }
-
+    margin: 0;
+  }
+}
 div.figure {
   line-height: 1.6em;
   padding: 1.5em;
   margin: 2em 0 1em 0;
-  overflow: auto; }
-  div.figure .FigureTitle, div.figure .figure-title {
-    font-weight: 700;
-    font-size: 1em;
-    text-align: center; }
-  div.figure > img, div.figure > svg {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    max-width: 100%;
-    height: auto; }
+  overflow: auto;
+}
+div.figure .FigureTitle, div.figure .figure-title {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+div.figure > img, div.figure > svg {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 table div.figure {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 /*
     Document types + stages
@@ -447,30 +689,35 @@ table div.figure {
   height: 100%;
   position: fixed;
   display: block;
-  z-index: 102; }
-  .document-type-band > :first-child {
-    position: relative;
-    width: 25px;
-    font-weight: 400;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    margin: 0;
-    margin-left: 6px;
-    writing-mode: tb-rl;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    white-space: nowrap;
-    display: block;
-    bottom: 0; }
-  @media print {
-    .document-type-band {
-      display: none; } }
-  .document-type-band .document-type {
-    top: 20px; }
+  z-index: 102;
+}
+.document-type-band > :first-child {
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-type-band {
+    display: none;
+  }
+}
+.document-type-band .document-type {
+  top: 20px;
+}
 
 .document-stage-band {
   left: 0;
@@ -479,31 +726,37 @@ table div.figure {
   position: fixed;
   display: block;
   z-index: 101;
-  box-shadow: -5px 0px 10px #1d1d1d; }
-  .document-stage-band > :first-child {
-    position: relative;
-    width: 25px;
-    font-weight: 400;
-    height: 150;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    margin: 0;
-    margin-left: 6px;
-    writing-mode: tb-rl;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    white-space: nowrap;
-    display: block;
-    bottom: 0; }
-  @media print {
-    .document-stage-band {
-      display: none; } }
+  box-shadow: -5px 0px 10px #1d1d1d;
+}
 .document-stage-band > :first-child {
-  font-weight: 300; }
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  height: 150;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-stage-band {
+    display: none;
+  }
+}
+
+.document-stage-band > :first-child {
+  font-weight: 300;
+}
 
 p.document-stage {
   position: relative;
@@ -523,21 +776,25 @@ p.document-stage {
   -o-transform: rotate(180deg);
   white-space: nowrap;
   display: block;
-  bottom: 0; }
+  bottom: 0;
+}
 
 #governance-band p.document-type {
-  height: 230px !important; }
+  height: 230px !important;
+}
 
 p.document-stage {
   font-weight: 300;
-  height: 160px; }
+  height: 160px;
+}
 
 .coverpage-maturity {
   font-family: Times New Roman;
   font-weight: 400;
   font-size: 1em;
   margin: 0 0 2em 0;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 /*
     3. TYPOGRAPHY
@@ -550,150 +807,186 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #6C734A;
   font-weight: 300;
   margin-top: 1.6em;
-  margin-bottom: 0.3em; }
+  margin-bottom: 0.3em;
+}
 
 h1, .h1 {
   font-size: 1.6em;
   text-transform: uppercase;
-  margin-top: 2em; }
+  margin-top: 2em;
+}
 
-h1#content, #content.h1 {
-  margin-top: 2em; }
+h1#content, .h1#content {
+  margin-top: 2em;
+}
 
 h2, .h2 {
   margin-top: 1.3em;
   font-size: 1.3em;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 h3, .h3 {
   margin-top: 1.1em;
   font-size: 1.1em;
-  font-weight: 100; }
+  font-weight: 100;
+}
 
 .TermNum {
-  font-weight: 100; }
+  font-weight: 100;
+}
 
 .TermNum, .Terms, .AltTerms {
-  color: #6C734A; }
+  color: #6C734A;
+}
 
 h2.TermNum {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 p.Terms {
   font-size: 1.1em;
   line-height: 1.5em;
-  margin: 0; }
+  margin: 0;
+}
 
 p.AltTerms {
   /*
-    font-style: italic;
-     */
+  font-style: italic;
+   */
   font-size: 1.1em;
-  margin: 0; }
+  margin: 0;
+}
 
 /*
     3.2 Links
 */
 a, a:visited {
   text-decoration: none;
-  color: #485094; }
+  color: #485094;
+}
 
 a:hover {
   color: white;
   background: #6C734A;
-  box-shadow: 3px 0 0 #6C734A, -3px 0 0 #6C734A; }
+  box-shadow: 3px 0 0 #6C734A, -3px 0 0 #6C734A;
+}
 
 *::selection {
   background: #6C734A;
-  color: white; }
+  color: white;
+}
 
 *::-moz-selection {
   background: #6C734A;
-  color: white; }
+  color: white;
+}
 
 /*
     3.3 Lists
 */
 ul, ol {
-  margin-left: 1.2em; }
+  margin-left: 1.2em;
+}
 
 ul li {
-  list-style: none; }
+  list-style: none;
+}
 
 ul li::before {
   content: "—";
   display: inline-block;
   width: 1em;
-  margin-left: -1.2em; }
+  margin-left: -1.2em;
+}
 
 ul li p {
-  display: inline; }
+  display: inline;
+}
 
 ul > li:first-child {
-  margin-top: 1em; }
+  margin-top: 1em;
+}
 
 ul ul > li:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 ol ul > li:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 #toc-list ul {
-  margin-bottom: 0.25em; }
+  margin-bottom: 0.25em;
+}
 
 #toc-list li {
-  list-style-type: none; }
+  list-style-type: none;
+}
 
 #toc li::before {
   content: " ";
-  display: none; }
+  display: none;
+}
 
 /* https://github.com/metanorma/metanorma-bipm/issues/47 */
-ol[class="alphabet"] {
-  counter-reset: alphabet; }
+ol[class=alphabet] {
+  counter-reset: alphabet;
+}
 
-ol[class="roman"] {
-  counter-reset: roman; }
+ol[class=roman] {
+  counter-reset: roman;
+}
 
-ol[class="alphabet"] ol[class="alphabet"] {
-  counter-reset: none; }
+ol[class=alphabet] ol[class=alphabet] {
+  counter-reset: none;
+}
 
-ol[class="alphabet"] > li {
+ol[class=alphabet] > li {
   list-style: none;
-  position: relative; }
+  position: relative;
+}
 
-ol[class="alphabet"] ol[class="alphabet"] > li {
-  list-style: inherit; }
+ol[class=alphabet] ol[class=alphabet] > li {
+  list-style: inherit;
+}
 
-ol[class="alphabet"] > li::before {
+ol[class=alphabet] > li::before {
   counter-increment: alphabet;
   content: counter(alphabet, lower-alpha) ") ";
   position: absolute;
-  left: -1.4em; }
+  left: -1.4em;
+}
 
-ol[class="alphabet"] ol[class="alphabet"] > li::before {
+ol[class=alphabet] ol[class=alphabet] > li::before {
   counter-increment: none;
-  content: initial; }
+  content: initial;
+}
 
-ol[class="roman"] ol[class="roman"] {
-  counter-reset: none; }
+ol[class=roman] ol[class=roman] {
+  counter-reset: none;
+}
 
-ol[class="roman"] > li {
+ol[class=roman] > li {
   list-style: none;
-  position: relative; }
+  position: relative;
+}
 
-ol[class="roman"] ol[class="roman"] > li {
-  list-style: inherit; }
+ol[class=roman] ol[class=roman] > li {
+  list-style: inherit;
+}
 
-ol[class="roman"] > li::before {
+ol[class=roman] > li::before {
   counter-increment: roman;
   content: "(" counter(roman, lower-roman) ") ";
   position: absolute;
-  left: -2.0em; }
+  left: -2em;
+}
 
-ol[class="roman"] ol[class="roman"] > li::before {
+ol[class=roman] ol[class=roman] > li::before {
   counter-increment: none;
-  content: initial; }
+  content: initial;
+}
 
 /*
     3.4 Rules
@@ -702,14 +995,16 @@ ol[class="roman"] ol[class="roman"] > li::before {
   width: 100%;
   height: 1px;
   background-color: #0e1a85;
-  margin: 2em 0; }
+  margin: 2em 0;
+}
 
 /*
     3.5 Bibliograhy
 */
 p.Biblio, p.NormRef {
   margin-top: 1em;
-  margin-left: 2em; }
+  margin-left: 2em;
+}
 
 /*
     3.6 Source Code + figures
@@ -722,39 +1017,46 @@ pre,
   line-height: 1.6em;
   padding: 1.5em;
   margin: 2em 0 1em 0;
-  overflow: auto; }
-  .figure .SourceTitle,
-  pre .SourceTitle,
-  .pseudocode .SourceTitle {
-    font-weight: 700;
-    font-size: 1em;
-    text-align: center; }
+  overflow: auto;
+}
+.figure .SourceTitle,
+pre .SourceTitle,
+.pseudocode .SourceTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
 
 pre {
   font-family: "Space Mono",monospace;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 .AdmonitionTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .RecommendationTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .ListTitle {
   font-weight: 700;
   font-size: 1em;
   text-align: center;
-  text-align: left; }
+  text-align: left;
+}
 
 .FigureTitle,
 .SourceTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 /*
     3.7 Notes
@@ -763,9 +1065,11 @@ pre {
   background-color: #fff495;
   color: #47430c;
   padding: 1.2em;
-  margin: 1em 0 1em 0; }
-  .Note p {
-    margin: 0; }
+  margin: 1em 0 1em 0;
+}
+.Note p {
+  margin: 0;
+}
 
 /*
     3.8 Examples
@@ -776,18 +1080,23 @@ pre {
   margin: 2em 0 1em 0;
   text-align: left;
   color: #424242;
-  padding-left: 2.7em; }
-  .example p {
-    margin: 0; }
-  .example .example-title {
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-left: -1.5em; }
-  .example .example-title {
-    margin-top: 0; }
-  .example pre,
-  .example .pseudocode {
-    background: none; }
+  padding-left: 2.7em;
+}
+.example p {
+  margin: 0;
+}
+.example .example-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: -1.5em;
+}
+.example .example-title {
+  margin-top: 0;
+}
+.example pre,
+.example .pseudocode {
+  background: none;
+}
 
 /*
     3.9 Tables
@@ -798,29 +1107,36 @@ table {
   margin: 1em 0 2em 0;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 2em; }
-  table, table th, table td {
-    border: 1px solid black;
-    font-size: 0.95em; }
-  table th, table td {
-    padding: 1em; }
-  table td.header {
-    font-weight: 400; }
+  padding-right: 2em;
+}
+table, table th, table td {
+  border: 1px solid black;
+  font-size: 0.95em;
+}
+table th, table td {
+  padding: 1em;
+}
+table td.header {
+  font-weight: 400;
+}
 
 p.TableTitle {
   text-align: center;
   margin-top: 2.5em;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 /*
   3.10 Footnotes
 */
 a.footnote-number {
   vertical-align: super;
-  font-size: 0.8em; }
+  font-size: 0.8em;
+}
 
 .footnote {
-  font-size: 0.9em; }
+  font-size: 0.9em;
+}
 
 /*
     3.11 Blockquotes
@@ -832,7 +1148,8 @@ a.footnote-number {
   padding: 1.5em;
   margin-top: 2em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 /*
     3.12 Formulas
@@ -841,7 +1158,8 @@ a.footnote-number {
   background-color: #f7f7f7;
   padding: 1.5em;
   margin-top: 2em;
-  text-align: center; }
+  text-align: center;
+}
 
 /*
     3.13 Contact Info
@@ -853,41 +1171,49 @@ a.footnote-number {
   text-align: left;
   border: #6C734A solid 2px;
   color: #6C734A !important;
-  border-radius: 25px; }
+  border-radius: 25px;
+}
 
 .contact-info a,
 .contact-info a:hover {
-  color: #6C734A; }
+  color: #6C734A;
+}
 
 .contact-info p, .contact-info a {
   font-family: "Space Mono",monospace;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 .contact-info .name {
   font-weight: 700;
   font-size: 1.2em;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 .contact-info .address {
   font-size: 1em;
   line-height: 1.3em;
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 /*
     Keywords
 */
 span.keyword {
-  font-weight: 600; }
+  font-weight: 600;
+}
 
 /*
     Paragraphs
 */
 p {
   margin-top: 1em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+}
 
 h2 p, .h2 p {
-  display: inline; }
+  display: inline;
+}
 
 /*
     4.0 Page header
@@ -897,24 +1223,28 @@ h2 p, .h2 p {
 */
 .icon-svg {
   width: 100%;
-  color: #5ecf86; }
+  color: #5ecf86;
+}
 
 .wrapper-top {
   background: linear-gradient(200deg, #007864, #6C734A);
   color: #ffffff;
   padding: 2em 0;
-  width: 100%; }
+  width: 100%;
+}
 
 .wrapper-top-bottom {
   width: 0;
   height: 0;
   border-top: 100px solid #6C734A;
   border-right: 100px solid transparent;
-  position: absolute; }
+  position: absolute;
+}
 
 .doc-number {
   font-size: 0.5em;
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 .coverpage-title {
   padding-bottom: 0.5em;
@@ -924,53 +1254,65 @@ h2 p, .h2 p {
   font-weight: 100;
   padding-left: 1em;
   padding-right: 1em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .WordSection11 {
-  padding: 0 2em 0 3em; }
+  padding: 0 2em 0 3em;
+}
 
 .info-section {
-  padding: 0 2em 0 5em; }
+  padding: 0 2em 0 5em;
+}
 
 .prefatory-section {
-  padding: 0 3em 0 6em; }
+  padding: 0 3em 0 6em;
+}
 
 .zzSTDTitle1, .MsoCommentText {
-  display: none; }
+  display: none;
+}
 
 .coverpage {
   text-align: center;
-  padding-left: 1.5em; }
+  padding-left: 1.5em;
+}
 
 .coverpage-logo span, .coverpage-tc-name span {
   font-family: Times New Roman;
   text-transform: none;
-  font-weight: 300; }
+  font-weight: 300;
+}
 
 .coverpage-tc-name {
   font-size: 1.2em;
   line-height: 1.2em;
-  margin: 0.25em 0; }
+  margin: 0.25em 0;
+}
 
 /*
     4.2 Document Identity
 */
 .coverpage-doc-identity {
   font-size: 2em;
-  line-height: 2em; }
+  line-height: 2em;
+}
 
 .coverpage-title .title-second {
-  font-size: 0.8em; }
+  font-size: 0.8em;
+}
 
 .coverpage-title .title-third {
-  font-size: 0.6em; }
+  font-size: 0.6em;
+}
 
 .coverpage-stage-block {
   font-family: Times New Roman;
   font-weight: 600;
   font-size: 1.25em;
   margin: 2em 0em 2em 0em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 /*
     4.3 Draft Warning
@@ -981,13 +1323,15 @@ h2 p, .h2 p {
   margin: 1em 2em;
   color: #485094;
   padding: 2em 1em 1em 1em;
-  border-radius: 25px; }
+  border-radius: 25px;
+}
 
 .coverpage-warning .title {
   font-family: Times New Roman;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+}
 
 /*
     4.4 Copyright
@@ -995,7 +1339,8 @@ h2 p, .h2 p {
 .copyright {
   padding: 1em;
   font-size: 0.9em;
-  text-align: left; }
+  text-align: left;
+}
 
 /*  .copyright .name, .copyright .address {color: #485094;} */
 /*
@@ -1021,62 +1366,84 @@ To top button
   cursor: pointer;
   padding: 10px 15px 10px 15px;
   border-radius: 4px;
-  text-transform: uppercase; }
-  #myBtn:hover {
-    opacity: 1; }
-  @media print {
-    #myBtn {
-      display: none; } }
-  #myBtn a.anchorjs-link:hover {
-    background: none;
-    color: #485094;
-    box-shadow: none; }
+  text-transform: uppercase;
+}
+#myBtn:hover {
+  opacity: 1;
+}
+@media print {
+  #myBtn {
+    display: none;
+  }
+}
+#myBtn a.anchorjs-link:hover {
+  background: none;
+  color: #485094;
+  box-shadow: none;
+}
 
 @page {
-  margin: 2cm 1cm; }
-
+  margin: 2cm 1cm;
+}
 @media print {
   .document-info, nav, .copyright {
-    page-break-before: always; }
+    page-break-before: always;
+  }
   h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
     page-break-after: avoid;
-    margin-top: 1.2em; }
+    margin-top: 1.2em;
+  }
   .note, .figure, pre, .pseudocode, table {
-    page-break-inside: avoid; }
+    page-break-inside: avoid;
+  }
   .info-section {
-    display: none; }
+    display: none;
+  }
   .coverpage {
-    height: 23cm; }
+    height: 23cm;
+  }
   .wrapper-top {
     top: 0;
     padding-top: 4cm;
-    padding-bottom: 4cm; }
+    padding-bottom: 4cm;
+  }
   .wrapper-top-bottom {
-    margin-top: -5px; }
+    margin-top: -5px;
+  }
   #toggle, .document-stage-band,
   .document-type-band, button#myBtn {
-    display: none; }
+    display: none;
+  }
   .container {
-    padding-left: 0; }
+    padding-left: 0;
+  }
   h1.content, .h1.content {
     margin-top: 2em;
-    line-height: 2.5em; }
+    line-height: 2.5em;
+  }
   h1, .h1 {
     font-size: 1.5em;
-    line-height: 1.5; }
+    line-height: 1.5;
+  }
   h2, .h2 {
-    font-size: 1.2em; }
+    font-size: 1.2em;
+  }
   h3, .h3 {
-    font-size: 1em; }
+    font-size: 1em;
+  }
   .Note {
     background-color: #fff495;
     color: #47430c;
     padding: 5px;
-    margin: 2em 0 1em 0; }
+    margin: 2em 0 1em 0;
+  }
   .Note p {
-    padding: 0 5px 0 5px; }
+    padding: 0 5px 0 5px;
+  }
   .wrapper-top-bottom {
-    display: none; } }
+    display: none;
+  }
+}
 
 -->
 </style><style><!--pre.sourcecode table td { padding: 5px; }
@@ -1156,6 +1523,10 @@ pre.sourcecode .nt {
       <span class="docnumber">BIPM 203</span>
       <span class="docnumber-separator">:</span>
       <span class="docyear">1974 </span>
+      
+      
+      <br />Date: 11-1974
+      
     </div>
 
     <div class="coverpage-logo">
@@ -1184,8 +1555,10 @@ pre.sourcecode .nt {
   
   <div class="coverpage-tc-name">
     
-    <span>Jörg W. Müller ().
-  </span>
+    <span>Jörg W. Müller</span>.
+  </div>
+  
+
   
 
   
@@ -1207,24 +1580,21 @@ pre.sourcecode .nt {
 <div class="copyright">
 <div class="boilerplate-copyright">
 
-<div id="_32010096-f0a9-4559-f0f4-b7a46b7f0803">
-<p id="_d3a4fcbe-e5dd-e970-17a1-c7a8b1c8bc8b" style="text-align:center;">© Bureau international des poids et mesures 1974 tous droits réservés</p>
+<div id="_c9e01459-a635-e157-66e0-6f1961efdd38">
+<p id="_17369435-6f8c-f3f8-48a6-d56627754a0b" style="text-align:center;">© Bureau international des poids et mesures 1974 tous droits réservés</p>
 </div>
 </div>
   <div class="boilerplate-license">
 
-<div id="_note_concernant_les_droits_dauteur"><h1 class="IntroTitle">Note concernant les droits d’auteur</h1>
+<div id="_66bc7fdf-ce17-4707-14ba-daf27e199f02"><h1 class="IntroTitle"><a class="anchor" href="#_66bc7fdf-ce17-4707-14ba-daf27e199f02"></a><a class="header" href="#_66bc7fdf-ce17-4707-14ba-daf27e199f02">Note concernant les droits d’auteur</a></h1>
 
-<p id="_d1c56d2a-d19b-3b51-69f9-3c29ac9390f4">Ce document est distribué selon les termes et conditions de la licence Creative Commons Attribution 4.0 International (<a href="http://creativecommons.org/licenses/by/4.0/:">http://creativecommons.org/licenses/by/4.0/:</a>), qui permet l’utilisation sans restriction, la distribution et la reproduction sur quelque support que soit, sous réserve de mentionner dûment l’auteur ou les auteurs originaux ainsi que la source de l’œuvre, d’intégrer un lien vers la licence Creative Commons et d’indiquer si des modifications ont été effectuées.</p>
+<p id="_661d6a7a-cf98-57a5-30fe-ede6dd8af914">Ce document est distribué selon les termes et conditions de la licence Creative Commons Attribution 4.0 International (<a href="http://creativecommons.org/licenses/by/4.0/:">http://creativecommons.org/licenses/by/4.0/:</a>), qui permet l’utilisation sans restriction, la distribution et la reproduction sur quelque support que soit, sous réserve de mentionner dûment l’auteur ou les auteurs originaux ainsi que la source de l’œuvre, d’intégrer un lien vers la licence Creative Commons et d’indiquer si des modifications ont été effectuées.</p>
 </div>
 </div>
   <div id="boilerplate-legal-destination"></div>
 <div class="boilerplate-feedback">
 
-<p id="_e6428749-2432-0772-4c8e-ed6c34018916">BIPM<br />
-Pavillon de Breteuil<br />
-F-92312 Sèvres Cedex<br />
-FRANCE</p>
+<p id="_5926bc3f-b367-69e7-6cc6-442a91e32db2">BIPM<br /> Pavillon de Breteuil<br /> F-92312 Sèvres Cedex<br /> FRANCE</p>
 </div>
 </div>
 
@@ -1234,8 +1604,11 @@ FRANCE</p>
 
 
 </div>
-</div></header></div><br /><div class="prefatory-section"><nav>
-  <div id="toc"><h1 class="IntroTitle">Table des matières</h1><ul><li class="h1"><a href="#_2d78f4e1-582a-4bb7-b5c1-546f6ab2af54">      1.  Densité d’intervalles pour deux oscillateurs superposés à largeurs finies d’impulsions</a></li></ul></div>
+</header></div><br /><div class="prefatory-section"><nav>
+  <div id="toc"><h1 class="IntroTitle"><a class="anchor" href="#_9b5ce5a4-563f-688d-fa6f-a3bd14838fe7"></a><a class="header" href="#_9b5ce5a4-563f-688d-fa6f-a3bd14838fe7">Table des matières</a></h1><ul><li class="h1"><a href="#_6a388288-d990-98b1-0846-e4b2db0e74e7">      
+  
+  1.  Densité d’intervalles pour deux oscillateurs superposés à largeurs finies d’impulsions
+</a></li></ul></div>
 
 </nav>
 
@@ -1246,19 +1619,19 @@ FRANCE</p>
 
 
 
-</div><br /><div id="_densit__xe9__dintervalles_pour_deux_oscillateurs_superpos__xe9_s___xe0__largeurs_finies_dimpulsions"><h1 id="_2d78f4e1-582a-4bb7-b5c1-546f6ab2af54">1.  Densité d’intervalles pour deux oscillateurs superposés à largeurs finies d’impulsions</h1><p id="_303a2755-330c-0deb-dd99-58e214b0571d">Il ya quelque temps déjà que J.-J. Gostely (E.P.F.L., Lausanne) nous a communiqué le résultat d’une étude qui est en relation étroite avec la méthode dite des deux oscillateurs pour déterminer un temps mort. Mr Gostely a fort justement remarqué que la simple distribution rectangulaire pour la répartition d’intervalles, que l’on a pris l’habitude d’admettre, n’est valable que si l’on peut négliger la,largeur a des impulsions par rapport à la durée du temps mort <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</div><br /><div id="_6a388288-d990-98b1-0846-e4b2db0e74e7"><h1 id="_2d132718-b7d5-42c6-9b0f-8f71bda27619"><a class="anchor" href="#_6a388288-d990-98b1-0846-e4b2db0e74e7"></a><a class="header" href="#_6a388288-d990-98b1-0846-e4b2db0e74e7">1.  Densité d’intervalles pour deux oscillateurs superposés à largeurs finies d’impulsions</a></h1><p id="_f8874222-03ae-7e58-58ee-6e03bf648f81">Il ya quelque temps déjà que J.-J. Gostely (E.P.F.L., Lausanne) nous a communiqué le résultat d’une étude qui est en relation étroite avec la méthode dite des deux oscillateurs pour déterminer un temps mort. Mr Gostely a fort justement remarqué que la simple distribution rectangulaire pour la répartition d’intervalles, que l’on a pris l’habitude d’admettre, n’est valable que si l’on peut négliger la,largeur a des impulsions par rapport à la durée du temps mort <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>τ</mi>
     </mstyle>
   </mstyle>
-</math></span> que l’on veut déterminer. Si cette contrainte n’est pas respectée, la mesure risque d’être faussée systématiquement.</p><p id="_6d210955-a09d-0ff1-29ee-e836ab0a09cc">En effet, la largeur finie des impulsions entraîne des pertes puisque dans le processus superposé deux impulsions (provenant d’oscillateurs différents) ne sont comptées individuellement que si l’intervalle qui les sépare dépasse cette largeur. Il a donc un effet semblable à celui d’un temps mort. Pour la mesure de <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> que l’on veut déterminer. Si cette contrainte n’est pas respectée, la mesure risque d’être faussée systématiquement.</p><p id="_d995f8d5-620c-5947-4d20-e42fe527f01a">En effet, la largeur finie des impulsions entraîne des pertes puisque dans le processus superposé deux impulsions (provenant d’oscillateurs différents) ne sont comptées individuellement que si l’intervalle qui les sépare dépasse cette largeur. Il a donc un effet semblable à celui d’un temps mort. Pour la mesure de <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>τ</mi>
     </mstyle>
   </mstyle>
-</math></span>, on se trouve alors dans une situation qui ressemble beaucoup au cas de deux temps morts successifs et qui risque d’être assez compliquée. Il faut donc se demander si ce phénomène met en doute l’exactitude très élevée que l’on avait attribuée à cette méthode de mesure.</p><p id="_18d5eb5e-721b-c4cb-6cbd-edaaac433e32">A vrai dire, ce détail ne nous avait pas tout à fait échappé quand la méthode fut proposée. Cependant, quelques raisonnements simples, confirmés par des, calculs, nous ont convaincu que, dans les conditions appliquées aux mesures réelles, la largeur des impulsions ne devrait avoir aucune influence sur les’ résultats et que ce serait seulement pour un temps mort comparable ou plutôt inférieur à la largeur a que celle-ci fausserait les valeurs déduites pour <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>, on se trouve alors dans une situation qui ressemble beaucoup au cas de deux temps morts successifs et qui risque d’être assez compliquée. Il faut donc se demander si ce phénomène met en doute l’exactitude très élevée que l’on avait attribuée à cette méthode de mesure.</p><p id="_e7ea8a8f-e563-50de-67b2-e0e1de0a3d8b">A vrai dire, ce détail ne nous avait pas tout à fait échappé quand la méthode fut proposée. Cependant, quelques raisonnements simples, confirmés par des, calculs, nous ont convaincu que, dans les conditions appliquées aux mesures réelles, la largeur des impulsions ne devrait avoir aucune influence sur les’ résultats et que ce serait seulement pour un temps mort comparable ou plutôt inférieur à la largeur a que celle-ci fausserait les valeurs déduites pour <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>τ</mi>
@@ -1270,7 +1643,7 @@ FRANCE</p>
       <mi>τ</mi>
     </mstyle>
   </mstyle>
-</math></span> dépasse toujours une microseconde, il ne devrait pas y avoir de danger réel. L’autre zone périlleuse, celle où le temps mort se rapproche de l’inverse de la fréquence la plus élevée, peut être facilement évitée par une réduction des fréquences utilisées.</p><p id="_03cd1131-964c-5535-0f90-50236d8a21ad">Néanmoins, il faut avouer que les problèmes liés à la largeur finie des impulsions n’ont jamais été traités dans tous les détails et, puisqu’on est bien souvent surpris de constater comme il est facile de commettre des erreurs dans ce genre de raisonnement, un léger doute ne pouvait être écarté complètement. C’est pourquoi le calcul de la répartition des intervalles pour le processus superposé, où la largeur des impulsions a été prise en considération de façon rigoureuse, vient fort à propos. Le résultat de Mr Gostely pour la densité des intervalles est</p><div id="_4b81d00c-674d-4fab-730b-b292815afa8b"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> dépasse toujours une microseconde, il ne devrait pas y avoir de danger réel. L’autre zone périlleuse, celle où le temps mort se rapproche de l’inverse de la fréquence la plus élevée, peut être facilement évitée par une réduction des fréquences utilisées.</p><p id="_fe0b9e3b-61df-cc1f-599b-62be0efb4d2e">Néanmoins, il faut avouer que les problèmes liés à la largeur finie des impulsions n’ont jamais été traités dans tous les détails et, puisqu’on est bien souvent surpris de constater comme il est facile de commettre des erreurs dans ce genre de raisonnement, un léger doute ne pouvait être écarté complètement. C’est pourquoi le calcul de la répartition des intervalles pour le processus superposé, où la largeur des impulsions a été prise en considération de façon rigoureuse, vient fort à propos. Le résultat de Mr Gostely pour la densité des intervalles est</p><div id="_f9eec3b2-a5af-295f-8258-989a8c88bbad"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mi>f</mi>
     <mrow>
@@ -1346,7 +1719,7 @@ FRANCE</p>
       <mo></mo>
     </mrow>
   </mstyle>
-</math></span></p></div></div><div id="_f4ededdc-ca75-e792-b5a5-1a42817f02ab"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><div id="_50de2590-d057-d0dd-ba87-d7fdd1061464"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mo>+</mo>
     <mstyle mathvariant="italic">
@@ -1428,7 +1801,7 @@ FRANCE</p>
     <mo>]</mo>
     <mo>,</mo>
   </mstyle>
-</math></span></p></div></div><p id="_49be1890-0384-2081-429e-7d1a6181d878">où <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_d33f0854-4612-95d5-760c-7c3137a36f25">où <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1478,7 +1851,7 @@ FRANCE</p>
       <mn>2</mn>
     </msub>
   </mstyle>
-</math></span> les largeurs de leurs impulsions.</p><p id="_9722a9c4-d0b9-2719-fc2b-098b8233260d">On y odmet que</p><div id="_3b45f997-aa53-7981-066e-fa58d8c6c28b"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> les largeurs de leurs impulsions.</p><p id="_626b7e09-d611-e7bd-649d-3e3ad0eae15f">On y odmet que</p><div id="_cb9aace0-81d7-ec9f-f015-650783367541"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mn>2</mn>
     <msub>
@@ -1520,7 +1893,7 @@ FRANCE</p>
     </msub>
     <mo>.</mo>
   </mstyle>
-</math></span></p></div></div><p id="_c1755d6e-65fb-9683-ca41-5f55200a3c07">L’allure de cette densité est représentée sur la <a href="#fig1">figure 1</a> {où l’on suppose <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_cef2a021-91f8-9322-16a3-cae7c0c11789">L’allure de cette densité est représentée sur la <a href="#fig1">figure 1</a> {où l’on suppose <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>a</mi>
@@ -1532,7 +1905,7 @@ FRANCE</p>
       <mn>2</mn>
     </msub>
   </mstyle>
-</math></span>).</p><p id="_4fc8145a-b27b-530e-31e1-2e84146cb9ce">A première vue, cette distribution peut surprendre, car elle est assez différente de la simple forme rectangulaire (de 0 à <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>).</p><p id="_7085cd51-7964-e2b5-8b9e-e747f961058f">A première vue, cette distribution peut surprendre, car elle est assez différente de la simple forme rectangulaire (de 0 à <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1564,7 +1937,7 @@ FRANCE</p>
       <mn>2</mn>
     </msub>
   </mstyle>
-</math></span> y ont été fortement exagérés.</p><p id="_06b48d1a-39c2-38ca-fa32-75e8d8ab2066">Puisque Mr Gostely ne nous a pas indiqué comment il a obtenu le résultat pour la densité <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> y ont été fortement exagérés.</p><p id="_7250a138-9bb8-a249-dc67-4192f24ad8f2">Puisque Mr Gostely ne nous a pas indiqué comment il a obtenu le résultat pour la densité <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>f</mi>
     <mrow>
@@ -1573,7 +1946,7 @@ FRANCE</p>
       <mo>)</mo>
     </mrow>
   </mstyle>
-</math></span>, notre première tâche était de la dériver indépendamment. En utilisant largement des notes qui remontent dans leur maiorité à 1968/69, ce premier but n’était pas trop dur à atteindre. En effet, le résultat de Gostely s’est bien confirmé.</p><p id="_8d49423a-3655-6901-5491-6d2f598f90f0">En admettant que <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>, notre première tâche était de la dériver indépendamment. En utilisant largement des notes qui remontent dans leur maiorité à 1968/69, ce premier but n’était pas trop dur à atteindre. En effet, le résultat de Gostely s’est bien confirmé.</p><p id="_f948ab70-bec5-0685-650a-15f2091057cf">En admettant que <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1608,7 +1981,7 @@ FRANCE</p>
       <mn>2</mn>
     </msub>
   </mstyle>
-</math></span>, la formule suivante:</p><div id="_ecd78215-7d8c-51a5-882a-0c2269f6907e"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>, la formule suivante:</p><div id="_0938fb07-0510-1301-d8e1-e48b2515a3f5"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mrow>
       <mo>(</mo>
@@ -1961,7 +2334,7 @@ FRANCE</p>
       <mn>2</mn>
     </msub>
   </mstyle>
-</math></span></p></div><dl id="_d99a175e-51cf-33c2-61ef-1bfbea7381b7"><dt><p>où</p></dt><dd><p id="_b1cbd66b-429b-32ef-ff28-83aed6f16277"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div><div class="figdl"><dl id="_bd64a118-f7c7-89b3-c9e7-776d3c55f4fe"><dt><p>où</p></dt><dd id="_14ae0b56-b372-47fe-cbb3-36e53a33c369"><p id="_a97d152d-6af7-5c51-a517-df64fb994e76"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1969,7 +2342,7 @@ FRANCE</p>
       </mstyle>
       <mo>+</mo>
     </msub>
-    <mo>≡</mo>
+    <mi>≡</mi>
     <mtext>Max</mtext>
     <mrow>
       <mo>(</mo>
@@ -2003,7 +2376,7 @@ FRANCE</p>
       </mstyle>
       <mo>−</mo>
     </msub>
-    <mo>≡</mo>
+    <mi>≡</mi>
     <mtext>Min</mtext>
     <mrow>
       <mo>(</mo>
@@ -2029,13 +2402,13 @@ FRANCE</p>
     </mrow>
   </mstyle>
 </math></span></p>
-</dd></dl><dl id="_12f3c430-e2b8-cddd-3d05-e3377cc0811b"><dt><p>et</p></dt><dd><p id="_d9c45685-c9da-4df0-eece-5543fd65eb91"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</dd></dl></div><div class="figdl"><dl id="_7ddeff82-758e-6306-0629-871ec85ec813"><dt><p>et</p></dt><dd id="_33f5e663-bf61-13f5-536b-a42e65ea5259"><p id="_6ec7e4bf-cff8-73a5-64a7-1881f795f147"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>a</mi>
       <mo>+</mo>
     </msub>
-    <mo>≡</mo>
+    <mi>≡</mi>
     <mtext>Max</mtext>
     <mrow>
       <mo>(</mo>
@@ -2058,7 +2431,7 @@ FRANCE</p>
       <mi>a</mi>
       <mo>−</mo>
     </msub>
-    <mo>≡</mo>
+    <mi>≡</mi>
     <mtext>Min</mtext>
     <mrow>
       <mo>(</mo>
@@ -2075,7 +2448,7 @@ FRANCE</p>
     </mrow>
   </mstyle>
 </math></span>.</p>
-</dd></dl><p id="_9fdbe220-6db5-4dc1-82c2-b2e66a88932e">Pour <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</dd></dl></div><p id="_3a42f977-8e84-ee0b-315d-9cf315ad6431">Pour <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>a</mi>
@@ -2095,7 +2468,7 @@ FRANCE</p>
     <mo>/</mo>
     <mn>2</mn>
   </mstyle>
-</math></span>, le taux de comptage du processus superposé est taujours donné par</p><div id="_ae1dba46-1ea2-342e-a263-5724b3a26c44"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>, le taux de comptage du processus superposé est taujours donné par</p><div id="_c04d39c2-c370-4e96-006c-13daefd6df93"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mstyle mathvariant="italic">
       <mi>ν</mi>
@@ -2142,7 +2515,7 @@ FRANCE</p>
     </msub>
     <mo>.</mo>
   </mstyle>
-</math></span></p></div></div><p id="_66637ad4-f459-3a2c-555a-99bc353274f9">Alors que pour le cos normal, où <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_a713d8ec-658c-53ce-e747-1cf8d053d465">Alors que pour le cos normal, où <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -2184,7 +2557,7 @@ FRANCE</p>
       <mn>2</mn>
     </msub>
   </mstyle>
-</math></span> peut être assez différente; on en trouve un exemple dans la <a href="#fig2">figure 2</a>.</p><p id="_40f7e2f4-3a22-bfb5-d14a-f156d4c3ab36">La dérivation de la formule générale, bien que tout élémentaire, serait cependant trop longue pour être indiquée ici; les raisonnements détaillés seront décrits dans un petit rapport à part qui est en préparation.</p><p id="_237a6348-731a-36bd-4013-0d105f525c2f">Or, il faut se rendre compte que tout ceci n’est que le prélude inévitable à notre problème principal, qui n’est pas le calcul de <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> peut être assez différente; on en trouve un exemple dans la <a href="#fig2">figure 2</a>.</p><p id="_f6220698-0cb6-f2a9-e5b9-34480f9dd466">La dérivation de la formule générale, bien que tout élémentaire, serait cependant trop longue pour être indiquée ici; les raisonnements détaillés seront décrits dans un petit rapport à part qui est en préparation.</p><p id="_43cbbdac-7b18-63ef-c32e-87f1722bd473">Or, il faut se rendre compte que tout ceci n’est que le prélude inévitable à notre problème principal, qui n’est pas le calcul de <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>f</mi>
     <mrow>
@@ -2214,7 +2587,7 @@ FRANCE</p>
       <mi>τ</mi>
     </mstyle>
   </mstyle>
-</math></span>. Pour cette deuxième partie du problème, une solution générale est plus difficile à trouver que pour la première. Bien qu’un grand travail reste à faire, les résultats essentiels (et les plus intéressants) sont déjà bien établis.</p><p id="_41f33707-7e18-2b19-c9d3-8691112128da">En principe, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>. Pour cette deuxième partie du problème, une solution générale est plus difficile à trouver que pour la première. Bien qu’un grand travail reste à faire, les résultats essentiels (et les plus intéressants) sont déjà bien établis.</p><p id="_412a79b4-6876-103a-1821-a091fb0e9bfe">En principe, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -2251,7 +2624,7 @@ FRANCE</p>
     <mo>=</mo>
     <mn>0</mn>
   </mstyle>
-</math></span>. Heureusement, ce travail de forçat peut être largement évité, au moins pour l’esse ntiel des réponses.</p><p id="_0fa8925f-7d50-0ef9-da76-fab61e4c3012">Comme dans des situations semblables, c’est de nouveau le temps mort du type cumulatif qui se prête le mieux à un traitement rigoureux. En effet, dans ce cas on a</p><div id="_893165a1-4ed6-3ae7-ea84-dd5541e9f486"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>. Heureusement, ce travail de forçat peut être largement évité, au moins pour l’esse ntiel des réponses.</p><p id="_756d5a8b-e194-839f-84b7-4d7fba2a4805">Comme dans des situations semblables, c’est de nouveau le temps mort du type cumulatif qui se prête le mieux à un traitement rigoureux. En effet, dans ce cas on a</p><div id="_8f753db3-8e38-d58f-3908-42000b5c5dd0"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mstyle mathvariant="italic">
@@ -2288,7 +2661,7 @@ FRANCE</p>
     </mrow>
     <mo>.</mo>
   </mstyle>
-</math></span></p></div></div><p id="_dc30491e-aca8-5f3f-e435-e4524827accf">Considérons maintenant le domaine principal pour le temps mort qui est délimité par</p><div id="_77a9eda4-9f3b-a56f-58b3-3f580f943aa0"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_2a4bb321-ee03-24b4-17bf-ee0f2b4c34ef">Considérons maintenant le domaine principal pour le temps mort qui est délimité par</p><div id="_8f090d5d-fced-941a-850a-3175f56573b0"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mi>a</mi>
@@ -2312,7 +2685,7 @@ FRANCE</p>
     </msub>
     <mo>.</mo>
   </mstyle>
-</math></span></p></div></div><p id="_4de2c044-8520-ff45-dd93-5841e8aa8aa9">On trouve dans ces conditions</p><div id="_05597848-128e-c427-cf6c-e41bcbd94a79"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_810fb622-e61c-b630-d19c-46827b4fd6a3">On trouve dans ces conditions</p><div id="_d8175233-bf88-e4ec-4455-56231c6eb1af"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mrow>
       <msubsup>
@@ -2386,7 +2759,7 @@ FRANCE</p>
     </mfrac>
     <mo>,</mo>
   </mstyle>
-</math></span></p></div></div><p id="_31cb2278-e1d8-88b9-a78b-82e8ad2f0d26">d’où découle</p><div id="_58c56967-60c3-eac5-a664-534c11c25337"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_333eeb6e-2a66-38ad-e826-2a24213afa23">d’où découle</p><div id="_3fea4ea4-52b4-87fd-a780-5b2129c269ef"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mstyle mathvariant="italic">
@@ -2451,7 +2824,7 @@ FRANCE</p>
     </mrow>
     <mo>.</mo>
   </mstyle>
-</math></span></p></div></div><p id="_09e7d701-888b-03ca-d50e-babf23c6b5b3">En remplaçant <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_744fb466-5f97-5a58-9bcc-ec5f34e20a31">En remplaçant <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -2479,7 +2852,7 @@ FRANCE</p>
       </mrow>
     </msub>
   </mstyle>
-</math></span> on obtient, après quelques réarrangements,</p><div id="_899c20c8-68da-23a6-eba6-5c8d2f428970"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> on obtient, après quelques réarrangements,</p><div id="_da175864-6b8b-af97-2d58-87c4ed67c614"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mstyle mathvariant="italic">
@@ -2521,13 +2894,13 @@ FRANCE</p>
     </msub>
     <mo>.</mo>
   </mstyle>
-</math></span></p></div></div><p id="_cf0ed409-2b34-8c84-822e-3d275c8a7189">Or, cette simple formule nous est bien familière; car elle est identique à celle qui avait été établie pour <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_c39d6702-61fc-e4e1-0502-57e7aae6ba1a">Or, cette simple formule nous est bien familière; car elle est identique à celle qui avait été établie pour <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>a</mi>
     <mo>=</mo>
     <mn>0</mn>
   </mstyle>
-</math></span> (voir Rapport BIPM-69/3 ou 69/11). Ce résultat est précieux car il nous garantit — au moins pour un temps mort cumulatif — que l’influence due à la largeur finie des impulsions se limite aux cas où</p><div id="_498caaf7-d411-6894-4981-617d5a1f5f1b"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> (voir Rapport BIPM-69/3 ou 69/11). Ce résultat est précieux car il nous garantit — au moins pour un temps mort cumulatif — que l’influence due à la largeur finie des impulsions se limite aux cas où</p><div id="_c4140ae4-572c-bc2c-d49d-04d7522027aa"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mstyle mathvariant="italic">
       <mi>τ</mi>
@@ -2562,13 +2935,13 @@ FRANCE</p>
     </msub>
     <mo>,</mo>
   </mstyle>
-</math></span></p></div></div><p id="_ed9fe2aa-7145-6f4a-b98e-0d7dec83de3f">tandis que le domaine habituel pour <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_dba6e0fb-e502-7d1b-b12e-d46dca5484c8">tandis que le domaine habituel pour <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>τ</mi>
     </mstyle>
   </mstyle>
-</math></span> n’est point affecté.</p><p id="_94c457be-5f79-d6f2-76b6-64e884c0df62">Pour de très petits temps morts (inférieurs aux largeurs des impulsions) on trouve, après un petit calcul analogue, pour le taux de comptage observable</p><div id="_7c295035-40e7-a507-b4bf-dc32524fc53d"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> n’est point affecté.</p><p id="_d5a75218-c668-36e6-02e1-ba402361fa91">Pour de très petits temps morts (inférieurs aux largeurs des impulsions) on trouve, après un petit calcul analogue, pour le taux de comptage observable</p><div id="_183c2ef4-6ba2-ca9c-d56e-c07ebf778d20"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mstyle mathvariant="italic">
@@ -2660,13 +3033,13 @@ FRANCE</p>
       <mo></mo>
     </mrow>
   </mstyle>
-</math></span></p></div></div><p id="_d54b68ad-5934-0d4e-6ff9-43c0c8134617">où <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_95f6fce0-d313-c4ef-706f-2334fa06b4c1">où <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>ν</mi>
     </mstyle>
   </mstyle>
-</math></span> a été donné auparavant.</p><p id="_24fa4df6-199e-b214-1595-dd2eabf2edd4">Quant au cas d’un temps mort non cumulatif, la situation est un peu plus compliquée. Cependant, on peut de nouveau éviter le calcul fastidieux de <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> a été donné auparavant.</p><p id="_aaed3e2e-3a09-d722-7103-2c00f41dff9a">Quant au cas d’un temps mort non cumulatif, la situation est un peu plus compliquée. Cependant, on peut de nouveau éviter le calcul fastidieux de <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>F</mi>
@@ -2749,7 +3122,7 @@ FRANCE</p>
       <mn>3</mn>
     </msub>
   </mstyle>
-</math></span> ne dépend pas du type du temps mort. Un raisonnement semblable permet d’assurer que la relation</p><div id="_fb0a1a16-9121-b02c-61e3-8957f31cb7b5"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> ne dépend pas du type du temps mort. Un raisonnement semblable permet d’assurer que la relation</p><div id="_83306e36-74a7-c312-5a46-feea5cc744e1"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mstyle mathvariant="italic">
@@ -2765,7 +3138,7 @@ FRANCE</p>
       <mn>1</mn>
     </msub>
   </mstyle>
-</math></span></p></div></div><p id="_5f13013f-4a9e-0493-6a34-2c75e6a0418a">reste volable pour un temps mort non cumulatif dont la valeur respecte la contrainte</p><div id="_1f79bcc4-4d65-8913-d445-44a5e5d2289d"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_846360e7-e0e2-762d-8e30-5227eb28ef96">reste volable pour un temps mort non cumulatif dont la valeur respecte la contrainte</p><div id="_0b60d808-df43-4489-cd9c-fec0e2372466"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mstyle mathvariant="italic">
@@ -2793,11 +3166,22 @@ FRANCE</p>
     </msub>
     <mo>.</mo>
   </mstyle>
-</math></span></p></div></div><p id="_4856e33e-1d7b-6744-dadd-b81a6354e5fe">De nouveau, l’influence d’une largeur finie des impulsions se borne donc aux limites extrêmes du domaine attribué auparavant aux voleurs numériques” d’un temps mort, et de ce fait elle ne représente guère un danger réel de fausser les résultats obtenus pour un temps mort par la méthode des deux oscillateurs.</p><p id="_29c4338d-57a6-d369-837c-b82db9db5232">Terminons en félicitant Mr Gostely d’avoir lancé une attaque méritoire vers ce problème un peu ingrat, puisque difficile, long et sans éclat. Néanmoins, le résultat est important car il nous permet de mieux comprendre les détails de la mesure, et en particulier d’être rassuré sur l’exactitude de la méthode telle qu’elle a été utilisée jusqu’à maintenant. Enfin, cette occasion nous a obligé de reprendre quelques anciens calculs pour y apporter un peu plus de clarté et de précision, opération qui a peu d’attrait en elle-même et qu’on préfère par conséquent souvent ne pas entreprendre.</p></div></main><script type="text/x-mathjax-config">
+</math></span></p></div></div><p id="_92be7b04-f260-5f65-74b7-ff7522e82bf6">De nouveau, l’influence d’une largeur finie des impulsions se borne donc aux limites extrêmes du domaine attribué auparavant aux voleurs numériques” d’un temps mort, et de ce fait elle ne représente guère un danger réel de fausser les résultats obtenus pour un temps mort par la méthode des deux oscillateurs.</p><p id="_e57468b4-99d5-c1f8-5adc-d5aa4bbb377c">Terminons en félicitant Mr Gostely d’avoir lancé une attaque méritoire vers ce problème un peu ingrat, puisque difficile, long et sans éclat. Néanmoins, le résultat est important car il nous permet de mieux comprendre les détails de la mesure, et en particulier d’être rassuré sur l’exactitude de la méthode telle qu’elle a été utilisée jusqu’à maintenant. Enfin, cette occasion nous a obligé de reprendre quelques anciens calculs pour y apporter un peu plus de clarté et de précision, opération qui a peu d’attrait en elle-même et qu’on préfère par conséquent souvent ne pas entreprendre.</p></div></main><script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    "HTML-CSS": { preferredFont: "STIX" },
+    "HTML-CSS": {
+      preferredFont: "STIX",
+      linebreaks: {
+        automatic: true,
+        width: "container"  // or specify something like "90%"/"30em"
+      }
+    },
+    MathML: {
+      linebreaks: {
+        automatic: true
+      }
+    },
     asciimath2jax: { delimiters: [['(#(', ')#)']] }
- });
+  });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
   <script>
@@ -2807,26 +3191,40 @@ FRANCE</p>
 });
   </script>
 
-<script>
-  //TOC toggle animation
-$('#toggle').on('click', function(){
-    if( $('nav').is(':visible') ) {
-        $('nav').animate({ 'left': '-353px' }, 'slow', function(){
-            $('nav').hide();
+  <script>
+    //TOC toggle animation
+    (function() {
+      const jqNav = $('nav');
+      const jqBody = $('body');
+      const jqToggle = $('#toggle');
+      const animationSpeed = 'slow';
+
+      jqToggle.on('click', function() {
+        const isNavVisible = jqNav.is(':visible');
+        const fullNavWidth = jqNav.outerWidth();
+        const navLeft = isNavVisible ? '-' + fullNavWidth + 'px' : '0px';
+        const bodyMarginLeft = isNavVisible ? '0px' : fullNavWidth + 'px';
+
+        // Stop current animations
+        jqNav.stop(true, true);
+        jqBody.stop(true, true);
+
+        if(!isNavVisible) {
+            jqNav.show();
+        }
+        jqNav.animate({'left': navLeft}, animationSpeed, function() {
+          if(isNavVisible) {jqNav.hide()}
         });
-        $('.container').animate({ 'padding-left': '31px' }, 'slow');
-    }
-    else {
-        $('nav').show();
-        $('nav').animate({ 'left': '0px' }, 'slow');
-    }
-});
-</script>
+        jqBody.animate({'marginLeft': bodyMarginLeft}, animationSpeed);
+
+      });
+    })();
+  </script>
 
 <script>
     // Scroll to top button
     window.onscroll = function() {scrollFunction()};
-    
+
     function scrollFunction() {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             document.getElementById("myBtn").style.display = "block";
@@ -2834,7 +3232,7 @@ $('#toggle').on('click', function(){
             document.getElementById("myBtn").style.display = "none";
         }
     }
-    
+
     // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
         document.body.scrollTop = 0;
@@ -2842,6 +3240,132 @@ $('#toggle').on('click', function(){
     }
     </script>
 
+<script>
+/*
+  $(document).ready(function() {
+	  $('[id^=toc]').each(function ()
+	  {
+	     var currentToc = $(this);
+       var url = window.location.href;
+            currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "'></a>");
+	  });
+});
+*/
+</script>
+
+  <script>
+    document.querySelectorAll('*|svg a').forEach(function(item) {
+      var loc = item.getAttribute('href');
+      if (loc !== null && loc.startsWith('#')) {
+  item.setAttribute('href', location.pathname + loc);
+      }
+});
+  </script>
+
+
+<script>
+
+// jQuery Inline Footnotes v1.0.3
+// Copyright (c) 2011 Vesa Vänskä, released under the MIT License.
+
+// Generated by CoffeeScript 1.6.1
+(function() {
+
+  (function($) {
+    $.inlineFootnote = function(el, options) {
+      var _this = this;
+      this.el = $(el);
+      this.el.data("inlineFootnote", this);
+      this.initialize = function() {
+        this.options = $.extend({}, $.inlineFootnote.defaultOptions, options);
+        this.footnoteId = this.el.attr("href").match(/#(.*)/)[1];
+        if (this.footnoteId) {
+          this.el.mouseenter(this.openBox);
+          return $("body").mousemove(this.closeBox);
+        }
+      };
+      this.openBox = function(event) {
+        var footnoteContent, linkOffset;
+        if (!_this.box) {
+          footnoteContent = $("[id='" + _this.footnoteId + "']").children().filter(":not('" + _this.options.hideFromContent + "')");
+          linkOffset = _this.el.offset();
+          _this.box = $("<div />", {
+            id: _this.options.boxId,
+            html: footnoteContent.clone().find(_this.options.hideFromContent).remove().end(),
+            css: {
+              position: "absolute",
+              top: linkOffset.top,
+              left: linkOffset.left + _this.el.outerWidth()
+            }
+          }).appendTo("body");
+          return _this.positionBox();
+        }
+      };
+      this.closeBox = function(event) {
+        if (_this.box) {
+          if (_this.isHoveringFootnote(event)) {
+            clearTimeout(_this.closeTimeout);
+            return _this.closeTimeout = null;
+          } else {
+            if (!_this.closeTimeout) {
+              return _this.closeTimeout = setTimeout((function() {
+                _this.box.remove();
+                return _this.box = null;
+              }), _this.options.hideDelay);
+            }
+          }
+        }
+      };
+      this.isHoveringFootnote = function(event) {
+        return this.box.is(event.target) || $(event.target).closest(this.box).length > 0 || event.target === this.el[0];
+      };
+      this.positionBox = function() {
+        var boxHorizontalPadding, boxLeft, boxWidth, linkLeftOffset, windowWidth;
+        boxHorizontalPadding = parseInt(this.box.css("padding-left")) + parseInt(this.box.css("padding-right"));
+        linkLeftOffset = this.el.offset().left;
+        windowWidth = $(window).width();
+        if ((windowWidth / 2) > linkLeftOffset) {
+          boxLeft = linkLeftOffset + 20;
+          boxWidth = windowWidth - boxLeft - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+        } else {
+          boxWidth = linkLeftOffset - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+          boxLeft = linkLeftOffset - boxWidth - this.options.boxMargin * 2;
+        }
+        return this.box.css({
+          width: boxWidth,
+          left: boxLeft
+        });
+      };
+      return this.initialize();
+    };
+    $.inlineFootnote.defaultOptions = {
+      boxMargin: 20,
+      hideDelay: 200,
+      hideFromContent: "[rel=footnote]",
+      maximumBoxWidth: 500,
+      boxId: "footnote_box"
+    };
+    return $.fn.inlineFootnote = function(options) {
+      return this.each(function() {
+        return new $.inlineFootnote(this, options);
+      });
+    };
+  })(jQuery);
+
+}).call(this);
+</script>
+
+<script>
+      $(function() {
+        $("[rel=footnote]").inlineFootnote();
+        });
+</script>
   <script>
 // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
 //
@@ -2853,21 +3377,29 @@ $('#toggle').on('click', function(){
 !function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function f(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.base=A.hasOwnProperty("base")?A.base:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64,A.titleText=A.hasOwnProperty("titleText")?A.titleText:""}function p(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}this.options=A||{},this.elements=[],f(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var e,t,i,n,o,s,a,r,c,h,l,u,d=[];if(f(this.options),"touch"===(l=this.options.visible)&&(l=this.isTouchDevice()?"always":"hover"),0===(e=p(A=A||"h2, h3, h4, h5, h6")).length)return this;for(!function(){if(null!==document.head.querySelector("style.anchorjs"))return;var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"],style'))?document.head.appendChild(e):document.head.insertBefore(e,A);e.sheet.insertRule(".anchorjs-link{opacity:0;text-decoration:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}",e.sheet.cssRules.length),e.sheet.insertRule(":hover>.anchorjs-link,.anchorjs-link:focus{opacity:1}",e.sheet.cssRules.length),e.sheet.insertRule("[data-anchorjs-icon]::after{content:attr(data-anchorjs-icon)}",e.sheet.cssRules.length),e.sheet.insertRule('@font-face{font-family:anchorjs-icons;src:url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype")}',e.sheet.cssRules.length)}(),t=document.querySelectorAll("[id]"),i=[].map.call(t,function(A){return A.id}),o=0;o<e.length;o++)if(this.hasAnchorJSLink(e[o]))d.push(o);else{if(e[o].hasAttribute("id"))n=e[o].getAttribute("id");else if(e[o].hasAttribute("data-anchor-id"))n=e[o].getAttribute("data-anchor-id");else{for(c=r=this.urlify(e[o].textContent),a=0;void 0!==s&&(c=r+"-"+a),a+=1,-1!==(s=i.indexOf(c)););s=void 0,i.push(c),e[o].setAttribute("id",c),n=c}(h=document.createElement("a")).className="anchorjs-link "+this.options.class,h.setAttribute("aria-label",this.options.ariaLabel),h.setAttribute("data-anchorjs-icon",this.options.icon),this.options.titleText&&(h.title=this.options.titleText),u=document.querySelector("base")?window.location.pathname+window.location.search:"",u=this.options.base||u,h.href=u+"#"+n,"always"===l&&(h.style.opacity="1"),""===this.options.icon&&(h.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(h.style.lineHeight="inherit")),"left"===this.options.placement?(h.style.position="absolute",h.style.marginLeft="-1em",h.style.paddingRight="0.5em",e[o].insertBefore(h,e[o].firstChild)):(h.style.paddingLeft="0.375em",e[o].appendChild(h))}for(o=0;o<d.length;o++)e.splice(d[o]-o,1);return this.elements=this.elements.concat(e),this},this.remove=function(A){for(var e,t,i=p(A),n=0;n<i.length;n++)(t=i[n].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(i[n]))&&this.elements.splice(e,1),i[n].removeChild(t));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){return this.options.truncate||f(this.options),A.trim().replace(/\'/gi,"").replace(/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&-1<(" "+A.firstChild.className+" ").indexOf(" anchorjs-link "),t=A.lastChild&&-1<(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ");return e||t||!1}}});
 // @license-end
   </script>
-  <script>
-/*
-  $(document).ready(function() {
-          $('[id^=toc]').each(function ()
-          {
-             var currentToc = $(this);
-       var url = window.location.href;
-             currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "' </a>");
-          });
-});
-*/
+    <script>
   anchors.options = {
   placement: 'left'
 };
 anchors.add('h1, h2, h3, h4');
+</script>
+
+<script>
+// use .collapsible element to toggle visibility of element following it
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
 </script>
 
 </body></html>

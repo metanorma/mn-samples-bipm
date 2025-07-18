@@ -24,7 +24,8 @@ figure, figcaption, footer, header, hgroup,
 menu, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -40,7 +41,8 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   border: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -55,7 +57,8 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 html, body, div, span, applet, object, iframe,
 p, blockquote,
@@ -70,87 +73,115 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 code, pre, tt, kbd, samp {
   font-family: "Space Mono",monospace;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 code *, pre *, tt *, kbd *, samp * {
   font-family: "Space Mono",monospace !important;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 p code, dt code, li code, label code, legend code, caption code, th code, td code,
 p tt, dt tt, li tt, label tt, legend tt, caption tt, th tt, td tt,
 p kbd, dt kbd, li kbd, label kbd, legend kbd, caption kbd, th kbd, td kbd,
 p samp, dt samp, li samp, label samp, legend samp, caption samp, th samp, td samp {
-  font-size: ; }
+  font-size: ;
+}
+
+sub, sup {
+  font-size: 0.75em;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 blockquote, q {
-  quotes: none; }
-  blockquote::before, blockquote::after, q::before, q::after {
-    content: '';
-    content: none; }
+  quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+  content: "";
+  content: none;
+}
 
 .h2Annex {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 dl {
   display: grid;
-  grid-template-columns: max-content auto; }
-  dl dt p, dl dd p {
-    margin-top: 0; }
-  dl dt {
-    grid-column-start: 1; }
-  dl dd {
-    grid-column-start: 2; }
+  grid-template-columns: max-content auto;
+}
+dl dt p, dl dd p {
+  margin-top: 0;
+}
+dl dt {
+  grid-column-start: 1;
+}
+dl dd {
+  grid-column-start: 2;
+}
 
 b, strong {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 div.document-stage-band, div.document-type-band {
-  background-color: #333333; }
+  background-color: #333333;
+}
 
 a.FootnoteRef + a.FootnoteRef::before {
   content: ", ";
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 a.TableFootnoteRef + a.TableFootnoteRef::before {
   content: ", ";
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 a.TableFootnoteRef, span.TableFootnoteRef,
 a.FootnoteRef, span.FootnoteRef {
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 .addition {
-  color: blue; }
+  color: blue;
+}
 
 .deletion {
   color: red;
-  text-decoration: line-through; }
+  text-decoration: line-through;
+}
 
 ruby {
   ruby-position: over;
-  -webkit-ruby-position: before; }
+  -webkit-ruby-position: before;
+}
 
 ruby ruby {
   ruby-position: under;
-  -webkit-ruby-position: after; }
+  -webkit-ruby-position: after;
+}
 
 /* code highlighting with line numbers */
 table.rouge-line-table td.rouge-gutter {
@@ -158,13 +189,15 @@ table.rouge-line-table td.rouge-gutter {
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  padding-right: 1em; }
+  padding-right: 1em;
+}
 
 table.rouge-line-table td.rouge-code {
   -moz-user-select: all;
   -ms-user-select: all;
   -webkit-user-select: all;
-  user-select: all; }
+  user-select: all;
+}
 
 table.rouge-line-table,
 table.rouge-line-table th,
@@ -173,103 +206,268 @@ table.rouge-line-table td {
   border: none;
   margin: 0;
   padding: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 table.rouge-line-table pre {
   margin: 0;
   padding: 0;
   overflow-x: visible;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
-#brochure-band {
-  background-color: #0AC442; }
+/* header § links */
+a.header {
+  color: inherit;
+  text-decoration: none;
+}
 
-#brochure {
-  border-bottom: solid 3px #0AC442; }
+a.header:hover {
+  color: #a53221 !important;
+  background: inherit;
+  box-shadow: none;
+}
 
-#mise-en-pratique-band {
-  background-color: #540D6E; }
+a.header:visited {
+  color: inherit;
+  text-decoration: none;
+}
 
-#mise-en-pratique {
-  border-bottom: solid 3px #540D6E; }
+a.anchor {
+  position: absolute;
+  z-index: 1001;
+  width: 1.5ex;
+  margin-left: -1.5ex;
+  display: block;
+  text-decoration: none !important;
+  visibility: hidden;
+  text-align: center;
+  font-weight: 400;
+}
 
-#rapport-band {
-  background-color: #D183C9; }
+a.anchor::before {
+  content: "§";
+  font-size: 0.85em;
+  display: block;
+  padding-top: 0.1em;
+}
 
-#rapport {
-  border-bottom: solid 3px #D183C9; }
+a.anchor:hover {
+  color: #a53221;
+  background: inherit;
+  box-shadow: none;
+}
 
-#monographie-band {
-  background-color: #65AFFF; }
+h1 > a.anchor:hover,
+h2 > a.anchor:hover,
+h3 > a.anchor:hover,
+h4 > a.anchor:hover,
+h5 > a.anchor:hover,
+h6 > a.anchor:hover,
+.inline-header > a.anchor:hover,
+h1:hover > a.anchor,
+h2:hover > a.anchor,
+h3:hover > a.anchor,
+h4:hover > a.anchor,
+h5:hover > a.anchor,
+h6:hover > a.anchor,
+.inline-header:hover > a.anchor {
+  visibility: visible;
+}
 
-#monographie {
-  border-bottom: solid 3px #65AFFF; }
+/* collapsible snippets: collapsible before hidable */
+.hidable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 3px 0;
+  margin: 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: "▼";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.active:after {
+  content: "▲";
+}
+
+/* collapsible: */
+.collapsible + .hidable {
+  margin-top: 0;
+}
+
+.collapsible:not(.active) + .hidable {
+  overflow: hidden;
+  padding: 0;
+}
+
+.svg-container {
+  width: 100%; /* or any desired width */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+svg {
+  width: 100%;
+  height: auto; /* ← key to maintaining aspect ratio */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+#standard-band {
+  background-color: #0AC442;
+}
+
+#standard {
+  border-bottom: solid 3px #0AC442;
+}
+
+#directive-band {
+  background-color: #540D6E;
+}
+
+#directive {
+  border-bottom: solid 3px #540D6E;
+}
 
 #guide-band {
-  background-color: #3A405A; }
+  background-color: #D183C9;
+}
 
 #guide {
-  border-bottom: solid 3px #3A405A; }
+  border-bottom: solid 3px #D183C9;
+}
 
-#meeting-report-band {
-  background-color: #F26430; }
+#specification-band {
+  background-color: #65AFFF;
+}
 
-#meeting-report {
-  border-bottom: solid 3px #F26430; }
+#specification {
+  border-bottom: solid 3px #65AFFF;
+}
 
-#technical-report-band {
-  background-color: #C84630; }
+#report-band {
+  background-color: #3A405A;
+}
 
-#technical-report {
-  border-bottom: solid 3px #C84630; }
+#report {
+  border-bottom: solid 3px #3A405A;
+}
 
-#working-part-note-band {
-  background-color: #BFAE48; }
+#amendment-band {
+  background-color: #F26430;
+}
 
-#working-part-note {
-  border-bottom: solid 3px #BFAE48; }
+#amendment {
+  border-bottom: solid 3px #F26430;
+}
 
-#strategy-band {
-  background-color: #BD9391; }
+#corrigendum-band {
+  background-color: #C84630;
+}
 
-#strategy {
-  border-bottom: solid 3px #BD9391; }
+#corrigendum {
+  border-bottom: solid 3px #C84630;
+}
 
-#cipm-mra-band {
-  background-color: #004E64; }
+#administrative-band {
+  background-color: #BFAE48;
+}
 
-#cipm-mra {
-  border-bottom: solid 3px #004E64; }
+#administrative {
+  border-bottom: solid 3px #BFAE48;
+}
 
-#resolution-band {
-  background-color: #53C170; }
+#advisory-band {
+  background-color: #BD9391;
+}
 
-#resolution {
-  border-bottom: solid 3px #53C170; }
+#advisory {
+  border-bottom: solid 3px #BD9391;
+}
 
-#draft-proposal-band {
-  background-color: #39A0ED; }
+#proposal-band {
+  background-color: #39A0ED;
+}
 
-#draft-proposal {
-  border-bottom: solid 3px #39A0ED; }
+#proposal {
+  border-bottom: solid 3px #39A0ED;
+}
 
-#draft-development-band {
-  background-color: #2D7393; }
+#working-draft-band {
+  background-color: #2D7393;
+}
 
-#draft-development {
-  border-bottom: solid 3px #2D7393; }
+#working-draft {
+  border-bottom: solid 3px #2D7393;
+}
 
-#in-force-band {
-  background-color: #53C170; }
+#committee-draft-band {
+  background-color: #2A6B7C;
+}
 
-#in-force {
-  border-bottom: solid 3px #53C170; }
+#committee-draft {
+  border-bottom: solid 3px #2A6B7C;
+}
 
-#retired-band {
-  background-color: #2E382E; }
+#draft-standard-band {
+  background-color: #1C7F7A;
+}
 
-#retired {
-  border-bottom: solid 3px #2E382E; }
+#draft-standard {
+  border-bottom: solid 3px #1C7F7A;
+}
+
+#final-draft-band {
+  background-color: #53C170;
+}
+
+#final-draft {
+  border-bottom: solid 3px #53C170;
+}
+
+#published-band {
+  background-color: #069E2D;
+}
+
+#published {
+  border-bottom: solid 3px #069E2D;
+}
+
+#withdrawn-band {
+  background-color: #004E64;
+}
+
+#withdrawn {
+  border-bottom: solid 3px #004E64;
+}
+
+#cancelled-band {
+  background-color: #2E382E;
+}
+
+#cancelled {
+  border-bottom: solid 3px #2E382E;
+}
 
 /*
     1. HTML & Body
@@ -283,83 +481,111 @@ body {
   line-height: 1.4em;
   color: #1d1d1d;
   background-color: #ffffff;
-  font-weight: 400; }
-  body main {
-    margin: 0 3em 0 6em; }
-  body pre * {
-    font-family: Times New Roman !important; }
+  font-weight: 400;
+}
+body main {
+  margin: 0 3em 0 6em;
+}
+body pre * {
+  font-family: Times New Roman !important;
+}
 
 main {
-  margin: 0 3em 0 6em; }
+  margin: 0 3em 0 6em;
+}
 
 /*
     2. Responsive navigation layout
 */
 #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
   font-family: Times New Roman;
-  font-weight: 400; }
-  #toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-    #toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
-      padding: 5px 10px; }
-    #toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
-      color: #485094;
-      text-decoration: none;
-      display: block; }
-      #toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
-        box-shadow: none;
-        color: #485094; }
-  #toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
-    padding-left: 30px; }
-  #toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
-    padding-left: 50px; }
-  #toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
-    padding-left: 70px; }
-  #toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
-    padding-left: 90px; }
-  #toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
-    padding-left: 110px; }
+  font-weight: 400;
+}
+#toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
+  padding: 5px 10px;
+}
+#toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
+  color: #485094;
+  text-decoration: none;
+  display: block;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: #485094;
+}
+#toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
+  padding-left: 30px;
+}
+#toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
+  padding-left: 50px;
+}
+#toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+  padding-left: 70px;
+}
+#toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+  padding-left: 90px;
+}
+#toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+  padding-left: 110px;
+}
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  background: #6C734A;
+  box-shadow: inset -5px 0px 10px -5px #6C734A !important;
+}
+#toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: #485094;
+}
+@media print {
   #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-    background: #6C734A;
-    box-shadow: inset -5px 0px 10px -5px #6C734A !important; }
-    #toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-      color: #485094; }
-  @media print {
-    #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-      background: white;
-      box-shadow: none !important; }
-    #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
-      color: #485094; }
-    #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-      color: black; } }
-  @media screen and (max-width: 768px) {
-    #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
-      padding: 0 1.5em;
-      overflow: visible; } }
+    background: white;
+    box-shadow: none !important;
+  }
   #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
-    color: white; }
-  #toc .toc-active,
-  #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active,
-  #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-    box-shadow: none !important; }
-    #toc .toc-active a,
-    #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a,
-    #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-      color: white;
-      background: none;
-      box-shadow: none; }
-  #toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
-    text-transform: uppercase; }
-  #toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
-    box-shadow: none;
-    color: white; }
+    color: #485094;
+  }
+  #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+    color: black;
+  }
+}
+@media screen and (max-width: 768px) {
+  #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    padding: 0 1.5em;
+    overflow: visible;
+  }
+}
+#toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
+  color: white;
+}
+#toc .toc-active,
+#toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active,
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  box-shadow: none !important;
+}
+#toc .toc-active a,
+#toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a,
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: white;
+  background: none;
+  box-shadow: none;
+}
+#toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
+  text-transform: uppercase;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: white;
+}
 
 #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 @media screen and (min-width: 768px) {
   nav {
@@ -370,9 +596,10 @@ main {
     width: 323px;
     font-size: 0.9em;
     overflow: auto;
-    padding: 0 0 0 45px;
-    background-color: #f7f7f7; } }
-
+    padding: 0 0 0 30px;
+    background-color: #f7f7f7;
+  }
+}
 @media print {
   nav {
     position: relative;
@@ -381,7 +608,9 @@ main {
     overflow: auto;
     padding: 0;
     margin-right: 0;
-    background-color: white; } }
+    background-color: white;
+  }
+}
 
 @media screen and (min-width: 768px) {
   #toggle {
@@ -391,52 +620,65 @@ main {
     background-color: #6C734A;
     color: white !important;
     cursor: pointer;
-    z-index: 100; }
-    #toggle span {
-      text-align: center;
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%); } }
-
+    z-index: 100;
+  }
+  #toggle span {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
 @media screen and (max-width: 768px) {
   #toggle {
-    display: none; } }
-
+    display: none;
+  }
+}
 @media print {
   #toggle {
-    display: none; } }
+    display: none;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .container {
-    padding-left: 360px; }
+    padding-left: 360px;
+  }
   .rule.toc {
-    display: none; }
+    display: none;
+  }
   h1.toc-contents {
-    margin-top: 1em; }
+    margin-top: 1em;
+  }
   ul#toc-list, ul#toc-list > :is(.h1, .h2, .h3, .h4, .h5, .h6) {
     padding: 0;
-    margin: 0; } }
-
+    margin: 0;
+  }
+}
 div.figure {
   line-height: 1.6em;
   padding: 1.5em;
   margin: 2em 0 1em 0;
-  overflow: auto; }
-  div.figure .FigureTitle, div.figure .figure-title {
-    font-weight: 700;
-    font-size: 1em;
-    text-align: center; }
-  div.figure > img, div.figure > svg {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    max-width: 100%;
-    height: auto; }
+  overflow: auto;
+}
+div.figure .FigureTitle, div.figure .figure-title {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+div.figure > img, div.figure > svg {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 table div.figure {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 /*
     Document types + stages
@@ -447,30 +689,35 @@ table div.figure {
   height: 100%;
   position: fixed;
   display: block;
-  z-index: 102; }
-  .document-type-band > :first-child {
-    position: relative;
-    width: 25px;
-    font-weight: 400;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    margin: 0;
-    margin-left: 6px;
-    writing-mode: tb-rl;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    white-space: nowrap;
-    display: block;
-    bottom: 0; }
-  @media print {
-    .document-type-band {
-      display: none; } }
-  .document-type-band .document-type {
-    top: 20px; }
+  z-index: 102;
+}
+.document-type-band > :first-child {
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-type-band {
+    display: none;
+  }
+}
+.document-type-band .document-type {
+  top: 20px;
+}
 
 .document-stage-band {
   left: 0;
@@ -479,31 +726,37 @@ table div.figure {
   position: fixed;
   display: block;
   z-index: 101;
-  box-shadow: -5px 0px 10px #1d1d1d; }
-  .document-stage-band > :first-child {
-    position: relative;
-    width: 25px;
-    font-weight: 400;
-    height: 150;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    margin: 0;
-    margin-left: 6px;
-    writing-mode: tb-rl;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    white-space: nowrap;
-    display: block;
-    bottom: 0; }
-  @media print {
-    .document-stage-band {
-      display: none; } }
+  box-shadow: -5px 0px 10px #1d1d1d;
+}
 .document-stage-band > :first-child {
-  font-weight: 300; }
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  height: 150;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-stage-band {
+    display: none;
+  }
+}
+
+.document-stage-band > :first-child {
+  font-weight: 300;
+}
 
 p.document-stage {
   position: relative;
@@ -523,21 +776,25 @@ p.document-stage {
   -o-transform: rotate(180deg);
   white-space: nowrap;
   display: block;
-  bottom: 0; }
+  bottom: 0;
+}
 
 #governance-band p.document-type {
-  height: 230px !important; }
+  height: 230px !important;
+}
 
 p.document-stage {
   font-weight: 300;
-  height: 160px; }
+  height: 160px;
+}
 
 .coverpage-maturity {
   font-family: Times New Roman;
   font-weight: 400;
   font-size: 1em;
   margin: 0 0 2em 0;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 /*
     3. TYPOGRAPHY
@@ -550,150 +807,186 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #6C734A;
   font-weight: 300;
   margin-top: 1.6em;
-  margin-bottom: 0.3em; }
+  margin-bottom: 0.3em;
+}
 
 h1, .h1 {
   font-size: 1.6em;
   text-transform: uppercase;
-  margin-top: 2em; }
+  margin-top: 2em;
+}
 
-h1#content, #content.h1 {
-  margin-top: 2em; }
+h1#content, .h1#content {
+  margin-top: 2em;
+}
 
 h2, .h2 {
   margin-top: 1.3em;
   font-size: 1.3em;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 h3, .h3 {
   margin-top: 1.1em;
   font-size: 1.1em;
-  font-weight: 100; }
+  font-weight: 100;
+}
 
 .TermNum {
-  font-weight: 100; }
+  font-weight: 100;
+}
 
 .TermNum, .Terms, .AltTerms {
-  color: #6C734A; }
+  color: #6C734A;
+}
 
 h2.TermNum {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 p.Terms {
   font-size: 1.1em;
   line-height: 1.5em;
-  margin: 0; }
+  margin: 0;
+}
 
 p.AltTerms {
   /*
-    font-style: italic;
-     */
+  font-style: italic;
+   */
   font-size: 1.1em;
-  margin: 0; }
+  margin: 0;
+}
 
 /*
     3.2 Links
 */
 a, a:visited {
   text-decoration: none;
-  color: #485094; }
+  color: #485094;
+}
 
 a:hover {
   color: white;
   background: #6C734A;
-  box-shadow: 3px 0 0 #6C734A, -3px 0 0 #6C734A; }
+  box-shadow: 3px 0 0 #6C734A, -3px 0 0 #6C734A;
+}
 
 *::selection {
   background: #6C734A;
-  color: white; }
+  color: white;
+}
 
 *::-moz-selection {
   background: #6C734A;
-  color: white; }
+  color: white;
+}
 
 /*
     3.3 Lists
 */
 ul, ol {
-  margin-left: 1.2em; }
+  margin-left: 1.2em;
+}
 
 ul li {
-  list-style: none; }
+  list-style: none;
+}
 
 ul li::before {
   content: "—";
   display: inline-block;
   width: 1em;
-  margin-left: -1.2em; }
+  margin-left: -1.2em;
+}
 
 ul li p {
-  display: inline; }
+  display: inline;
+}
 
 ul > li:first-child {
-  margin-top: 1em; }
+  margin-top: 1em;
+}
 
 ul ul > li:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 ol ul > li:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 #toc-list ul {
-  margin-bottom: 0.25em; }
+  margin-bottom: 0.25em;
+}
 
 #toc-list li {
-  list-style-type: none; }
+  list-style-type: none;
+}
 
 #toc li::before {
   content: " ";
-  display: none; }
+  display: none;
+}
 
 /* https://github.com/metanorma/metanorma-bipm/issues/47 */
-ol[class="alphabet"] {
-  counter-reset: alphabet; }
+ol[class=alphabet] {
+  counter-reset: alphabet;
+}
 
-ol[class="roman"] {
-  counter-reset: roman; }
+ol[class=roman] {
+  counter-reset: roman;
+}
 
-ol[class="alphabet"] ol[class="alphabet"] {
-  counter-reset: none; }
+ol[class=alphabet] ol[class=alphabet] {
+  counter-reset: none;
+}
 
-ol[class="alphabet"] > li {
+ol[class=alphabet] > li {
   list-style: none;
-  position: relative; }
+  position: relative;
+}
 
-ol[class="alphabet"] ol[class="alphabet"] > li {
-  list-style: inherit; }
+ol[class=alphabet] ol[class=alphabet] > li {
+  list-style: inherit;
+}
 
-ol[class="alphabet"] > li::before {
+ol[class=alphabet] > li::before {
   counter-increment: alphabet;
   content: counter(alphabet, lower-alpha) ") ";
   position: absolute;
-  left: -1.4em; }
+  left: -1.4em;
+}
 
-ol[class="alphabet"] ol[class="alphabet"] > li::before {
+ol[class=alphabet] ol[class=alphabet] > li::before {
   counter-increment: none;
-  content: initial; }
+  content: initial;
+}
 
-ol[class="roman"] ol[class="roman"] {
-  counter-reset: none; }
+ol[class=roman] ol[class=roman] {
+  counter-reset: none;
+}
 
-ol[class="roman"] > li {
+ol[class=roman] > li {
   list-style: none;
-  position: relative; }
+  position: relative;
+}
 
-ol[class="roman"] ol[class="roman"] > li {
-  list-style: inherit; }
+ol[class=roman] ol[class=roman] > li {
+  list-style: inherit;
+}
 
-ol[class="roman"] > li::before {
+ol[class=roman] > li::before {
   counter-increment: roman;
   content: "(" counter(roman, lower-roman) ") ";
   position: absolute;
-  left: -2.0em; }
+  left: -2em;
+}
 
-ol[class="roman"] ol[class="roman"] > li::before {
+ol[class=roman] ol[class=roman] > li::before {
   counter-increment: none;
-  content: initial; }
+  content: initial;
+}
 
 /*
     3.4 Rules
@@ -702,14 +995,16 @@ ol[class="roman"] ol[class="roman"] > li::before {
   width: 100%;
   height: 1px;
   background-color: #0e1a85;
-  margin: 2em 0; }
+  margin: 2em 0;
+}
 
 /*
     3.5 Bibliograhy
 */
 p.Biblio, p.NormRef {
   margin-top: 1em;
-  margin-left: 2em; }
+  margin-left: 2em;
+}
 
 /*
     3.6 Source Code + figures
@@ -722,39 +1017,46 @@ pre,
   line-height: 1.6em;
   padding: 1.5em;
   margin: 2em 0 1em 0;
-  overflow: auto; }
-  .figure .SourceTitle,
-  pre .SourceTitle,
-  .pseudocode .SourceTitle {
-    font-weight: 700;
-    font-size: 1em;
-    text-align: center; }
+  overflow: auto;
+}
+.figure .SourceTitle,
+pre .SourceTitle,
+.pseudocode .SourceTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
 
 pre {
   font-family: "Space Mono",monospace;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 .AdmonitionTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .RecommendationTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .ListTitle {
   font-weight: 700;
   font-size: 1em;
   text-align: center;
-  text-align: left; }
+  text-align: left;
+}
 
 .FigureTitle,
 .SourceTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 /*
     3.7 Notes
@@ -763,9 +1065,11 @@ pre {
   background-color: #fff495;
   color: #47430c;
   padding: 1.2em;
-  margin: 1em 0 1em 0; }
-  .Note p {
-    margin: 0; }
+  margin: 1em 0 1em 0;
+}
+.Note p {
+  margin: 0;
+}
 
 /*
     3.8 Examples
@@ -776,18 +1080,23 @@ pre {
   margin: 2em 0 1em 0;
   text-align: left;
   color: #424242;
-  padding-left: 2.7em; }
-  .example p {
-    margin: 0; }
-  .example .example-title {
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-left: -1.5em; }
-  .example .example-title {
-    margin-top: 0; }
-  .example pre,
-  .example .pseudocode {
-    background: none; }
+  padding-left: 2.7em;
+}
+.example p {
+  margin: 0;
+}
+.example .example-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: -1.5em;
+}
+.example .example-title {
+  margin-top: 0;
+}
+.example pre,
+.example .pseudocode {
+  background: none;
+}
 
 /*
     3.9 Tables
@@ -798,29 +1107,36 @@ table {
   margin: 1em 0 2em 0;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 2em; }
-  table, table th, table td {
-    border: 1px solid black;
-    font-size: 0.95em; }
-  table th, table td {
-    padding: 1em; }
-  table td.header {
-    font-weight: 400; }
+  padding-right: 2em;
+}
+table, table th, table td {
+  border: 1px solid black;
+  font-size: 0.95em;
+}
+table th, table td {
+  padding: 1em;
+}
+table td.header {
+  font-weight: 400;
+}
 
 p.TableTitle {
   text-align: center;
   margin-top: 2.5em;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 /*
   3.10 Footnotes
 */
 a.footnote-number {
   vertical-align: super;
-  font-size: 0.8em; }
+  font-size: 0.8em;
+}
 
 .footnote {
-  font-size: 0.9em; }
+  font-size: 0.9em;
+}
 
 /*
     3.11 Blockquotes
@@ -832,7 +1148,8 @@ a.footnote-number {
   padding: 1.5em;
   margin-top: 2em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 /*
     3.12 Formulas
@@ -841,7 +1158,8 @@ a.footnote-number {
   background-color: #f7f7f7;
   padding: 1.5em;
   margin-top: 2em;
-  text-align: center; }
+  text-align: center;
+}
 
 /*
     3.13 Contact Info
@@ -853,41 +1171,49 @@ a.footnote-number {
   text-align: left;
   border: #6C734A solid 2px;
   color: #6C734A !important;
-  border-radius: 25px; }
+  border-radius: 25px;
+}
 
 .contact-info a,
 .contact-info a:hover {
-  color: #6C734A; }
+  color: #6C734A;
+}
 
 .contact-info p, .contact-info a {
   font-family: "Space Mono",monospace;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 .contact-info .name {
   font-weight: 700;
   font-size: 1.2em;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 .contact-info .address {
   font-size: 1em;
   line-height: 1.3em;
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 /*
     Keywords
 */
 span.keyword {
-  font-weight: 600; }
+  font-weight: 600;
+}
 
 /*
     Paragraphs
 */
 p {
   margin-top: 1em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+}
 
 h2 p, .h2 p {
-  display: inline; }
+  display: inline;
+}
 
 /*
     4.0 Page header
@@ -897,24 +1223,28 @@ h2 p, .h2 p {
 */
 .icon-svg {
   width: 100%;
-  color: #5ecf86; }
+  color: #5ecf86;
+}
 
 .wrapper-top {
   background: linear-gradient(200deg, #007864, #6C734A);
   color: #ffffff;
   padding: 2em 0;
-  width: 100%; }
+  width: 100%;
+}
 
 .wrapper-top-bottom {
   width: 0;
   height: 0;
   border-top: 100px solid #6C734A;
   border-right: 100px solid transparent;
-  position: absolute; }
+  position: absolute;
+}
 
 .doc-number {
   font-size: 0.5em;
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 .coverpage-title {
   padding-bottom: 0.5em;
@@ -924,53 +1254,65 @@ h2 p, .h2 p {
   font-weight: 100;
   padding-left: 1em;
   padding-right: 1em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .WordSection11 {
-  padding: 0 2em 0 3em; }
+  padding: 0 2em 0 3em;
+}
 
 .info-section {
-  padding: 0 2em 0 5em; }
+  padding: 0 2em 0 5em;
+}
 
 .prefatory-section {
-  padding: 0 3em 0 6em; }
+  padding: 0 3em 0 6em;
+}
 
 .zzSTDTitle1, .MsoCommentText {
-  display: none; }
+  display: none;
+}
 
 .coverpage {
   text-align: center;
-  padding-left: 1.5em; }
+  padding-left: 1.5em;
+}
 
 .coverpage-logo span, .coverpage-tc-name span {
   font-family: Times New Roman;
   text-transform: none;
-  font-weight: 300; }
+  font-weight: 300;
+}
 
 .coverpage-tc-name {
   font-size: 1.2em;
   line-height: 1.2em;
-  margin: 0.25em 0; }
+  margin: 0.25em 0;
+}
 
 /*
     4.2 Document Identity
 */
 .coverpage-doc-identity {
   font-size: 2em;
-  line-height: 2em; }
+  line-height: 2em;
+}
 
 .coverpage-title .title-second {
-  font-size: 0.8em; }
+  font-size: 0.8em;
+}
 
 .coverpage-title .title-third {
-  font-size: 0.6em; }
+  font-size: 0.6em;
+}
 
 .coverpage-stage-block {
   font-family: Times New Roman;
   font-weight: 600;
   font-size: 1.25em;
   margin: 2em 0em 2em 0em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 /*
     4.3 Draft Warning
@@ -981,13 +1323,15 @@ h2 p, .h2 p {
   margin: 1em 2em;
   color: #485094;
   padding: 2em 1em 1em 1em;
-  border-radius: 25px; }
+  border-radius: 25px;
+}
 
 .coverpage-warning .title {
   font-family: Times New Roman;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+}
 
 /*
     4.4 Copyright
@@ -995,7 +1339,8 @@ h2 p, .h2 p {
 .copyright {
   padding: 1em;
   font-size: 0.9em;
-  text-align: left; }
+  text-align: left;
+}
 
 /*  .copyright .name, .copyright .address {color: #485094;} */
 /*
@@ -1021,62 +1366,84 @@ To top button
   cursor: pointer;
   padding: 10px 15px 10px 15px;
   border-radius: 4px;
-  text-transform: uppercase; }
-  #myBtn:hover {
-    opacity: 1; }
-  @media print {
-    #myBtn {
-      display: none; } }
-  #myBtn a.anchorjs-link:hover {
-    background: none;
-    color: #485094;
-    box-shadow: none; }
+  text-transform: uppercase;
+}
+#myBtn:hover {
+  opacity: 1;
+}
+@media print {
+  #myBtn {
+    display: none;
+  }
+}
+#myBtn a.anchorjs-link:hover {
+  background: none;
+  color: #485094;
+  box-shadow: none;
+}
 
 @page {
-  margin: 2cm 1cm; }
-
+  margin: 2cm 1cm;
+}
 @media print {
   .document-info, nav, .copyright {
-    page-break-before: always; }
+    page-break-before: always;
+  }
   h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
     page-break-after: avoid;
-    margin-top: 1.2em; }
+    margin-top: 1.2em;
+  }
   .note, .figure, pre, .pseudocode, table {
-    page-break-inside: avoid; }
+    page-break-inside: avoid;
+  }
   .info-section {
-    display: none; }
+    display: none;
+  }
   .coverpage {
-    height: 23cm; }
+    height: 23cm;
+  }
   .wrapper-top {
     top: 0;
     padding-top: 4cm;
-    padding-bottom: 4cm; }
+    padding-bottom: 4cm;
+  }
   .wrapper-top-bottom {
-    margin-top: -5px; }
+    margin-top: -5px;
+  }
   #toggle, .document-stage-band,
   .document-type-band, button#myBtn {
-    display: none; }
+    display: none;
+  }
   .container {
-    padding-left: 0; }
+    padding-left: 0;
+  }
   h1.content, .h1.content {
     margin-top: 2em;
-    line-height: 2.5em; }
+    line-height: 2.5em;
+  }
   h1, .h1 {
     font-size: 1.5em;
-    line-height: 1.5; }
+    line-height: 1.5;
+  }
   h2, .h2 {
-    font-size: 1.2em; }
+    font-size: 1.2em;
+  }
   h3, .h3 {
-    font-size: 1em; }
+    font-size: 1em;
+  }
   .Note {
     background-color: #fff495;
     color: #47430c;
     padding: 5px;
-    margin: 2em 0 1em 0; }
+    margin: 2em 0 1em 0;
+  }
   .Note p {
-    padding: 0 5px 0 5px; }
+    padding: 0 5px 0 5px;
+  }
   .wrapper-top-bottom {
-    display: none; } }
+    display: none;
+  }
+}
 
 -->
 </style><style><!--pre.sourcecode table td { padding: 5px; }
@@ -1156,6 +1523,10 @@ pre.sourcecode .nt {
       <span class="docnumber">BIPM PLTS-2000</span>
       <span class="docnumber-separator">:</span>
       <span class="docyear">2012 </span>
+      
+      
+      <br />Date: 2012-01-12
+      
     </div>
 
     <div class="coverpage-logo">
@@ -1209,13 +1580,15 @@ pre.sourcecode .nt {
   
 
   <div class="coverpage-tc-name">
-    <span>CCT: Consultative Committee for Thermometry</span>
+    <span>CCTCCT</span>
   </div>
  
   
   <div class="coverpage-tc-name">
     .
   </div>
+  
+
   
 
   
@@ -1237,24 +1610,21 @@ pre.sourcecode .nt {
 <div class="copyright">
 <div class="boilerplate-copyright">
 
-<div id="_d63069c8-1a3f-b831-6d92-86406d5cc359">
-<p id="_ef5dd0c9-a996-a5dd-093e-c7f8452a66b9" style="text-align:center;">© Bureau International des Poids et Mesures 2012 all rights reserved</p>
+<div id="_69023472-633a-4bfd-3062-566024af17a5">
+<p id="_c0ee7e59-2583-5707-c292-2bc9d3989ddb" style="text-align:center;">© Bureau International des Poids et Mesures 2012 all rights reserved</p>
 </div>
 </div>
   <div class="boilerplate-license">
 
-<div id="_copyright_statement_2"><h1 class="IntroTitle">Copyright statement</h1>
+<div id="_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a"><h1 class="IntroTitle"><a class="anchor" href="#_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a"></a><a class="header" href="#_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a">Copyright statement</a></h1>
 
-<p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/:">http://creativecommons.org/licenses/by/4.0/:</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
+<p id="_50719790-3c5b-c213-8298-0631d690bc21">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/:">http://creativecommons.org/licenses/by/4.0/:</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
 </div>
 </div>
   <div id="boilerplate-legal-destination"></div>
 <div class="boilerplate-feedback">
 
-<p id="_e6428749-2432-0772-4c8e-ed6c34018916">BIPM<br />
-Pavillon de Breteuil<br />
-F-92312 Sèvres Cedex<br />
-FRANCE</p>
+<p id="_5926bc3f-b367-69e7-6cc6-442a91e32db2">BIPM<br /> Pavillon de Breteuil<br /> F-92312 Sèvres Cedex<br /> FRANCE</p>
 </div>
 </div>
 
@@ -1265,10 +1635,19 @@ FRANCE</p>
 
 </div>
 </header></div><br /><div class="prefatory-section"><nav>
-  <div id="toc"><h1 class="IntroTitle">Contents</h1><ul><li class="h1"><a href="#_5e8e7f17-c36d-4cf5-bd46-c7ca899875fc">      Abstract</a></li>
-<li class="h1"><a href="#_e4a61da5-dfa7-4a32-9449-23def3921a06">      1.  Table of Differences</a></li>
-<li class="h1"><a href="#_6f2368c9-d67c-46ff-a66f-7af258105751">      2.  Interpolation Functions</a></li>
-<li class="h1"><a href="#_4218f344-fb0a-4de6-bfa7-bc25de09a694">      References</a></li></ul></div>
+  <div id="toc"><h1 class="IntroTitle"><a class="anchor" href="#_13d7055e-30fc-845a-c60e-8972faf092d9"></a><a class="header" href="#_13d7055e-30fc-845a-c60e-8972faf092d9">Contents</a></h1><ul><li class="h1"><a href="#_cf0dfe03-cb00-1f53-89ea-1b336820101a">      
+  
+  Abstract
+</a></li>
+<li class="h1"><a href="#_a4cbde7a-44ce-dd88-5d14-0ae50e7d1440">      
+  
+  1.  Table of Differences
+</a></li>
+<li class="h1"><a href="#_e43a4419-9390-a4bb-1d57-91e238a74db3">      
+  
+  2.  Interpolation Functions
+</a></li>
+<li class="h1"><a href="#_cc1533ba-8360-4a2c-a47f-8b54b2d53618">      References</a></li></ul></div>
 
 </nav>
 
@@ -1279,7 +1658,7 @@ FRANCE</p>
 
 
 
-</div><br /><br /><div id="_abstract" class="Section3"><h1 class="IntroTitle" id="_5e8e7f17-c36d-4cf5-bd46-c7ca899875fc">Abstract</h1><p id="_d78aa14d-3aef-0e0a-e74f-d7b9798b7363">At the CCT’s request, Working Group 4 (WG4) critically reviewed all available measurements of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</div><br /><br /><div id="_cf0dfe03-cb00-1f53-89ea-1b336820101a" class="Section3"><h1 class="IntroTitle" id="_c5090941-6acb-4323-89a8-2211862b03eb"><a class="anchor" href="#_cf0dfe03-cb00-1f53-89ea-1b336820101a"></a><a class="header" href="#_cf0dfe03-cb00-1f53-89ea-1b336820101a">Abstract</a></h1><p id="_bae21986-1a59-d4c6-d7a0-7646c9f59f15">At the CCT’s request, Working Group 4 (WG4) critically reviewed all available measurements of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>T</mi>
@@ -1308,16 +1687,28 @@ FRANCE</p>
 </math></span>, for selected measurements from <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4.2</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1358</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, as well as a recommendation for analytic approximations to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1335,18 +1726,30 @@ FRANCE</p>
 </math></span> for the range <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.65</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1358</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span>.</p></div><div id="_table_of_differences"><h1 id="_e4a61da5-dfa7-4a32-9449-23def3921a06">1.  Table of Differences</h1><p id="_44cb24cc-97d5-1865-f4ab-39090891986e"><a href="#tab1">Table 1</a> summarizes the best estimates of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>.</p></div><div id="_a4cbde7a-44ce-dd88-5d14-0ae50e7d1440"><h1 id="_b5d9176b-ca8d-4b38-9b1a-03b21a59afbc"><a class="anchor" href="#_a4cbde7a-44ce-dd88-5d14-0ae50e7d1440"></a><a class="header" href="#_a4cbde7a-44ce-dd88-5d14-0ae50e7d1440">1.  Table of Differences</a></h1><p id="_886c084d-2dda-a661-0fb5-cc73ec53eb70"><a href="#tab1">Table 1</a> summarizes the best estimates of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>T</mi>
@@ -1362,9 +1765,15 @@ FRANCE</p>
 </math></span> above <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4.2</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> as of 2010. In general, a weighted average was formed using the uncertainties identified by WG4. For details see <a href="#Fischer2011">[1]</a>. The data are shown in <a href="#fig1">Figure 1</a> and <a href="#fig2">Figure 2</a>.</p><p class="TableTitle" style="text-align:center;">Table 1.  Estimates of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1382,16 +1791,28 @@ FRANCE</p>
 </math></span> between <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4.2</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1358</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>. The transitions of the defining fixed pointsand secondary reference points of the ITS-90 are marked in the 2<sup>nd</sup> and 6<sup>th</sup> columns. All uncertainties are standard uncertainties (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1402,18 +1823,30 @@ FRANCE</p>
 </math></span>). The differences for temperatures above <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1358</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> are under investigation by Working Group 5. The results presented here may be extrapolated above <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1358</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span> using Planck’s law.</p><table id="tab1" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><tbody><tr><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_077c4c8b-2379-a72a-08e2-2157325bfcb4"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> using Planck’s law.</p><table id="tab1" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><tbody><tr><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_d6ccd12d-bfaa-d9a3-c6c5-4518c4b78290"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1425,12 +1858,18 @@ FRANCE</p>
 </math></span><br />
 (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>)</p>
-</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_0fc37228-4064-c81c-52c3-d7ad1a49e3f2"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_bcacc4c4-77b5-2ece-ac6e-fcfb83b2b40e"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>T</mi>
@@ -1446,24 +1885,36 @@ FRANCE</p>
 </math></span><br />
 (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>)</p>
-</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_32829429-99c9-03f9-1cc0-2088b7130c92"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_c036871a-22e3-8d70-000f-a1d9f6eae245"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
   </mstyle>
 </math></span><br />
 (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>)</p>
-</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_1f510bad-64e9-bf0f-2b69-fc6c595209e5"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_4453407f-49df-4d95-8eee-bcad8c6960aa"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1475,12 +1926,18 @@ FRANCE</p>
 </math></span><br />
 (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>)</p>
-</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_e166421a-bf14-e38d-2840-13bb0a17077d"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_3f1f198d-4166-7946-5d68-cd22ab9b4a0d"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>T</mi>
@@ -1496,544 +1953,36 @@ FRANCE</p>
 </math></span><br />
 (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>)</p>
-</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_4ee3a2d4-2ed4-110b-473f-310be9e13dac"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</td><td style="text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><p id="_1d4f470b-4631-5b6a-0468-2c7842975103"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
   </mstyle>
 </math></span><br />
 (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>)</p>
-</td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>4.2</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mo>−</mo>
-    <mn>0.02</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.12</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>161.405</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Xe</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mo>−</mo>
-    <mn>8.43</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1.8</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>5</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.10</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.12</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>195</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mo>−</mo>
-    <mn>6.97</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1.8</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>6</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.04</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.13</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>234.3156</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Hg</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mo>−</mo>
-    <mn>3.25</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1.0</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>7</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mo>−</mo>
-    <mn>0.08</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.09</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>255</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mo>−</mo>
-    <mn>1.64</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.9</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>8</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.01</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.10</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>273.16</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">TPW</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>9.288</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Nb</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.13</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.11</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>290</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>2.19</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.4</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>11</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.27</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.12</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>302.9146</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Ga</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>4.38</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.4</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>13.8033</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">e-H<sub>2</sub></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.44</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.14</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>335</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>7.62</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.5</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>17.035</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">e-H<sub>2</sub></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.51</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.16</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>373.124</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">H<sub>2</sub>O</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>9.74</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.6</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>20.27</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">e-H<sub>2</sub></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.32</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.17</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>429.7485</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">In</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>10.1</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.8</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>22.5</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.10</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.18</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>505.078</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Sn</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>11.5</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1.3</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>24.5561</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Ne</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mo>−</mo>
-    <mn>0.23</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.20</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>600.612</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Pb</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>9.21</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>6.1</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>35</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mo>−</mo>
-    <mn>0.53</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1.0</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>692.677</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Zn</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>13.8</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>6.9</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>45</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mo>−</mo>
-    <mn>0.75</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1.4</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>800</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>22.4</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>6.4</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>54.3584</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">O<sub>2</sub></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mo>−</mo>
-    <mn>1.06</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1.6</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>903.778</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Sb</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>27.6</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>7.6</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>70</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mo>−</mo>
-    <mn>1.57</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1.9</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>933.473</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Al</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>28.7</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>6.6</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>77.657</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mo>−</mo>
-    <mn>3.80</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1.2</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1052.78</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Cu/Ag</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>40.9</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>26</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>83.8058</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Ar</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mo>−</mo>
-    <mn>4.38</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1.3</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1150</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>46.3</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>20</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>90</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mo>−</mo>
-    <mn>5.30</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1.1</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1234.93</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Ag</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>46.2</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>14</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>100</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mo>−</mo>
-    <mn>6.19</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1.2</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1337.33</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Au</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>39.9</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>20</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>130</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mo>−</mo>
-    <mn>8.07</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1.6</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1357.77</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">Cu</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>52.1</mn>
-  </mstyle>
-</math></span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>20</mn>
-  </mstyle>
-</math></span></td></tr></tbody></table></div><div id="_interpolation_functions"><h1 id="_6f2368c9-d67c-46ff-a66f-7af258105751">2.  Interpolation Functions</h1><p id="_eed86b82-2e7e-ebfc-746f-d3efb6ef628c">If it is not convenient to use <a href="#tab1">Table 1</a>, the differences <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>4.2</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>-0.02</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.12</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>161.405</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Xe</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>-8.43</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>1.8</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>5</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.10</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.12</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>195</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>-6.97</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>1.8</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>6</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.04</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.13</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>234.3156</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Hg</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>-3.25</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>1.0</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>7</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>-0.08</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.09</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>255</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>-1.64</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.9</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>8</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.01</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.10</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>273.16</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">TPW</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>9.288</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Nb</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.13</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.11</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>290</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>2.19</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.4</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>11</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.27</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.12</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>302.9146</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Ga</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>4.38</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.4</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>13.8033</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">e-H<sub>2</sub></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.44</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.14</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>335</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>7.62</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.5</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>17.035</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">e-H<sub>2</sub></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.51</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.16</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>373.124</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">H<sub>2</sub>O</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>9.74</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.6</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>20.27</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">e-H<sub>2</sub></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.32</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.17</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>429.7485</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">In</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>10.1</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.8</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>22.5</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.10</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.18</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>505.078</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Sn</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>11.5</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>1.3</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>24.5561</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Ne</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>-0.23</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>0.20</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>600.612</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Pb</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>9.21</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>6.1</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>35</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>-0.53</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>1.0</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>692.677</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Zn</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>13.8</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>6.9</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>45</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>-0.75</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>1.4</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>800</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>22.4</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>6.4</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>54.3584</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">O<sub>2</sub></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>-1.06</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>1.6</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>903.778</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Sb</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>27.6</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>7.6</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>70</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>-1.57</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>1.9</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>933.473</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Al</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>28.7</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>6.6</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>77.657</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>-3.80</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>1.2</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>1052.78</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Cu/Ag</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>40.9</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>26</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>83.8058</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Ar</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>-4.38</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>1.3</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>1150</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>46.3</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>20</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>90</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>-5.30</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>1.1</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>1234.93</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Ag</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>46.2</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>14</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>100</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>-6.19</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>1.2</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>1337.33</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Au</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>39.9</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>20</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"><span>130</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"><span>-8.07</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"><span>1.6</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"><span>1357.77</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;">Cu</td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"><span>52.1</span></td><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;"><span>20</span></td></tr></tbody></table></div><div id="_e43a4419-9390-a4bb-1d57-91e238a74db3"><h1 id="_df34bfcc-8af3-42db-9d0f-ac7200e093d6"><a class="anchor" href="#_e43a4419-9390-a4bb-1d57-91e238a74db3"></a><a class="header" href="#_e43a4419-9390-a4bb-1d57-91e238a74db3">2.  Interpolation Functions</a></h1><p id="_005ec987-647d-69c4-88cb-2d7d46c7cbef">If it is not convenient to use <a href="#tab1">Table 1</a>, the differences <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>T</mi>
@@ -2049,32 +1998,56 @@ FRANCE</p>
 </math></span> may be approximated by the following expressions. Above <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>70</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, the relative differences of the interpolation functions (with respect to the values of <a href="#tab1">Table 1</a>) are less than 15 %, except at <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>600</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span> and the gold point.</p><p id="_02455698-03ea-f131-49ef-35310ee7a545">From <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> and the gold point.</p><p id="_52da5f8e-bb5b-4008-b73d-e4aa0687bb1c">From <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.65</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>2</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span>, use the polynomial for the temperature scale PTB-2006 (based on the <sup>3</sup>Helium vapor-pressure) <a href="#Engert2007">[2]</a> with</p><div id="_d57d19ed-ee31-562a-c89f-03cb1efc6c03"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>, use the polynomial for the temperature scale PTB-2006 (based on the <sup>3</sup>Helium vapor-pressure) <a href="#Engert2007">[2]</a> with</p><div id="_e5c93fc0-51f9-0eed-e4d7-5fc70d553955"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mstyle mathvariant="italic">
       <mi>T</mi>
@@ -2086,7 +2059,7 @@ FRANCE</p>
       </mstyle>
       <mn>90</mn>
     </msub>
-    <mo>≡</mo>
+    <mi>≡</mi>
     <msub>
       <mstyle mathvariant="italic">
         <mi>T</mi>
@@ -2102,12 +2075,18 @@ FRANCE</p>
     </msub>
     <mo>.</mo>
   </mstyle>
-</math></span></p></div></div><p id="_b5e48f3a-6f7d-5297-cefa-f24b418e7b8d">Below <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_1624a5fd-fbcc-50dd-6c09-01370543217f">Below <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2130,21 +2109,33 @@ FRANCE</p>
       </mrow>
     </msub>
   </mstyle>
-</math></span>.</p><p id="_07cd2564-3161-45ef-333d-b34511cd1955">From <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>.</p><p id="_987a7687-b306-18b9-ff0b-4466e99dbbd6">From <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>2</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>8</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span>,</p><div id="_e62d53ac-a99b-bfd9-43b1-d231da903224"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>,</p><div id="_36243649-19f0-bcd0-035f-0f65d1e016d4"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mstyle mathvariant="italic">
       <mi>T</mi>
@@ -2156,23 +2147,35 @@ FRANCE</p>
       </mstyle>
       <mn>90</mn>
     </msub>
-    <mo>≡</mo>
+    <mi>≡</mi>
     <mn>0</mn>
     <mo>.</mo>
   </mstyle>
-</math></span></p></div></div><p id="_2cf3ceec-febc-537c-8239-e30e71e569d0">From <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_6a2ea58e-4ccf-2d44-57e7-718223da86cf">From <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>8</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>273.16</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>,</p><div id="eq1"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
@@ -2191,9 +2194,15 @@ FRANCE</p>
       <mo>)</mo>
     </mrow>
     <mo>/</mo>
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+
+
+
+    </mrow>
     <mo>=</mo>
     <mrow>
       <munder>
@@ -2202,8 +2211,7 @@ FRANCE</p>
           <mi>i</mi>
           <mo>=</mo>
           <mn>0</mn>
-          <mo>.</mo>
-          <mo>.</mo>
+          <mi>̈</mi>
           <mn>7</mn>
         </mrow>
       </munder>
@@ -2216,10 +2224,10 @@ FRANCE</p>
     <msup>
       <mrow>
         <mo>(</mo>
-        <msubsup>
+        <msub>
           <mi>log</mi>
           <mn>10</mn>
-        </msubsup>
+        </msub>
         <mrow>
           <mo>(</mo>
           <msub>
@@ -2230,9 +2238,15 @@ FRANCE</p>
           </msub>
           <mo>/</mo>
           <mn>273.16</mn>
-          <mstyle mathvariant="normal">
-            <mi>K</mi>
-          </mstyle>
+          <mo rspace="thickmathspace">⁢</mo>
+          <mrow xref="U_NISTu5">
+            <mstyle mathvariant="normal">
+              <mi>K</mi>
+            </mstyle>
+
+
+
+          </mrow>
           <mo>)</mo>
         </mrow>
         <mo>)</mo>
@@ -2244,14 +2258,14 @@ FRANCE</p>
       </mrow>
     </msup>
   </mstyle>
-</math></span>  (1)</p></div></div><p id="_9d3b8390-d6ba-6cf6-92fc-8f280c256892">with the coefficients:</p><div id="_cdfb8143-c4f8-8852-fd15-baf409b0a5f9"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (1)</p></div></div><p id="_b52763d5-e8f9-a5da-6872-d1af1eee3175">with the coefficients:</p><div id="_5c3e8f00-e037-6105-7ac1-9da1c00caef0"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mi>b</mi>
       <mn>0</mn>
     </msub>
     <mo>=</mo>
-    <mn>4.424 57</mn>
+    <mn>4.42457</mn>
     <mo>×</mo>
     <msup>
       <mn>10</mn>
@@ -2264,7 +2278,7 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mo>−</mo>
-    <mn>1.763 11</mn>
+    <mn>1.76311</mn>
     <mo>×</mo>
     <msup>
       <mn>10</mn>
@@ -2277,7 +2291,7 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mo>−</mo>
-    <mn>1.539 85</mn>
+    <mn>1.53985</mn>
     <mo>×</mo>
     <msup>
       <mn>10</mn>
@@ -2290,14 +2304,14 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mo>−</mo>
-    <mn>3.636 85</mn>
+    <mn>3.63685</mn>
     <mo>×</mo>
     <msup>
       <mn>10</mn>
       <mn>3</mn>
     </msup>
   </mstyle>
-</math></span></p></div></div><div id="_ffeae2a4-406b-e66b-ab92-3e7cbaa24634"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><div id="_0f54004d-1410-d398-c23e-4d983d73e364"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mi>b</mi>
@@ -2305,7 +2319,7 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mo>−</mo>
-    <mn>4.198 98</mn>
+    <mn>4.19898</mn>
     <mo>×</mo>
     <msup>
       <mn>10</mn>
@@ -2318,7 +2332,7 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mo>−</mo>
-    <mn>2.613 19</mn>
+    <mn>2.61319</mn>
     <mo>×</mo>
     <msup>
       <mn>10</mn>
@@ -2331,7 +2345,7 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mo>−</mo>
-    <mn>8.419 22</mn>
+    <mn>8.41922</mn>
     <mo>×</mo>
     <msup>
       <mn>10</mn>
@@ -2344,14 +2358,14 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mo>−</mo>
-    <mn>1.103 22</mn>
+    <mn>1.10322</mn>
     <mo>×</mo>
     <msup>
       <mn>10</mn>
       <mn>2</mn>
     </msup>
   </mstyle>
-</math></span></p></div></div><p id="_82da39fe-521f-6065-21e0-5343f5ca6a42">The derivative <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_5501eac8-2d42-50fa-e9f6-4497a0b961d9">The derivative <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mtext>d</mtext>
     <mrow>
@@ -2389,19 +2403,31 @@ FRANCE</p>
       </mrow>
     </msup>
   </mstyle>
-</math></span>.</p><p id="_74d02b42-fced-cc85-9221-19659f452dcd">From <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>.</p><p id="_03fe9b00-1937-15de-3280-a06d3bc2b887">From <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>273.16</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1357.77</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> (copper point):</p><div id="eq2"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
@@ -2420,9 +2446,15 @@ FRANCE</p>
       <mo>)</mo>
     </mrow>
     <mo>/</mo>
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+
+
+
+    </mrow>
     <mo>=</mo>
     <mrow>
       <mo>(</mo>
@@ -2433,9 +2465,15 @@ FRANCE</p>
         <mn>90</mn>
       </msub>
       <mo>/</mo>
-      <mstyle mathvariant="normal">
-        <mi>K</mi>
-      </mstyle>
+      <mo rspace="thickmathspace">⁢</mo>
+      <mrow xref="U_NISTu5">
+        <mstyle mathvariant="normal">
+          <mi>K</mi>
+        </mstyle>
+
+
+
+      </mrow>
       <mo>)</mo>
     </mrow>
     <mrow>
@@ -2445,8 +2483,7 @@ FRANCE</p>
           <mi>i</mi>
           <mo>=</mo>
           <mn>0</mn>
-          <mo>.</mo>
-          <mo>.</mo>
+          <mi>̈</mi>
           <mn>4</mn>
         </mrow>
       </munder>
@@ -2460,9 +2497,15 @@ FRANCE</p>
       <mrow>
         <mo>(</mo>
         <mn>273.16</mn>
-        <mstyle mathvariant="normal">
-          <mi>K</mi>
-        </mstyle>
+        <mo rspace="thickmathspace">⁢</mo>
+        <mrow xref="U_NISTu5">
+          <mstyle mathvariant="normal">
+            <mi>K</mi>
+          </mstyle>
+
+
+
+        </mrow>
         <mo>/</mo>
         <msub>
           <mstyle mathvariant="italic">
@@ -2478,7 +2521,7 @@ FRANCE</p>
       </mrow>
     </msup>
   </mstyle>
-</math></span>  (2)</p></div></div><p id="_cc2e4736-44a6-0221-5ea6-d63cd06fb0b4">with the coefficients:</p><div id="_6b853602-9651-1895-951d-8a6a604bd72c"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (2)</p></div></div><p id="_2b2ea14d-7820-424a-4e20-b80d5578163e">with the coefficients:</p><div id="_ef242bb4-3d4a-552f-9f25-e3c1ca87c415"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mi>c</mi>
@@ -2517,7 +2560,7 @@ FRANCE</p>
     <mo>=</mo>
     <mn>0.5176</mn>
   </mstyle>
-</math></span></p></div></div><p id="_5dc01baa-a4c1-5d8e-2f2c-81012eb0b776">The derivative at the triple point of water is <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_e14994f7-cc29-f430-acf1-c6690ef23b4f">The derivative at the triple point of water is <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>10.1</mn>
     <mo>×</mo>
@@ -2567,16 +2610,28 @@ FRANCE</p>
 <img src="data:image/png;base64,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" height="550" width="828" /><p class="FigureTitle" style="text-align:center;">Figure 2 — Enlargement of the range between <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4.2</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>80</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> of consensus estimates for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2594,9 +2649,15 @@ FRANCE</p>
 </math></span>. The smooth function (<a href="#eq1">Equation (1)</a>, black line) interpolates the mean values (black dots) above <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>8</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>. Error bars represent uncertainties with <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2604,15 +2665,26 @@ FRANCE</p>
     <mo>=</mo>
     <mn>1</mn>
   </mstyle>
-</math></span>.</p></div></div><br /><div><h1 class="Section3" id="_4218f344-fb0a-4de6-bfa7-bc25de09a694">References</h1>
+</math></span>.</p></div></div><br /><div><h1 class="Section3" id="_cc1533ba-8360-4a2c-a47f-8b54b2d53618">References</h1>
 <p id="Fischer2011" class="Biblio">[1]  ] J. Fischer, M. de Podesta, K. D. Hill, M. Moldover, L. Pitre, R. Rusby, P. Steur, O. Tamura, R. White, L.Wolber, <i>Int. J. Thermophys.</i> <b>32</b>, 12-25 (2011).</p><p id="Engert2007" class="Biblio">[2]  ] J. Engert, B. Fellmuth, K. Jousten, <i>Metrologia</i> <b>44</b>, 40-52 (2007).</p>
 
 
 </div></main><script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    "HTML-CSS": { preferredFont: "STIX" },
+    "HTML-CSS": {
+      preferredFont: "STIX",
+      linebreaks: {
+        automatic: true,
+        width: "container"  // or specify something like "90%"/"30em"
+      }
+    },
+    MathML: {
+      linebreaks: {
+        automatic: true
+      }
+    },
     asciimath2jax: { delimiters: [['(#(', ')#)']] }
- });
+  });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
   <script>
@@ -2622,26 +2694,40 @@ FRANCE</p>
 });
   </script>
 
-<script>
-  //TOC toggle animation
-$('#toggle').on('click', function(){
-    if( $('nav').is(':visible') ) {
-        $('nav').animate({ 'left': '-353px' }, 'slow', function(){
-            $('nav').hide();
+  <script>
+    //TOC toggle animation
+    (function() {
+      const jqNav = $('nav');
+      const jqBody = $('body');
+      const jqToggle = $('#toggle');
+      const animationSpeed = 'slow';
+
+      jqToggle.on('click', function() {
+        const isNavVisible = jqNav.is(':visible');
+        const fullNavWidth = jqNav.outerWidth();
+        const navLeft = isNavVisible ? '-' + fullNavWidth + 'px' : '0px';
+        const bodyMarginLeft = isNavVisible ? '0px' : fullNavWidth + 'px';
+
+        // Stop current animations
+        jqNav.stop(true, true);
+        jqBody.stop(true, true);
+
+        if(!isNavVisible) {
+            jqNav.show();
+        }
+        jqNav.animate({'left': navLeft}, animationSpeed, function() {
+          if(isNavVisible) {jqNav.hide()}
         });
-        $('.container').animate({ 'padding-left': '31px' }, 'slow');
-    }
-    else {
-        $('nav').show();
-        $('nav').animate({ 'left': '0px' }, 'slow');
-    }
-});
-</script>
+        jqBody.animate({'marginLeft': bodyMarginLeft}, animationSpeed);
+
+      });
+    })();
+  </script>
 
 <script>
     // Scroll to top button
     window.onscroll = function() {scrollFunction()};
-    
+
     function scrollFunction() {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             document.getElementById("myBtn").style.display = "block";
@@ -2649,7 +2735,7 @@ $('#toggle').on('click', function(){
             document.getElementById("myBtn").style.display = "none";
         }
     }
-    
+
     // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
         document.body.scrollTop = 0;
@@ -2657,6 +2743,132 @@ $('#toggle').on('click', function(){
     }
     </script>
 
+<script>
+/*
+  $(document).ready(function() {
+	  $('[id^=toc]').each(function ()
+	  {
+	     var currentToc = $(this);
+       var url = window.location.href;
+            currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "'></a>");
+	  });
+});
+*/
+</script>
+
+  <script>
+    document.querySelectorAll('*|svg a').forEach(function(item) {
+      var loc = item.getAttribute('href');
+      if (loc !== null && loc.startsWith('#')) {
+  item.setAttribute('href', location.pathname + loc);
+      }
+});
+  </script>
+
+
+<script>
+
+// jQuery Inline Footnotes v1.0.3
+// Copyright (c) 2011 Vesa Vänskä, released under the MIT License.
+
+// Generated by CoffeeScript 1.6.1
+(function() {
+
+  (function($) {
+    $.inlineFootnote = function(el, options) {
+      var _this = this;
+      this.el = $(el);
+      this.el.data("inlineFootnote", this);
+      this.initialize = function() {
+        this.options = $.extend({}, $.inlineFootnote.defaultOptions, options);
+        this.footnoteId = this.el.attr("href").match(/#(.*)/)[1];
+        if (this.footnoteId) {
+          this.el.mouseenter(this.openBox);
+          return $("body").mousemove(this.closeBox);
+        }
+      };
+      this.openBox = function(event) {
+        var footnoteContent, linkOffset;
+        if (!_this.box) {
+          footnoteContent = $("[id='" + _this.footnoteId + "']").children().filter(":not('" + _this.options.hideFromContent + "')");
+          linkOffset = _this.el.offset();
+          _this.box = $("<div />", {
+            id: _this.options.boxId,
+            html: footnoteContent.clone().find(_this.options.hideFromContent).remove().end(),
+            css: {
+              position: "absolute",
+              top: linkOffset.top,
+              left: linkOffset.left + _this.el.outerWidth()
+            }
+          }).appendTo("body");
+          return _this.positionBox();
+        }
+      };
+      this.closeBox = function(event) {
+        if (_this.box) {
+          if (_this.isHoveringFootnote(event)) {
+            clearTimeout(_this.closeTimeout);
+            return _this.closeTimeout = null;
+          } else {
+            if (!_this.closeTimeout) {
+              return _this.closeTimeout = setTimeout((function() {
+                _this.box.remove();
+                return _this.box = null;
+              }), _this.options.hideDelay);
+            }
+          }
+        }
+      };
+      this.isHoveringFootnote = function(event) {
+        return this.box.is(event.target) || $(event.target).closest(this.box).length > 0 || event.target === this.el[0];
+      };
+      this.positionBox = function() {
+        var boxHorizontalPadding, boxLeft, boxWidth, linkLeftOffset, windowWidth;
+        boxHorizontalPadding = parseInt(this.box.css("padding-left")) + parseInt(this.box.css("padding-right"));
+        linkLeftOffset = this.el.offset().left;
+        windowWidth = $(window).width();
+        if ((windowWidth / 2) > linkLeftOffset) {
+          boxLeft = linkLeftOffset + 20;
+          boxWidth = windowWidth - boxLeft - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+        } else {
+          boxWidth = linkLeftOffset - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+          boxLeft = linkLeftOffset - boxWidth - this.options.boxMargin * 2;
+        }
+        return this.box.css({
+          width: boxWidth,
+          left: boxLeft
+        });
+      };
+      return this.initialize();
+    };
+    $.inlineFootnote.defaultOptions = {
+      boxMargin: 20,
+      hideDelay: 200,
+      hideFromContent: "[rel=footnote]",
+      maximumBoxWidth: 500,
+      boxId: "footnote_box"
+    };
+    return $.fn.inlineFootnote = function(options) {
+      return this.each(function() {
+        return new $.inlineFootnote(this, options);
+      });
+    };
+  })(jQuery);
+
+}).call(this);
+</script>
+
+<script>
+      $(function() {
+        $("[rel=footnote]").inlineFootnote();
+        });
+</script>
   <script>
 // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
 //
@@ -2668,21 +2880,29 @@ $('#toggle').on('click', function(){
 !function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function f(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.base=A.hasOwnProperty("base")?A.base:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64,A.titleText=A.hasOwnProperty("titleText")?A.titleText:""}function p(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}this.options=A||{},this.elements=[],f(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var e,t,i,n,o,s,a,r,c,h,l,u,d=[];if(f(this.options),"touch"===(l=this.options.visible)&&(l=this.isTouchDevice()?"always":"hover"),0===(e=p(A=A||"h2, h3, h4, h5, h6")).length)return this;for(!function(){if(null!==document.head.querySelector("style.anchorjs"))return;var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"],style'))?document.head.appendChild(e):document.head.insertBefore(e,A);e.sheet.insertRule(".anchorjs-link{opacity:0;text-decoration:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}",e.sheet.cssRules.length),e.sheet.insertRule(":hover>.anchorjs-link,.anchorjs-link:focus{opacity:1}",e.sheet.cssRules.length),e.sheet.insertRule("[data-anchorjs-icon]::after{content:attr(data-anchorjs-icon)}",e.sheet.cssRules.length),e.sheet.insertRule('@font-face{font-family:anchorjs-icons;src:url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype")}',e.sheet.cssRules.length)}(),t=document.querySelectorAll("[id]"),i=[].map.call(t,function(A){return A.id}),o=0;o<e.length;o++)if(this.hasAnchorJSLink(e[o]))d.push(o);else{if(e[o].hasAttribute("id"))n=e[o].getAttribute("id");else if(e[o].hasAttribute("data-anchor-id"))n=e[o].getAttribute("data-anchor-id");else{for(c=r=this.urlify(e[o].textContent),a=0;void 0!==s&&(c=r+"-"+a),a+=1,-1!==(s=i.indexOf(c)););s=void 0,i.push(c),e[o].setAttribute("id",c),n=c}(h=document.createElement("a")).className="anchorjs-link "+this.options.class,h.setAttribute("aria-label",this.options.ariaLabel),h.setAttribute("data-anchorjs-icon",this.options.icon),this.options.titleText&&(h.title=this.options.titleText),u=document.querySelector("base")?window.location.pathname+window.location.search:"",u=this.options.base||u,h.href=u+"#"+n,"always"===l&&(h.style.opacity="1"),""===this.options.icon&&(h.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(h.style.lineHeight="inherit")),"left"===this.options.placement?(h.style.position="absolute",h.style.marginLeft="-1em",h.style.paddingRight="0.5em",e[o].insertBefore(h,e[o].firstChild)):(h.style.paddingLeft="0.375em",e[o].appendChild(h))}for(o=0;o<d.length;o++)e.splice(d[o]-o,1);return this.elements=this.elements.concat(e),this},this.remove=function(A){for(var e,t,i=p(A),n=0;n<i.length;n++)(t=i[n].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(i[n]))&&this.elements.splice(e,1),i[n].removeChild(t));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){return this.options.truncate||f(this.options),A.trim().replace(/\'/gi,"").replace(/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&-1<(" "+A.firstChild.className+" ").indexOf(" anchorjs-link "),t=A.lastChild&&-1<(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ");return e||t||!1}}});
 // @license-end
   </script>
-  <script>
-/*
-  $(document).ready(function() {
-          $('[id^=toc]').each(function ()
-          {
-             var currentToc = $(this);
-       var url = window.location.href;
-             currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "' </a>");
-          });
-});
-*/
+    <script>
   anchors.options = {
   placement: 'left'
 };
 anchors.add('h1, h2, h3, h4');
+</script>
+
+<script>
+// use .collapsible element to toggle visibility of element following it
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
 </script>
 
 </body></html>

@@ -24,7 +24,8 @@ figure, figcaption, footer, header, hgroup,
 menu, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -40,7 +41,8 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   border: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -55,7 +57,8 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 html, body, div, span, applet, object, iframe,
 p, blockquote,
@@ -70,87 +73,115 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 code, pre, tt, kbd, samp {
   font-family: "Space Mono",monospace;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 code *, pre *, tt *, kbd *, samp * {
   font-family: "Space Mono",monospace !important;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 p code, dt code, li code, label code, legend code, caption code, th code, td code,
 p tt, dt tt, li tt, label tt, legend tt, caption tt, th tt, td tt,
 p kbd, dt kbd, li kbd, label kbd, legend kbd, caption kbd, th kbd, td kbd,
 p samp, dt samp, li samp, label samp, legend samp, caption samp, th samp, td samp {
-  font-size: ; }
+  font-size: ;
+}
+
+sub, sup {
+  font-size: 0.75em;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 blockquote, q {
-  quotes: none; }
-  blockquote::before, blockquote::after, q::before, q::after {
-    content: '';
-    content: none; }
+  quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+  content: "";
+  content: none;
+}
 
 .h2Annex {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 dl {
   display: grid;
-  grid-template-columns: max-content auto; }
-  dl dt p, dl dd p {
-    margin-top: 0; }
-  dl dt {
-    grid-column-start: 1; }
-  dl dd {
-    grid-column-start: 2; }
+  grid-template-columns: max-content auto;
+}
+dl dt p, dl dd p {
+  margin-top: 0;
+}
+dl dt {
+  grid-column-start: 1;
+}
+dl dd {
+  grid-column-start: 2;
+}
 
 b, strong {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 div.document-stage-band, div.document-type-band {
-  background-color: #333333; }
+  background-color: #333333;
+}
 
 a.FootnoteRef + a.FootnoteRef::before {
   content: ", ";
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 a.TableFootnoteRef + a.TableFootnoteRef::before {
   content: ", ";
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 a.TableFootnoteRef, span.TableFootnoteRef,
 a.FootnoteRef, span.FootnoteRef {
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 .addition {
-  color: blue; }
+  color: blue;
+}
 
 .deletion {
   color: red;
-  text-decoration: line-through; }
+  text-decoration: line-through;
+}
 
 ruby {
   ruby-position: over;
-  -webkit-ruby-position: before; }
+  -webkit-ruby-position: before;
+}
 
 ruby ruby {
   ruby-position: under;
-  -webkit-ruby-position: after; }
+  -webkit-ruby-position: after;
+}
 
 /* code highlighting with line numbers */
 table.rouge-line-table td.rouge-gutter {
@@ -158,13 +189,15 @@ table.rouge-line-table td.rouge-gutter {
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  padding-right: 1em; }
+  padding-right: 1em;
+}
 
 table.rouge-line-table td.rouge-code {
   -moz-user-select: all;
   -ms-user-select: all;
   -webkit-user-select: all;
-  user-select: all; }
+  user-select: all;
+}
 
 table.rouge-line-table,
 table.rouge-line-table th,
@@ -173,103 +206,268 @@ table.rouge-line-table td {
   border: none;
   margin: 0;
   padding: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 table.rouge-line-table pre {
   margin: 0;
   padding: 0;
   overflow-x: visible;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
-#brochure-band {
-  background-color: #0AC442; }
+/* header § links */
+a.header {
+  color: inherit;
+  text-decoration: none;
+}
 
-#brochure {
-  border-bottom: solid 3px #0AC442; }
+a.header:hover {
+  color: #a53221 !important;
+  background: inherit;
+  box-shadow: none;
+}
 
-#mise-en-pratique-band {
-  background-color: #540D6E; }
+a.header:visited {
+  color: inherit;
+  text-decoration: none;
+}
 
-#mise-en-pratique {
-  border-bottom: solid 3px #540D6E; }
+a.anchor {
+  position: absolute;
+  z-index: 1001;
+  width: 1.5ex;
+  margin-left: -1.5ex;
+  display: block;
+  text-decoration: none !important;
+  visibility: hidden;
+  text-align: center;
+  font-weight: 400;
+}
 
-#rapport-band {
-  background-color: #D183C9; }
+a.anchor::before {
+  content: "§";
+  font-size: 0.85em;
+  display: block;
+  padding-top: 0.1em;
+}
 
-#rapport {
-  border-bottom: solid 3px #D183C9; }
+a.anchor:hover {
+  color: #a53221;
+  background: inherit;
+  box-shadow: none;
+}
 
-#monographie-band {
-  background-color: #65AFFF; }
+h1 > a.anchor:hover,
+h2 > a.anchor:hover,
+h3 > a.anchor:hover,
+h4 > a.anchor:hover,
+h5 > a.anchor:hover,
+h6 > a.anchor:hover,
+.inline-header > a.anchor:hover,
+h1:hover > a.anchor,
+h2:hover > a.anchor,
+h3:hover > a.anchor,
+h4:hover > a.anchor,
+h5:hover > a.anchor,
+h6:hover > a.anchor,
+.inline-header:hover > a.anchor {
+  visibility: visible;
+}
 
-#monographie {
-  border-bottom: solid 3px #65AFFF; }
+/* collapsible snippets: collapsible before hidable */
+.hidable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 3px 0;
+  margin: 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: "▼";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.active:after {
+  content: "▲";
+}
+
+/* collapsible: */
+.collapsible + .hidable {
+  margin-top: 0;
+}
+
+.collapsible:not(.active) + .hidable {
+  overflow: hidden;
+  padding: 0;
+}
+
+.svg-container {
+  width: 100%; /* or any desired width */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+svg {
+  width: 100%;
+  height: auto; /* ← key to maintaining aspect ratio */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+#standard-band {
+  background-color: #0AC442;
+}
+
+#standard {
+  border-bottom: solid 3px #0AC442;
+}
+
+#directive-band {
+  background-color: #540D6E;
+}
+
+#directive {
+  border-bottom: solid 3px #540D6E;
+}
 
 #guide-band {
-  background-color: #3A405A; }
+  background-color: #D183C9;
+}
 
 #guide {
-  border-bottom: solid 3px #3A405A; }
+  border-bottom: solid 3px #D183C9;
+}
 
-#meeting-report-band {
-  background-color: #F26430; }
+#specification-band {
+  background-color: #65AFFF;
+}
 
-#meeting-report {
-  border-bottom: solid 3px #F26430; }
+#specification {
+  border-bottom: solid 3px #65AFFF;
+}
 
-#technical-report-band {
-  background-color: #C84630; }
+#report-band {
+  background-color: #3A405A;
+}
 
-#technical-report {
-  border-bottom: solid 3px #C84630; }
+#report {
+  border-bottom: solid 3px #3A405A;
+}
 
-#working-part-note-band {
-  background-color: #BFAE48; }
+#amendment-band {
+  background-color: #F26430;
+}
 
-#working-part-note {
-  border-bottom: solid 3px #BFAE48; }
+#amendment {
+  border-bottom: solid 3px #F26430;
+}
 
-#strategy-band {
-  background-color: #BD9391; }
+#corrigendum-band {
+  background-color: #C84630;
+}
 
-#strategy {
-  border-bottom: solid 3px #BD9391; }
+#corrigendum {
+  border-bottom: solid 3px #C84630;
+}
 
-#cipm-mra-band {
-  background-color: #004E64; }
+#administrative-band {
+  background-color: #BFAE48;
+}
 
-#cipm-mra {
-  border-bottom: solid 3px #004E64; }
+#administrative {
+  border-bottom: solid 3px #BFAE48;
+}
 
-#resolution-band {
-  background-color: #53C170; }
+#advisory-band {
+  background-color: #BD9391;
+}
 
-#resolution {
-  border-bottom: solid 3px #53C170; }
+#advisory {
+  border-bottom: solid 3px #BD9391;
+}
 
-#draft-proposal-band {
-  background-color: #39A0ED; }
+#proposal-band {
+  background-color: #39A0ED;
+}
 
-#draft-proposal {
-  border-bottom: solid 3px #39A0ED; }
+#proposal {
+  border-bottom: solid 3px #39A0ED;
+}
 
-#draft-development-band {
-  background-color: #2D7393; }
+#working-draft-band {
+  background-color: #2D7393;
+}
 
-#draft-development {
-  border-bottom: solid 3px #2D7393; }
+#working-draft {
+  border-bottom: solid 3px #2D7393;
+}
 
-#in-force-band {
-  background-color: #53C170; }
+#committee-draft-band {
+  background-color: #2A6B7C;
+}
 
-#in-force {
-  border-bottom: solid 3px #53C170; }
+#committee-draft {
+  border-bottom: solid 3px #2A6B7C;
+}
 
-#retired-band {
-  background-color: #2E382E; }
+#draft-standard-band {
+  background-color: #1C7F7A;
+}
 
-#retired {
-  border-bottom: solid 3px #2E382E; }
+#draft-standard {
+  border-bottom: solid 3px #1C7F7A;
+}
+
+#final-draft-band {
+  background-color: #53C170;
+}
+
+#final-draft {
+  border-bottom: solid 3px #53C170;
+}
+
+#published-band {
+  background-color: #069E2D;
+}
+
+#published {
+  border-bottom: solid 3px #069E2D;
+}
+
+#withdrawn-band {
+  background-color: #004E64;
+}
+
+#withdrawn {
+  border-bottom: solid 3px #004E64;
+}
+
+#cancelled-band {
+  background-color: #2E382E;
+}
+
+#cancelled {
+  border-bottom: solid 3px #2E382E;
+}
 
 /*
     1. HTML & Body
@@ -283,83 +481,111 @@ body {
   line-height: 1.4em;
   color: #1d1d1d;
   background-color: #ffffff;
-  font-weight: 400; }
-  body main {
-    margin: 0 3em 0 6em; }
-  body pre * {
-    font-family: Times New Roman !important; }
+  font-weight: 400;
+}
+body main {
+  margin: 0 3em 0 6em;
+}
+body pre * {
+  font-family: Times New Roman !important;
+}
 
 main {
-  margin: 0 3em 0 6em; }
+  margin: 0 3em 0 6em;
+}
 
 /*
     2. Responsive navigation layout
 */
 #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
   font-family: Times New Roman;
-  font-weight: 400; }
-  #toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-    #toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
-      padding: 5px 10px; }
-    #toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
-      color: #485094;
-      text-decoration: none;
-      display: block; }
-      #toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
-        box-shadow: none;
-        color: #485094; }
-  #toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
-    padding-left: 30px; }
-  #toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
-    padding-left: 50px; }
-  #toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
-    padding-left: 70px; }
-  #toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
-    padding-left: 90px; }
-  #toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
-    padding-left: 110px; }
+  font-weight: 400;
+}
+#toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
+  padding: 5px 10px;
+}
+#toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
+  color: #485094;
+  text-decoration: none;
+  display: block;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: #485094;
+}
+#toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
+  padding-left: 30px;
+}
+#toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
+  padding-left: 50px;
+}
+#toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+  padding-left: 70px;
+}
+#toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+  padding-left: 90px;
+}
+#toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+  padding-left: 110px;
+}
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  background: #6C734A;
+  box-shadow: inset -5px 0px 10px -5px #6C734A !important;
+}
+#toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: #485094;
+}
+@media print {
   #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-    background: #6C734A;
-    box-shadow: inset -5px 0px 10px -5px #6C734A !important; }
-    #toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-      color: #485094; }
-  @media print {
-    #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-      background: white;
-      box-shadow: none !important; }
-    #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
-      color: #485094; }
-    #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-      color: black; } }
-  @media screen and (max-width: 768px) {
-    #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
-      padding: 0 1.5em;
-      overflow: visible; } }
+    background: white;
+    box-shadow: none !important;
+  }
   #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
-    color: white; }
-  #toc .toc-active,
-  #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active,
-  #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-    box-shadow: none !important; }
-    #toc .toc-active a,
-    #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a,
-    #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-      color: white;
-      background: none;
-      box-shadow: none; }
-  #toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
-    text-transform: uppercase; }
-  #toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
-    box-shadow: none;
-    color: white; }
+    color: #485094;
+  }
+  #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+    color: black;
+  }
+}
+@media screen and (max-width: 768px) {
+  #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    padding: 0 1.5em;
+    overflow: visible;
+  }
+}
+#toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
+  color: white;
+}
+#toc .toc-active,
+#toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active,
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  box-shadow: none !important;
+}
+#toc .toc-active a,
+#toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a,
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: white;
+  background: none;
+  box-shadow: none;
+}
+#toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
+  text-transform: uppercase;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: white;
+}
 
 #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 @media screen and (min-width: 768px) {
   nav {
@@ -370,9 +596,10 @@ main {
     width: 323px;
     font-size: 0.9em;
     overflow: auto;
-    padding: 0 0 0 45px;
-    background-color: #f7f7f7; } }
-
+    padding: 0 0 0 30px;
+    background-color: #f7f7f7;
+  }
+}
 @media print {
   nav {
     position: relative;
@@ -381,7 +608,9 @@ main {
     overflow: auto;
     padding: 0;
     margin-right: 0;
-    background-color: white; } }
+    background-color: white;
+  }
+}
 
 @media screen and (min-width: 768px) {
   #toggle {
@@ -391,52 +620,65 @@ main {
     background-color: #6C734A;
     color: white !important;
     cursor: pointer;
-    z-index: 100; }
-    #toggle span {
-      text-align: center;
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%); } }
-
+    z-index: 100;
+  }
+  #toggle span {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
 @media screen and (max-width: 768px) {
   #toggle {
-    display: none; } }
-
+    display: none;
+  }
+}
 @media print {
   #toggle {
-    display: none; } }
+    display: none;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .container {
-    padding-left: 360px; }
+    padding-left: 360px;
+  }
   .rule.toc {
-    display: none; }
+    display: none;
+  }
   h1.toc-contents {
-    margin-top: 1em; }
+    margin-top: 1em;
+  }
   ul#toc-list, ul#toc-list > :is(.h1, .h2, .h3, .h4, .h5, .h6) {
     padding: 0;
-    margin: 0; } }
-
+    margin: 0;
+  }
+}
 div.figure {
   line-height: 1.6em;
   padding: 1.5em;
   margin: 2em 0 1em 0;
-  overflow: auto; }
-  div.figure .FigureTitle, div.figure .figure-title {
-    font-weight: 700;
-    font-size: 1em;
-    text-align: center; }
-  div.figure > img, div.figure > svg {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    max-width: 100%;
-    height: auto; }
+  overflow: auto;
+}
+div.figure .FigureTitle, div.figure .figure-title {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+div.figure > img, div.figure > svg {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 table div.figure {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 /*
     Document types + stages
@@ -447,30 +689,35 @@ table div.figure {
   height: 100%;
   position: fixed;
   display: block;
-  z-index: 102; }
-  .document-type-band > :first-child {
-    position: relative;
-    width: 25px;
-    font-weight: 400;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    margin: 0;
-    margin-left: 6px;
-    writing-mode: tb-rl;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    white-space: nowrap;
-    display: block;
-    bottom: 0; }
-  @media print {
-    .document-type-band {
-      display: none; } }
-  .document-type-band .document-type {
-    top: 20px; }
+  z-index: 102;
+}
+.document-type-band > :first-child {
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-type-band {
+    display: none;
+  }
+}
+.document-type-band .document-type {
+  top: 20px;
+}
 
 .document-stage-band {
   left: 0;
@@ -479,31 +726,37 @@ table div.figure {
   position: fixed;
   display: block;
   z-index: 101;
-  box-shadow: -5px 0px 10px #1d1d1d; }
-  .document-stage-band > :first-child {
-    position: relative;
-    width: 25px;
-    font-weight: 400;
-    height: 150;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    margin: 0;
-    margin-left: 6px;
-    writing-mode: tb-rl;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    white-space: nowrap;
-    display: block;
-    bottom: 0; }
-  @media print {
-    .document-stage-band {
-      display: none; } }
+  box-shadow: -5px 0px 10px #1d1d1d;
+}
 .document-stage-band > :first-child {
-  font-weight: 300; }
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  height: 150;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-stage-band {
+    display: none;
+  }
+}
+
+.document-stage-band > :first-child {
+  font-weight: 300;
+}
 
 p.document-stage {
   position: relative;
@@ -523,21 +776,25 @@ p.document-stage {
   -o-transform: rotate(180deg);
   white-space: nowrap;
   display: block;
-  bottom: 0; }
+  bottom: 0;
+}
 
 #governance-band p.document-type {
-  height: 230px !important; }
+  height: 230px !important;
+}
 
 p.document-stage {
   font-weight: 300;
-  height: 160px; }
+  height: 160px;
+}
 
 .coverpage-maturity {
   font-family: Times New Roman;
   font-weight: 400;
   font-size: 1em;
   margin: 0 0 2em 0;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 /*
     3. TYPOGRAPHY
@@ -550,150 +807,186 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #6C734A;
   font-weight: 300;
   margin-top: 1.6em;
-  margin-bottom: 0.3em; }
+  margin-bottom: 0.3em;
+}
 
 h1, .h1 {
   font-size: 1.6em;
   text-transform: uppercase;
-  margin-top: 2em; }
+  margin-top: 2em;
+}
 
-h1#content, #content.h1 {
-  margin-top: 2em; }
+h1#content, .h1#content {
+  margin-top: 2em;
+}
 
 h2, .h2 {
   margin-top: 1.3em;
   font-size: 1.3em;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 h3, .h3 {
   margin-top: 1.1em;
   font-size: 1.1em;
-  font-weight: 100; }
+  font-weight: 100;
+}
 
 .TermNum {
-  font-weight: 100; }
+  font-weight: 100;
+}
 
 .TermNum, .Terms, .AltTerms {
-  color: #6C734A; }
+  color: #6C734A;
+}
 
 h2.TermNum {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 p.Terms {
   font-size: 1.1em;
   line-height: 1.5em;
-  margin: 0; }
+  margin: 0;
+}
 
 p.AltTerms {
   /*
-    font-style: italic;
-     */
+  font-style: italic;
+   */
   font-size: 1.1em;
-  margin: 0; }
+  margin: 0;
+}
 
 /*
     3.2 Links
 */
 a, a:visited {
   text-decoration: none;
-  color: #485094; }
+  color: #485094;
+}
 
 a:hover {
   color: white;
   background: #6C734A;
-  box-shadow: 3px 0 0 #6C734A, -3px 0 0 #6C734A; }
+  box-shadow: 3px 0 0 #6C734A, -3px 0 0 #6C734A;
+}
 
 *::selection {
   background: #6C734A;
-  color: white; }
+  color: white;
+}
 
 *::-moz-selection {
   background: #6C734A;
-  color: white; }
+  color: white;
+}
 
 /*
     3.3 Lists
 */
 ul, ol {
-  margin-left: 1.2em; }
+  margin-left: 1.2em;
+}
 
 ul li {
-  list-style: none; }
+  list-style: none;
+}
 
 ul li::before {
   content: "—";
   display: inline-block;
   width: 1em;
-  margin-left: -1.2em; }
+  margin-left: -1.2em;
+}
 
 ul li p {
-  display: inline; }
+  display: inline;
+}
 
 ul > li:first-child {
-  margin-top: 1em; }
+  margin-top: 1em;
+}
 
 ul ul > li:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 ol ul > li:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 #toc-list ul {
-  margin-bottom: 0.25em; }
+  margin-bottom: 0.25em;
+}
 
 #toc-list li {
-  list-style-type: none; }
+  list-style-type: none;
+}
 
 #toc li::before {
   content: " ";
-  display: none; }
+  display: none;
+}
 
 /* https://github.com/metanorma/metanorma-bipm/issues/47 */
-ol[class="alphabet"] {
-  counter-reset: alphabet; }
+ol[class=alphabet] {
+  counter-reset: alphabet;
+}
 
-ol[class="roman"] {
-  counter-reset: roman; }
+ol[class=roman] {
+  counter-reset: roman;
+}
 
-ol[class="alphabet"] ol[class="alphabet"] {
-  counter-reset: none; }
+ol[class=alphabet] ol[class=alphabet] {
+  counter-reset: none;
+}
 
-ol[class="alphabet"] > li {
+ol[class=alphabet] > li {
   list-style: none;
-  position: relative; }
+  position: relative;
+}
 
-ol[class="alphabet"] ol[class="alphabet"] > li {
-  list-style: inherit; }
+ol[class=alphabet] ol[class=alphabet] > li {
+  list-style: inherit;
+}
 
-ol[class="alphabet"] > li::before {
+ol[class=alphabet] > li::before {
   counter-increment: alphabet;
   content: counter(alphabet, lower-alpha) ") ";
   position: absolute;
-  left: -1.4em; }
+  left: -1.4em;
+}
 
-ol[class="alphabet"] ol[class="alphabet"] > li::before {
+ol[class=alphabet] ol[class=alphabet] > li::before {
   counter-increment: none;
-  content: initial; }
+  content: initial;
+}
 
-ol[class="roman"] ol[class="roman"] {
-  counter-reset: none; }
+ol[class=roman] ol[class=roman] {
+  counter-reset: none;
+}
 
-ol[class="roman"] > li {
+ol[class=roman] > li {
   list-style: none;
-  position: relative; }
+  position: relative;
+}
 
-ol[class="roman"] ol[class="roman"] > li {
-  list-style: inherit; }
+ol[class=roman] ol[class=roman] > li {
+  list-style: inherit;
+}
 
-ol[class="roman"] > li::before {
+ol[class=roman] > li::before {
   counter-increment: roman;
   content: "(" counter(roman, lower-roman) ") ";
   position: absolute;
-  left: -2.0em; }
+  left: -2em;
+}
 
-ol[class="roman"] ol[class="roman"] > li::before {
+ol[class=roman] ol[class=roman] > li::before {
   counter-increment: none;
-  content: initial; }
+  content: initial;
+}
 
 /*
     3.4 Rules
@@ -702,14 +995,16 @@ ol[class="roman"] ol[class="roman"] > li::before {
   width: 100%;
   height: 1px;
   background-color: #0e1a85;
-  margin: 2em 0; }
+  margin: 2em 0;
+}
 
 /*
     3.5 Bibliograhy
 */
 p.Biblio, p.NormRef {
   margin-top: 1em;
-  margin-left: 2em; }
+  margin-left: 2em;
+}
 
 /*
     3.6 Source Code + figures
@@ -722,39 +1017,46 @@ pre,
   line-height: 1.6em;
   padding: 1.5em;
   margin: 2em 0 1em 0;
-  overflow: auto; }
-  .figure .SourceTitle,
-  pre .SourceTitle,
-  .pseudocode .SourceTitle {
-    font-weight: 700;
-    font-size: 1em;
-    text-align: center; }
+  overflow: auto;
+}
+.figure .SourceTitle,
+pre .SourceTitle,
+.pseudocode .SourceTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
 
 pre {
   font-family: "Space Mono",monospace;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 .AdmonitionTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .RecommendationTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .ListTitle {
   font-weight: 700;
   font-size: 1em;
   text-align: center;
-  text-align: left; }
+  text-align: left;
+}
 
 .FigureTitle,
 .SourceTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 /*
     3.7 Notes
@@ -763,9 +1065,11 @@ pre {
   background-color: #fff495;
   color: #47430c;
   padding: 1.2em;
-  margin: 1em 0 1em 0; }
-  .Note p {
-    margin: 0; }
+  margin: 1em 0 1em 0;
+}
+.Note p {
+  margin: 0;
+}
 
 /*
     3.8 Examples
@@ -776,18 +1080,23 @@ pre {
   margin: 2em 0 1em 0;
   text-align: left;
   color: #424242;
-  padding-left: 2.7em; }
-  .example p {
-    margin: 0; }
-  .example .example-title {
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-left: -1.5em; }
-  .example .example-title {
-    margin-top: 0; }
-  .example pre,
-  .example .pseudocode {
-    background: none; }
+  padding-left: 2.7em;
+}
+.example p {
+  margin: 0;
+}
+.example .example-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: -1.5em;
+}
+.example .example-title {
+  margin-top: 0;
+}
+.example pre,
+.example .pseudocode {
+  background: none;
+}
 
 /*
     3.9 Tables
@@ -798,29 +1107,36 @@ table {
   margin: 1em 0 2em 0;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 2em; }
-  table, table th, table td {
-    border: 1px solid black;
-    font-size: 0.95em; }
-  table th, table td {
-    padding: 1em; }
-  table td.header {
-    font-weight: 400; }
+  padding-right: 2em;
+}
+table, table th, table td {
+  border: 1px solid black;
+  font-size: 0.95em;
+}
+table th, table td {
+  padding: 1em;
+}
+table td.header {
+  font-weight: 400;
+}
 
 p.TableTitle {
   text-align: center;
   margin-top: 2.5em;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 /*
   3.10 Footnotes
 */
 a.footnote-number {
   vertical-align: super;
-  font-size: 0.8em; }
+  font-size: 0.8em;
+}
 
 .footnote {
-  font-size: 0.9em; }
+  font-size: 0.9em;
+}
 
 /*
     3.11 Blockquotes
@@ -832,7 +1148,8 @@ a.footnote-number {
   padding: 1.5em;
   margin-top: 2em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 /*
     3.12 Formulas
@@ -841,7 +1158,8 @@ a.footnote-number {
   background-color: #f7f7f7;
   padding: 1.5em;
   margin-top: 2em;
-  text-align: center; }
+  text-align: center;
+}
 
 /*
     3.13 Contact Info
@@ -853,41 +1171,49 @@ a.footnote-number {
   text-align: left;
   border: #6C734A solid 2px;
   color: #6C734A !important;
-  border-radius: 25px; }
+  border-radius: 25px;
+}
 
 .contact-info a,
 .contact-info a:hover {
-  color: #6C734A; }
+  color: #6C734A;
+}
 
 .contact-info p, .contact-info a {
   font-family: "Space Mono",monospace;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 .contact-info .name {
   font-weight: 700;
   font-size: 1.2em;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 .contact-info .address {
   font-size: 1em;
   line-height: 1.3em;
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 /*
     Keywords
 */
 span.keyword {
-  font-weight: 600; }
+  font-weight: 600;
+}
 
 /*
     Paragraphs
 */
 p {
   margin-top: 1em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+}
 
 h2 p, .h2 p {
-  display: inline; }
+  display: inline;
+}
 
 /*
     4.0 Page header
@@ -897,24 +1223,28 @@ h2 p, .h2 p {
 */
 .icon-svg {
   width: 100%;
-  color: #5ecf86; }
+  color: #5ecf86;
+}
 
 .wrapper-top {
   background: linear-gradient(200deg, #007864, #6C734A);
   color: #ffffff;
   padding: 2em 0;
-  width: 100%; }
+  width: 100%;
+}
 
 .wrapper-top-bottom {
   width: 0;
   height: 0;
   border-top: 100px solid #6C734A;
   border-right: 100px solid transparent;
-  position: absolute; }
+  position: absolute;
+}
 
 .doc-number {
   font-size: 0.5em;
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 .coverpage-title {
   padding-bottom: 0.5em;
@@ -924,53 +1254,65 @@ h2 p, .h2 p {
   font-weight: 100;
   padding-left: 1em;
   padding-right: 1em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .WordSection11 {
-  padding: 0 2em 0 3em; }
+  padding: 0 2em 0 3em;
+}
 
 .info-section {
-  padding: 0 2em 0 5em; }
+  padding: 0 2em 0 5em;
+}
 
 .prefatory-section {
-  padding: 0 3em 0 6em; }
+  padding: 0 3em 0 6em;
+}
 
 .zzSTDTitle1, .MsoCommentText {
-  display: none; }
+  display: none;
+}
 
 .coverpage {
   text-align: center;
-  padding-left: 1.5em; }
+  padding-left: 1.5em;
+}
 
 .coverpage-logo span, .coverpage-tc-name span {
   font-family: Times New Roman;
   text-transform: none;
-  font-weight: 300; }
+  font-weight: 300;
+}
 
 .coverpage-tc-name {
   font-size: 1.2em;
   line-height: 1.2em;
-  margin: 0.25em 0; }
+  margin: 0.25em 0;
+}
 
 /*
     4.2 Document Identity
 */
 .coverpage-doc-identity {
   font-size: 2em;
-  line-height: 2em; }
+  line-height: 2em;
+}
 
 .coverpage-title .title-second {
-  font-size: 0.8em; }
+  font-size: 0.8em;
+}
 
 .coverpage-title .title-third {
-  font-size: 0.6em; }
+  font-size: 0.6em;
+}
 
 .coverpage-stage-block {
   font-family: Times New Roman;
   font-weight: 600;
   font-size: 1.25em;
   margin: 2em 0em 2em 0em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 /*
     4.3 Draft Warning
@@ -981,13 +1323,15 @@ h2 p, .h2 p {
   margin: 1em 2em;
   color: #485094;
   padding: 2em 1em 1em 1em;
-  border-radius: 25px; }
+  border-radius: 25px;
+}
 
 .coverpage-warning .title {
   font-family: Times New Roman;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+}
 
 /*
     4.4 Copyright
@@ -995,7 +1339,8 @@ h2 p, .h2 p {
 .copyright {
   padding: 1em;
   font-size: 0.9em;
-  text-align: left; }
+  text-align: left;
+}
 
 /*  .copyright .name, .copyright .address {color: #485094;} */
 /*
@@ -1021,62 +1366,84 @@ To top button
   cursor: pointer;
   padding: 10px 15px 10px 15px;
   border-radius: 4px;
-  text-transform: uppercase; }
-  #myBtn:hover {
-    opacity: 1; }
-  @media print {
-    #myBtn {
-      display: none; } }
-  #myBtn a.anchorjs-link:hover {
-    background: none;
-    color: #485094;
-    box-shadow: none; }
+  text-transform: uppercase;
+}
+#myBtn:hover {
+  opacity: 1;
+}
+@media print {
+  #myBtn {
+    display: none;
+  }
+}
+#myBtn a.anchorjs-link:hover {
+  background: none;
+  color: #485094;
+  box-shadow: none;
+}
 
 @page {
-  margin: 2cm 1cm; }
-
+  margin: 2cm 1cm;
+}
 @media print {
   .document-info, nav, .copyright {
-    page-break-before: always; }
+    page-break-before: always;
+  }
   h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
     page-break-after: avoid;
-    margin-top: 1.2em; }
+    margin-top: 1.2em;
+  }
   .note, .figure, pre, .pseudocode, table {
-    page-break-inside: avoid; }
+    page-break-inside: avoid;
+  }
   .info-section {
-    display: none; }
+    display: none;
+  }
   .coverpage {
-    height: 23cm; }
+    height: 23cm;
+  }
   .wrapper-top {
     top: 0;
     padding-top: 4cm;
-    padding-bottom: 4cm; }
+    padding-bottom: 4cm;
+  }
   .wrapper-top-bottom {
-    margin-top: -5px; }
+    margin-top: -5px;
+  }
   #toggle, .document-stage-band,
   .document-type-band, button#myBtn {
-    display: none; }
+    display: none;
+  }
   .container {
-    padding-left: 0; }
+    padding-left: 0;
+  }
   h1.content, .h1.content {
     margin-top: 2em;
-    line-height: 2.5em; }
+    line-height: 2.5em;
+  }
   h1, .h1 {
     font-size: 1.5em;
-    line-height: 1.5; }
+    line-height: 1.5;
+  }
   h2, .h2 {
-    font-size: 1.2em; }
+    font-size: 1.2em;
+  }
   h3, .h3 {
-    font-size: 1em; }
+    font-size: 1em;
+  }
   .Note {
     background-color: #fff495;
     color: #47430c;
     padding: 5px;
-    margin: 2em 0 1em 0; }
+    margin: 2em 0 1em 0;
+  }
   .Note p {
-    padding: 0 5px 0 5px; }
+    padding: 0 5px 0 5px;
+  }
   .wrapper-top-bottom {
-    display: none; } }
+    display: none;
+  }
+}
 
 -->
 </style><style><!--pre.sourcecode table td { padding: 5px; }
@@ -1153,9 +1520,13 @@ pre.sourcecode .nt {
 
   <div class="coverpage-doc-identity">
     <div class="doc-number">
-      <span class="docnumber">BIPM ITS-90 MEP</span>
+      <span class="docnumber">BIPM ITS-90 MEP 1 1</span>
       <span class="docnumber-separator">:</span>
       <span class="docyear">2017 </span>
+      
+      
+      <br />Date: 2017-06-28
+      
     </div>
 
     <div class="coverpage-logo">
@@ -1172,7 +1543,7 @@ pre.sourcecode .nt {
       
       
       
-      <span class="title-first">Appendix 1: Technical Annex for the International Temperature Scale of 1990 (ITS-90)</span><br /> 
+      <span class="title-first">Annex 1: Technical Annex for the International Temperature Scale of 1990 (ITS-90)</span><br /> 
       <span class="title-second">Annexe 1: </span>
        
       
@@ -1219,13 +1590,15 @@ pre.sourcecode .nt {
   
 
   <div class="coverpage-tc-name">
-    <span>CCT: Consultative Committee for Thermometry</span>
+    <span>CCTCCT</span>
   </div>
  
   
   <div class="coverpage-tc-name">
     .
   </div>
+  
+
   
 
   
@@ -1247,24 +1620,21 @@ pre.sourcecode .nt {
 <div class="copyright">
 <div class="boilerplate-copyright">
 
-<div id="_0e09b624-560f-9546-c838-d78c80b718c4">
-<p id="_ebab9ed3-4164-b906-3c50-5dd8c2470e43" style="text-align:center;">© Bureau International des Poids et Mesures 2017 all rights reserved</p>
+<div id="_7efb337a-e1b2-60db-4c6e-e94cf6e5e5c1">
+<p id="_2eeebb4a-8fef-888c-842a-8a15733051b8" style="text-align:center;">© Bureau International des Poids et Mesures 2017 all rights reserved</p>
 </div>
 </div>
   <div class="boilerplate-license">
 
-<div id="_copyright_statement_2"><h1 class="IntroTitle">Copyright statement</h1>
+<div id="_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a"><h1 class="IntroTitle"><a class="anchor" href="#_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a"></a><a class="header" href="#_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a">Copyright statement</a></h1>
 
-<p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/:">http://creativecommons.org/licenses/by/4.0/:</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
+<p id="_50719790-3c5b-c213-8298-0631d690bc21">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/:">http://creativecommons.org/licenses/by/4.0/:</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
 </div>
 </div>
   <div id="boilerplate-legal-destination"></div>
 <div class="boilerplate-feedback">
 
-<p id="_e6428749-2432-0772-4c8e-ed6c34018916">BIPM<br />
-Pavillon de Breteuil<br />
-F-92312 Sèvres Cedex<br />
-FRANCE</p>
+<p id="_5926bc3f-b367-69e7-6cc6-442a91e32db2">BIPM<br /> Pavillon de Breteuil<br /> F-92312 Sèvres Cedex<br /> FRANCE</p>
 </div>
 </div>
 
@@ -1275,12 +1645,27 @@ FRANCE</p>
 
 </div>
 </header></div><br /><div class="prefatory-section"><nav>
-  <div id="toc"><h1 class="IntroTitle">Contents</h1><ul><li class="h1"><a href="#_361ad8c3-d5c6-4d8d-999e-2c27ccdec0c4">      Abstract</a></li>
-<li class="h1"><a href="#_6872a6ca-f1a4-4483-bbb5-7e3af0417297">      1.  Isotopic composition and corrections for the triple point of water</a></li>
-<li class="h1"><a href="#_46ecc2eb-9976-40dc-ba50-0bc69b88b65e">      2.  Isotopic composition and corrections for the triple point of equilibrium hydrogen</a></li>
-<li class="h1"><a href="#_b6ba71bd-e982-45ca-83bb-6135dfaab6d7">      3.  Isotopic composition for the vapour-pressure points of equilibrium hydrogen</a></li>
-<li class="h1"><a href="#_ac196912-df48-41d6-af75-eb04595937ca">      4.  Isotopic composition and corrections for the triple point of neon</a></li>
-<li class="h1"><a href="#_78712393-322d-4f1c-9e9b-e5d99ffd3e67">      References</a></li></ul></div>
+  <div id="toc"><h1 class="IntroTitle"><a class="anchor" href="#_13d7055e-30fc-845a-c60e-8972faf092d9"></a><a class="header" href="#_13d7055e-30fc-845a-c60e-8972faf092d9">Contents</a></h1><ul><li class="h1"><a href="#_3f7163a8-d1cc-2b70-a326-257611248052">      
+  
+  Abstract
+</a></li>
+<li class="h1"><a href="#_76d13964-d3a3-bfe5-e843-7ff32d2dbdc8">      
+  
+  1.  Isotopic composition and corrections for the triple point of water
+</a></li>
+<li class="h1"><a href="#_24d9bb71-6037-1e9e-0fc6-45232907becd">      
+  
+  2.  Isotopic composition and corrections for the triple point of equilibrium hydrogen
+</a></li>
+<li class="h1"><a href="#_667163fd-7f78-0217-f576-b9a13e6a44be">      
+  
+  3.  Isotopic composition for the vapour-pressure points of equilibrium hydrogen
+</a></li>
+<li class="h1"><a href="#_3a76d9d9-70bf-7a01-61b8-1e61775add67">      
+  
+  4.  Isotopic composition and corrections for the triple point of neon
+</a></li>
+<li class="h1"><a href="#_48c430ab-29ba-47f3-baec-38f03b340191">      References</a></li></ul></div>
 
 </nav>
 
@@ -1291,7 +1676,7 @@ FRANCE</p>
 
 
 
-</div><br /><br /><div id="_abstract" class="Section3"><h1 class="IntroTitle" id="_361ad8c3-d5c6-4d8d-999e-2c27ccdec0c4">Abstract</h1><p id="_d27ce58c-8061-4492-1406-417bb75c45e9">This Technical Annex includes specifications beyond the definitions in the text of the International Temperature Scale of 1990 (ITS-90) that are deemed essential for the unambiguous realization of the ITS-90. Specifications within the Technical Annex are considered mandatory extensions of the text of the ITS-90.</p><p id="_cf26fcc7-f174-7741-43f5-df4a03ee51a7">For material taken directly from the text of the ITS-90, the <i>mise en pratique</i> refers to “defined” or “assigned” values or procedures. Where additional material other than the ITS-90 text has been deemed essential for inclusion in the Technical Annex, the <i>mise en pratique</i> of the definition of the kelvin refers to “specified” values or procedures.</p></div><div id="_isotopic_composition_and_corrections_for_the_triple_point_of_water"><h1 id="_6872a6ca-f1a4-4483-bbb5-7e3af0417297">1.  Isotopic composition and corrections for the triple point of water</h1><p id="_d72d073b-f6a3-bfc7-a8dc-2cf39eb6f219">The effects of isotopic composition on the triple point of water (TPW) are discussed in detail in [<a href="#White2010">White and Tew 2010</a>, <a href="#Ripple2005">Ripple <i>et al.</i> 2005</a>].</p><p id="_1fb90754-a593-73f4-4f63-e0265faa0eae">The international science community, through the International Atomic Energy Agency, uses a defined Standard Mean Ocean Water (SMOW) as a point of reference for studies in the isotopic composition of waters. In practice, measurements of isotopic composition are made with respect to Vienna-SMOW (VSMOW) and Standard Light Antarctic Precipitation (SLAP) [Gonfiantini 1978, <a href="#Li1988">Li <i>et al.</i> 1988</a>]; two widely distributed standard reference water samples that span the isotopic range of naturally occurring samples. The International Union of Pure and Applied Chemistry (IUPAC) recommended the following amount-of-substance ratios for VSMOW, based on the most reliable measurements available [De <a href="#Laeter2003">Laeter <i>et al.</i> 2003</a>]:</p><div id="_f0fdb78a-3326-d366-b6f3-6e382f4cf60e"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</div><br /><br /><div id="_3f7163a8-d1cc-2b70-a326-257611248052" class="Section3"><h1 class="IntroTitle" id="_4c5bd89b-db66-4632-a182-82ef454e821d"><a class="anchor" href="#_3f7163a8-d1cc-2b70-a326-257611248052"></a><a class="header" href="#_3f7163a8-d1cc-2b70-a326-257611248052">Abstract</a></h1><p id="_2595ffc9-2efc-eca3-608b-a2b8077acb1f">This Technical Annex includes specifications beyond the definitions in the text of the International Temperature Scale of 1990 (ITS-90) that are deemed essential for the unambiguous realization of the ITS-90. Specifications within the Technical Annex are considered mandatory extensions of the text of the ITS-90.</p><p id="_d8cc3982-a59f-441d-7946-7f24f3baaa68">For material taken directly from the text of the ITS-90, the <i>mise en pratique</i> refers to “defined” or “assigned” values or procedures. Where additional material other than the ITS-90 text has been deemed essential for inclusion in the Technical Annex, the <i>mise en pratique</i> of the definition of the kelvin refers to “specified” values or procedures.</p></div><div id="_76d13964-d3a3-bfe5-e843-7ff32d2dbdc8"><h1 id="_bf4326b4-a782-43e8-85df-202ce140d077"><a class="anchor" href="#_76d13964-d3a3-bfe5-e843-7ff32d2dbdc8"></a><a class="header" href="#_76d13964-d3a3-bfe5-e843-7ff32d2dbdc8">1.  Isotopic composition and corrections for the triple point of water</a></h1><p id="_36fc96af-623d-59ef-49df-5b686d1bf322">The effects of isotopic composition on the triple point of water (TPW) are discussed in detail in [<a href="#White2010">White and Tew 2010</a>, <a href="#Ripple2005">Ripple <i>et al.</i> 2005</a>].</p><p id="_e2e1e276-b3da-40d3-8606-9c7425425a53">The international science community, through the International Atomic Energy Agency, uses a defined Standard Mean Ocean Water (SMOW) as a point of reference for studies in the isotopic composition of waters. In practice, measurements of isotopic composition are made with respect to Vienna-SMOW (VSMOW) and Standard Light Antarctic Precipitation (SLAP) [Gonfiantini 1978, <a href="#Li1988">Li <i>et al.</i> 1988</a>]; two widely distributed standard reference water samples that span the isotopic range of naturally occurring samples. The International Union of Pure and Applied Chemistry (IUPAC) recommended the following amount-of-substance ratios for VSMOW, based on the most reliable measurements available [De <a href="#Laeter2003">Laeter <i>et al.</i> 2003</a>]:</p><div id="_caa8a52a-1b66-d66f-6557-e69320882a7e"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mrow>
@@ -1312,7 +1697,7 @@ FRANCE</p>
       <mtext>VSMOW</mtext>
     </msub>
     <mo>=</mo>
-    <mn>0.000 155 76</mn>
+    <mn>0.00015576</mn>
     <mrow>
       <mo>(</mo>
       <mn>5</mn>
@@ -1320,7 +1705,7 @@ FRANCE</p>
     </mrow>
     <mo>,</mo>
   </mstyle>
-</math></span></p></div></div><div id="_176f49a4-f86d-e7b6-a8c9-092c3bbd33ce"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><div id="_d453328e-fc8c-b436-d26c-2775e2853140"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mrow>
@@ -1341,7 +1726,7 @@ FRANCE</p>
       <mtext>VSMOW</mtext>
     </msub>
     <mo>=</mo>
-    <mn>0.002 0052</mn>
+    <mn>0.0020052</mn>
     <mrow>
       <mo>(</mo>
       <mn>5</mn>
@@ -1349,7 +1734,7 @@ FRANCE</p>
     </mrow>
     <mo>,</mo>
   </mstyle>
-</math></span></p></div></div><div id="_0e117dcf-93d5-4389-e1bc-233964b56f3c"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><div id="_0d0949e5-d17e-c07c-b554-cc33acc6eb3d"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mrow>
@@ -1370,7 +1755,7 @@ FRANCE</p>
       <mtext>VSMOW</mtext>
     </msub>
     <mo>=</mo>
-    <mn>0.000 3799</mn>
+    <mn>0.0003799</mn>
     <mrow>
       <mo>(</mo>
       <mn>9</mn>
@@ -1378,7 +1763,7 @@ FRANCE</p>
     </mrow>
     <mo>.</mo>
   </mstyle>
-</math></span></p></div></div><p id="_bae8f1b8-a2c0-3a6d-cfed-c942073191bb">For the purposes of thermometry, these absolute values are specified for the isotopic composition of the water used for realizing the definition of the kelvin with the assigned temperature <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span></p></div></div><p id="_23256fea-aa22-9a44-cd5c-d77a59543ada">For the purposes of thermometry, these absolute values are specified for the isotopic composition of the water used for realizing the definition of the kelvin with the assigned temperature <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1393,11 +1778,17 @@ FRANCE</p>
     </mrow>
     <mo>=</mo>
     <mn>273.16</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span>. However, variations in isotopic composition of water can be measured much more accurately in relative mode (that is, relative to that of VSMOW) than in absolute mode. This is the reason why the scale definition for isotope values of water is still artefact-based. Isotopic deviations of artefact VSMOW from SMOW are negligible when expressed as an equivalent change in the TPW temperature.</p><p id="_78a6f34c-5fb9-d6d3-192f-5cc921e45cbc">Variations in amount-of-substance ratios are conventionally reported as deviations from VSMOW, such as</p><div id="_8a1e272c-5547-7bd1-3055-c335ed104390"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>. However, variations in isotopic composition of water can be measured much more accurately in relative mode (that is, relative to that of VSMOW) than in absolute mode. This is the reason why the scale definition for isotope values of water is still artefact-based. Isotopic deviations of artefact VSMOW from SMOW are negligible when expressed as an equivalent change in the TPW temperature.</p><p id="_49195128-6cce-291d-1afb-e0f3c1ab6440">Variations in amount-of-substance ratios are conventionally reported as deviations from VSMOW, such as</p><div id="_02efd079-4e98-627c-afb3-7ecdfc751a1f"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mstyle mathvariant="italic">
       <mi>δ</mi>
@@ -1476,7 +1867,7 @@ FRANCE</p>
     </mrow>
     <mo>,</mo>
   </mstyle>
-</math></span>  (1)</p></div></div><p id="_efd0af32-fa8f-1a67-7df5-c39e974698a4">and similarly for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (1)</p></div></div><p id="_ffb5dae5-ed89-24e7-9ead-77e628d0541f">and similarly for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>δ</mi>
@@ -1499,7 +1890,7 @@ FRANCE</p>
       <mi>δ</mi>
     </mstyle>
   </mstyle>
-</math></span>-value has been determined with respect to VSMOW. Usually the results are in the parts-per-thousand range, so are expressed in permil (per thousand, ‰).</p><p id="_e2458757-4b66-0578-970a-5668873009f7">Besides VSMOW, to further improve the inter-laboratory reproducibility of the water isotopic composition measurements, SLAP is also used to define the scale. The <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>-value has been determined with respect to VSMOW. Usually the results are in the parts-per-thousand range, so are expressed in permil (per thousand, ‰).</p><p id="_fbd0e45c-13c3-4239-5016-8f31b86efc65">Besides VSMOW, to further improve the inter-laboratory reproducibility of the water isotopic composition measurements, SLAP is also used to define the scale. The <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>δ</mi>
@@ -1531,7 +1922,7 @@ FRANCE</p>
     <mn>55.5</mn>
     <mi>‰</mi>
   </mstyle>
-</math></span> with respect to VSMOW. These consensus values are used in the definition of the so-called normalized VSMOW-SLAP scale:</p><div id="_e4bc50c5-b79b-8c87-8b89-3487bc134c25"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> with respect to VSMOW. These consensus values are used in the definition of the so-called normalized VSMOW-SLAP scale:</p><div id="_77d7615a-62fb-d08f-e589-faea5e324b2a"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mstyle mathvariant="italic">
       <mi>δ</mi>
@@ -1596,25 +1987,20 @@ FRANCE</p>
     </mrow>
     <mo>,</mo>
   </mstyle>
-</math></span>  (2)</p></div></div><p id="_560281c2-72c2-1411-c217-076e63726a3a">and similarly for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (2)</p></div></div><p id="_6c73e6e4-edb5-43c9-3564-8c1ed2ad2ab4">and similarly for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>δ</mi>
     </mstyle>
     <mtext>D</mtext>
   </mstyle>
-</math></span>, with the value <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mo>−</mo>
-    <mn>0.428</mn>
-  </mstyle>
-</math></span> in the nominator. All isotope laboratories usually report their isotope <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>, with the value <span>-0.428</span> in the nominator. All isotope laboratories usually report their isotope <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>δ</mi>
     </mstyle>
   </mstyle>
-</math></span>-values for water in this normalized way.</p><p id="_3ca2dcbb-0a39-b97c-9129-7e92939373e2">For all naturally occurring surface waters, the isotopic composition is sufficiently close to that of VSMOW, and the correlation between the <sup>18</sup>O and the <sup>17</sup>O contents is so strong [<a href="#Meijer1998">Meijer and Li 1998</a>] that the effect of the isotopes on the TPW temperature can be specified by a linear function of only the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>-values for water in this normalized way.</p><p id="_609821dc-6068-4437-dff8-92785ee4457a">For all naturally occurring surface waters, the isotopic composition is sufficiently close to that of VSMOW, and the correlation between the <sup>18</sup>O and the <sup>17</sup>O contents is so strong [<a href="#Meijer1998">Meijer and Li 1998</a>] that the effect of the isotopes on the TPW temperature can be specified by a linear function of only the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>δ</mi>
@@ -1627,7 +2013,7 @@ FRANCE</p>
       <mi>δ</mi>
     </mstyle>
   </mstyle>
-</math></span><sup>18</sup>O values:</p><div id="_62908040-728d-238c-3aad-4866a54beff5"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span><sup>18</sup>O values:</p><div id="_b8304f03-4188-d01e-f8c5-65305c04a161"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mstyle mathvariant="italic">
@@ -1680,7 +2066,7 @@ FRANCE</p>
     <mtext>O</mtext>
     <mo>,</mo>
   </mstyle>
-</math></span>  (3)</p></div></div><p id="_14debd8c-3db2-d1e6-eb07-a85471965c82">where the last term on the right accounts for both the <sup>18</sup>O and the <sup>17</sup>O effects, but requires only the knowledge of the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (3)</p></div></div><p id="_bf0a51e3-a526-e489-e154-a469bc03ae7e">where the last term on the right accounts for both the <sup>18</sup>O and the <sup>17</sup>O effects, but requires only the knowledge of the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>δ</mi>
@@ -1698,9 +2084,15 @@ FRANCE</p>
     </mrow>
     <mo>=</mo>
     <mn>673</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1714,29 +2106,47 @@ FRANCE</p>
     </mrow>
     <mo>=</mo>
     <mn>630</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, withestimated standard uncertainties of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>10</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, respectively. These values have been derived using <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">δ</mi>
   </mstyle>
-</math></span>-values expressed on the normalized VSMOW-SLAP scale.</p><p id="_1ec0ef93-9a64-cf75-5f61-2f8454b08b80">The practice, introduced by some manufacturers, of adding enriched water to the initial source water to compensate for the isotope depletion taking place during the purification process is not recommended. After adding enriched water, full isotope analysis including the difficult measurement of δ<sup>17</sup>O is required, with less accurate and less reliable results. For TPW cells manufactured with addition of enriched water, the following correction equation is recommended:</p><div id="_4748aeda-5e8c-d1b6-5863-bc6e5a79d8b5"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>-values expressed on the normalized VSMOW-SLAP scale.</p><p id="_8c0bc496-5287-3371-cb41-b042dc06706a">The practice, introduced by some manufacturers, of adding enriched water to the initial source water to compensate for the isotope depletion taking place during the purification process is not recommended. After adding enriched water, full isotope analysis including the difficult measurement of δ<sup>17</sup>O is required, with less accurate and less reliable results. For TPW cells manufactured with addition of enriched water, the following correction equation is recommended:</p><div id="_138f226b-992e-1fd5-67d2-c52591f5a6d0"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mstyle mathvariant="italic">
@@ -1839,7 +2249,7 @@ FRANCE</p>
     </mrow>
     <mo>,</mo>
   </mstyle>
-</math></span>  (4)</p></div></div><p id="_cbfe6b28-577e-f0b4-c491-16433e446c37">where the coefficient <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (4)</p></div></div><p id="_c62c660c-8e95-f4ef-9aff-a3a3836bb628">where the coefficient <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>A</mi>
@@ -1855,25 +2265,37 @@ FRANCE</p>
     </mrow>
     <mo>=</mo>
     <mn>60</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> given by <a href="#White2010">White and Tew (2010)</a> has an estimated standard uncertainty of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span>.</p><p id="_f6538ba6-0afa-097c-fa21-c370acf0c1d4">It should be noted that the original references VSMOW and SLAP water are exhausted. Their successors, VSMOW2 and SLAP2 have been prepared with utmost care to resemble the originals to within the uncertainties. Only for SLAP2 the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>.</p><p id="_75b785dd-bfbd-4d6f-e153-28d55a957ee1">It should be noted that the original references VSMOW and SLAP water are exhausted. Their successors, VSMOW2 and SLAP2 have been prepared with utmost care to resemble the originals to within the uncertainties. Only for SLAP2 the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>δ</mi>
     </mstyle>
     <mtext>D</mtext>
   </mstyle>
-</math></span> value is -427.5 ‰ instead of -428 ‰.</p></div><div id="_isotopic_composition_and_corrections_for_the_triple_point_of_equilibrium_hydrogen"><h1 id="_46ecc2eb-9976-40dc-ba50-0bc69b88b65e">2.  Isotopic composition and corrections for the triple point of equilibrium hydrogen</h1><p id="_11499d80-26a8-82f0-34d9-38747a259f70">The effects of isotopic composition on the triple point of equilibrium hydrogen (e-H<sub>2</sub> TP) and uncertainties related to these effects are discussed in detail in [<a href="#Steur2005">Steur <i>et al.</i> 2005</a>, <a href="#Fellmuth2005">Fellmuth <i>et al.</i> 2005</a>].</p><p id="_ad50e375-03f0-12ad-684c-aefb9ec1515c">The isotopic composition of commercially available hydrogen varies from an amount-of-substance ratio of about 27 micromole of D per mole of H to about 150 micromole of D per mole of H. It has been established that the discrepancies previously found at the triple point are mainly due to the variable deuterium content in the hydrogen used for its realization [<a href="#Pavese2000">Pavese and Tew 2000</a>, <a href="#Pavese2002">Pavese <i>et al.</i> 2002</a>].</p><p id="_90dbf37f-1463-9ac2-7cd7-6e41f73ef988">It is therefore specified that the ITS-90 temperature assigned to the triple point of equilibrium hydrogen, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> value is -427.5 ‰ instead of -428 ‰.</p></div><div id="_24d9bb71-6037-1e9e-0fc6-45232907becd"><h1 id="_e2e8be0a-30ae-4759-bf37-7345d51a6fc1"><a class="anchor" href="#_24d9bb71-6037-1e9e-0fc6-45232907becd"></a><a class="header" href="#_24d9bb71-6037-1e9e-0fc6-45232907becd">2.  Isotopic composition and corrections for the triple point of equilibrium hydrogen</a></h1><p id="_ce898939-da09-ef63-0f39-d8435612f8ea">The effects of isotopic composition on the triple point of equilibrium hydrogen (e-H<sub>2</sub> TP) and uncertainties related to these effects are discussed in detail in [<a href="#Steur2005">Steur <i>et al.</i> 2005</a>, <a href="#Fellmuth2005">Fellmuth <i>et al.</i> 2005</a>].</p><p id="_b4e7f4d8-f173-0865-fdb4-ee75a5dbb8e8">The isotopic composition of commercially available hydrogen varies from an amount-of-substance ratio of about 27 micromole of D per mole of H to about 150 micromole of D per mole of H. It has been established that the discrepancies previously found at the triple point are mainly due to the variable deuterium content in the hydrogen used for its realization [<a href="#Pavese2000">Pavese and Tew 2000</a>, <a href="#Pavese2002">Pavese <i>et al.</i> 2002</a>].</p><p id="_2e5a144d-5718-7a39-619c-87e4a26c8ec8">It is therefore specified that the ITS-90 temperature assigned to the triple point of equilibrium hydrogen, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1892,15 +2314,17 @@ FRANCE</p>
     </mrow>
     <mo>=</mo>
     <mn>13.8033</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span>, is taken to refer to an amount-of-substance ratio of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.000 089 02</mn>
-  </mstyle>
-</math></span> mole of D per mole of H. This is the isotopic ratio determined for SLAP [<a href="#Gonfiantini1978">Gonfiantini 1978</a>].</p><p id="_3b2e60be-f2b4-2bc4-f048-c2017c254f10">To correct to the isotopic reference ratio, the following function is specified:</p><div id="_556a60ce-8b5c-af5b-76ee-c7850e092d7e"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>, is taken to refer to an amount-of-substance ratio of <span>0.000 089 02</span> mole of D per mole of H. This is the isotopic ratio determined for SLAP [<a href="#Gonfiantini1978">Gonfiantini 1978</a>].</p><p id="_6d7e317d-8506-d559-54d9-4ba3270c38d9">To correct to the isotopic reference ratio, the following function is specified:</p><div id="_6d7c5401-f95d-c994-8ec7-b97b43ce021b"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mstyle mathvariant="italic">
@@ -1941,7 +2365,7 @@ FRANCE</p>
     </mrow>
     <mo>,</mo>
   </mstyle>
-</math></span>  (5)</p></div></div><p id="_6ab73113-9657-028f-9c92-3a2e59ccd21c">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (5)</p></div></div><p id="_67225f8d-bae6-e479-0fd3-a1006b34a0a3">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>x</mi>
   </mstyle>
@@ -1953,11 +2377,12 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mn>89.02</mn>
-    <mrow>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_umol.mol-1">
       <mstyle mathvariant="normal">
         <mi>µmol</mi>
       </mstyle>
-      <mo>⋅</mo>
+      <mi rspace="thickmathspace">⁢</mi>
       <msup>
         <mstyle mathvariant="normal">
           <mi>mol</mi>
@@ -1967,6 +2392,9 @@ FRANCE</p>
           <mn>1</mn>
         </mrow>
       </msup>
+
+
+
     </mrow>
   </mstyle>
 </math></span> in the reference ratio specified above, and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1991,69 +2419,91 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mn>5.42</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+
+
+
+    </mrow>
     <mo>/</mo>
     <mrow>
       <mo>(</mo>
-      <mstyle mathvariant="normal">
-        <mi>µmol</mi>
-      </mstyle>
+      <mo rspace="thickmathspace">⁢</mo>
+      <mrow xref="U_umol">
+        <mstyle mathvariant="normal">
+          <mi>µmol</mi>
+        </mstyle>
+
+
+
+      </mrow>
       <mo>/</mo>
-      <mstyle mathvariant="normal">
-        <mi>mol</mi>
-      </mstyle>
+      <mo rspace="thickmathspace">⁢</mo>
+      <mrow xref="U_NISTu6">
+        <mstyle mathvariant="normal">
+          <mi>mol</mi>
+        </mstyle>
+
+
+
+      </mrow>
       <mo>)</mo>
     </mrow>
   </mstyle>
 </math></span> with an estimated standard uncertainty of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.31</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+
+
+
+    </mrow>
     <mo>/</mo>
     <mrow>
       <mo>(</mo>
-      <mstyle mathvariant="normal">
-        <mi>µmol</mi>
-      </mstyle>
+      <mo rspace="thickmathspace">⁢</mo>
+      <mrow xref="U_umol">
+        <mstyle mathvariant="normal">
+          <mi>µmol</mi>
+        </mstyle>
+
+
+
+      </mrow>
       <mo>/</mo>
-      <mstyle mathvariant="normal">
-        <mi>mol</mi>
-      </mstyle>
+      <mo rspace="thickmathspace">⁢</mo>
+      <mrow xref="U_NISTu6">
+        <mstyle mathvariant="normal">
+          <mi>mol</mi>
+        </mstyle>
+
+
+
+      </mrow>
       <mo>)</mo>
     </mrow>
   </mstyle>
-</math></span>.</p></div><div id="_isotopic_composition_for_the_vapour_pressure_points_of_equilibrium_hydrogen"><h1 id="_b6ba71bd-e982-45ca-83bb-6135dfaab6d7">3.  Isotopic composition for the vapour-pressure points of equilibrium hydrogen</h1><p id="_c27f5418-b26c-3ee0-7980-d2d0162ce3bc">The effects of isotopic composition on the vapour-pressure points of equilibrium hydrogen and the uncertainties related to these effects are discussed in detail in [<a href="#Steur2005">Steur <i>et al.</i> 2005</a>].</p><p id="_f4f35241-43bb-c548-a2f6-7821faa9a54f">Isotopic fractionation manifests itself as a difference of as much as <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>.</p></div><div id="_667163fd-7f78-0217-f576-b9a13e6a44be"><h1 id="_aa8f01b8-100f-43c2-b1f4-2c6d2966459a"><a class="anchor" href="#_667163fd-7f78-0217-f576-b9a13e6a44be"></a><a class="header" href="#_667163fd-7f78-0217-f576-b9a13e6a44be">3.  Isotopic composition for the vapour-pressure points of equilibrium hydrogen</a></h1><p id="_5e68fd9d-8962-35d1-3bce-63a79a16b46e">The effects of isotopic composition on the vapour-pressure points of equilibrium hydrogen and the uncertainties related to these effects are discussed in detail in [<a href="#Steur2005">Steur <i>et al.</i> 2005</a>].</p><p id="_91c54487-5a74-37de-2fa8-26b825fa2c44">Isotopic fractionation manifests itself as a difference of as much as <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.4</mn>
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span> between the dew point (vanishingly small liquid fraction) and the bubble point (vanishingly small vapour fraction) [<a href="#Pavese2002">Pavese <i>et al.</i> 2002</a>].</p><p id="_e5f1edda-6b76-3161-7f5c-b58a8d7f765d">To reduce the effect of isotopic fractionation while maintaining coherence over the entire vapour-pressure range (i.e., including the triple point), it is therefore specified that the ITS-90 relations for the vapour pressure of equilibrium hydrogen are referenced to an amount-of-substance ratio of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.000 089 02</mn>
-  </mstyle>
-</math></span> mole D per mole H, i.e. the isotopic ratio determined for SLAP.</p></div><div id="_isotopic_composition_and_corrections_for_the_triple_point_of_neon"><h1 id="_ac196912-df48-41d6-af75-eb04595937ca">4.  Isotopic composition and corrections for the triple point of neon</h1><p id="_5b659e17-645d-5cf3-1c82-c9616a1f8eb2">The effects of isotopic composition on the triple point of neon (Ne TP) and uncertainties related to these effects are discussed in detail in [<a href="#Pavese2013">Pavese <i>et al.</i> 2013</a>, <a href="#Steur2012">Steur <i>et al.</i> 2012</a>].</p><p id="_3b57d088-fb95-a270-47c7-1fdd5065f41d">The isotopic composition of commercially available neon varies from an amount-of-substance ratio of about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.0915</mn>
-  </mstyle>
-</math></span> mole of <sup>22</sup>Ne per mole of Ne to about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.0948</mn>
-  </mstyle>
-</math></span> mole of <sup>22</sup>Ne per mole of Ne, and about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.0027</mn>
-  </mstyle>
-</math></span> mole of <sup>21</sup>Ne per mole of Ne to about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.0028</mn>
-  </mstyle>
-</math></span> mole of <sup>21</sup>Ne per mole of Ne. It has been established that the discrepancies previously found at the triple point are mainly due to the variable <sup>22</sup>Ne content in the neon used for its realization [<a href="#Pavese2008a">Pavese <i>et al.</i> 2008a</a>, <a href="#Pavese2008b">Pavese <i>et al.</i> 2008b</a>].</p><p id="_0fe35f38-075a-6f92-a42f-8021e2a51c75">It is therefore specified that the ITS-90 temperature assigned to the triple point of neon, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> between the dew point (vanishingly small liquid fraction) and the bubble point (vanishingly small vapour fraction) [<a href="#Pavese2002">Pavese <i>et al.</i> 2002</a>].</p><p id="_6c6eac09-3a0e-9460-3328-652bbe6c545c">To reduce the effect of isotopic fractionation while maintaining coherence over the entire vapour-pressure range (i.e., including the triple point), it is therefore specified that the ITS-90 relations for the vapour pressure of equilibrium hydrogen are referenced to an amount-of-substance ratio of <span>0.000 089 02</span> mole D per mole H, i.e. the isotopic ratio determined for SLAP.</p></div><div id="_3a76d9d9-70bf-7a01-61b8-1e61775add67"><h1 id="_8553897b-ecec-4224-930c-4aee2efc7fa6"><a class="anchor" href="#_3a76d9d9-70bf-7a01-61b8-1e61775add67"></a><a class="header" href="#_3a76d9d9-70bf-7a01-61b8-1e61775add67">4.  Isotopic composition and corrections for the triple point of neon</a></h1><p id="_6e5bf56a-088b-422f-ff32-68f078d64875">The effects of isotopic composition on the triple point of neon (Ne TP) and uncertainties related to these effects are discussed in detail in [<a href="#Pavese2013">Pavese <i>et al.</i> 2013</a>, <a href="#Steur2012">Steur <i>et al.</i> 2012</a>].</p><p id="_82f633d1-8b2e-24c3-2c3b-9d252654738d">The isotopic composition of commercially available neon varies from an amount-of-substance ratio of about <span>0.0915</span> mole of <sup>22</sup>Ne per mole of Ne to about <span>0.0948</span> mole of <sup>22</sup>Ne per mole of Ne, and about <span>0.0027</span> mole of <sup>21</sup>Ne per mole of Ne to about <span>0.0028</span> mole of <sup>21</sup>Ne per mole of Ne. It has been established that the discrepancies previously found at the triple point are mainly due to the variable <sup>22</sup>Ne content in the neon used for its realization [<a href="#Pavese2008a">Pavese <i>et al.</i> 2008a</a>, <a href="#Pavese2008b">Pavese <i>et al.</i> 2008b</a>].</p><p id="_df7a9ec2-f07b-d363-0a4c-550c046ac4e4">It is therefore specified that the ITS-90 temperature assigned to the triple point of neon, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -2068,19 +2518,17 @@ FRANCE</p>
     </mrow>
     <mo>=</mo>
     <mn>24.6651</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span>, is taken to refer to amount-of-substance ratios of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.0925</mn>
-  </mstyle>
-</math></span> mole of <sup>22</sup>Ne per mole of Ne and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.0027</mn>
-  </mstyle>
-</math></span> mole of <sup>21</sup>Ne per mole of Ne. This is the IUPAC isotopic composition [<a href="#Wieser2011">Wieser and Coplen 2011</a>].</p><p id="_3d53a48b-0a8e-98c2-bad1-f34281c018a1">To correct for the isotopic reference ratios, the following function is specified (pseudo-binary approach):</p><div id="_45b4625b-6264-8d73-18b9-77cf247f47d4"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>, is taken to refer to amount-of-substance ratios of <span>0.0925</span> mole of <sup>22</sup>Ne per mole of Ne and <span>0.0027</span> mole of <sup>21</sup>Ne per mole of Ne. This is the IUPAC isotopic composition [<a href="#Wieser2011">Wieser and Coplen 2011</a>].</p><p id="_c1ee4b9a-bbba-50d2-db27-d2a0de8aae27">To correct for the isotopic reference ratios, the following function is specified (pseudo-binary approach):</p><div id="_586787f6-b302-f6ff-f536-415b9368e0d0"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <msub>
       <mstyle mathvariant="italic">
@@ -2154,7 +2602,7 @@ FRANCE</p>
     </msup>
     <mo>,</mo>
   </mstyle>
-</math></span>  (6)</p></div></div><p id="_2f5b5f73-fe88-2657-efc5-4f625bff01ba">where <sup>22</sup><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (6)</p></div></div><p id="_b6303e01-d72e-26db-d7b5-cb935e1ee0bd">where <sup>22</sup><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>x</mi>
   </mstyle>
@@ -2171,9 +2619,15 @@ FRANCE</p>
     <mo>=</mo>
     <mo>−</mo>
     <mn>0.013 82</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2183,9 +2637,15 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mn>0.147 350</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2196,9 +2656,15 @@ FRANCE</p>
     <mo>=</mo>
     <mi>–</mi>
     <mn>0.000 779</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2217,23 +2683,41 @@ FRANCE</p>
 </math></span> are rounded to six decimal figures which influences the correction by less than <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>). The estimated standard uncertainty of the slope of the function amounts to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>400</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> for a quasi IUPAC isotopic composition, and to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>200</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> for a quasi-pure <sup>20</sup>Ne [<a href="#Steur2012">Steur <i>et al.</i> 2012</a>]. If the neon fixed point of the ITS-90 is realized via the triple point of <sup>20</sup>Ne, an uncertainty in <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2245,11 +2729,17 @@ FRANCE</p>
 </math></span> amounting to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>30</mn>
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span> has also to be considered.</p></div><br /><div><h1 class="Section3" id="_78712393-322d-4f1c-9e9b-e5d99ffd3e67">References</h1>
+</math></span> has also to be considered.</p></div><br /><div><h1 class="Section3" id="_48c430ab-29ba-47f3-baec-38f03b340191">References</h1>
 <p id="De2003" class="Biblio">[1]  De Laeter J.R., Böhlke J.K.,De Bièvre P., Hidaka H., Peiser H.S., Rosman K.J.R., Taylor P.D.P., 2003, <i>Pure Appl. Chem.</i>, <b>75</b>, 683-800.</p><p id="Faghihi2015a" class="Biblio">[2]  Faghihi V., Peruzzi A., Aerts-Bijma A.T., Jansen H.G., Spriensma J.J., van Geel J., Meijer H.A.J., 2015a, <i>Metrologia</i>, <b>52</b>, 819-826.</p><p id="Faghihi2015b" class="Biblio">[3]  Faghihi V., Kozicki M., Aerts-Bijma A.T., Jansen H.G., Spriensma J.J., Peruzzi A., Meijer H.A.J., 2015b, <i>Metrologia</i>, <b>52</b>, 827-834.</p><p id="FellmuthB2005" class="Biblio">[4]  FellmuthB., Wolber L., Hermier Y., Pavese F., Steur P.P.M., Peroni I., Szmyrka-Grzebyk A., Lipinski L., Tew W.L., Nakano T., Sakurai H., Tamura O., Head D., Hill K.D., Steele A.G., 2005, <i>Metrologia</i>, <b>42</b>, 171-193.</p><p id="Gonfiantini1978" class="Biblio">[5]  Gonfiantini R., 1978, <i>Nature</i>, <b>271</b>, 534-536.</p><p id="Gonfiantini2010" class="Biblio">[6]  Gonfiantini R., 2010, Report on an advisory group meeting on stable isotope reference samples for geochemical and hydrochemical investigations, <i>IAEA Report to the Director General</i>.</p><p id="Li1613" class="Biblio">[7]  Li W.J., Ni B.L., Jin D.Q., Chang T.L., 1988, <i>Kexue Tongbao</i> (Chinese Science Bulletin), <b>33</b>, 1610-1613.</p><p id="Meijer1998" class="Biblio">[8]  Meijer H.A.J., Li W., 1998, <i>Isot. Environ. Health Stud.</i>, <b>34</b>, 349</p><p id="Pavese2000" class="Biblio">[9]  Pavese F., Tew W.L., 2000, “On the isotopic composition of commercial hydrogen vs ‘natural isotopic composition’ and the problems for the ITS-90 definition”, Comité Consultatif de Thermométrie, Working Document CCT/2000-19.</p><p id="Pavese2001" class="Biblio">[10]  Pavese F., Tew W.L., Steele A., 2002 “Archival and theoretical considerations for isotopic dependence in the e-H<sub>2</sub> fixed points”, In: <i>TEMPMEKO 2001, 8th International Symposium on Temperature and Thermal Measurements in Industry and Science</i>, eds.Fellmuth <i>et al.</i> (VDI/VDE, Berlin), 429-434.</p><p id="Pavese2008a" class="Biblio">[11]  Pavese F., Fellmuth B., Hill, K.D., Head D., Hermier Y., Lipinski L., Nakano T., Peruzzi A., Sakurai H., Szmyrka-Grzebyk A., Steele A.G., Steur P.P.M., Tamura O., Tew W.L., Valkiers. S., Wolber. L., 2008a, <i>Int. J. Thermophys.</i>, <b>29</b>, 57-66.</p><p id="Pavese2008b" class="Biblio">[12]  Pavese F., Fellmuth B., Hill K.D., Head D., Hermier Y., Lipinski L., Nakano T., Peruzzi A., Sakurai H., Szmyrka-Grzebyk A., Steele A.G., Steur P.P.M., Tamura O., Tew W.L., Valkiers S., Wolber L., 2008b, “Status of progress towards the determination of the relationship between neon triple-point temperature <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -2284,9 +2774,20 @@ FRANCE</p>
 
 </div></main><script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    "HTML-CSS": { preferredFont: "STIX" },
+    "HTML-CSS": {
+      preferredFont: "STIX",
+      linebreaks: {
+        automatic: true,
+        width: "container"  // or specify something like "90%"/"30em"
+      }
+    },
+    MathML: {
+      linebreaks: {
+        automatic: true
+      }
+    },
     asciimath2jax: { delimiters: [['(#(', ')#)']] }
- });
+  });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
   <script>
@@ -2296,26 +2797,40 @@ FRANCE</p>
 });
   </script>
 
-<script>
-  //TOC toggle animation
-$('#toggle').on('click', function(){
-    if( $('nav').is(':visible') ) {
-        $('nav').animate({ 'left': '-353px' }, 'slow', function(){
-            $('nav').hide();
+  <script>
+    //TOC toggle animation
+    (function() {
+      const jqNav = $('nav');
+      const jqBody = $('body');
+      const jqToggle = $('#toggle');
+      const animationSpeed = 'slow';
+
+      jqToggle.on('click', function() {
+        const isNavVisible = jqNav.is(':visible');
+        const fullNavWidth = jqNav.outerWidth();
+        const navLeft = isNavVisible ? '-' + fullNavWidth + 'px' : '0px';
+        const bodyMarginLeft = isNavVisible ? '0px' : fullNavWidth + 'px';
+
+        // Stop current animations
+        jqNav.stop(true, true);
+        jqBody.stop(true, true);
+
+        if(!isNavVisible) {
+            jqNav.show();
+        }
+        jqNav.animate({'left': navLeft}, animationSpeed, function() {
+          if(isNavVisible) {jqNav.hide()}
         });
-        $('.container').animate({ 'padding-left': '31px' }, 'slow');
-    }
-    else {
-        $('nav').show();
-        $('nav').animate({ 'left': '0px' }, 'slow');
-    }
-});
-</script>
+        jqBody.animate({'marginLeft': bodyMarginLeft}, animationSpeed);
+
+      });
+    })();
+  </script>
 
 <script>
     // Scroll to top button
     window.onscroll = function() {scrollFunction()};
-    
+
     function scrollFunction() {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             document.getElementById("myBtn").style.display = "block";
@@ -2323,7 +2838,7 @@ $('#toggle').on('click', function(){
             document.getElementById("myBtn").style.display = "none";
         }
     }
-    
+
     // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
         document.body.scrollTop = 0;
@@ -2331,6 +2846,132 @@ $('#toggle').on('click', function(){
     }
     </script>
 
+<script>
+/*
+  $(document).ready(function() {
+	  $('[id^=toc]').each(function ()
+	  {
+	     var currentToc = $(this);
+       var url = window.location.href;
+            currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "'></a>");
+	  });
+});
+*/
+</script>
+
+  <script>
+    document.querySelectorAll('*|svg a').forEach(function(item) {
+      var loc = item.getAttribute('href');
+      if (loc !== null && loc.startsWith('#')) {
+  item.setAttribute('href', location.pathname + loc);
+      }
+});
+  </script>
+
+
+<script>
+
+// jQuery Inline Footnotes v1.0.3
+// Copyright (c) 2011 Vesa Vänskä, released under the MIT License.
+
+// Generated by CoffeeScript 1.6.1
+(function() {
+
+  (function($) {
+    $.inlineFootnote = function(el, options) {
+      var _this = this;
+      this.el = $(el);
+      this.el.data("inlineFootnote", this);
+      this.initialize = function() {
+        this.options = $.extend({}, $.inlineFootnote.defaultOptions, options);
+        this.footnoteId = this.el.attr("href").match(/#(.*)/)[1];
+        if (this.footnoteId) {
+          this.el.mouseenter(this.openBox);
+          return $("body").mousemove(this.closeBox);
+        }
+      };
+      this.openBox = function(event) {
+        var footnoteContent, linkOffset;
+        if (!_this.box) {
+          footnoteContent = $("[id='" + _this.footnoteId + "']").children().filter(":not('" + _this.options.hideFromContent + "')");
+          linkOffset = _this.el.offset();
+          _this.box = $("<div />", {
+            id: _this.options.boxId,
+            html: footnoteContent.clone().find(_this.options.hideFromContent).remove().end(),
+            css: {
+              position: "absolute",
+              top: linkOffset.top,
+              left: linkOffset.left + _this.el.outerWidth()
+            }
+          }).appendTo("body");
+          return _this.positionBox();
+        }
+      };
+      this.closeBox = function(event) {
+        if (_this.box) {
+          if (_this.isHoveringFootnote(event)) {
+            clearTimeout(_this.closeTimeout);
+            return _this.closeTimeout = null;
+          } else {
+            if (!_this.closeTimeout) {
+              return _this.closeTimeout = setTimeout((function() {
+                _this.box.remove();
+                return _this.box = null;
+              }), _this.options.hideDelay);
+            }
+          }
+        }
+      };
+      this.isHoveringFootnote = function(event) {
+        return this.box.is(event.target) || $(event.target).closest(this.box).length > 0 || event.target === this.el[0];
+      };
+      this.positionBox = function() {
+        var boxHorizontalPadding, boxLeft, boxWidth, linkLeftOffset, windowWidth;
+        boxHorizontalPadding = parseInt(this.box.css("padding-left")) + parseInt(this.box.css("padding-right"));
+        linkLeftOffset = this.el.offset().left;
+        windowWidth = $(window).width();
+        if ((windowWidth / 2) > linkLeftOffset) {
+          boxLeft = linkLeftOffset + 20;
+          boxWidth = windowWidth - boxLeft - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+        } else {
+          boxWidth = linkLeftOffset - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+          boxLeft = linkLeftOffset - boxWidth - this.options.boxMargin * 2;
+        }
+        return this.box.css({
+          width: boxWidth,
+          left: boxLeft
+        });
+      };
+      return this.initialize();
+    };
+    $.inlineFootnote.defaultOptions = {
+      boxMargin: 20,
+      hideDelay: 200,
+      hideFromContent: "[rel=footnote]",
+      maximumBoxWidth: 500,
+      boxId: "footnote_box"
+    };
+    return $.fn.inlineFootnote = function(options) {
+      return this.each(function() {
+        return new $.inlineFootnote(this, options);
+      });
+    };
+  })(jQuery);
+
+}).call(this);
+</script>
+
+<script>
+      $(function() {
+        $("[rel=footnote]").inlineFootnote();
+        });
+</script>
   <script>
 // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
 //
@@ -2342,21 +2983,29 @@ $('#toggle').on('click', function(){
 !function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function f(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.base=A.hasOwnProperty("base")?A.base:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64,A.titleText=A.hasOwnProperty("titleText")?A.titleText:""}function p(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}this.options=A||{},this.elements=[],f(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var e,t,i,n,o,s,a,r,c,h,l,u,d=[];if(f(this.options),"touch"===(l=this.options.visible)&&(l=this.isTouchDevice()?"always":"hover"),0===(e=p(A=A||"h2, h3, h4, h5, h6")).length)return this;for(!function(){if(null!==document.head.querySelector("style.anchorjs"))return;var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"],style'))?document.head.appendChild(e):document.head.insertBefore(e,A);e.sheet.insertRule(".anchorjs-link{opacity:0;text-decoration:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}",e.sheet.cssRules.length),e.sheet.insertRule(":hover>.anchorjs-link,.anchorjs-link:focus{opacity:1}",e.sheet.cssRules.length),e.sheet.insertRule("[data-anchorjs-icon]::after{content:attr(data-anchorjs-icon)}",e.sheet.cssRules.length),e.sheet.insertRule('@font-face{font-family:anchorjs-icons;src:url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype")}',e.sheet.cssRules.length)}(),t=document.querySelectorAll("[id]"),i=[].map.call(t,function(A){return A.id}),o=0;o<e.length;o++)if(this.hasAnchorJSLink(e[o]))d.push(o);else{if(e[o].hasAttribute("id"))n=e[o].getAttribute("id");else if(e[o].hasAttribute("data-anchor-id"))n=e[o].getAttribute("data-anchor-id");else{for(c=r=this.urlify(e[o].textContent),a=0;void 0!==s&&(c=r+"-"+a),a+=1,-1!==(s=i.indexOf(c)););s=void 0,i.push(c),e[o].setAttribute("id",c),n=c}(h=document.createElement("a")).className="anchorjs-link "+this.options.class,h.setAttribute("aria-label",this.options.ariaLabel),h.setAttribute("data-anchorjs-icon",this.options.icon),this.options.titleText&&(h.title=this.options.titleText),u=document.querySelector("base")?window.location.pathname+window.location.search:"",u=this.options.base||u,h.href=u+"#"+n,"always"===l&&(h.style.opacity="1"),""===this.options.icon&&(h.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(h.style.lineHeight="inherit")),"left"===this.options.placement?(h.style.position="absolute",h.style.marginLeft="-1em",h.style.paddingRight="0.5em",e[o].insertBefore(h,e[o].firstChild)):(h.style.paddingLeft="0.375em",e[o].appendChild(h))}for(o=0;o<d.length;o++)e.splice(d[o]-o,1);return this.elements=this.elements.concat(e),this},this.remove=function(A){for(var e,t,i=p(A),n=0;n<i.length;n++)(t=i[n].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(i[n]))&&this.elements.splice(e,1),i[n].removeChild(t));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){return this.options.truncate||f(this.options),A.trim().replace(/\'/gi,"").replace(/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&-1<(" "+A.firstChild.className+" ").indexOf(" anchorjs-link "),t=A.lastChild&&-1<(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ");return e||t||!1}}});
 // @license-end
   </script>
-  <script>
-/*
-  $(document).ready(function() {
-          $('[id^=toc]').each(function ()
-          {
-             var currentToc = $(this);
-       var url = window.location.href;
-             currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "' </a>");
-          });
-});
-*/
+    <script>
   anchors.options = {
   placement: 'left'
 };
 anchors.add('h1, h2, h3, h4');
+</script>
+
+<script>
+// use .collapsible element to toggle visibility of element following it
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
 </script>
 
 </body></html>

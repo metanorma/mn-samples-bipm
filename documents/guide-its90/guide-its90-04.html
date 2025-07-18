@@ -24,7 +24,8 @@ figure, figcaption, footer, header, hgroup,
 menu, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -40,7 +41,8 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   border: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -55,7 +57,8 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 html, body, div, span, applet, object, iframe,
 p, blockquote,
@@ -70,87 +73,115 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 code, pre, tt, kbd, samp {
   font-family: "Space Mono",monospace;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 code *, pre *, tt *, kbd *, samp * {
   font-family: "Space Mono",monospace !important;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 p code, dt code, li code, label code, legend code, caption code, th code, td code,
 p tt, dt tt, li tt, label tt, legend tt, caption tt, th tt, td tt,
 p kbd, dt kbd, li kbd, label kbd, legend kbd, caption kbd, th kbd, td kbd,
 p samp, dt samp, li samp, label samp, legend samp, caption samp, th samp, td samp {
-  font-size: ; }
+  font-size: ;
+}
+
+sub, sup {
+  font-size: 0.75em;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 blockquote, q {
-  quotes: none; }
-  blockquote::before, blockquote::after, q::before, q::after {
-    content: '';
-    content: none; }
+  quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+  content: "";
+  content: none;
+}
 
 .h2Annex {
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 dl {
   display: grid;
-  grid-template-columns: max-content auto; }
-  dl dt p, dl dd p {
-    margin-top: 0; }
-  dl dt {
-    grid-column-start: 1; }
-  dl dd {
-    grid-column-start: 2; }
+  grid-template-columns: max-content auto;
+}
+dl dt p, dl dd p {
+  margin-top: 0;
+}
+dl dt {
+  grid-column-start: 1;
+}
+dl dd {
+  grid-column-start: 2;
+}
 
 b, strong {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 div.document-stage-band, div.document-type-band {
-  background-color: #333333; }
+  background-color: #333333;
+}
 
 a.FootnoteRef + a.FootnoteRef::before {
   content: ", ";
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 a.TableFootnoteRef + a.TableFootnoteRef::before {
   content: ", ";
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 a.TableFootnoteRef, span.TableFootnoteRef,
 a.FootnoteRef, span.FootnoteRef {
-  vertical-align: super; }
+  vertical-align: super;
+}
 
 .addition {
-  color: blue; }
+  color: blue;
+}
 
 .deletion {
   color: red;
-  text-decoration: line-through; }
+  text-decoration: line-through;
+}
 
 ruby {
   ruby-position: over;
-  -webkit-ruby-position: before; }
+  -webkit-ruby-position: before;
+}
 
 ruby ruby {
   ruby-position: under;
-  -webkit-ruby-position: after; }
+  -webkit-ruby-position: after;
+}
 
 /* code highlighting with line numbers */
 table.rouge-line-table td.rouge-gutter {
@@ -158,13 +189,15 @@ table.rouge-line-table td.rouge-gutter {
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  padding-right: 1em; }
+  padding-right: 1em;
+}
 
 table.rouge-line-table td.rouge-code {
   -moz-user-select: all;
   -ms-user-select: all;
   -webkit-user-select: all;
-  user-select: all; }
+  user-select: all;
+}
 
 table.rouge-line-table,
 table.rouge-line-table th,
@@ -173,103 +206,268 @@ table.rouge-line-table td {
   border: none;
   margin: 0;
   padding: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 table.rouge-line-table pre {
   margin: 0;
   padding: 0;
   overflow-x: visible;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
-#brochure-band {
-  background-color: #0AC442; }
+/* header § links */
+a.header {
+  color: inherit;
+  text-decoration: none;
+}
 
-#brochure {
-  border-bottom: solid 3px #0AC442; }
+a.header:hover {
+  color: #a53221 !important;
+  background: inherit;
+  box-shadow: none;
+}
 
-#mise-en-pratique-band {
-  background-color: #540D6E; }
+a.header:visited {
+  color: inherit;
+  text-decoration: none;
+}
 
-#mise-en-pratique {
-  border-bottom: solid 3px #540D6E; }
+a.anchor {
+  position: absolute;
+  z-index: 1001;
+  width: 1.5ex;
+  margin-left: -1.5ex;
+  display: block;
+  text-decoration: none !important;
+  visibility: hidden;
+  text-align: center;
+  font-weight: 400;
+}
 
-#rapport-band {
-  background-color: #D183C9; }
+a.anchor::before {
+  content: "§";
+  font-size: 0.85em;
+  display: block;
+  padding-top: 0.1em;
+}
 
-#rapport {
-  border-bottom: solid 3px #D183C9; }
+a.anchor:hover {
+  color: #a53221;
+  background: inherit;
+  box-shadow: none;
+}
 
-#monographie-band {
-  background-color: #65AFFF; }
+h1 > a.anchor:hover,
+h2 > a.anchor:hover,
+h3 > a.anchor:hover,
+h4 > a.anchor:hover,
+h5 > a.anchor:hover,
+h6 > a.anchor:hover,
+.inline-header > a.anchor:hover,
+h1:hover > a.anchor,
+h2:hover > a.anchor,
+h3:hover > a.anchor,
+h4:hover > a.anchor,
+h5:hover > a.anchor,
+h6:hover > a.anchor,
+.inline-header:hover > a.anchor {
+  visibility: visible;
+}
 
-#monographie {
-  border-bottom: solid 3px #65AFFF; }
+/* collapsible snippets: collapsible before hidable */
+.hidable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 3px 0;
+  margin: 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: "▼";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.active:after {
+  content: "▲";
+}
+
+/* collapsible: */
+.collapsible + .hidable {
+  margin-top: 0;
+}
+
+.collapsible:not(.active) + .hidable {
+  overflow: hidden;
+  padding: 0;
+}
+
+.svg-container {
+  width: 100%; /* or any desired width */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+svg {
+  width: 100%;
+  height: auto; /* ← key to maintaining aspect ratio */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+#standard-band {
+  background-color: #0AC442;
+}
+
+#standard {
+  border-bottom: solid 3px #0AC442;
+}
+
+#directive-band {
+  background-color: #540D6E;
+}
+
+#directive {
+  border-bottom: solid 3px #540D6E;
+}
 
 #guide-band {
-  background-color: #3A405A; }
+  background-color: #D183C9;
+}
 
 #guide {
-  border-bottom: solid 3px #3A405A; }
+  border-bottom: solid 3px #D183C9;
+}
 
-#meeting-report-band {
-  background-color: #F26430; }
+#specification-band {
+  background-color: #65AFFF;
+}
 
-#meeting-report {
-  border-bottom: solid 3px #F26430; }
+#specification {
+  border-bottom: solid 3px #65AFFF;
+}
 
-#technical-report-band {
-  background-color: #C84630; }
+#report-band {
+  background-color: #3A405A;
+}
 
-#technical-report {
-  border-bottom: solid 3px #C84630; }
+#report {
+  border-bottom: solid 3px #3A405A;
+}
 
-#working-part-note-band {
-  background-color: #BFAE48; }
+#amendment-band {
+  background-color: #F26430;
+}
 
-#working-part-note {
-  border-bottom: solid 3px #BFAE48; }
+#amendment {
+  border-bottom: solid 3px #F26430;
+}
 
-#strategy-band {
-  background-color: #BD9391; }
+#corrigendum-band {
+  background-color: #C84630;
+}
 
-#strategy {
-  border-bottom: solid 3px #BD9391; }
+#corrigendum {
+  border-bottom: solid 3px #C84630;
+}
 
-#cipm-mra-band {
-  background-color: #004E64; }
+#administrative-band {
+  background-color: #BFAE48;
+}
 
-#cipm-mra {
-  border-bottom: solid 3px #004E64; }
+#administrative {
+  border-bottom: solid 3px #BFAE48;
+}
 
-#resolution-band {
-  background-color: #53C170; }
+#advisory-band {
+  background-color: #BD9391;
+}
 
-#resolution {
-  border-bottom: solid 3px #53C170; }
+#advisory {
+  border-bottom: solid 3px #BD9391;
+}
 
-#draft-proposal-band {
-  background-color: #39A0ED; }
+#proposal-band {
+  background-color: #39A0ED;
+}
 
-#draft-proposal {
-  border-bottom: solid 3px #39A0ED; }
+#proposal {
+  border-bottom: solid 3px #39A0ED;
+}
 
-#draft-development-band {
-  background-color: #2D7393; }
+#working-draft-band {
+  background-color: #2D7393;
+}
 
-#draft-development {
-  border-bottom: solid 3px #2D7393; }
+#working-draft {
+  border-bottom: solid 3px #2D7393;
+}
 
-#in-force-band {
-  background-color: #53C170; }
+#committee-draft-band {
+  background-color: #2A6B7C;
+}
 
-#in-force {
-  border-bottom: solid 3px #53C170; }
+#committee-draft {
+  border-bottom: solid 3px #2A6B7C;
+}
 
-#retired-band {
-  background-color: #2E382E; }
+#draft-standard-band {
+  background-color: #1C7F7A;
+}
 
-#retired {
-  border-bottom: solid 3px #2E382E; }
+#draft-standard {
+  border-bottom: solid 3px #1C7F7A;
+}
+
+#final-draft-band {
+  background-color: #53C170;
+}
+
+#final-draft {
+  border-bottom: solid 3px #53C170;
+}
+
+#published-band {
+  background-color: #069E2D;
+}
+
+#published {
+  border-bottom: solid 3px #069E2D;
+}
+
+#withdrawn-band {
+  background-color: #004E64;
+}
+
+#withdrawn {
+  border-bottom: solid 3px #004E64;
+}
+
+#cancelled-band {
+  background-color: #2E382E;
+}
+
+#cancelled {
+  border-bottom: solid 3px #2E382E;
+}
 
 /*
     1. HTML & Body
@@ -283,83 +481,111 @@ body {
   line-height: 1.4em;
   color: #1d1d1d;
   background-color: #ffffff;
-  font-weight: 400; }
-  body main {
-    margin: 0 3em 0 6em; }
-  body pre * {
-    font-family: Times New Roman !important; }
+  font-weight: 400;
+}
+body main {
+  margin: 0 3em 0 6em;
+}
+body pre * {
+  font-family: Times New Roman !important;
+}
 
 main {
-  margin: 0 3em 0 6em; }
+  margin: 0 3em 0 6em;
+}
 
 /*
     2. Responsive navigation layout
 */
 #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
   font-family: Times New Roman;
-  font-weight: 400; }
-  #toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-    #toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
-      padding: 5px 10px; }
-    #toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
-      color: #485094;
-      text-decoration: none;
-      display: block; }
-      #toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
-        box-shadow: none;
-        color: #485094; }
-  #toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
-    padding-left: 30px; }
-  #toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
-    padding-left: 50px; }
-  #toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
-    padding-left: 70px; }
-  #toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
-    padding-left: 90px; }
-  #toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
-    padding-left: 110px; }
+  font-weight: 400;
+}
+#toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
+  padding: 5px 10px;
+}
+#toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
+  color: #485094;
+  text-decoration: none;
+  display: block;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: #485094;
+}
+#toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
+  padding-left: 30px;
+}
+#toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
+  padding-left: 50px;
+}
+#toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+  padding-left: 70px;
+}
+#toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+  padding-left: 90px;
+}
+#toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+  padding-left: 110px;
+}
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  background: #6C734A;
+  box-shadow: inset -5px 0px 10px -5px #6C734A !important;
+}
+#toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: #485094;
+}
+@media print {
   #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-    background: #6C734A;
-    box-shadow: inset -5px 0px 10px -5px #6C734A !important; }
-    #toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-      color: #485094; }
-  @media print {
-    #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-      background: white;
-      box-shadow: none !important; }
-    #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
-      color: #485094; }
-    #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-      color: black; } }
-  @media screen and (max-width: 768px) {
-    #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
-      padding: 0 1.5em;
-      overflow: visible; } }
+    background: white;
+    box-shadow: none !important;
+  }
   #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
-    color: white; }
-  #toc .toc-active,
-  #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active,
-  #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
-    box-shadow: none !important; }
-    #toc .toc-active a,
-    #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a,
-    #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
-      color: white;
-      background: none;
-      box-shadow: none; }
-  #toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
-    text-transform: uppercase; }
-  #toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
-    box-shadow: none;
-    color: white; }
+    color: #485094;
+  }
+  #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+    color: black;
+  }
+}
+@media screen and (max-width: 768px) {
+  #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    padding: 0 1.5em;
+    overflow: visible;
+  }
+}
+#toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
+  color: white;
+}
+#toc .toc-active,
+#toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active,
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  box-shadow: none !important;
+}
+#toc .toc-active a,
+#toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a,
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: white;
+  background: none;
+  box-shadow: none;
+}
+#toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
+  text-transform: uppercase;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: white;
+}
 
 #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 @media screen and (min-width: 768px) {
   nav {
@@ -370,9 +596,10 @@ main {
     width: 323px;
     font-size: 0.9em;
     overflow: auto;
-    padding: 0 0 0 45px;
-    background-color: #f7f7f7; } }
-
+    padding: 0 0 0 30px;
+    background-color: #f7f7f7;
+  }
+}
 @media print {
   nav {
     position: relative;
@@ -381,7 +608,9 @@ main {
     overflow: auto;
     padding: 0;
     margin-right: 0;
-    background-color: white; } }
+    background-color: white;
+  }
+}
 
 @media screen and (min-width: 768px) {
   #toggle {
@@ -391,52 +620,65 @@ main {
     background-color: #6C734A;
     color: white !important;
     cursor: pointer;
-    z-index: 100; }
-    #toggle span {
-      text-align: center;
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%); } }
-
+    z-index: 100;
+  }
+  #toggle span {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
 @media screen and (max-width: 768px) {
   #toggle {
-    display: none; } }
-
+    display: none;
+  }
+}
 @media print {
   #toggle {
-    display: none; } }
+    display: none;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .container {
-    padding-left: 360px; }
+    padding-left: 360px;
+  }
   .rule.toc {
-    display: none; }
+    display: none;
+  }
   h1.toc-contents {
-    margin-top: 1em; }
+    margin-top: 1em;
+  }
   ul#toc-list, ul#toc-list > :is(.h1, .h2, .h3, .h4, .h5, .h6) {
     padding: 0;
-    margin: 0; } }
-
+    margin: 0;
+  }
+}
 div.figure {
   line-height: 1.6em;
   padding: 1.5em;
   margin: 2em 0 1em 0;
-  overflow: auto; }
-  div.figure .FigureTitle, div.figure .figure-title {
-    font-weight: 700;
-    font-size: 1em;
-    text-align: center; }
-  div.figure > img, div.figure > svg {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    max-width: 100%;
-    height: auto; }
+  overflow: auto;
+}
+div.figure .FigureTitle, div.figure .figure-title {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+div.figure > img, div.figure > svg {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 table div.figure {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 /*
     Document types + stages
@@ -447,30 +689,35 @@ table div.figure {
   height: 100%;
   position: fixed;
   display: block;
-  z-index: 102; }
-  .document-type-band > :first-child {
-    position: relative;
-    width: 25px;
-    font-weight: 400;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    margin: 0;
-    margin-left: 6px;
-    writing-mode: tb-rl;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    white-space: nowrap;
-    display: block;
-    bottom: 0; }
-  @media print {
-    .document-type-band {
-      display: none; } }
-  .document-type-band .document-type {
-    top: 20px; }
+  z-index: 102;
+}
+.document-type-band > :first-child {
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-type-band {
+    display: none;
+  }
+}
+.document-type-band .document-type {
+  top: 20px;
+}
 
 .document-stage-band {
   left: 0;
@@ -479,31 +726,37 @@ table div.figure {
   position: fixed;
   display: block;
   z-index: 101;
-  box-shadow: -5px 0px 10px #1d1d1d; }
-  .document-stage-band > :first-child {
-    position: relative;
-    width: 25px;
-    font-weight: 400;
-    height: 150;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    margin: 0;
-    margin-left: 6px;
-    writing-mode: tb-rl;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    white-space: nowrap;
-    display: block;
-    bottom: 0; }
-  @media print {
-    .document-stage-band {
-      display: none; } }
+  box-shadow: -5px 0px 10px #1d1d1d;
+}
 .document-stage-band > :first-child {
-  font-weight: 300; }
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  height: 150;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-stage-band {
+    display: none;
+  }
+}
+
+.document-stage-band > :first-child {
+  font-weight: 300;
+}
 
 p.document-stage {
   position: relative;
@@ -523,21 +776,25 @@ p.document-stage {
   -o-transform: rotate(180deg);
   white-space: nowrap;
   display: block;
-  bottom: 0; }
+  bottom: 0;
+}
 
 #governance-band p.document-type {
-  height: 230px !important; }
+  height: 230px !important;
+}
 
 p.document-stage {
   font-weight: 300;
-  height: 160px; }
+  height: 160px;
+}
 
 .coverpage-maturity {
   font-family: Times New Roman;
   font-weight: 400;
   font-size: 1em;
   margin: 0 0 2em 0;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 /*
     3. TYPOGRAPHY
@@ -550,150 +807,186 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #6C734A;
   font-weight: 300;
   margin-top: 1.6em;
-  margin-bottom: 0.3em; }
+  margin-bottom: 0.3em;
+}
 
 h1, .h1 {
   font-size: 1.6em;
   text-transform: uppercase;
-  margin-top: 2em; }
+  margin-top: 2em;
+}
 
-h1#content, #content.h1 {
-  margin-top: 2em; }
+h1#content, .h1#content {
+  margin-top: 2em;
+}
 
 h2, .h2 {
   margin-top: 1.3em;
   font-size: 1.3em;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 h3, .h3 {
   margin-top: 1.1em;
   font-size: 1.1em;
-  font-weight: 100; }
+  font-weight: 100;
+}
 
 .TermNum {
-  font-weight: 100; }
+  font-weight: 100;
+}
 
 .TermNum, .Terms, .AltTerms {
-  color: #6C734A; }
+  color: #6C734A;
+}
 
 h2.TermNum {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 p.Terms {
   font-size: 1.1em;
   line-height: 1.5em;
-  margin: 0; }
+  margin: 0;
+}
 
 p.AltTerms {
   /*
-    font-style: italic;
-     */
+  font-style: italic;
+   */
   font-size: 1.1em;
-  margin: 0; }
+  margin: 0;
+}
 
 /*
     3.2 Links
 */
 a, a:visited {
   text-decoration: none;
-  color: #485094; }
+  color: #485094;
+}
 
 a:hover {
   color: white;
   background: #6C734A;
-  box-shadow: 3px 0 0 #6C734A, -3px 0 0 #6C734A; }
+  box-shadow: 3px 0 0 #6C734A, -3px 0 0 #6C734A;
+}
 
 *::selection {
   background: #6C734A;
-  color: white; }
+  color: white;
+}
 
 *::-moz-selection {
   background: #6C734A;
-  color: white; }
+  color: white;
+}
 
 /*
     3.3 Lists
 */
 ul, ol {
-  margin-left: 1.2em; }
+  margin-left: 1.2em;
+}
 
 ul li {
-  list-style: none; }
+  list-style: none;
+}
 
 ul li::before {
   content: "—";
   display: inline-block;
   width: 1em;
-  margin-left: -1.2em; }
+  margin-left: -1.2em;
+}
 
 ul li p {
-  display: inline; }
+  display: inline;
+}
 
 ul > li:first-child {
-  margin-top: 1em; }
+  margin-top: 1em;
+}
 
 ul ul > li:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 ol ul > li:first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 #toc-list ul {
-  margin-bottom: 0.25em; }
+  margin-bottom: 0.25em;
+}
 
 #toc-list li {
-  list-style-type: none; }
+  list-style-type: none;
+}
 
 #toc li::before {
   content: " ";
-  display: none; }
+  display: none;
+}
 
 /* https://github.com/metanorma/metanorma-bipm/issues/47 */
-ol[class="alphabet"] {
-  counter-reset: alphabet; }
+ol[class=alphabet] {
+  counter-reset: alphabet;
+}
 
-ol[class="roman"] {
-  counter-reset: roman; }
+ol[class=roman] {
+  counter-reset: roman;
+}
 
-ol[class="alphabet"] ol[class="alphabet"] {
-  counter-reset: none; }
+ol[class=alphabet] ol[class=alphabet] {
+  counter-reset: none;
+}
 
-ol[class="alphabet"] > li {
+ol[class=alphabet] > li {
   list-style: none;
-  position: relative; }
+  position: relative;
+}
 
-ol[class="alphabet"] ol[class="alphabet"] > li {
-  list-style: inherit; }
+ol[class=alphabet] ol[class=alphabet] > li {
+  list-style: inherit;
+}
 
-ol[class="alphabet"] > li::before {
+ol[class=alphabet] > li::before {
   counter-increment: alphabet;
   content: counter(alphabet, lower-alpha) ") ";
   position: absolute;
-  left: -1.4em; }
+  left: -1.4em;
+}
 
-ol[class="alphabet"] ol[class="alphabet"] > li::before {
+ol[class=alphabet] ol[class=alphabet] > li::before {
   counter-increment: none;
-  content: initial; }
+  content: initial;
+}
 
-ol[class="roman"] ol[class="roman"] {
-  counter-reset: none; }
+ol[class=roman] ol[class=roman] {
+  counter-reset: none;
+}
 
-ol[class="roman"] > li {
+ol[class=roman] > li {
   list-style: none;
-  position: relative; }
+  position: relative;
+}
 
-ol[class="roman"] ol[class="roman"] > li {
-  list-style: inherit; }
+ol[class=roman] ol[class=roman] > li {
+  list-style: inherit;
+}
 
-ol[class="roman"] > li::before {
+ol[class=roman] > li::before {
   counter-increment: roman;
   content: "(" counter(roman, lower-roman) ") ";
   position: absolute;
-  left: -2.0em; }
+  left: -2em;
+}
 
-ol[class="roman"] ol[class="roman"] > li::before {
+ol[class=roman] ol[class=roman] > li::before {
   counter-increment: none;
-  content: initial; }
+  content: initial;
+}
 
 /*
     3.4 Rules
@@ -702,14 +995,16 @@ ol[class="roman"] ol[class="roman"] > li::before {
   width: 100%;
   height: 1px;
   background-color: #0e1a85;
-  margin: 2em 0; }
+  margin: 2em 0;
+}
 
 /*
     3.5 Bibliograhy
 */
 p.Biblio, p.NormRef {
   margin-top: 1em;
-  margin-left: 2em; }
+  margin-left: 2em;
+}
 
 /*
     3.6 Source Code + figures
@@ -722,39 +1017,46 @@ pre,
   line-height: 1.6em;
   padding: 1.5em;
   margin: 2em 0 1em 0;
-  overflow: auto; }
-  .figure .SourceTitle,
-  pre .SourceTitle,
-  .pseudocode .SourceTitle {
-    font-weight: 700;
-    font-size: 1em;
-    text-align: center; }
+  overflow: auto;
+}
+.figure .SourceTitle,
+pre .SourceTitle,
+.pseudocode .SourceTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
 
 pre {
   font-family: "Space Mono",monospace;
-  font-variant-ligatures: none; }
+  font-variant-ligatures: none;
+}
 
 .AdmonitionTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .RecommendationTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .ListTitle {
   font-weight: 700;
   font-size: 1em;
   text-align: center;
-  text-align: left; }
+  text-align: left;
+}
 
 .FigureTitle,
 .SourceTitle {
   font-weight: 700;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 /*
     3.7 Notes
@@ -763,9 +1065,11 @@ pre {
   background-color: #fff495;
   color: #47430c;
   padding: 1.2em;
-  margin: 1em 0 1em 0; }
-  .Note p {
-    margin: 0; }
+  margin: 1em 0 1em 0;
+}
+.Note p {
+  margin: 0;
+}
 
 /*
     3.8 Examples
@@ -776,18 +1080,23 @@ pre {
   margin: 2em 0 1em 0;
   text-align: left;
   color: #424242;
-  padding-left: 2.7em; }
-  .example p {
-    margin: 0; }
-  .example .example-title {
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-left: -1.5em; }
-  .example .example-title {
-    margin-top: 0; }
-  .example pre,
-  .example .pseudocode {
-    background: none; }
+  padding-left: 2.7em;
+}
+.example p {
+  margin: 0;
+}
+.example .example-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: -1.5em;
+}
+.example .example-title {
+  margin-top: 0;
+}
+.example pre,
+.example .pseudocode {
+  background: none;
+}
 
 /*
     3.9 Tables
@@ -798,29 +1107,36 @@ table {
   margin: 1em 0 2em 0;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 2em; }
-  table, table th, table td {
-    border: 1px solid black;
-    font-size: 0.95em; }
-  table th, table td {
-    padding: 1em; }
-  table td.header {
-    font-weight: 400; }
+  padding-right: 2em;
+}
+table, table th, table td {
+  border: 1px solid black;
+  font-size: 0.95em;
+}
+table th, table td {
+  padding: 1em;
+}
+table td.header {
+  font-weight: 400;
+}
 
 p.TableTitle {
   text-align: center;
   margin-top: 2.5em;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 /*
   3.10 Footnotes
 */
 a.footnote-number {
   vertical-align: super;
-  font-size: 0.8em; }
+  font-size: 0.8em;
+}
 
 .footnote {
-  font-size: 0.9em; }
+  font-size: 0.9em;
+}
 
 /*
     3.11 Blockquotes
@@ -832,7 +1148,8 @@ a.footnote-number {
   padding: 1.5em;
   margin-top: 2em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 /*
     3.12 Formulas
@@ -841,7 +1158,8 @@ a.footnote-number {
   background-color: #f7f7f7;
   padding: 1.5em;
   margin-top: 2em;
-  text-align: center; }
+  text-align: center;
+}
 
 /*
     3.13 Contact Info
@@ -853,41 +1171,49 @@ a.footnote-number {
   text-align: left;
   border: #6C734A solid 2px;
   color: #6C734A !important;
-  border-radius: 25px; }
+  border-radius: 25px;
+}
 
 .contact-info a,
 .contact-info a:hover {
-  color: #6C734A; }
+  color: #6C734A;
+}
 
 .contact-info p, .contact-info a {
   font-family: "Space Mono",monospace;
-  font-weight: 400; }
+  font-weight: 400;
+}
 
 .contact-info .name {
   font-weight: 700;
   font-size: 1.2em;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 .contact-info .address {
   font-size: 1em;
   line-height: 1.3em;
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 /*
     Keywords
 */
 span.keyword {
-  font-weight: 600; }
+  font-weight: 600;
+}
 
 /*
     Paragraphs
 */
 p {
   margin-top: 1em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+}
 
 h2 p, .h2 p {
-  display: inline; }
+  display: inline;
+}
 
 /*
     4.0 Page header
@@ -897,24 +1223,28 @@ h2 p, .h2 p {
 */
 .icon-svg {
   width: 100%;
-  color: #5ecf86; }
+  color: #5ecf86;
+}
 
 .wrapper-top {
   background: linear-gradient(200deg, #007864, #6C734A);
   color: #ffffff;
   padding: 2em 0;
-  width: 100%; }
+  width: 100%;
+}
 
 .wrapper-top-bottom {
   width: 0;
   height: 0;
   border-top: 100px solid #6C734A;
   border-right: 100px solid transparent;
-  position: absolute; }
+  position: absolute;
+}
 
 .doc-number {
   font-size: 0.5em;
-  font-family: Times New Roman; }
+  font-family: Times New Roman;
+}
 
 .coverpage-title {
   padding-bottom: 0.5em;
@@ -924,53 +1254,65 @@ h2 p, .h2 p {
   font-weight: 100;
   padding-left: 1em;
   padding-right: 1em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .WordSection11 {
-  padding: 0 2em 0 3em; }
+  padding: 0 2em 0 3em;
+}
 
 .info-section {
-  padding: 0 2em 0 5em; }
+  padding: 0 2em 0 5em;
+}
 
 .prefatory-section {
-  padding: 0 3em 0 6em; }
+  padding: 0 3em 0 6em;
+}
 
 .zzSTDTitle1, .MsoCommentText {
-  display: none; }
+  display: none;
+}
 
 .coverpage {
   text-align: center;
-  padding-left: 1.5em; }
+  padding-left: 1.5em;
+}
 
 .coverpage-logo span, .coverpage-tc-name span {
   font-family: Times New Roman;
   text-transform: none;
-  font-weight: 300; }
+  font-weight: 300;
+}
 
 .coverpage-tc-name {
   font-size: 1.2em;
   line-height: 1.2em;
-  margin: 0.25em 0; }
+  margin: 0.25em 0;
+}
 
 /*
     4.2 Document Identity
 */
 .coverpage-doc-identity {
   font-size: 2em;
-  line-height: 2em; }
+  line-height: 2em;
+}
 
 .coverpage-title .title-second {
-  font-size: 0.8em; }
+  font-size: 0.8em;
+}
 
 .coverpage-title .title-third {
-  font-size: 0.6em; }
+  font-size: 0.6em;
+}
 
 .coverpage-stage-block {
   font-family: Times New Roman;
   font-weight: 600;
   font-size: 1.25em;
   margin: 2em 0em 2em 0em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 /*
     4.3 Draft Warning
@@ -981,13 +1323,15 @@ h2 p, .h2 p {
   margin: 1em 2em;
   color: #485094;
   padding: 2em 1em 1em 1em;
-  border-radius: 25px; }
+  border-radius: 25px;
+}
 
 .coverpage-warning .title {
   font-family: Times New Roman;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+}
 
 /*
     4.4 Copyright
@@ -995,7 +1339,8 @@ h2 p, .h2 p {
 .copyright {
   padding: 1em;
   font-size: 0.9em;
-  text-align: left; }
+  text-align: left;
+}
 
 /*  .copyright .name, .copyright .address {color: #485094;} */
 /*
@@ -1021,62 +1366,84 @@ To top button
   cursor: pointer;
   padding: 10px 15px 10px 15px;
   border-radius: 4px;
-  text-transform: uppercase; }
-  #myBtn:hover {
-    opacity: 1; }
-  @media print {
-    #myBtn {
-      display: none; } }
-  #myBtn a.anchorjs-link:hover {
-    background: none;
-    color: #485094;
-    box-shadow: none; }
+  text-transform: uppercase;
+}
+#myBtn:hover {
+  opacity: 1;
+}
+@media print {
+  #myBtn {
+    display: none;
+  }
+}
+#myBtn a.anchorjs-link:hover {
+  background: none;
+  color: #485094;
+  box-shadow: none;
+}
 
 @page {
-  margin: 2cm 1cm; }
-
+  margin: 2cm 1cm;
+}
 @media print {
   .document-info, nav, .copyright {
-    page-break-before: always; }
+    page-break-before: always;
+  }
   h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
     page-break-after: avoid;
-    margin-top: 1.2em; }
+    margin-top: 1.2em;
+  }
   .note, .figure, pre, .pseudocode, table {
-    page-break-inside: avoid; }
+    page-break-inside: avoid;
+  }
   .info-section {
-    display: none; }
+    display: none;
+  }
   .coverpage {
-    height: 23cm; }
+    height: 23cm;
+  }
   .wrapper-top {
     top: 0;
     padding-top: 4cm;
-    padding-bottom: 4cm; }
+    padding-bottom: 4cm;
+  }
   .wrapper-top-bottom {
-    margin-top: -5px; }
+    margin-top: -5px;
+  }
   #toggle, .document-stage-band,
   .document-type-band, button#myBtn {
-    display: none; }
+    display: none;
+  }
   .container {
-    padding-left: 0; }
+    padding-left: 0;
+  }
   h1.content, .h1.content {
     margin-top: 2em;
-    line-height: 2.5em; }
+    line-height: 2.5em;
+  }
   h1, .h1 {
     font-size: 1.5em;
-    line-height: 1.5; }
+    line-height: 1.5;
+  }
   h2, .h2 {
-    font-size: 1.2em; }
+    font-size: 1.2em;
+  }
   h3, .h3 {
-    font-size: 1em; }
+    font-size: 1em;
+  }
   .Note {
     background-color: #fff495;
     color: #47430c;
     padding: 5px;
-    margin: 2em 0 1em 0; }
+    margin: 2em 0 1em 0;
+  }
   .Note p {
-    padding: 0 5px 0 5px; }
+    padding: 0 5px 0 5px;
+  }
   .wrapper-top-bottom {
-    display: none; } }
+    display: none;
+  }
+}
 
 -->
 </style><style><!--pre.sourcecode table td { padding: 5px; }
@@ -1153,9 +1520,13 @@ pre.sourcecode .nt {
 
   <div class="coverpage-doc-identity">
     <div class="doc-number">
-      <span class="docnumber">BIPM GUIDE-ITS-90</span>
+      <span class="docnumber">BIPM GUIDE-ITS-90 1</span>
       <span class="docnumber-separator">:</span>
       <span class="docyear">2018 </span>
+      
+      
+      <br />Date: 2018-01-01
+      
     </div>
 
     <div class="coverpage-logo">
@@ -1225,15 +1596,17 @@ pre.sourcecode .nt {
   
   <div class="coverpage-tc-name">
     
-    <span>P P M Steur (), 
-    <span>B Fellmuth (), 
-    <span>O Tamura ().
-  </span>
+    <span>P P M Steur, </span>
+    <span>B Fellmuth, </span>
+    <span>O Tamura</span>.
+  </div>
   
 
   
 
-  </span>
+  
+
+  </div>
 
     <div class="wrapper-top-bottom"></div>
 
@@ -1250,24 +1623,21 @@ pre.sourcecode .nt {
 <div class="copyright">
 <div class="boilerplate-copyright">
 
-<div id="_cecc83a2-d85d-5f11-e3c0-981d7fdd40f0">
-<p id="_82270594-079d-0090-7f27-dcb401b8f3d8" style="text-align:center;">© Bureau International des Poids et Mesures 2018 all rights reserved</p>
+<div id="_c20d5871-59c5-1abb-69c4-33074d4f09d9">
+<p id="_f81d45d4-b556-ed46-e7c4-9e11a649f5b7" style="text-align:center;">© Bureau International des Poids et Mesures 2018 all rights reserved</p>
 </div>
 </div>
   <div class="boilerplate-license">
 
-<div id="_copyright_statement_2"><h1 class="IntroTitle">Copyright statement</h1>
+<div id="_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a"><h1 class="IntroTitle"><a class="anchor" href="#_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a"></a><a class="header" href="#_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a">Copyright statement</a></h1>
 
-<p id="_a326a359-e0a5-687b-4565-6854295bc1a8">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/:">http://creativecommons.org/licenses/by/4.0/:</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
+<p id="_50719790-3c5b-c213-8298-0631d690bc21">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/:">http://creativecommons.org/licenses/by/4.0/:</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
 </div>
 </div>
   <div id="boilerplate-legal-destination"></div>
 <div class="boilerplate-feedback">
 
-<p id="_e6428749-2432-0772-4c8e-ed6c34018916">BIPM<br />
-Pavillon de Breteuil<br />
-F-92312 Sèvres Cedex<br />
-FRANCE</p>
+<p id="_5926bc3f-b367-69e7-6cc6-442a91e32db2">BIPM<br /> Pavillon de Breteuil<br /> F-92312 Sèvres Cedex<br /> FRANCE</p>
 </div>
 </div>
 
@@ -1276,20 +1646,53 @@ FRANCE</p>
   </div>
 
 
-</span>
-</div></div></div></header></div><br /><div class="prefatory-section"><nav>
-  <div id="toc"><h1 class="IntroTitle">Contents</h1><ul><li class="h1"><a href="#_72bdecdb-5455-43bc-8b58-032e9c9486b2">      Abstract</a></li>
-<li class="h1"><a href="#_7aa11459-abd0-44b2-9145-4f5c88c5c6dc">      1.  Introduction</a></li>
-<li class="h1"><a href="#_0d481f41-bbf2-407c-b217-01432263280c">      2.  Definition of the scale</a></li>
-<li class="h1"><a href="#_28ee5a14-8da8-406a-8f57-552f2b58241d">      3.  General design considerations</a></li>
-<li class="h1"><a href="#_bed9cb52-62d0-4a23-854a-02653f1aaf48">      4.  The working fluid</a></li>
-<li class="h1"><a href="#_a20b4837-6cb7-4c65-a592-9db524aa6667">      5.  The thermometer bulb</a></li>
-<li class="h1"><a href="#_457ac2bc-8195-459d-a816-3f610f7d1734">      6.  Pressure measurement</a></li>
-<li class="h2"><a href="#_0e1006e8-fbcf-4409-9d89-e8f0d0205739">      6.1.  Aerostatic head correction</a></li>
-<li class="h2"><a href="#_f1042e30-c31a-4329-a1ac-baa308a23e7d">      6.2.  Thermomolecular pressure correction</a></li>
-<li class="h1"><a href="#_d67ad06c-51e2-44e1-af48-f563c4d0cf78">      7.  Dead space correction</a></li>
-<li class="h1"><a href="#_7229a383-0def-424c-8159-a30316d8d888">      8.  Estimation of uncertainty</a></li>
-<li class="h1"><a href="#_a8fa4e58-915e-49e7-84c4-7ce82d7f0d00">      References</a></li></ul></div>
+</div>
+</header></div><br /><div class="prefatory-section"><nav>
+  <div id="toc"><h1 class="IntroTitle"><a class="anchor" href="#_13d7055e-30fc-845a-c60e-8972faf092d9"></a><a class="header" href="#_13d7055e-30fc-845a-c60e-8972faf092d9">Contents</a></h1><ul><li class="h1"><a href="#_06da5f97-b73a-98af-26c6-af2d1e8daead">      
+  
+  Abstract
+</a></li>
+<li class="h1"><a href="#_1e79d20f-6ef4-9541-a722-470227221d5c">      
+  
+  1.  Introduction
+</a></li>
+<li class="h1"><a href="#_68b9997d-ca3b-395f-7275-9555198e5874">      
+  
+  2.  Definition of the scale
+</a></li>
+<li class="h1"><a href="#cls_3">      
+  
+  3.  General design considerations
+</a></li>
+<li class="h1"><a href="#_1bc25d37-52a3-4e0a-0ca2-d8e517352230">      
+  
+  4.  The working fluid
+</a></li>
+<li class="h1"><a href="#cls_5">      
+  
+  5.  The thermometer bulb
+</a></li>
+<li class="h1"><a href="#cls_6">      
+  
+  6.  Pressure measurement
+</a></li>
+<li class="h2"><a href="#_9c32586e-7c91-731b-8632-7c8ebcc3a6dd">      
+  
+  6.1.  Aerostatic head correction
+</a></li>
+<li class="h2"><a href="#_4514ae96-3c5e-e884-6f2a-52d6a4484e68">      
+  
+  6.2.  Thermomolecular pressure correction
+</a></li>
+<li class="h1"><a href="#cls_7">      
+  
+  7.  Dead space correction
+</a></li>
+<li class="h1"><a href="#_846e7303-521c-44a0-4b00-d950376194d6">      
+  
+  8.  Estimation of uncertainty
+</a></li>
+<li class="h1"><a href="#_680da03e-f497-4492-9293-701e8c36cc19">      References</a></li></ul></div>
 
 </nav>
 
@@ -1300,75 +1703,135 @@ FRANCE</p>
 
 
 
-</div><br /><br /><div id="_abstract" class="Section3"><h1 class="IntroTitle" id="_72bdecdb-5455-43bc-8b58-032e9c9486b2">Abstract</h1><p id="_fae8daf6-367f-ea36-abba-344b43f544de">This paper is a part of guidelines, prepared on behalf of the Consultative Committee for Thermometry, on the methods how to realize the International Temperature Scale of 1990.</p><p id="_a3f4e8cf-03a9-e88e-c6e2-e9b9e8cd1977">It discusses the major issues linked to interpolating constant-volume gas thermometry for the realization of the International Temperature Scale of 1990 at low temperatures.</p></div><div id="_introduction"><h1 id="_7aa11459-abd0-44b2-9145-4f5c88c5c6dc">1.  Introduction</h1><p id="_509bf725-fb60-4fbe-3eb9-fa84056c6d32">In the range from <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</div><br /><br /><div id="_06da5f97-b73a-98af-26c6-af2d1e8daead" class="Section3"><h1 class="IntroTitle" id="_b98728e0-c32c-4045-8fe6-0d9514cdadf4"><a class="anchor" href="#_06da5f97-b73a-98af-26c6-af2d1e8daead"></a><a class="header" href="#_06da5f97-b73a-98af-26c6-af2d1e8daead">Abstract</a></h1><p id="_96263176-918d-385b-de4d-488a7d2111c6">This paper is a part of guidelines, prepared on behalf of the Consultative Committee for Thermometry, on the methods how to realize the International Temperature Scale of 1990.</p><p id="_82a0e678-7298-0983-5b98-75198063eb9d">It discusses the major issues linked to interpolating constant-volume gas thermometry for the realization of the International Temperature Scale of 1990 at low temperatures.</p></div><div id="_1e79d20f-6ef4-9541-a722-470227221d5c"><h1 id="_cea809d2-98d2-414c-b164-5605491659b3"><a class="anchor" href="#_1e79d20f-6ef4-9541-a722-470227221d5c"></a><a class="header" href="#_1e79d20f-6ef4-9541-a722-470227221d5c">1.  Introduction</a></h1><p id="_6ee2aa08-304d-576d-bbfc-645e2133eba7">In the range from <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>3</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> to the triple point of neon (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>24.5561</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span>), the ITS-90 is defined in terms of a <sup>3</sup>He or <sup>4</sup>He constant-volume gas thermometer, CVGT, calibrated at three temperatures.</p><p id="_5cc505f1-2678-6373-2a29-9d046233007d">Background information on absolute constant-volume gas thermometry can be found in the reports of four modern gas thermometry experiments [<a href="#Berry1979">Berry 1979</a>, <a href="#Steur1986">Steur and Durieux 1986</a>, <a href="#Kemp1986">Kemp <i>et al.</i> 1986/87</a>, <a href="#Astrov1989">Astrov <i>et al.</i> 1989</a>], which provide details of current good practice, and form the basis for the numerical values assigned to the low-temperature portions of ITS-90. These experiments demonstrate in different ways the very great care required in apparatus design and data analysis when a helium gas thermometer is used to determine thermodynamic temperatures in terms of a single reference temperature.</p><p id="_5e2c509f-f62a-751c-2ab8-6ded1cc34a6c">Measurement difficulties can be reduced to trivial levels, however, if the single reference temperature is replaced by two or three designated calibration temperatures, provided that these calibration temperatures lie within the measurement range, and that the measurement range itself be not overly wide. These requirements are met in the case of the ITS-90 gas thermometer: with appropriate design and choice of gas density (the criteria are not too restrictive), measurements accurate to the order of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>), the ITS-90 is defined in terms of a <sup>3</sup>He or <sup>4</sup>He constant-volume gas thermometer, CVGT, calibrated at three temperatures.</p><p id="_b8432901-fa53-e2df-7906-45e13861f4b9">Background information on absolute constant-volume gas thermometry can be found in the reports of four modern gas thermometry experiments [<a href="#Berry1979">Berry 1979</a>, <a href="#Steur1986">Steur and Durieux 1986</a>, <a href="#Kemp1986">Kemp <i>et al.</i> 1986/87</a>, <a href="#Astrov1989">Astrov <i>et al.</i> 1989</a>], which provide details of current good practice, and form the basis for the numerical values assigned to the low-temperature portions of ITS-90. These experiments demonstrate in different ways the very great care required in apparatus design and data analysis when a helium gas thermometer is used to determine thermodynamic temperatures in terms of a single reference temperature.</p><p id="_fc7becc2-b9d4-88f1-5b8b-68f5ac6e7f90">Measurement difficulties can be reduced to trivial levels, however, if the single reference temperature is replaced by two or three designated calibration temperatures, provided that these calibration temperatures lie within the measurement range, and that the measurement range itself be not overly wide. These requirements are met in the case of the ITS-90 gas thermometer: with appropriate design and choice of gas density (the criteria are not too restrictive), measurements accurate to the order of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.2</mn>
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span> are not difficult to obtain.</p><p id="_cf8288c0-ef79-f195-a6ae-bd553cdf95c3">The difficulty of filling the temperature gap between <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> are not difficult to obtain.</p><p id="_13f8d017-5e0a-8ff4-3466-50848ee556f1">The difficulty of filling the temperature gap between <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>5.2</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, the upper end of the <sup>4</sup>He helium vapour-pressure scale, and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>13.8033</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, the lower end of the platinum resistance thermometer (PRT) range, stems from the nature of the resistance-temperature relationships of available stable materials, the necessity for a great number of calibration points to describe these relationships (the only viable resistance thermometer for this range, the rhodium-iron resistance thermometer (RIRT) may require as many as 10 calibration points for the range between <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>5.2</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>13.8</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>), and the absence of satisfactory fixed points of definition. As a last resort, during the preparation of the ITS-90 in the late 1980’s, Barber’s original idea [<a href="#Barber1971">Barber 1971</a>] of a (constant-volume) gas thermometer calibrated at two fixed points, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>20</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, and with an expected accuracy of about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.5</mn>
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, was taken up again. To fill the temperature gap, he turned his attention to the then available primary thermometers: the (constant-volume) gas thermometer, the acoustic gas thermometer and the magnetic thermometer. He chose the CVGT as being the one on which most experience is available. The reason for Barber to use two fixed points may have been that the relative CVGT, with only a single reference point, was considered not accurate enough for direct use in a temperature scale. Barber’s proposal regarded a <sup>4</sup>He CVGT correcting, before interpolation, explicitly for dead space and implicitly for non-ideality. Barber reasoned that “the error in temperature measurement due to the gas imperfections is zero to first order if the usual form of the second virial coefficient is adopted of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1399,37 +1862,61 @@ FRANCE</p>
   <mstyle displaystyle="false">
     <mi>b</mi>
   </mstyle>
-</math></span> are constants” [<a href="#Barber1971">Barber 1971</a>]. All other correction terms were intended to be calibrated out.</p><p id="_90e385b9-8bc8-fd4a-f778-ee80984ebea5">The ITS-90 gas thermometer goes somewhat further than Barber’s proposal, with three calibration points instead of two, and correcting, before interpolation, explicitly for non-ideality only. This turned out to be necessary because of the non-quadratic behaviour of the <sup>3</sup>He and <sup>4</sup>He virial correction in the range between <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> are constants” [<a href="#Barber1971">Barber 1971</a>]. All other correction terms were intended to be calibrated out.</p><p id="_a2b1adf7-128a-a4db-c20e-76a4d7902045">The ITS-90 gas thermometer goes somewhat further than Barber’s proposal, with three calibration points instead of two, and correcting, before interpolation, explicitly for non-ideality only. This turned out to be necessary because of the non-quadratic behaviour of the <sup>3</sup>He and <sup>4</sup>He virial correction in the range between <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>3.0</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>24.6</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>. The definition of the interpolating CVGT (ICVGT) makes no mention of a correction for dead space, it just states that “<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>p</mi>
   </mstyle>
-</math></span> is the pressure in the gas thermometer”, which has been cause of some discussion [<a href="#Steur2005">Steur and Pavese 2005</a>]. Using three fixed points, it was the intention to define an apparatus “not as complicated as the CVGT”.</p></div><div id="_definition_of_the_scale"><h1 id="_0d481f41-bbf2-407c-b217-01432263280c">2.  Definition of the scale</h1><p id="_0b2a2979-2b3e-1f1d-6f38-25f922dfc326">In the range from <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> is the pressure in the gas thermometer”, which has been cause of some discussion [<a href="#Steur2005">Steur and Pavese 2005</a>]. Using three fixed points, it was the intention to define an apparatus “not as complicated as the CVGT”.</p></div><div id="_68b9997d-ca3b-395f-7275-9555198e5874"><h1 id="_8dd9030c-dcdb-4f63-ba67-9c5b4bb8c54e"><a class="anchor" href="#_68b9997d-ca3b-395f-7275-9555198e5874"></a><a class="header" href="#_68b9997d-ca3b-395f-7275-9555198e5874">2.  Definition of the scale</a></h1><p id="_3f5af925-69bf-fea5-75f7-6afafef97aa6">In the range from <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4.2</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>24.6</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> using <sup>4</sup>He, the ITS-90 temperature <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1461,7 +1948,7 @@ FRANCE</p>
     </msup>
     <mo>,</mo>
   </mstyle>
-</math></span>  (1)</p></div></div><p id="_57eac285-7a72-bb43-ba28-d00b1588dd18">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (1)</p></div></div><p id="_e3bcd88a-3348-4003-2403-600a3a57084a">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>p</mi>
   </mstyle>
@@ -1485,37 +1972,67 @@ FRANCE</p>
 </math></span> the text of the ITS-90, but with the further restriction that the lowest one of these points lies between <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4.2</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>5.0</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span>.</p><p id="_aa87c4a1-2de7-caf8-1ad8-eca5de7cfd02">For a <sup>3</sup>He ICVGT in the range from <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>.</p><p id="_3b3acc35-ac88-63ca-9420-804305611439">For a <sup>3</sup>He ICVGT in the range from <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>3.0</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>24.6</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, and for a <sup>4</sup>He ICVGT, when the lowest defining fixed point is at a temperature below <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4.2</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, the non-ideality of the gas must be accounted for explicitly, using the appropriate second virial coefficient <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1567,16 +2084,28 @@ FRANCE</p>
 </math></span> is defined over the whole range from <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>3</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> (orfrom the lowest defining fixed point) to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>24.6</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> by the relation:</p><div id="eq2"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
@@ -1633,7 +2162,7 @@ FRANCE</p>
     </mfrac>
     <mo>,</mo>
   </mstyle>
-</math></span>  (2)</p></div></div><p id="_9eab30de-b08a-5cac-9383-59b0e1c19b00">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>  (2)</p></div></div><p id="_d7562fbb-1987-8e9f-6065-ade94c1561a4">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>p</mi>
   </mstyle>
@@ -1681,14 +2210,20 @@ FRANCE</p>
   <mstyle displaystyle="false">
     <mi>x</mi>
   </mstyle>
-</math></span> is 3 or 4 according to the isotope used, and the values of the second virial coefficients are given by the relations (6a) and (6b) of the text of the ITS-90.</p></div><div id="cls_3"><h1 id="_28ee5a14-8da8-406a-8f57-552f2b58241d">3.  General design considerations</h1><p id="_d4a6c794-4dc7-3c09-c8ef-4a76939f19c3">There are very few explicit restrictions on the design of an interpolating gas thermometer to implement the ITS-90. The implicit requirement in the above discussion, that the errors of the quadratic interpolation should be of the order of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> is 3 or 4 according to the isotope used, and the values of the second virial coefficients are given by the relations (6a) and (6b) of the text of the ITS-90.</p></div><div id="cls_3"><h1 id="_8ee3b670-7faa-434b-a6d1-e0656ae17ef3"><a class="anchor" href="#cls_3"></a><a class="header" href="#cls_3">3.  General design considerations</a></h1><p id="_d208e392-053c-71a5-8cb5-85f2be876977">There are very few explicit restrictions on the design of an interpolating gas thermometer to implement the ITS-90. The implicit requirement in the above discussion, that the errors of the quadratic interpolation should be of the order of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.1</mn>
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span>, can be achieved for a wide range of gas densities, bulb volumes and capillary geometries. See the designs of realized ICVGTs [<a href="#Sakurai1992">Sakurai 1992</a>, <a href="#Meyer1997">Meyer and Reilly 1997</a>, <a href="#Hill2002">Hill 2002</a>, <a href="#Kang2002">Kang <i>et al</i>. 2002</a>, <a href="#Sakurai2002">Sakurai 2002</a>, <a href="#Steur2003">Steur <i>et al</i>. 2003</a>, <a href="#Steur2005">Steur <i>et al</i>. 2005</a>, <a href="#Tamura2008">Tamura <i>et al</i>. 2008</a>, <a href="#Peruzzi2010">Peruzzi <i>et al.</i> 2010</a>] for illustrations of how the conflicting requirementsthat both the thermomolecular pressure differences and dead space effects should be small may be satisfied.</p><p id="_c2b227cb-d986-38d0-0f44-796ed2f5c4e5">It has been shown [<a href="#Pavese1987">Pavese and Steur 1987</a>, <a href="#Steur1989">Steur and Pavese 1989</a>, <a href="#Swenson1989">Swenson 1989</a>] that for an interpolating gas thermometer the major low-temperature deviations from a quadratic interpolation function are associated with the temperature dependence of the second virial coefficient, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>, can be achieved for a wide range of gas densities, bulb volumes and capillary geometries. See the designs of realized ICVGTs [<a href="#Sakurai1992">Sakurai 1992</a>, <a href="#Meyer1997">Meyer and Reilly 1997</a>, <a href="#Hill2002">Hill 2002</a>, <a href="#Kang2002">Kang <i>et al</i>. 2002</a>, <a href="#Sakurai2002">Sakurai 2002</a>, <a href="#Steur2003">Steur <i>et al</i>. 2003</a>, <a href="#Steur2005">Steur <i>et al</i>. 2005</a>, <a href="#Tamura2008">Tamura <i>et al</i>. 2008</a>, <a href="#Peruzzi2010">Peruzzi <i>et al.</i> 2010</a>] for illustrations of how the conflicting requirementsthat both the thermomolecular pressure differences and dead space effects should be small may be satisfied.</p><p id="_4e7eeca0-5eb7-d1dc-a57b-0f9f73a3efa6">It has been shown [<a href="#Pavese1987">Pavese and Steur 1987</a>, <a href="#Steur1989">Steur and Pavese 1989</a>, <a href="#Swenson1989">Swenson 1989</a>] that for an interpolating gas thermometer the major low-temperature deviations from a quadratic interpolation function are associated with the temperature dependence of the second virial coefficient, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>B</mi>
@@ -1705,30 +2240,54 @@ FRANCE</p>
   <mstyle displaystyle="false">
     <mo>&#x3c;</mo>
     <mn>0.02</mn>
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>) for <sup>4</sup>He between <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4.2</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> (if this is one of the three calibration points) and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>24.6</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>. For <sup>3</sup>He and <sup>4</sup>He, when used below <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4.2</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, this problem is dealt with in the ITS-90 by departing from the simple quadratic equation and including in the scale definition explicit corrections for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1746,14 +2305,15 @@ FRANCE</p>
 </math></span>, see <a href="#eq2">Equation (2)</a>, which are based on recent results for <sup>4</sup>He [<a href="#Steur1987">Steur <i>et al.</i> 1987</a>] and <sup>3</sup>He [<a href="#Matacotta1987">Matacotta <i>et al.</i> 1987</a>]. The most recent <i>ab initio</i> calculations [<a href="#Hurly2007">Hurly and Mehl 2007</a>, <a href="#Mehl2007">Mehl 2007</a>, <a href="#Bich2007">Bich <i>et al.</i> 2007</a>] agree within <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.3</mn>
-    <mrow>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_cm3.mol-1">
       <msup>
         <mstyle mathvariant="normal">
           <mi>cm</mi>
         </mstyle>
         <mn>3</mn>
       </msup>
-      <mo>⋅</mo>
+      <mi rspace="thickmathspace">⁢</mi>
       <msup>
         <mstyle mathvariant="normal">
           <mi>mol</mi>
@@ -1763,33 +2323,49 @@ FRANCE</p>
           <mn>1</mn>
         </mrow>
       </msup>
+
+
+
     </mrow>
   </mstyle>
 </math></span> with the ITS-90 equations for <sup>4</sup>He and <sup>3</sup>He. The latest experimental data deviate between <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4.2</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>25</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> not more than <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.1</mn>
-    <mrow>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_cm3.mol-1">
       <msup>
         <mstyle mathvariant="normal">
           <mi>cm</mi>
         </mstyle>
         <mn>3</mn>
       </msup>
-      <mo>⋅</mo>
+      <mi rspace="thickmathspace">⁢</mi>
       <msup>
         <mstyle mathvariant="normal">
           <mi>mol</mi>
@@ -1799,19 +2375,23 @@ FRANCE</p>
           <mn>1</mn>
         </mrow>
       </msup>
+
+
+
     </mrow>
   </mstyle>
 </math></span> from the ITS-90 equations for <sup>4</sup>He [<a href="#Gaiser2010">Gaiser <i>et al.</i> 2010</a>], and for <sup>3</sup>He not more than <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.3</mn>
-    <mrow>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_cm3.mol-1">
       <msup>
         <mstyle mathvariant="normal">
           <mi>cm</mi>
         </mstyle>
         <mn>3</mn>
       </msup>
-      <mo>⋅</mo>
+      <mi rspace="thickmathspace">⁢</mi>
       <msup>
         <mstyle mathvariant="normal">
           <mi>mol</mi>
@@ -1821,26 +2401,36 @@ FRANCE</p>
           <mn>1</mn>
         </mrow>
       </msup>
+
+
+
     </mrow>
   </mstyle>
 </math></span> at <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>2.4</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> [Gaiser <a href="#Thesis2008">Thesis 2008</a>] as well as not more than <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.2</mn>
-    <mrow>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_cm3.mol-1">
       <msup>
         <mstyle mathvariant="normal">
           <mi>cm</mi>
         </mstyle>
         <mn>3</mn>
       </msup>
-      <mo>⋅</mo>
+      <mi rspace="thickmathspace">⁢</mi>
       <msup>
         <mstyle mathvariant="normal">
           <mi>mol</mi>
@@ -1850,37 +2440,59 @@ FRANCE</p>
           <mn>1</mn>
         </mrow>
       </msup>
+
+
+
     </mrow>
   </mstyle>
 </math></span> between <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>3</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>25</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> [<a href="#Tamura2011">Tamura <i>et al.</i> 2011</a>]. The temperature effect of differences in virial coefficient is, however,equivalent to less than <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.1</mn>
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> at a gas density of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>160</mn>
-    <mrow>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu6.u1e-3/1">
       <mstyle mathvariant="normal">
         <mi>mol</mi>
       </mstyle>
-      <mo>⋅</mo>
+      <mi rspace="thickmathspace">⁢</mi>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
@@ -1890,23 +2502,33 @@ FRANCE</p>
           <mn>3</mn>
         </mrow>
       </msup>
+
+
+
     </mrow>
   </mstyle>
 </math></span>, thus confirming <a href="#eq2">Equation (2)</a> well within the level of uncertainty of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.5</mn>
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> originally foreseen for the ICVGT. This confirmation is important with respect to the possible magnitude of the non-uniqueness of the ITS-90. To improve pressure resolution, one would like to use relatively high gas densities. However, the differences in temperature due to the virial coefficient change linearly with density. Therefore, the maximum density to be used for the ICVGT is considered to be about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>300</mn>
-    <mrow>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu6.u1e-3/1">
       <mstyle mathvariant="normal">
         <mi>mol</mi>
       </mstyle>
-      <mo>⋅</mo>
+      <mi rspace="thickmathspace">⁢</mi>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
@@ -1916,21 +2538,36 @@ FRANCE</p>
           <mn>3</mn>
         </mrow>
       </msup>
+
+
+
     </mrow>
   </mstyle>
-</math></span>.</p><p id="_82613b75-5d6f-3655-9177-de400d180361">A typical interpolating gas thermometer (see <a href="#fig1">Figure 1</a> for a schematic representation) has a measuring bulb, see <a href="#cls_5">Chapter 5</a>, with a working volume of about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>.</p><p id="_29f75de4-e260-7c66-e6bf-fe287abed584">A typical interpolating gas thermometer (see <a href="#fig1">Figure 1</a> for a schematic representation) has a measuring bulb, see <a href="#cls_5">Chapter 5</a>, with a working volume of about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1</mn>
-    <mstyle mathvariant="normal">
-      <mi>L</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu130">
+      <mstyle mathvariant="normal">
+        <mi>L</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, made of oxygen-free high-conductivity (OFHC) copper. The working gas is typically confined by a room-temperature pressure gauge (diaphragm manometer), see [<a href="#Berry1979">Berry 1979</a>, <a href="#Sakurai1982">Sakurai 1982</a>, <a href="#Kemp1986">Kemp <i>et al.</i> 1986/87</a>, <a href="#Steur1986">Steur and Durieux 1986</a>, Astrov <i>et al.</i> <a href="#Astrov1989">1989</a> and <a href="#Astrov1995">1995</a>, <a href="#Tamura2011">Tamura <i>et al</i>. 2011</a>] for CVGT experiments as well as [<a href="#Sakurai1992">Sakurai 1992</a>, <a href="#Meyer1997">Meyer and Reilly 1997</a>, <a href="#Hill2002">Hill 2002</a>, <a href="#Kang2002">Kang <i>et al</i>. 2002</a>, <a href="#Sakurai2002">Sakurai 2002</a>, <a href="#Tamura2008">Tamura <i>et al</i>. 2008</a> and <a href="#Peruzzi2010">Peruzzi <i>et al.</i> 2010</a>] for ICVGT experiments, or, directly on the bulb, by a low-temperature pressure gauge [<a href="#Steur2003">Steur <i>et al.</i> 2003</a>, <a href="#Steur2005">Steur <i>et al</i>. 2005</a>]. (In the latter case, interpolation was done using room-temperature pressure values; only virial corrections were applied.) Pressure measurement can be performed through a capillary (pressure-sensing tube) with a diameter of about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1</mn>
-    <mstyle mathvariant="normal">
-      <mi>mm</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mm">
+      <mstyle mathvariant="normal">
+        <mi>mm</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>. The purpose of a large bulb volume and a small capillary diameter at low temperatures is to keep the dead space contribution relatively small.</p><div id="fig1" class="figure">
 
@@ -2068,9 +2705,15 @@ FRANCE</p>
 </math></span> (about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>80</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>) and roughly proportional to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2226,9 +2869,15 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mn>295</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2240,9 +2889,15 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mn>80</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, lowest calibration point at <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2254,9 +2909,15 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mn>4.2</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2268,9 +2929,15 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mn>0.5</mn>
-    <mstyle mathvariant="normal">
-      <mi>mm</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mm">
+      <mstyle mathvariant="normal">
+        <mi>mm</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2282,9 +2949,15 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mn>1.0</mn>
-    <mstyle mathvariant="normal">
-      <mi>mm</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mm">
+      <mstyle mathvariant="normal">
+        <mi>mm</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2296,12 +2969,18 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mn>1000</mn>
-    <msup>
-      <mstyle mathvariant="normal">
-        <mi>cm</mi>
-      </mstyle>
-      <mn>3</mn>
-    </msup>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_cm3">
+      <msup>
+        <mstyle mathvariant="normal">
+          <mi>cm</mi>
+        </mstyle>
+        <mn>3</mn>
+      </msup>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2313,12 +2992,18 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mn>5</mn>
-    <msup>
-      <mstyle mathvariant="normal">
-        <mi>cm</mi>
-      </mstyle>
-      <mn>3</mn>
-    </msup>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_cm3">
+      <msup>
+        <mstyle mathvariant="normal">
+          <mi>cm</mi>
+        </mstyle>
+        <mn>3</mn>
+      </msup>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2337,41 +3022,71 @@ FRANCE</p>
     </msub>
     <mo>=</mo>
     <mn>25</mn>
-    <mstyle mathvariant="normal">
-      <mi>cm</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_cm">
+      <mstyle mathvariant="normal">
+        <mi>cm</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span>).</p></div><p id="_73d0eb86-6de7-8d04-fc24-ef5107ef19f8">Contributions to non-ideal (i.e. imperfect quadratic interpolating) behaviour for an interpolating gas thermometer designed for the realization of the ITS-90 include dead space, aerostatic head, thermomolecular pressure difference and virial effects of the working gas (either <sup>3</sup>He or <sup>4</sup>He). <a href="#fig2">Figure 2</a> shows how imperfect the quadratic interpolation of these correction terms is (without the virial effect, taken explicitly into account before interpolation), for some of the realized experiments. In each case, the ‘residuals’ are the deviations from a quadratic interpolation between the values at the three calibration temperatures.</p><p id="_5318078e-ab6d-fc51-5bb7-b3fbd38a1d97">As defined in the ITS-90, the values of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>).</p></div><p id="_804d64e4-9bcf-8138-f82a-f9e4a90f8d9b">Contributions to non-ideal (i.e. imperfect quadratic interpolating) behaviour for an interpolating gas thermometer designed for the realization of the ITS-90 include dead space, aerostatic head, thermomolecular pressure difference and virial effects of the working gas (either <sup>3</sup>He or <sup>4</sup>He). <a href="#fig2">Figure 2</a> shows how imperfect the quadratic interpolation of these correction terms is (without the virial effect, taken explicitly into account before interpolation), for some of the realized experiments. In each case, the ‘residuals’ are the deviations from a quadratic interpolation between the values at the three calibration temperatures.</p><p id="_f9904201-df1a-3d57-e362-82fd99d3efd2">As defined in the ITS-90, the values of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>p</mi>
   </mstyle>
 </math></span> at the three fixed points (a point between <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>3.0</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>5.0</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>13.8033</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>24.5561</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>) are to be used to generate a quadratic interpolation function (<a href="#eq2">Equation (2)</a>), giving values <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2393,18 +3108,30 @@ FRANCE</p>
 </math></span> is interpreted to be the pressure inside the gas bulb, and one applies all the correction terms of traditional gas thermometry to the pressure measured at room temperature, thus making the interpolation results largely independent of the design. However, this requires the measurement of the temperature distribution inside the capillary, both for the determination of the dead-space effect and the aerostatic-head correction. On the other hand, it has been shown [<a href="#Pavese1987">Pavese and Steur 1987</a>] that for a relatively wide range of design parameters, results well within the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.5</mn>
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span> limit can be obtained without applying <i>any</i> correction at all (except the virial correction, to be applied by definition), using for interpolation the pressure values measured at room temperature directly. As a consequence, however, the results become to some extent design dependent. This implementation (i.e. not correcting for the above corrections) was applied by Hill (2002). For a comparison of this experiment with other implementations see Figure 3 in [<a href="#Rusby2006">Rusby <i>et al</i> 2006</a>].</p><p id="_b70644f1-b6e5-28d6-6313-4543ca5b8eec">Usually, the choice of applying or not some correction terms affects the interpolation results only within the foreseen limit of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> limit can be obtained without applying <i>any</i> correction at all (except the virial correction, to be applied by definition), using for interpolation the pressure values measured at room temperature directly. As a consequence, however, the results become to some extent design dependent. This implementation (i.e. not correcting for the above corrections) was applied by Hill (2002). For a comparison of this experiment with other implementations see Figure 3 in [<a href="#Rusby2006">Rusby <i>et al</i> 2006</a>].</p><p id="_a85871cc-b8ef-5113-dce9-bfe73bb8491d">Usually, the choice of applying or not some correction terms affects the interpolation results only within the foreseen limit of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.5</mn>
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span> [<a href="#SteurPavese2005">Steur and Pavese 2005</a>, <a href="#Tamura2003">Tamura <i>et al</i>. 2003</a>], provided that the temperature distribution along the pressure-sensing tube is stable during measurements and, above all, monotonically increasing towards room temperature. If the temperature distribution along the tube is not monotonic due to cooling by thermal anchoring, the interpolation applying the dead-space correction yields better results [<a href="#Meyer1997">Meyer and Reilly 1997</a>, <a href="#Steur1999">Steur 1999</a>].</p><p id="_e732a413-8125-2d79-8258-512833f95795">Any design for an interpolating gas thermometer should be tested with model calculations so that the magnitudes and temperature dependencies of the various contributions can be assessed. On the experimental side, good practice also requires adequate thermal isolation (small heat leaks, good isolation vacuum) and stability, as well as careful monitoring of various system temperatures to ensure that they are repeatable as the bulb temperature is cycled.</p><p id="_6ab2bc47-5e4f-3974-aa24-8404b5943da1">The essentials of gas thermometry can be classified under four headings: (1) the working fluid, (2) the thermometer bulb, (3) the determination of the pressure of the gas in the bulb, and (4) the effect of the volumes of the pressure-sensing tube and the room-temperature manometer system, the so-called dead space. These topics will be considered in the following subsections.</p></div><div id="_the_working_fluid"><h1 id="_bed9cb52-62d0-4a23-854a-02653f1aaf48">4.  The working fluid</h1><p id="_9c48f643-2f15-04b7-ea07-28b19d6d03e7">The very large, non-quadratic contribution of the second virial coefficient, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> [<a href="#SteurPavese2005">Steur and Pavese 2005</a>, <a href="#Tamura2003">Tamura <i>et al</i>. 2003</a>], provided that the temperature distribution along the pressure-sensing tube is stable during measurements and, above all, monotonically increasing towards room temperature. If the temperature distribution along the tube is not monotonic due to cooling by thermal anchoring, the interpolation applying the dead-space correction yields better results [<a href="#Meyer1997">Meyer and Reilly 1997</a>, <a href="#Steur1999">Steur 1999</a>].</p><p id="_6010b995-2e6d-d07a-25e6-a1f61161e95e">Any design for an interpolating gas thermometer should be tested with model calculations so that the magnitudes and temperature dependencies of the various contributions can be assessed. On the experimental side, good practice also requires adequate thermal isolation (small heat leaks, good isolation vacuum) and stability, as well as careful monitoring of various system temperatures to ensure that they are repeatable as the bulb temperature is cycled.</p><p id="_4a931636-01f9-873e-11cb-aea2840b579b">The essentials of gas thermometry can be classified under four headings: (1) the working fluid, (2) the thermometer bulb, (3) the determination of the pressure of the gas in the bulb, and (4) the effect of the volumes of the pressure-sensing tube and the room-temperature manometer system, the so-called dead space. These topics will be considered in the following subsections.</p></div><div id="_1bc25d37-52a3-4e0a-0ca2-d8e517352230"><h1 id="_fd3af19f-12c7-4a03-994d-0a9c9dcc59f7"><a class="anchor" href="#_1bc25d37-52a3-4e0a-0ca2-d8e517352230"></a><a class="header" href="#_1bc25d37-52a3-4e0a-0ca2-d8e517352230">4.  The working fluid</a></h1><p id="_df2786c8-dccf-e9d1-5b12-7868ba41953f">The very large, non-quadratic contribution of the second virial coefficient, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>B</mi>
@@ -2442,11 +3169,12 @@ FRANCE</p>
 </math></span> for <sup>4</sup>He should be less than <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>300</mn>
-    <mrow>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu6.u1e-3/1">
       <mstyle mathvariant="normal">
         <mi>mol</mi>
       </mstyle>
-      <mo>⋅</mo>
+      <mi rspace="thickmathspace">⁢</mi>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
@@ -2456,14 +3184,23 @@ FRANCE</p>
           <mn>3</mn>
         </mrow>
       </msup>
+
+
+
     </mrow>
   </mstyle>
 </math></span> for the highest accuracy thermometry. A similar limit probably applies to <sup>3</sup>He in the temperature regions especially below <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>, where the third virial coefficient is likely to become significant [<a href="#Matacotta1987">Matacotta <i>et al.</i> 1987</a>]. While <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2593,18 +3330,25 @@ FRANCE</p>
 </math></span> are sufficiently accurate; see <a href="#cls_3">Chapter 3</a>. Namely, as already discussed above, the resulting interpolation errors with respect to the true gas behaviour will amount only to a few <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.1</mn>
-    <mstyle mathvariant="normal">
-      <mi>mK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> for a density of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>160</mn>
-    <mrow>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu6.u1e-3/1">
       <mstyle mathvariant="normal">
         <mi>mol</mi>
       </mstyle>
-      <mo>⋅</mo>
+      <mi rspace="thickmathspace">⁢</mi>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
@@ -2614,9 +3358,12 @@ FRANCE</p>
           <mn>3</mn>
         </mrow>
       </msup>
+
+
+
     </mrow>
   </mstyle>
-</math></span>. (These interpolation errors influence the non-uniqueness of the ITS-90.)</p><p id="_7d27e423-eb48-dc4e-9fce-445b797e46d4">Gas purity is also important, with hydrogen and neon impurities most significant for <sup>4</sup>He, and, in addition, <sup>4</sup>He impurities for <sup>3</sup>He. Significant levels of hydrogen and/or neon will show up as a discontinuity in the results due to condensation effects, but <sup>4</sup>He in <sup>3</sup>He will not. While impurity levels of less than 1 atomic part per million are the goal in primary gas thermometry, the gas thermometer calibration at three points allows perhaps 10 atomic parts per million, while 100 parts per million of <sup>4</sup>He in <sup>3</sup>He would be acceptable [<a href="#Pavese1987">Pavese and Steur 1987</a>].</p></div><div id="cls_5"><h1 id="_a20b4837-6cb7-4c65-a592-9db524aa6667">5.  The thermometer bulb</h1><p id="_f9124da3-e08f-9c6b-daee-4878df26d1bd">The volume of the bulb, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>. (These interpolation errors influence the non-uniqueness of the ITS-90.)</p><p id="_5e1c9552-d5e5-50b3-df27-eeb6c650bc6c">Gas purity is also important, with hydrogen and neon impurities most significant for <sup>4</sup>He, and, in addition, <sup>4</sup>He impurities for <sup>3</sup>He. Significant levels of hydrogen and/or neon will show up as a discontinuity in the results due to condensation effects, but <sup>4</sup>He in <sup>3</sup>He will not. While impurity levels of less than 1 atomic part per million are the goal in primary gas thermometry, the gas thermometer calibration at three points allows perhaps 10 atomic parts per million, while 100 parts per million of <sup>4</sup>He in <sup>3</sup>He would be acceptable [<a href="#Pavese1987">Pavese and Steur 1987</a>].</p></div><div id="cls_5"><h1 id="_e1041e5f-2df3-42b6-b02a-c6cdc8de2ee3"><a class="anchor" href="#cls_5"></a><a class="header" href="#cls_5">5.  The thermometer bulb</a></h1><p id="_ee295fdd-c4b4-9ac6-7011-f6119ae7677c">The volume of the bulb, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -2628,11 +3375,17 @@ FRANCE</p>
 </math></span>, is generally large, typically one litre, to reduce dead-space effects (see <a href="#cls_6">Chapter 6</a>) and to render adsorption effects negligible. The bulb is made of high-purity copper, usually oxygen-free high-conductivity (OFHC) copper, and is surrounded by an isothermal shield that is maintained at the bulb temperature so as to minimise temperature gradients. The thermal expansion of the copper bulb has only a very small effect [<a href="#Kroeger1977">Kroeger and Swenson 1977</a>]. It has been suggested that Kroeger’s values may be in error by as much as 5 parts per million, at least in the temperature range below <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>25</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span> [<a href="#Pitre2006">Pitre and Moldover 2006</a>]. Such an absolute difference in length does not, however, affect the working of a traditional gas thermometer in this temperature range, and even less that of the ICVGT. The bulb volume also will increase, slightly, with the gas pressure, an effect which is proportional to the pressure (and hence the temperature), but which is entirely compensated for in the calibration procedure. Only small effects due to gas adsorption have been detected in the gas thermometry experiments involving either gold-plated copper surfaces [<a href="#Berry1979">Berry 1979</a>] or clean copper surfaces, which were baked at high temperature [<a href="#Astrov1989">Astrov <i>et al.</i> 1989</a>]. In each instance, the systems were evacuated thoroughly to remove adsorbed surface layers, and this practice is always advisable.</p></div><div id="cls_6"><h1 id="_457ac2bc-8195-459d-a816-3f610f7d1734">6.  Pressure measurement</h1><p id="_eb602882-c297-1ee8-c09f-7244e07003bb">The pressure-measuring system is isolated from the working gas by a calibrated flexible diaphragm, which may be at room temperature or at the bulb temperature. (<a href="#fig1">Figure 1</a> depicts a diaphragm manometer reading <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> [<a href="#Pitre2006">Pitre and Moldover 2006</a>]. Such an absolute difference in length does not, however, affect the working of a traditional gas thermometer in this temperature range, and even less that of the ICVGT. The bulb volume also will increase, slightly, with the gas pressure, an effect which is proportional to the pressure (and hence the temperature), but which is entirely compensated for in the calibration procedure. Only small effects due to gas adsorption have been detected in the gas thermometry experiments involving either gold-plated copper surfaces [<a href="#Berry1979">Berry 1979</a>] or clean copper surfaces, which were baked at high temperature [<a href="#Astrov1989">Astrov <i>et al.</i> 1989</a>]. In each instance, the systems were evacuated thoroughly to remove adsorbed surface layers, and this practice is always advisable.</p></div><div id="cls_6"><h1 id="_16faf4eb-cef4-42d6-a164-8bb67b9cb334"><a class="anchor" href="#cls_6"></a><a class="header" href="#cls_6">6.  Pressure measurement</a></h1><p id="_06cc5a49-dc95-7282-6543-378dd2d37fd1">The pressure-measuring system is isolated from the working gas by a calibrated flexible diaphragm, which may be at room temperature or at the bulb temperature. (<a href="#fig1">Figure 1</a> depicts a diaphragm manometer reading <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>p</mi>
@@ -2649,30 +3402,52 @@ FRANCE</p>
 </math></span> measured at room temperature is the sum of measurements made with some absolute manometer and a differential (diaphragm) manometer. The considerable advantages of a diaphragm at the lower temperature are to some extent offset by the need for a design that is stable despite temperature cycling [<a href="#Steur2003">Steur <i>et al.</i> 2003</a>, <a href="#Steur2005">Steur <i>et al</i>. 2005</a>]. In the experiments with low-temperature diaphragms, the maximum pressure was limited to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>5</mn>
-    <mstyle mathvariant="normal">
-      <mi>kPa</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_kPa">
+      <mstyle mathvariant="normal">
+        <mi>kPa</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> (differential) and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>60</mn>
-    <mstyle mathvariant="normal">
-      <mi>kPa</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_kPa">
+      <mstyle mathvariant="normal">
+        <mi>kPa</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> (absolute). In the CVGT experiments described in [<a href="#Berry1979">Berry 1979</a>, <a href="#Kemp1986">Kemp <i>et al.</i> 1986/87</a>, <a href="#Steur1986">Steur and Durieux 1986</a>, Astrov <i>et al.</i> <a href="#Astrov1989">1989</a> and <a href="#Astrov1995">1995</a>], differential diaphragm manometers having a full scale between <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>400</mn>
-    <mstyle mathvariant="normal">
-      <mi>Pa</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu12">
+      <mstyle mathvariant="normal">
+        <mi>Pa</mi>
+      </mstyle>
+
+
+    </mrow>
   </mstyle>
 </math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1300</mn>
-    <mstyle mathvariant="normal">
-      <mi>Pa</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu12">
+      <mstyle mathvariant="normal">
+        <mi>Pa</mi>
+      </mstyle>
+
+
+    </mrow>
   </mstyle>
 </math></span> were used at room temperature. In many of the cited ICVGT realizations, only an absolute diaphragm manometer was used, combined with a sufficiently high gas density. In order to reduce non-linearity effects as well as zero instabilities, a diaphragm is to be used only in the positive sense in most cases, i.e. without passing through zero, and by limiting pressure differences well below <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2682,11 +3457,12 @@ FRANCE</p>
 </math></span> of full scale. Pressure measurement at room temperature can be based, with high <i>absolute</i> accuracy, on a mercury manometer using optical interferometry or capacitive detection to measure differences in the heights of two mercury columns. On the other hand, pressure balances are preferred in gas thermometry for their ease of use and absence of mercury. High-quality devices can also have an <i>absolute</i> uncertainty of order a few parts per million. But for interpolating gas thermometry, the very high <i>relative</i> accuracy of pressure balances is of special interest. This means, a pressure-independent error of their effective area influences only the coefficients of the quadratic interpolation function, but not the interpolation results. The pressure sensitivity of a gas thermometer is proportional to the filling density, e.g. a sensitivity of about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>2500</mn>
-    <mrow>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu12.u5e-1/1">
       <mstyle mathvariant="normal">
         <mi>Pa</mi>
       </mstyle>
-      <mo>⋅</mo>
+      <mi rspace="thickmathspace">⁢</mi>
       <msup>
         <mstyle mathvariant="normal">
           <mi>K</mi>
@@ -2696,16 +3472,20 @@ FRANCE</p>
           <mn>1</mn>
         </mrow>
       </msup>
+
+
+
     </mrow>
   </mstyle>
 </math></span> corresponds to a density of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>300</mn>
-    <mrow>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu6.u1e-3/1">
       <mstyle mathvariant="normal">
         <mi>mol</mi>
       </mstyle>
-      <mo>⋅</mo>
+      <mi rspace="thickmathspace">⁢</mi>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
@@ -2715,16 +3495,20 @@ FRANCE</p>
           <mn>3</mn>
         </mrow>
       </msup>
+
+
+
     </mrow>
   </mstyle>
 </math></span>. Results have been reported for gas densities as small as <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>44</mn>
-    <mrow>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu6.u1e-3/1">
       <mstyle mathvariant="normal">
         <mi>mol</mi>
       </mstyle>
-      <mo>⋅</mo>
+      <mi rspace="thickmathspace">⁢</mi>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
@@ -2734,16 +3518,20 @@ FRANCE</p>
           <mn>3</mn>
         </mrow>
       </msup>
+
+
+
     </mrow>
   </mstyle>
 </math></span> (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>366</mn>
-    <mrow>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu12.u5e-1/1">
       <mstyle mathvariant="normal">
         <mi>Pa</mi>
       </mstyle>
-      <mo>⋅</mo>
+      <mi rspace="thickmathspace">⁢</mi>
       <msup>
         <mstyle mathvariant="normal">
           <mi>K</mi>
@@ -2753,16 +3541,20 @@ FRANCE</p>
           <mn>1</mn>
         </mrow>
       </msup>
+
+
+
     </mrow>
   </mstyle>
 </math></span>) and as large as <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>460</mn>
-    <mrow>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu6.u1e-3/1">
       <mstyle mathvariant="normal">
         <mi>mol</mi>
       </mstyle>
-      <mo>⋅</mo>
+      <mi rspace="thickmathspace">⁢</mi>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
@@ -2772,16 +3564,20 @@ FRANCE</p>
           <mn>3</mn>
         </mrow>
       </msup>
+
+
+
     </mrow>
   </mstyle>
 </math></span> (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>3800</mn>
-    <mrow>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu12.u5e-1/1">
       <mstyle mathvariant="normal">
         <mi>Pa</mi>
       </mstyle>
-      <mo>⋅</mo>
+      <mi rspace="thickmathspace">⁢</mi>
       <msup>
         <mstyle mathvariant="normal">
           <mi>K</mi>
@@ -2791,25 +3587,38 @@ FRANCE</p>
           <mn>1</mn>
         </mrow>
       </msup>
+
+
+
     </mrow>
   </mstyle>
 </math></span>). Pressure measurement resolution is typically <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.01</mn>
-    <mstyle mathvariant="normal">
-      <mi>Pa</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu12">
+      <mstyle mathvariant="normal">
+        <mi>Pa</mi>
+      </mstyle>
+
+
+    </mrow>
   </mstyle>
 </math></span> for diaphragm gauges, with uncertainties close to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.1</mn>
-    <mstyle mathvariant="normal">
-      <mi>Pa</mi>
-    </mstyle>
-  </mstyle>
-</math></span> for mercury manometers and pressure balances. For further information, see also the <i>Guide</i> Section 3 <i>Vapour-Pressure Thermometry and Pressure Measurement</i>.</p><div id="_aerostatic_head_correction"><h2 id="_0e1006e8-fbcf-4409-9d89-e8f0d0205739">6.1.  Aerostatic head correction</h2>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu12">
+      <mstyle mathvariant="normal">
+        <mi>Pa</mi>
+      </mstyle>
 
-<p id="_5f2c5f7e-430d-d333-85f7-c2fa924cca55">The aerostatic pressure generated by the column of gas in the pressure-sensing tube (the aerostatic head) causes the room temperature pressure to be less than that in the bulb. To evaluate the aerostatic-head correction, the temperature distribution along the tube must be known. This can be measured directly, or it can be approximately calculated either from a knowledge of the temperature dependence of the thermal conductivity <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+
+    </mrow>
+  </mstyle>
+</math></span> for mercury manometers and pressure balances. For further information, see also the <i>Guide</i> Section 3 <i>Vapour-Pressure Thermometry and Pressure Measurement</i>.</p><div id="_9c32586e-7c91-731b-8632-7c8ebcc3a6dd"><h2 id="_c9a8437a-12fa-4a22-97a8-755aab6bae47"><a class="anchor" href="#_9c32586e-7c91-731b-8632-7c8ebcc3a6dd"></a><a class="header" href="#_9c32586e-7c91-731b-8632-7c8ebcc3a6dd">6.1.  Aerostatic head correction</a></h2>
+
+<p id="_28d208aa-ae5c-acb0-c8b0-738262383d3f">The aerostatic pressure generated by the column of gas in the pressure-sensing tube (the aerostatic head) causes the room temperature pressure to be less than that in the bulb. To evaluate the aerostatic-head correction, the temperature distribution along the tube must be known. This can be measured directly, or it can be approximately calculated either from a knowledge of the temperature dependence of the thermal conductivity <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>λ</mi>
@@ -2854,11 +3663,17 @@ FRANCE</p>
     </msub>
     <mrow>
       <mo>(</mo>
-      <mo>≈</mo>
+      <mi>≈</mi>
       <mn>80</mn>
-      <mstyle mathvariant="normal">
-        <mi>K</mi>
-      </mstyle>
+      <mo rspace="thickmathspace">⁢</mo>
+      <mrow xref="U_NISTu5">
+        <mstyle mathvariant="normal">
+          <mi>K</mi>
+        </mstyle>
+
+
+
+      </mrow>
       <mo>)</mo>
     </mrow>
   </mstyle>
@@ -2914,9 +3729,9 @@ FRANCE</p>
     </msub>
   </mstyle>
 </math></span> corresponding to the average (midpoint) pressure. This correction is independent of temperature (or pressure) and does not affect the calibration.</p>
-</div><div id="_thermomolecular_pressure_correction"><h2 id="_f1042e30-c31a-4329-a1ac-baa308a23e7d">6.2.  Thermomolecular pressure correction</h2>
+</div><div id="_4514ae96-3c5e-e884-6f2a-52d6a4484e68"><h2 id="_8bccf4aa-c24f-4280-ba30-fe63f46bdd33"><a class="anchor" href="#_4514ae96-3c5e-e884-6f2a-52d6a4484e68"></a><a class="header" href="#_4514ae96-3c5e-e884-6f2a-52d6a4484e68">6.2.  Thermomolecular pressure correction</a></h2>
 
-<p id="_b58ff527-c9be-d051-8652-e81c527c802b">A thermomolecular pressure difference <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_7c7aa47c-5260-4944-bcb5-72096b6290e8">A thermomolecular pressure difference <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">Δ</mi>
     <mi>p</mi>
@@ -2970,13 +3785,23 @@ FRANCE</p>
         <mo>/</mo>
         <mrow>
           <mo>(</mo>
-          <mstyle mathvariant="normal">
-            <mi>Pa</mi>
-          </mstyle>
+          <mo rspace="thickmathspace">⁢</mo>
+          <mrow xref="U_NISTu12">
+            <mstyle mathvariant="normal">
+              <mi>Pa</mi>
+            </mstyle>
+
+
+          </mrow>
           <mo>⋅</mo>
-          <mstyle mathvariant="normal">
-            <mi>m</mi>
-          </mstyle>
+          <mo rspace="thickmathspace">⁢</mo>
+          <mrow xref="U_NISTu1">
+            <mstyle mathvariant="normal">
+              <mi>m</mi>
+            </mstyle>
+
+
+          </mrow>
           <mo>)</mo>
         </mrow>
         <mo>)</mo>
@@ -2998,9 +3823,15 @@ FRANCE</p>
             <mtext>H</mtext>
           </msub>
           <mo>/</mo>
-          <mstyle mathvariant="normal">
-            <mi>K</mi>
-          </mstyle>
+          <mo rspace="thickmathspace">⁢</mo>
+          <mrow xref="U_NISTu5">
+            <mstyle mathvariant="normal">
+              <mi>K</mi>
+            </mstyle>
+
+
+
+          </mrow>
           <mo>)</mo>
         </mrow>
         <mn>2.27</mn>
@@ -3016,9 +3847,15 @@ FRANCE</p>
             <mtext>L</mtext>
           </msub>
           <mo>/</mo>
-          <mstyle mathvariant="normal">
-            <mi>K</mi>
-          </mstyle>
+          <mo rspace="thickmathspace">⁢</mo>
+          <mrow xref="U_NISTu5">
+            <mstyle mathvariant="normal">
+              <mi>K</mi>
+            </mstyle>
+
+
+
+          </mrow>
           <mo>)</mo>
         </mrow>
         <mn>2.27</mn>
@@ -3029,7 +3866,7 @@ FRANCE</p>
   </mstyle>
 </math></span>  (3)</p></div></div>
 
-<p id="_de5a6954-ab09-affd-87d7-1bf21132f98c">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_bca357b7-5c1f-cefc-dd16-c01c9f7c2481">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>p</mi>
@@ -3074,19 +3911,31 @@ FRANCE</p>
   </mstyle>
 </math></span> should be considered if no special tests are performed. Such an additional uncertainty can also be caused by the dependence on the physical-chemical conditions of the inner surface of the tube, which may vary with time. Another expression is given by the so-called Weber-Schmidt equation [<a href="#Weber1936">Weber <i>et al.</i> 1936</a>]. For commonly used pressure-sensing tubes (see e.g. <a href="#fig1">Figure 1</a>), this expression yields estimates that coincide with those obtained using <a href="#eq3">Equation (3)</a> within about a few percent in the pressure range being of interest here for ICVGT.</p>
 
-<p id="_081a609f-ce93-eed0-bc0a-9b4053037258">For a typical ITS-90 gas thermometer the effects of thermomolecular pressure differences are shown, as deviations from interpolated values, in <a href="#fig2">Figure 2</a> © for a pressure-sensing tube subdivided in an upper part, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_1c4c76dc-7744-ab86-a74d-d4ddaf6f00ab">For a typical ITS-90 gas thermometer the effects of thermomolecular pressure differences are shown, as deviations from interpolated values, in <a href="#fig2">Figure 2</a> © for a pressure-sensing tube subdivided in an upper part, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>2</mn>
-    <mstyle mathvariant="normal">
-      <mi>mm</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mm">
+      <mstyle mathvariant="normal">
+        <mi>mm</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> diameter, and a lower part, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1</mn>
-    <mstyle mathvariant="normal">
-      <mi>mm</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mm">
+      <mstyle mathvariant="normal">
+        <mi>mm</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> diameter, of <a href="#fig1">Figure 1</a>. Since more than <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -3096,9 +3945,15 @@ FRANCE</p>
 </math></span> of the thermomolecular pressure difference for a uniform capillary occurs between room temperature and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>80</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> (a somewhat arbitrary choice for <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -3152,9 +4007,15 @@ FRANCE</p>
 </math></span> could be achieved by doubling the pressure (the gas density) for a uniform <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1</mn>
-    <mstyle mathvariant="normal">
-      <mi>mm</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mm">
+      <mstyle mathvariant="normal">
+        <mi>mm</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span> diameter tube, but with increased non-ideality contributions. The total thermomolecular pressure difference for the gas thermometer depends on the bulb temperature, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -3168,9 +4029,15 @@ FRANCE</p>
 </math></span>, primarily through the pressure dependence in <a href="#eq3">Equation (3)</a>, and therefore manifests itself mostly at temperatures below about <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>10</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>. The use of a smaller diameter tube at temperature below <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -3182,7 +4049,7 @@ FRANCE</p>
     </msub>
   </mstyle>
 </math></span> is necessary to reduce dead-space effects (see <a href="#cls_7">Chapter 7</a>), but results also in longer equilibration times. In contrast with primary gas thermometry, corrections for the thermomolecular pressure difference need not be made provided its magnitude is small enough for the quadratic interpolation to be valid to within the desired uncertainty.</p>
-</div></div><div id="cls_7"><h1 id="_d67ad06c-51e2-44e1-af48-f563c4d0cf78">7.  Dead space correction</h1><p id="_1977f692-0ab2-d478-dd19-37b4369378c7">Temperature-dependent changes occur in the quantity of gas in the bulb if the diaphragm separating the thermometer and the pressure-measurement device is not at the bulb. The effects of the room temperature volume, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</div></div><div id="cls_7"><h1 id="_e00dc580-fbcf-49bb-ac8e-deaf2eb35965"><a class="anchor" href="#cls_7"></a><a class="header" href="#cls_7">7.  Dead space correction</a></h1><p id="_491538e9-f0a0-9407-4752-5f752cfdc428">Temperature-dependent changes occur in the quantity of gas in the bulb if the diaphragm separating the thermometer and the pressure-measurement device is not at the bulb. The effects of the room temperature volume, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -3200,14 +4067,15 @@ FRANCE</p>
       <mtext>B</mtext>
     </msub>
   </mstyle>
-</math></span> values.</p></div><div id="_estimation_of_uncertainty"><h1 id="_7229a383-0def-424c-8159-a30316d8d888">8.  Estimation of uncertainty</h1><p id="_6f28efd5-d703-dcfd-24d8-0ef7a8d40da1">Uncertainty components result for the ICVGT from: (i) pressure measurement, (ii) necessary corrections if the pressure in the bulb is used, (iii) calibration at the three fixed points applying resistance thermometers as transfer standards, and thermal conditions in the measuring system, such as possible temperature gradients, and (iv) other influences as purity of the measuring gas, adsorption effects as well as thermal expansion and pressure dilatation of the bulb. Examples for ICVGT uncertainty budgets are given in [<a href="#Meyer1997">Meyer and Reilly 1997</a>, <a href="#Steur2005">Steur <i>et al</i>. 2005</a>, <a href="#Tamura2008">Tamura <i>et al</i>. 2008</a>]. For some of the components it has to be considered that due to the calibration, not the whole uncertainty has to be considered, but only the effects causing a temperature dependence, which cannot be described sufficiently by the quadratic interpolation equations of the ITS-90. For instance, a relative error in the pressure measurement, being constant over the whole pressure range of interest, has no influence on the interpolation results. For instance, such an error is caused by an incorrect value of the effective area of a pressure balance if this value is independent of pressure. <a href="#tab1">Table 1</a> gives the typical order of magnitude of the uncertainty contributions due to the different effects if state-of-the-art equipment is used. An entirely different set of components, not strictly related to the ICVGT, originates from the need to transfer the measured temperatures to a convenient thermometer, such as a resistance thermometer.</p><p class="TableTitle" style="text-align:center;">Table 1.  State-of-the-art uncertainty budget for an ICVGT with a helium gas density of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> values.</p></div><div id="_846e7303-521c-44a0-4b00-d950376194d6"><h1 id="_043da9b2-59ff-4f7b-a788-b50775786f73"><a class="anchor" href="#_846e7303-521c-44a0-4b00-d950376194d6"></a><a class="header" href="#_846e7303-521c-44a0-4b00-d950376194d6">8.  Estimation of uncertainty</a></h1><p id="_38a8ecf2-5cd6-0e02-0db8-e407a74fee78">Uncertainty components result for the ICVGT from: (i) pressure measurement, (ii) necessary corrections if the pressure in the bulb is used, (iii) calibration at the three fixed points applying resistance thermometers as transfer standards, and thermal conditions in the measuring system, such as possible temperature gradients, and (iv) other influences as purity of the measuring gas, adsorption effects as well as thermal expansion and pressure dilatation of the bulb. Examples for ICVGT uncertainty budgets are given in [<a href="#Meyer1997">Meyer and Reilly 1997</a>, <a href="#Steur2005">Steur <i>et al</i>. 2005</a>, <a href="#Tamura2008">Tamura <i>et al</i>. 2008</a>]. For some of the components it has to be considered that due to the calibration, not the whole uncertainty has to be considered, but only the effects causing a temperature dependence, which cannot be described sufficiently by the quadratic interpolation equations of the ITS-90. For instance, a relative error in the pressure measurement, being constant over the whole pressure range of interest, has no influence on the interpolation results. For instance, such an error is caused by an incorrect value of the effective area of a pressure balance if this value is independent of pressure. <a href="#tab1">Table 1</a> gives the typical order of magnitude of the uncertainty contributions due to the different effects if state-of-the-art equipment is used. An entirely different set of components, not strictly related to the ICVGT, originates from the need to transfer the measured temperatures to a convenient thermometer, such as a resistance thermometer.</p><p class="TableTitle" style="text-align:center;">Table 1.  State-of-the-art uncertainty budget for an ICVGT with a helium gas density of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>300</mn>
-    <mrow>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu6.u1e-3/1">
       <mstyle mathvariant="normal">
         <mi>mol</mi>
       </mstyle>
-      <mo>⋅</mo>
+      <mi rspace="thickmathspace">⁢</mi>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
@@ -3217,209 +4085,112 @@ FRANCE</p>
           <mn>3</mn>
         </mrow>
       </msup>
+
+
+
     </mrow>
   </mstyle>
 </math></span> (estimates given in <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mstyle mathvariant="normal">
-      <mi>µK</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_uK">
+      <mstyle mathvariant="normal">
+        <mi>µK</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>). The abbreviations have the following meaning: PB pressure balance, CDG capacitive diaphragm gauge used in differential mode near zero reading, RIRT rhodium-iron resistance thermometer used as transfer standard for the traceable calibration of the ICVGT at the fixed points of the ITS-90</p><table id="tab1" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><thead><tr><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Component</th><th style="font-weight:bold;text-align:center;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Min (near <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>)</th><th style="font-weight:bold;text-align:center;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Max (near <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>25</mn>
-    <mstyle mathvariant="normal">
-      <mi>K</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
 </math></span>)</th></tr></thead><tbody><tr><th colspan="3" style="font-weight:bold;text-align:left;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Pressure measurement</th></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Resolution of PB (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.1</mn>
-    <mstyle mathvariant="normal">
-      <mi>Pa</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu12">
+      <mstyle mathvariant="normal">
+        <mi>Pa</mi>
+      </mstyle>
+
+
+    </mrow>
   </mstyle>
-</math></span>)</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>40</mn>
-  </mstyle>
-</math></span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>40</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Effective area of PB, due to pressure (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>)</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>40</span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>40</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Effective area of PB, due to pressure (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1</mn>
-    <mstyle mathvariant="normal">
-      <mi>ppm</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu400">
+      <mstyle mathvariant="normal">
+        <mi>ppm</mi>
+      </mstyle>
+
+
+
+    </mrow>
   </mstyle>
-</math></span>)</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>4</mn>
-  </mstyle>
-</math></span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>25</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Masses and temperature of PB (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>)</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>4</span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>25</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Masses and temperature of PB (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.03</mn>
-    <mstyle mathvariant="normal">
-      <mi>Pa</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu12">
+      <mstyle mathvariant="normal">
+        <mi>Pa</mi>
+      </mstyle>
+
+
+    </mrow>
   </mstyle>
-</math></span>)</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>15</mn>
-  </mstyle>
-</math></span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>15</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Residual pressure of PB (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>)</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>15</span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>15</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Residual pressure of PB (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.01</mn>
-    <mstyle mathvariant="normal">
-      <mi>Pa</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu12">
+      <mstyle mathvariant="normal">
+        <mi>Pa</mi>
+      </mstyle>
+
+
+    </mrow>
   </mstyle>
-</math></span>)</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>4</mn>
-  </mstyle>
-</math></span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>4</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">CDG in differential mode (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span>)</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>4</span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>4</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">CDG in differential mode (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.1</mn>
-    <mstyle mathvariant="normal">
-      <mi>Pa</mi>
-    </mstyle>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu12">
+      <mstyle mathvariant="normal">
+        <mi>Pa</mi>
+      </mstyle>
+
+
+    </mrow>
   </mstyle>
-</math></span>)</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>40</mn>
-  </mstyle>
-</math></span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>40</mn>
-  </mstyle>
-</math></span></td></tr><tr><th colspan="3" style="font-weight:bold;text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Pressure corrections</th></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Thermomolecular pressure difference</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>15</mn>
-  </mstyle>
-</math></span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>15</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Aerostatic head</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>15</mn>
-  </mstyle>
-</math></span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>15</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Dead space</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>60</mn>
-  </mstyle>
-</math></span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>60</mn>
-  </mstyle>
-</math></span></td></tr><tr><th colspan="3" style="font-weight:bold;text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Propagated calibration uncertainty</th></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Calibration of RIRTs at the fixed points</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">100</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">100</td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Temperature instability and inhomogeneity</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>50</mn>
-  </mstyle>
-</math></span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>50</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Resistance ratio bridge</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>3</mn>
-  </mstyle>
-</math></span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>30</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Instability of reference resistor</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1</mn>
-  </mstyle>
-</math></span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>10</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Self-heating correction</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>30</mn>
-  </mstyle>
-</math></span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>30</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Pressure measurement during calibration</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>60</mn>
-  </mstyle>
-</math></span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>60</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Propagation of ICVGT calibration uncertainty</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>80</mn>
-  </mstyle>
-</math></span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>80</mn>
-  </mstyle>
-</math></span></td></tr><tr><th colspan="3" style="font-weight:bold;text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Other components</th></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Gas purity</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>30</mn>
-  </mstyle>
-</math></span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>30</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Thermal expansion</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>30</mn>
-  </mstyle>
-</math></span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>30</mn>
-  </mstyle>
-</math></span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Pressure dilatation</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>10</mn>
-  </mstyle>
-</math></span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>10</mn>
-  </mstyle>
-</math></span></td></tr><tr><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Combined standard uncertainty</th><th style="font-weight:bold;text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>182</mn>
-  </mstyle>
-</math></span></th><th style="font-weight:bold;text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row"><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>186</mn>
-  </mstyle>
-</math></span></th></tr></tbody></table></div><br /><div><h1 class="Section3" id="_a8fa4e58-915e-49e7-84c4-7ce82d7f0d00">References</h1>
-<p id="Astrov1989" class="Biblio">[1]  Astrov D N, Beliansky L B, Dedikov Y A, Polunin S P and Zakharov A A (1989) <i>Metrologia</i> <b>26</b> 151-166</p><p id="Astrov1995" class="Biblio">[2]  Astrov D N, Beliansky L B, Dedikov Y A, Polunin S P and Zakharov A A (1995) <i>Metrologia</i> <b>32</b> 393-395</p><p id="Barber1971" class="Biblio">[3]  Barber C R (1971) <i>Temperature, its measurement and control in science and industry</i>, vol 4, ed. Plumb H H (ISA, Washington) pp. 99-104</p><p id="Berry1979" class="Biblio">[4]  Berry K H (1979) <i>Metrologia</i> <b>15</b> 89-115</p><p id="Bich2007" class="Biblio">[5]  Bich E, Hellmann R. and Vogel E (2007) <i>Molec. Phys.</i> <b>105</b> 3035-3049</p><p id="Gaiser2010" class="Biblio">[6]  Gaiser C, Fellmuth B and Haft N (2010) <i>Int. J. Thermophys.</i> <b>31</b> 1428-1437</p><p id="Gaiser2008" class="Biblio">[7]  Gaiser C (2008) <i>Thesis</i>, “Properties of Helium and Gas Thermometry”, Humboldt University of Berlin</p><p id="Hill2002" class="Biblio">[8]  Hill K D (2002) Proc. <i>TEMPMEKO 2001</i>, vol 1, eds. Fellmuth B, Seidel J and Scholz G (VDI/VDE, Berlin) pp. 543-548</p><p id="Hurly2007" class="Biblio">[9]  Hurly J J and Mehl J B (2007) <i>Journal of Research of the National Institute of Standards and Technology</i> <b>112</b> 75-94</p><p id="Kang2002" class="Biblio">[10]  Kang K H, Seong D J, Kim Y-G and Gam S (2002) Proc. <i>TEMPMEKO 2001</i>, vol 1, eds. Fellmuth B, Seidel J and Scholz G (VDI/VDE, Berlin) pp. 549-552</p><p id="Kemp1986" class="Biblio">[11]  Kemp R C, Kemp W R G and Besley L M (1986/87) <i>Metrologia</i> <b>23</b> 61-86 Kroeger F R and Swenson C A (1977) <i>J Appl Phys</i> <b>48</b> 853-864</p><p id="Matacotta1987" class="Biblio">[12]  Matacotta F C, McConville G T, Steur P P M and Durieux M (1987) <i>Metrologia</i> <b>24</b> 61-67</p><p id="Mehl2007" class="Biblio">[13]  Mehl J B (2007) <i>Internal NIST report</i> “He ab initio calculations III” and <i>private communication</i>.</p><p id="Meyer1997" class="Biblio">[14]  Meyer C W and Reilly M L (1997) Proc. <i>TEMPMEKO ‘96</i>, ed. Marcarino P (Levrotto &#x26; Bella, Torino) pp. 39-44</p><p id="Pavese1987" class="Biblio">[15]  Pavese F and Steur P P M (1987) <i>J Low Temp Phys</i> <b>69</b> 91-117</p><p id="Pavese2013" class="Biblio">[16]  Pavese F and Molinar Min Beciet G 2013 <i>Modern Gas-Based Temperature and</i></p><p id="Pressure2010" class="Biblio">[17]  <i>Pressure Measurements</i> (Springer, New York, Dordrecht, Heidelberg, London)Peruzzi A, Bosma R, De Groot M and Verbeek J (2010) <i>Metrologia</i> <b>47</b>, 325-333 Pitre L and Moldover M 2006 <i>Metrologia</i> <b>43</b> 142-162</p><p id="Rusby2006" class="Biblio">[18]  Rusby R L, Head D, Meyer C, Tew W, Tamura O, Hill K D, de Groot M, Storm A, Peruzzi A, Fellmuth B, Engert J, Astrov D, Dedikov Y and Kytin G (2006) <a href="http://iopscience.iop.org/0026-1394/43/1A/03002"><i><a href="http://iopscience.iop.org/0026-1394/43/1A/03002">http://iopscience.iop.org/0026-1394/43/1A/03002</a></i></a></p><p id="Sakurai1982" class="Biblio">[19]  Sakurai H (1982) <i>Temperature, its measurement and control in science and industry</i>, vol 5, ed. Schooley J F (Am. Inst. of Phys., New York) pp. 39-42</p><p id="Sakurai1992" class="Biblio">[20]  Sakurai H (1992) <i>Temperature, its measurement and control in science and industry</i>, vol 6, ed. Schooley J F (Am. Inst. of Phys., New York) pp. 127-131</p><p id="Sakurai2002" class="Biblio">[21]  Sakurai H (2002) Proc. <i>TEMPMEKO 2001</i>, vol 1, eds. Fellmuth B, Seidel J and Scholz G (VDI/VDE, Berlin) pp. 537-542</p><p id="Steur1986" class="Biblio">[22]  Steur P P M and Durieux M (1986) <i>Metrologia</i> <b>23</b> 1-18</p><p id="Steur1987" class="Biblio">[23]  Steur P P M, Durieux M and McConville G T (1987) <i>Metrologia</i> <b>24</b> 69-77</p><p id="Steur1989" class="Biblio">[24]  Steur P P M and Pavese F (1989) <i>Cryogenics</i> <b>29</b> 135-138</p><p id="Steur1999" class="Biblio">[25]  Steur P P M (1999) <i>Metrologia</i> <b>36</b> 33-39</p><p id="Steur2003" class="Biblio">[26]  Steur P P M, Pavese F, and Peroni I(2003) <i>Temperature, its control in science and industry</i> vol 7, ed. Ripple D C (Am. Inst. of Phys., New York) pp. 125-130</p><p id="SteurPavese2005" class="Biblio">[27]  Steur P P M and Pavese F (2005) CCT 23<sup>e</sup> Session, Doc. CCT/05-03</p><p id="Steur2005" class="Biblio">[28]  Steur P P M, Peroni I, Ferri D and Pavese F (2005) Proc. <i>TEMPMEKO 2004</i>, eds. Zvizdić D, Bermanec L G, Veliki T and Stašić T (LPM, FSB, Zagreb) pp. 141-146</p><p id="Swenson1989" class="Biblio">[29]  Swenson C A (1989) CCT 17<sup>e</sup> Session, Doc. CCT/89-27</p><p id="Tamura2003" class="Biblio">[30]  Tamura O, Takasu S, Murakami Y and Sakurai H (2003) <i>Temperature, its measurement and control in science and industry</i>, vol 7, ed. Ripple D C (Am. Inst. of Phys.,New York) pp. 131-136</p><p id="Tamura2008" class="Biblio">[31]  Tamura O, Takasu S, Nakano T and Sakurai H (2008) <i>Intl. J. Thermophys.</i> <b>29</b> (1) 31-41</p><p id="Tamura2011" class="Biblio">[32]  Tamura O, Takasu S, Nakano T and Sakurai H (2011) <i>Intl. J. Thermophys.</i> <b>32</b> (7) 1366-1377</p><p id="Tamura2013" class="Biblio">[33]  Tamura O, Nakano T, Shimazaki T, and Takasu S (2013) submitted to <i>Temperature, its measurement and control in science and industry, vol 8</i>, ed. Meyer C W <i>et al.</i> (Am. Inst. of Phys., New York) pp. 118-123</p><p id="Weber1936" class="Biblio">[34]  Weber S, Keesom W H and Schmidt G (1936) <i>Commun. Kamerlingh-Onnes Lab Leiden</i> <b>246a</b> 1-16</p>
+</math></span>)</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>40</span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>40</span></td></tr><tr><th colspan="3" style="font-weight:bold;text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Pressure corrections</th></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Thermomolecular pressure difference</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>15</span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>15</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Aerostatic head</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>15</span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>15</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Dead space</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>60</span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>60</span></td></tr><tr><th colspan="3" style="font-weight:bold;text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Propagated calibration uncertainty</th></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Calibration of RIRTs at the fixed points</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">100</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">100</td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Temperature instability and inhomogeneity</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>50</span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>50</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Resistance ratio bridge</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>3</span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>30</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Instability of reference resistor</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>1</span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>10</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Self-heating correction</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>30</span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>30</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Pressure measurement during calibration</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>60</span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>60</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Propagation of ICVGT calibration uncertainty</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>80</span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>80</span></td></tr><tr><th colspan="3" style="font-weight:bold;text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Other components</th></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Gas purity</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>30</span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>30</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Thermal expansion</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>30</span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>30</span></td></tr><tr><td style="text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;">Pressure dilatation</td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>10</span></td><td style="text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.0pt;"><span>10</span></td></tr><tr><th style="font-weight:bold;text-align:left;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Combined standard uncertainty</th><th style="font-weight:bold;text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row"><span>182</span></th><th style="font-weight:bold;text-align:center;vertical-align:top;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row"><span>186</span></th></tr></tbody></table></div><br /><div><h1 class="Section3" id="_680da03e-f497-4492-9293-701e8c36cc19">References</h1>
+<p id="Astrov1989" class="Biblio">[1]  Astrov D N, Beliansky L B, Dedikov Y A, Polunin S P and Zakharov A A (1989) <i>Metrologia</i> <b>26</b> 151-166</p><p id="Astrov1995" class="Biblio">[2]  Astrov D N, Beliansky L B, Dedikov Y A, Polunin S P and Zakharov A A (1995) <i>Metrologia</i> <b>32</b> 393-395</p><p id="Barber1971" class="Biblio">[3]  Barber C R (1971) <i>Temperature, its measurement and control in science and industry</i>, vol 4, ed. Plumb H H (ISA, Washington) pp. 99-104</p><p id="Berry1979" class="Biblio">[4]  Berry K H (1979) <i>Metrologia</i> <b>15</b> 89-115</p><p id="Bich2007" class="Biblio">[5]  Bich E, Hellmann R. and Vogel E (2007) <i>Molec. Phys.</i> <b>105</b> 3035-3049</p><p id="Gaiser2010" class="Biblio">[6]  Gaiser C, Fellmuth B and Haft N (2010) <i>Int. J. Thermophys.</i> <b>31</b> 1428-1437</p><p id="Gaiser2008" class="Biblio">[7]  Gaiser C (2008) <i>Thesis</i>, “Properties of Helium and Gas Thermometry”, Humboldt University of Berlin</p><p id="Hill2002" class="Biblio">[8]  Hill K D (2002) Proc. <i>TEMPMEKO 2001</i>, vol 1, eds. Fellmuth B, Seidel J and Scholz G (VDI/VDE, Berlin) pp. 543-548</p><p id="Hurly2007" class="Biblio">[9]  Hurly J J and Mehl J B (2007) <i>Journal of Research of the National Institute of Standards and Technology</i> <b>112</b> 75-94</p><p id="Kang2002" class="Biblio">[10]  Kang K H, Seong D J, Kim Y-G and Gam S (2002) Proc. <i>TEMPMEKO 2001</i>, vol 1, eds. Fellmuth B, Seidel J and Scholz G (VDI/VDE, Berlin) pp. 549-552</p><p id="Kemp1986" class="Biblio">[11]  Kemp R C, Kemp W R G and Besley L M (1986/87) <i>Metrologia</i> <b>23</b> 61-86 Kroeger F R and Swenson C A (1977) <i>J Appl Phys</i> <b>48</b> 853-864</p><p id="Matacotta1987" class="Biblio">[12]  Matacotta F C, McConville G T, Steur P P M and Durieux M (1987) <i>Metrologia</i> <b>24</b> 61-67</p><p id="Mehl2007" class="Biblio">[13]  Mehl J B (2007) <i>Internal NIST report</i> “He ab initio calculations III” and <i>private communication</i>.</p><p id="Meyer1997" class="Biblio">[14]  Meyer C W and Reilly M L (1997) Proc. <i>TEMPMEKO ‘96</i>, ed. Marcarino P (Levrotto &#x26; Bella, Torino) pp. 39-44</p><p id="Pavese1987" class="Biblio">[15]  Pavese F and Steur P P M (1987) <i>J Low Temp Phys</i> <b>69</b> 91-117</p><p id="Pavese2013" class="Biblio">[16]  Pavese F and Molinar Min Beciet G 2013 <i>Modern Gas-Based Temperature and</i></p><p id="Pressure2010" class="Biblio">[17]  <i>Pressure Measurements</i> (Springer, New York, Dordrecht, Heidelberg, London)Peruzzi A, Bosma R, De Groot M and Verbeek J (2010) <i>Metrologia</i> <b>47</b>, 325-333 Pitre L and Moldover M 2006 <i>Metrologia</i> <b>43</b> 142-162</p><p id="Rusby2006" class="Biblio">[18]  Rusby R L, Head D, Meyer C, Tew W, Tamura O, Hill K D, de Groot M, Storm A, Peruzzi A, Fellmuth B, Engert J, Astrov D, Dedikov Y and Kytin G (2006) <a href="http://iopscience.iop.org/0026-1394/43/1A/03002"><i></i></a></p><p id="Sakurai1982" class="Biblio">[19]  Sakurai H (1982) <i>Temperature, its measurement and control in science and industry</i>, vol 5, ed. Schooley J F (Am. Inst. of Phys., New York) pp. 39-42</p><p id="Sakurai1992" class="Biblio">[20]  Sakurai H (1992) <i>Temperature, its measurement and control in science and industry</i>, vol 6, ed. Schooley J F (Am. Inst. of Phys., New York) pp. 127-131</p><p id="Sakurai2002" class="Biblio">[21]  Sakurai H (2002) Proc. <i>TEMPMEKO 2001</i>, vol 1, eds. Fellmuth B, Seidel J and Scholz G (VDI/VDE, Berlin) pp. 537-542</p><p id="Steur1986" class="Biblio">[22]  Steur P P M and Durieux M (1986) <i>Metrologia</i> <b>23</b> 1-18</p><p id="Steur1987" class="Biblio">[23]  Steur P P M, Durieux M and McConville G T (1987) <i>Metrologia</i> <b>24</b> 69-77</p><p id="Steur1989" class="Biblio">[24]  Steur P P M and Pavese F (1989) <i>Cryogenics</i> <b>29</b> 135-138</p><p id="Steur1999" class="Biblio">[25]  Steur P P M (1999) <i>Metrologia</i> <b>36</b> 33-39</p><p id="Steur2003" class="Biblio">[26]  Steur P P M, Pavese F, and Peroni I(2003) <i>Temperature, its control in science and industry</i> vol 7, ed. Ripple D C (Am. Inst. of Phys., New York) pp. 125-130</p><p id="SteurPavese2005" class="Biblio">[27]  Steur P P M and Pavese F (2005) CCT 23<sup>e</sup> Session, Doc. CCT/05-03</p><p id="Steur2005" class="Biblio">[28]  Steur P P M, Peroni I, Ferri D and Pavese F (2005) Proc. <i>TEMPMEKO 2004</i>, eds. Zvizdić D, Bermanec L G, Veliki T and Stašić T (LPM, FSB, Zagreb) pp. 141-146</p><p id="Swenson1989" class="Biblio">[29]  Swenson C A (1989) CCT 17<sup>e</sup> Session, Doc. CCT/89-27</p><p id="Tamura2003" class="Biblio">[30]  Tamura O, Takasu S, Murakami Y and Sakurai H (2003) <i>Temperature, its measurement and control in science and industry</i>, vol 7, ed. Ripple D C (Am. Inst. of Phys.,New York) pp. 131-136</p><p id="Tamura2008" class="Biblio">[31]  Tamura O, Takasu S, Nakano T and Sakurai H (2008) <i>Intl. J. Thermophys.</i> <b>29</b> (1) 31-41</p><p id="Tamura2011" class="Biblio">[32]  Tamura O, Takasu S, Nakano T and Sakurai H (2011) <i>Intl. J. Thermophys.</i> <b>32</b> (7) 1366-1377</p><p id="Tamura2013" class="Biblio">[33]  Tamura O, Nakano T, Shimazaki T, and Takasu S (2013) submitted to <i>Temperature, its measurement and control in science and industry, vol 8</i>, ed. Meyer C W <i>et al.</i> (Am. Inst. of Phys., New York) pp. 118-123</p><p id="Weber1936" class="Biblio">[34]  Weber S, Keesom W H and Schmidt G (1936) <i>Commun. Kamerlingh-Onnes Lab Leiden</i> <b>246a</b> 1-16</p>
 
 
 
@@ -3456,9 +4227,20 @@ FRANCE</p>
 
 </div></main><script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    "HTML-CSS": { preferredFont: "STIX" },
+    "HTML-CSS": {
+      preferredFont: "STIX",
+      linebreaks: {
+        automatic: true,
+        width: "container"  // or specify something like "90%"/"30em"
+      }
+    },
+    MathML: {
+      linebreaks: {
+        automatic: true
+      }
+    },
     asciimath2jax: { delimiters: [['(#(', ')#)']] }
- });
+  });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
   <script>
@@ -3468,26 +4250,40 @@ FRANCE</p>
 });
   </script>
 
-<script>
-  //TOC toggle animation
-$('#toggle').on('click', function(){
-    if( $('nav').is(':visible') ) {
-        $('nav').animate({ 'left': '-353px' }, 'slow', function(){
-            $('nav').hide();
+  <script>
+    //TOC toggle animation
+    (function() {
+      const jqNav = $('nav');
+      const jqBody = $('body');
+      const jqToggle = $('#toggle');
+      const animationSpeed = 'slow';
+
+      jqToggle.on('click', function() {
+        const isNavVisible = jqNav.is(':visible');
+        const fullNavWidth = jqNav.outerWidth();
+        const navLeft = isNavVisible ? '-' + fullNavWidth + 'px' : '0px';
+        const bodyMarginLeft = isNavVisible ? '0px' : fullNavWidth + 'px';
+
+        // Stop current animations
+        jqNav.stop(true, true);
+        jqBody.stop(true, true);
+
+        if(!isNavVisible) {
+            jqNav.show();
+        }
+        jqNav.animate({'left': navLeft}, animationSpeed, function() {
+          if(isNavVisible) {jqNav.hide()}
         });
-        $('.container').animate({ 'padding-left': '31px' }, 'slow');
-    }
-    else {
-        $('nav').show();
-        $('nav').animate({ 'left': '0px' }, 'slow');
-    }
-});
-</script>
+        jqBody.animate({'marginLeft': bodyMarginLeft}, animationSpeed);
+
+      });
+    })();
+  </script>
 
 <script>
     // Scroll to top button
     window.onscroll = function() {scrollFunction()};
-    
+
     function scrollFunction() {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             document.getElementById("myBtn").style.display = "block";
@@ -3495,7 +4291,7 @@ $('#toggle').on('click', function(){
             document.getElementById("myBtn").style.display = "none";
         }
     }
-    
+
     // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
         document.body.scrollTop = 0;
@@ -3503,6 +4299,132 @@ $('#toggle').on('click', function(){
     }
     </script>
 
+<script>
+/*
+  $(document).ready(function() {
+	  $('[id^=toc]').each(function ()
+	  {
+	     var currentToc = $(this);
+       var url = window.location.href;
+            currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "'></a>");
+	  });
+});
+*/
+</script>
+
+  <script>
+    document.querySelectorAll('*|svg a').forEach(function(item) {
+      var loc = item.getAttribute('href');
+      if (loc !== null && loc.startsWith('#')) {
+  item.setAttribute('href', location.pathname + loc);
+      }
+});
+  </script>
+
+
+<script>
+
+// jQuery Inline Footnotes v1.0.3
+// Copyright (c) 2011 Vesa Vänskä, released under the MIT License.
+
+// Generated by CoffeeScript 1.6.1
+(function() {
+
+  (function($) {
+    $.inlineFootnote = function(el, options) {
+      var _this = this;
+      this.el = $(el);
+      this.el.data("inlineFootnote", this);
+      this.initialize = function() {
+        this.options = $.extend({}, $.inlineFootnote.defaultOptions, options);
+        this.footnoteId = this.el.attr("href").match(/#(.*)/)[1];
+        if (this.footnoteId) {
+          this.el.mouseenter(this.openBox);
+          return $("body").mousemove(this.closeBox);
+        }
+      };
+      this.openBox = function(event) {
+        var footnoteContent, linkOffset;
+        if (!_this.box) {
+          footnoteContent = $("[id='" + _this.footnoteId + "']").children().filter(":not('" + _this.options.hideFromContent + "')");
+          linkOffset = _this.el.offset();
+          _this.box = $("<div />", {
+            id: _this.options.boxId,
+            html: footnoteContent.clone().find(_this.options.hideFromContent).remove().end(),
+            css: {
+              position: "absolute",
+              top: linkOffset.top,
+              left: linkOffset.left + _this.el.outerWidth()
+            }
+          }).appendTo("body");
+          return _this.positionBox();
+        }
+      };
+      this.closeBox = function(event) {
+        if (_this.box) {
+          if (_this.isHoveringFootnote(event)) {
+            clearTimeout(_this.closeTimeout);
+            return _this.closeTimeout = null;
+          } else {
+            if (!_this.closeTimeout) {
+              return _this.closeTimeout = setTimeout((function() {
+                _this.box.remove();
+                return _this.box = null;
+              }), _this.options.hideDelay);
+            }
+          }
+        }
+      };
+      this.isHoveringFootnote = function(event) {
+        return this.box.is(event.target) || $(event.target).closest(this.box).length > 0 || event.target === this.el[0];
+      };
+      this.positionBox = function() {
+        var boxHorizontalPadding, boxLeft, boxWidth, linkLeftOffset, windowWidth;
+        boxHorizontalPadding = parseInt(this.box.css("padding-left")) + parseInt(this.box.css("padding-right"));
+        linkLeftOffset = this.el.offset().left;
+        windowWidth = $(window).width();
+        if ((windowWidth / 2) > linkLeftOffset) {
+          boxLeft = linkLeftOffset + 20;
+          boxWidth = windowWidth - boxLeft - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+        } else {
+          boxWidth = linkLeftOffset - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+          boxLeft = linkLeftOffset - boxWidth - this.options.boxMargin * 2;
+        }
+        return this.box.css({
+          width: boxWidth,
+          left: boxLeft
+        });
+      };
+      return this.initialize();
+    };
+    $.inlineFootnote.defaultOptions = {
+      boxMargin: 20,
+      hideDelay: 200,
+      hideFromContent: "[rel=footnote]",
+      maximumBoxWidth: 500,
+      boxId: "footnote_box"
+    };
+    return $.fn.inlineFootnote = function(options) {
+      return this.each(function() {
+        return new $.inlineFootnote(this, options);
+      });
+    };
+  })(jQuery);
+
+}).call(this);
+</script>
+
+<script>
+      $(function() {
+        $("[rel=footnote]").inlineFootnote();
+        });
+</script>
   <script>
 // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
 //
@@ -3514,21 +4436,29 @@ $('#toggle').on('click', function(){
 !function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function f(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.base=A.hasOwnProperty("base")?A.base:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64,A.titleText=A.hasOwnProperty("titleText")?A.titleText:""}function p(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}this.options=A||{},this.elements=[],f(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var e,t,i,n,o,s,a,r,c,h,l,u,d=[];if(f(this.options),"touch"===(l=this.options.visible)&&(l=this.isTouchDevice()?"always":"hover"),0===(e=p(A=A||"h2, h3, h4, h5, h6")).length)return this;for(!function(){if(null!==document.head.querySelector("style.anchorjs"))return;var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"],style'))?document.head.appendChild(e):document.head.insertBefore(e,A);e.sheet.insertRule(".anchorjs-link{opacity:0;text-decoration:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}",e.sheet.cssRules.length),e.sheet.insertRule(":hover>.anchorjs-link,.anchorjs-link:focus{opacity:1}",e.sheet.cssRules.length),e.sheet.insertRule("[data-anchorjs-icon]::after{content:attr(data-anchorjs-icon)}",e.sheet.cssRules.length),e.sheet.insertRule('@font-face{font-family:anchorjs-icons;src:url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype")}',e.sheet.cssRules.length)}(),t=document.querySelectorAll("[id]"),i=[].map.call(t,function(A){return A.id}),o=0;o<e.length;o++)if(this.hasAnchorJSLink(e[o]))d.push(o);else{if(e[o].hasAttribute("id"))n=e[o].getAttribute("id");else if(e[o].hasAttribute("data-anchor-id"))n=e[o].getAttribute("data-anchor-id");else{for(c=r=this.urlify(e[o].textContent),a=0;void 0!==s&&(c=r+"-"+a),a+=1,-1!==(s=i.indexOf(c)););s=void 0,i.push(c),e[o].setAttribute("id",c),n=c}(h=document.createElement("a")).className="anchorjs-link "+this.options.class,h.setAttribute("aria-label",this.options.ariaLabel),h.setAttribute("data-anchorjs-icon",this.options.icon),this.options.titleText&&(h.title=this.options.titleText),u=document.querySelector("base")?window.location.pathname+window.location.search:"",u=this.options.base||u,h.href=u+"#"+n,"always"===l&&(h.style.opacity="1"),""===this.options.icon&&(h.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(h.style.lineHeight="inherit")),"left"===this.options.placement?(h.style.position="absolute",h.style.marginLeft="-1em",h.style.paddingRight="0.5em",e[o].insertBefore(h,e[o].firstChild)):(h.style.paddingLeft="0.375em",e[o].appendChild(h))}for(o=0;o<d.length;o++)e.splice(d[o]-o,1);return this.elements=this.elements.concat(e),this},this.remove=function(A){for(var e,t,i=p(A),n=0;n<i.length;n++)(t=i[n].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(i[n]))&&this.elements.splice(e,1),i[n].removeChild(t));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){return this.options.truncate||f(this.options),A.trim().replace(/\'/gi,"").replace(/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&-1<(" "+A.firstChild.className+" ").indexOf(" anchorjs-link "),t=A.lastChild&&-1<(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ");return e||t||!1}}});
 // @license-end
   </script>
-  <script>
-/*
-  $(document).ready(function() {
-          $('[id^=toc]').each(function ()
-          {
-             var currentToc = $(this);
-       var url = window.location.href;
-             currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "' </a>");
-          });
-});
-*/
+    <script>
   anchors.options = {
   placement: 'left'
 };
 anchors.add('h1, h2, h3, h4');
+</script>
+
+<script>
+// use .collapsible element to toggle visibility of element following it
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
 </script>
 
 </body></html>
