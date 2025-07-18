@@ -1,0 +1,3535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.0" schema-version="v2.0.8" flavor="bipm">
+<bibdata type="standard">
+<title language="en" format="text/plain" type="title-main">Guide to the Realization of the ITS-90</title>
+
+<title language="en" format="text/plain" type="title-part">Radiation Thermometry</title>
+
+<docidentifier primary="true" type="BIPM">BIPM GUIDE-ITS-90 1</docidentifier><docidentifier type="BIPM-parent-document">BIPM GUIDE-ITS-90</docidentifier><docnumber>GUIDE-ITS-90</docnumber><contributor><role type="author"/><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"/><person>
+<name><completename>H Yoon</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>P Saunders</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>G Machin</completename></name>
+</person></contributor><contributor><role type="author"/><person>
+<name><completename>A D Todd</completename></name>
+</person></contributor><contributor><role type="publisher"/><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2018-01-01</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2018</from><owner><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>guide</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="CCT" language="en" script="Latn">Consultative Committee for Thermometry</committee><workgroup acronym="CCT-TG-K">Task Group for the Realization of the Kelvin</workgroup></editorialgroup><structuredidentifier><docnumber>GUIDE-ITS-90</docnumber><part>1</part></structuredidentifier><si-aspect>K_k</si-aspect></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd5" id="U_NISTu5">
+        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitName lang="en">kelvin</UnitName>
+        <UnitSymbol type="HTML">K</UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi mathvariant="normal">K</mi>
+          </math>
+        </UnitSymbol>
+      </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu23">
+        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitName lang="en">degree Celsius</UnitName>
+        <UnitSymbol type="HTML">°C</UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi mathvariant="normal">°C</mi>
+          </math>
+        </UnitSymbol>
+      </Unit><Unit dimensionURL="#NISTd1" id="U_NISTu1">
+        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitName lang="en">meter</UnitName>
+        <UnitSymbol type="HTML">m</UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi mathvariant="normal">m</mi>
+          </math>
+        </UnitSymbol>
+      </Unit><Unit dimensionURL="#NISTd1" id="U_nm">
+        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitName lang="en">nm</UnitName>
+        <UnitSymbol type="HTML">nm</UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi mathvariant="normal">nm</mi>
+          </math>
+        </UnitSymbol>
+        <RootUnits>
+          <EnumeratedRootUnit unit="meter" prefix="n"/>
+        </RootUnits>
+      </Unit><Unit dimensionURL="#NISTd5" id="U_mK">
+        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitName lang="en">mK</UnitName>
+        <UnitSymbol type="HTML">mK</UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi mathvariant="normal">mK</mi>
+          </math>
+        </UnitSymbol>
+        <RootUnits>
+          <EnumeratedRootUnit unit="kelvin" prefix="m"/>
+        </RootUnits>
+      </Unit><Unit dimensionURL="#NISTd4" id="U_NISTu4">
+        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitName lang="en">ampere</UnitName>
+        <UnitSymbol type="HTML">A</UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi mathvariant="normal">A</mi>
+          </math>
+        </UnitSymbol>
+      </Unit></UnitSet><QuantitySet><Quantity id="NISTq5" quantityType="base" dimensionURL="#NISTd5">
+        <QuantityName lang="en-US">thermodynamic temperature</QuantityName>
+      </Quantity><Quantity id="NISTq34" quantityType="base" dimensionURL="#NISTd5">
+        <QuantityName lang="en-US">Celsius temperature</QuantityName>
+      </Quantity><Quantity id="NISTq4" quantityType="base" dimensionURL="#NISTd4">
+        <QuantityName lang="en-US">electric current</QuantityName>
+      </Quantity></QuantitySet><DimensionSet><Dimension id="NISTd5">
+        <ThermodynamicTemperature symbol="Theta" powerNumerator="1"/>
+      </Dimension><Dimension id="NISTd1">
+        <Length symbol="L" powerNumerator="1"/>
+      </Dimension><Dimension id="NISTd4">
+        <ElectricCurrent symbol="I" powerNumerator="1"/>
+      </Dimension></DimensionSet><PrefixSet><Prefix prefixBase="10" prefixPower="-9" id="NISTp10_-9">
+        <PrefixName lang="en">nano</PrefixName>
+        <PrefixSymbol type="ASCII">n</PrefixSymbol>
+        <PrefixSymbol type="unicode">n</PrefixSymbol>
+        <PrefixSymbol type="LaTeX">n</PrefixSymbol>
+        <PrefixSymbol type="HTML">n</PrefixSymbol>
+      </Prefix><Prefix prefixBase="10" prefixPower="-3" id="NISTp10_-3">
+        <PrefixName lang="en">milli</PrefixName>
+        <PrefixSymbol type="ASCII">m</PrefixSymbol>
+        <PrefixSymbol type="unicode">m</PrefixSymbol>
+        <PrefixSymbol type="LaTeX">m</PrefixSymbol>
+        <PrefixSymbol type="HTML">m</PrefixSymbol>
+      </Prefix></PrefixSet></UnitsML><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_c20d5871-59c5-1abb-69c4-33074d4f09d9" obligation="normative">
+<p id="_f81d45d4-b556-ed46-e7c4-9e11a649f5b7" align="center">© Bureau International des Poids et Mesures 2018 all rights reserved</p>
+</clause>
+</copyright-statement>
+
+<license-statement>
+
+<clause id="_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a" obligation="normative">
+<title id="_29f75465-0cf3-76fd-bc56-6b3aa457ee69">Copyright statement</title>
+<p id="_50719790-3c5b-c213-8298-0631d690bc21">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<link target="http://creativecommons.org/licenses/by/4.0/:"/>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
+</clause>
+</license-statement>
+
+<feedback-statement>
+
+<p id="_5926bc3f-b367-69e7-6cc6-442a91e32db2">BIPM<br/> Pavillon de Breteuil<br/> F-92312 Sèvres Cedex<br/> FRANCE</p>
+</feedback-statement>
+</boilerplate><preface><clause id="_7ca9d26e-36e7-40d4-ef12-78a5c764b208" obligation="informative">
+<title id="_96c37ea0-349a-9de6-49a8-8389d810efa5">Abstract</title>
+<p id="_96263176-918d-385b-de4d-488a7d2111c6">This paper is a part of guidelines, prepared on behalf of the Consultative Committee for Thermometry, on the methods how to realize the International Temperature Scale of 1990.</p>
+
+<p id="_9b16d24a-9d83-0d9f-0dc1-675ee6f4c375">It discusses the major issues linked to radiation thermometry for the realization of the International Temperature Scale of 1990 at high temperatures.</p>
+</clause></preface><sections>
+
+<clause id="_2b866ced-eb85-4982-5f1d-b8c4353b0374" obligation="normative">
+<title id="_46069e95-51f4-1e9a-f2b9-70fe751a0935">Introduction</title>
+<clause id="_cd67cf37-8764-6025-5ad5-e56284c0d816" obligation="normative">
+<title id="_341707ee-4ef2-546a-3998-4354d1432660">ITS-90 Definition</title>
+<p id="_44fd9908-84a5-2a7a-7a98-9a57cb7d19fa">Above the freezing point of silver, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>1234.93</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>1234.93 "unitsml(K)"</asciimath></stem> (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>961.78</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>961.78 "unitsml(degC)"</asciimath></stem>), the temperature <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem> is, according to the definition of the ITS-90, defined by the equation</p>
+
+<formula id="_166f687d-187c-e97f-1c4a-ac5ac1584933" anchor="eq1"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mfrac>
+      <mrow>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>L</mi>
+          </mstyle>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+        </msub>
+        <mrow>
+          <mo>(</mo>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mn>90</mn>
+          </msub>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+      <mrow>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>L</mi>
+          </mstyle>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+        </msub>
+        <mrow>
+          <mo>(</mo>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mn>90</mn>
+          </msub>
+          <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant="italic">
+              <mi>X</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </mfrac>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mrow>
+          <mo rspace="thickmathspace"/>
+          <mrow>
+            <mi>exp</mi>
+            <mrow>
+              <mo>(</mo>
+              <mfrac>
+                <msub>
+                  <mi>c</mi>
+                  <mn>2</mn>
+                </msub>
+                <mrow>
+                  <mstyle mathvariant="italic">
+                    <mi>λ</mi>
+                  </mstyle>
+                  <msub>
+                    <mstyle mathvariant="italic">
+                      <mi>T</mi>
+                    </mstyle>
+                    <mn>90</mn>
+                  </msub>
+                  <mrow>
+                    <mo>(</mo>
+                    <mstyle mathvariant="italic">
+                      <mi>X</mi>
+                    </mstyle>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+              </mfrac>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+        </mrow>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+      <mrow>
+        <mrow>
+          <mo rspace="thickmathspace"/>
+          <mrow>
+            <mi>exp</mi>
+            <mrow>
+              <mo>(</mo>
+              <mfrac>
+                <msub>
+                  <mi>c</mi>
+                  <mn>2</mn>
+                </msub>
+                <mrow>
+                  <mstyle mathvariant="italic">
+                    <mi>λ</mi>
+                  </mstyle>
+                  <msub>
+                    <mstyle mathvariant="italic">
+                      <mi>T</mi>
+                    </mstyle>
+                    <mn>90</mn>
+                  </msub>
+                </mrow>
+              </mfrac>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+        </mrow>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </mfrac>
+    <mo>,</mo>
+  </mstyle>
+</math><asciimath>{ii(L)_{ii(lambda)} (ii(T)_{90})}/{ii(L)_{ii(lambda)} (ii(T)_{90} (ii(X)))} = {exp(c_2 / {ii(lambda) ii(T)_{90} (ii(X))}) - 1} / {exp (c_2 / {ii(lambda) ii(T)_{90}}) - 1} ,</asciimath></stem></formula>
+
+<p id="_ea16b0fc-f54d-90fc-f5e1-23e8e79c2c08">where <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>X</mi>
+      </mstyle>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(T)_{90} (ii(X))</asciimath></stem> refers to the silver <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mrow>
+      <mo>{</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <mtext>Ag</mtext>
+        <mo>)</mo>
+      </mrow>
+      <mo>=</mo>
+      <mn>1234.93</mn>
+      <mo rspace="thickmathspace">⁢</mo>
+      <mrow xref="U_NISTu5">
+        <mstyle mathvariant="normal">
+          <mi>K</mi>
+        </mstyle>
+        
+        
+        
+      </mrow>
+      <mo>}</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>{ii(T)_{90}("Ag") = 1234.93 "unitsml(K)"}</asciimath></stem>, the gold <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mrow>
+      <mo>{</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <mtext>Au</mtext>
+        <mo>)</mo>
+      </mrow>
+      <mo>=</mo>
+      <mn>1337.33</mn>
+      <mo rspace="thickmathspace">⁢</mo>
+      <mrow xref="U_NISTu5">
+        <mstyle mathvariant="normal">
+          <mi>K</mi>
+        </mstyle>
+        
+        
+        
+      </mrow>
+      <mo>}</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>{ii(T)_{90}("Au") = 1337.33 "unitsml(K)"}</asciimath></stem> or the copper <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mrow>
+      <mo>{</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <mtext>Cu</mtext>
+        <mo>)</mo>
+      </mrow>
+      <mo>=</mo>
+      <mn>1357.77</mn>
+      <mo rspace="thickmathspace">⁢</mo>
+      <mrow xref="U_NISTu5">
+        <mstyle mathvariant="normal">
+          <mi>K</mi>
+        </mstyle>
+        
+        
+        
+      </mrow>
+      <mo>}</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>{ii(T)_{90}("Cu") = 1357.77 "unitsml(K)"}</asciimath></stem> freezing points. <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>L</mi>
+      </mstyle>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(L)_{ii(lambda)} (ii(T)_{90})</asciimath></stem> andare the spectral radiances of a blackbody at the wavelength <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>λ</mi>
+    </mstyle>
+  </mstyle>
+</math><asciimath>ii(lambda)</asciimath></stem> (in vacuo) at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem> and at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>X</mi>
+      </mstyle>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(T)_{90} (ii(X))</asciimath></stem>, respectively, and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>c</mi>
+      <mn>2</mn>
+    </msub>
+    <mo>=</mo>
+    <mn>0.014</mn>
+    <mn>388</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu1">
+      <mstyle mathvariant="normal">
+        <mi>m</mi>
+      </mstyle>
+      
+      
+    </mrow>
+    <mo>⋅</mo>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>c_2 = 0.014 388 "unitsml(m)" * "unitsml(K)"</asciimath></stem><fn id="_28325413-7e16-884c-9922-94c5f0b4f07c" reference="1"><p id="_c9fef4c6-0d7f-2b1a-f940-1e01d371a11d">Although the latest value of the second radiation constant, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>c</mi>
+      <mn>2</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>c_2</asciimath></stem>, differs from that in the original definition [<eref type="inline" bibitemid="Mohr2012" citeas="[24]"><display-text>Mohr <em>et al.</em> 2012</display-text></eref>], the value of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>0.014388</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu1">
+      <mstyle mathvariant="normal">
+        <mi>m</mi>
+      </mstyle>
+      
+      
+    </mrow>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>0.014388 "unitsml(m)" "unitsml(K)"</asciimath></stem> fixed in the original text of the ITS-90 is to be used.</p>
+</fn>.</p>
+</clause>
+
+<clause id="_b6b4a113-9ddb-5340-184e-a64ffef88797" obligation="normative">
+<title id="_e4bfa2bd-60f0-bb58-f840-09c802b9782b">Historical retrospective</title>
+<p id="_371a95d6-c514-7ae6-a3b8-6fdbcade15f1">Since the introduction of ITS-90 in 1990, there have been several technological improvements that are now implemented in most of the national metrology institutes (NMIs). In the early years of ITS-90, radiation thermometers were insufficiently stable to maintain a temperature scale for long periods of time. For this reason, tungsten strip lamps, with their superior stability, were used to maintain the scale [<eref type="inline" bibitemid="Quinn1972" citeas="[29]"><display-text>Quinn <em>et al</em>. 1972</display-text></eref>]. The radiation thermometer acted merely as a transfer device for comparing blackbody signals (at a given temperature) with lamp signals (at a given current). With improvements in radiation thermometer stability, particularly through the use of high-quality silicon photodiodes, the trend in NMIs has been to do away with tungsten strip lamps and maintain the temperature directly on the radiation thermometer. For this reason, tungsten strips lamps and transfer standard radiation thermometers are not discussed in this document and interested readers are referred to the literature [<eref type="inline" bibitemid="Quinn1990" citeas="[30]"><display-text>Quinn 1990</display-text></eref>].</p>
+
+<p id="_40dc178d-2264-47b4-8acd-1c94d2dcb962">Further improvements result from the widespread use of high-speed computers. When electronic computing resources were limited, techniques were developed to reduce the amount of numerical computation required to solve the resulting integral equation for <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem> (see <xref target="eq2"/> below). This involved the concept of a mean effective wavelength between temperatures <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>X</mi>
+      </mstyle>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(T)_{90} (ii(X))</asciimath></stem> and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem>, which allowed the integral equation to be expressed as an algebraic equation, but is subject to a degree of approximation, and which allowed the definition of <xref target="eq1"/> to be implemented literally (albeit at a wavelength that depends on the temperature of the source and the chosen ITS-90 fixed point, in addition to the properties of the radiation thermometer). Now that computers are ubiquitous, the integral equation can be rapidly solved numerically as frequently as desired with no additional approximations. Consequently, the mean effective wavelength is not discussed in this document, but interested readers should see [<eref type="inline" bibitemid="Saunders2003" citeas="[34]"><display-text>Saunders 2003</display-text></eref>].</p>
+</clause>
+</clause>
+
+<clause id="_8ce10b43-9583-e626-2834-3b6e591ba4d0" obligation="normative">
+<title id="_cec07325-0788-0efa-2e56-795bdaeb1a83">Practical implementation of the ITS-90 definition</title>
+<clause id="_b6169e09-764d-a479-162b-d7bf4ab32a56" obligation="normative">
+<title id="_2a18e9a6-e34a-c2cb-f000-05afdeace7ab">The measured signal ratio</title>
+<p id="_1bfec6fe-af2c-ea96-4aa8-207749c670fa"><xref target="eq1"/> is merely a statement of the Planck radiance ratio expressed at a single wavelength. The definition for <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem> neither recommends a method by which, nor restricts the wavelength at which, the ratio of radiances is to be experimentally determined. Thus, the wavelength can be chosen freely, although subject to signal-to-noise considerations. However, in practice, because radiation thermometers necessarily have a finite spectral bandwidth, and because true blackbodies do not exist and measurements are not made in a vacuum, the monochromatic blackbody spectral radiance ratio given by <xref target="eq1"/> cannot be measured directly. Instead, the ratio, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>r</mi>
+  </mstyle>
+</math><asciimath>r</asciimath></stem>, of spectral radiances integrated over the spectral responsivity of the radiation thermometer is the quantity that must be used to infer <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>X</mi>
+      </mstyle>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(T)_{90} (ii(X))</asciimath></stem>:</p>
+
+<formula id="_ef172555-180b-0efc-fad8-723cc1bcfd69" anchor="eq2"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mi>r</mi>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mstyle mathvariant="italic">
+          <mi>S</mi>
+        </mstyle>
+        <mrow>
+          <mo>(</mo>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mn>90</mn>
+          </msub>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+      <mrow>
+        <mstyle mathvariant="italic">
+          <mi>S</mi>
+        </mstyle>
+        <mrow>
+          <mo>(</mo>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mn>90</mn>
+          </msub>
+          <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant="italic">
+              <mi>X</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </mfrac>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mrow>
+          <msubsup>
+            <mo>∫</mo>
+            <mn>0</mn>
+            <mo>∞</mo>
+          </msubsup>
+          <mstyle mathvariant="italic">
+            <mi>ε</mi>
+          </mstyle>
+        </mrow>
+        <mrow>
+          <mo>(</mo>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+          <mo>,</mo>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mn>90</mn>
+          </msub>
+          <mo>)</mo>
+        </mrow>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>L</mi>
+          </mstyle>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+        </msub>
+        <mrow>
+          <mo>(</mo>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mn>90</mn>
+          </msub>
+          <mo>)</mo>
+        </mrow>
+        <mstyle mathvariant="italic">
+          <mi>R</mi>
+        </mstyle>
+        <mrow>
+          <mo>(</mo>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+          <mo>)</mo>
+        </mrow>
+        <mtext>d</mtext>
+        <mstyle mathvariant="italic">
+          <mi>λ</mi>
+        </mstyle>
+      </mrow>
+      <mrow>
+        <mrow>
+          <msubsup>
+            <mo>∫</mo>
+            <mn>0</mn>
+            <mo>∞</mo>
+          </msubsup>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>ε</mi>
+            </mstyle>
+            <mstyle mathvariant="italic">
+              <mi>X</mi>
+            </mstyle>
+          </msub>
+        </mrow>
+        <mrow>
+          <mo>(</mo>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+          <mo>,</mo>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mn>90</mn>
+          </msub>
+          <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant="italic">
+              <mi>X</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>L</mi>
+          </mstyle>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+        </msub>
+        <mrow>
+          <mo>(</mo>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mn>90</mn>
+          </msub>
+          <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant="italic">
+              <mi>X</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mstyle mathvariant="italic">
+          <mi>R</mi>
+        </mstyle>
+        <mrow>
+          <mo>(</mo>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+          <mo>)</mo>
+        </mrow>
+        <mtext>d</mtext>
+        <mstyle mathvariant="italic">
+          <mi>λ</mi>
+        </mstyle>
+      </mrow>
+    </mfrac>
+  </mstyle>
+</math><asciimath>r = {ii(S)(ii(T)_{90})}/{ii(S)(ii(T)_{90}(ii(X)))} = {int_0^{oo} ii(epsilon) (ii(lambda), ii(T)_{90}) ii(L)_{ii(lambda)} (ii(T)_{90}) ii(R)(ii(lambda)) "d"ii(lambda)} / {int_0^{oo} ii(epsilon)_ii(X) (ii(lambda), ii(T)_{90}(ii(X))) ii(L)_{ii(lambda)} (ii(T)_{90}(ii(X))) ii(R)(ii(lambda))"d"ii(lambda)}</asciimath></stem></formula>
+
+<p id="_fdfe4fdc-2522-41b5-1624-5bda3e2641f5">where:</p>
+
+<ul id="_55f64cb2-4b7c-eadb-9b51-04e58bc14f10"><li><p id="_7656229e-1fde-ce90-b21f-f59cd6a602ab"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>r</mi>
+  </mstyle>
+</math><asciimath>r</asciimath></stem> is the experimentally measured ratio of detector signals;</p>
+</li>
+<li><p id="_4275f206-58e2-0564-2175-2445a349c5b9"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(S) (ii(T)_{90})</asciimath></stem> and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <mstyle mathvariant="italic">
+          <mi>X</mi>
+        </mstyle>
+        <mo>)</mo>
+      </mrow>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(S) (ii(T)_{90}(ii(X)))</asciimath></stem> are the individual measured detector signals (e.g. voltage orcurrent) when the radiation thermometer is aimed at a target with temperature <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem>, and at the ITS-90 fixed point (silver, gold or copper), respectively;</p>
+</li>
+<li><p id="_17304242-6c77-528e-3cf1-f63279e63c5b"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>X</mi>
+      </mstyle>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(T)_{90} (ii(X))</asciimath></stem> is the defined temperature of the ITS-90 fixed point (silver, gold or copperfreezing point);</p>
+</li>
+<li><p id="_85579062-be99-514a-6c93-8e9fa3dbba51"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>ε</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+      <mo>,</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(epsilon) (ii(lambda),ii(T)_{90})</asciimath></stem> is the spectral emissivity of the target at temperature <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem>;</p>
+</li>
+<li><p id="_027c536b-87f0-76fc-0632-f68be2ea230d"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>ε</mi>
+      </mstyle>
+      <mstyle mathvariant="italic">
+        <mi>X</mi>
+      </mstyle>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+      <mo>,</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <mstyle mathvariant="italic">
+          <mi>X</mi>
+        </mstyle>
+        <mo>)</mo>
+      </mrow>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(epsilon)_ii(X) (ii(lambda), ii(T)_{90}(ii(X)))</asciimath></stem> is the effective spectral emissivity of the ITS-90 fixed-pointblackbody cavity used (silver, gold or copper);</p>
+</li>
+<li><p id="_da0ddc8d-77aa-3dd4-df62-1c2b97cb57a5"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>L</mi>
+      </mstyle>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mfrac>
+      <msub>
+        <mi>c</mi>
+        <mn>1</mn>
+      </msub>
+      <mrow>
+        <msubsup>
+          <mi>n</mi>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+          <mn>2</mn>
+        </msubsup>
+        <msup>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+          <mn>5</mn>
+        </msup>
+      </mrow>
+    </mfrac>
+    <msup>
+      <mrow>
+        <mo>[</mo>
+        <mrow>
+          <mo rspace="thickmathspace"/>
+          <mrow>
+            <mi>exp</mi>
+            <mrow>
+              <mo>(</mo>
+              <mfrac>
+                <msub>
+                  <mi>c</mi>
+                  <mn>2</mn>
+                </msub>
+                <mrow>
+                  <msub>
+                    <mi>n</mi>
+                    <mstyle mathvariant="italic">
+                      <mi>λ</mi>
+                    </mstyle>
+                  </msub>
+                  <mstyle mathvariant="italic">
+                    <mi>λ</mi>
+                  </mstyle>
+                  <msub>
+                    <mstyle mathvariant="italic">
+                      <mi>T</mi>
+                    </mstyle>
+                    <mn>90</mn>
+                  </msub>
+                </mrow>
+              </mfrac>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+        </mrow>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>]</mo>
+      </mrow>
+      <mrow>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msup>
+  </mstyle>
+</math><asciimath>ii(L)_{ii(lambda)} (ii(T)_{90}) = c_1 / {n_{ii(lambda)}^2 ii(lambda)^5} [exp(c_2 / {n_{ii(lambda)} ii(lambda) ii(T)_{90}}) - 1]^{-1} </asciimath></stem> is the Planck blackbody radiance law at temperature <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem> for a medium with refractive index <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>n</mi>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+    </msub>
+  </mstyle>
+</math><asciimath>n_{ii(lambda)}</asciimath></stem>, with <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>c</mi>
+      <mn>1</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>c_1</asciimath></stem> being the first radiation constant;</p>
+</li>
+<li><p id="_dfe5dd2f-9e55-eead-bb56-61d0865a76c7"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>R</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(R) (ii(lambda))</asciimath></stem> is the spectral responsivity of the radiation thermometer;</p>
+</li>
+<li><p id="_6d9ee675-16b9-2d09-1730-188727b7b537"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>λ</mi>
+    </mstyle>
+  </mstyle>
+</math><asciimath>ii(lambda)</asciimath></stem> is the wavelength in the medium in which the radiation thermometer is immersed(usually air).</p>
+</li>
+</ul>
+
+<p id="_381df397-7e76-76d8-339a-0b593fe018c0">The integrands in <xref target="eq2"/> are close to zero outside the passband defined by the spectral filter of the radiation thermometer, so in practice the limits of integration are compressed to the wavelength region where the spectral responsivity is demonstrably greater than zero. The value of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>c</mi>
+      <mn>1</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>c_1</asciimath></stem> in Planck’s law cancels in forming the ratio <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>r</mi>
+  </mstyle>
+</math><asciimath>r</asciimath></stem>, so its value is unimportant. Likewise, because of the low dispersion of air, the <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msubsup>
+      <mi>n</mi>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+      <mrow>
+        <mo>−</mo>
+        <mn>2</mn>
+      </mrow>
+    </msubsup>
+  </mstyle>
+</math><asciimath>n_{ii(lambda)}^{-2}</asciimath></stem> factor effectively cancels for the typically narrow bandwidths employed inrealising ITS-90. However, the refractive index factor inside the exponential term in Planck’s law can be significant for high-accuracy measurements. The spectral emissivities of the ITS-90 blackbody and of the unknown source (which is also generally a blackbody when maintaining ITS-90) can usually be considered to be constant over the bandwidth of the radiation thermometer, so these two quantities can be taken outside their respective integrals in <xref target="eq2"/>. Finally, because <xref target="eq2"/> is a ratio, the relative spectral responsivity, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>s</mi>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>s (ii(lambda))</asciimath></stem>, can be used in place of the absolute spectral responsivity, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>R</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(R) (ii(lambda))</asciimath></stem>.</p>
+
+<p id="_a66b30ba-5d97-a7b1-2f5f-08277f9e3430">In addition to determining the parameters appearing directly in <xref target="eq2"/>, ITS-90 scale realization requires an evaluation of the size-of-source effect (SSE), and an assessment of the linearity of the radiation thermometer. These issues are discussed in <xref target="cls_4"/> and <xref target="cls_5"/>, respectively.</p>
+</clause>
+
+<clause id="_b9062a5f-5e89-4e0c-65a7-5b9ae6abe0a4" obligation="normative">
+<title id="_b137887b-a380-66f5-e9e2-7235b1c12129">Measuring the relative spectral responsivity</title>
+<p id="_0ff950c1-fc4b-673b-ef36-4d67c38995ff">Although, as mentioned above, no wavelength is specified in the ITS-90, the wavelength at which radiation thermometers operate when being used to establish the ITS-90 is usually within the range from <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>600</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_nm">
+      <mstyle mathvariant="normal">
+        <mi>nm</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>600 "unitsml(nm)"</asciimath></stem> to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>1000</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_nm">
+      <mstyle mathvariant="normal">
+        <mi>nm</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>1000 "unitsml(nm)"</asciimath></stem>.</p>
+
+<p id="_5b09be26-67d1-de76-884d-93ae2c992373">The relative spectral responsivity of the thermometer can be measured directly by aiming the thermometer at the exit port of an integrating sphere placed at the exit slit of a monochromator. The integrating sphere acts to create a lambertian, unpolarized, quasi-monochromatic source. The spectral power output from the integrating sphere should be measured with a non-selective (spectrally flat) radiation detector [<eref type="inline" bibitemid="Battuello1995" citeas="[2]"><display-text>Battuello <em>et al</em>. 1995</display-text></eref>], so that the relative spectral responsivity is proportional to the ratio of thethermometer’s signal to the non-selective detector’s signal. The relative spectral responsivity of the thermometer can be measured also with the use of tuneable lasers [<eref type="inline" bibitemid="Fischer1993" citeas="[14]"><display-text>Fischer and Lei Fu 1993</display-text></eref>].</p>
+
+<p id="_83460227-7041-c2ce-72dc-4ade18bef7b1">Preferably, the responsivity of the entire thermometer system should be measured as a system. If the individual components of the transmittance of the optical system and the detector responsivity are measured separately then multiplied together, then the two components should be measured under similar conditions so as to avoid errors due to different positioning and orientation. Details of the measurement of spectral responsivity are given in various papers describing the realization of radiation scales (see in particular [<eref type="inline" bibitemid="Jones1982" citeas="[16]"><display-text>Jones and Trapping 1982</display-text></eref>]). The accuracy requirements for this measurement have been discussed by [<eref type="inline" bibitemid="Coates1977" citeas="[6]"><display-text>Coates 1977</display-text></eref>, <eref type="inline" bibitemid="Bedford1983" citeas="[3]"><display-text>Bedford and Ma 1983</display-text></eref>].</p>
+
+<p id="_e7ec9ec5-59c1-20e9-8f17-48094ad03c61">Uncertainties in the measurement of spectral responsivity arise from the uncertainties in the wavelength scale on the monochromator, monochromator drift, scattering and polarization effects, out-of-band transmission (i.e., regions of significant filter transmittance outside the wavelength range measured), and uncertainties associated with the measurements of the non-selective detector. The uncertainty in the realization of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem> arising from these uncertainties in the measurement of the spectral responsivity can be related to how well the mean (or centre) wavelength, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+      <mn>0</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(lambda)_0</asciimath></stem>, of the spectral responsivity can be determined, and how well the bandwidth, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>σ</mi>
+    </mstyle>
+  </mstyle>
+</math><asciimath>ii(sigma)</asciimath></stem>, (expressed as a standard deviation of the spectral responsivity ‘distribution’) can be determined [<eref type="inline" bibitemid="Saunders2011" citeas="[35]"><display-text>Saunders 2011</display-text></eref>]:</p>
+
+<formula id="_ad28e743-e084-ab02-f40e-801589d0f714" anchor="eq3"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mi>u</mi>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+    </msub>
+    <mo>=</mo>
+    <mfrac>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>λ</mi>
+        </mstyle>
+        <mn>0</mn>
+      </msub>
+    </mfrac>
+    <mrow>
+      <mo>(</mo>
+      <mn>1</mn>
+      <mo>−</mo>
+      <mfrac>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>T</mi>
+          </mstyle>
+          <mn>90</mn>
+        </msub>
+        <mrow>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mn>90</mn>
+          </msub>
+          <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant="italic">
+              <mi>X</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+      </mfrac>
+      <mo>)</mo>
+    </mrow>
+    <msub>
+      <mi>u</mi>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>λ</mi>
+        </mstyle>
+        <mn>0</mn>
+      </msub>
+    </msub>
+    <mo>,</mo>
+  </mstyle>
+</math><asciimath>u_{ii(T)_{90}} = {ii(T)_{90}}/{ii(lambda)_0} (1 - {ii(T)_{90}}/{ii(T)_{90}(ii(X))}) u_{ii(lambda)_0} ,</asciimath></stem></formula>
+
+<formula id="_9b321081-5e48-a386-86da-ed14673dcd79" anchor="eq4"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mi>u</mi>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+    </msub>
+    <mo>=</mo>
+    <mrow>
+      <mo>(</mo>
+      <mfrac>
+        <mn>1</mn>
+        <mrow>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mn>90</mn>
+          </msub>
+          <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant="italic">
+              <mi>X</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+      </mfrac>
+      <mo>−</mo>
+      <mfrac>
+        <mn>1</mn>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>T</mi>
+          </mstyle>
+          <mn>90</mn>
+        </msub>
+      </mfrac>
+      <mo>)</mo>
+    </mrow>
+    <mrow>
+      <mo>[</mo>
+      <mn>12</mn>
+      <mo>−</mo>
+      <mfrac>
+        <msub>
+          <mi>c</mi>
+          <mn>2</mn>
+        </msub>
+        <mrow>
+          <msub>
+            <mi>n</mi>
+            <msub>
+              <mstyle mathvariant="italic">
+                <mi>λ</mi>
+              </mstyle>
+              <mn>0</mn>
+            </msub>
+          </msub>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>λ</mi>
+            </mstyle>
+            <mn>0</mn>
+          </msub>
+        </mrow>
+      </mfrac>
+      <mrow>
+        <mo>(</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <msub>
+              <mstyle mathvariant="italic">
+                <mi>T</mi>
+              </mstyle>
+              <mn>90</mn>
+            </msub>
+            <mrow>
+              <mo>(</mo>
+              <mstyle mathvariant="italic">
+                <mi>X</mi>
+              </mstyle>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+        </mfrac>
+        <mo>+</mo>
+        <mfrac>
+          <mn>1</mn>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mn>90</mn>
+          </msub>
+        </mfrac>
+        <mo>)</mo>
+      </mrow>
+      <mo>]</mo>
+    </mrow>
+    <mfrac>
+      <mrow>
+        <msubsup>
+          <mstyle mathvariant="italic">
+            <mi>T</mi>
+          </mstyle>
+          <mn>90</mn>
+          <mn>2</mn>
+        </msubsup>
+        <mstyle mathvariant="italic">
+          <mi>σ</mi>
+        </mstyle>
+      </mrow>
+      <msubsup>
+        <mstyle mathvariant="italic">
+          <mi>λ</mi>
+        </mstyle>
+        <mn>0</mn>
+        <mn>2</mn>
+      </msubsup>
+    </mfrac>
+    <msub>
+      <mi>u</mi>
+      <mstyle mathvariant="italic">
+        <mi>σ</mi>
+      </mstyle>
+    </msub>
+    <mo>,</mo>
+  </mstyle>
+</math><asciimath>u_{ii(T)_{90}} = (1/{ii(T)_{90}(ii(X))} - 1/{ii(T)_{90}})[12 - c_2/{n_{ii(lambda)_0}ii(lambda)_0}(1/{ii(T)_{90}(ii(X))} + 1/{ii(T)_{90}})] {ii(T)_{90}^2 ii(sigma)}/{ii(lambda)_0^2} u_{ii(sigma)} ,</asciimath></stem></formula>
+
+<p id="_170d7374-e070-0798-ab2e-8726021c6e14">where [<eref type="inline" bibitemid="SaundersWhite2003" citeas="[37]"><display-text>Saunders and White 2003</display-text></eref>]</p>
+
+<formula id="_67213719-3839-9e98-e817-3259f151f7d3" anchor="eq5"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+      <mn>0</mn>
+    </msub>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mrow>
+          <msubsup>
+            <mo>∫</mo>
+            <mn>0</mn>
+            <mo>∞</mo>
+          </msubsup>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>λ</mi>
+            </mstyle>
+            <mtext>S</mtext>
+          </msub>
+        </mrow>
+        <mrow>
+          <mo>(</mo>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+          <mo>)</mo>
+        </mrow>
+        <mtext>d</mtext>
+        <mstyle mathvariant="italic">
+          <mi>λ</mi>
+        </mstyle>
+      </mrow>
+      <mrow>
+        <mrow>
+          <msubsup>
+            <mo>∫</mo>
+            <mn>0</mn>
+            <mo>∞</mo>
+          </msubsup>
+          <mi>s</mi>
+        </mrow>
+        <mrow>
+          <mo>(</mo>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+          <mo>)</mo>
+        </mrow>
+        <mtext>d</mtext>
+        <mstyle mathvariant="italic">
+          <mi>λ</mi>
+        </mstyle>
+      </mrow>
+    </mfrac>
+    <mo>,</mo>
+  </mstyle>
+</math><asciimath>ii(lambda)_0 = {int_0^{oo} ii(lambda)_"S" (ii(lambda)) "d"ii(lambda)} / {int_0^{oo} s(ii(lambda)) "d"ii(lambda)} ,</asciimath></stem></formula>
+
+<p id="_d2113318-9859-9e4a-15a2-0fc803639c06">and</p>
+
+<formula id="_61a12760-284f-93f5-0602-de9207c4e3a6" anchor="eq6"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msup>
+      <mstyle mathvariant="italic">
+        <mi>σ</mi>
+      </mstyle>
+      <mn>2</mn>
+    </msup>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mrow>
+          <msubsup>
+            <mo>∫</mo>
+            <mn>0</mn>
+            <mo>∞</mo>
+          </msubsup>
+          <msup>
+            <mrow>
+              <mo>(</mo>
+              <mstyle mathvariant="italic">
+                <mi>λ</mi>
+              </mstyle>
+              <mo>−</mo>
+              <msub>
+                <mstyle mathvariant="italic">
+                  <mi>λ</mi>
+                </mstyle>
+                <mn>0</mn>
+              </msub>
+              <mo>)</mo>
+            </mrow>
+            <mn>2</mn>
+          </msup>
+        </mrow>
+        <mi>s</mi>
+        <mrow>
+          <mo>(</mo>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+          <mo>)</mo>
+        </mrow>
+        <mtext>d</mtext>
+        <mstyle mathvariant="italic">
+          <mi>λ</mi>
+        </mstyle>
+      </mrow>
+      <mrow>
+        <mrow>
+          <msubsup>
+            <mo>∫</mo>
+            <mn>0</mn>
+            <mo>∞</mo>
+          </msubsup>
+          <mi>s</mi>
+        </mrow>
+        <mrow>
+          <mo>(</mo>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+          <mo>)</mo>
+        </mrow>
+        <mtext>d</mtext>
+        <mstyle mathvariant="italic">
+          <mi>λ</mi>
+        </mstyle>
+      </mrow>
+    </mfrac>
+    <mo>,</mo>
+  </mstyle>
+</math><asciimath>ii(sigma)^2 = {int_0^{oo} (ii(lambda) - ii(lambda)_0)^2 s(ii(lambda)) "d"ii(lambda)} / {int_0^{oo} s(ii(lambda)) "d"ii(lambda)} ,</asciimath></stem></formula>
+
+<p id="_319777a7-08f5-bd2d-65e7-74b41a50e966">where <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>s</mi>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>s (ii(lambda))</asciimath></stem> is the relative spectral responsivity.</p>
+</clause>
+
+<clause id="_6f9f4b5f-dfeb-31e0-ff78-3c08f2871f73" obligation="normative">
+<title id="_424b3725-b5ed-545a-a232-354f0280e7a4">Measuring the ITS-90 fixed-point blackbody</title>
+<p id="_25e0d254-dfb6-d390-e7d2-ee31c4797c7f">The ITS-90 fixed point can be either the Ag, Au or Cu freezing point. The construction of blackbody cavities based on these fixed points is discussed in <em>Guide</em> Chapter 2 <em>Fixed points</em>. A measurement of the fixed-point plateau signal provides <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <mstyle mathvariant="italic">
+          <mi>X</mi>
+        </mstyle>
+        <mo>)</mo>
+      </mrow>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(S) (ii(T)_{90} (ii(X)))</asciimath></stem> in <xref target="eq2"/>. From a practical point of view, both sides of <xref target="eq2"/> can be divided by the ratio <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>ε</mi>
+    </mstyle>
+    <mo>/</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>ε</mi>
+      </mstyle>
+      <mi mathvariant="normal">X</mi>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(epsilon) // ii(epsilon)_X</asciimath></stem>, whereas discussed above, the emissivity values can be considered as constants. Then the measured fixed-point signal can be ‘emissivity-corrected’, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
+    <mo>′</mo>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <mstyle mathvariant="italic">
+          <mi>X</mi>
+        </mstyle>
+        <mo>)</mo>
+      </mrow>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <mstyle mathvariant="italic">
+          <mi>X</mi>
+        </mstyle>
+        <mo>)</mo>
+      </mrow>
+      <mo>)</mo>
+    </mrow>
+    <mo>/</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>ε</mi>
+      </mstyle>
+      <mi mathvariant="normal">X</mi>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(S)'(ii(T)_{90} (ii(X))) = ii(S) (ii(T)_{90} (ii(X)))//ii(epsilon)_X</asciimath></stem>,to represent an equivalent true blackbody signal.</p>
+
+<p id="_dc52c91d-80b3-4732-7615-9028980ab1ed">The uncertainty in the realization of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem> arises from uncertainties associated with determining <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
+    <mo>′</mo>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <mstyle mathvariant="italic">
+          <mi>X</mi>
+        </mstyle>
+        <mo>)</mo>
+      </mrow>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(S)'(ii(T)_{90} (ii(X)))</asciimath></stem>: the determination of the fixed-point effective cavity emissivity, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>ε</mi>
+      </mstyle>
+      <mi mathvariant="normal">X</mi>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(epsilon)_X</asciimath></stem>; the effects of ambient conditions on the thermometer signal; and noise in thedetector and amplifier. These uncertainty components propagate according to [<eref type="inline" bibitemid="Saunders2011" citeas="[35]"><display-text>Saunders 2011</display-text></eref>]</p>
+
+<formula id="_09e8d379-d994-3444-68ed-55c090080801" anchor="eq7"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mi>n</mi>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+    </msub>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <msub>
+          <mi>u</mi>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>λ</mi>
+            </mstyle>
+            <mn>0</mn>
+          </msub>
+        </msub>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+          <mn>0</mn>
+        </msub>
+        <msup>
+          <mstyle mathvariant="italic">
+            <mi>T</mi>
+          </mstyle>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+      <msub>
+        <mi>c</mi>
+        <mn>2</mn>
+      </msub>
+    </mfrac>
+    <mfrac>
+      <msub>
+        <mi>u</mi>
+        <mrow>
+          <mstyle mathvariant="italic">
+            <mi>S</mi>
+          </mstyle>
+          <mo>′</mo>
+          <mrow>
+            <mo>(</mo>
+            <msub>
+              <mstyle mathvariant="italic">
+                <mi>T</mi>
+              </mstyle>
+              <mn>90</mn>
+            </msub>
+            <mrow>
+              <mo>(</mo>
+              <mstyle mathvariant="italic">
+                <mi>X</mi>
+              </mstyle>
+              <mo>)</mo>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+      </msub>
+      <mrow>
+        <mstyle mathvariant="italic">
+          <mi>S</mi>
+        </mstyle>
+        <mo>′</mo>
+        <mrow>
+          <mo>(</mo>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mn>90</mn>
+          </msub>
+          <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant="italic">
+              <mi>X</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </mfrac>
+    <mo>.</mo>
+  </mstyle>
+</math><asciimath>n_{ii(T)_{90}} = {u_{ii(lambda)_0} ii(lambda)_0 ii(T)^2} / {c_2} {u_{ii(S)' (ii(T)_{90}(ii(X)))}} / {ii(S)' (ii(T)_{90} (ii(X)))} .</asciimath></stem></formula>
+
+<p id="_d4300c96-687d-7f15-4dab-32562de6252f">Additionally, while the value of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>X</mi>
+      </mstyle>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(T)_{90} (ii(X))</asciimath></stem> is assigned as a defined value with zero uncertainty, uncertainties in the actual temperature of the fixed-point blackbody cavity arise from impurities in the fixed-point metal (see <em>Guide</em> Section 2.1 <em>Influence of impurities</em>), a temperature drop across the cavity bottom due to the finite thermalresistance of the cavity material, and uncertainties associated with identifying the fixed-point plateau. These propagate according to [<eref type="inline" bibitemid="Saunders2011" citeas="[35]"><display-text>Saunders 2011</display-text></eref>]</p>
+
+<formula id="_3f12a60b-4e3a-e3df-34e9-48615b2b9d6e" anchor="eq8"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mi>u</mi>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+    </msub>
+    <mo>=</mo>
+    <mo>−</mo>
+    <mfrac>
+      <msubsup>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+        <mn>2</mn>
+      </msubsup>
+      <msup>
+        <mrow>
+          <mo>(</mo>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mn>90</mn>
+          </msub>
+          <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant="italic">
+              <mi>X</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mn>2</mn>
+      </msup>
+    </mfrac>
+    <msub>
+      <mi>u</mi>
+      <mrow>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+          </mstyle>
+          <mn>90</mn>
+        </msub>
+        <mrow>
+          <mo>(</mo>
+          <mstyle mathvariant="italic">
+            <mi>X</mi>
+          </mstyle>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </msub>
+    <mo>.</mo>
+  </mstyle>
+</math><asciimath>u_{ii(T)_{90}} = - {ii(T)_{90}^2}/{(ii(T)_{90} (ii(X)))^2} u_{ii(ii(T))_{90}(ii(X))} .</asciimath></stem></formula>
+</clause>
+
+<clause id="_2fd319ac-8e19-b3c9-69ab-6a701edea2d2" obligation="normative">
+<title id="_6f8b6e82-831b-184f-3982-49ebb3e851d9">Measuring the source of unknown temperature</title>
+<p id="_dd54014e-473e-ed57-2e53-69c079f2f3ce">As for the fixed-point signal discussed above, the signal, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(S) (ii(T)_{90})</asciimath></stem>, measured at the unknown temperature should be corrected for the emissivity of the source, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>ε</mi>
+    </mstyle>
+  </mstyle>
+</math><asciimath>ii(epsilon)</asciimath></stem>: <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
+    <mo>′</mo>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+    <mo>/</mo>
+    <mstyle mathvariant="italic">
+      <mi>ε</mi>
+    </mstyle>
+  </mstyle>
+</math><asciimath>ii(S)' (ii(T)_{90}) = ii(S) (ii(T)_{90})//ii(epsilon)</asciimath></stem>.In addition to this emissivity correction, the source signal must alsobe corrected for the size-of-source effect (SSE) and non-linearity (NL) (see <xref target="cls_4"/> and <xref target="cls_5"/>). Both of these corrections must be determined with respect to the ‘reference’ conditions of the fixed point. The uncertainty in the realization of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem> associated with the determination of this corrected signal, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>S</mi>
+    </mstyle>
+    <msub>
+      <mo>′</mo>
+      <mtext>SSE,NL</mtext>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(S)'_{"SSE,NL"} (ii(T)_{90})</asciimath></stem>, arises from the emissivity of the source, the SSE and NL corrections, determination of any gain ratios for multi-gain amplifiers, ambient conditions, drift in the thermometer characteristics, and detector and amplifier noise. These uncertainties propagate according to [<eref type="inline" bibitemid="Saunders2011" citeas="[35]"><display-text>Saunders 2011</display-text></eref>]</p>
+
+<formula id="_497df942-7258-79e9-85b6-5ccbdd7da5a7" anchor="eq9"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mi>u</mi>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+    </msub>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <msub>
+          <mi>n</mi>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>λ</mi>
+            </mstyle>
+            <mn>0</mn>
+          </msub>
+        </msub>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+          <mn>0</mn>
+        </msub>
+        <msup>
+          <mstyle mathvariant="italic">
+            <mi>T</mi>
+          </mstyle>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+      <msub>
+        <mi>c</mi>
+        <mn>2</mn>
+      </msub>
+    </mfrac>
+    <mfrac>
+      <msub>
+        <mi>u</mi>
+        <mrow>
+          <mstyle mathvariant="italic">
+            <mi>S</mi>
+          </mstyle>
+          <msub>
+            <mo>′</mo>
+            <mtext>SSE,NL</mtext>
+          </msub>
+          <mrow>
+            <mo>(</mo>
+            <msub>
+              <mstyle mathvariant="italic">
+                <mi>T</mi>
+              </mstyle>
+              <mn>90</mn>
+            </msub>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+      </msub>
+      <mrow>
+        <mstyle mathvariant="italic">
+          <mi>S</mi>
+        </mstyle>
+        <msub>
+          <mo>′</mo>
+          <mtext>SSE,NL</mtext>
+        </msub>
+        <mrow>
+          <mo>(</mo>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mn>90</mn>
+          </msub>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </mfrac>
+    <mo>.</mo>
+  </mstyle>
+</math><asciimath>u_{ii(T)_{90}} = {n_{ii(lambda)_0} ii(lambda)_0 ii(T)^2}/{c_2} {u_{ii(S)'_{"SSE,NL"} (ii(T)_{90})}} / {ii(S)'_{"SSE,NL"} (ii(T)_{90})} .</asciimath></stem></formula>
+</clause>
+
+<clause id="_917b01ed-1262-064b-bb96-ce21d331edd5" obligation="normative">
+<title id="_dbeb3823-b212-8ecc-e173-4b7bec7be637">Calculating <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem> from the measured signal ratio</title>
+<p id="_d0e53139-3630-9066-64c6-94267a670548">Rewriting <xref target="eq2"/> as suggested above, and writing it in terms of the relative spectral responsivity <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>s</mi>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>s (ii(lambda))</asciimath></stem>, gives</p>
+
+<formula id="_0f525baa-703d-83c5-3684-c9a06d8e3a2f" anchor="eq10"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mi>r</mi>
+    <mo>′</mo>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mstyle mathvariant="italic">
+          <mi>S</mi>
+        </mstyle>
+        <msub>
+          <mo>′</mo>
+          <mtext>SSE,NL</mtext>
+        </msub>
+        <mrow>
+          <mo>(</mo>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mn>90</mn>
+          </msub>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+      <mrow>
+        <mstyle mathvariant="italic">
+          <mi>S</mi>
+        </mstyle>
+        <mo>′</mo>
+        <mrow>
+          <mo>(</mo>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mn>90</mn>
+          </msub>
+          <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant="italic">
+              <mi>X</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </mfrac>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mrow>
+          <msubsup>
+            <mo>∫</mo>
+            <mn>0</mn>
+            <mo>∞</mo>
+          </msubsup>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>L</mi>
+            </mstyle>
+            <mstyle mathvariant="italic">
+              <mi>λ</mi>
+            </mstyle>
+          </msub>
+        </mrow>
+        <mrow>
+          <mo>(</mo>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mn>90</mn>
+          </msub>
+          <mo>)</mo>
+        </mrow>
+        <mi>s</mi>
+        <mrow>
+          <mo>(</mo>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+          <mo>)</mo>
+        </mrow>
+        <mtext>d</mtext>
+        <mstyle mathvariant="italic">
+          <mi>λ</mi>
+        </mstyle>
+      </mrow>
+      <mrow>
+        <mrow>
+          <msubsup>
+            <mo>∫</mo>
+            <mn>0</mn>
+            <mo>∞</mo>
+          </msubsup>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>L</mi>
+            </mstyle>
+            <mstyle mathvariant="italic">
+              <mi>λ</mi>
+            </mstyle>
+          </msub>
+        </mrow>
+        <mrow>
+          <mo>(</mo>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mn>90</mn>
+          </msub>
+          <mrow>
+            <mo>(</mo>
+            <mstyle mathvariant="italic">
+              <mi>X</mi>
+            </mstyle>
+            <mo>)</mo>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mi>s</mi>
+        <mrow>
+          <mo>(</mo>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+          <mo>)</mo>
+        </mrow>
+        <mtext>d</mtext>
+        <mstyle mathvariant="italic">
+          <mi>λ</mi>
+        </mstyle>
+      </mrow>
+    </mfrac>
+    <mo>,</mo>
+  </mstyle>
+</math><asciimath>r' = {ii(S)'_{"SSE,NL"} (ii(T)_{90})}/{ii(S)' (ii(T)_{90} (ii(X)))} = {int_0^{oo} ii(L)_{ii(lambda)} (ii(T)_{90}) s(ii(lambda)) "d"ii(lambda)}/{int_0^{oo} ii(L)_{ii(lambda)} (ii(T)_{90} (ii(X))) s(ii(lambda)) "d"ii(lambda)} ,</asciimath></stem></formula>
+
+<p id="_fc91b315-05be-ccf6-383b-42bae49a9f35">where <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>r</mi>
+    <mo>′</mo>
+  </mstyle>
+</math><asciimath>r'</asciimath></stem> is the measured signal ratio corrected for emissivity, SSE, and non-linearity. The denominator on the right-hand side is simply a constant, which will be referred to as <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>I</mi>
+      </mstyle>
+      <mi mathvariant="normal">X</mi>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(I)_X</asciimath></stem> (i.e. <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>I</mi>
+      </mstyle>
+      <mi mathvariant="normal">X</mi>
+    </msub>
+    <mo>=</mo>
+    <mrow>
+      <msubsup>
+        <mo>∫</mo>
+        <mn>0</mn>
+        <mo>∞</mo>
+      </msubsup>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>L</mi>
+        </mstyle>
+        <mstyle mathvariant="italic">
+          <mi>λ</mi>
+        </mstyle>
+      </msub>
+    </mrow>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mstyle mathvariant="italic">
+          <mi>T</mi>
+        </mstyle>
+        <mn>90</mn>
+      </msub>
+      <mrow>
+        <mo>(</mo>
+        <mstyle mathvariant="italic">
+          <mi>X</mi>
+        </mstyle>
+        <mo>)</mo>
+      </mrow>
+      <mo>)</mo>
+    </mrow>
+    <mi>s</mi>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+      <mo>)</mo>
+    </mrow>
+    <mtext>d</mtext>
+    <mstyle mathvariant="italic">
+      <mi>λ</mi>
+    </mstyle>
+  </mstyle>
+</math><asciimath>ii(I)_X = int_0^{oo} ii(L)_{ii(lambda)}(ii(T)_{90} (ii(X))) s(ii(lambda)) "d"ii(lambda)</asciimath></stem>). Solving <xref target="eq10"/> for <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem> requires an iterative method. One such method is the Newton-Raphson algorithm, which for <xref target="eq10"/> can be written as</p>
+
+<formula id="_0a4fccf7-3010-af5a-9fd0-3e1976fb3401" anchor="eq11"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mrow>
+        <mn>90</mn>
+        <mo>,</mo>
+        <mi>i</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo>=</mo>
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mrow>
+        <mn>90</mn>
+        <mo>,</mo>
+        <mi>i</mi>
+      </mrow>
+    </msub>
+    <mo>+</mo>
+    <mfrac>
+      <mrow>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>I</mi>
+          </mstyle>
+          <mi mathvariant="normal">X</mi>
+        </msub>
+        <mi>r</mi>
+        <mo>′</mo>
+        <mo>−</mo>
+        <mrow>
+          <msubsup>
+            <mo>∫</mo>
+            <mn>0</mn>
+            <mo>∞</mo>
+          </msubsup>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>L</mi>
+            </mstyle>
+            <mstyle mathvariant="italic">
+              <mi>λ</mi>
+            </mstyle>
+          </msub>
+        </mrow>
+        <mrow>
+          <mo>(</mo>
+          <msub>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mrow>
+              <mn>90</mn>
+              <mo>,</mo>
+              <mi>i</mi>
+            </mrow>
+          </msub>
+          <mo>)</mo>
+        </mrow>
+        <mi>s</mi>
+        <mrow>
+          <mo>(</mo>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+          <mo>)</mo>
+        </mrow>
+        <mtext>d</mtext>
+        <mstyle mathvariant="italic">
+          <mi>λ</mi>
+        </mstyle>
+      </mrow>
+      <mrow>
+        <mfrac>
+          <msub>
+            <mi>c</mi>
+            <mn>2</mn>
+          </msub>
+          <msubsup>
+            <mstyle mathvariant="italic">
+              <mi>T</mi>
+            </mstyle>
+            <mrow>
+              <mn>90</mn>
+              <mo>,</mo>
+              <mi>i</mi>
+            </mrow>
+            <mn>2</mn>
+          </msubsup>
+        </mfrac>
+        <mrow>
+          <msubsup>
+            <mo>∫</mo>
+            <mn>0</mn>
+            <mo>∞</mo>
+          </msubsup>
+          <mfrac>
+            <mrow>
+              <msub>
+                <mstyle mathvariant="italic">
+                  <mi>L</mi>
+                </mstyle>
+                <mstyle mathvariant="italic">
+                  <mi>λ</mi>
+                </mstyle>
+              </msub>
+              <mrow>
+                <mo>(</mo>
+                <msub>
+                  <mstyle mathvariant="italic">
+                    <mi>T</mi>
+                  </mstyle>
+                  <mrow>
+                    <mn>90</mn>
+                    <mo>,</mo>
+                    <mi>i</mi>
+                  </mrow>
+                </msub>
+                <mo>)</mo>
+              </mrow>
+              <mi>s</mi>
+              <mrow>
+                <mo>(</mo>
+                <mstyle mathvariant="italic">
+                  <mi>λ</mi>
+                </mstyle>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+            <mrow>
+              <msub>
+                <mi>n</mi>
+                <mstyle mathvariant="italic">
+                  <mi>λ</mi>
+                </mstyle>
+              </msub>
+              <mstyle mathvariant="italic">
+                <mi>λ</mi>
+              </mstyle>
+              <mrow>
+                <mo>[</mo>
+                <mn>1</mn>
+                <mo>−</mo>
+                <mrow>
+                  <mo rspace="thickmathspace"/>
+                  <mrow>
+                    <mi>exp</mi>
+                    <mrow>
+                      <mo>(</mo>
+                      <mo>−</mo>
+                      <msub>
+                        <mi>c</mi>
+                        <mn>2</mn>
+                      </msub>
+                      <mo>/</mo>
+                      <mrow>
+                        <mo>(</mo>
+                        <msub>
+                          <mi>n</mi>
+                          <mstyle mathvariant="italic">
+                            <mi>λ</mi>
+                          </mstyle>
+                        </msub>
+                        <mstyle mathvariant="italic">
+                          <mi>λ</mi>
+                        </mstyle>
+                        <msub>
+                          <mstyle mathvariant="italic">
+                            <mi>T</mi>
+                          </mstyle>
+                          <mrow>
+                            <mn>90</mn>
+                            <mo>,</mo>
+                            <mi>i</mi>
+                          </mrow>
+                        </msub>
+                        <mo>)</mo>
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                  </mrow>
+                </mrow>
+                <mo>]</mo>
+              </mrow>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mtext>d</mtext>
+        <mstyle mathvariant="italic">
+          <mi>λ</mi>
+        </mstyle>
+      </mrow>
+    </mfrac>
+    <mo>,</mo>
+  </mstyle>
+</math><asciimath>ii(T)_{90,i+1} = ii(T)_{90,i} + {ii(I)_X r' - int_0^{oo} ii(L)_{ii(lambda)} (ii(T)_{90,i}) s(ii(lambda))"d"ii(lambda)}/{{c_2}/{ii(T)_{90,i}^2} int_0^{oo} {ii(L)_{ii(lambda)} (ii(T)_{90,i}) s(ii(lambda))}/{n_{ii(lambda)} ii(lambda) [1 - exp(- c_2 // (n_{ii(lambda)} ii(lambda) ii(T)_{90,i}))]} "d"ii(lambda)} ,</asciimath></stem></formula>
+
+<p id="_2f1a3698-203d-b44f-6db0-2ac8ffbe0ea8">where <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>i</mi>
+  </mstyle>
+</math><asciimath>i</asciimath></stem> is an index numbering the iterations, and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mrow>
+        <mn>90</mn>
+        <mo>,</mo>
+        <mn>0</mn>
+      </mrow>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90,0}</asciimath></stem> is an arbitrary initial guess at the temperature <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem>. If <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mrow>
+        <mn>90</mn>
+        <mo>,</mo>
+        <mn>0</mn>
+      </mrow>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90,0}</asciimath></stem> is chosen to be, say, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>2250</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>2250 "unitsml(K)"</asciimath></stem>, then <xref target="eq11"/> converges to within <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>0.1</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>0.1 "unitsml(mK)"</asciimath></stem> of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem> in fewer than 10 iterations for any value of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem> between the silver point and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>3300</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>3300 "unitsml(K)"</asciimath></stem> [<eref type="inline" bibitemid="Saunders2003" citeas="[34]"><display-text>Saunders 2003</display-text></eref>].</p>
+
+<p id="_49829c34-d30e-00fb-f208-b9b141874bb1">An alternative method for calculating <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem> from the measured signal ratio is to use the Planck version of the Sakuma-Hattori equation [<eref type="inline" bibitemid="Sakuma1997" citeas="[32]"><display-text>Sakuma and Kobayashi 1997</display-text></eref>] in ratio form. While this involves a small approximation (for relatively narrow bandwidths) [<eref type="inline" bibitemid="Saunders2003" citeas="[34]"><display-text>Saunders and White 2003</display-text></eref>], it enables an analytic determination of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem> to be made:</p>
+
+<formula id="_43af26cf-8816-2f68-6d35-1606d7a8918a" anchor="eq12"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+    <mi>≈</mi>
+    <mfrac>
+      <msub>
+        <mi>c</mi>
+        <mn>2</mn>
+      </msub>
+      <mrow>
+        <msub>
+          <mi>n</mi>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+        </msub>
+        <msub>
+          <mstyle mathvariant="italic">
+            <mi>λ</mi>
+          </mstyle>
+          <mn>0</mn>
+        </msub>
+        <mrow>
+          <mo>(</mo>
+          <mn>1</mn>
+          <mo>−</mo>
+          <mn>6</mn>
+          <msup>
+            <mstyle mathvariant="italic">
+              <mi>σ</mi>
+            </mstyle>
+            <mn>2</mn>
+          </msup>
+          <mo>/</mo>
+          <msubsup>
+            <mstyle mathvariant="italic">
+              <mi>λ</mi>
+            </mstyle>
+            <mn>0</mn>
+            <mn>2</mn>
+          </msubsup>
+          <mo>)</mo>
+        </mrow>
+      </mrow>
+    </mfrac>
+    <mrow>
+      <mo>[</mo>
+      <mfrac>
+        <mn>1</mn>
+        <mrow>
+          <mrow>
+            <mo rspace="thickmathspace"/>
+            <mrow>
+              <mi>ln</mi>
+              <mrow>
+                <mo>[</mo>
+                <mrow>
+                  <mo rspace="thickmathspace"/>
+                  <mrow>
+                    <mi>exp</mi>
+                    <mrow>
+                      <mo>(</mo>
+                      <mfrac>
+                        <msub>
+                          <mi>c</mi>
+                          <mn>2</mn>
+                        </msub>
+                        <mrow>
+                          <msub>
+                            <mi>n</mi>
+                            <mstyle mathvariant="italic">
+                              <mi>λ</mi>
+                            </mstyle>
+                          </msub>
+                          <msub>
+                            <mstyle mathvariant="italic">
+                              <mi>λ</mi>
+                            </mstyle>
+                            <mn>0</mn>
+                          </msub>
+                          <mrow>
+                            <mo>(</mo>
+                            <mn>1</mn>
+                            <mo>−</mo>
+                            <mn>6</mn>
+                            <msup>
+                              <mstyle mathvariant="italic">
+                                <mi>σ</mi>
+                              </mstyle>
+                              <mn>2</mn>
+                            </msup>
+                            <mo>/</mo>
+                            <msubsup>
+                              <mstyle mathvariant="italic">
+                                <mi>λ</mi>
+                              </mstyle>
+                              <mn>0</mn>
+                              <mn>2</mn>
+                            </msubsup>
+                            <mo>)</mo>
+                          </mrow>
+                          <msub>
+                            <mstyle mathvariant="italic">
+                              <mi>T</mi>
+                            </mstyle>
+                            <mn>90</mn>
+                          </msub>
+                          <mrow>
+                            <mo>(</mo>
+                            <mstyle mathvariant="italic">
+                              <mi>X</mi>
+                            </mstyle>
+                            <mo>)</mo>
+                          </mrow>
+                          <mo>+</mo>
+                          <msub>
+                            <mi>c</mi>
+                            <mn>2</mn>
+                          </msub>
+                          <msup>
+                            <mstyle mathvariant="italic">
+                              <mi>σ</mi>
+                            </mstyle>
+                            <mn>2</mn>
+                          </msup>
+                          <mo>/</mo>
+                          <mn>2</mn>
+                          <msubsup>
+                            <mstyle mathvariant="italic">
+                              <mi>λ</mi>
+                            </mstyle>
+                            <mn>0</mn>
+                            <mn>2</mn>
+                          </msubsup>
+                        </mrow>
+                      </mfrac>
+                      <mo>)</mo>
+                    </mrow>
+                  </mrow>
+                </mrow>
+                <mo>+</mo>
+                <mi>r</mi>
+                <mo>′</mo>
+                <mo>−</mo>
+                <mn>1</mn>
+                <mo>]</mo>
+              </mrow>
+            </mrow>
+          </mrow>
+          <mo>−</mo>
+          <mrow>
+            <mo rspace="thickmathspace"/>
+            <mrow>
+              <mi>ln</mi>
+              <mrow>
+                <mo>(</mo>
+                <mi>r</mi>
+                <mo>′</mo>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+          </mrow>
+        </mrow>
+      </mfrac>
+      <mo>−</mo>
+      <mfrac>
+        <msup>
+          <mstyle mathvariant="italic">
+            <mi>σ</mi>
+          </mstyle>
+          <mn>2</mn>
+        </msup>
+        <mrow>
+          <mn>2</mn>
+          <msubsup>
+            <mstyle mathvariant="italic">
+              <mi>λ</mi>
+            </mstyle>
+            <mn>0</mn>
+            <mn>2</mn>
+          </msubsup>
+        </mrow>
+      </mfrac>
+      <mo>]</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(T)_{90} ~~ {c_2}/{n_{ii(lambda)} ii(lambda)_0 (1 - 6 ii(sigma)^2 // ii(lambda)_0^2)} [1/{ln[exp(c_2/{n_{ii(lambda)} ii(lambda)_0 (1 - 6 ii(sigma)^2 // ii(lambda)_0^2) ii(T)_{90}(ii(X)) + c_2 ii(sigma)^2 // 2 ii(lambda)_0^2}) + r' - 1] - ln (r')} - {ii(sigma)^2}/{2 ii(lambda)_0^2}]</asciimath></stem></formula>
+
+<p id="_1bd9e78e-d4fb-7983-8c5f-abf126f4ec0b">where <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+      <mn>0</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(lambda)_0</asciimath></stem> and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>σ</mi>
+    </mstyle>
+  </mstyle>
+</math><asciimath>ii(sigma)</asciimath></stem> are the mean wavelength and bandwidth, respectively, of the spectral responsivity, given by <xref target="eq5"/> and <xref target="eq6"/>.</p>
+
+<p id="_e80da4dd-4f4f-1bea-a196-1f227bc6c6c5">The uncertainty in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem> derived from <xref target="eq11"/> is given by the quadrature sum of <xref target="eq3"/>, <xref target="eq4"/>, <xref target="eq7"/>, <xref target="eq8"/>, and <xref target="eq9"/>, with the addition of any correlations where appropriate. There is a small additional uncertainty in deriving <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem> from <xref target="eq12"/>, arising from the approximation inherent in the Sakuma-Hattori equation [<eref type="inline" bibitemid="Saunders2004" citeas="[38]"><display-text>Saunders and White 2004</display-text></eref>].</p>
+</clause>
+</clause>
+
+<clause id="_edffde53-a780-c9db-1cec-85dce242ae78" obligation="normative">
+<title id="_13549330-79eb-c327-f5ed-495e6fd0d527">Standard radiation thermometers</title>
+<p id="_1b50ca67-5e72-ac3e-d853-4b5d1429ad92">The fundamental requirements embodied in <xref target="eq1"/> and <xref target="eq2"/> are that the instrument used, a radiation thermometer, be characterised using quasi-monochromatic or monochromatic radiation and that the reference source at the temperature <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>X</mi>
+      </mstyle>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>ii(T)_{90} (ii(X))</asciimath></stem> be a blackbody with a known emissivity. A radiation thermometer consists of an optical system which collects the radiant flux in a limited solid angle and in a well characterised spectral region at a distance from a source of radiation.</p>
+
+<clause id="_ac5a019b-4618-d86d-5619-b3e77b210d9d" obligation="normative">
+<title id="_325b497d-b5d6-2183-2e8e-180bcb1ff78f">Optical system</title>
+<p id="_d0735e73-41a8-61c3-9301-4ac6cb712967">Radiation thermometers can be constructed with several types of optical systems. Radiation thermometers do not require large numerical apertures, and the <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>f</mi>
+    <mo>/</mo>
+    <mi>#</mi>
+    <mi>s</mi>
+  </mstyle>
+</math><asciimath>f//#s</asciimath></stem> are typically in the range of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>f</mi>
+    <mo>/</mo>
+    <mn>10</mn>
+  </mstyle>
+</math><asciimath>f//10</asciimath></stem> to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>f</mi>
+    <mo>/</mo>
+    <mn>20</mn>
+  </mstyle>
+</math><asciimath>f//20</asciimath></stem>. The part of the source viewed by the radiation thermometer is limited in size, since such targets can more readily be arranged to be approximately isothermal and have a high emissivity. The lenses (or mirrors) of the radiation thermometer should as far as practicable be corrected for aberrations so that they become diffraction limited at all apertures at which they will be used. It is convenient if the lenses are achromatic, especially if the radiation thermometer works at a wavelength in the infrared, so as to allow for visual focusing via an auxiliary viewing system. All lenses and mirrors in the system should be of high optical quality and kept scrupulously clean to minimise the amount of radiation scattered by imperfections and surface contamination.</p>
+
+<p id="_3730e6ab-0e82-ff21-084d-61bfc6be06ce">A further point to consider in designing an optical system is that of stray radiation from outside the target area that can propagate through the system by diffraction, reflection, or scattering from the mechanical or optical elements. Baffles and grooves are effective in suppressing unwanted radiation. Good results are also obtained by the use of a glare stop and by careful positioning of the aperture stop [<eref type="inline" bibitemid="Fischer1989" citeas="[11]"><display-text>Fischer and Jung 1989</display-text></eref>, <eref type="inline" bibitemid="Yoon2005" citeas="[42]"><display-text>Yoon <em>et al.</em> 2005</display-text></eref>]. See also the size-of-source effect in <xref target="cls_4"/>.</p>
+
+<p id="_4e1aa608-c9fc-26f9-3362-31bbc4d7e73c">The responsivity of radiation thermometers could be affected by polarization of radiation, and this dependence will need to be accounted for, particularly when the radiation thermometer is used for measurements of sources not governed by Lambert’s law, as, for example, for tungsten strip lamps and blackbodies with safety windows. The approach for attacking this problem has been given in the paper of Goebel and Stock (1998).</p>
+</clause>
+
+<clause id="_25b90620-7aec-9c72-69a1-d73c241d82b3" obligation="normative">
+<title id="_284f6511-fd4d-72a2-2f5d-c78dc0b1b4d7">Spectral filters</title>
+<p id="_5744451c-0490-6dbb-a38c-0a5c44b88032">The spectral filtering of the radiation thermometer responsivity can be performed in several ways, but in the majority of cases interference filters are used. High-quality interference filters with high peak transmittances, narrow bandwidths and high degrees of blocking outside the passband are available from many commercial sources. For reducing the environmental effects of changes in the humidity and ambient temperature, ion-assisted or hard-coated interference filters should be used.</p>
+
+<p id="_48fdbe75-3bf4-bd55-1132-5e73a36f683c">For a given type of filter (Gaussian, rectangular or other shape), the smallest detectable temperature difference due to the error resulting from imperfect blocking outside the passband is inversely proportional to the filter bandwidth: this suggests that a wide-band filter is desirable. However, the use of such filters requires an accurate knowledge of the relative spectral responsivity, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>s</mi>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>s (ii(lambda))</asciimath></stem>, of the thermometer, and of the spectral emissivity of the source; on the other hand, the uncertainty due to imperfect knowledge of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>s</mi>
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math><asciimath>s (ii(lambda))</asciimath></stem> within the passband is directly proportional to the bandwidth, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>σ</mi>
+    </mstyle>
+  </mstyle>
+</math><asciimath>ii(sigma)</asciimath></stem>: This suggests that a narrow-bandwidth filter is desirable. The use of <xref target="eq12"/> for calculating <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>T</mi>
+      </mstyle>
+      <mn>90</mn>
+    </msub>
+  </mstyle>
+</math><asciimath>ii(T)_{90}</asciimath></stem> analytically also requires narrow bandwidths, and the uncertainty <xref target="eq3"/>, <xref target="eq4"/>, <xref target="eq7"/>, <xref target="eq8"/>, and <xref target="eq9"/> are all based on a narrow-bandwidth approximation.</p>
+
+<p id="_d1eb5d36-4c66-dc30-9d3a-ae4877090230">It is very important that wavelengths outside the passband in regions where the detector is still sensitive ideally being blocked to a level less than 1 part in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msup>
+      <mn>10</mn>
+      <mn>6</mn>
+    </msup>
+  </mstyle>
+</math><asciimath>10^6</asciimath></stem> of those inside the passband. For a filter bandwidth of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>10</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_nm">
+      <mstyle mathvariant="normal">
+        <mi>nm</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>10 "unitsml(nm)"</asciimath></stem> blocking to 1 part in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msup>
+      <mn>10</mn>
+      <mn>6</mn>
+    </msup>
+  </mstyle>
+</math><asciimath>10^6</asciimath></stem> is required, and for a bandwidth near <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>1</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_nm">
+      <mstyle mathvariant="normal">
+        <mi>nm</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>1 "unitsml(nm)"</asciimath></stem> blocking has to be to about 1 part in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msup>
+      <mn>10</mn>
+      <mn>7</mn>
+    </msup>
+  </mstyle>
+</math><asciimath>10^7</asciimath></stem>. The effects of any secondary peaks from the filter also have to be eliminated. If the interference filter itself does not adequately attenuate these undesired wavelengths, an auxiliary blocking filter can be added for this purpose. In most cases, residual transmission at longer wavelengths is more troublesome because radiation thermometers typically operate on the shorter-wavelength side of the peak of the blackbody spectral radiance curve.</p>
+
+<p id="_8ad70db6-9410-e692-6478-de57ed2af390">Because the spectral transmittance of an interference filter can vary with the filter temperature (up to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>0.02</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_nm">
+      <mstyle mathvariant="normal">
+        <mi>nm</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+    <mo>/</mo>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>0.02 "unitsml(nm)"//"unitsml(degC)"</asciimath></stem> or <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>0.03</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_nm">
+      <mstyle mathvariant="normal">
+        <mi>nm</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+    <mo>/</mo>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>0.03 "unitsml(nm)"//"unitsml(degC)"</asciimath></stem> between <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>660</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_nm">
+      <mstyle mathvariant="normal">
+        <mi>nm</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>660 "unitsml(nm)"</asciimath></stem> and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>900</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_nm">
+      <mstyle mathvariant="normal">
+        <mi>nm</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>900 "unitsml(nm)"</asciimath></stem>) and with angle of incidence of the incoming radiation (about 4 parts in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msup>
+      <mn>10</mn>
+      <mn>4</mn>
+    </msup>
+  </mstyle>
+</math><asciimath>10^4</asciimath></stem> per angular degree), the filter temperature should be controlled (room temperature control is usually sufficient) and the transmittance measured <em>in situ</em> or, if not, with a similar radiation beam impinging at the same angle. This angle should be carefully chosen to eliminate unwanted reflections. Note also that the wavelength <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>λ</mi>
+    </mstyle>
+  </mstyle>
+</math><asciimath>ii(lambda)</asciimath></stem> appearing in <xref target="eq1"/> is specified as the wavelength in vacuum; if <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>λ</mi>
+    </mstyle>
+  </mstyle>
+</math><asciimath>ii(lambda)</asciimath></stem> for the filter is measured in air, then the refractive index of air, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>n</mi>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+    </msub>
+  </mstyle>
+</math><asciimath>n_{ii(lambda)}</asciimath></stem>, needs to be included, as in <xref target="eq2"/> (the value of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>n</mi>
+      <mstyle mathvariant="italic">
+        <mi>λ</mi>
+      </mstyle>
+    </msub>
+  </mstyle>
+</math><asciimath>n_{ii(lambda)}</asciimath></stem> is <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="false"><mn>1.00027</mn></mstyle></math><asciimath>1.00027</asciimath></stem> for air at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>20</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>20 "unitsml(degC)"</asciimath></stem> and normal atmospheric pressure and at a wavelength of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>650</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_nm">
+      <mstyle mathvariant="normal">
+        <mi>nm</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>650 "unitsml(nm)"</asciimath></stem> [<eref type="inline" bibitemid="Edlen1966" citeas="[8]"><display-text>Edlén 1966</display-text></eref>]; the influence of variations in humidity and CO<sub>2</sub> content are negligible for this purpose). Interference filters are also sensitive to polarization of radiation.</p>
+
+<p id="_5a2158d2-c2a2-0ad9-d672-a380cb036e0b">A diffraction or prism monochromator can also be used as a monochromatic filter. So doing, the possibility is provided to choose and to change the mean wavelength, to obtain high quality of limitation of the required portion of spectrum and to suppress radiation outside the bandwidth [<xref target="Pokhodoun1993"><display-text>Pokhodoun <em>et al</em>. 1993</display-text></xref>].</p>
+
+<p id="_e7fa0adf-89cf-c46e-cce3-141344d50738">When using a radiation thermometer to establish temperatures approximately above <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>2000</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>2000 "unitsml(K)"</asciimath></stem>, it may be necessary to use absorption filters or some other means of reducing the intensity of radiation reaching the detector. Any filters that are placed in the beam should be oriented so as to avoid reflections between them, which could subsequently reach the detector, and to avoid transmission through the interference filter at an angle to the axis. Either of these faults is likely to modify the mean wavelength (see <xref target="eq5"/>). The measurement of the filter transmission should be done in the identical conditions as it is used (geometry and angle of the incidence beam, the angle to an optical axis of radiation thermometer etc.)</p>
+</clause>
+
+<clause id="_a5a3a647-cfad-3414-b2b6-bea5431bedcf" obligation="normative">
+<title id="_1a7df5a5-799c-4e14-ae92-d63c949f22bc">Detectors</title>
+<p id="_07eaa51e-7d5a-842f-5d13-4506ab372305">The majority of radiation thermometers used for the realization of the ITS-90 applies a silicon photodiode since these photodiodes generally show better linearity and stability than photomultipliers. The linearity and stability of silicon detectors for spectral radiation thermometry have been studied extensively [<eref type="inline" bibitemid="Jung1979" citeas="[17]"><display-text>Jung 1979</display-text></eref>, <xref target="Coslovi1980"><display-text>Coslovi and Righini 1980</display-text></xref>, <eref type="inline" bibitemid="Schaefer1983" citeas="[40]"><display-text>Schaefer <em>et al</em>. 1983</display-text></eref>, <eref type="inline" bibitemid="Sakuma1992" citeas="[31]"><display-text>Sakuma <em>et al</em>. 1992</display-text></eref>].</p>
+
+<p id="_6abc2c9a-b77c-5683-175a-d6e42580ea77">It has been found that the departures from linearity increase with both increasing wavelength and increasing photocurrent. It has been shown [<eref type="inline" bibitemid="Jung1979" citeas="[17]"><display-text>Jung 1979</display-text></eref>] that if the photocurrent is kept within the range from <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>3</mn>
+    <mo>×</mo>
+    <msup>
+      <mn>10</mn>
+      <mrow>
+        <mo>−</mo>
+        <mn>10</mn>
+      </mrow>
+    </msup>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu4">
+      <mstyle mathvariant="normal">
+        <mi>A</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>3 xx 10^{-10} "unitsml(A)"</asciimath></stem> to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>1</mn>
+    <mo>×</mo>
+    <msup>
+      <mn>10</mn>
+      <mrow>
+        <mo>−</mo>
+        <mn>7</mn>
+      </mrow>
+    </msup>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu4">
+      <mstyle mathvariant="normal">
+        <mi>A</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>1 xx 10^{-7} "unitsml(A)"</asciimath></stem> and the wavelength in the range from <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>600</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_nm">
+      <mstyle mathvariant="normal">
+        <mi>nm</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>600 "unitsml(nm)"</asciimath></stem> to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>900</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_nm">
+      <mstyle mathvariant="normal">
+        <mi>nm</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>900 "unitsml(nm)"</asciimath></stem>, any non-linearity can easily be corrected within 2 parts in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msup>
+      <mn>10</mn>
+      <mn>4</mn>
+    </msup>
+  </mstyle>
+</math><asciimath>10^4</asciimath></stem> (see <xref target="eq9"/> for consequent errors in temperature). If the corrections for non-linearity are not made, errors some twenty times this amount can be encountered. Thus, for an accurate realization of the scale, it is important that the non-linearity be accounted for (see <xref target="cls_5"/>).</p>
+
+<p id="_7d58ee59-ab4d-b133-ae58-6387a2d978c6">In order to obtain optimum short-term stability and resolution, a silicon detector should be stabilised in temperature and operated in the photovoltaic (i.e. unbiased) mode. Jung has shown that drift, dark current, and noise are all lower for a silicon detector operated in this mode than for one operated in the photoconductive or biased mode. In some cases, it is necessary to make allowance, and to introduce corrections, for the spatial uniformity of responsivity of the silicon photodiode and for its dependence upon the polarization of the incident radiation [<eref type="inline" bibitemid="Jung1979" citeas="[17]"><display-text>Jung 1979</display-text></eref>, <eref type="inline" bibitemid="Goebel1998" citeas="[15]"><display-text>Goebel and Stock 1998</display-text></eref>].</p>
+</clause>
+</clause>
+
+<clause id="_c2d23e44-844a-21ca-6982-4a781b46a2c4" anchor="cls_4" obligation="normative">
+<title id="_d0604aa1-4321-e501-0a0c-c4aa9d2f7abb">Size-of-source effect</title>
+<p id="_08db472a-2044-0723-0ec2-1217375f9bb4">The size-of-source effect (SSE) in radiation thermometers arises due to scattering, refraction, and reflection of radiation within the optical system of the thermometer. The net result is that some radiation from within the nominal field of view is lost, and some radiation from outside the nominal field of view is detected. Thus, the measured signal depends on both the physical size of the source and the radiance distribution surrounding the source.</p>
+
+<p id="_eb5cb6b2-164d-68c5-e53c-899a2a38dd04">To reduce the SSE, the number of optical elements in the objective lens system should be reduced and selected for the lowest scatter. Optical modelling should be used to assess whether the optical performance from a reduced number of elements in the objective lens system is adequate. Since the SSE can also change due to the presence of dust on the objective, the SSE should be measured prior to any critical radiation thermometry determinations. The objective lens can be kept clean with a constant nitrogen or dry-air positive-pressure purge to reduce surface contaminations. At the expense of decreased throughput, any reduction of the aperture stop diameter will also reduce the SSE. A detailed methodical consideration of the problem associated with the determination of the SSE experimentally has been given [<eref type="inline" bibitemid="Bloembergen1997" citeas="[4]"><display-text>Bloembergen <em>et al</em>. 1997</display-text></eref>].</p>
+
+<p id="_ab9e0f65-93b0-b119-8982-253fe727824b">The SSE of a radiation thermometer is generally determined using one of two techniques. In the first technique, known as the direct method, the radiation thermometer is focused on a uniform radiance source (such as blackbody) whose aperture diameter can be varied. A plot of relative signal as a function of target diameter provides a measure of the SSE.</p>
+
+<p id="_3bdc5fd3-188d-483a-0bd3-3429375661e4">In the second technique, known as the indirect method, the radiation thermometer is focused on a uniform source (generally an integrating sphere with variable aperture size) in front of which is an opaque spot or a miniature blackbody whose diameter is slightly larger than the nominal target size of the thermometer. By taking the ratio of on-spot to off-spot radiances for each aperture, the SSE is determined [Machin and Ibrahim <eref type="inline" bibitemid="Machin1999a" citeas="[21]"><display-text>1999a</display-text></eref>, <eref type="inline" bibitemid="Machin1999b" citeas="[22]"><display-text>1999b</display-text></eref>].</p>
+
+<p id="_773b8722-165a-9f30-b8e2-c51cbeafed43">Analysis of the differences between the methods is discussed by [<eref type="inline" bibitemid="Machin2002" citeas="[20]"><display-text>Machin and Sergienko 2002</display-text></eref>, <eref type="inline" bibitemid="Sakuma2002" citeas="[33]"><display-text>Sakuma <em>et al</em>. 2002</display-text></eref>, <eref type="inline" bibitemid="Lowe2003" citeas="[19]"><display-text>Lowe <em>et al</em>. 2003</display-text></eref>, <eref type="inline" bibitemid="Bart2007" citeas="[1]"><display-text>Bart <em>et al</em>. 2007</display-text></eref>]. These differences are explained by source non-uniformity, inter-reflections, or different spectral radiance distributions for the sources.</p>
+
+<p id="_45577212-e7d0-5243-6be9-78e74d6d15e0">A modified method, which is similar to the traditional indirect one, having advantage in speed, ability to cover large target sizes, and ease of automation, but with some added mathematical complexity, is described by [<eref type="inline" bibitemid="Saunders2009" citeas="[36]"><display-text>Saunders and Edgar 2009</display-text></eref>]. Another method of SSE determination, which allows the SSE to be measured directly under the conditions of a real radiance field within a furnace, is described by [<eref type="inline" bibitemid="Matveyev2002" citeas="[23]"><display-text>Matveyev 2002</display-text></eref>]. A method of calculation for the lens aberration effect on the SSE is described by [<eref type="inline" bibitemid="Park2002" citeas="[26]"><display-text>Park and Kim 2002</display-text></eref>]. Yoon and co-workers have shown that the SSE can be reduced to less than <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>5</mn>
+    <mo>×</mo>
+    <msup>
+      <mn>10</mn>
+      <mrow>
+        <mo>−</mo>
+        <mn>5</mn>
+      </mrow>
+    </msup>
+  </mstyle>
+</math><asciimath>5 xx 10^{-5}</asciimath></stem> with commercial achromatic lenses with the introduction of a Lyot stop [<eref type="inline" bibitemid="Yoon2005" citeas="[42]"><display-text>Yoon <em>et al</em>. 2005</display-text></eref>].</p>
+</clause>
+
+<clause id="_671e173d-d9d4-0de9-d4f1-3718927c4c71" anchor="cls_5" obligation="normative">
+<title id="_4b5779a1-5997-cf8f-2a05-2c7087df978c">Non-linearity</title>
+<p id="_e5f138e7-8a50-b22f-06b6-21609b31d054">The experimentally measured ratio of detector signals at two temperatures represents the ratio of the blackbody radiances at these temperatures only insofar as the detector (and associated electronics) is linear. In practice, even the most linear detectors show some degree of non-linearity, which has to be accounted for in accurate scale realizations.</p>
+
+<p id="_7ad74c5d-8ca8-30a9-e406-cebfcdc5f1bc">The most common technique for measuring non-linearity consists of a flux doubling method employing two radiation sources (usually lamps) and a beam-splitting device, according to a scheme suggested by [<eref type="inline" bibitemid="Erminy1963" citeas="[10]"><display-text>Erminy 1963</display-text></eref>]. Other techniques that have been successfully applied in precision photoelectric thermometry rely on the use of sectored discs [<eref type="inline" bibitemid="Quinn1969" citeas="[28]"><display-text>Quinn and Ford 1969</display-text></eref>] and of attenuating filters [<xref target="Coslovi1980"><display-text>Coslovi and Righini 1980</display-text></xref>] and luminance dividers [<eref type="inline" bibitemid="Bonhoure1988" citeas="[5]"><display-text>Bonhoure and Pello 1988</display-text></eref>]. Useful information on the mathematical handling of non-linearity may be found in [<eref type="inline" bibitemid="Jung1979" citeas="[17]"><display-text>Jung 1979</display-text></eref>, <eref type="inline" bibitemid="Saunders2007" citeas="[39]"><display-text>Saunders and White 2007</display-text></eref>].</p>
+
+<p id="_fc5e23ba-acfe-cfe9-372c-bd7e3d54d4b4">Equipment allowing the measurement of non-linearity with a high degree of accuracy (standard uncertainty of about 0.01 % in the spectral range <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>400</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_nm">
+      <mstyle mathvariant="normal">
+        <mi>nm</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>400 "unitsml(nm)"</asciimath></stem> to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>800</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_nm">
+      <mstyle mathvariant="normal">
+        <mi>nm</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>800 "unitsml(nm)"</asciimath></stem>) within a range of radiation power covering five decades (from nanowatt to milliwatt) was developed and investigated by [<xref target="Fisher1993"><display-text>Fisher and Lei Fu 1993</display-text></xref>]. A system for measuring non-linearity using high-brightness light emitting diodes is described by [<eref type="inline" bibitemid="Park2005" citeas="[25]"><display-text>Park <em>et al</em>. 2005</display-text></eref>, <eref type="inline" bibitemid="Shin2005" citeas="[41]"><display-text>Shin <em>et al</em>. 2005</display-text></eref>].</p>
+
+<p id="_536cefe0-f4f9-a9ff-f56f-14369d9f2bb5">Since the photodiode detector is used in photovoltaic mode, the photocurrent measuring electrometer or the transimpedance amplifier should be calibrated at each of the gain settings used for measurements. This calibration must be traceable to electrical standards. Eppeldauer describes a technique to calibrate transimpedance amplifiers with measurements traceable to electrical standards [<eref type="inline" bibitemid="Eppeldauer2009" citeas="[9]"><display-text>Eppeldauer 2009</display-text></eref>].</p>
+</clause>
+
+<clause id="_7138403b-9c0e-5085-a7d5-6559d6117721" obligation="normative">
+<title id="_b6ee39bc-7f8c-8308-d8c2-dce4c31055fd">Uncertainty determinations</title>
+<p id="_f6518abe-936f-d2c0-390e-f94c498097a5">The uncertainties for the ITS-90 realizations of temperatures above the silver point have been thoroughly discussed in the documents written by the members of Working Group 5 <em>Radiation Thermometry</em> of the Consultative Committee for Thermometry [<eref type="inline" bibitemid="Fischer2003a" citeas="[12]"><display-text>Fischer <em>et al.</em> 2003a</display-text></eref>, <eref type="inline" bibitemid="Fischer2003b" citeas="[13]"><display-text>Fischer <em>et al.</em> 2003b</display-text></eref>].</p>
+</clause>
+
+
+</sections><bibliography><references id="_ea0168fe-31a1-55c2-b426-c5d6e0bea609" normative="false" obligation="informative">
+<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="Bart2007" id="_6b256571-8f80-cfa8-d664-23eeb6b9c765">
+  <formattedref format="application/x-isodoc+xml">Bart M, van der Ham E W M and Saunders P A (2007) “New Method to Determine the Size-of-Source Effect” <em>Int. J Thermophys</em> <strong>28</strong> 2111–2117</formattedref>
+  <docidentifier type="metanorma">[1]</docidentifier>
+</bibitem><bibitem anchor="Battuello1995" id="_099a5861-b91e-e5cb-a8ea-8dcc14cfa5a8">
+  <formattedref format="application/x-isodoc+xml">Battuello M, Ricolfi T and Wang L (1995) “Realization of the ITS-90 above <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>962</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>962 "unitsml(degC)"</asciimath></stem> with a photodiode-array radiation thermometer” <em>Metrologia</em> <strong>32</strong> 371-378</formattedref>
+  <docidentifier type="metanorma">[2]</docidentifier>
+</bibitem><bibitem anchor="Bedford1983" id="_dfd7b987-4bb4-41c2-e258-9f7f1b5eeba4">
+  <formattedref format="application/x-isodoc+xml">Bedford R E and Ma C K (1983) “Effects of uncertainties in detector responsivity in thermodynamic temperature measured with an optical pyrometer” <em>High Temp -High Pressures</em> <strong>15</strong> 119-130</formattedref>
+  <docidentifier type="metanorma">[3]</docidentifier>
+</bibitem><bibitem anchor="Bloembergen1997" id="_caae6190-b3c8-1481-bd1d-9d6488439cc5">
+  <formattedref format="application/x-isodoc+xml">Bloembergen P, Duan Y, Bosma R and Yuan Z (1997) “Characterization of radiation thermometers on size of source effect” <em>Proceedings of TEMPMEKO’96</em>, ed. by Marcarino P, Levrotto &amp; Bella, Torino, pp. 261-266</formattedref>
+  <docidentifier type="metanorma">[4]</docidentifier>
+</bibitem><bibitem anchor="Bonhoure1988" id="_1813d5cf-01ad-044c-3b08-f87c227b4556">
+  <formattedref format="application/x-isodoc+xml">Bonhoure J and Pello R (1988) “Determination of the Departure of the International Practical Temperature Scale of 1968 from Thermodynamic Temperature in the Region between <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>693</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>693 "unitsml(K)"</asciimath></stem> and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>904</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>904 "unitsml(K)"</asciimath></stem>” <em>Metrologia</em> <strong>25</strong> 99-105</formattedref>
+  <docidentifier type="metanorma">[5]</docidentifier>
+</bibitem><bibitem anchor="Coates1977" id="_fc16e0cb-934c-04b4-48d1-adbccf8b11bb">
+  <formattedref format="application/x-isodoc+xml">Coates P B (1977) “Wavelength specification in optical and photoelectric pyrometry”, <em>Metrologia</em> <strong>13</strong> 1-5</formattedref>
+  <docidentifier type="metanorma">[6]</docidentifier>
+</bibitem><bibitem anchor="CosloviL1980" id="_c3cfaaa6-def4-103d-2f20-d5c69f1f5572">
+  <formattedref format="application/x-isodoc+xml">CosloviL and Righini F (1980) “Fast Determination of Non-Linearity of Photodetectors” <em>Appl. Opt.</em> <strong>19</strong> 3200-3203</formattedref>
+  <docidentifier type="metanorma">[7]</docidentifier>
+</bibitem><bibitem anchor="Edlen1966" id="_182c3948-6b45-3616-e67a-157aa9f4b028">
+  <formattedref format="application/x-isodoc+xml">Edlén B (1966) “The Refractive Index of Air” <em>Metrologia</em> <strong>2</strong> 71</formattedref>
+  <docidentifier type="metanorma">[8]</docidentifier>
+</bibitem><bibitem anchor="Eppeldauer2009" id="_ca82b9fe-7263-4344-4457-05115e2ab129">
+  <formattedref format="application/x-isodoc+xml">Eppeldauer G P (2009) “Traceability of photocurrent measurements to electrical standards” <em>MAPAN — Journal of Metrology Society of India</em> <strong>24</strong>(3) 193-202.</formattedref>
+  <docidentifier type="metanorma">[9]</docidentifier>
+</bibitem><bibitem anchor="Erminy1963" id="_4a7cd766-258f-1bb7-c605-8eb0c76e9aa8">
+  <formattedref format="application/x-isodoc+xml">Erminy D E (1963) “Scheme for Obtaining Integral and Fractional Multiples of a Given Radiance” <em>J. Opt. Soc. Am.</em> <strong>53</strong> 1448-1449</formattedref>
+  <docidentifier type="metanorma">[10]</docidentifier>
+</bibitem><bibitem anchor="Fischer1989" id="_61c10792-d442-9048-d233-9a15f2bdce2d">
+  <formattedref format="application/x-isodoc+xml">Fischer J and Jung H-J (1989) “Determination of the Thermodynamic Temperatures of the Freezing Points of Silver and Gold by Near-Infrared Pyrometry” <em>Metrologia</em> <strong>26</strong> 245-252</formattedref>
+  <docidentifier type="metanorma">[11]</docidentifier>
+</bibitem><bibitem anchor="Fischer2003a" id="_c6b0875b-b8f1-d96d-2dd6-b0d5ba10d501">
+  <formattedref format="application/x-isodoc+xml">Fischer J, Battuello M, Sadli M, Ballico M, Park S N, Saunders P, Zundong Y, Johnson B C, van der Ham E, Sakuma F, Machin G, Fox N, Li W, Ugur S and Matveyev M (2003a) “Uncertainty Budgets for Realization of ITS-90 by Radiation Thermometry” <em>Temperature: Its Measurement and Control in Science and Industry</em> Vol 7, ed. Ripple D C <em>et al.</em>, American Institute of Physics, Melville, New York, pp. 631-638</formattedref>
+  <docidentifier type="metanorma">[12]</docidentifier>
+</bibitem><bibitem anchor="Fischer2003b" id="_beb2214a-7111-7c76-15c5-9f91aa4a235c">
+  <formattedref format="application/x-isodoc+xml">Fischer J, Battuello M, Sadli M, Ballico M, Park S N, Saunders P, Zundong Y, Johnson B C, van der Ham E, Li W, Sakuma F, Machin G, Fox N, Ugur S, Matveyev M (CCT-WG5 on radiation thermometry) (2003b) “Uncertainty budgets for realisation of scales by radiation thermometry” <em>Working Document of BIPM Consultative Committee for Thermometry, 22<sup>nd</sup> _Meeting,</em> Document <link target="http://www.bipm.org/cc/CCT/Allowed/22/CCT03-03.pdf">CCT/03-03</link></formattedref>
+  <docidentifier type="metanorma">[13]</docidentifier>
+</bibitem><bibitem anchor="Fischer1993" id="_7b8caefe-41a2-de76-943f-7b516b40a8c2">
+  <formattedref format="application/x-isodoc+xml">Fischer J and Lei Fu (1993) “Photodiode nonlinearity measurement with an intensity stabilized laser as a radiation source” <em>Appl. Opt.</em> <strong>32</strong> 4187-4190</formattedref>
+  <docidentifier type="metanorma">[14]</docidentifier>
+</bibitem><bibitem anchor="Goebel1998" id="_7fe09f90-4c16-896b-a6bf-b01b8e263705">
+  <formattedref format="application/x-isodoc+xml">Goebel R and Stock M (1998) “Nonlinearity and polarization effects in silicon trap detectors” <em>Metrologia</em> <strong>35</strong> 413-418</formattedref>
+  <docidentifier type="metanorma">[15]</docidentifier>
+</bibitem><bibitem anchor="Jones1982" id="_12995016-1ae1-cd70-300e-5288fbd538ad">
+  <formattedref format="application/x-isodoc+xml">Jones T P and Tapping J (1982) “A Precision Photoelectric Pyrometer for the Realisation of the IPTS-68 above <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>1064.53</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>1064.53 "unitsml(degC)"</asciimath></stem>” <em>Metrologia</em> <strong>18</strong> 23-31</formattedref>
+  <docidentifier type="metanorma">[16]</docidentifier>
+</bibitem><bibitem anchor="Jung1979" id="_59c54d7d-3d99-2438-172c-235c4977060b">
+  <formattedref format="application/x-isodoc+xml">Jung H-J (1979) “Spectral Nonlinearity Characteristics of Low-Noise Silicon Detectors and Their Application to Accurate Measurement of Radiant Flux Ratios” <em>Metrologia</em> <strong>15</strong> 173-181</formattedref>
+  <docidentifier type="metanorma">[17]</docidentifier>
+</bibitem><bibitem anchor="Lei1993" id="_80ce6ae9-d78e-4d9d-f855-fd55fd97dfb0">
+  <formattedref format="application/x-isodoc+xml">Lei Fu and Fisher J (1993) “Characterization of Photodiodes in the UV and Visible Spectral Region Based on Cryogenic Radiometry” <em>Metrologia</em> <strong>30</strong> 297-303.</formattedref>
+  <docidentifier type="metanorma">[18]</docidentifier>
+</bibitem><bibitem anchor="Lowe2003" id="_a2ed1b98-f0f5-9e64-3636-45c165b32cfb">
+  <formattedref format="application/x-isodoc+xml">Lowe D, Battuello M, Machin G and Girard F (2003) “A Comparison of Size of Source Effect Measurements of Radiation Thermometers between IMGC and NPL” <em>Temperature: Its Measurement and Control in Science and Industry</em> Vol 7, ed. byRipple D C <em>et al.</em>, American Institute of Physics, Melville, pp. 625-630</formattedref>
+  <docidentifier type="metanorma">[19]</docidentifier>
+</bibitem><bibitem anchor="Machin2002" id="_a9703848-e799-654c-4a25-cbeab3a56045">
+  <formattedref format="application/x-isodoc+xml">Machin G and Sergienko R (2002) “A Comparative Study of Size of Source Effect (SSE) Determination Techniques” <em>Proc. of TEMPMEKO 2001</em>, ed. by Fellmuth B, Seidel J, Scholz G, VDE Verlag GmbH, ISBN 3-8007-2676-9, Berlin, pp. 155-160.</formattedref>
+  <docidentifier type="metanorma">[20]</docidentifier>
+</bibitem><bibitem anchor="Machin1999a" id="_1c7dd64c-6d46-9034-1caa-85f8137c0ee0">
+  <formattedref format="application/x-isodoc+xml">Machin G &amp; Ibrahim M (1999a) “Size of Source Effect and temperature uncertainty I: high temperature systems”, Proc. <em>TEMPMEKO ’99, 7<sup>th</sup> International Symposium on Temperature and Thermal Measurements in Industry and Science</em>, Delft, TheNetherlands, Eds. J. Dubbeldam &amp; M. J. de Groot, Published: IMEKO/NMi-VSL, pp. 681-686</formattedref>
+  <docidentifier type="metanorma">[21]</docidentifier>
+</bibitem><bibitem anchor="Machin1999b" id="_a3c08750-f912-b496-920b-223f694777ce">
+  <formattedref format="application/x-isodoc+xml">Machin, G &amp; Ibrahim M (1999b) “Size of Source Effect and temperature uncertainty II: low temperature systems”, Proc. TEMPMEKO ’99, 7<sup>th</sup> <em>International Symposium on Temperature and Thermal Measurements in Industry and Science</em>, Delft, TheNetherlands, Eds. J. Dubbeldam &amp; M. J. de Groot, Published: IMEKO/NMi-VSL, pp. 687-692</formattedref>
+  <docidentifier type="metanorma">[22]</docidentifier>
+</bibitem><bibitem anchor="Matveyev2002" id="_7dce027e-2272-51af-e464-7801a345967a">
+  <formattedref format="application/x-isodoc+xml">Matveyev M S (2002) “New Method for Measure of a Size Source Effect in a Standard Radiation Thermometry” <em>Proc of TEMPMEKO 2001</em>, ed. by Fellmuth B, Seidel J, Scholz G, VDE Verlag GmbH, ISBN 3-8007-2676-9, Berlin, pp. 167-171</formattedref>
+  <docidentifier type="metanorma">[23]</docidentifier>
+</bibitem><bibitem anchor="Mohr2012" id="_48de0b5e-3e16-1c15-0681-f2ad795965c6">
+  <formattedref format="application/x-isodoc+xml">Mohr P J, Taylor B N and Newell D B (2012) <em>Rev. Mod. Phys</em>. <strong>84</strong> 1527-1605</formattedref>
+  <docidentifier type="metanorma">[24]</docidentifier>
+</bibitem><bibitem anchor="Park2005" id="_1bb09358-3b99-66ff-7525-bba3aa59e98d">
+  <formattedref format="application/x-isodoc+xml">Park C W, Shin D-J, Lee D-H, and Park S-N (2005) “Spectrally Selected Linearity Measurement of a Radiation Thermometer Using High-brightness Light Emitting Diodes” <em>Working Document of BIPM Consultative Committee for Thermometry, 23<sup>rd</sup> Meeting,</em> Document <link target="http://www.bipm.org/cc/CCT/Allowed/23/CCT_05_05.pdf">CCT/05-05</link></formattedref>
+  <docidentifier type="metanorma">[25]</docidentifier>
+</bibitem><bibitem anchor="Park2002" id="_3554487a-14da-33ba-5880-36728fcb4096">
+  <formattedref format="application/x-isodoc+xml">Park S N and Kim J T (2002) “A Monte Carlo Calculation of Lens Aberration Effect on the Size of Source Effect in Radiation Pyrometry” <em>Proc. of TEMPMEKO 2001</em>, ed. by Fellmuth B, Seidel J and Scholz G, VDE Verlag GmbH, ISBN 3-8007-2676-9, Berlin, pp. 173-177</formattedref>
+  <docidentifier type="metanorma">[26]</docidentifier>
+</bibitem><bibitem anchor="Pokhodun1993" id="_4b645bb4-7f63-c88c-6192-ffed12cef75d">
+  <formattedref format="application/x-isodoc+xml">Pokhodun A I, Matveyev M S and Moiseyeva N P (1993) “The Reference Function of a Platinum Resistance Thermometer above the Silver Freezing Point” <em>Measurement Technique</em> <strong>9</strong> 1017-1022</formattedref>
+  <docidentifier type="metanorma">[27]</docidentifier>
+</bibitem><bibitem anchor="Quinn1969" id="_e043c7bf-a552-40b6-3772-227a62abf912">
+  <formattedref format="application/x-isodoc+xml">Quinn T J and Ford M C (1969) “On the Use of the NPL Photoelectric Pyrometer to Establish the Temperature Scale Above the Gold Point (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>1063</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>1063 "unitsml(degC)"</asciimath></stem>)” <em>Proc. Roy. Soc.</em> <strong>A 312</strong> 31-50</formattedref>
+  <docidentifier type="metanorma">[28]</docidentifier>
+</bibitem><bibitem anchor="Quinn1972" id="_7388798e-0706-1bdc-aab0-7e9f8d269705">
+  <formattedref format="application/x-isodoc+xml">Quinn T J and Lee R (1972) “Vacuum Tungsten Strip Lamps with Improved Stability as Radiance Temperature Standards” <em>Temperature: Its Measurement and Control in Science and Industry</em> Vol 4, ed. by Plumb H H <em>et al.</em>, Instrument Society ofAmerica, Pittsburgh, pp. 395-411</formattedref>
+  <docidentifier type="metanorma">[29]</docidentifier>
+</bibitem><bibitem anchor="Quinn1990" id="_a015d829-8e10-520a-7a5a-95e0c379e5f4">
+  <formattedref format="application/x-isodoc+xml">Quinn T J (1990) <em>Temperature</em>, 2nd edition (London: Academic Press) p. 495</formattedref>
+  <docidentifier type="metanorma">[30]</docidentifier>
+</bibitem><bibitem anchor="Sakuma1992" id="_06cd4972-7e19-a0ce-27c8-4521ca2b6a73">
+  <formattedref format="application/x-isodoc+xml">Sakuma F, Fujihara T, Sakate H, Ono A, and Hattori S (1992) “Intercomparison of Scales Among Five 0.65 µm Silicon Detector Radiation Thermometers in the Temperature Range from <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>1000</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>1000 "unitsml(degC)"</asciimath></stem> to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mn>3000</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu23">
+      <mstyle mathvariant="normal">
+        <mi>°C</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math><asciimath>3000 "unitsml(degC)"</asciimath></stem>” <em>Temperature: Its Measurement and Control in Science and Industry</em> Vol 6, ed. by Schooley J F, American Institute ofPhysics, Melville, New York, pp. 813-818</formattedref>
+  <docidentifier type="metanorma">[31]</docidentifier>
+</bibitem><bibitem anchor="Sakuma1997" id="_559c8bf8-5f3d-8a2f-cabe-d861de58f3d3">
+  <formattedref format="application/x-isodoc+xml">Sakuma F and Kobayashi M (1997) “Interpolation equations of scales of radiation thermometers” <em>Proc. of TEMPMEKO’96</em>, ed. by Marcarino P, Levrotto &amp; Bella, Torino, pp. 305-310</formattedref>
+  <docidentifier type="metanorma">[32]</docidentifier>
+</bibitem><bibitem anchor="Sakuma2002" id="_8830bd9e-ab28-bcfa-f599-bd62281e45c1">
+  <formattedref format="application/x-isodoc+xml">Sakuma F, Ma L and Yuan Z (2002) “Distance Effect and Size-of-Source Effect of Radiation Thermometers” <em>Proc. of TEMPMEKO 2001</em>, ed. by Fellmuth B, Seidel J, Scholz G, VDE Verlag GmbH, ISBN 3-8007-2676-9, Berlin, pp. 161-166</formattedref>
+  <docidentifier type="metanorma">[33]</docidentifier>
+</bibitem><bibitem anchor="Saunders2003" id="_853ab906-2339-3832-2c69-79739ea7ddad">
+  <formattedref format="application/x-isodoc+xml">Saunders P (2003) “Uncertainty arising from the use of the mean effective wavelength in realizing ITS-90” <em>Temperature: Its Measurement and Control in Science and Industry</em>, Vol 7, ed. Ripple D C <em>et al.</em>, American Institute of Physics, Melville,New York, pp. 639–644</formattedref>
+  <docidentifier type="metanorma">[34]</docidentifier>
+</bibitem><bibitem anchor="Saunders2011" id="_3468e050-cc44-e2ef-92de-00c96512daab">
+  <formattedref format="application/x-isodoc+xml">Saunders P (2011) “Uncertainties in the realisation of thermodynamic temperature above the silver point” <em>Int. J. Thermophys.</em> <strong>32</strong> 26–44</formattedref>
+  <docidentifier type="metanorma">[35]</docidentifier>
+</bibitem><bibitem anchor="Saunders2009" id="_067937ca-57a8-6180-1ea0-7fd51d4d1721">
+  <formattedref format="application/x-isodoc+xml">Saunders P and Edgar H (2009) “On the characterisation and correction of the size-of-source effect in radiation thermometers” <em>Metrologia</em> <strong>46</strong> 62–74</formattedref>
+  <docidentifier type="metanorma">[36]</docidentifier>
+</bibitem><bibitem anchor="SaundersWhite2003" id="_f87972ae-4358-0162-769a-c54d55ac3599">
+  <formattedref format="application/x-isodoc+xml">Saunders P and White D R (2003) “Physical basis of interpolation equations for radiation thermometry” <em>Metrologia</em> <strong>40</strong> 195–203</formattedref>
+  <docidentifier type="metanorma">[37]</docidentifier>
+</bibitem><bibitem anchor="Saunders2004" id="_f960909b-ec1e-c922-6647-984d45a23b42">
+  <formattedref format="application/x-isodoc+xml">Saunders P and White D R (2004) “Interpolation errors for radiation thermometry” <em>Metrologia</em> <strong>41</strong> 41–46</formattedref>
+  <docidentifier type="metanorma">[38]</docidentifier>
+</bibitem><bibitem anchor="Saunders2007" id="_6f5c0c82-7857-6769-9be8-fc88f5b03bd9">
+  <formattedref format="application/x-isodoc+xml">Saunders P and White D R (2007) “Propagation of uncertainty due to non-linearity in radiation thermometers” <em>Int. J. Thermophys.</em> <strong>28</strong>, 2098–2110</formattedref>
+  <docidentifier type="metanorma">[39]</docidentifier>
+</bibitem><bibitem anchor="Schaefer1983" id="_08589b57-b5a4-6099-d5e6-46601df138c0">
+  <formattedref format="application/x-isodoc+xml">Schaefer A R, Zalewski E F and Geist J (1983) “Silicon detector nonlinearity and related effects” <em>Appl. Opt.</em> <strong>22</strong> 1232-6</formattedref>
+  <docidentifier type="metanorma">[40]</docidentifier>
+</bibitem><bibitem anchor="Shin2005" id="_ab547a45-3960-82e4-cf8f-012212e38b65">
+  <formattedref format="application/x-isodoc+xml">Shin D J, Lee D H, Park C W, and Park S N (2005) “A Novel Linearity Tester for Optical Detectors using High-brightness Light Emitting Diodes” <em>Metrologia</em> <strong>42</strong>, 154</formattedref>
+  <docidentifier type="metanorma">[41]</docidentifier>
+</bibitem><bibitem anchor="Yoon2005" id="_25a238b1-a25f-bab1-f023-757d0e5355a0">
+  <formattedref format="application/x-isodoc+xml">Yoon H W, Allen D W and Saunders R D (2005) “Methods to reduce the size-of-source effect in radiation thermometers” <em>Proc. of TEMPMEKO 2004</em>, ed. by Zvizdic D, Laboratory for Process Measurement, Faculty of mechanical Engineering and Naval Architecture, Zagreb, pp. 521–526</formattedref>
+  <docidentifier type="metanorma">[42]</docidentifier>
+</bibitem>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</references></bibliography>
+</metanorma>
