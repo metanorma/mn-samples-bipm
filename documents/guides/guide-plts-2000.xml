@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.0" schema-version="v2.0.8" flavor="bipm">
 <bibdata type="standard">
-<title language="en" format="text/plain" type="title-main">The Provisional Low Temperature Scale from <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>0.9</mn>
-    <mo rspace="thickmathspace">⁢</mo>
-    <mrow xref="U_mK">
-      <mstyle mathvariant="normal">
-        <mi>mK</mi>
-      </mstyle>
-      
-      
-      
-    </mrow>
-  </mstyle>
-</math><asciimath>0.9 "unitsml(mK)"</asciimath></stem> to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mn>1</mn>
-    <mo rspace="thickmathspace">⁢</mo>
-    <mrow xref="U_NISTu5">
-      <mstyle mathvariant="normal">
-        <mi>K</mi>
-      </mstyle>
-      
-      
-      
-    </mrow>
-  </mstyle>
-</math><asciimath>1 "unitsml(K)"</asciimath></stem>, PLTS-2000</title>
+<title language="en" format="text/plain" type="title-main">The Provisional Low Temperature Scale from 0.9 mK to 1 K, PLTS-2000</title>
 
 <docidentifier primary="true" type="BIPM">BIPM PLTS-2000</docidentifier><docnumber>PLTS-2000</docnumber><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
@@ -35,28 +9,7 @@
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2019-03-13</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2019</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>guide</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="CCT" language="en" script="Latn">Consultative Committee for Thermometry</committee><committee acronym="CCT" language="fr" script="Latn">Comité consultatif de thermométrie</committee></editorialgroup><structuredidentifier><docnumber>PLTS-2000</docnumber></structuredidentifier><si-aspect>K_k</si-aspect></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd5" id="U_mK">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
-        <UnitName lang="en">mK</UnitName>
-        <UnitSymbol type="HTML">mK</UnitSymbol>
-        <UnitSymbol type="MathMl">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <mi mathvariant="normal">mK</mi>
-          </math>
-        </UnitSymbol>
-        <RootUnits>
-          <EnumeratedRootUnit unit="kelvin" prefix="m"/>
-        </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-            <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
-            <UnitName lang="en">kelvin</UnitName>
-            <UnitSymbol type="HTML">K</UnitSymbol>
-            <UnitSymbol type="MathMl">
-              <math xmlns="http://www.w3.org/1998/Math/MathML">
-                <mi mathvariant="normal">K</mi>
-              </math>
-            </UnitSymbol>
-          </Unit><Unit dimensionURL="#NISTd14" id="U_MPa">
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>guide</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="CCT" language="en" script="Latn">Consultative Committee for Thermometry</committee><committee acronym="CCT" language="fr" script="Latn">Comité consultatif de thermométrie</committee></editorialgroup><structuredidentifier><docnumber>PLTS-2000</docnumber></structuredidentifier><si-aspect>K_k</si-aspect></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd14" id="U_MPa">
         <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
         <UnitName lang="en">MPa</UnitName>
         <UnitSymbol type="HTML">MPa</UnitSymbol>
@@ -67,6 +20,27 @@
         </UnitSymbol>
         <RootUnits>
           <EnumeratedRootUnit unit="pascal" prefix="M"/>
+        </RootUnits>
+      </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5">
+            <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+            <UnitName lang="en">kelvin</UnitName>
+            <UnitSymbol type="HTML">K</UnitSymbol>
+            <UnitSymbol type="MathMl">
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mi mathvariant="normal">K</mi>
+              </math>
+            </UnitSymbol>
+          </Unit><Unit dimensionURL="#NISTd5" id="U_mK">
+        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitName lang="en">mK</UnitName>
+        <UnitSymbol type="HTML">mK</UnitSymbol>
+        <UnitSymbol type="MathMl">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi mathvariant="normal">mK</mi>
+          </math>
+        </UnitSymbol>
+        <RootUnits>
+          <EnumeratedRootUnit unit="kelvin" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd14" id="U_NISTu12">
         <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
@@ -79,24 +53,24 @@
         </UnitSymbol>
       </Unit></UnitSet><QuantitySet><Quantity id="NISTq5" quantityType="base" dimensionURL="#NISTd5">
             <QuantityName lang="en-US">thermodynamic temperature</QuantityName>
-          </Quantity></QuantitySet><DimensionSet><Dimension id="NISTd5">
-        <ThermodynamicTemperature symbol="Theta" powerNumerator="1"/>
-      </Dimension><Dimension id="NISTd14">
+          </Quantity></QuantitySet><DimensionSet><Dimension id="NISTd14">
         <Length symbol="L" powerNumerator="-1"/>
         <Mass symbol="M" powerNumerator="1"/>
         <Time symbol="T" powerNumerator="-2"/>
-      </Dimension></DimensionSet><PrefixSet><Prefix prefixBase="10" prefixPower="-3" id="NISTp10_-3">
-        <PrefixName lang="en">milli</PrefixName>
-        <PrefixSymbol type="ASCII">m</PrefixSymbol>
-        <PrefixSymbol type="unicode">m</PrefixSymbol>
-        <PrefixSymbol type="LaTeX">m</PrefixSymbol>
-        <PrefixSymbol type="HTML">m</PrefixSymbol>
-      </Prefix><Prefix prefixBase="10" prefixPower="6" id="NISTp10_6">
+      </Dimension><Dimension id="NISTd5">
+        <ThermodynamicTemperature symbol="Theta" powerNumerator="1"/>
+      </Dimension></DimensionSet><PrefixSet><Prefix prefixBase="10" prefixPower="6" id="NISTp10_6">
         <PrefixName lang="en">mega</PrefixName>
         <PrefixSymbol type="ASCII">M</PrefixSymbol>
         <PrefixSymbol type="unicode">M</PrefixSymbol>
         <PrefixSymbol type="LaTeX">M</PrefixSymbol>
         <PrefixSymbol type="HTML">M</PrefixSymbol>
+      </Prefix><Prefix prefixBase="10" prefixPower="-3" id="NISTp10_-3">
+        <PrefixName lang="en">milli</PrefixName>
+        <PrefixSymbol type="ASCII">m</PrefixSymbol>
+        <PrefixSymbol type="unicode">m</PrefixSymbol>
+        <PrefixSymbol type="LaTeX">m</PrefixSymbol>
+        <PrefixSymbol type="HTML">m</PrefixSymbol>
       </Prefix></PrefixSet></UnitsML><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
 <boilerplate><copyright-statement>
 
