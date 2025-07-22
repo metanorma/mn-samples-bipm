@@ -1607,7 +1607,7 @@ pre.sourcecode .nt {
 
 </div>
 </header></div><br /><div class="prefatory-section"><nav>
-  <div id="toc"><h1 class="IntroTitle"><a class="anchor" href="#_13d7055e-30fc-845a-c60e-8972faf092d9"></a><a class="header" href="#_13d7055e-30fc-845a-c60e-8972faf092d9">Contents</a></h1><ul><li class="h1"><a href="#_e8d967d4-c38b-33e3-06f4-6b7f03f58a7a">      
+  <div id="toc"><h1 class="IntroTitle"><a class="anchor" href="#_13d7055e-30fc-845a-c60e-8972faf092d9"></a><a class="header" href="#_13d7055e-30fc-845a-c60e-8972faf092d9">Contents</a></h1><ul><li class="h1"><a href="#_bb82fc01-4602-bf05-efaf-6f903026135a">      
   
   Abstract
 </a></li>
@@ -1811,7 +1811,7 @@ pre.sourcecode .nt {
   
   Annex 4.  Implicit multivariate model
 </a></li>
-<li class="h1"><a href="#_6d486cfd-9b86-4ea6-b727-f6eb88adf74b">      References</a></li></ul></div>
+<li class="h1"><a href="#_23ef9273-af96-46b6-9aaa-f0cb0b2195b3">      References</a></li></ul></div>
 
 </nav>
 
@@ -1822,17 +1822,9 @@ pre.sourcecode .nt {
 
 
 
-</div><br /><br /><div id="_e8d967d4-c38b-33e3-06f4-6b7f03f58a7a"><h1 class="AbstractTitle" id="_9a90de95-6ca9-4af9-848f-60c5e35ed1f6"><a class="anchor" href="#_e8d967d4-c38b-33e3-06f4-6b7f03f58a7a"></a><a class="header" href="#_e8d967d4-c38b-33e3-06f4-6b7f03f58a7a">Abstract</a></h1><div id="_afa0fad6-d66f-769c-2c87-3db7cc98f57d" class="Note"><p><span class="note_label">NOTE:  </span>Work supported by the National Measurement Directorate of the UK Department of Trade and Industry as part of its NMS Ionizing Radiation Metrology and Software Support for Metrology programmes and by the BIPM.</p></div><p id="_9dd2fdba-d3ce-f464-1c44-3cbd81c2ecee">The photon and electron efficiency curves of an ionization chamber, as part of the SIR (International Reference System for activity measurements of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mi mathvariant="normal">γ</mi>
-  </mstyle>
-</math></span>-ray emitting radionuclides), have historically been determined using an iterative approach. That approach accounts for the influence of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="false">
-    <mi mathvariant="normal">γ</mi>
-  </mstyle>
-</math></span>-ray-emitting impurities on the SIR measurement data based on experimental knowledge of the contributing effects or using the efficiency curves during the iterative process. Extrapolation of the curves is needed at the ends of the energy range to cover all photon and electron energies of interest.</p><p id="_900ffb48-38d2-980b-732d-198ce69d239d">The approach described here is based on a model that at the outset accounts for all available information, including impurity corrections and beta spectrum shapes. It also accounts for the uncertainties and known correlations associated with the SIR measurement data, the nuclear reference data and other effects. The only empirical parts of the model are the mathematical forms selected for the efficiency curves. Rather than using conventional functions such as polynomials, the approach works with the exponentials of polynomials. These forms are capable of exhibiting physically possible behaviour throughout the energy range, even though there is relatively sparse radionuclide data available at high energies.</p><p id="_f46fcce5-5aa6-1b86-677b-d664bb0ff993">Rather than correcting the measurement data for impurities, as is conventional in this area, the model itself is adjusted. The benefit of this approach is that the polynomial coefficients can be determined using generalized non-linear least-squares minimization. The adjusted model matches the SIR measurement data as closely as possible, taking account of the uncertainties and correlations indicated above. Although the solution to this least-squares formulation requires iterative solution algorithmically, it is not iterative in the sense of previous methods.</p><p id="_98389bd7-4694-74a3-5c84-03ff9b485120">This process provides estimates of the efficiency values of the ionization chamber, and the associated uncertainties, at any photon or electron energy. The uncertainties associated with the response of the ionization chamber for all radionuclides of interest are also evaluated.</p></div><br /><div id="_97f22f2b-801b-911b-13ca-32ddbd0b2650"><h1 class="ForewordTitle" id="_91a6983e-85ed-4f03-a484-b66341c5fcd4"><a class="anchor" href="#_97f22f2b-801b-911b-13ca-32ddbd0b2650"></a><a class="header" href="#_97f22f2b-801b-911b-13ca-32ddbd0b2650">Foreword</a></h1><p id="_e4466899-0228-19c5-9a8d-b368f98242c7">This monograph is one of a series published by the Bureau International des Poids et Mesures (BIPM) on behalf of the <i>Comité Consultatif des Rayonnements Ionisants</i> (CCRI). The aim of this series of publications is to review topics that are of importance for the measurement of ionizing radiation and especially of radioactivity, in particular those techniques normally used by participants in international comparisons. It is hoped that these publications will prove to be useful reference volumes both for those who are already engaged in this field and for those who are approaching such measurements for the first time.</p><p id="_c20796bc-9f06-6964-d4cb-a7a100c2de63">The purpose of this monograph, number 7 in the series, is to present a mathematically compact and elegant way of modelling the photon and electron efficiency curves of ionization chambers, developed specifically for the International Reference System for gamma-ray activity comparisons (SIR). Corrections for impurities are taken into account in a manner that is consistent with the modelling of the photon and electron response of the chamber. A comprehensive scheme for determining the uncertainties is provided. The model also provides reliable and robust values for radionuclides measured in the SIR for the first time.</p><p id="_4dfa62ea-9b49-c756-72dd-d2d688949e6e">Although the computer code has been developed for the SIR, the method is generally applicable to all well-type ionization chambers. Consequently, the computer code will be made available to National Metrology Institutes together with a protocol to explain its detailed application.</p><table id="_749357f0-cf9f-aa4a-52f7-c19b448585ec" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><tbody><tr><td style="text-align:center;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_3f566ca7-a9f7-b31a-eccb-b7f88ad9e9bd">G. Moscati<br /> President of the CCRI</p>
+</div><br /><br /><div id="_bb82fc01-4602-bf05-efaf-6f903026135a"><h1 class="AbstractTitle" id="_8eb5d295-3908-4eab-b612-fe7ebc5500cf"><a class="anchor" href="#_bb82fc01-4602-bf05-efaf-6f903026135a"></a><a class="header" href="#_bb82fc01-4602-bf05-efaf-6f903026135a">Abstract</a></h1><div id="_afa0fad6-d66f-769c-2c87-3db7cc98f57d" class="Note"><p><span class="note_label">NOTE:  </span>Work supported by the National Measurement Directorate of the UK Department of Trade and Industry as part of its NMS Ionizing Radiation Metrology and Software Support for Metrology programmes and by the BIPM.</p></div><p id="_f52ae0df-a41e-39a4-ada4-580112fad98a">The photon and electron efficiency curves of an ionization chamber, as part of the SIR (International Reference System for activity measurements of γ-ray emitting radionuclides), have historically been determined using an iterative approach. That approach accounts for the influence of γ-ray-emitting impurities on the SIR measurement data based on experimental knowledge of the contributing effects or using the efficiency curves during the iterative process. Extrapolation of the curves is needed at the ends of the energy range to cover all photon and electron energies of interest.</p><p id="_900ffb48-38d2-980b-732d-198ce69d239d">The approach described here is based on a model that at the outset accounts for all available information, including impurity corrections and beta spectrum shapes. It also accounts for the uncertainties and known correlations associated with the SIR measurement data, the nuclear reference data and other effects. The only empirical parts of the model are the mathematical forms selected for the efficiency curves. Rather than using conventional functions such as polynomials, the approach works with the exponentials of polynomials. These forms are capable of exhibiting physically possible behaviour throughout the energy range, even though there is relatively sparse radionuclide data available at high energies.</p><p id="_f46fcce5-5aa6-1b86-677b-d664bb0ff993">Rather than correcting the measurement data for impurities, as is conventional in this area, the model itself is adjusted. The benefit of this approach is that the polynomial coefficients can be determined using generalized non-linear least-squares minimization. The adjusted model matches the SIR measurement data as closely as possible, taking account of the uncertainties and correlations indicated above. Although the solution to this least-squares formulation requires iterative solution algorithmically, it is not iterative in the sense of previous methods.</p><p id="_98389bd7-4694-74a3-5c84-03ff9b485120">This process provides estimates of the efficiency values of the ionization chamber, and the associated uncertainties, at any photon or electron energy. The uncertainties associated with the response of the ionization chamber for all radionuclides of interest are also evaluated.</p></div><br /><div id="_97f22f2b-801b-911b-13ca-32ddbd0b2650"><h1 class="ForewordTitle" id="_83f97e7c-cc9f-4dd4-b33e-203ebd8c6ed9"><a class="anchor" href="#_97f22f2b-801b-911b-13ca-32ddbd0b2650"></a><a class="header" href="#_97f22f2b-801b-911b-13ca-32ddbd0b2650">Foreword</a></h1><p id="_e4466899-0228-19c5-9a8d-b368f98242c7">This monograph is one of a series published by the Bureau International des Poids et Mesures (BIPM) on behalf of the <i>Comité Consultatif des Rayonnements Ionisants</i> (CCRI). The aim of this series of publications is to review topics that are of importance for the measurement of ionizing radiation and especially of radioactivity, in particular those techniques normally used by participants in international comparisons. It is hoped that these publications will prove to be useful reference volumes both for those who are already engaged in this field and for those who are approaching such measurements for the first time.</p><p id="_c20796bc-9f06-6964-d4cb-a7a100c2de63">The purpose of this monograph, number 7 in the series, is to present a mathematically compact and elegant way of modelling the photon and electron efficiency curves of ionization chambers, developed specifically for the International Reference System for gamma-ray activity comparisons (SIR). Corrections for impurities are taken into account in a manner that is consistent with the modelling of the photon and electron response of the chamber. A comprehensive scheme for determining the uncertainties is provided. The model also provides reliable and robust values for radionuclides measured in the SIR for the first time.</p><p id="_4dfa62ea-9b49-c756-72dd-d2d688949e6e">Although the computer code has been developed for the SIR, the method is generally applicable to all well-type ionization chambers. Consequently, the computer code will be made available to National Metrology Institutes together with a protocol to explain its detailed application.</p><table id="_749357f0-cf9f-aa4a-52f7-c19b448585ec" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><tbody><tr><td style="text-align:center;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_3f566ca7-a9f7-b31a-eccb-b7f88ad9e9bd">G. Moscati<br /> President of the CCRI</p>
 </td><td style="text-align:center;vertical-align:top;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_4d4ff7df-10f9-6862-c5e5-2ce83398a0f1">A.J. Wallard<br /> Director of the BIPM</p>
-</td></tr></tbody></table></div><br /><div class="Section3" id="_899889ea-16b9-66d1-b7ee-37911223f589"><h1 class="IntroTitle" id="_85c21897-e354-41ea-9c13-42a5b3ab939d"><a class="anchor" href="#_899889ea-16b9-66d1-b7ee-37911223f589"></a><a class="header" href="#_899889ea-16b9-66d1-b7ee-37911223f589">Executive summary</a></h1><div class="ol_wrap"><ol type="1" id="_b186bb3f-2e18-2314-05db-7a887f033b3a"><li id="_b50effe8-f129-56ec-a410-0ac25ab2ff94"><p id="_57cdd467-9592-77b0-ed83-91ab06569621">The SIR ionization chamber at the BIPM is used to establish equivalence of radioactivity measurements made by the national metrology institutes (NMIs) of the signatory members of the Metre Convention.</p>
+</td></tr></tbody></table></div><br /><div class="Section3" id="_899889ea-16b9-66d1-b7ee-37911223f589"><h1 class="IntroTitle" id="_fd9a8856-d9f9-4149-a3b4-81e9be60460a"><a class="anchor" href="#_899889ea-16b9-66d1-b7ee-37911223f589"></a><a class="header" href="#_899889ea-16b9-66d1-b7ee-37911223f589">Executive summary</a></h1><div class="ol_wrap"><ol type="1" id="_b186bb3f-2e18-2314-05db-7a887f033b3a"><li id="_b50effe8-f129-56ec-a410-0ac25ab2ff94"><p id="_57cdd467-9592-77b0-ed83-91ab06569621">The SIR ionization chamber at the BIPM is used to establish equivalence of radioactivity measurements made by the national metrology institutes (NMIs) of the signatory members of the Metre Convention.</p>
 </li>
 <li id="_d3c88afa-492b-b81a-8596-08563083b936"><p id="_73bae9fc-8fc5-4608-85d2-7ff418cbdc92">To this end each NMI submits to the BIPM samples of solutions of radionuclides and their measured values of the activity of these solutions. Each NMI also provides information on any radionuclidic impurities that may be present. The BIPM measures these samples in the ionization chamber, comparing the current produced with that produced by a radium reference source.</p>
 </li>
@@ -1848,7 +1840,7 @@ pre.sourcecode .nt {
 </li>
 <li id="_b142700d-cfdd-cacb-5a5d-063c56753eca"><p id="_1788ecc5-bc61-3d10-4c61-d1a953a7f73e">By comparing modelled and measured equivalent activities it is possible to identify radionuclides for which there may be inconsistencies in the published photon emission data. This is the case for <sup>201</sup>Tl and <sup>65</sup>Zn <a href="#mic2006">[32]</a>.</p>
 </li>
-</ol></div></div><div id="intro"><h1 id="_8fcf6a37-01e9-4abc-8c55-a2c20dd82f86"><a class="anchor" href="#intro"></a><a class="header" href="#intro">1.  Introduction and overview of approach</a></h1><div id="_03c7fc4e-1641-7fb9-271f-133b2b6fcccd"><h2 id="_33a01c0f-6d52-45f2-a7d4-e6b737a2f704"><a class="anchor" href="#_03c7fc4e-1641-7fb9-271f-133b2b6fcccd"></a><a class="header" href="#_03c7fc4e-1641-7fb9-271f-133b2b6fcccd">1.1.  General</a></h2>
+</ol></div></div><div id="intro"><h1 id="_8cbbc743-7c9c-4c31-b18f-0bc7fc1992db"><a class="anchor" href="#intro"></a><a class="header" href="#intro">1.  Introduction and overview of approach</a></h1><div id="_03c7fc4e-1641-7fb9-271f-133b2b6fcccd"><h2 id="_cce25f03-06e8-4de2-b398-922ef02a7e71"><a class="anchor" href="#_03c7fc4e-1641-7fb9-271f-133b2b6fcccd"></a><a class="header" href="#_03c7fc4e-1641-7fb9-271f-133b2b6fcccd">1.1.  General</a></h2>
 
 <p id="_6c7c68cd-772f-bc3d-43a7-2e9a03065acc">The SIR (International Reference System for activity measurements of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1971,7 +1963,7 @@ pre.sourcecode .nt {
 <p id="_40abc7bc-d951-9254-9b51-7125ee98ad38"><a href="#annexA">Annex 1</a> contains a glossary of symbols used.</p>
 
 <p id="_d33c95cf-d81f-7e33-821d-087c68ad14e8">A distillation of the detailed exposition here is available <a href="#mic2006">[32]</a>, <a href="#pea2007">[36]</a>.</p>
-</div><div id="overview"><h2 id="_1a3be0ff-c2f1-4d74-be11-b16e43158fea"><a class="anchor" href="#overview"></a><a class="header" href="#overview">1.2.  Overview of approach</a></h2>
+</div><div id="overview"><h2 id="_ebff8425-9b48-43b6-af11-32da3f187aa3"><a class="anchor" href="#overview"></a><a class="header" href="#overview">1.2.  Overview of approach</a></h2>
 
 <p id="_6337aadb-d965-3b32-b27c-dbff4ad7f456">The starting point of the approach is the consideration of the data that is available relating to the problem of concern and the physical quantities of which this data constitutes particular values (section 2). There are four categories of data:</p>
 
@@ -2790,7 +2782,7 @@ pre.sourcecode .nt {
     </mstyle>
   </mstyle>
 </math></span>), and © <i>real</i> (not involving complex quantities).</p>
-</div></div><div id="_dc452201-780c-6fd6-f339-bbc746316d45"><h1 id="_031a6bb8-9db8-4f65-84f5-5c11c1ceaac7"><a class="anchor" href="#_dc452201-780c-6fd6-f339-bbc746316d45"></a><a class="header" href="#_dc452201-780c-6fd6-f339-bbc746316d45">2.  Input data, associated uncertainties and data corrections</a></h1><p id="_075795a1-6d0f-ffeb-d43d-c457ca794c58">This section discusses the various data items and the quantities of which these data items constitute realizations that are used in the modelling, namely those indicated in <a href="#st1-2-1">Section 1.2, 1)</a>-<a href="#st1-2-4">Section 1.2, 4)</a>. It also considers the available uncertainties associated with these data items. It further considers the correction factors that compensate for the presence of impurities in the radioactive solutions.</p><div id="eq_act_meas_data"><h2 id="_66a813c9-571f-4e7a-9c0d-023f7dcd01b0"><a class="anchor" href="#eq_act_meas_data"></a><a class="header" href="#eq_act_meas_data">2.1.  Equivalent activity measurement data</a></h2>
+</div></div><div id="_dc452201-780c-6fd6-f339-bbc746316d45"><h1 id="_81e19e58-602f-44fe-b1ba-2d59cc107f26"><a class="anchor" href="#_dc452201-780c-6fd6-f339-bbc746316d45"></a><a class="header" href="#_dc452201-780c-6fd6-f339-bbc746316d45">2.  Input data, associated uncertainties and data corrections</a></h1><p id="_075795a1-6d0f-ffeb-d43d-c457ca794c58">This section discusses the various data items and the quantities of which these data items constitute realizations that are used in the modelling, namely those indicated in <a href="#st1-2-1">Section 1.2, 1)</a>-<a href="#st1-2-4">Section 1.2, 4)</a>. It also considers the available uncertainties associated with these data items. It further considers the correction factors that compensate for the presence of impurities in the radioactive solutions.</p><div id="eq_act_meas_data"><h2 id="_74ac7f50-748f-4bee-a167-6d19a167e940"><a class="anchor" href="#eq_act_meas_data"></a><a class="header" href="#eq_act_meas_data">2.1.  Equivalent activity measurement data</a></h2>
 
 <p id="_905c4d2a-f382-b999-d4a7-ec5b6ef42a80">Equivalent activity measurement data are derived from more fundamental measurement data. Consider an SIR measurement of a radioactive solution, in a glass ampoule, containing a radionuclide, generally with impurities. Let <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -4277,7 +4269,7 @@ pre.sourcecode .nt {
   </mstyle>
 </math></span>, estimates of which, with associated standard uncertainties, are available (see <a href="#accounting">Section 3.3</a>).</p>
 <aside id="fn:_afa1cd7a-272a-bfa8-cb6f-540ee18e2d88" class="footnote"><p id="_f25f9577-a1d5-69e8-9f5f-9b7f0c4b582f"><a class="FootnoteRef" href="#fn:_afa1cd7a-272a-bfa8-cb6f-540ee18e2d88"><sup>1</sup></a>This factor is not applicable to short-lived radionuclides for which the decay is significant during measurement and the decay correction is evaluated by integrating the numerator over measurement time.</p>
-<a href="#fnref:1">↩</a></aside></div><div id="data_rel_impurity_act"><h2 id="_294893a0-b71b-4c75-9534-97aa564c37b2"><a class="anchor" href="#data_rel_impurity_act"></a><a class="header" href="#data_rel_impurity_act">2.2.  Data relating to relative impurity activities</a></h2>
+<a href="#fnref:1">↩</a></aside></div><div id="data_rel_impurity_act"><h2 id="_64b05751-123a-4be7-91a1-dfb666a3302f"><a class="anchor" href="#data_rel_impurity_act"></a><a class="header" href="#data_rel_impurity_act">2.2.  Data relating to relative impurity activities</a></h2>
 
 <p id="_7af7502d-8cd7-d03c-c3e6-c86eb645f73b">Consider the activity ratio quantities <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -4692,7 +4684,7 @@ pre.sourcecode .nt {
 </math></span> in <a href="#eq5">Equation (5)</a> would again be available, but the efficiency model is used to estimate the remaining impurities.</p>
 </li>
 </ol></div>
-</div><div id="nuclear_ref_data"><h2 id="_cf38c5c4-4a50-4e87-ab47-439bc5b30797"><a class="anchor" href="#nuclear_ref_data"></a><a class="header" href="#nuclear_ref_data">2.3.  Nuclear reference data</a></h2>
+</div><div id="nuclear_ref_data"><h2 id="_fb5c96b9-0b05-4d6d-859f-c19f88074636"><a class="anchor" href="#nuclear_ref_data"></a><a class="header" href="#nuclear_ref_data">2.3.  Nuclear reference data</a></h2>
 
 <p id="_ec587de2-7eae-e9fb-f28d-e6fa0f492f5b">For a radionuclide (indexed by) <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -5513,7 +5505,7 @@ pre.sourcecode .nt {
     </mrow>
   </mstyle>
 </math></span>.</p>
-<a href="#fnref:3">↩</a></aside></div><div id="key_comparison"><h2 id="_d4fdf799-1c16-4215-a37f-9257fc560efd"><a class="anchor" href="#key_comparison"></a><a class="header" href="#key_comparison">2.4.  Key comparison reference values</a></h2>
+<a href="#fnref:3">↩</a></aside></div><div id="key_comparison"><h2 id="_be0ddd21-3486-4b5a-95fc-e1a12b20a7c3"><a class="anchor" href="#key_comparison"></a><a class="header" href="#key_comparison">2.4.  Key comparison reference values</a></h2>
 
 <p id="_30421b09-e630-419b-3c6d-bbe3397c0b02">Let <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -5613,7 +5605,7 @@ pre.sourcecode .nt {
     </mover>
   </mstyle>
 </math></span> would be expected to be small. See <a href="#conclusions">Chapter 11</a>.</p>
-</div></div><div id="model_building"><h1 id="_40e3d59b-eee3-4dee-b2a0-430e361afaa7"><a class="anchor" href="#model_building"></a><a class="header" href="#model_building">3.  Model building</a></h1><div id="generic_form"><h2 id="_2e139297-7052-457c-a33f-13a5688c2fd3"><a class="anchor" href="#generic_form"></a><a class="header" href="#generic_form">3.1.  Generic form for the efficiency function of the ionization chamber</a></h2>
+</div></div><div id="model_building"><h1 id="_5da0f0c4-b818-4a65-8205-14e1300881e6"><a class="anchor" href="#model_building"></a><a class="header" href="#model_building">3.  Model building</a></h1><div id="generic_form"><h2 id="_7de5e920-1ad6-4a01-94ab-09dfa60fdacd"><a class="anchor" href="#generic_form"></a><a class="header" href="#generic_form">3.1.  Generic form for the efficiency function of the ionization chamber</a></h2>
 
 <p id="_828c0928-24e5-eca4-415c-183b35e63f0b">Denote by <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -6332,7 +6324,7 @@ pre.sourcecode .nt {
     <mi>i</mi>
   </mstyle>
 </math></span>.</p>
-</div><div id="rep_phot_and_elect_eff_fn"><h2 id="_9f93ff85-fa9c-4ff4-ad1f-cbc6bd4ff056"><a class="anchor" href="#rep_phot_and_elect_eff_fn"></a><a class="header" href="#rep_phot_and_elect_eff_fn">3.2.  Representation of the photon and electron efficiency functions</a></h2>
+</div><div id="rep_phot_and_elect_eff_fn"><h2 id="_24480b09-9766-4f41-b4ad-506d3e9d0761"><a class="anchor" href="#rep_phot_and_elect_eff_fn"></a><a class="header" href="#rep_phot_and_elect_eff_fn">3.2.  Representation of the photon and electron efficiency functions</a></h2>
 
 <div id="physically_possible_models"><h3><a class="anchor" href="#physically_possible_models"></a><a class="header" href="#physically_possible_models">3.2.1.  Physically possible empirical models</a></h3>
 
@@ -8051,7 +8043,7 @@ pre.sourcecode .nt {
   </mstyle>
 </math></span></p></div></div>
 </div>
-</div><div id="accounting"><h2 id="_0319c7ff-2e39-4a51-92ee-66f6775cdc83"><a class="anchor" href="#accounting"></a><a class="header" href="#accounting">3.3.  Accounting for impurity corrections</a></h2>
+</div><div id="accounting"><h2 id="_96448e35-bf69-4175-ac67-78459629b1a6"><a class="anchor" href="#accounting"></a><a class="header" href="#accounting">3.3.  Accounting for impurity corrections</a></h2>
 
 <p id="_bd8b3db9-9cd9-1800-af81-315211b170d4">Any particular correction <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -8509,7 +8501,7 @@ pre.sourcecode .nt {
     </msub>
   </mstyle>
 </math></span> also results in a simplification of the formulae used for derivatives when solving the generalized non-linear least-squares problem and in the uncertainty evaluation (<a href="#appendixB">Annex 2</a>).</p>
-</div></div><div id="_afacfe31-ba73-294d-d63d-5e39b6441b33"><h1 id="_226b96f4-5112-4c59-bf59-5249edfb32cc"><a class="anchor" href="#_afacfe31-ba73-294d-d63d-5e39b6441b33"></a><a class="header" href="#_afacfe31-ba73-294d-d63d-5e39b6441b33">4.  Solution characterization</a></h1><div id="matching"><h2 id="_ef315f5f-2c3b-4fe6-8b0e-cb7a3c23eed6"><a class="anchor" href="#matching"></a><a class="header" href="#matching">4.1.  Matching modelled and measured values</a></h2>
+</div></div><div id="_afacfe31-ba73-294d-d63d-5e39b6441b33"><h1 id="_4815010c-fe86-4fcf-a68d-4912b8f66cc1"><a class="anchor" href="#_afacfe31-ba73-294d-d63d-5e39b6441b33"></a><a class="header" href="#_afacfe31-ba73-294d-d63d-5e39b6441b33">4.  Solution characterization</a></h1><div id="matching"><h2 id="_2eab71a3-bc92-4150-932e-bd38726524d7"><a class="anchor" href="#matching"></a><a class="header" href="#matching">4.1.  Matching modelled and measured values</a></h2>
 
 <p id="_26a93dfa-335b-432a-4fb9-c592b8e05c59">Let <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -9230,7 +9222,7 @@ pre.sourcecode .nt {
     </mstyle>
   </mstyle>
 </math></span> are mutually independent.</p>
-</div><div id="measure_of_deviation"><h2 id="_b195897c-56c4-45e9-a1d5-cc6c41858611"><a class="anchor" href="#measure_of_deviation"></a><a class="header" href="#measure_of_deviation">4.2.  Measure of deviation of model from data</a></h2>
+</div><div id="measure_of_deviation"><h2 id="_59607f85-eeea-45dd-ada5-484b7906e6ea"><a class="anchor" href="#measure_of_deviation"></a><a class="header" href="#measure_of_deviation">4.2.  Measure of deviation of model from data</a></h2>
 
 <div id="full_formulation"><h3><a class="anchor" href="#full_formulation"></a><a class="header" href="#full_formulation">4.2.1.  Full formulation</a></h3>
 
@@ -10373,7 +10365,7 @@ pre.sourcecode .nt {
   </mstyle>
 </math></span> from those provided by the full least-squares formulation in <a href="#full_formulation">Section 4.2.1</a>.</p>
 </div>
-</div><div id="eq_characterizing_the_solution"><h2 id="_f123ae58-883b-4d39-aafd-23b6cc190b37"><a class="anchor" href="#eq_characterizing_the_solution"></a><a class="header" href="#eq_characterizing_the_solution">4.3.  Equation characterizing the solution</a></h2>
+</div><div id="eq_characterizing_the_solution"><h2 id="_99277d35-5780-4051-85ca-a8a51c1fe83e"><a class="anchor" href="#eq_characterizing_the_solution"></a><a class="header" href="#eq_characterizing_the_solution">4.3.  Equation characterizing the solution</a></h2>
 
 <p id="_2712a5ce-7f98-d71e-ba57-5df8addb5555">Specifically, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -10752,7 +10744,7 @@ pre.sourcecode .nt {
     </msup>
   </mstyle>
 </math></span>. <a href="#eq25">Equation (25)</a> is, however, important regarding uncertainty evaluation for the solution of the problem (<a href="#uncertainties">Chapter 6</a>).</p>
-</div></div><div id="model_param_determination"><h1 id="_5a8ff1d6-32e8-463a-a9ae-f1f9aa6dcfa2"><a class="anchor" href="#model_param_determination"></a><a class="header" href="#model_param_determination">5.  Model parameter determination</a></h1><div id="_e942bd1e-9385-e16d-534f-10349e32d9c4"><h2 id="_9b0e80f9-6011-42a1-a87c-72674587a437"><a class="anchor" href="#_e942bd1e-9385-e16d-534f-10349e32d9c4"></a><a class="header" href="#_e942bd1e-9385-e16d-534f-10349e32d9c4">5.1.  General</a></h2>
+</div></div><div id="model_param_determination"><h1 id="_66d060aa-a83e-4c41-a587-7e2d8ce2f3b0"><a class="anchor" href="#model_param_determination"></a><a class="header" href="#model_param_determination">5.  Model parameter determination</a></h1><div id="_e942bd1e-9385-e16d-534f-10349e32d9c4"><h2 id="_376fb0cc-71c0-41da-8657-ebd360db48df"><a class="anchor" href="#_e942bd1e-9385-e16d-534f-10349e32d9c4"></a><a class="header" href="#_e942bd1e-9385-e16d-534f-10349e32d9c4">5.1.  General</a></h2>
 
 <p id="_d9d99067-c058-2ddb-1ee4-ab6f659f89de">The generalized non-linear least-squares algorithm mentioned in <a href="#measure_of_deviation">Section 4.2</a> is iterative. Starting with an initial approximation to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -10914,7 +10906,7 @@ pre.sourcecode .nt {
     <mo>.</mo>
   </mstyle>
 </math></span></p></div></div>
-</div><div id="first_order_derivative_eval"><h2 id="_1c2ada65-b3ec-47bb-bdcb-ec33594d2519"><a class="anchor" href="#first_order_derivative_eval"></a><a class="header" href="#first_order_derivative_eval">5.2.  First-order derivative evaluation</a></h2>
+</div><div id="first_order_derivative_eval"><h2 id="_61005d35-1eb8-478b-b581-0fa5da324a1c"><a class="anchor" href="#first_order_derivative_eval"></a><a class="header" href="#first_order_derivative_eval">5.2.  First-order derivative evaluation</a></h2>
 
 <p id="_e51e484c-8260-c8c2-5177-5deca2a8f250">These derivatives constitute the Jacobian matrix</p>
 
@@ -11474,7 +11466,7 @@ pre.sourcecode .nt {
 </math></span>.</p>
 
 <p id="_ad3ab783-8efa-0fee-79e9-50352ee9dc2a">The various first-order derivatives are given in <a href="#appendixB">Annex 2</a>.</p>
-</div><div id="use_of_nlls_solver"><h2 id="_61f8522f-bf41-4f34-96e4-ffbca48ea2a3"><a class="anchor" href="#use_of_nlls_solver"></a><a class="header" href="#use_of_nlls_solver">5.3.  Use of a generalized non-linear least-squares solver</a></h2>
+</div><div id="use_of_nlls_solver"><h2 id="_99baa7ed-0332-441b-95f8-c2e20adbba80"><a class="anchor" href="#use_of_nlls_solver"></a><a class="header" href="#use_of_nlls_solver">5.3.  Use of a generalized non-linear least-squares solver</a></h2>
 
 <p id="_36cd2cf7-4dad-b55f-009d-93777d342f85">The solution of the generalized non-linear least-squares formulation of <a href="#partial_formulation">Section 4.2.2</a> is carried out using a high-quality library software implementation <a href="#for1979">[24]</a> of a recognized algorithm for such problems.</p>
 
@@ -11818,7 +11810,7 @@ pre.sourcecode .nt {
     </msub>
   </mstyle>
 </math></span>.</p>
-</div><div id="init_approx_to_the_model_params"><h2 id="_a5e25c28-6997-4c5b-83c4-0d638b46be22"><a class="anchor" href="#init_approx_to_the_model_params"></a><a class="header" href="#init_approx_to_the_model_params">5.4.  Initial approximations to the model parameters</a></h2>
+</div><div id="init_approx_to_the_model_params"><h2 id="_1e6e0e0d-d7d0-4abf-b7c8-423b075e6816"><a class="anchor" href="#init_approx_to_the_model_params"></a><a class="header" href="#init_approx_to_the_model_params">5.4.  Initial approximations to the model parameters</a></h2>
 
 <p id="_7a9ab52f-3b32-858f-2f76-1aaab6281c3b">The following approach is used to provide initial approximations to the model parameters <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -11985,7 +11977,7 @@ pre.sourcecode .nt {
 </math></span>.</p>
 </li>
 </ol></div>
-</div></div><div id="uncertainties"><h1 id="_4ac1fe3d-e9f5-430a-b788-2fb0d59ff144"><a class="anchor" href="#uncertainties"></a><a class="header" href="#uncertainties">6.  Model parameter uncertainties</a></h1><div id="_d1a3c6a2-bec0-a375-4bd1-979b6618c5f0"><h2 id="_79367743-3042-4ec0-9af4-3f6cf906043d"><a class="anchor" href="#_d1a3c6a2-bec0-a375-4bd1-979b6618c5f0"></a><a class="header" href="#_d1a3c6a2-bec0-a375-4bd1-979b6618c5f0">6.1.  General</a></h2>
+</div></div><div id="uncertainties"><h1 id="_0d78fd26-1574-4d0f-bd9e-60face06b7bc"><a class="anchor" href="#uncertainties"></a><a class="header" href="#uncertainties">6.  Model parameter uncertainties</a></h1><div id="_d1a3c6a2-bec0-a375-4bd1-979b6618c5f0"><h2 id="_508d5c01-a91f-4e3b-b98f-80795107d803"><a class="anchor" href="#_d1a3c6a2-bec0-a375-4bd1-979b6618c5f0"></a><a class="header" href="#_d1a3c6a2-bec0-a375-4bd1-979b6618c5f0">6.1.  General</a></h2>
 
 <p id="_0b71c89f-ec71-3e70-cbe8-52c9b357e0e2">This section is concerned with the evaluation of the uncertainty matrix <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -12178,7 +12170,7 @@ pre.sourcecode .nt {
     </mstyle>
   </mstyle>
 </math></span>, but information on the correlations is not readily available, other than that the effects would be expected to be small. Therefore, consideration is not given to this form of correlation, although an extension of the analysis here is possible should they be quantifiable.</p>
-<a href="#fnref:7">↩</a></aside></div><div id="_40583cad-ccf0-d841-ccdf-00316b9493d0"><h2 id="_00a5814f-528d-4186-8c4f-2241dee90fda"><a class="anchor" href="#_40583cad-ccf0-d841-ccdf-00316b9493d0"></a><a class="header" href="#_40583cad-ccf0-d841-ccdf-00316b9493d0">6.2.  Implicit model</a></h2>
+<a href="#fnref:7">↩</a></aside></div><div id="_40583cad-ccf0-d841-ccdf-00316b9493d0"><h2 id="_99275892-e930-42ee-9dfe-f1ec96b1b721"><a class="anchor" href="#_40583cad-ccf0-d841-ccdf-00316b9493d0"></a><a class="header" href="#_40583cad-ccf0-d841-ccdf-00316b9493d0">6.2.  Implicit model</a></h2>
 
 <p id="_97cd9a85-c3f0-761c-2c44-42fcb553a987">The contribution to <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -13378,7 +13370,7 @@ pre.sourcecode .nt {
     </msub>
   </mstyle>
 </math></span> is given in <a href="#appendixD">Annex 4</a>.</p>
-<a href="#fnref:8">↩</a></aside></div></div><div id="validation"><h1 id="_a52008eb-d68d-460c-9af6-db1e5604e003"><a class="anchor" href="#validation"></a><a class="header" href="#validation">7.  Validation of model and uncertainty evaluation</a></h1><p id="_fcee8f5b-4b77-114a-bd22-7bf4cdb4705b">Unless the model itself and aspects relating to the model are validated, the results produced may not be reliable. Therefore, attention is paid to the following issues:</p><div class="ol_wrap"><ol type="1" id="_9c7420e0-74a3-cc1e-5583-6536eb461b28"><li id="_35679b2d-bf1f-815c-b335-30bc6f26e731"><p id="_f4a28d5f-f571-bb7b-8a45-779cb1faf57a">The choice of models from families of (e.g. polynomial or spline) models;</p>
+<a href="#fnref:8">↩</a></aside></div></div><div id="validation"><h1 id="_ba659895-d78e-4ac9-b664-f795bc22b6db"><a class="anchor" href="#validation"></a><a class="header" href="#validation">7.  Validation of model and uncertainty evaluation</a></h1><p id="_fcee8f5b-4b77-114a-bd22-7bf4cdb4705b">Unless the model itself and aspects relating to the model are validated, the results produced may not be reliable. Therefore, attention is paid to the following issues:</p><div class="ol_wrap"><ol type="1" id="_9c7420e0-74a3-cc1e-5583-6536eb461b28"><li id="_35679b2d-bf1f-815c-b335-30bc6f26e731"><p id="_f4a28d5f-f571-bb7b-8a45-779cb1faf57a">The choice of models from families of (e.g. polynomial or spline) models;</p>
 </li>
 <li id="_ad7f61a7-7719-b1fd-ee9c-686a45d0d293"><p id="_66a589fb-df89-3371-1cc7-0b1b8810e2c4">Consistency of model and data;</p>
 </li>
@@ -13386,7 +13378,7 @@ pre.sourcecode .nt {
 </li>
 <li id="_f327d8a5-61b2-b958-1819-bb205513711d"><p id="_aee60460-c56e-6cec-f665-22eb6fe67214">Adequacy of quadrature rules (needed in forming the integrals in <a href="#eq11">Equation (11)</a>).</p>
 </li>
-</ol></div><div id="choice_of_models"><h2 id="_a3121f8a-d501-4498-bc85-eacd8a0dc9d7"><a class="anchor" href="#choice_of_models"></a><a class="header" href="#choice_of_models">7.1.  Choice of models from model families</a></h2>
+</ol></div><div id="choice_of_models"><h2 id="_33aefbf4-bcec-48c2-b8eb-3bc4e8ecdbd0"><a class="anchor" href="#choice_of_models"></a><a class="header" href="#choice_of_models">7.1.  Choice of models from model families</a></h2>
 
 <p id="_38dcd672-68b5-f802-462c-4721cc201a34">The problem as posed requires choices for the values of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -13639,7 +13631,7 @@ pre.sourcecode .nt {
     </mover>
   </mstyle>
 </math></span>.</p>
-<a href="#fnref:9">↩</a></aside></div><div id="_b55c1f5a-9923-2658-2468-6ea02930107d"><h2 id="_b991506b-f553-46ca-8fdc-ca259640aef6"><a class="anchor" href="#_b55c1f5a-9923-2658-2468-6ea02930107d"></a><a class="header" href="#_b55c1f5a-9923-2658-2468-6ea02930107d">7.2.  Consistency of model and data</a></h2>
+<a href="#fnref:9">↩</a></aside></div><div id="_b55c1f5a-9923-2658-2468-6ea02930107d"><h2 id="_dc8bd7ee-24f2-4387-8826-e2360f10a2e3"><a class="anchor" href="#_b55c1f5a-9923-2658-2468-6ea02930107d"></a><a class="header" href="#_b55c1f5a-9923-2658-2468-6ea02930107d">7.2.  Consistency of model and data</a></h2>
 
 <p id="_5c51dd19-7009-35b2-bb33-7b865fa3bff9">This section provides a test, under the assumption of normality of the various quantities involved, for the consistency of the model and the data.</p>
 
@@ -13692,7 +13684,7 @@ pre.sourcecode .nt {
     </mstyle>
   </mstyle>
 </math></span> degrees of freedom exceeding this computed chi-squared value is less than 0.0001, the consistency check is regarded as failed. The use of this probability corresponds to four standard deviations under a normality assumption. This check is actually less stringent than that often recommended in the context of key comparison data evaluation <a href="#cox2002">[15]</a>, <a href="#nie2002">[34]</a>.</p>
-</div><div id="determining_subset"><h2 id="_f9edf445-2394-4f3e-a049-1484ddb67f31"><a class="anchor" href="#determining_subset"></a><a class="header" href="#determining_subset">7.3.  Determining a consistent subset</a></h2>
+</div><div id="determining_subset"><h2 id="_9003dfac-5ce6-4445-9ec1-7ef8826fb013"><a class="anchor" href="#determining_subset"></a><a class="header" href="#determining_subset">7.3.  Determining a consistent subset</a></h2>
 
 <p id="_1990b14c-9d11-e5af-699b-7214d1cbd9c6">A normalized deviation is defined as a model deviation in <a href="#eq26">Equation (26)</a> normalized by the standard uncertainty associated with this deviation. The corresponding component of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -13827,7 +13819,7 @@ pre.sourcecode .nt {
     </mover>
   </mstyle>
 </math></span>. This option corresponds to steps <a href="#st7-3-1">1)</a>–<a href="#st7-3-5">5)</a> (executed once).</p>
-</div><div id="uncertainty_check"><h2 id="_e3e3cb70-b7cc-43db-8e9b-4510c7a94c2f"><a class="anchor" href="#uncertainty_check"></a><a class="header" href="#uncertainty_check">7.4.  Uncertainty check by Monte Carlo calculation</a></h2>
+</div><div id="uncertainty_check"><h2 id="_f407b8ce-985e-4ba2-a38e-e9ca293c5fb4"><a class="anchor" href="#uncertainty_check"></a><a class="header" href="#uncertainty_check">7.4.  Uncertainty check by Monte Carlo calculation</a></h2>
 
 <p id="_c3eb72d4-f413-7730-6bae-bd0d27eb1b8e">Arguably the simplest form of validation of the uncertainties provided by direct evaluation is the use of the propagation of distributions, implemented using a Monte Carlo method (MCM). To apply MCM, first a joint probability density function (PDF) is assigned to the input quantity <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -14098,7 +14090,7 @@ pre.sourcecode .nt {
     </msub>
   </mstyle>
 </math></span> itself because of the non-linearity of the model. (The law of propagation of uncertainty is based on a linear approximation.) See <a href="#conclusions">Chapter 11</a>.</p>
-</div><div id="_b049e0a3-22b6-7a88-23c2-2972a9a55381"><h2 id="_eeb02dea-71fa-4ae2-af72-3c39124546af"><a class="anchor" href="#_b049e0a3-22b6-7a88-23c2-2972a9a55381"></a><a class="header" href="#_b049e0a3-22b6-7a88-23c2-2972a9a55381">7.5.  Adequacy of quadrature rule</a></h2>
+</div><div id="_b049e0a3-22b6-7a88-23c2-2972a9a55381"><h2 id="_5aa981b6-6243-4c64-98fa-b878715b2655"><a class="anchor" href="#_b049e0a3-22b6-7a88-23c2-2972a9a55381"></a><a class="header" href="#_b049e0a3-22b6-7a88-23c2-2972a9a55381">7.5.  Adequacy of quadrature rule</a></h2>
 
 <p id="_873be424-0fe0-04c8-842c-438745996c93">Consider the use of a quadrature rule for carrying out the integrations required when evaluating <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -14183,7 +14175,7 @@ pre.sourcecode .nt {
     </msub>
   </mstyle>
 </math></span>, and thus not be smooth, with a deleterious effect on convergence (the convergence proofs for the method would no longer apply), and even introduce spurious local minima in the neighbourhood of the required global solution.</p>
-<a href="#fnref:10">↩</a></aside></div></div><div id="_9e5acb3d-b42a-d6ff-fd99-66bc6ed0ddf6"><h1 id="_3e1677d1-9b3b-4a57-9c06-2e8b62d9cca2"><a class="anchor" href="#_9e5acb3d-b42a-d6ff-fd99-66bc6ed0ddf6"></a><a class="header" href="#_9e5acb3d-b42a-d6ff-fd99-66bc6ed0ddf6">8.  Determination of the required quantities and the associated uncertainty evaluation</a></h1><p id="_9a32c42e-41da-e6dd-6d28-b3f40842407d">The primary quantities of interest are</p><div class="ul_wrap"><ul id="_947aa799-32b3-6a29-5961-7db9f23f3c12"><li id="_97e66820-b290-b985-ee86-8596147fbadc"><p id="_ebaba5c5-07a0-2db3-d3ac-d93726b07805">parameters of the photon and electron efficiency curves,</p>
+<a href="#fnref:10">↩</a></aside></div></div><div id="_9e5acb3d-b42a-d6ff-fd99-66bc6ed0ddf6"><h1 id="_f798920c-f161-43e9-8a7f-2478021b8c71"><a class="anchor" href="#_9e5acb3d-b42a-d6ff-fd99-66bc6ed0ddf6"></a><a class="header" href="#_9e5acb3d-b42a-d6ff-fd99-66bc6ed0ddf6">8.  Determination of the required quantities and the associated uncertainty evaluation</a></h1><p id="_9a32c42e-41da-e6dd-6d28-b3f40842407d">The primary quantities of interest are</p><div class="ul_wrap"><ul id="_947aa799-32b3-6a29-5961-7db9f23f3c12"><li id="_97e66820-b290-b985-ee86-8596147fbadc"><p id="_ebaba5c5-07a0-2db3-d3ac-d93726b07805">parameters of the photon and electron efficiency curves,</p>
 </li>
 <li id="_3b6c09dd-3eef-c6c7-4920-c2b5c39db6f8"><p id="_70982837-1a90-0069-454b-47efd8d45dfb">corrected measured equivalent activities, and</p>
 </li>
@@ -14197,7 +14189,7 @@ pre.sourcecode .nt {
       </mstyle>
     </mstyle>
   </mstyle>
-</math></span> of the efficiency curves has been estimated and the associated uncertainty matrix evaluated.</p><div id="_bf6024ec-fc68-9b48-477b-0e66002a2ee5"><h2 id="_6b492e07-31f2-45ac-95d5-df567564adfb"><a class="anchor" href="#_bf6024ec-fc68-9b48-477b-0e66002a2ee5"></a><a class="header" href="#_bf6024ec-fc68-9b48-477b-0e66002a2ee5">8.1.  Parameters of the photon and electron efficiency curves</a></h2>
+</math></span> of the efficiency curves has been estimated and the associated uncertainty matrix evaluated.</p><div id="_bf6024ec-fc68-9b48-477b-0e66002a2ee5"><h2 id="_4a6e6e86-7799-41d7-a894-8e3e509afa9d"><a class="anchor" href="#_bf6024ec-fc68-9b48-477b-0e66002a2ee5"></a><a class="header" href="#_bf6024ec-fc68-9b48-477b-0e66002a2ee5">8.1.  Parameters of the photon and electron efficiency curves</a></h2>
 
 <p id="_9685cca9-fba9-59d7-83fb-f434e65e4099">The solution provided by the generalized non-linear least-squares algorithm constitutes an estimate <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -14344,7 +14336,7 @@ pre.sourcecode .nt {
     </mover>
   </mstyle>
 </math></span> can also be taken into account following the determination of the least-squares solution.</p>
-</div><div id="corr_activity"><h2 id="_d8cd6d9a-b373-4176-a6ac-2816f24153b6"><a class="anchor" href="#corr_activity"></a><a class="header" href="#corr_activity">8.2.  Corrected measured equivalent activity</a></h2>
+</div><div id="corr_activity"><h2 id="_9d9b95d6-7d7f-45f9-bafc-c2983887839a"><a class="anchor" href="#corr_activity"></a><a class="header" href="#corr_activity">8.2.  Corrected measured equivalent activity</a></h2>
 
 <p id="_d47f1c23-89f1-7132-8a03-dccbbbb6a466"><a href="#eq21">Equation (21)</a> is used for each radionuclide considered and each laboratory concerned to provide corrected measured equivalent activities based on the laboratory and SIR measured values and the modelled correction factor. The estimate provided by <a href="#eq21">Equation (21)</a> based on measurement and modelled correction factors for radionuclide <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -14844,7 +14836,7 @@ pre.sourcecode .nt {
 </math></span></p></div></div>
 
 <p id="_987cc2e2-d096-f06e-2eb8-257fa8f72142">The partial derivatives required in <a href="#eq31">Equation (31)</a> are given in <a href="#appendixB-2-1">Annex A2.2.1</a>.</p>
-</div><div id="modelled_act"><h2 id="_2e0db388-43d9-4f8a-8e0d-274b74a6b541"><a class="anchor" href="#modelled_act"></a><a class="header" href="#modelled_act">8.3.  Modelled equivalent activity</a></h2>
+</div><div id="modelled_act"><h2 id="_a6dba672-cfe6-42db-9df8-c7ae7410a711"><a class="anchor" href="#modelled_act"></a><a class="header" href="#modelled_act">8.3.  Modelled equivalent activity</a></h2>
 
 <p id="_29a5a0b1-3f84-eee1-9cb4-5d8b83ed1c5d">Estimates of modelled equivalent activities are provided by <a href="#eq8">Equation (8)</a>. For radionuclide <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -15189,7 +15181,7 @@ uncertainty <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
 </math></span></p></div></div>
 
 <p id="_39be3286-4480-a30e-ce36-c06207adde1c">The partial derivatives required in <a href="#eq33">Equation (33)</a> are given in <a href="#appendixB-2-2">Annex A2.2.2</a> and <a href="#appendixB-2-3">Annex A2.2.3</a>.</p>
-</div></div><div id="summary"><h1 id="_efaed31d-8485-4676-b97b-1a76a9e52ae4"><a class="anchor" href="#summary"></a><a class="header" href="#summary">9.  Summary of computational procedure</a></h1><p id="_a9b67267-9b85-d6cc-e3c8-7f2034d35c17">This section describes the computational procedure, relating its elements to the various sections and formulations in this work. This procedure has been implemented as software known as SIRIC <a href="#mic2006">[32]</a>, using the Fortran 95 language and the NAG Library(<a href="http://www.nag.co.uk/">http://www.nag.co.uk/</a>). There are some differences between this implementation and the described approach, as indicated in <a href="#conclusions">Chapter 11</a>.</p><p id="_88f504b0-d7db-6e51-4560-d083fd92ba89">Overall, the procedure constitutes the steps:</p><div class="ol_wrap"><ol type="1" id="_3a67531b-b9a2-00db-ea5c-5269f5e0cd44"><li id="_e68176d8-8fad-c523-6ff0-5d1cfcb2a32e"><p id="_fad612fe-a855-35c5-2438-f82afe66786c">Data input;</p>
+</div></div><div id="summary"><h1 id="_60a7063e-192d-4437-846f-40250e0b62fb"><a class="anchor" href="#summary"></a><a class="header" href="#summary">9.  Summary of computational procedure</a></h1><p id="_a9b67267-9b85-d6cc-e3c8-7f2034d35c17">This section describes the computational procedure, relating its elements to the various sections and formulations in this work. This procedure has been implemented as software known as SIRIC <a href="#mic2006">[32]</a>, using the Fortran 95 language and the NAG Library(<a href="http://www.nag.co.uk/">http://www.nag.co.uk/</a>). There are some differences between this implementation and the described approach, as indicated in <a href="#conclusions">Chapter 11</a>.</p><p id="_88f504b0-d7db-6e51-4560-d083fd92ba89">Overall, the procedure constitutes the steps:</p><div class="ol_wrap"><ol type="1" id="_3a67531b-b9a2-00db-ea5c-5269f5e0cd44"><li id="_e68176d8-8fad-c523-6ff0-5d1cfcb2a32e"><p id="_fad612fe-a855-35c5-2438-f82afe66786c">Data input;</p>
 </li>
 <li id="_fd338a56-6fbf-3a8d-8e25-f2477c3a750d"><p id="_2ad78fee-c299-f5b0-edd6-0e9ba1a4daa4">Efficiency curve generation;</p>
 </li>
@@ -15479,7 +15471,7 @@ uncertainty <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
 </li>
 <li id="_2f3c5772-978a-d1a5-ad3f-017fefa9b529"><p id="_d2f4cf81-690b-e2cc-6433-759b9eeee45b">Determine the measured equivalent activity corrected for impurities corresponding to each data value and evaluate the associated standard uncertainty (<a href="#corr_activity">Section 8.2</a>).</p>
 </li>
-</ol></div></div><div id="_7aec2e94-4534-bb7a-48d3-51a10fcf98fb"><h1 id="_fe22715b-e996-4317-a655-e4abeb1c6b8f"><a class="anchor" href="#_7aec2e94-4534-bb7a-48d3-51a10fcf98fb"></a><a class="header" href="#_7aec2e94-4534-bb7a-48d3-51a10fcf98fb">10.  Results</a></h1><div id="_e079e946-d154-16b1-bdd0-6ddf501ef89a"><h2 id="_02e979fa-527e-4d7d-99d0-563cef8fb97d"><a class="anchor" href="#_e079e946-d154-16b1-bdd0-6ddf501ef89a"></a><a class="header" href="#_e079e946-d154-16b1-bdd0-6ddf501ef89a">10.1.  Application of the procedure to the SIR</a></h2>
+</ol></div></div><div id="_7aec2e94-4534-bb7a-48d3-51a10fcf98fb"><h1 id="_f153a10b-2592-4e59-9179-e98e08045e45"><a class="anchor" href="#_7aec2e94-4534-bb7a-48d3-51a10fcf98fb"></a><a class="header" href="#_7aec2e94-4534-bb7a-48d3-51a10fcf98fb">10.  Results</a></h1><div id="_e079e946-d154-16b1-bdd0-6ddf501ef89a"><h2 id="_c1c38492-e89b-43f4-b4a3-c14fafa07677"><a class="anchor" href="#_e079e946-d154-16b1-bdd0-6ddf501ef89a"></a><a class="header" href="#_e079e946-d154-16b1-bdd0-6ddf501ef89a">10.1.  Application of the procedure to the SIR</a></h2>
 
 <p id="_cc8355e8-40e0-8811-3457-b40cd9562444">The SIRIC software, which applies the procedure described in this monograph, was used to produce the efficiency curves of the SIR. About 275 input <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -16730,24 +16722,24 @@ uncertainty <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
     </msup>
   </mstyle>
 </math></span> emitters. The circle indicates a second prediction for <sup>65</sup>Zn using a recent re-evaluation of its decay-scheme parameters.</p></div>
-</div><div id="app_to_oth_ionitation_chambers"><h2 id="_cc9e0d16-1d43-427a-aae3-94ae343c95c6"><a class="anchor" href="#app_to_oth_ionitation_chambers"></a><a class="header" href="#app_to_oth_ionitation_chambers">10.2.  Application of the procedure to other ionization chambers</a></h2>
+</div><div id="app_to_oth_ionitation_chambers"><h2 id="_ca5bc28f-d9f8-4ab3-b876-a1d38abf6973"><a class="anchor" href="#app_to_oth_ionitation_chambers"></a><a class="header" href="#app_to_oth_ionitation_chambers">10.2.  Application of the procedure to other ionization chambers</a></h2>
 
 <p id="_b1cf9d3a-ad2b-f328-4bbb-df869257d078">The SIRIC software has also been applied successfully to an ionization chamber similar to that of the SIR, but filled with argon rather than nitrogen. Although the shape of the photon efficiency curve was very different, particularly at low energy, SIRIC succeeded in reproducing the measurement data using a polynomial of order 8 (<a href="#mic2006">[32]</a>, and paper in preparation).</p>
 
 <p id="_370d6d54-d534-6f17-8112-b42047cd7665">This further application demonstrates the flexibility of the software, which is related to the fact that any ionization chamber is expected to show a linear dependence at high photon energy so that the SIRIC model for photon efficiency curve should be appropriate. Nevertheless, tests of SIRIC for various types of ionization chambers would be welcomed. It cannot be excluded that in some cases a different model could enable an adjustment to the data to be made using fewer parameters.</p>
 
 <p id="_4e1bfdd0-0d37-adc1-504f-9c20cd50c5d6">Finally, it has been shown in the literature <a href="#vis2003">[22]</a> that ionization chambers with thin outer walls and surrounded by lead shielding may show a discontinuity in the photon efficiency curve at the level of the Pb x-rays K-edge energy. In such a case, the model in SIRIC should be modified but this would have no fundamental consequence on the formulation of the problem to be solved and thus on the procedure applied to find the solution.</p>
-</div></div><div id="conclusions"><h1 id="_12bd3da5-fe93-45e7-9a75-d41e90e3c269"><a class="anchor" href="#conclusions"></a><a class="header" href="#conclusions">11.  Conclusions</a></h1><div id="_d3b8413e-0b49-eac8-c4dc-dbb7a8ceec5a"><h2 id="_e73a30bf-24ea-43d3-98b2-4a11c2c9bea6"><a class="anchor" href="#_d3b8413e-0b49-eac8-c4dc-dbb7a8ceec5a"></a><a class="header" href="#_d3b8413e-0b49-eac8-c4dc-dbb7a8ceec5a">11.1.  Problem formulation</a></h2>
+</div></div><div id="conclusions"><h1 id="_93a2cbdb-9c23-46ae-aeab-764557052ac2"><a class="anchor" href="#conclusions"></a><a class="header" href="#conclusions">11.  Conclusions</a></h1><div id="_d3b8413e-0b49-eac8-c4dc-dbb7a8ceec5a"><h2 id="_8d551a53-f7ca-4f18-8702-03bd84e56f52"><a class="anchor" href="#_d3b8413e-0b49-eac8-c4dc-dbb7a8ceec5a"></a><a class="header" href="#_d3b8413e-0b49-eac8-c4dc-dbb7a8ceec5a">11.1.  Problem formulation</a></h2>
 
 <p id="_7dbc559e-d1bb-056a-244a-9496fea2f84d">The problem of modelling the photon and electron efficiency curves of an ionization chamber, as part of the SIR (International Reference System for activity measurements of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">γ</mi>
   </mstyle>
 </math></span>-ray emitting radionuclides), has historically been solved using an iterative approach. The approach is iterative in order to deal with the multi-photon emitters. The iteration also relates to adjusting the measured equivalent activities to account for impurities, so that a match can be made with a model depending on the parameters of the efficiency curves by, in turn, adjusting these parameters. In this work, the measured data are not adjusted, but the model itself incorporates the reciprocal of the adjustment. The efficiency curves are expressed empirically, since no physical forms are available. However, they are represented in a way that ensures that whatever the values of the adjustable parameters defining them may be, they remain physically possible (positive and tending to zero at low energy).</p>
-</div><div id="_7fc8ea67-ae09-f352-2fca-d8e817e24f78"><h2 id="_7baa2606-4e87-4bfe-95c3-15022618b91a"><a class="anchor" href="#_7fc8ea67-ae09-f352-2fca-d8e817e24f78"></a><a class="header" href="#_7fc8ea67-ae09-f352-2fca-d8e817e24f78">11.2.  Problem solution</a></h2>
+</div><div id="_7fc8ea67-ae09-f352-2fca-d8e817e24f78"><h2 id="_5d7aaa3e-2c6f-455e-9524-ef795425e6e6"><a class="anchor" href="#_7fc8ea67-ae09-f352-2fca-d8e817e24f78"></a><a class="header" href="#_7fc8ea67-ae09-f352-2fca-d8e817e24f78">11.2.  Problem solution</a></h2>
 
 <p id="_eddd2f3e-08bb-35e7-6366-f192252ffb27">The nature of the formulation means that the efficiency curve parameters can be estimated using a conventional mathematical algorithm for generalized non-linear least-squares minimization, and, moreover, the uncertainty matrix associated with these estimates can be evaluated. However, treating the full formulation of the problem would be computationally prohibitive, since it involves solving not only for the efficiency curve parameters but also for improved estimates of the nuclear data and other quantities. Therefore, a partial formulation is used that can be expected to provide good estimates of the efficiency curve parameters. It is, however, only directly capable of providing estimates of the efficiency curve parameters, and the associated uncertainties that are a consequence of the uncertainties associated with SIR equivalent activity data. Therefore, the law of propagation is applied to the measurement model defined by the generalized non-linear least-squares minimization to obtain the contributions from the uncertainties associated with the nuclear data and other input quantities.</p>
-</div><div id="scope_for_further_work"><h2 id="_12eb67c1-677b-4e07-8049-ffc22250e60c"><a class="anchor" href="#scope_for_further_work"></a><a class="header" href="#scope_for_further_work">11.3.  Scope for further work</a></h2>
+</div><div id="scope_for_further_work"><h2 id="_2f664c67-c398-4a21-be6b-6def1c71b533"><a class="anchor" href="#scope_for_further_work"></a><a class="header" href="#scope_for_further_work">11.3.  Scope for further work</a></h2>
 
 <p id="_04d31eb2-eeed-a3b3-f3eb-f7f11da68d1b">The account here does not describe the propagation of the uncertainties associated with the elements of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -16917,7 +16909,7 @@ uncertainty <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
 <p id="_8d3f1e94-ed8a-13ef-e1e9-343d5007f7fd">The formulae in appendix B for certain derivatives are implemented using (central) finite-difference formulae. Since this aspect accounts for almost all the computer time required to run the software, replacement of the finite-difference formulae by analytical expressions would give an appreciable improvement in this regard. This aspect would be a useful future development.</p>
 
 <p id="_60202f40-e7c9-53a5-e1db-631ca980acdd">The uncertainty calculation described here is complicated, involving applying a generalization of the law of propagation of uncertainty to a vector measurand defined by a generalized non-linear least-squares solution. An implementation of the uncertainty check by Monte Carlo calculation (<a href="#uncertainty_check">Section 7.4</a>) would be valuable in validating this aspect of the work.</p>
-</div></div><br /><div id="annexA" class="Section3"><h1 class="Annex" id="_e67a7645-701f-4a4e-baa7-5bde6c25bcda"><a class="anchor" href="#annexA"></a><a class="header" href="#annexA"><b>Annex 1</b>.  <b>Glossary</b></a></h1><div class="figdl"><dl id="_db768d86-a844-d500-58e9-42044f6200b1"><dt><p>Symbol</p></dt><dd id="_a8c29de8-5e44-1004-cd86-1f45ecd37f3b"><p id="_2ec95cdd-f267-06a4-7bdb-0e300b91eab7">Definition</p>
+</div></div><br /><div id="annexA" class="Section3"><h1 class="Annex" id="_60c8d262-10c0-4b6e-a21b-52ed929244ab"><a class="anchor" href="#annexA"></a><a class="header" href="#annexA"><b>Annex 1</b>.  <b>Glossary</b></a></h1><div class="figdl"><dl id="_db768d86-a844-d500-58e9-42044f6200b1"><dt><p>Symbol</p></dt><dd id="_a8c29de8-5e44-1004-cd86-1f45ecd37f3b"><p id="_2ec95cdd-f267-06a4-7bdb-0e300b91eab7">Definition</p>
 </dd><dt><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
@@ -20240,7 +20232,7 @@ uncertainty <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
     </mrow>
   </mstyle>
 </math></span></dt><dd id="_9c67ed11-dd6f-e5ff-44bc-514ab0e659e6"><p id="_84691ba8-05cb-7c22-e29a-c27372d0faac">basis function in empirical model for electron efficiency function</p>
-</dd></dl></div></div><br /><div id="appendixB" class="Section3"><h1 class="Annex" id="_5e4757be-30b0-4bb1-8c52-194c2e4da7b7"><a class="anchor" href="#appendixB"></a><a class="header" href="#appendixB"><b>Annex 2</b>.  <b>Derivatives required by the generalized non-linear least-squares algorithm and in the evaluation of uncertainties</b></a></h1><p id="_cc465f83-9bc3-b176-c08b-50bad13cc23f">This appendix provides expressions for the derivatives required by the generalized non-linear least-squares algorithm and in the evaluation of uncertainties associated with estimates of the efficiency curve parameters (<a href="#first_order_derivative_eval">Section 5.2</a>).</p><div id="_cbb745b4-2427-2326-c4d4-9556a4248726"><h2 id="_4592222e-2cc3-4c51-ae96-450dce9ede62"><a class="anchor" href="#_cbb745b4-2427-2326-c4d4-9556a4248726"></a><a class="header" href="#_cbb745b4-2427-2326-c4d4-9556a4248726">A2.1.  Derivatives with respect to decay-corrected measurement quantities</a></h2>
+</dd></dl></div></div><br /><div id="appendixB" class="Section3"><h1 class="Annex" id="_856af3af-e70e-4c98-b183-fa2fd04b428c"><a class="anchor" href="#appendixB"></a><a class="header" href="#appendixB"><b>Annex 2</b>.  <b>Derivatives required by the generalized non-linear least-squares algorithm and in the evaluation of uncertainties</b></a></h1><p id="_cc465f83-9bc3-b176-c08b-50bad13cc23f">This appendix provides expressions for the derivatives required by the generalized non-linear least-squares algorithm and in the evaluation of uncertainties associated with estimates of the efficiency curve parameters (<a href="#first_order_derivative_eval">Section 5.2</a>).</p><div id="_cbb745b4-2427-2326-c4d4-9556a4248726"><h2 id="_f398c38e-702e-4c90-b112-83c8888769ca"><a class="anchor" href="#_cbb745b4-2427-2326-c4d4-9556a4248726"></a><a class="header" href="#_cbb745b4-2427-2326-c4d4-9556a4248726">A2.1.  Derivatives with respect to decay-corrected measurement quantities</a></h2>
 
 <p id="_641a5577-5d0c-4c54-b692-a8b17c126a8b">Let <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -20445,7 +20437,7 @@ uncertainty <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
     </mrow>
   </mstyle>
 </math></span>  (A2.1)</p></div></div>
-</div><div id="_81cccae0-4665-b17f-1bff-846d1cd14890"><h2 id="_606ffc59-5d98-4ddf-9a3c-a0388df0f2da"><a class="anchor" href="#_81cccae0-4665-b17f-1bff-846d1cd14890"></a><a class="header" href="#_81cccae0-4665-b17f-1bff-846d1cd14890">A2.2.  Derivatives with respect to the remaining quantities</a></h2>
+</div><div id="_81cccae0-4665-b17f-1bff-846d1cd14890"><h2 id="_9e98d942-53bc-4847-acc1-052944b80c0f"><a class="anchor" href="#_81cccae0-4665-b17f-1bff-846d1cd14890"></a><a class="header" href="#_81cccae0-4665-b17f-1bff-846d1cd14890">A2.2.  Derivatives with respect to the remaining quantities</a></h2>
 
 <div id="appendixB-2-1"><h3><a class="anchor" href="#appendixB-2-1"></a><a class="header" href="#appendixB-2-1">A2.2.1.  General</a></h3>
 
@@ -23287,7 +23279,7 @@ uncertainty <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   </mstyle>
 </math></span></p></div></div>
 </div>
-</div></div><br /><div id="appendixC" class="Section3"><h1 class="Annex" id="_050572af-a6e1-4628-b39f-1c0329787398"><a class="anchor" href="#appendixC"></a><a class="header" href="#appendixC"><b>Annex 3</b>.  <b>Hessian matrices</b></a></h1><p id="_568ce8e1-bf28-6613-9282-155f91125469">This appendix provides the Hessian matrices, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</div></div><br /><div id="appendixC" class="Section3"><h1 class="Annex" id="_cd4a79df-19f6-4ebe-b37d-11bd62a21d3e"><a class="anchor" href="#appendixC"></a><a class="header" href="#appendixC"><b>Annex 3</b>.  <b>Hessian matrices</b></a></h1><p id="_568ce8e1-bf28-6613-9282-155f91125469">This appendix provides the Hessian matrices, <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -23992,7 +23984,7 @@ uncertainty <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
       </mstyle>
     </mstyle>
   </mstyle>
-</math></span> are given in <a href="#appendixB">Annex 2</a>.</p><p id="_be9eb48d-7a1f-29de-f1cc-2209be0a7273">The above four formulae are implemented using (central) finite-difference formulae. Also see <a href="#scope_for_further_work">Section 11.3</a>.</p></div><br /><div id="appendixD" class="Section3"><h1 class="Annex" id="_843595a9-2719-4b2a-87bf-4e379336b901"><a class="anchor" href="#appendixD"></a><a class="header" href="#appendixD"><b>Annex 4</b>.  <b>Implicit multivariate model</b></a></h1><p id="_e7ce2650-ec44-5e3c-49a7-423534bfc4b0">Consider the implicit multivariate model</p><div id="_7e7905b4-2653-a7dd-905d-901266309182"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math></span> are given in <a href="#appendixB">Annex 2</a>.</p><p id="_be9eb48d-7a1f-29de-f1cc-2209be0a7273">The above four formulae are implemented using (central) finite-difference formulae. Also see <a href="#scope_for_further_work">Section 11.3</a>.</p></div><br /><div id="appendixD" class="Section3"><h1 class="Annex" id="_c0ea39a8-bd00-4c29-8fc4-8428c41bfd74"><a class="anchor" href="#appendixD"></a><a class="header" href="#appendixD"><b>Annex 4</b>.  <b>Implicit multivariate model</b></a></h1><p id="_e7ce2650-ec44-5e3c-49a7-423534bfc4b0">Consider the implicit multivariate model</p><div id="_7e7905b4-2653-a7dd-905d-901266309182"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mi>h</mi>
     <mrow>
@@ -25425,7 +25417,7 @@ uncertainty <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   </mstyle>
 </math></span>.</p>
 </li>
-</ol></div><p id="_d7b4e469-2a7e-48e5-03ac-97c29fddc172">This procedure was verified using elementary matrix algebra and tested.</p></div><br /><div><h1 class="Section3" id="_6d486cfd-9b86-4ea6-b727-f6eb88adf74b">References</h1>
+</ol></div><p id="_d7b4e469-2a7e-48e5-03ac-97c29fddc172">This procedure was verified using elementary matrix algebra and tested.</p></div><br /><div><h1 class="Section3" id="_23ef9273-af96-46b6-9aaa-f0cb0b2195b3">References</h1>
 <p id="aud2003" class="Biblio">[1]  G. Audi and et al. The NUBASE evaluation of nuclear and decay properties. <i>Nucl. Phys.</i>, A729:3–128, 2003.</p><p id="bar2004" class="Biblio">[2]  R. M. Barker, M. G. Cox, A. B. Forbes, and P. M. Harris. SS<i>f</i>M Best Practice Guide No. 4. Discrete modelling and experimental data analysis. Technical report, National Physical Laboratory, Teddington, UK, 2004.</p><p id="be2006" class="Biblio">[3]  M.-M. Bé. Activity measurements and determination of gamma-ray emission intensities in the decay of <sup>65</sup>Zn. <i>Appl. Radiat. Isot.</i>, 64:1396–1402, 2006.</p><p id="be2004" class="Biblio">[4]  M.-M. Bé et al. Table of radionuclides. Monographie BIPM-5, Bureau International des Poids et Mesures, Pavillon de Breteuil, F-92312 Sèvres Cedex, France, 2004. <a href="http://www.bipm.org/fr/publications/monographies-ri.html">http://www.bipm.org/fr/publications/monographies-ri.html</a>.</p><p id="beh1969" class="Biblio">[5]  H. Behrens and J. Jänecke. <i>Landolt-Börnstein Tables, Gruppe I, Band 4</i>. Springer, Berlin, 1969.</p><p id="bipm-key" class="Biblio">[6]  BIPM. BIPM Key Comparison Database. www.bipm.org/kcdb.</p><p id="bipm-mut" class="Biblio">[7]  BIPM. Mutual recognition of national measurement standards and of calibration and measurement certificates issued by national metrology institutes. International Committee for Weights and Measure, 45 pp., 14 October 1999. Available from the BIPM website: <a href="http://www.bipm.org/pdf/mra.pdf">http://www.bipm.org/pdf/mra.pdf</a>.</p><p id="bipm-eva" class="Biblio">[8]  BIPM, IEC, IFCC, ILAC, ISO, IUPAC, IUPAP, and OIML. Evaluation of measurement data — Supplement 1 to the “Guide to the expression of uncertainty in measurement” — Propagation of distributions using a Monte Carlo method. Joint Committee for Guides in Metrology, Bureau International des Poids et Mesures, JCGM 101, to appear.</p><p id="bipm-gui" class="Biblio">[9]  BIPM, IEC, IFCC, ISO, IUPAC, IUPAP, and OIML. Guide to the expression of uncertainty in measurement. International Organisation for Standardisation, Geneva, Switzerland, 1995. ISBN 92-67-10188-9. Corrected and reprinted.</p><p id="cox1981" class="Biblio">[10]  M. G. Cox. The least squares solution of overdetermined linear equations having band or augmented band structure. <i>IMA J. Numer. Anal.</i>, 1:3–22, 1981.</p><p id="cox1986" class="Biblio">[11]  M. G. Cox. Piecewise Chebyshev series. <i>Bull. Inst. Math. Appl.</i>, 22:163–166, 1986.</p><p id="cox1987" class="Biblio">[12]  M. G. Cox. The NPL Data Approximation Subroutine Library: current and planned facilities. <i>NAG Newsletter</i>, 2/87:3–16, 1987.</p><p id="cox1994" class="Biblio">[13]  M. G. Cox. Survey of numerical methods and metrology applications: discrete processes. In P. Ciarlini, M. G. Cox, R. Monaco, and F. Pavese, editors, <i>Advanced Mathematical Tools in Metrology</i>, pages 1–21, Singapore, 1994. World Scientific.</p><p id="cox1996" class="Biblio">[14]  M. G. Cox. Constructing and solving mathematical models of measurement. In P. Ciarlini, M. G. Cox, F. Pavese, and D. Richter, editors, <i>Advanced Mathematical Tools in Metrology II</i>, pages 7–21, Singapore, 1996. World Scientific.</p><p id="cox2002" class="Biblio">[15]  M. G. Cox. The evaluation of key comparison data. <i>Metrologia</i>, 39:589–595, 2002.</p><p id="cox2007" class="Biblio">[16]  M. G. Cox. The area under a curve specified by measured values. <i>Metrologia</i>, 44:365–378, 2007.</p><p id="cox2004" class="Biblio">[17]  M. G. Cox and P. M. Harris. Software specifications for uncertainty evaluation. Technical Report CMSC 40/04, National Physical Laboratory, Teddington, UK, 2004.</p><p id="cox2004-2" class="Biblio">[18]  M. G. Cox and P. M. Harris. SS<i>f</i>M Best Practice Guide No. 6, Uncertainty evaluation. Technical report, National Physical Laboratory, Teddington, UK, 2004.</p><p id="cox2006" class="Biblio">[19]  M. G. Cox and P. M. Harris. SS<i>f</i>M Best Practice Guide No. 6, Uncertainty evaluation. Technical Report DEM-ES-011, National Physical Laboratory, Teddington, UK, 2006.</p><p id="cox2003" class="Biblio">[20]  M. G. Cox, P. M. Harris, P. D. Kenward, and Emma Woolliams. Spectral characteristic modelling. Technical Report CMSC 27/03, National Physical Laboratory, Teddington, UK, 2003.</p><p id="cox2005" class="Biblio">[21]  M. G. Cox, P. M. Harris, and Emma R. Woolliams. Data evaluation of key comparisons involving linked bilateral measurements and multiple artefacts. In <i>NCSL International Workshop and Symposium</i>, Washington, USA, 2005.</p><p id="vis2003" class="Biblio">[22]  A. de Vismes and M.-N. Amiot. Towards absolute activity measurements by ionisation chambers using the penelope monte-carlo code. <i>Appl. Radiat. and Isot.</i>, 59:267–272, 2003.</p><p id="dry1986" class="Biblio">[23]  P. Dryák and L. Dvořák. Measurement of the energy response functions of the ÚVVVR and SIR <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4</mn>
