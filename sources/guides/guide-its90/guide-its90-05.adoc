@@ -10,6 +10,7 @@
 :title-part-en: Platinum Resistance Thermometry
 :doctype: guide
 :committee-en: Consultative Committee for Thermometry
+:committee-fr: Comité consultatif de thermométrie
 :committee-acronym: CCT
 :workgroup: Task Group for the Realization of the Kelvin
 :workgroup-acronym: CCT-TG-K
@@ -194,7 +195,7 @@ The coefficients stem:[ii(A)_i], stem:[ii(B)_i], stem:[ii(C)_i], and stem:[ii(D)
 .The constants stem:[ii(A)_i], stem:[ii(B)_i], stem:[ii(C)_i] and stem:[ii(D)_i] in the SPRT reference and inverse functions of ITS-90.
 [cols="5*^.^",options="header"]
 |===
-| stem:[i] | stem:[ii(A)_i] | stem:[ii(B)_i] | stem:[ii(C)_i] | stem:[ii(D)_i] 
+| stem:[i] | stem:[ii(A)_i] | stem:[ii(B)_i] | stem:[ii(C)_i] | stem:[ii(D)_i]
 
 | 0 | stem:[-2.13534729] | stem:[0.183324722] | stem:[2.78157254] | stem:[439.932854]
 | 1 | stem:[3.18324720] | stem:[0.240975303] | stem:[1.64650916] | stem:[472.418020]
@@ -210,7 +211,7 @@ The coefficients stem:[ii(A)_i], stem:[ii(B)_i], stem:[ii(C)_i], and stem:[ii(D)
 | 11 | stem:[0.11868632] | stem:[0.123893204] | |
 | 12 | stem:[-0.05248134] | stem:[-0.029201193] | |
 | 13 | | stem:[-0.091173542] | |
-| 14 | | stem:[0.001317696] | | 
+| 14 | | stem:[0.001317696] | |
 | 15 | | stem:[0.026025526] | |
 |===
 
@@ -266,11 +267,11 @@ For the example treated in <<scls_2-1>>, the sub-range from the TPW to the freez
 [[eq11]]
 [stem]
 ++++
-ii(W)_"r" (ii(W)) = ii(W)_{"r,H2O"} f_{"H2O"} (ii(W)) + ii(W)_{"r,Sn"} f_{"Sn"} (ii(W)) + ii(W)_{"r,Zn"} f_{"Zn"} (ii(W)) + ii(W)_{"r,Al"} f_{"Al"} (ii(W)) ,   
+ii(W)_"r" (ii(W)) = ii(W)_{"r,H2O"} f_{"H2O"} (ii(W)) + ii(W)_{"r,Sn"} f_{"Sn"} (ii(W)) + ii(W)_{"r,Zn"} f_{"Zn"} (ii(W)) + ii(W)_{"r,Al"} f_{"Al"} (ii(W)) ,
 ++++
 
 
-where the four interpolating functions containing ratio differences both in the numerator and denominator are: 
+where the four interpolating functions containing ratio differences both in the numerator and denominator are:
 
 [[eq12]]
 [stem]
@@ -300,7 +301,7 @@ An alternative interpolation equation is
 ii(W)_"r" (ii(W)) = f_{"H2O"} (w) + ii(W)_{"r,Ga"} f_{"Ga"} (ii(W)),
 ++++
 
-with 
+with
 
 [[eq14]]
 [stem]
@@ -323,7 +324,7 @@ By comparing <<eq15>> with the rearranged interpolation equation of the ITS-90, 
 
 [stem]
 ++++
-a = (ii(W)_{"r,Ga"} - ii(W)_{"Ga"}) // (1 - ii(W)_{"Ga"}) . 
+a = (ii(W)_{"r,Ga"} - ii(W)_{"Ga"}) // (1 - ii(W)_{"Ga"}) .
 ++++
 
 The general form for all of the alternative interpolation equations is similar to <<eq11>> [<<WhiteSaunders2007,White and Saunders 2007>>, <<White2009,White and Strouse 2009>>, <<White2013,White 2013>>]:
@@ -902,7 +903,7 @@ ii(R)_{"meas"} = ii(R)_"S" (ii(T)_{"cal"}) [1 + beta(ii(T)_{"bath"} - ii(T)_{"ca
 ++++
 
 
-and the necessary correction of the realised fixed-point temperature 
+and the necessary correction of the realised fixed-point temperature
 
 [[eq41]]
 [stem]
@@ -1034,7 +1035,7 @@ stem:[f_{"Ar"} = {(ii(W)-1)(ln ii(W) - ln ii(W)_{"Hg"})}/{(ii(W)_{"Ar"}-1)(ln ii
 a|
 stem:[ii(W)_"r" = f_{"Hg"} ii(W)_{"r,Hg"}  + f_{"H"_2"O"} + f_{"Ga"} ii(W)_{"r,Ga"}]
 
-stem:[f_{"Hg"} = {(ii(W)-1)(ii(W) - ii(W)_{"Ga"})}/{(ii(W)_{"Hg"}-1)(ii(W)_{"Hg"} - ii(W)_{"Ga"})}],  stem:[f_{"H"_2"O"} = {(ii(W) - ii(W)_{"Hg"})(ii(W) - ii(W)_{"Ga"})}/{(1 - ii(W)_{"Hg"})(1 - ii(W)_{"Ga"})}], 
+stem:[f_{"Hg"} = {(ii(W)-1)(ii(W) - ii(W)_{"Ga"})}/{(ii(W)_{"Hg"}-1)(ii(W)_{"Hg"} - ii(W)_{"Ga"})}],  stem:[f_{"H"_2"O"} = {(ii(W) - ii(W)_{"Hg"})(ii(W) - ii(W)_{"Ga"})}/{(1 - ii(W)_{"Hg"})(1 - ii(W)_{"Ga"})}],
 stem:[f_{"Ga"} = {(ii(W) - ii(W)_{"Hg"})(ii(W) - 1)}/{(ii(W)_{"Ga"} - ii(W)_{"Hg"})(ii(W)_{"Ga"} - 1)}]
 
 | stem:[0.01 "unitsml(degC)"] to stem:[29.7646 "unitsml(degC)"]
@@ -1057,7 +1058,7 @@ stem:[ii(W)_"r" = f_{"H"_2"O"} + f_{"In"}ii(W)_{"r,In"} + f_{"Sn"}ii(W)_{"r,Sn"}
 stem:[f_{"H"_2"O"} = {(ii(W) - ii(W)_{"In"})(ii(W) - ii(W)_{"Sn"})}/{(1 - ii(W)_{"In"})(1 - ii(W)_{"Sn"})}], stem:[f_{"In"} = {(ii(W) - 1)(ii(W) - ii(W)_{"Sn"})}/{(ii(W)_{"In"} - 1)(ii(W)_{"In"} - ii(W)_{"Sn"})}], +
 stem:[f_{"Sn"} = {(ii(W) - 1)(ii(W) - ii(W)_{"In"})}/{(ii(W)_{"Sn"} - 1)(ii(W)_{"Sn"} - ii(W)_{"In"})}]
 
-| stem:[0.01 "unitsml(degC)"] to stem:[419.527 "unitsml(degC)"] 
+| stem:[0.01 "unitsml(degC)"] to stem:[419.527 "unitsml(degC)"]
 a|
 stem:[ii(W)_"r" = f_{"H"_2"O"} + f_{"Sn"}ii(W)_{"r,Sn"} + f_{"Zn"}ii(W)_{"r,Zn"}]
 
@@ -1069,7 +1070,7 @@ a|
 stem:[ii(W)_"r" = f_{"H"_2"O"} + f_{"Sn"}ii(W)_{"r,Sn"} + f_{"Zn"}ii(W)_{"r,Zn"} + f_{"Al"}ii(W)_{"r,Al"}]
 
 stem:[f_{"H"_2"O"} = {(ii(W) - ii(W)_{"Sn"})(ii(W) - ii(W)_{"Zn"})(ii(W) - ii(W)_{"Al"})}/{(1 - ii(W)_{"Sn"})(1 - ii(W)_{"Zn"})(1 - ii(W)_{"Al"})}], stem:[f_{"Sn"} = {(ii(W) - 1)(ii(W) - ii(W)_{"Zn"})(ii(W) - ii(W)_{"Al"})}/{(ii(W)_{"Sn"} - 1)(ii(W)_{"Sn"} - ii(W)_{"Zn"})(ii(W)_{"Sn"} - ii(W)_{"Al"})}], +
-stem:[f_{"Zn"} = {(ii(W) - 1)(ii(W) - ii(W)_{"Sn"})(ii(W) - ii(W)_{"Al"})}/{(ii(W)_{"Zn"} - 1)(ii(W)_{"Zn"} - ii(W)_{"Sn"})(ii(W)_{"Zn"} - ii(W)_{"Al"})}], stem:[f_{"Al"} = {(ii(W) - 1)(ii(W) - ii(W)_{"Sn"})(ii(W) - ii(W)_{"Zn"})}/{(ii(W)_{"Al"} - 1)(ii(W)_{"Al"} - ii(W)_{"Sn"})(ii(W)_{"Al"} - ii(W)_{"Zn"})}], 
+stem:[f_{"Zn"} = {(ii(W) - 1)(ii(W) - ii(W)_{"Sn"})(ii(W) - ii(W)_{"Al"})}/{(ii(W)_{"Zn"} - 1)(ii(W)_{"Zn"} - ii(W)_{"Sn"})(ii(W)_{"Zn"} - ii(W)_{"Al"})}], stem:[f_{"Al"} = {(ii(W) - 1)(ii(W) - ii(W)_{"Sn"})(ii(W) - ii(W)_{"Zn"})}/{(ii(W)_{"Al"} - 1)(ii(W)_{"Al"} - ii(W)_{"Sn"})(ii(W)_{"Al"} - ii(W)_{"Zn"})}],
 |===
 
 
