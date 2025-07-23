@@ -1,0 +1,4542 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>BIPM Publications in Metanorma</title>
+    <style>
+<!--
+@charset "UTF-8";
+/*
+    0 CSS RESET
+*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font-size: 100%; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  vertical-align: baseline; }
+
+html, body, div, span, applet, object, iframe,
+p, blockquote,
+a, abbr, acronym, address, big, cite,
+del, dfn, em, img, ins, q, s,
+small, strike, strong, sub, sup, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: "Overpass", sans-serif; }
+
+code, pre, tt, kbd, samp {
+  font-family: "Space Mono", monospace; }
+
+h1, h2, h3, h4, h5, h6, .h2Annex {
+  font-family: "Overpass", sans-serif; }
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto; }
+
+dt {
+  grid-column-start: 1; }
+
+dd {
+  grid-column-start: 2; }
+
+dd p, dt p {
+  margin-top: 0px; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+    1. HTML & Body
+*/
+body {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  color: #1d1d1d;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.4em;
+  background-color: #ffffff; }
+
+main {
+  margin: 0 3em 0 6em; }
+
+#toc {
+  font-family: "Overpass", sans-serif;
+  font-weight: 400; }
+
+/*
+    2. Responsive navigation layout
+*/
+@media screen and (min-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 323px;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0 0 0 45px;
+    margin-right: 30px;
+    background-color: #f7f7f7; }
+  #toggle {
+    position: fixed;
+    height: 100%;
+    width: 30px;
+    background-color: #1d1d1d;
+    color: white !important;
+    cursor: pointer;
+    z-index: 100; }
+  #toggle span {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%); }
+  .container {
+    padding-left: 360px; }
+  .rule.toc {
+    display: none; }
+  h1.toc-contents {
+    margin-top: 1em; }
+  ul#toc-list {
+    padding: 0;
+    margin: 0; } }
+
+@media screen and (max-width: 768px) {
+  #toc {
+    padding: 0 1.5em 0 1.5em;
+    overflow: visible; } }
+
+#toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+#toc li {
+  padding: 5px 10px; }
+
+#toc a {
+  color: #485094;
+  text-decoration: none;
+  display: block; }
+
+#toc a:hover {
+  color: white; }
+
+#toc .h2 {
+  padding-left: 30px; }
+
+#toc .h3 {
+  padding-left: 50px; }
+
+#toc .toc-active a {
+  color: white; }
+
+#toc .toc-active, #toc li:hover {
+  background: #1d1d1d;
+  box-shadow: inset -5px 0px 10px -5px #1d1d1d !important; }
+
+#toc li:hover a {
+  color: white; }
+
+/*
+    Document types + stages
+*/
+.document-type-band {
+  left: 0;
+  top: 180px;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 99;
+  /*box-shadow: -5px 0px 10px #1d1d1d*/ }
+
+.document-stage-band {
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 98;
+  box-shadow: -5px 0px 10px #1d1d1d; }
+
+.document-type {
+  position: relative;
+  width: 25px; }
+
+.document-stage {
+  position: relative;
+  width: 25px; }
+
+p.document-type, p.document-stage {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0; }
+
+p.document-type {
+  font-weight: 400;
+  height: 210px; }
+
+#governance-band p.document-type {
+  font-weight: 400;
+  height: 230px !important; }
+
+p.document-stage {
+  font-weight: 300;
+  height: 160px; }
+
+
+
+.coverpage-maturity {
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0 0 2em 0;
+  text-transform: uppercase; }
+
+
+
+/*
+    3. TYPOGRAPHY
+*/
+/*
+    3.1 Titles
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Overpass", sans-serif;
+  color: #0e1a85;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 0.3em; }
+
+h1 {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  margin-top: 2em; }
+
+h1#content {
+  margin-top: 2em; }
+
+h2 {
+  font-size: 1.3em;
+  font-weight: 400;
+  margin-top: 0.2em;
+}
+
+h3 {
+  font-size: 1.1em;
+  font-weight: 400;
+  margin-top: 0.2em;
+}
+
+/*
+  span[id^="toc"]:after {
+    float: left;
+    padding-right: 4px;
+    margin-left: -20px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 0.8em;
+    color: #cfcfcf;
+    content: "\f0c1";
+  }
+  */
+.TermNum, .Terms, .AltTerms {
+  color: #485094;
+  font-weight: 400; }
+
+p.TermNum {
+  font-size: 0.9em;
+  line-height: 1em;
+  margin: 0;
+  margin-top: 2em; }
+
+p.Terms {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  margin: 0; }
+
+/*
+  p.AltTerms {
+    font-style: italic;
+    margin: 0;
+  }
+  */
+span.obligation {
+  font-weight: 400; }
+
+/*
+    3.2 Links
+*/
+a, a:visited {
+  text-decoration: none;
+  color: #485094; }
+
+a:hover {
+  color: white;
+  background: #1d1d1d;
+  box-shadow: 3px 0 0 #1d1d1d, -3px 0 0 #1d1d1d;
+  /* padding: 2px 0 2px 0; */
+}
+
+::selection {
+  background: #1d1d1d;
+  /* WebKit/Blink Browsers */
+  color: white; }
+
+::-moz-selection {
+  background: #1d1d1d;
+  /* Gecko Browsers */
+  color: white; }
+
+.contact-info a:hover {
+  color: #485094;
+  text-decoration: underline;
+  background: none;
+  box-shadow: 0 0 0 0; }
+
+/*
+    3.3 Lists
+*/
+ul {
+  margin-left: 1.2em; }
+
+ol {
+  margin-left: 1.2em; }
+
+ul > li {
+  list-style: none; }
+
+ul > li:before {
+  content: "—";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.2em; }
+
+li p {
+  display: inline; }
+
+li:first-child {
+  margin-top: 1em; }
+
+#toc ul {
+  margin-bottom: 0.25em; }
+
+#toc li {
+  list-style-type: none; }
+
+#toc li:before {
+  content: " ";
+  display: none; }
+
+/*
+    3.4 Rules
+*/
+.rule {
+  width: 100%;
+  height: 1px;
+  background-color: #0e1a85;
+  margin: 2em 0; }
+
+h2 p {
+  display: inline; }
+
+/*
+    3.5 Bibliograhy
+*/
+p.Biblio, p.NormRef {
+  margin-top: 1em;
+  margin-left: 2em;
+  text-indent: -2em; }
+
+/*
+    3.6 Source Code + figures
+*/
+.figure, .Sourcecode {
+  font-family: "Space Mono", monospace;
+  background-color: #f7f7f7;
+  font-size: 0.8em;
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto; }
+
+.FigureTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+/*
+    3.7 Notes
+*/
+.Note {
+  background-color: #fff495;
+  color: #47430c;
+  padding: 1.2em;
+  margin: 2em 0 1em 0; }
+
+/*
+    3.8 Examples
+*/
+table.example {
+  background-color: #e1eef1; }
+
+td.example {
+  padding: 0 1em 0 1em;
+  margin: 2em 0 1em 0; }
+
+.example .example-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0; }
+
+/*
+    3.9 Tables
+*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em; }
+
+table, th, td {
+  border: 1px solid black;
+  font-size: 0.95em; }
+
+td, th {
+  padding: 1em; }
+
+td.header {
+  font-weight: 400; }
+
+p.TableTitle {
+  text-align: center;
+  margin-top: 2.5em;
+  font-weight: 400; }
+
+/*
+  3.10 Footnotes
+*/
+a.footnote-number {
+  vertical-align: super;
+  font-size: 0.8em; }
+
+.footnote {
+  font-size: 0.9em; }
+
+/*
+    3.11 Blockquotes
+*/
+.Quote {
+  background-color: #f7f7f7;
+  font-style: italic;
+  width: 80%;
+  padding: 1.5em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto; }
+
+.QuoteAttribution {
+  text-align: right; }
+
+/*
+    3.12 Formulas
+*/
+.formula, .Formula {
+  background-color: #f7f7f7;
+  padding: 1.5em;
+  margin-top: 2em;
+  text-align: center; }
+
+/*
+    3.13 Contact Info
+*/
+.contact-info {
+  background-color: #f7f7f7;
+  padding: 2em;
+  margin-top: 5em;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; }
+
+.contact-info p, .contact-info a {
+  font-family: "Space Mono", monospace;
+  font-weight: 400; }
+
+.contact-info .name {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0; }
+
+.contact-info .address {
+  font-size: 1em;
+  line-height: 1.3em;
+  margin-top: 0; }
+
+/*
+    Keywords
+*/
+span.keyword {
+  font-weight: 600; }
+
+/*
+    Paragraphs
+*/
+p {
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+/* Admonitions */
+.Admonition, .admonition {
+  background-color: #ffb3b3;
+  /* color: #47430c;*/
+  padding: 0.5em;
+  margin: 1.5em 0 1.5em 0;
+  text-align: left; }
+
+.Admonition p, .admonition p {
+  margin: 0; }
+
+/*
+    4.0 Page header
+*/
+/*
+    4.1 Top Logo
+*/
+.wrapper-top {
+  background-color: #0e1a85;
+  /* background-image: url("img/dots@2x.png"); */
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAACXBIWXMAABYlAAAWJQFJUiTwAAADwUlEQVR4nO3YgQ2AMAwDwcAiWZ1NizrH30lIeIEq9nPOGSDqPgC7+93v/suy3Mmvhx+6VAAIcwFAmc4nyzYAIMgGAGEuACirdyBZtgEASTYACHMBQFm9A8myDQBIsgFAmAsAyuodSJZtAECSDQDCXABQVu9AsmwDAJJsABDmAoCyegeSZRsAkGQDgDAXAJTVO5As2wCAJBsAhLkAoKzegWTZBgAk2QAgzAUAZfUOJMs2ACDJBgBhLgAoq3cgWbYBAEk2AAhzAUBZvQPJsg0ASLIBQJgLAMrqHUiWbQBAkg0AwlwAUFbvQLJsAwCSbAAQ5gKAsnoHkmUbAJBkA4AwFwCU1TuQLNsAgCQbAIS5AKCs3oFk2QYAJNkAIMwFAGX1DiTLNgAgyQYAYS4AKKt3IFm2AQBJNgAIcwFAWb0DybINAEiyAUCYCwDK6h1Ilm0AQJINAMJcAFBW70CybAMAkmwAEOYCgLJ6B5JlGwCQZAOAMBcAlNU7kCzbAIAkGwCEuQCgrN6BZNkGACTZACDMBQBl9Q4kyzYAIMkGAGEuACirdyBZtgEASTYACHMBQFm9A8myDQBIsgFAmAsAyuodSJZtAECSDQDCXABQVu9AsmwDAJJsABDmAoCyegeSZRsAkGQDgDAXAJTVO5As2wCAJBsAhLkAoKzegWTZBgAk2QAgzAUAZfUOJMs2ACDJBgBhLgAoq3cgWbYBAEk2AAhzAUBZvQPJsg0ASLIBQJgLAMrqHUiWbQBAkg0AwlwAUFbvQLJsAwCSbAAQ5gKAsnoHkmUbAJBkA4AwFwCU1TuQLNsAgCQbAIS5AKCs3oFk2QYAJNkAIMwFAGX1DiTLNgAgyQYAYS4AKKt3IFm2AQBJNgAIcwFAWb0DybINAEiyAUCYCwDK6h1Ilm0AQJINAMJcAFBW70CybAMAkmwAEOYCgLJ6B5JlGwCQZAOAMBcAlNU7kCzbAIAkGwCEuQCgrN6BZNkGACTZACDMBQBl9Q4kyzYAIMkGAGEuACirdyBZtgEASTYACHMBQFm9A8myDQBIsgFAmAsAyuodSJZtAECSDQDCXABQVu9AsmwDAJJsABDmAoCyegeSZRsAkGQDgDAXAJTVO5As2wCAJBsAhLkAoKzegWTZBgAk2QAgzAUAZfUOJMs2ACDJBgBhLgAoq3cgWbYBAEk2AAhzAUBZvQPJsg0ASLIBQJgLAMrqHUiWbQBAkg0AwlwAUFbvQLJsAwCSbAAQ5gKAsnoHkmUbAJBkA4AwFwCU1TuQLNsAgCQbAFTNzA9ggAr9aahO8QAAAABJRU5ErkJggg==");
+  color: #ffffff;
+  padding: 2em 0; }
+
+.doc-number {
+  font-size: 0.5em;
+  font-family: "Overpass", sans-serif; }
+
+.coverpage-title {
+  padding: 0.5em 1em;
+  font-family: "Overpass", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  font-weight: 500;
+}
+
+.title-section1 {
+  padding: 0 2em 0 3em; }
+
+.prefatory-section {
+  padding: 0 3em 0 6em; }
+
+.zzSTDTitle1, .MsoCommentText {
+  display: none; }
+
+.coverpage {
+  text-align: center;
+  padding-left: 1.5em; }
+
+.coverpage-logo span, .coverpage-tc-name span {
+  font-family: "Overpass", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600; }
+
+.coverpage-tc-name {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin: 0.25em 0; }
+
+/*
+    4.2 Document Identity
+*/
+.coverpage-doc-identity {
+  font-size: 2em;
+  line-height: 2em; }
+
+.coverpage-title .title-second {
+  display: none; }
+
+.coverpage-stage-block {
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-size: 1.25em;
+  margin: 2em 0em 2em 0em;
+  text-transform: uppercase; }
+
+/*
+    4.3 Draft Warning
+*/
+.coverpage-warning {
+  border-top: solid 1px #f36f36;
+  border-bottom: solid 1px #f36f36;
+  margin: 1em 2em;
+  color: #485094;
+  padding: 1em; }
+
+.coverpage-warning .title {
+  color: #f36f36;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.2em; }
+
+/*
+    4.4 Copyright
+*/
+.copyright {
+  /*font-size: 0.8em;*/
+  text-align: left;
+  margin: 0 3em 0 6em;
+}
+
+.copyright .name, .copyright .address {
+  color: #485094;
+}
+
+/*
+    5.0 Other styles
+*/
+/*
+To top button
+*/
+#myBtn {
+  font-family: "Space Mono", monospace;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  background-color: #1d1d1d;
+  opacity: 0.15;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px 10px 15px;
+  border-radius: 4px; }
+
+#myBtn:hover {
+  opacity: 1; }
+
+a.anchorjs-link:hover {
+  background: none;
+  color: #485094;
+  box-shadow: none; }
+
+@page {
+  margin: 2cm 1cm 2cm 1cm; }
+
+@media print {
+  h1, .title-section1 {
+    page-break-before: always; }
+  #toggle, .document-stage-band,
+  .document-type-band, #myBtn {
+    display: none; }
+  .container {
+    padding-left: 0; }
+  nav {
+    position: relative;
+    width: auto;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0;
+    margin-right: 0;
+    background-color: white; }
+  #toc .toc-active a {
+    color: #485094; }
+  #toc .toc-active, #toc li:hover {
+    background: white;
+    box-shadow: none !important; }
+  #toc li:hover a {
+    color: black; }
+  h1.toc-contents {
+    margin-top: 2em; } }
+
+/* NEW CSS */
+
+nav, #toggle, #standard-band, .coverpage-warning,
+.contact-info, .prefatory-section, .coverpage-stage-block, .doc-number,
+.coverpage-logo, .coverpage-tc-name {
+    display: none;
+}
+
+body.container {
+    padding-left: 0;
+}
+
+.document {
+  padding-top: 5px;
+  border-bottom: 1px solid #0e1a85;
+}
+
+.document:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.doc-line {
+  padding-top: 2em;
+}
+
+.doc-line:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.doc-line .doc-identifier, .doc-line .doc-type-wrap {
+  float: left;
+}
+
+.doc-published, .doc-updated, .doc-identifier,
+.doc-stage, .doc-type, h2, h3 {
+  display: inline-block;
+}
+
+.doc-type-wrap {
+  padding-top: 3px;
+  margin-left: 1em;
+}
+
+.doc-type {
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    line-height: 1em;
+    margin-right: 10px;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+/* TODO: Convert this file to SCSS and use the following code */
+
+
+/*
+$doctype-colors-list:(
+  standard: #0AC442,
+  governance: #540D6E,
+  guide: #D183C9,
+  specification: #65AFFF,
+  report: #3A405A,
+  amendment: #F26430,
+  corrigendum: #C84630,
+  administrative: #BFAE48,
+  advisory: #33658A
+);
+
+@each $key,$val in $doctype-colors-list{
+  .doc-type.#{$key} {
+    background-color: #{$val};
+  }
+}
+
+$docstage-colors-list:(
+  proposal: #39A0ED,
+  working-draft: #1BB5A5,
+  committee-draft: #0DAB76,
+  published: #139A43,
+  withdrawn: #004E64,
+  cancelled: #2E382E,
+);
+
+@each $key,$val in $docstage-colors-list{
+  .doc-info.#{$key} {
+    color: #{$val};
+  }
+}
+*/
+
+.doc-type.standard {
+  background-color: #0AC442;
+}
+
+.doc-type.governance {
+  background-color: #540D6E;
+}
+
+.doc-type.guide {
+  background-color: #D183C9;
+}
+
+.doc-type.specification {
+  background-color: #65AFFF;
+}
+
+.doc-type.report {
+  background-color: #3A405A;
+}
+
+.doc-type.amendment {
+  background-color: #F26430;
+}
+
+.doc-type.corrigendum {
+  background-color: #C84630;
+}
+
+.doc-type.administrative {
+  background-color: #BFAE48;
+}
+
+.doc-type.advisory {
+  background-color: #33658A;
+}
+
+.doc-stage {
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 1em;
+
+}
+
+.doc-info.proposal {
+  color: #39A0ED;
+}
+
+.doc-info.working-draft {
+  color: #2D7393;
+}
+
+.doc-info.committee-draft {
+  color: #2A6B7C;
+}
+
+.doc-info.draft-standard {
+  color: #1C7F7A;
+}
+
+.doc-info.final-draft {
+  color: #53C170;
+}
+
+.doc-info.published {
+  color: #069E2D;
+}
+
+.doc-info.withdrawn {
+  color: #004E64;
+}
+
+.doc-info.cancelled {
+  color: #2E382E;
+}
+
+.doc-info {
+  padding-top: 0;
+  padding-bottom: 10px;
+  font-size: 0.9em;
+  line-height: 1em;
+  float: left;
+}
+
+.doc-dates {
+  padding-top: 5px;
+  display: inline-block;
+  margin-left: 0.5em;
+}
+
+.doc-abstract {
+  float: left;
+}
+
+.doc-access, .doc-bib {
+  display: block;
+  float: right;
+}
+
+.doc-access > div {
+  float: left;
+  margin: 5px 10px;
+}
+
+.doc-bib > div {
+  float: left;
+  margin: 5px 10px;
+}
+
+/*
+.doc-updated:before {
+  content: "(revised: "
+}
+
+.doc-updated:after {
+  content: ")";
+}*/
+
+main {
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+
+.coverpage {
+ padding-left: 0;
+}
+
+.title-section1 .rule {
+  display: none;
+}
+
+
+#topbar-inner {
+  background-color:#424242;
+  font-size:0.8em;
+  height: 30px;
+  line-height:30px;
+}
+
+#title-bar, #title-bar > a {
+  color: #fff;
+  display: block;
+  font-family:'Ek Mukta',Arial,Helvetica,sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  font-variant-caps:small-caps;
+  font-size: 18px;
+  margin: 0 2em;
+}
+
+#title-bar > a:hover {
+  background: transparent;
+  box-shadow: none;
+}
+
+@media only screen and (min-width: 320px) {
+  #title-bar {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #title-bar {
+  font-size: 16px;
+  text-align: left;
+  }
+}
+
+.doc-stage:before {
+  content: "STAGE: "
+}
+
+
+@media only screen and (max-width: 900px) {
+  .doc-dates, .doc-type, .doc-stage {
+    margin-bottom: 5px;
+  }
+
+  main {
+    margin: 0 10px;
+  }
+
+  .document {
+    overflow: hidden;
+    padding-bottom: 10px;
+  }
+}
+-->
+    </style>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700|Overpass:300,300i,600,900|Ek+Mukta:200" rel="stylesheet" type="text/css"/>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous"/>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous"/>
+  </head>
+  <body>
+    <header>
+      <div id="topbar-inner">
+        <div id="title-bar">
+          <div class="doc-access">
+            Generated: 2025-07-23 Metanorma 2.2.2
+          </div>
+          <span>BIPM: Bureau International de Poids et Mesures</span>
+        </div>
+      </div>
+      <div class="title-section">
+        <div class="coverpage">
+          <div class="wrapper-top">
+            <div class="coverpage-doc-identity">
+              <div class="coverpage-title"><span class="title-first">BIPM Publications in Metanorma</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main-section">
+    <div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/brochure-its90/mep-brochure-its90-en.html">BIPM ITS-90 MEP 1 1</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/brochure-its90/mep-brochure-its90-en.html">The International Temperature Scale of 1990 (ITS-90)</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2017-06-28
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/brochure-its90/mep-brochure-its90-en.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/brochure-its90/mep-brochure-its90-en.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/brochure-its90/mep-brochure-its90-en.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/brochure-its90/mep-brochure-its90-en.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/working-party-notes/wpn-203/document.html">BIPM 203</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/working-party-notes/wpn-203/document.html">Densité d’intervalles pour deux oscillateurs superposés à largeurs finies d’impulsions</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        11-1974
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/working-party-notes/wpn-203/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/working-party-notes/wpn-203/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/working-party-notes/wpn-203/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/working-party-notes/wpn-203/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/working-party-notes/wpn-236/document.html">BIPM 236</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/working-party-notes/wpn-236/document.html">Pooled variances</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        04-1993
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/working-party-notes/wpn-236/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/working-party-notes/wpn-236/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/working-party-notes/wpn-236/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/working-party-notes/wpn-236/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/working-party-notes/wpn-237/document.html">BIPM 237</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/working-party-notes/wpn-237/document.html">A note on recurrences</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        02-1994
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/working-party-notes/wpn-237/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/working-party-notes/wpn-237/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/working-party-notes/wpn-237/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/working-party-notes/wpn-237/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/working-party-notes/wpn-238/document.html">BIPM 238</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/working-party-notes/wpn-238/document.html">The relation between the numbers <stem block="false" type="MathML">
+  <math>
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>M</mi>
+      </mstyle>
+      <mi>r</mi>
+    </msub>
+  </mstyle>
+</math>
+  <asciimath>ii(M)_r</asciimath>
+</stem> and <stem block="false" type="MathML">
+  <math>
+  <mstyle displaystyle="false">
+    <msub>
+      <mstyle mathvariant="italic">
+        <mi>B</mi>
+      </mstyle>
+      <mi>j</mi>
+    </msub>
+  </mstyle>
+</math>
+  <asciimath>ii(B)_j</asciimath>
+</stem></a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        01-1995
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/working-party-notes/wpn-238/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/working-party-notes/wpn-238/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/working-party-notes/wpn-238/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/working-party-notes/wpn-238/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2016-01/document.html">BIPM BIPM-2016/01</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2016-01/document.html">BIPM-WADA Workshop: Standards and Metrology in support of Anti-Doping Analysis</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2016-01
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2016-01/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2016-01/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2016-01/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2016-01/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2018-01/document.html">BIPM BIPM-2018/01</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2018-01/document.html">Internal Standard Reference Data for qNMR: Maleic Acid [ISRD-01]</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2018-01-17
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2018-01/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2018-01/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2018-01/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2018-01/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2018-02/document.html">BIPM BIPM-2018/02</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 3
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2018-02/document.html">How to define the base units of the revised SI from seven constants with fixed numerical values</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2018-04-06
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2018-02/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2018-02/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2018-02/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2018-02/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2018-03/document.html">BIPM BIPM-2018/03</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 3
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2018-03/document.html">Comparison of ozone reference standards of the CHMI and the BIPM</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2018-04-06
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2018-03/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2018-03/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2018-03/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2018-03/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2018-04/document.html">BIPM BIPM-2018/04</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2018-04/document.html">Internal Standard Reference Data for qNMR: Dimethyl Sulfone [ISRD-02]</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2018-09-03
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2018-04/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2018-04/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2018-04/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2018-04/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2018-05/document.html">BIPM BIPM-2018/05</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2018-05/document.html">Internal Standard Reference Data for qNMR: Potassium Hydrogen Phthalate [ISRD-03]</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2018-09-12
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2018-05/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2018-05/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2018-05/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2018-05/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2018-06/document.html">BIPM BIPM-2018/06</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2018-06/document.html">Measuring Conditions and Uncertainties for the Comparison and Calibration of National Dosimetric Standards at the BIPM</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2018-12
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2018-06/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2018-06/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2018-06/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2018-06/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2019-01/document.html">BIPM BIPM-2019/01</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2019-01/document.html">Internal Standard Reference Data for qNMR: Dimethyl Terephthalate [ISRD-04]</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2019-03-13
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2019-01/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2019-01/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2019-01/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2019-01/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2019-02/document.html">BIPM BIPM-2019/02</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2019-02/document.html">Internal Standard Reference Data for qNMR: 3,5-Bis(trifluoromethyl)benzoic Acid [ISRD-05]</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2019-03-13
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2019-02/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2019-02/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2019-02/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2019-02/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2019-03/document.html">BIPM BIPM-2019/03</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2019-03/document.html">Internal Standard Reference Data for qNMR: 1,4-Bis(trimethylsilyl)benzene [ISRD-06]</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2019-03-13
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2019-03/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2019-03/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2019-03/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2019-03/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2019-04/document.html">BIPM BIPM-2019/04</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2019-04/document.html">Internal Standard Reference Data for qNMR: 4,4-Dimethyl-4-silapentane-1-sulfonic acid-<stem block="false" type="MathML">
+  <math>
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>d</mi>
+      <mn>6</mn>
+    </msub>
+  </mstyle>
+</math>
+  <asciimath>d_6</asciimath>
+</stem> [ISRD-07]</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2019-03-14
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2019-04/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2019-04/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2019-04/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2019-04/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2019-06/document.html">BIPM BIPM-2019/06</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2019-06/document.html">Purity Evaluation Guideline: Zearalenone [PEG-01]</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2019-09-25
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2019-06/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2019-06/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2019-06/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2019-06/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2019-07/document.html">BIPM BIPM-2019/07</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2019-07/document.html">Calibrant Assessment Guideline: Aflatoxin B<sub>1</sub> [CAG-01]</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2019-09-25
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2019-07/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2019-07/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2019-07/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2019-07/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2020-01/document.html">BIPM BIPM-2020/01</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2020-01/document.html">Comparison of Ozone Reference Standards of the OEH and the BIPM</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2020-02-14
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2020-01/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2020-01/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2020-01/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2020-01/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2020-02/document.html">BIPM BIPM-2020/02</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2020-02/document.html">Calibrant Assessment Guideline: ZEN (CAG-02)</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2020-04-07
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2020-02/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2020-02/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2020-02/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2020-02/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2020-03/document.html">BIPM BIPM-2020/03</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2020-03/document.html">Beam Characterization for Low-energy X-rays and New Reference Qualities at 1 m</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2020-04
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2020-03/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2020-03/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2020-03/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2020-03/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2020-04/document.html">BIPM BIPM-2020/04</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2020-04/document.html">Comparison of Ozone Reference Standards of the ECCC and the BIPM</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2020-08-14
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2020-04/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2020-04/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2020-04/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2020-04/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/guides/guide-plts-2000/document.html">BIPM PLTS-2000</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/guides/guide-plts-2000/document.html">The Provisional Low Temperature Scale from <stem block="false" type="MathML">
+  <math>
+  <mstyle displaystyle="false">
+    <mn>0.9</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_mK">
+      <mstyle mathvariant="normal">
+        <mi>mK</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math>
+  <asciimath>0.9 "unitsml(mK)"</asciimath>
+</stem> to <stem block="false" type="MathML">
+  <math>
+  <mstyle displaystyle="false">
+    <mn>1</mn>
+    <mo rspace="thickmathspace">⁢</mo>
+    <mrow xref="U_NISTu5">
+      <mstyle mathvariant="normal">
+        <mi>K</mi>
+      </mstyle>
+      
+      
+      
+    </mrow>
+  </mstyle>
+</math>
+  <asciimath>1 "unitsml(K)"</asciimath>
+</stem>, PLTS-2000</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2019-03-13
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/guides/guide-plts-2000/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/guides/guide-plts-2000/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/guides/guide-plts-2000/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/guides/guide-plts-2000/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/guides/guide-its90-diff/document.html">BIPM PLTS-2000</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/guides/guide-its90-diff/document.html">Estimates of the Differences between Thermodynamic Temperature and the ITS-90</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2012-01-12
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/guides/guide-its90-diff/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/guides/guide-its90-diff/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/guides/guide-its90-diff/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/guides/guide-its90-diff/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/cipm-mra/g-02/document.html">BIPM CIPM MRA-G-02</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 3
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/cipm-mra/g-02/document.html">Guidelines for the monitoring and reporting of the operation of quality systems by RMOs</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2010-10
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/cipm-mra/g-02/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/cipm-mra/g-02/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/cipm-mra/g-02/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/cipm-mra/g-02/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/cipm-mra/d-02/document.html">BIPM CIPM MRA-D-02</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 3.3
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/cipm-mra/d-02/document.html">Use of the CIPM MRA logo and certificates statement</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2018-09
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/cipm-mra/d-02/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/cipm-mra/d-02/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/cipm-mra/d-02/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/cipm-mra/d-02/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/guides/guide-plts-2000_supp_info/document.html">BIPM PLTS-2000-SUPP</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/guides/guide-plts-2000_supp_info/document.html">Supplementary Information for the Realization of the PLTS-2000</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2014-10-29
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/guides/guide-plts-2000_supp_info/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/guides/guide-plts-2000_supp_info/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/guides/guide-plts-2000_supp_info/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/guides/guide-plts-2000_supp_info/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/jctlm/dbwg_p00/document.html">BIPM JCTLM_DB_WG_P-00</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1.1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/jctlm/dbwg_p00/document.html">Quality policy of the Database Working Group</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2019-02-01
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/jctlm/dbwg_p00/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/jctlm/dbwg_p00/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/jctlm/dbwg_p00/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/jctlm/dbwg_p00/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/jctlm/dbwg_p01a/document.html">BIPM JCTLM_DB_WG_P-01A</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 3.1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/jctlm/dbwg_p01a/document.html">Outline of JCTLM Procedures for evaluating Certified Reference Materials and Reference Measurement Methods/Procedures to be listed as being of a higher metrological order</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2019-02-01
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/jctlm/dbwg_p01a/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/jctlm/dbwg_p01a/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/jctlm/dbwg_p01a/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/jctlm/dbwg_p01a/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/jctlm/dbwg_p02a/document.html">BIPM JCTLM_DB_WG_P-02A</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/jctlm/dbwg_p02a/document.html">Requesting and accepting nominations for Certified Reference Materials and Reference Measurement Methods/Procedures</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2020-06-11
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/jctlm/dbwg_p02a/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/jctlm/dbwg_p02a/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/jctlm/dbwg_p02a/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/jctlm/dbwg_p02a/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/jctlm/dbwg_p02b/document.html">BIPM JCTLM_DB_WG_P-02B</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 5.2
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/jctlm/dbwg_p02b/document.html">Requesting and processing nominations for JCTLM listing of reference measurement laboratory services</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2020-06-11
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/jctlm/dbwg_p02b/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/jctlm/dbwg_p02b/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/jctlm/dbwg_p02b/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/jctlm/dbwg_p02b/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/jctlm/ec-07/document.html">BIPM JCTML-EC-07 II</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/jctlm/ec-07/document.html">JCTLM WGI. NUCLEIC ACID REVIEW TEAM</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2008-09-12
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/jctlm/ec-07/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/jctlm/ec-07/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/jctlm/ec-07/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/jctlm/ec-07/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/jctlm/executive-15-03/document.html">BIPM JCTLM_EXE_15-03</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/jctlm/executive-15-03/document.html">Traceability Statements — References to the JCTLM</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/jctlm/executive-15-03/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/jctlm/executive-15-03/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/jctlm/executive-15-03/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/jctlm/executive-15-03/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/jctlm/executive_g-01/document.html">BIPM JCTLM_EXE_G-01</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1.1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/jctlm/executive_g-01/document.html">Acronyms and definitions</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/jctlm/executive_g-01/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/jctlm/executive_g-01/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/jctlm/executive_g-01/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/jctlm/executive_g-01/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/jctlm/executive_p-00/document.html">BIPM JCTLM_EXE_P-00</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 3.0
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/jctlm/executive_p-00/document.html">Outline of JCTLM Executive Committee procedures</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2019-12-18
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/jctlm/executive_p-00/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/jctlm/executive_p-00/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/jctlm/executive_p-00/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/jctlm/executive_p-00/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/jctlm/executive_p-01/document.html">BIPM JCTLM_EXE_P-01</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 2.1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/jctlm/executive_p-01/document.html">Selection of JCTLM Executive Committee Chair and Secretariat</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2019-12-18
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/jctlm/executive_p-01/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/jctlm/executive_p-01/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/jctlm/executive_p-01/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/jctlm/executive_p-01/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/jctlm/sec_p-00/document.html">BIPM JCTLM_SEC_P-00</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 2
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/jctlm/sec_p-00/document.html">Outline of JCTLM Secretariat Procedures</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2017-01-27
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/jctlm/sec_p-00/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/jctlm/sec_p-00/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/jctlm/sec_p-00/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/jctlm/sec_p-00/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/jctlm/sec_p-01/document.html">BIPM JCTLM_SEC_P-01</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 2
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/jctlm/sec_p-01/document.html">Receiving and distributing to the DB WG nominations submitted to JCTLM</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2017-01-27
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/jctlm/sec_p-01/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/jctlm/sec_p-01/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/jctlm/sec_p-01/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/jctlm/sec_p-01/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/monographie/bipm-1/document.html">BIPM BIPM-1</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/monographie/bipm-1/document.html">Procedures for Accurately Diluting and Dispensing Radioactive Solutions</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        1975
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/monographie/bipm-1/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/monographie/bipm-1/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/monographie/bipm-1/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/monographie/bipm-1/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/monographie/bipm-2/document.html">BIPM BIPM-2</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/monographie/bipm-2/document.html">The Detection and Estimation of Spurious Pulses</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        1976
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/monographie/bipm-2/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/monographie/bipm-2/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/monographie/bipm-2/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/monographie/bipm-2/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/monographie/bipm-3/document.html">BIPM BIPM-3</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/monographie/bipm-3/document.html">The Application of Liquid-Scintillation Counting to Radionuclide Metrology</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        1980
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/monographie/bipm-3/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/monographie/bipm-3/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/monographie/bipm-3/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/monographie/bipm-3/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/monographie/bipm-4/document.html">BIPM BIPM-4</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/monographie/bipm-4/document.html">Activity Measurements with Ionization Chambers</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        1997
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/monographie/bipm-4/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/monographie/bipm-4/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/monographie/bipm-4/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/monographie/bipm-4/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/monographie/bipm-6/document.html">BIPM BIPM-6</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/monographie/bipm-6/document.html">Thermodynamic Stability of Radioactivity Standard Solutions</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2007-04
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/monographie/bipm-6/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/monographie/bipm-6/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/monographie/bipm-6/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/monographie/bipm-6/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/monographie/bipm-7/document.html">BIPM BIPM-7</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/monographie/bipm-7/document.html">Measurement modelling of the International Reference System (SIR) for gamma emitting radionuclides</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2007-12-19
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/monographie/bipm-7/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/monographie/bipm-7/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/monographie/bipm-7/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/monographie/bipm-7/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2015-01/document.html">BIPM BIPM-2015/01</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2015-01/document.html">The CIPM MRA: Past, present and future</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2015-01
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2015-01/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2015-01/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2015-01/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2015-01/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2015-02/document.html">BIPM BIPM-2015/02</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2015-02/document.html">Comparison of Ozone Reference Standards of the DECCW and the BIPM</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2015-02
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2015-02/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2015-02/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2015-02/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2015-02/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div><div class="document"><div class="doc-line">
+    <div class="doc-identifier">
+      <h2>
+      
+        <a href="./documents/rapports/2015-03/document.html">BIPM BIPM-2015/03</a>
+      
+      </h2>
+    </div>
+
+    <div class="doc-type-wrap">
+      <div class="doc-type ">
+      
+      </div>
+    </div>
+
+  
+    <div class="doc-identifier">
+      Edition: 1
+    </div>
+  
+  </div>
+
+  <div class="doc-title">
+    <h3>
+      
+        <a href="./documents/rapports/2015-03/document.html">Report of a Comparison between the LNE-LNHB and the BIPM of Absorbed Dose to Graphite in a Co-60 Reference Beam</a>
+      
+    </h3>
+  </div>
+
+  
+  <div class="doc-info in-force">
+    <div class="doc-stage in-force">
+      
+      
+        in-force
+      
+    </div>
+    <div class="doc-dates">
+      
+      <div class="doc-updated">
+      
+        2015-02
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="doc-bib">
+    <div class="doc-bib-relaton">
+      <a href="./documents/rapports/2015-03/document.rxl">Relaton XML</a>
+    </div>
+  </div>
+
+  <div class="doc-access">
+  
+  
+    <div class="doc-access-button-html">
+      <a href="./documents/rapports/2015-03/document.html">HTML</a>
+    </div>
+  
+  
+    <div class="doc-access-button-pdf">
+      <a href="./documents/rapports/2015-03/document.pdf">PDF</a>
+    </div>
+  
+  
+  
+    <div class="doc-access-button-xml">
+      <a href="./documents/rapports/2015-03/document.xml">XML</a>
+    </div>
+  
+  </div>
+</div>
+    </main>
+    <footer>
+      <div class="copyright">
+        <div class="doc-access">
+          Generated: 2025-07-23 Metanorma 2.2.2
+        </div>
+        <p class="year">&copy; BIPM: Bureau International de Poids et Mesures</p>
+        <p class="message">All rights reserved. Unless otherwise specified, no part of this publication may be reproduced or utilized otherwise in any form or by any means, electronic or mechanical, including photocopying, or posting on the internet or an intranet, without prior written permission.</p>
+      </div>
+    </footer>
+    <script>
+      $(document).ready(function() {
+        $('[id^=toc]').each(function () {
+           var currentToc = $(this);
+           var url = window.location.href;
+           currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "' <\/a>");
+        });
+      });
+      anchors.options = { placement: 'left' };
+      anchors.add('h1, h2, h3, h4');
+    </script>
+  </body>
+</html>
