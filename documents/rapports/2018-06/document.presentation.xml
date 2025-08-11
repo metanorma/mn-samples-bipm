@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="presentation" version="2.7.1" schema-version="v2.1.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="presentation" version="2.7.2" schema-version="v2.1.0" flavor="bipm">
 <bibdata type="standard">
 <title language="en" format="text/plain" type="title-main">Measuring Conditions and Uncertainties for the Comparison and Calibration of National Dosimetric Standards at the BIPM</title>
 
@@ -30,7 +30,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd5" id="U_mK" semx-id="U_mK">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">mK</UnitName>
         <UnitSymbol type="HTML">mK</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -42,7 +42,7 @@
           <EnumeratedRootUnit unit="kelvin" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5" semx-id="U_NISTu5">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">kelvin</UnitName>
         <UnitSymbol type="HTML">K</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -63,7 +63,7 @@
             <EnumeratedRootUnit unit="pascal" prefix="k"/>
           </RootUnits>
         </Unit><Unit dimensionURL="#NISTd1" id="U_cm" semx-id="U_cm">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">cm</UnitName>
         <UnitSymbol type="HTML">cm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -72,7 +72,7 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" prefix="c"/>
+          <EnumeratedRootUnit unit="metre" prefix="c"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd51" id="U_g.cm-2" semx-id="U_g.cm-2">
         <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
@@ -97,7 +97,7 @@
         </UnitSymbol>
         <RootUnits>
           <EnumeratedRootUnit unit="gram"/>
-          <EnumeratedRootUnit unit="meter" prefix="c" powerNumerator="-2"/>
+          <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="-2"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd18" id="U_kV" semx-id="U_kV">
         <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
@@ -112,7 +112,7 @@
           <EnumeratedRootUnit unit="volt" prefix="k"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_mm" semx-id="U_mm">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">mm</UnitName>
         <UnitSymbol type="HTML">mm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -121,7 +121,7 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" prefix="m"/>
+          <EnumeratedRootUnit unit="metre" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_L2M-1" id="U_cm2.g-1" semx-id="U_cm2.g-1">
         <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
@@ -153,7 +153,7 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" prefix="c" powerNumerator="2"/>
+          <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="2"/>
           <EnumeratedRootUnit unit="gram" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_L-2T-1J" id="U_mGy.s-1" semx-id="U_mGy.s-1">
@@ -182,7 +182,7 @@
           <EnumeratedRootUnit unit="second" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_um" semx-id="U_um">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">um</UnitName>
         <UnitSymbol type="HTML">m</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -191,7 +191,7 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" prefix="u"/>
+          <EnumeratedRootUnit unit="metre" prefix="u"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd30" id="U_NISTu27p10_3.u1e-3/1" semx-id="U_NISTu27p10_3.u1e-3/1">
         <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
@@ -216,7 +216,7 @@
         </UnitSymbol>
         <RootUnits>
           <EnumeratedRootUnit unit="gram" prefix="k"/>
-          <EnumeratedRootUnit unit="meter" powerNumerator="-3"/>
+          <EnumeratedRootUnit unit="metre" powerNumerator="-3"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_L2MM-1T-2I-1" id="U_J.C-1" semx-id="U_J.C-1">
         <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
@@ -244,7 +244,7 @@
           <EnumeratedRootUnit unit="coulomb" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd10" id="U_cm3" semx-id="U_cm3">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">cm^3</UnitName>
         <UnitSymbol type="HTML">cm
           <sup>3</sup>
@@ -262,9 +262,9 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" prefix="c" powerNumerator="3"/>
+          <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="3"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd24" id="U_TBq" semx-id="U_TBq">
+      </Unit><Unit dimensionURL="#NISTd101" id="U_TBq" semx-id="U_TBq">
         <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
         <UnitName lang="en">TBq</UnitName>
         <UnitSymbol type="HTML">TBq</UnitSymbol>
@@ -277,19 +277,15 @@
           <EnumeratedRootUnit unit="becquerel" prefix="T"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_NISTu1" semx-id="U_NISTu1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
-        <UnitName lang="en">meter</UnitName>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitName lang="en">metre</UnitName>
         <UnitSymbol type="HTML">m</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">m</mi>
           </math>
         </UnitSymbol>
-      </Unit></UnitSet><QuantitySet><Quantity id="NISTq34" quantityType="base" dimensionURL="#NISTd5" semx-id="NISTq34">
-        <QuantityName lang="en-US">Celsius temperature</QuantityName>
-      </Quantity><Quantity id="NISTq5" quantityType="base" dimensionURL="#NISTd5" semx-id="NISTq5">
-        <QuantityName lang="en-US">thermodynamic temperature</QuantityName>
-      </Quantity></QuantitySet><DimensionSet><Dimension id="NISTd5" semx-id="NISTd5">
+      </Unit></UnitSet><DimensionSet><Dimension id="NISTd5" semx-id="NISTd5">
         <ThermodynamicTemperature symbol="Theta" powerNumerator="1"/>
       </Dimension><Dimension id="NISTd14" semx-id="NISTd14">
           <Length symbol="L" powerNumerator="-1"/>
@@ -322,7 +318,7 @@
         <ElectricCurrent symbol="I" powerNumerator="-1"/>
       </Dimension><Dimension id="NISTd10" semx-id="NISTd10">
         <Length symbol="L" powerNumerator="3"/>
-      </Dimension><Dimension id="NISTd24" semx-id="NISTd24">
+      </Dimension><Dimension id="NISTd101" semx-id="NISTd101">
         <Time symbol="T" powerNumerator="-1"/>
       </Dimension></DimensionSet><PrefixSet><Prefix prefixBase="10" prefixPower="-3" id="NISTp10_-3" semx-id="NISTp10_-3">
         <PrefixName lang="en">milli</PrefixName>
@@ -433,8 +429,8 @@ sourcecode .nt {
 <p id="_ddaaeee1-4050-1fe1-ca7d-a02491ca99f4" semx-id="_ddaaeee1-4050-1fe1-ca7d-a02491ca99f4">The present report documents the conditions of measurement at the BIPM, the values for the physical constants and correction factors, and the estimated uncertainties in the determination of the primary quantities and of calibration coefficients.</p>
 </clause>
 
-<clause id="_c7cc5f07-0349-f4cb-4753-4bdc1452cf41" obligation="normative" semx-id="_c7cc5f07-0349-f4cb-4753-4bdc1452cf41" displayorder="4">
-<title id="_17791bb5-1564-692b-b845-cd7a93a9bc29" semx-id="_c231f09f-c3bb-342b-be69-f90e6b254c53">General remarks</title><fmt-title depth="1" id="_7f50b080-252e-d68a-495c-46b729d02920"><span class="fmt-caption-label"><semx element="autonum" source="_c7cc5f07-0349-f4cb-4753-4bdc1452cf41">2</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_17791bb5-1564-692b-b845-cd7a93a9bc29">General remarks</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Chapter</span> <semx element="autonum" source="_c7cc5f07-0349-f4cb-4753-4bdc1452cf41">2</semx></fmt-xref-label>
+<clause id="_6fbd41ab-8f25-e93c-48d5-c0f639d34340" obligation="normative" semx-id="_6fbd41ab-8f25-e93c-48d5-c0f639d34340" displayorder="4">
+<title id="_17791bb5-1564-692b-b845-cd7a93a9bc29" semx-id="_c231f09f-c3bb-342b-be69-f90e6b254c53">General remarks</title><fmt-title depth="1" id="_7f50b080-252e-d68a-495c-46b729d02920"><span class="fmt-caption-label"><semx element="autonum" source="_6fbd41ab-8f25-e93c-48d5-c0f639d34340">2</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_17791bb5-1564-692b-b845-cd7a93a9bc29">General remarks</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Chapter</span> <semx element="autonum" source="_6fbd41ab-8f25-e93c-48d5-c0f639d34340">2</semx></fmt-xref-label>
 <p id="_ab0fefb5-e2f8-58a7-b542-c347df6c7d9e" semx-id="_ab0fefb5-e2f8-58a7-b542-c347df6c7d9e">The reference plane is specified in terms of a distance from the radiation source or, in the case of low-energy x-rays, from the beam exit window. The reference point is the intersection of the beam axis with the reference plane.</p>
 
 <p id="_f7d8f2b2-2f08-f41d-b375-ea8e506800b0" semx-id="_f7d8f2b2-2f08-f41d-b375-ea8e506800b0">For chamber types other than parallel plate, the chamber is positioned with its axis in the reference plane and with the stated point of measurement of the chamber at the reference point. For measurements in gamma radiation, the chamber is used with the build-up cap provided. The orientation of the chamber is such that the number, text or line inscribed on the stem faces the radiation source, unless a different orientation is indicated. Parallel-plate chambers are calibrated with the front surface of the chamber casing in the reference plane, unless a different surface is indicated on the chamber, and with the entrance window centred on the beam axis.</p>
@@ -443,7 +439,7 @@ sourcecode .nt {
 
 <p id="_262b670e-7231-1f9e-4bc7-c816a5635c13" semx-id="_262b670e-7231-1f9e-4bc7-c816a5635c13">The leakage current is normally measured before and after each set of measurements and a correction is applied, based on the mean value. A chamber for which the relative leakage current is high, and in particular for which the leakage is also variable, is unsuitable for use as a transfer instrument and might also be considered unsuitable for calibration. In the latter case, a study note is issued.</p>
 
-<p id="_837a5b77-50a7-909f-69ad-89dfb59a16e4" semx-id="_837a5b77-50a7-909f-69ad-89dfb59a16e4">The irradiation facilities at the BIPM are temperature controlled (close to <stem block="false" type="MathML" id="_c47f39c3-e74a-9c8a-7110-b17bf3537b02"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_8fc6fd81-9762-3951-aadc-4daab5f74232" semx-id="_8fc6fd81-9762-3951-aadc-4daab5f74232">The irradiation facilities at the BIPM are temperature controlled (close to <stem block="false" type="MathML" id="_5dfb631e-8e78-3986-e51a-b596b522613c"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>20</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -451,12 +447,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>°C</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>20 "unitsml(degC)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_c47f39c3-e74a-9c8a-7110-b17bf3537b02"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>20 "unitsml(degC)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_5dfb631e-8e78-3986-e51a-b596b522613c"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>20</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -464,7 +459,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>°C</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -521,7 +515,7 @@ sourcecode .nt {
       
     </mrow>
   </mstyle>
-</math><asciimath>50 "unitsml(mK)"</asciimath></semx></fmt-stem>. The BIPM reference conditions for air temperature, pressure and relative humidity are <stem block="false" type="MathML" id="_a54db020-a068-4f92-d93a-b871aa3a7556"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>50 "unitsml(mK)"</asciimath></semx></fmt-stem>. The BIPM reference conditions for air temperature, pressure and relative humidity are <stem block="false" type="MathML" id="_4faca2c5-c7d4-eeea-18a9-9621b62988d8"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -536,12 +530,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>ii(T)_0 = 293.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_a54db020-a068-4f92-d93a-b871aa3a7556"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>ii(T)_0 = 293.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_4faca2c5-c7d4-eeea-18a9-9621b62988d8"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -556,7 +549,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -1785,8 +1777,8 @@ sourcecode .nt {
 </ol>
 </clause>
 
-<clause id="_82bf2f63-7a03-5138-dfab-984b1fae38ac" obligation="normative" semx-id="_82bf2f63-7a03-5138-dfab-984b1fae38ac" displayorder="8">
-<title id="_f682bfe5-7237-2ba0-98cd-348f311732c3" semx-id="_42158a06-310f-c0fa-5ef2-5f0fe3956bf5">Comparison and calibration uncertainties</title><fmt-title depth="1" id="_00352a3d-da60-2655-00ae-946eda97d568"><span class="fmt-caption-label"><semx element="autonum" source="_82bf2f63-7a03-5138-dfab-984b1fae38ac">6</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_f682bfe5-7237-2ba0-98cd-348f311732c3">Comparison and calibration uncertainties</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Chapter</span> <semx element="autonum" source="_82bf2f63-7a03-5138-dfab-984b1fae38ac">6</semx></fmt-xref-label>
+<clause id="_ab67a81a-ae19-cdf1-3750-662fcf11c6b0" obligation="normative" semx-id="_ab67a81a-ae19-cdf1-3750-662fcf11c6b0" displayorder="8">
+<title id="_f682bfe5-7237-2ba0-98cd-348f311732c3" semx-id="_42158a06-310f-c0fa-5ef2-5f0fe3956bf5">Comparison and calibration uncertainties</title><fmt-title depth="1" id="_00352a3d-da60-2655-00ae-946eda97d568"><span class="fmt-caption-label"><semx element="autonum" source="_ab67a81a-ae19-cdf1-3750-662fcf11c6b0">6</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_f682bfe5-7237-2ba0-98cd-348f311732c3">Comparison and calibration uncertainties</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Chapter</span> <semx element="autonum" source="_ab67a81a-ae19-cdf1-3750-662fcf11c6b0">6</semx></fmt-xref-label>
 <p id="_0a1e0f69-65f1-07fc-71ff-c8c05e84698d" semx-id="_0a1e0f69-65f1-07fc-71ff-c8c05e84698d">The uncertainties associated with dosimetry measurements made at the BIPM are analysed in accordance with the <em>Guide to the Expression of Uncertainty in Measurement</em> (JCGM 2008). The uncertainty budgets for the dosimetry standards are given in <xref target="table3" id="_ee58adcf-2c35-9b5d-72e4-29eb2ce56a3b"/><semx element="xref" source="_ee58adcf-2c35-9b5d-72e4-29eb2ce56a3b"><fmt-xref target="table3"><span class="fmt-element-name">Table</span> <semx element="autonum" source="table3">3</semx></fmt-xref></semx>, <xref target="table6" id="_a16a5e03-8000-e21c-65c9-918ded778567"/><semx element="xref" source="_a16a5e03-8000-e21c-65c9-918ded778567"><fmt-xref target="table6"><span class="fmt-element-name">Table</span> <semx element="autonum" source="table6">6</semx></fmt-xref></semx>, <xref target="table8" id="_bf1c4d63-f913-8815-5c75-da2eedc78215"/><semx element="xref" source="_bf1c4d63-f913-8815-5c75-da2eedc78215"><fmt-xref target="table8"><span class="fmt-element-name">Table</span> <semx element="autonum" source="table8">8</semx></fmt-xref></semx> and <xref target="table9" id="_93ed38d6-2272-7b57-cebf-269bc63ebdec"/><semx element="xref" source="_93ed38d6-2272-7b57-cebf-269bc63ebdec"><fmt-xref target="table9"><span class="fmt-element-name">Table</span> <semx element="autonum" source="table9">9</semx></fmt-xref></semx>. For comparisons, the BIPM standard uncertainties are combined with those associated with the primary or transfer chamber, taking correlation into account, to give the combined standard uncertainty of the comparison results. The detailed uncertainty budgets are given in the comparison report. For the calibration of national reference standards, the BIPM standard uncertainties are combined with the uncertainties associated with the chamber under calibration to give the combined standard uncertainty of the calibration coefficient. This value is given in the calibration certificate.</p>
 
 <p id="_05778d0d-4c75-6687-02b7-1e3a5c35b2ca" semx-id="_05778d0d-4c75-6687-02b7-1e3a5c35b2ca">It is emphasized that the uncertainty associated with BIPM calibrations is a combined <em>standard</em> uncertainty without the application of a coverage factor <stem block="false" type="MathML" id="_7b1745a5-071a-ed50-150e-9259327db5c5"><math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -2818,7 +2810,7 @@ sourcecode .nt {
 <p id="_0271d28e-e262-1568-0c9e-d293569583ab" align="center" semx-id="_0271d28e-e262-1568-0c9e-d293569583ab"><strong>Physical constants and correction factors used in the BIPM determination of the air-kerma rate</strong><fn id="_f85640d6-8721-74d5-30f3-65193a5ad2ae" reference="1" semx-id="_f85640d6-8721-74d5-30f3-65193a5ad2ae" original-reference="1" target="_4ac9cace-76ee-908b-3b88-933c95680704"><p semx-id="_fc579934-1999-a252-213b-2c4e25d547b6" original-id="_fc579934-1999-a252-213b-2c4e25d547b6">Details on the determination of the air-kerma rate are given in Boutillon <em>et al</em> (1969); correction factors are described by Burns (2004) and Burns <em>et al</em> (2009) for the W-anode qualities and by Kessler et al (2010) for the Mo-anode qualities.</p>
 <fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_f85640d6-8721-74d5-30f3-65193a5ad2ae">1</semx><span class="fmt-label-delim">)</span></sup></span></fmt-fn-label></fn></p>
 
-<p id="_186e5a92-6b37-b1dd-676c-d45667fcf505" semx-id="_186e5a92-6b37-b1dd-676c-d45667fcf505">Dry air density <stem block="false" type="MathML" id="_7a3c0674-0fe6-5156-2817-e0a638c8c86d"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_fbd23b3b-567c-a60b-6703-1e48447719e8" semx-id="_fbd23b3b-567c-a60b-6703-1e48447719e8">Dry air density <stem block="false" type="MathML" id="_fd2c5795-a4b7-8cff-edc5-08cf017013e9"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mrow>
       <mo>(</mo>
@@ -2828,7 +2820,6 @@ sourcecode .nt {
         <mstyle mathvariant="normal">
           <mi>K</mi>
         </mstyle>
-        
         
         
       </mrow>
@@ -2867,7 +2858,7 @@ sourcecode .nt {
       
     </mrow>
   </mstyle>
-</math><asciimath>(273.15 "unitsml(K)"", "101.325 "unitsml(kPa)") = 1.2930 "unitsml(kg*m^-3)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_7a3c0674-0fe6-5156-2817-e0a638c8c86d"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>(273.15 "unitsml(K)"", "101.325 "unitsml(kPa)") = 1.2930 "unitsml(kg*m^-3)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_fd2c5795-a4b7-8cff-edc5-08cf017013e9"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mrow>
       <mo>(</mo>
@@ -2877,7 +2868,6 @@ sourcecode .nt {
         <mstyle mathvariant="normal">
           <mi>K</mi>
         </mstyle>
-        
         
         
       </mrow>
@@ -2976,7 +2966,7 @@ sourcecode .nt {
   </mstyle>
 </math><asciimath>ii(W)//e = 33.97 "unitsml(J*C^-1)"</asciimath></semx></fmt-stem></p>
 
-<table id="table2" anchor="table2" semx-id="_ddd39077-8d55-f137-8900-f3582a3804ad" autonum="2">
+<table id="table2" anchor="table2" semx-id="_f0d686a4-cf46-8d88-79f8-f4a71a0012ff" autonum="2">
 <name id="_2e054838-0396-feed-429e-2d0be3ef0501" semx-id="_ee53795c-2f1c-2e69-da92-e31d76e60ae7">X-rays (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>10</mn>
@@ -3339,7 +3329,7 @@ sourcecode .nt {
 <td id="_61d8977d-0bd9-bf03-f883-48a0c9b09922" valign="top" align="center" semx-id="_61d8977d-0bd9-bf03-f883-48a0c9b09922">1.0005</td>
 <td id="_01a1c8f3-a5af-d296-a06a-6a9bff1a07c1" valign="top" align="center" semx-id="_01a1c8f3-a5af-d296-a06a-6a9bff1a07c1">1.0005</td>
 <td id="_013f487c-fd1a-8ea6-e56c-7aa156df106a" valign="top" align="center" semx-id="_013f487c-fd1a-8ea6-e56c-7aa156df106a">1.0005</td>
-</tr><tr id="_c598e7ae-bd43-5c4a-c9af-0eb1f3802c80" semx-id="_c598e7ae-bd43-5c4a-c9af-0eb1f3802c80"><td id="_5f700d82-8a07-6ec7-cecf-704dc9ddae4a" valign="top" align="center" semx-id="_5f700d82-8a07-6ec7-cecf-704dc9ddae4a"><stem block="false" type="MathML" id="_e65afe98-14ef-53c9-92a1-79a56b350489"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_d4c2b9fe-70ef-9449-52a6-12c74790963d" semx-id="_d4c2b9fe-70ef-9449-52a6-12c74790963d"><td id="_5f700d82-8a07-6ec7-cecf-704dc9ddae4a" valign="top" align="center" semx-id="_5f700d82-8a07-6ec7-cecf-704dc9ddae4a"><stem block="false" type="MathML" id="_e65afe98-14ef-53c9-92a1-79a56b350489"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>k</mi>
@@ -3354,7 +3344,7 @@ sourcecode .nt {
     </msub>
   </mstyle>
 </math><asciimath>k_("a")</asciimath></semx></fmt-stem></td>
-<td id="_6106511e-e3af-4e9d-9a0c-6352e982956e" valign="top" align="left" semx-id="_6106511e-e3af-4e9d-9a0c-6352e982956e">air attenuation<fn id="_ca361d02-7690-cf39-51fe-a817c60ccbdc" reference="b" semx-id="_ca361d02-7690-cf39-51fe-a817c60ccbdc" target="_2a61cbaa-c62d-34d7-f8d5-f0ac44fb9b92"><p semx-id="_d6fde985-bea6-2e0f-7ff4-2993cced57a1" original-id="_d6fde985-bea6-2e0f-7ff4-2993cced57a1">Values at <stem block="false" type="MathML" id="_54434def-0025-3ad3-cd1f-841ee78ad964"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_78febb97-f319-f4cd-8621-27f564957ecc" valign="top" align="left" semx-id="_78febb97-f319-f4cd-8621-27f564957ecc">air attenuation<fn id="_eb39e00b-3e8a-d3a9-2be1-a076f8e7caf6" reference="b" semx-id="_eb39e00b-3e8a-d3a9-2be1-a076f8e7caf6" target="_a26cf12b-089c-2a36-0bf7-9266377391b0"><p semx-id="_76b77e83-fe8a-72dd-cd55-9632ccba727d" original-id="_76b77e83-fe8a-72dd-cd55-9632ccba727d">Values at <stem block="false" type="MathML" id="_e5f87c04-496b-5551-8fc5-c003380ca975"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -3362,12 +3352,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>293.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_54434def-0025-3ad3-cd1f-841ee78ad964"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>293.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_e5f87c04-496b-5551-8fc5-c003380ca975"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -3375,7 +3364,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -3433,7 +3421,7 @@ sourcecode .nt {
     </mrow>
   </mstyle>
 </math><asciimath>10.0 "unitsml(cm)"</asciimath></semx></fmt-stem>.</p>
-<fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_ca361d02-7690-cf39-51fe-a817c60ccbdc">b</semx><span class="fmt-label-delim">)</span></sup></span></fmt-fn-label></fn></td>
+<fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_eb39e00b-3e8a-d3a9-2be1-a076f8e7caf6">b</semx><span class="fmt-label-delim">)</span></sup></span></fmt-fn-label></fn></td>
 <td id="_b3d31742-d29a-e308-5906-eb99a284bbdf" valign="top" align="center" semx-id="_b3d31742-d29a-e308-5906-eb99a284bbdf">1.1957</td>
 <td id="_9d5bad94-69b3-4496-bbce-64f863046c95" valign="top" align="center" semx-id="_9d5bad94-69b3-4496-bbce-64f863046c95">1.0451</td>
 <td id="_a73b2e9f-5bbf-1a1d-6e1f-90531c491f5d" valign="top" align="center" semx-id="_a73b2e9f-5bbf-1a1d-6e1f-90531c491f5d">1.0319</td>
@@ -3572,7 +3560,7 @@ sourcecode .nt {
     </msub>
   </mstyle>
 </math><asciimath>k_("W")</asciimath></semx></fmt-stem> adopted from January 2019 (Burns and Kessler 2018).</p>
-</semx></fmt-fn-body><fmt-fn-body id="_2a61cbaa-c62d-34d7-f8d5-f0ac44fb9b92" target="_ca361d02-7690-cf39-51fe-a817c60ccbdc" reference="b"><semx element="fn" source="_ca361d02-7690-cf39-51fe-a817c60ccbdc"><p id="_d6fde985-bea6-2e0f-7ff4-2993cced57a1" semx-id="_d6fde985-bea6-2e0f-7ff4-2993cced57a1"><fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_ca361d02-7690-cf39-51fe-a817c60ccbdc">b</semx><span class="fmt-label-delim">)</span></sup></span><span class="fmt-caption-delim"><tab/></span></fmt-fn-label>Values at <stem block="false" type="MathML" id="_e407f7e3-de21-9f57-006c-6ddc8eddacd0"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</semx></fmt-fn-body><fmt-fn-body id="_a26cf12b-089c-2a36-0bf7-9266377391b0" target="_eb39e00b-3e8a-d3a9-2be1-a076f8e7caf6" reference="b"><semx element="fn" source="_eb39e00b-3e8a-d3a9-2be1-a076f8e7caf6"><p id="_76b77e83-fe8a-72dd-cd55-9632ccba727d" semx-id="_76b77e83-fe8a-72dd-cd55-9632ccba727d"><fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_eb39e00b-3e8a-d3a9-2be1-a076f8e7caf6">b</semx><span class="fmt-label-delim">)</span></sup></span><span class="fmt-caption-delim"><tab/></span></fmt-fn-label>Values at <stem block="false" type="MathML" id="_dfa90150-a418-50c8-0f96-f2c37b42b795"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -3580,12 +3568,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>293.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_e407f7e3-de21-9f57-006c-6ddc8eddacd0"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>293.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_dfa90150-a418-50c8-0f96-f2c37b42b795"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -3593,7 +3580,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -3653,7 +3639,7 @@ sourcecode .nt {
 </math><asciimath>10.0 "unitsml(cm)"</asciimath></semx></fmt-stem>.</p>
 </semx></fmt-fn-body></fmt-footnote-container></table>
 
-<table id="_a5ef04ec-2075-b624-a7b5-70df34137c09" unnumbered="true" semx-id="_a5ef04ec-2075-b624-a7b5-70df34137c09"><tbody><tr id="_5c47fde7-f027-c4e7-245b-635984fec252" semx-id="_5c47fde7-f027-c4e7-245b-635984fec252"><th id="_7c5280a4-311e-dad9-b3c5-b21273c1ef30" colspan="6" valign="top" align="left" semx-id="_7c5280a4-311e-dad9-b3c5-b21273c1ef30">Mo-anode x-ray tube</th>
+<table id="_31facb00-fc74-df33-c2b3-dfd79b3963ac" unnumbered="true" semx-id="_31facb00-fc74-df33-c2b3-dfd79b3963ac"><tbody><tr id="_5c47fde7-f027-c4e7-245b-635984fec252" semx-id="_5c47fde7-f027-c4e7-245b-635984fec252"><th id="_7c5280a4-311e-dad9-b3c5-b21273c1ef30" colspan="6" valign="top" align="left" semx-id="_7c5280a4-311e-dad9-b3c5-b21273c1ef30">Mo-anode x-ray tube</th>
 </tr><tr id="_4ad00add-aa5b-d403-f159-a5f1c790555c" semx-id="_4ad00add-aa5b-d403-f159-a5f1c790555c"><td id="_2cdd853a-bfa4-95e3-11f4-55180a50373f" colspan="6" valign="top" align="left" semx-id="_2cdd853a-bfa4-95e3-11f4-55180a50373f">Measuring volume FAC-L-02: <stem block="false" type="MathML" id="_657d49cf-18c2-7711-d6ae-ebe0912ea8da"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1.2197</mn>
@@ -3929,7 +3915,7 @@ sourcecode .nt {
 <td id="_4910bad4-17db-e586-b67f-7bbddc4d92f5" valign="top" align="center" semx-id="_4910bad4-17db-e586-b67f-7bbddc4d92f5">1.0000</td>
 <td id="_ec9c8eff-4093-e204-3140-b085eb46ca47" valign="top" align="center" semx-id="_ec9c8eff-4093-e204-3140-b085eb46ca47">1.0000</td>
 <td id="_c0b008bc-7e4f-8041-35c7-3162ba67af01" valign="top" align="center" semx-id="_c0b008bc-7e4f-8041-35c7-3162ba67af01">1.0000</td>
-</tr><tr id="_8635108a-478d-653e-a4d7-589703b86428" semx-id="_8635108a-478d-653e-a4d7-589703b86428"><td id="_e37556a5-9eb2-2435-5b2f-6d7a2110d8ae" valign="top" align="center" semx-id="_e37556a5-9eb2-2435-5b2f-6d7a2110d8ae"><stem block="false" type="MathML" id="_81dfe3c8-09aa-4ba4-97db-c13798b042b5"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_eabf5cc1-d0cd-fe8e-e7e6-a559f375aec2" semx-id="_eabf5cc1-d0cd-fe8e-e7e6-a559f375aec2"><td id="_e37556a5-9eb2-2435-5b2f-6d7a2110d8ae" valign="top" align="center" semx-id="_e37556a5-9eb2-2435-5b2f-6d7a2110d8ae"><stem block="false" type="MathML" id="_81dfe3c8-09aa-4ba4-97db-c13798b042b5"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>k</mi>
@@ -3944,7 +3930,7 @@ sourcecode .nt {
     </msub>
   </mstyle>
 </math><asciimath>k_("a")</asciimath></semx></fmt-stem></td>
-<td id="_2c7c918c-e87b-338d-6e3c-6de439bbcf64" valign="top" align="left" semx-id="_2c7c918c-e87b-338d-6e3c-6de439bbcf64">air attenuation<fn id="_688abdfb-e8ac-b8c5-c8fc-6ac4f29067b1" reference="b" semx-id="_688abdfb-e8ac-b8c5-c8fc-6ac4f29067b1" target="_7394ca8c-2126-1257-aa15-150481846661"><p semx-id="_9ead5e9e-436b-b2aa-8043-96f84bd9489a" original-id="_9ead5e9e-436b-b2aa-8043-96f84bd9489a">Values at <stem block="false" type="MathML" id="_ea50c5cf-cf0e-6831-9ff7-205447a0b0f5"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_6cdace96-d1d6-87e2-1b0e-6ec42e53e347" valign="top" align="left" semx-id="_6cdace96-d1d6-87e2-1b0e-6ec42e53e347">air attenuation<fn id="_b18f958c-e1a3-1bd1-e537-b5e8fb2066cf" reference="b" semx-id="_b18f958c-e1a3-1bd1-e537-b5e8fb2066cf" target="_1f76171b-4819-8549-6916-04a4b4d8a2fb"><p semx-id="_2137e59c-a2f1-4297-3d64-dae97cffd78a" original-id="_2137e59c-a2f1-4297-3d64-dae97cffd78a">Values at <stem block="false" type="MathML" id="_3d39989d-2f38-7d69-62e9-721b2e52fc06"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -3952,12 +3938,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>293.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_ea50c5cf-cf0e-6831-9ff7-205447a0b0f5"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>293.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_3d39989d-2f38-7d69-62e9-721b2e52fc06"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -3965,7 +3950,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -4023,7 +4007,7 @@ sourcecode .nt {
     </mrow>
   </mstyle>
 </math><asciimath>10.0 "unitsml(cm)"</asciimath></semx></fmt-stem>.</p>
-<fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_688abdfb-e8ac-b8c5-c8fc-6ac4f29067b1">b</semx><span class="fmt-label-delim">)</span></sup></span></fmt-fn-label></fn></td>
+<fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_b18f958c-e1a3-1bd1-e537-b5e8fb2066cf">b</semx><span class="fmt-label-delim">)</span></sup></span></fmt-fn-label></fn></td>
 <td id="_da3b88ef-10bd-7de4-09a7-e4083fb69698" valign="top" align="center" semx-id="_da3b88ef-10bd-7de4-09a7-e4083fb69698">1.0269</td>
 <td id="_a9db97b5-d97b-b238-6c74-6291c743aa61" valign="top" align="center" semx-id="_a9db97b5-d97b-b238-6c74-6291c743aa61">1.0244</td>
 <td id="_37325309-fce9-545a-cfa6-3a70b9d04a1c" valign="top" align="center" semx-id="_37325309-fce9-545a-cfa6-3a70b9d04a1c">1.0233</td>
@@ -4156,7 +4140,7 @@ sourcecode .nt {
     </msub>
   </mstyle>
 </math><asciimath>k_("W")</asciimath></semx></fmt-stem> adopted from January 2019 (Burns and Kessler 2018).</p>
-</semx></fmt-fn-body><fmt-fn-body id="_7394ca8c-2126-1257-aa15-150481846661" target="_688abdfb-e8ac-b8c5-c8fc-6ac4f29067b1" reference="b"><semx element="fn" source="_688abdfb-e8ac-b8c5-c8fc-6ac4f29067b1"><p id="_9ead5e9e-436b-b2aa-8043-96f84bd9489a" semx-id="_9ead5e9e-436b-b2aa-8043-96f84bd9489a"><fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_688abdfb-e8ac-b8c5-c8fc-6ac4f29067b1">b</semx><span class="fmt-label-delim">)</span></sup></span><span class="fmt-caption-delim"><tab/></span></fmt-fn-label>Values at <stem block="false" type="MathML" id="_c7d71809-b20c-a198-eb47-9ceb1924ccb1"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</semx></fmt-fn-body><fmt-fn-body id="_1f76171b-4819-8549-6916-04a4b4d8a2fb" target="_b18f958c-e1a3-1bd1-e537-b5e8fb2066cf" reference="b"><semx element="fn" source="_b18f958c-e1a3-1bd1-e537-b5e8fb2066cf"><p id="_2137e59c-a2f1-4297-3d64-dae97cffd78a" semx-id="_2137e59c-a2f1-4297-3d64-dae97cffd78a"><fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_b18f958c-e1a3-1bd1-e537-b5e8fb2066cf">b</semx><span class="fmt-label-delim">)</span></sup></span><span class="fmt-caption-delim"><tab/></span></fmt-fn-label>Values at <stem block="false" type="MathML" id="_5ff80211-7248-a525-6cb6-ff4a666144d8"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4164,12 +4148,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>293.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_c7d71809-b20c-a198-eb47-9ceb1924ccb1"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>293.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_5ff80211-7248-a525-6cb6-ff4a666144d8"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4177,7 +4160,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -4237,7 +4219,7 @@ sourcecode .nt {
 </math><asciimath>10.0 "unitsml(cm)"</asciimath></semx></fmt-stem>.</p>
 </semx></fmt-fn-body></fmt-footnote-container></table>
 
-<table id="_fbf3e684-1877-2c78-2a7c-ae760f104a57" unnumbered="true" semx-id="_fbf3e684-1877-2c78-2a7c-ae760f104a57"><tbody><tr id="_9ee0da17-a60e-0df2-222b-f6d31e3f5533" semx-id="_9ee0da17-a60e-0df2-222b-f6d31e3f5533"><th id="_7684a96c-dd9b-04bc-a18c-9a1ec549abe4" colspan="9" valign="top" align="left" semx-id="_7684a96c-dd9b-04bc-a18c-9a1ec549abe4">W-anode x-ray tube, Mo filter</th>
+<table id="_936a029a-1b6f-7bc0-e010-3f25553bfa32" unnumbered="true" semx-id="_936a029a-1b6f-7bc0-e010-3f25553bfa32"><tbody><tr id="_9ee0da17-a60e-0df2-222b-f6d31e3f5533" semx-id="_9ee0da17-a60e-0df2-222b-f6d31e3f5533"><th id="_7684a96c-dd9b-04bc-a18c-9a1ec549abe4" colspan="9" valign="top" align="left" semx-id="_7684a96c-dd9b-04bc-a18c-9a1ec549abe4">W-anode x-ray tube, Mo filter</th>
 </tr><tr id="_58fa8372-ff6c-25a9-29d0-0a9c57c4fc4a" semx-id="_58fa8372-ff6c-25a9-29d0-0a9c57c4fc4a"><td id="_87bab475-24f7-6b1c-4468-ddfa284fb82f" colspan="9" valign="top" align="left" semx-id="_87bab475-24f7-6b1c-4468-ddfa284fb82f">Measuring volume FAC-L-01: <stem block="false" type="MathML" id="_85e65c95-4a35-260f-b0a2-0bf1bcbf49b7"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1.2004</mn>
@@ -4534,7 +4516,7 @@ sourcecode .nt {
 <td id="_a5080f42-1a53-7b54-0977-f50ec70a3633" valign="top" align="center" semx-id="_a5080f42-1a53-7b54-0977-f50ec70a3633">1.0005</td>
 <td id="_bd2e5973-4c1b-b4a3-5a7a-656d943260eb" valign="top" align="center" semx-id="_bd2e5973-4c1b-b4a3-5a7a-656d943260eb">1.0005</td>
 <td id="_643d5f33-972a-c7b6-ce9d-125504a68ccf" valign="top" align="center" semx-id="_643d5f33-972a-c7b6-ce9d-125504a68ccf">1.0005</td>
-</tr><tr id="_662677ab-32bd-967f-4c88-73f65f2d0eac" semx-id="_662677ab-32bd-967f-4c88-73f65f2d0eac"><td id="_c697f205-6643-9448-ba6e-14d8e0de01bb" valign="top" align="center" semx-id="_c697f205-6643-9448-ba6e-14d8e0de01bb"><stem block="false" type="MathML" id="_ba39b369-31e8-cf6f-2de5-20b41f9e1cf4"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_e7852a3a-9362-2f89-b711-c14c63af8da3" semx-id="_e7852a3a-9362-2f89-b711-c14c63af8da3"><td id="_c697f205-6643-9448-ba6e-14d8e0de01bb" valign="top" align="center" semx-id="_c697f205-6643-9448-ba6e-14d8e0de01bb"><stem block="false" type="MathML" id="_ba39b369-31e8-cf6f-2de5-20b41f9e1cf4"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>k</mi>
@@ -4549,7 +4531,7 @@ sourcecode .nt {
     </msub>
   </mstyle>
 </math><asciimath>k_("a")</asciimath></semx></fmt-stem></td>
-<td id="_d86dc154-9460-9511-5050-bcdb62ad2181" valign="top" align="left" semx-id="_d86dc154-9460-9511-5050-bcdb62ad2181">air attenuation<fn id="_149ba9ff-0a84-ed98-3b75-d7a9f380e60c" reference="b" semx-id="_149ba9ff-0a84-ed98-3b75-d7a9f380e60c" target="_547d3bc2-ac0d-f471-bf63-96af10b73cdd"><p semx-id="_a71910fa-fde1-381c-c5dc-f0e96e3dd558" original-id="_a71910fa-fde1-381c-c5dc-f0e96e3dd558">Values at <stem block="false" type="MathML" id="_8a510ca3-24f5-62d2-30c0-8a92cd4f9485"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_d58ec042-ea82-513e-4da0-765264f5b11c" valign="top" align="left" semx-id="_d58ec042-ea82-513e-4da0-765264f5b11c">air attenuation<fn id="_06163973-76be-7694-62ab-b3dba8a40b5d" reference="b" semx-id="_06163973-76be-7694-62ab-b3dba8a40b5d" target="_84c2636f-0b46-bc08-3c6f-2f80882f6e70"><p semx-id="_4474fd23-40bf-d0ab-bac0-d340a4c4f339" original-id="_4474fd23-40bf-d0ab-bac0-d340a4c4f339">Values at <stem block="false" type="MathML" id="_d9c5559e-7a43-fa25-6bd0-edf8c8838bf7"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4557,12 +4539,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>293.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_8a510ca3-24f5-62d2-30c0-8a92cd4f9485"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>293.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_d9c5559e-7a43-fa25-6bd0-edf8c8838bf7"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4570,7 +4551,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -4628,7 +4608,7 @@ sourcecode .nt {
     </mrow>
   </mstyle>
 </math><asciimath>10.0 "unitsml(cm)"</asciimath></semx></fmt-stem>.</p>
-<fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_149ba9ff-0a84-ed98-3b75-d7a9f380e60c">b</semx><span class="fmt-label-delim">)</span></sup></span></fmt-fn-label></fn></td>
+<fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_06163973-76be-7694-62ab-b3dba8a40b5d">b</semx><span class="fmt-label-delim">)</span></sup></span></fmt-fn-label></fn></td>
 <td id="_fdd542e5-1fe6-f138-4b55-b6be85c1e12a" valign="top" align="center" semx-id="_fdd542e5-1fe6-f138-4b55-b6be85c1e12a">1.0218</td>
 <td id="_ce7353f3-b90e-fbb1-5065-ff78117b0bf6" valign="top" align="center" semx-id="_ce7353f3-b90e-fbb1-5065-ff78117b0bf6">1.0213</td>
 <td id="_fb33ad79-3e05-087b-0062-72089b0c61c6" valign="top" align="center" semx-id="_fb33ad79-3e05-087b-0062-72089b0c61c6">1.0208</td>
@@ -4779,7 +4759,7 @@ sourcecode .nt {
     </msub>
   </mstyle>
 </math><asciimath>k_("W")</asciimath></semx></fmt-stem> adopted from January 2019 (Burns and Kessler 2018).</p>
-</semx></fmt-fn-body><fmt-fn-body id="_547d3bc2-ac0d-f471-bf63-96af10b73cdd" target="_149ba9ff-0a84-ed98-3b75-d7a9f380e60c" reference="b"><semx element="fn" source="_149ba9ff-0a84-ed98-3b75-d7a9f380e60c"><p id="_a71910fa-fde1-381c-c5dc-f0e96e3dd558" semx-id="_a71910fa-fde1-381c-c5dc-f0e96e3dd558"><fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_149ba9ff-0a84-ed98-3b75-d7a9f380e60c">b</semx><span class="fmt-label-delim">)</span></sup></span><span class="fmt-caption-delim"><tab/></span></fmt-fn-label>Values at <stem block="false" type="MathML" id="_7d7dbd04-c3e6-482e-0f15-8db1e9e57e70"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</semx></fmt-fn-body><fmt-fn-body id="_84c2636f-0b46-bc08-3c6f-2f80882f6e70" target="_06163973-76be-7694-62ab-b3dba8a40b5d" reference="b"><semx element="fn" source="_06163973-76be-7694-62ab-b3dba8a40b5d"><p id="_4474fd23-40bf-d0ab-bac0-d340a4c4f339" semx-id="_4474fd23-40bf-d0ab-bac0-d340a4c4f339"><fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_06163973-76be-7694-62ab-b3dba8a40b5d">b</semx><span class="fmt-label-delim">)</span></sup></span><span class="fmt-caption-delim"><tab/></span></fmt-fn-label>Values at <stem block="false" type="MathML" id="_b27ffbe9-fc19-a5a0-3580-e29ef29c3a7b"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4787,12 +4767,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>293.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_7d7dbd04-c3e6-482e-0f15-8db1e9e57e70"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>293.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_b27ffbe9-fc19-a5a0-3580-e29ef29c3a7b"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4800,7 +4779,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -4862,7 +4840,7 @@ sourcecode .nt {
 
 <p id="_d7a3ec05-7900-12d4-1c35-ccf2e438f466" align="center" semx-id="_d7a3ec05-7900-12d4-1c35-ccf2e438f466"><strong>Estimated relative standard uncertainties in the BIPM determination of the air-kerma rate</strong></p>
 
-<table id="table3" anchor="table3" semx-id="_49d5aa52-2ed8-c1df-79c2-be4e96ea03d4" autonum="3">
+<table id="table3" anchor="table3" semx-id="_9313b4fa-d383-30c2-8ba9-acac5e8d46a2" autonum="3">
 <name id="_8243b16f-7eeb-3986-538a-90fd8b9e567f" semx-id="_3f8afa45-a2ba-14c9-6b05-2983c8903d7c">X-rays (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>10</mn>
@@ -5022,7 +5000,7 @@ sourcecode .nt {
   </mstyle>
 </math><asciimath>u_("i")</asciimath></semx></fmt-stem></td>
 </tr><tr id="_ecdacf94-86f8-07d5-5190-9ec4434a4602" semx-id="_ecdacf94-86f8-07d5-5190-9ec4434a4602"><td id="_6b19aa26-193b-d552-4f39-033f13eeaff8" colspan="4" valign="top" align="left" semx-id="_6b19aa26-193b-d552-4f39-033f13eeaff8"><em>Physical constants</em></td>
-</tr><tr id="_52c537ee-658a-e224-aeed-179f51a7dbeb" semx-id="_52c537ee-658a-e224-aeed-179f51a7dbeb"><td id="_c11c0954-d289-7c1e-dfcb-6f779f2a2a63" valign="top" align="left" semx-id="_c11c0954-d289-7c1e-dfcb-6f779f2a2a63"><stem block="false" type="MathML" id="_4827445b-b32d-2d79-09ff-810fdcee19ff"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_754bafe8-81f0-7987-b028-3ef57d770e76" semx-id="_754bafe8-81f0-7987-b028-3ef57d770e76"><td id="_c11c0954-d289-7c1e-dfcb-6f779f2a2a63" valign="top" align="left" semx-id="_c11c0954-d289-7c1e-dfcb-6f779f2a2a63"><stem block="false" type="MathML" id="_4827445b-b32d-2d79-09ff-810fdcee19ff"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -5041,7 +5019,7 @@ sourcecode .nt {
     </msub>
   </mstyle>
 </math><asciimath>ii(rho)_("a")</asciimath></semx></fmt-stem></td>
-<td id="_0d831bbd-d0dc-afe1-dd9d-5cab9c30cf7d" valign="top" align="left" semx-id="_0d831bbd-d0dc-afe1-dd9d-5cab9c30cf7d">dry air density (<stem block="false" type="MathML" id="_12669b91-394b-79fc-7a46-c42b4808a16c"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_016d2e9e-e476-7f96-fba7-27f028fb8c79" valign="top" align="left" semx-id="_016d2e9e-e476-7f96-fba7-27f028fb8c79">dry air density (<stem block="false" type="MathML" id="_f8392d94-8821-36dd-41af-b1b0c2e5d426"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -5049,12 +5027,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>°C</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>0 "unitsml(degC)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_12669b91-394b-79fc-7a46-c42b4808a16c"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>0 "unitsml(degC)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_f8392d94-8821-36dd-41af-b1b0c2e5d426"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -5062,7 +5039,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>°C</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -6112,7 +6088,7 @@ sourcecode .nt {
 <fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_08aa49ed-5d6c-6cf8-5c08-4e9c3eabcbd9">2</semx><span class="fmt-label-delim">)</span></sup></span></fmt-fn-label></fn> and absorbed-dose-to-water rate<fn id="_352259b1-c27b-3b9c-c306-afccefde4d8d" reference="3" semx-id="_352259b1-c27b-3b9c-c306-afccefde4d8d" original-reference="3" target="_62f8adde-f538-e48f-c13c-927a4859f564"><p semx-id="_9fd9fdbe-00fa-458a-0230-7b7f56d03345" original-id="_9fd9fdbe-00fa-458a-0230-7b7f56d03345">Details on the determination of the absorbed-dose-to-water rate are described by Burns (2017).</p>
 <fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_352259b1-c27b-3b9c-c306-afccefde4d8d">3</semx><span class="fmt-label-delim">)</span></sup></span></fmt-fn-label></fn> and conversion factor from air kerma to absorbed dose to water</strong></p>
 
-<p id="_6256c712-535b-2ee6-ea76-66b5c92a7478" semx-id="_6256c712-535b-2ee6-ea76-66b5c92a7478">Dry air density <stem block="false" type="MathML" id="_278c167b-38d6-f632-5c3c-442264e268dd"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_043bedd6-3fe4-b821-8a3b-ce6187e2a570" semx-id="_043bedd6-3fe4-b821-8a3b-ce6187e2a570">Dry air density <stem block="false" type="MathML" id="_ab30dd21-3abd-304a-c5fd-ddd64f602de7"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mrow>
       <mo>(</mo>
@@ -6122,7 +6098,6 @@ sourcecode .nt {
         <mstyle mathvariant="normal">
           <mi>K</mi>
         </mstyle>
-        
         
         
       </mrow>
@@ -6161,7 +6136,7 @@ sourcecode .nt {
       
     </mrow>
   </mstyle>
-</math><asciimath>(273.15 "unitsml(K)"", "101.325 "unitsml(kPa)") = 1.2930 "unitsml(kg*m^-3)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_278c167b-38d6-f632-5c3c-442264e268dd"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>(273.15 "unitsml(K)"", "101.325 "unitsml(kPa)") = 1.2930 "unitsml(kg*m^-3)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_ab30dd21-3abd-304a-c5fd-ddd64f602de7"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mrow>
       <mo>(</mo>
@@ -6171,7 +6146,6 @@ sourcecode .nt {
         <mstyle mathvariant="normal">
           <mi>K</mi>
         </mstyle>
-        
         
         
       </mrow>
@@ -6270,7 +6244,7 @@ sourcecode .nt {
   </mstyle>
 </math><asciimath>ii(W)//e = 33.97 "unitsml(J*C^-1)"</asciimath></semx></fmt-stem></p>
 
-<table id="table5" anchor="table5" semx-id="_9cdd67f3-00f4-fde7-732c-341f7d81a9ab" autonum="5">
+<table id="table5" anchor="table5" semx-id="_5077f5cc-ddb7-f693-6560-1b86815e9b34" autonum="5">
 <name id="_bee96355-d82d-4961-b1ea-601341107128" semx-id="_11c64e24-ff3b-70f0-912f-3feb49577d79">X-rays (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>100</mn>
@@ -6626,7 +6600,7 @@ sourcecode .nt {
 <td id="_4aafda7d-9148-ebce-5a53-28f5dae5d1f3" valign="top" align="center" semx-id="_4aafda7d-9148-ebce-5a53-28f5dae5d1f3">1.0002</td>
 <td id="_5f65541a-4f4e-ba46-e95d-9f4eca7c2dcd" valign="top" align="center" semx-id="_5f65541a-4f4e-ba46-e95d-9f4eca7c2dcd">1.0002</td>
 <td id="_7cb65ab1-1cbf-0801-cb83-045ce0e2ee6d" valign="top" align="center" semx-id="_7cb65ab1-1cbf-0801-cb83-045ce0e2ee6d">1.0002</td>
-</tr><tr id="_ad1ba1c7-6a52-2215-f143-3069bbf170ff" semx-id="_ad1ba1c7-6a52-2215-f143-3069bbf170ff"><td id="_3ff74e2c-a886-e28d-f29f-a21fd3fb9bfe" valign="top" align="center" semx-id="_3ff74e2c-a886-e28d-f29f-a21fd3fb9bfe"><stem block="false" type="MathML" id="_489b78a9-7268-bbda-a4f7-955aa30ed4fb"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_11b453cf-80ba-5737-033b-77be4234b0c6" semx-id="_11b453cf-80ba-5737-033b-77be4234b0c6"><td id="_3ff74e2c-a886-e28d-f29f-a21fd3fb9bfe" valign="top" align="center" semx-id="_3ff74e2c-a886-e28d-f29f-a21fd3fb9bfe"><stem block="false" type="MathML" id="_489b78a9-7268-bbda-a4f7-955aa30ed4fb"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>k</mi>
@@ -6641,7 +6615,7 @@ sourcecode .nt {
     </msub>
   </mstyle>
 </math><asciimath>k_("a")</asciimath></semx></fmt-stem></td>
-<td id="_eae46888-37e3-5883-f1dd-d876d773d66a" valign="top" align="left" semx-id="_eae46888-37e3-5883-f1dd-d876d773d66a">air attenuation<fn id="_f09630a9-a760-a38c-17db-edf58e8b657d" reference="b" semx-id="_f09630a9-a760-a38c-17db-edf58e8b657d" target="_b1c2dfc2-dd75-3cb9-00d7-f0913cbea9a1"><p semx-id="_9408aa43-d2ba-85df-ec34-95c0dcb6957a" original-id="_9408aa43-d2ba-85df-ec34-95c0dcb6957a">Values at <stem block="false" type="MathML" id="_873dbead-a450-93a6-2ab6-2f26051ed2cb"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_46321e9f-8c66-fc40-0d34-49f242b589e6" valign="top" align="left" semx-id="_46321e9f-8c66-fc40-0d34-49f242b589e6">air attenuation<fn id="_cf9d3b6e-28c6-91f6-ca55-54665becfcc2" reference="b" semx-id="_cf9d3b6e-28c6-91f6-ca55-54665becfcc2" target="_bfff466c-4990-f584-cb5f-2c3169ea19d9"><p semx-id="_80e75c65-df6d-390c-0c21-ec79ddb1c471" original-id="_80e75c65-df6d-390c-0c21-ec79ddb1c471">Values at <stem block="false" type="MathML" id="_d3d2b01b-6a6a-ddf2-dabd-65817ac2de2b"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -6649,12 +6623,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>293.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_873dbead-a450-93a6-2ab6-2f26051ed2cb"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>293.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_d3d2b01b-6a6a-ddf2-dabd-65817ac2de2b"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -6662,7 +6635,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -6720,7 +6692,7 @@ sourcecode .nt {
     </mrow>
   </mstyle>
 </math><asciimath>28.15 "unitsml(cm)"</asciimath></semx></fmt-stem>.</p>
-<fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_f09630a9-a760-a38c-17db-edf58e8b657d">b</semx><span class="fmt-label-delim">)</span></sup></span></fmt-fn-label></fn></td>
+<fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_cf9d3b6e-28c6-91f6-ca55-54665becfcc2">b</semx><span class="fmt-label-delim">)</span></sup></span></fmt-fn-label></fn></td>
 <td id="_096a8475-79ca-fc48-e571-40eae59a456b" valign="top" align="center" semx-id="_096a8475-79ca-fc48-e571-40eae59a456b">1.0099</td>
 <td id="_0dd9cb11-0014-138a-644f-4cc103ad1853" valign="top" align="center" semx-id="_0dd9cb11-0014-138a-644f-4cc103ad1853">1.0065</td>
 <td id="_fc2b5053-19af-4c2b-141f-aac477e6e866" valign="top" align="center" semx-id="_fc2b5053-19af-4c2b-141f-aac477e6e866">1.0055</td>
@@ -6878,7 +6850,7 @@ sourcecode .nt {
     </msub>
   </mstyle>
 </math><asciimath>k_("W")</asciimath></semx></fmt-stem> adopted from June 2017 for absorbed dose to water and from January 2019 for air kerma (Burns and Kessler 2018).</p>
-</semx></fmt-fn-body><fmt-fn-body id="_b1c2dfc2-dd75-3cb9-00d7-f0913cbea9a1" target="_f09630a9-a760-a38c-17db-edf58e8b657d" reference="b"><semx element="fn" source="_f09630a9-a760-a38c-17db-edf58e8b657d"><p id="_9408aa43-d2ba-85df-ec34-95c0dcb6957a" semx-id="_9408aa43-d2ba-85df-ec34-95c0dcb6957a"><fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_f09630a9-a760-a38c-17db-edf58e8b657d">b</semx><span class="fmt-label-delim">)</span></sup></span><span class="fmt-caption-delim"><tab/></span></fmt-fn-label>Values at <stem block="false" type="MathML" id="_a6ad7704-1883-6be8-fdaf-95b69d4510c7"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</semx></fmt-fn-body><fmt-fn-body id="_bfff466c-4990-f584-cb5f-2c3169ea19d9" target="_cf9d3b6e-28c6-91f6-ca55-54665becfcc2" reference="b"><semx element="fn" source="_cf9d3b6e-28c6-91f6-ca55-54665becfcc2"><p id="_80e75c65-df6d-390c-0c21-ec79ddb1c471" semx-id="_80e75c65-df6d-390c-0c21-ec79ddb1c471"><fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_cf9d3b6e-28c6-91f6-ca55-54665becfcc2">b</semx><span class="fmt-label-delim">)</span></sup></span><span class="fmt-caption-delim"><tab/></span></fmt-fn-label>Values at <stem block="false" type="MathML" id="_45c958c1-2435-92d4-a743-2f05e62302f3"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -6886,12 +6858,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>293.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_a6ad7704-1883-6be8-fdaf-95b69d4510c7"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>293.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_45c958c1-2435-92d4-a743-2f05e62302f3"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -6899,7 +6870,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -6962,7 +6932,7 @@ sourcecode .nt {
 
 <p id="_5c3720ab-7215-cb61-3cec-0aeeb0989915" align="center" semx-id="_5c3720ab-7215-cb61-3cec-0aeeb0989915"><strong>Estimated relative standard uncertainties in the BIPM determination of the air-kerma rate and absorbed-dose-to-water rate</strong></p>
 
-<table id="table6" anchor="table6" semx-id="_ae54e453-749f-ed10-d2b5-4912a6950eb2" autonum="6">
+<table id="table6" anchor="table6" semx-id="_ec0f7b7e-f97e-ed4a-28bc-b201f456ac94" autonum="6">
 <name id="_e91841e5-a715-56d3-ee5b-087cff38c304" semx-id="_a36f4e76-5e0a-56b7-f94e-8240b2b98989">X-rays (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>100</mn>
@@ -7121,7 +7091,7 @@ sourcecode .nt {
   </mstyle>
 </math><asciimath>u_("i")</asciimath></semx></fmt-stem></td>
 </tr><tr id="_b0575ece-0032-4745-45dc-7746b7661da5" semx-id="_b0575ece-0032-4745-45dc-7746b7661da5"><td id="_9064f3b0-d046-d521-bd06-90380bc5df40" colspan="4" valign="top" align="left" semx-id="_9064f3b0-d046-d521-bd06-90380bc5df40"><em>Physical constants</em></td>
-</tr><tr id="_819c0da6-d155-055e-a846-28f0d05bd71b" semx-id="_819c0da6-d155-055e-a846-28f0d05bd71b"><td id="_0738e671-2214-d99d-94a0-6ae47e8bd1b1" valign="top" align="left" semx-id="_0738e671-2214-d99d-94a0-6ae47e8bd1b1"><stem block="false" type="MathML" id="_afdf8bff-0795-a7e7-820d-d8b7c96404f0"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_4e4ab202-bbed-abbf-844b-9e1d60cb706c" semx-id="_4e4ab202-bbed-abbf-844b-9e1d60cb706c"><td id="_0738e671-2214-d99d-94a0-6ae47e8bd1b1" valign="top" align="left" semx-id="_0738e671-2214-d99d-94a0-6ae47e8bd1b1"><stem block="false" type="MathML" id="_afdf8bff-0795-a7e7-820d-d8b7c96404f0"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -7140,7 +7110,7 @@ sourcecode .nt {
     </msub>
   </mstyle>
 </math><asciimath>ii(rho)_("a")</asciimath></semx></fmt-stem></td>
-<td id="_3ba494db-3c59-a10a-763a-498bf0829b11" valign="top" align="left" semx-id="_3ba494db-3c59-a10a-763a-498bf0829b11">dry air density (<stem block="false" type="MathML" id="_d07cea68-f70e-c49c-fa11-4ad3a866fa1f"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_00a7a570-8d6c-2a1a-b988-0cc2f08452aa" valign="top" align="left" semx-id="_00a7a570-8d6c-2a1a-b988-0cc2f08452aa">dry air density (<stem block="false" type="MathML" id="_3d8a6f00-3f12-2803-1c79-a85cf9b8d1c4"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -7148,12 +7118,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>°C</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>0 "unitsml(degC)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_d07cea68-f70e-c49c-fa11-4ad3a866fa1f"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>0 "unitsml(degC)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_3d8a6f00-3f12-2803-1c79-a85cf9b8d1c4"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -7161,7 +7130,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>°C</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -8118,7 +8086,7 @@ sourcecode .nt {
 <p id="_93bc8875-fcad-a65f-7554-528245d072ef" align="center" semx-id="_93bc8875-fcad-a65f-7554-528245d072ef"><strong>Physical constants and correction factors used in the BIPM determination of the air-kerma rate<fn id="_fb443564-62e5-9560-845e-3e831fcf3ee3" reference="4" semx-id="_fb443564-62e5-9560-845e-3e831fcf3ee3" original-reference="4" target="_d696bd8b-f53b-e152-c917-1a103dcc5bec"><p semx-id="_ab0094a9-1593-70eb-e3ee-aab96a0a938e" original-id="_ab0094a9-1593-70eb-e3ee-aab96a0a938e">Details on the determination of air kerma are described by Boutillon <em>et al</em> (1973), Burns (2006), Burns <em>et al</em> (2007) and the re-evaluation of the standard is described in Burns and Kessler (2018).</p>
 <fmt-fn-label><span class="fmt-caption-label"><sup><span class="fmt-label-delim">(</span><semx element="autonum" source="_fb443564-62e5-9560-845e-3e831fcf3ee3">4</semx><span class="fmt-label-delim">)</span></sup></span></fmt-fn-label></fn>, and their estimated relative standard uncertainties</strong></p>
 
-<table id="table8" anchor="table8" semx-id="_674a5e0e-2a7e-0127-c7b8-324b98c414b8" autonum="8">
+<table id="table8" anchor="table8" semx-id="_78b84da1-7c5a-281c-dc3f-263b57ed7237" autonum="8">
 <name id="_7ac9526b-7f22-868b-38cf-b5974c7516e1" semx-id="_5ad46869-2931-e86b-3173-127ce35958b7"><sup>60</sup>Co gamma radiation</name><fmt-name id="_34de0238-8a71-2a54-4878-c2092615f300"><span class="fmt-caption-label"><span class="fmt-element-name">Table</span> <semx element="autonum" source="table8">8</semx></span><span class="fmt-caption-delim">.<tab/></span><semx element="name" source="_7ac9526b-7f22-868b-38cf-b5974c7516e1"><sup>60</sup>Co gamma radiation</semx></fmt-name><fmt-xref-label><span class="fmt-element-name">Table</span> <semx element="autonum" source="table8">8</semx></fmt-xref-label>
 <tbody><tr id="_dc63ea5e-749f-2849-f173-3fa42b45b5b4" semx-id="_dc63ea5e-749f-2849-f173-3fa42b45b5b4"><td id="_f2d7b876-54bd-b5a5-379b-0840a431ff29" valign="top" rowspan="2" align="left" semx-id="_f2d7b876-54bd-b5a5-379b-0840a431ff29">Symbol</td>
 <td id="_82db8bfa-0769-04d1-7806-674a93c3ad63" valign="top" rowspan="2" align="left" semx-id="_82db8bfa-0769-04d1-7806-674a93c3ad63">Parameter / unit</td>
@@ -8200,7 +8168,7 @@ sourcecode .nt {
   </mstyle>
 </math><asciimath>u_("i")</asciimath></semx></fmt-stem></td>
 </tr><tr id="_e46c5d03-791f-97cb-d486-e60799c8c851" semx-id="_e46c5d03-791f-97cb-d486-e60799c8c851"><td id="_3737ba26-2984-f623-531f-d37f70ad32cb" colspan="6" valign="top" align="left" semx-id="_3737ba26-2984-f623-531f-d37f70ad32cb"><em>Physical constants</em></td>
-</tr><tr id="_2eb01a19-4d29-ea6b-c283-44c4659c1fdd" semx-id="_2eb01a19-4d29-ea6b-c283-44c4659c1fdd"><td id="_8bf8d58a-3699-ffcc-f873-6dcab6fb09ab" valign="top" align="left" semx-id="_8bf8d58a-3699-ffcc-f873-6dcab6fb09ab"><stem block="false" type="MathML" id="_3010f8fb-912f-db5b-e261-f3605f17257f"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_420f80ed-ccfe-77bb-3a2a-afed02fceec6" semx-id="_420f80ed-ccfe-77bb-3a2a-afed02fceec6"><td id="_8bf8d58a-3699-ffcc-f873-6dcab6fb09ab" valign="top" align="left" semx-id="_8bf8d58a-3699-ffcc-f873-6dcab6fb09ab"><stem block="false" type="MathML" id="_3010f8fb-912f-db5b-e261-f3605f17257f"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -8219,7 +8187,7 @@ sourcecode .nt {
     </msub>
   </mstyle>
 </math><asciimath>ii(rho)_("a")</asciimath></semx></fmt-stem></td>
-<td id="_a4affaac-f9b1-3e1c-6a0c-c96cc8dad17d" valign="top" align="left" semx-id="_a4affaac-f9b1-3e1c-6a0c-c96cc8dad17d">dry air density (<stem block="false" type="MathML" id="_28dd1dab-d81b-10c2-3455-42268c8b207e"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_893e6892-e3fb-ef20-8687-e1c42b467161" valign="top" align="left" semx-id="_893e6892-e3fb-ef20-8687-e1c42b467161">dry air density (<stem block="false" type="MathML" id="_1a1bb0ba-37dd-8ba6-3084-39d4ab7adb97"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -8227,12 +8195,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>°C</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>0 "unitsml(degC)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_28dd1dab-d81b-10c2-3455-42268c8b207e"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>0 "unitsml(degC)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_1a1bb0ba-37dd-8ba6-3084-39d4ab7adb97"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -8240,7 +8207,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>°C</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -8882,7 +8848,7 @@ sourcecode .nt {
   </mstyle>
 </mstyle></math><asciimath>5 "unitsml(g*cm^-2)"</asciimath></semx></fmt-stem>, and their estimated relative standard uncertainties</strong></p>
 
-<table id="table9" anchor="table9" semx-id="_a88a8414-aadb-a536-3536-f8692a28308c" autonum="9">
+<table id="table9" anchor="table9" semx-id="_ffe973c7-8351-f7d9-8961-192126fde69e" autonum="9">
 <name id="_aff81cf2-609a-24cf-3cd3-a5c8edfec5ea" semx-id="_5574aa43-f878-efec-5d39-5718170d5d1b"><sup>60</sup>Co gamma radiation</name><fmt-name id="_5a29cbdf-2ae1-f0f2-cd02-1788f3a72f6d"><span class="fmt-caption-label"><span class="fmt-element-name">Table</span> <semx element="autonum" source="table9">9</semx></span><span class="fmt-caption-delim">.<tab/></span><semx element="name" source="_aff81cf2-609a-24cf-3cd3-a5c8edfec5ea"><sup>60</sup>Co gamma radiation</semx></fmt-name><fmt-xref-label><span class="fmt-element-name">Table</span> <semx element="autonum" source="table9">9</semx></fmt-xref-label>
 <tbody><tr id="_a2de43e5-fc57-4564-6fad-7fa001a27c3e" semx-id="_a2de43e5-fc57-4564-6fad-7fa001a27c3e"><td id="_ad94086a-38b0-3861-046f-732ad83adfdc" valign="top" rowspan="2" align="left" semx-id="_ad94086a-38b0-3861-046f-732ad83adfdc">Symbol</td>
 <td id="_bc297584-f2be-434d-cd3f-c628aae9321b" valign="top" rowspan="2" align="left" semx-id="_bc297584-f2be-434d-cd3f-c628aae9321b">Parameter / unit</td>
@@ -8965,7 +8931,7 @@ sourcecode .nt {
   </mstyle>
 </math><asciimath>u_("i")</asciimath></semx></fmt-stem></td>
 </tr><tr id="_8d8602a4-28b8-04e9-d716-d0ceaf4be459" semx-id="_8d8602a4-28b8-04e9-d716-d0ceaf4be459"><td id="_e1ef4036-0340-1f00-c64a-7444934b2d19" colspan="5" valign="top" align="left" semx-id="_e1ef4036-0340-1f00-c64a-7444934b2d19"><em>Physical constants</em></td>
-</tr><tr id="_c4a66061-8960-2865-1ba5-b60e95bb71d9" semx-id="_c4a66061-8960-2865-1ba5-b60e95bb71d9"><td id="_96c302a6-68c2-ee63-1137-8c49481ef15d" valign="top" align="left" semx-id="_96c302a6-68c2-ee63-1137-8c49481ef15d"><stem block="false" type="MathML" id="_2926ae5c-cd50-975a-7ce9-dd4680ea0408"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_5b41a9d0-9c40-425b-dbfc-bfe07fc14099" semx-id="_5b41a9d0-9c40-425b-dbfc-bfe07fc14099"><td id="_96c302a6-68c2-ee63-1137-8c49481ef15d" valign="top" align="left" semx-id="_96c302a6-68c2-ee63-1137-8c49481ef15d"><stem block="false" type="MathML" id="_2926ae5c-cd50-975a-7ce9-dd4680ea0408"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -8984,7 +8950,7 @@ sourcecode .nt {
     </msub>
   </mstyle>
 </math><asciimath>ii(rho)_"a"</asciimath></semx></fmt-stem></td>
-<td id="_096154b9-138a-f193-4c34-90abf7d44fa7" valign="top" align="left" semx-id="_096154b9-138a-f193-4c34-90abf7d44fa7">dry air density (<stem block="false" type="MathML" id="_39a7ca7e-cda9-b0ba-f899-11996e35443d"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_e3e35b4d-57db-c3eb-b7c6-1762fb850b44" valign="top" align="left" semx-id="_e3e35b4d-57db-c3eb-b7c6-1762fb850b44">dry air density (<stem block="false" type="MathML" id="_a093d442-3664-c7be-9937-858c969f0524"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -8992,7 +8958,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>°C</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -9017,7 +8982,7 @@ sourcecode .nt {
       <mo/>
     </mrow>
   </mstyle>
-</math><asciimath>0 "unitsml(degC)", stem:[101.325 "unitsml(kPa)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_39a7ca7e-cda9-b0ba-f899-11996e35443d"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>0 "unitsml(degC)", stem:[101.325 "unitsml(kPa)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_a093d442-3664-c7be-9937-858c969f0524"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -9025,7 +8990,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>°C</mi>
       </mstyle>
-      
       
       
     </mrow>

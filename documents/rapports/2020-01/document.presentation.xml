@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="presentation" version="2.7.1" schema-version="v2.1.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="presentation" version="2.7.2" schema-version="v2.1.0" flavor="bipm">
 <bibdata type="standard">
 <title language="en" format="text/plain" type="title-main">Comparison of Ozone Reference Standards of the OEH and the BIPM</title>
 
@@ -85,7 +85,7 @@
           <EnumeratedRootUnit unit="mole" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_nm" semx-id="U_nm">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">nm</UnitName>
         <UnitSymbol type="HTML">nm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -94,10 +94,10 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" prefix="n"/>
+          <EnumeratedRootUnit unit="metre" prefix="n"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd8" id="U_cm2" semx-id="U_cm2">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">cm^2</UnitName>
         <UnitSymbol type="HTML">cm
           <sup>2</sup>
@@ -115,10 +115,10 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" prefix="c" powerNumerator="2"/>
+          <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="2"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5" semx-id="U_NISTu5">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">kelvin</UnitName>
         <UnitSymbol type="HTML">K</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -139,7 +139,7 @@
           <EnumeratedRootUnit unit="pascal" prefix="k"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_N-1" id="U_mol-1" semx-id="U_mol-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">mol^-1</UnitName>
         <UnitSymbol type="HTML">mol
           <sup>−1</sup>
@@ -195,7 +195,7 @@
           <EnumeratedRootUnit unit="kelvin" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd29" id="U_cm-1" semx-id="U_cm-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">cm^-1</UnitName>
         <UnitSymbol type="HTML">cm
           <sup>−1</sup>
@@ -214,10 +214,10 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" prefix="c" powerNumerator="-1"/>
+          <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_cm" semx-id="U_cm">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">cm</UnitName>
         <UnitSymbol type="HTML">cm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -226,11 +226,9 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" prefix="c"/>
+          <EnumeratedRootUnit unit="metre" prefix="c"/>
         </RootUnits>
-      </Unit></UnitSet><QuantitySet><Quantity id="NISTq5" quantityType="base" dimensionURL="#NISTd5" semx-id="NISTq5">
-        <QuantityName lang="en-US">thermodynamic temperature</QuantityName>
-      </Quantity></QuantitySet><DimensionSet><Dimension id="D_N0" semx-id="D_N0">
+      </Unit></UnitSet><DimensionSet><Dimension id="D_N0" semx-id="D_N0">
         <AmountOfSubstance symbol="N" powerNumerator="0"/>
       </Dimension><Dimension id="NISTd1" semx-id="NISTd1">
         <Length symbol="L" powerNumerator="1"/>
@@ -1246,12 +1244,12 @@ sourcecode .nt {
 <p id="_0dc0b41f-e6f2-47ed-cace-88d501e7e869" semx-id="_0dc0b41f-e6f2-47ed-cace-88d501e7e869">All calculations were performed by the BIPM using the information on form BIPM.QM-K1-R1. It includes the difference from the reference value at two nominal ozone amount-of-substance fractions, which are considered as degrees of equivalence for the key comparison BIPM.QM-K1. For information, the difference from the reference value at all nominal ozone amount-of-substance fractions are reported in the same form, as well as the linear relationship between the participant’s standard and the common reference standard.</p>
 </clause>
 
-<clause id="measurement_standards" anchor="measurement_standards" obligation="normative" semx-id="_cd3e99f6-3854-26db-d4e8-6241e91ea17a" displayorder="9">
+<clause id="measurement_standards" anchor="measurement_standards" obligation="normative" semx-id="_6242b1b3-8e72-57b3-23a0-45aff2643da1" displayorder="9">
 <title id="_d3a63ae8-ad59-d578-c5fa-58333d64b62c" semx-id="_bc593cd4-9fdc-0a74-881d-14e5e7590b3c">Measurement standards</title><fmt-title depth="1" id="_547870b2-1fc3-d5c7-d1a4-6e215a4f930d"><span class="fmt-caption-label"><semx element="autonum" source="measurement_standards">7</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_d3a63ae8-ad59-d578-c5fa-58333d64b62c">Measurement standards</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Chapter</span> <semx element="autonum" source="measurement_standards">7</semx></fmt-xref-label>
 <p id="_37eb1625-a443-d9de-b8b9-71945743a9c1" semx-id="_37eb1625-a443-d9de-b8b9-71945743a9c1">The instruments maintained by the BIPM and the OEH are Standard Reference Photometers (SRP) built by the NIST. More details on the instrument’s operating principle and its capabilities can be found in <eref type="inline" bibitemid="paur" citeas="[1]" id="_2e0b4c8c-1514-69fa-95e7-bc9921ce6a09"/><semx element="eref" source="_2e0b4c8c-1514-69fa-95e7-bc9921ce6a09"><fmt-xref type="inline" target="paur">[1]</fmt-xref></semx>. The following section describes the measurement principle and the uncertainty budgets.</p>
 
-<clause id="_8e6d9af5-6285-002c-0776-cd931adbf54f" obligation="normative" semx-id="_8e6d9af5-6285-002c-0776-cd931adbf54f">
-<title id="_b5975712-9b2f-0f90-1566-ed2455b67b98" semx-id="_eaa9c1c1-f376-2c11-4eb4-ec0760e9f86f">Measurement equation of a NIST SRP</title><fmt-title depth="2" id="_f075d45b-e4d1-9b2e-5fce-116fb659eee1"><span class="fmt-caption-label"><semx element="autonum" source="measurement_standards">7</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_8e6d9af5-6285-002c-0776-cd931adbf54f">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_b5975712-9b2f-0f90-1566-ed2455b67b98">Measurement equation of a NIST SRP</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Section</span> <semx element="autonum" source="measurement_standards">7</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_8e6d9af5-6285-002c-0776-cd931adbf54f">1</semx></fmt-xref-label>
+<clause id="_60d720fe-7a2d-b30b-37b0-a16f55103560" obligation="normative" semx-id="_60d720fe-7a2d-b30b-37b0-a16f55103560">
+<title id="_b5975712-9b2f-0f90-1566-ed2455b67b98" semx-id="_eaa9c1c1-f376-2c11-4eb4-ec0760e9f86f">Measurement equation of a NIST SRP</title><fmt-title depth="2" id="_f075d45b-e4d1-9b2e-5fce-116fb659eee1"><span class="fmt-caption-label"><semx element="autonum" source="measurement_standards">7</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_60d720fe-7a2d-b30b-37b0-a16f55103560">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_b5975712-9b2f-0f90-1566-ed2455b67b98">Measurement equation of a NIST SRP</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Section</span> <semx element="autonum" source="measurement_standards">7</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_60d720fe-7a2d-b30b-37b0-a16f55103560">1</semx></fmt-xref-label>
 <p id="_2bf21e7e-5888-abc0-ce51-84dbc481cf4a" semx-id="_2bf21e7e-5888-abc0-ce51-84dbc481cf4a">The measurement of the ozone amount-of-substance fraction by an SRP is based on the absorption of radiation at <stem block="false" type="MathML" id="_104a8011-ce8b-c2bf-090d-0af1fbaa18f0"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>253.7</mn>
@@ -1292,7 +1290,7 @@ sourcecode .nt {
   </mstyle>
 </math><asciimath>ii(C)</asciimath></semx></fmt-stem>) of ozone is calculated from:</p>
 
-<formula id="eq1" anchor="eq1" semx-id="_e9a6a3bd-3895-b403-4913-272c6c647b8b" autonum="1"><fmt-name id="_acedefdc-b06c-5941-ae22-20fc35823e02"><span class="fmt-caption-label"><span class="fmt-autonum-delim">(</span><semx element="autonum" source="eq1">1</semx><span class="fmt-autonum-delim">)</span></span></fmt-name><fmt-xref-label><span class="fmt-element-name">Equation</span> <span class="fmt-autonum-delim">(</span><semx element="autonum" source="eq1">1</semx><span class="fmt-autonum-delim">)</span></fmt-xref-label><stem block="true" type="MathML" id="_bae368a4-9fc2-1141-c5f9-747236cbf515"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<formula id="eq1" anchor="eq1" semx-id="_586bfc89-f274-d2f6-2bf0-e12f22cc8f51" autonum="1"><fmt-name id="_acedefdc-b06c-5941-ae22-20fc35823e02"><span class="fmt-caption-label"><span class="fmt-autonum-delim">(</span><semx element="autonum" source="eq1">1</semx><span class="fmt-autonum-delim">)</span></span></fmt-name><fmt-xref-label><span class="fmt-element-name">Equation</span> <span class="fmt-autonum-delim">(</span><semx element="autonum" source="eq1">1</semx><span class="fmt-autonum-delim">)</span></fmt-xref-label><stem block="true" type="MathML" id="_bae368a4-9fc2-1141-c5f9-747236cbf515"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mstyle mathvariant="italic">
       <mi>C</mi>
@@ -1402,7 +1400,7 @@ sourcecode .nt {
       <mo>)</mo>
     </mrow>
   </mstyle>
-</math><asciimath>ii(C) = (-1)/(2 ii(sigma) ii(L)_("opt")) ii(T)/ii(T)_("std") ii(P)_("std")/ii(P) "ln"(ii(D))</asciimath></semx></fmt-stem><p keep-with-next="true">where</p><dl id="_34fd95c6-3aec-c6e1-aca5-e79e61ed09b7" key="true" semx-id="_34fd95c6-3aec-c6e1-aca5-e79e61ed09b7" class="formula_dl"><dt><stem block="false" type="MathML" id="_9eb68960-21c4-0ec6-8c78-761becdb746e"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>ii(C) = (-1)/(2 ii(sigma) ii(L)_("opt")) ii(T)/ii(T)_("std") ii(P)_("std")/ii(P) "ln"(ii(D))</asciimath></semx></fmt-stem><p keep-with-next="true">where</p><dl id="_be2d2605-8aca-badc-b5a2-293cffa3eddf" key="true" semx-id="_be2d2605-8aca-badc-b5a2-293cffa3eddf" class="formula_dl"><dt><stem block="false" type="MathML" id="_9eb68960-21c4-0ec6-8c78-761becdb746e"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>σ</mi>
@@ -1548,7 +1546,7 @@ sourcecode .nt {
     </msub>
   </mstyle>
 </math><asciimath>ii(T)_("std")</asciimath></semx></fmt-stem></dt>
-<dd id="_9ac1b69d-c64e-97aa-2f95-5c473dbe717e" semx-id="_9ac1b69d-c64e-97aa-2f95-5c473dbe717e"><p id="_c4ca0095-1323-db9e-485f-3a1a447d5490" semx-id="_c4ca0095-1323-db9e-485f-3a1a447d5490">is the standard temperature (<stem block="false" type="MathML" id="_0ecc44a3-4380-dfd5-fa93-fa8adfb9b2b0"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_945062bc-898d-6164-cf1f-bca1d1de69ad" semx-id="_945062bc-898d-6164-cf1f-bca1d1de69ad"><p id="_bbb32510-37a3-128e-f9df-576c0a66f258" semx-id="_bbb32510-37a3-128e-f9df-576c0a66f258">is the standard temperature (<stem block="false" type="MathML" id="_e84d84fa-499f-160e-8592-6f14094ba3c3"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>273.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -1556,12 +1554,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>273.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_0ecc44a3-4380-dfd5-fa93-fa8adfb9b2b0"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>273.15 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_e84d84fa-499f-160e-8592-6f14094ba3c3"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>273.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -1569,7 +1566,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -2451,8 +2447,8 @@ sourcecode .nt {
 <p id="_b2ef55a2-7d00-fc90-8ae1-3c35cc12073f" semx-id="_b2ef55a2-7d00-fc90-8ae1-3c35cc12073f">Compared to the original design described in <eref type="inline" bibitemid="paur" citeas="[1]" id="_df0377de-e22d-461e-cb72-af2fa1732721"/><semx element="eref" source="_df0377de-e22d-461e-cb72-af2fa1732721"><fmt-xref type="inline" target="paur">[1]</fmt-xref></semx>, SRP27 and SRP28 have been modified to take into account two biases revealed by the study conducted by the BIPM and the NIST <eref type="inline" bibitemid="viallon3" citeas="[3]" id="_6a0d8789-5c42-7bc3-cb6b-0d0be6462fea"/><semx element="eref" source="_6a0d8789-5c42-7bc3-cb6b-0d0be6462fea"><fmt-xref type="inline" target="viallon3">[3]</fmt-xref></semx>. In 2009, an “SRP upgrade kit” was installed in the instruments, as described in the report <eref type="inline" bibitemid="viallon4" citeas="[4]" id="_286de740-7fdd-0c47-df95-ff0add7206f8"/><semx element="eref" source="_286de740-7fdd-0c47-df95-ff0add7206f8"><fmt-xref type="inline" target="viallon4">[4]</fmt-xref></semx>.</p>
 </clause>
 
-<clause id="_21ab807d-1770-26fe-0e9e-a368f5426b3e" obligation="normative" semx-id="_21ab807d-1770-26fe-0e9e-a368f5426b3e">
-<title id="_2cdc85ee-df74-77c7-442a-d4bf02e06578" semx-id="_395543f4-300b-fd20-6e4e-f37597735878">Uncertainty budget of the common reference BIPM-SRP27</title><fmt-title depth="2" id="_2ba8ecdd-b70b-31cd-0c73-d8f10be04d23"><span class="fmt-caption-label"><semx element="autonum" source="measurement_standards">7</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_21ab807d-1770-26fe-0e9e-a368f5426b3e">4</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_2cdc85ee-df74-77c7-442a-d4bf02e06578">Uncertainty budget of the common reference BIPM-SRP27</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Section</span> <semx element="autonum" source="measurement_standards">7</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_21ab807d-1770-26fe-0e9e-a368f5426b3e">4</semx></fmt-xref-label>
+<clause id="_89cb4438-0252-c939-f12c-4058db5f4654" obligation="normative" semx-id="_89cb4438-0252-c939-f12c-4058db5f4654">
+<title id="_2cdc85ee-df74-77c7-442a-d4bf02e06578" semx-id="_395543f4-300b-fd20-6e4e-f37597735878">Uncertainty budget of the common reference BIPM-SRP27</title><fmt-title depth="2" id="_2ba8ecdd-b70b-31cd-0c73-d8f10be04d23"><span class="fmt-caption-label"><semx element="autonum" source="measurement_standards">7</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_89cb4438-0252-c939-f12c-4058db5f4654">4</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_2cdc85ee-df74-77c7-442a-d4bf02e06578">Uncertainty budget of the common reference BIPM-SRP27</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Section</span> <semx element="autonum" source="measurement_standards">7</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_89cb4438-0252-c939-f12c-4058db5f4654">4</semx></fmt-xref-label>
 <p id="_a6fd3d63-c229-0b90-0f16-d6acc7c4e93a" semx-id="_a6fd3d63-c229-0b90-0f16-d6acc7c4e93a">The uncertainty budget for the ozone amount-of-substance fraction in dry air (<stem block="false" type="MathML" id="_dab9104c-b17f-12e8-f314-2cf5bb23d3c4"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>x</mi>
@@ -2555,7 +2551,7 @@ sourcecode .nt {
   </mstyle>
 </math><asciimath>500 "unitsml(nmol/mol)"</asciimath></semx></fmt-stem> is given in <xref target="table1" id="_8d23892b-f038-375a-f370-b4ac1a5350c4"/><semx element="xref" source="_8d23892b-f038-375a-f370-b4ac1a5350c4"><fmt-xref target="table1"><span class="fmt-element-name">Table</span> <semx element="autonum" source="table1">1</semx></fmt-xref></semx>.</p>
 
-<table id="table1" anchor="table1" semx-id="_e7c074f5-6678-e51f-8edd-03eeb5e656a4" autonum="1">
+<table id="table1" anchor="table1" semx-id="_ed00fdaf-447d-0147-4f6c-596a9861ed7e" autonum="1">
 <name id="_84e47cf1-737a-61c2-1635-40620512ec56" semx-id="_80144dcc-ac21-41f1-6fe5-1e746a56be42">Uncertainty budget for the SRPs maintained by the BIPM</name><fmt-name id="_be363ee6-cf05-5e82-fbc5-e23f143fac18"><span class="fmt-caption-label"><span class="fmt-element-name">Table</span> <semx element="autonum" source="table1">1</semx></span><span class="fmt-caption-delim">.<tab/></span><semx element="name" source="_84e47cf1-737a-61c2-1635-40620512ec56">Uncertainty budget for the SRPs maintained by the BIPM</semx></fmt-name><fmt-xref-label><span class="fmt-element-name">Table</span> <semx element="autonum" source="table1">1</semx></fmt-xref-label>
 <tbody><tr id="_1ac8953f-fddd-06a8-c425-a023fb3b0367" semx-id="_1ac8953f-fddd-06a8-c425-a023fb3b0367"><th id="_4828bf95-3375-f56d-7f09-66b3fb22ab23" valign="top" rowspan="2" align="left" semx-id="_4828bf95-3375-f56d-7f09-66b3fb22ab23">Component (<stem block="false" type="MathML" id="_8d9977b1-8077-aabd-76c2-7e6725695b27"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -3070,7 +3066,7 @@ sourcecode .nt {
     </mrow>
   </mstyle>
 </math><asciimath>0.017 "unitsml(kPa)"</asciimath></semx></fmt-stem></td>
-</tr><tr id="_1b923d2a-1ada-252f-e2e0-37b35d2a2cbf" semx-id="_1b923d2a-1ada-252f-e2e0-37b35d2a2cbf"><th id="_180eef78-a412-a528-bd84-91a524718682" valign="top" rowspan="2" align="left" semx-id="_180eef78-a412-a528-bd84-91a524718682">Temperature <stem block="false" type="MathML" id="_fda6310f-7834-cea4-0d47-99b2cde891f3"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_69807026-8ebe-bb8c-c05d-6fa7fe59a51e" semx-id="_69807026-8ebe-bb8c-c05d-6fa7fe59a51e"><th id="_180eef78-a412-a528-bd84-91a524718682" valign="top" rowspan="2" align="left" semx-id="_180eef78-a412-a528-bd84-91a524718682">Temperature <stem block="false" type="MathML" id="_fda6310f-7834-cea4-0d47-99b2cde891f3"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>T</mi>
@@ -3085,7 +3081,7 @@ sourcecode .nt {
 </math><asciimath>ii(T)</asciimath></semx></fmt-stem></th>
 <td id="_3d158a52-a537-437a-8e06-e95df81b7eb0" valign="top" align="left" semx-id="_3d158a52-a537-437a-8e06-e95df81b7eb0">Temperature probe</td>
 <td id="_3b98ed2d-9236-45d6-583e-acf34ff0374c" valign="top" align="left" semx-id="_3b98ed2d-9236-45d6-583e-acf34ff0374c">Rectangular</td>
-<td id="_9384db2d-acde-671f-3049-5b374d1fd6e4" valign="top" align="left" semx-id="_9384db2d-acde-671f-3049-5b374d1fd6e4"><stem block="false" type="MathML" id="_9db55885-9122-8f43-7e86-dd23d9539033"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_e36dc85a-ae0d-9b00-6022-7d62e3733dbb" valign="top" align="left" semx-id="_e36dc85a-ae0d-9b00-6022-7d62e3733dbb"><stem block="false" type="MathML" id="_e59a43fe-fa20-3ed1-3b1f-1956d7bc3998"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.03</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -3093,12 +3089,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>0.03 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_9db55885-9122-8f43-7e86-dd23d9539033"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>0.03 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_e59a43fe-fa20-3ed1-3b1f-1956d7bc3998"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.03</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -3106,13 +3101,12 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
 </math><asciimath>0.03 "unitsml(K)"</asciimath></semx></fmt-stem></td>
-<td id="_60be9d61-f8ba-3cc9-b90d-ba3b2962c9be" valign="top" rowspan="2" align="left" semx-id="_60be9d61-f8ba-3cc9-b90d-ba3b2962c9be"><stem block="false" type="MathML" id="_ebfa4b9b-b9a4-4d9c-9af1-d9da10885eec"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_c30c5fe4-084d-3d5e-d53f-6bc919a17b59" valign="top" rowspan="2" align="left" semx-id="_c30c5fe4-084d-3d5e-d53f-6bc919a17b59"><stem block="false" type="MathML" id="_ba796342-c28d-bd23-7702-834203e068b8"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.07</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -3120,12 +3114,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>0.07 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_ebfa4b9b-b9a4-4d9c-9af1-d9da10885eec"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>0.07 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_ba796342-c28d-bd23-7702-834203e068b8"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.07</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -3133,7 +3126,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -3185,9 +3177,9 @@ sourcecode .nt {
     <mi>x</mi>
   </mstyle>
 </math><asciimath>2.29 xx 10^(−4)x</asciimath></semx></fmt-stem></td>
-</tr><tr id="_0b81471e-95c5-ae4e-c17a-71ae30b6659b" semx-id="_0b81471e-95c5-ae4e-c17a-71ae30b6659b"><td id="_a923a301-497c-079f-3c9b-29853753ee75" valign="top" align="left" semx-id="_a923a301-497c-079f-3c9b-29853753ee75">Temperature gradient</td>
+</tr><tr id="_903a2dc3-9459-7056-6b7a-e5c19d2089b4" semx-id="_903a2dc3-9459-7056-6b7a-e5c19d2089b4"><td id="_a923a301-497c-079f-3c9b-29853753ee75" valign="top" align="left" semx-id="_a923a301-497c-079f-3c9b-29853753ee75">Temperature gradient</td>
 <td id="_07d33dae-5f11-bd61-71cf-c24b5fc9e2df" valign="top" align="left" semx-id="_07d33dae-5f11-bd61-71cf-c24b5fc9e2df">Rectangular</td>
-<td id="_0f4b052f-d615-7dbe-d3be-6cd6e27e913f" valign="top" align="left" semx-id="_0f4b052f-d615-7dbe-d3be-6cd6e27e913f"><stem block="false" type="MathML" id="_add5961e-28ef-20ca-c918-be8b90089893"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_a0698b97-f40e-d5d5-bad7-4b46ada4acb6" valign="top" align="left" semx-id="_a0698b97-f40e-d5d5-bad7-4b46ada4acb6"><stem block="false" type="MathML" id="_6ad1bc4c-089c-4080-c079-2858bafc05f7"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.058</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -3195,12 +3187,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>0.058 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_add5961e-28ef-20ca-c918-be8b90089893"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>0.058 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_6ad1bc4c-089c-4080-c079-2858bafc05f7"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.058</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -3208,7 +3199,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -3920,8 +3910,8 @@ sourcecode .nt {
 <p id="_36d12d26-833b-2aca-86f9-9e81a6c312e5" semx-id="_36d12d26-833b-2aca-86f9-9e81a6c312e5">The OEH SRP21 has not been modified since the last comparison in 2015 <eref type="inline" bibitemid="viallon5" citeas="[5]" id="_bcd3003a-926c-9f43-2e36-b046468fad4b"/><semx element="eref" source="_bcd3003a-926c-9f43-2e36-b046468fad4b"><fmt-xref type="inline" target="viallon5">[5]</fmt-xref></semx> .</p>
 </clause>
 
-<clause id="_b31bc6e8-dd1f-8ea8-68e4-6410e019c05f" obligation="normative" semx-id="_b31bc6e8-dd1f-8ea8-68e4-6410e019c05f">
-<title id="_fef35ed8-02ba-b062-4194-2c51c72f64ba" semx-id="_0c763605-2468-7d60-d07b-bf78be32bea0">Uncertainty budget of the SRP21</title><fmt-title depth="2" id="_e93c8252-1068-e8d5-1f85-e75f0921bad8"><span class="fmt-caption-label"><semx element="autonum" source="measurement_standards">7</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b31bc6e8-dd1f-8ea8-68e4-6410e019c05f">7</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_fef35ed8-02ba-b062-4194-2c51c72f64ba">Uncertainty budget of the SRP21</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Section</span> <semx element="autonum" source="measurement_standards">7</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_b31bc6e8-dd1f-8ea8-68e4-6410e019c05f">7</semx></fmt-xref-label>
+<clause id="_ea1592b2-6ae1-34c6-cfee-d4c9c6eb5f60" obligation="normative" semx-id="_ea1592b2-6ae1-34c6-cfee-d4c9c6eb5f60">
+<title id="_fef35ed8-02ba-b062-4194-2c51c72f64ba" semx-id="_0c763605-2468-7d60-d07b-bf78be32bea0">Uncertainty budget of the SRP21</title><fmt-title depth="2" id="_e93c8252-1068-e8d5-1f85-e75f0921bad8"><span class="fmt-caption-label"><semx element="autonum" source="measurement_standards">7</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_ea1592b2-6ae1-34c6-cfee-d4c9c6eb5f60">7</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_fef35ed8-02ba-b062-4194-2c51c72f64ba">Uncertainty budget of the SRP21</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Section</span> <semx element="autonum" source="measurement_standards">7</semx><span class="fmt-autonum-delim">.</span><semx element="autonum" source="_ea1592b2-6ae1-34c6-cfee-d4c9c6eb5f60">7</semx></fmt-xref-label>
 <p id="_508d1125-8186-7405-4b4c-da005e89d732" semx-id="_508d1125-8186-7405-4b4c-da005e89d732">The uncertainty budget for the ozone amount-of-substance fraction in dry air <stem block="false" type="MathML" id="_b4a834f4-647f-56d8-dc07-afe4b0f8d4dc"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>x</mi>
@@ -4146,7 +4136,7 @@ sourcecode .nt {
 
 <p id="_834e0f0f-bd34-a087-94d4-e81767f01940" semx-id="_834e0f0f-bd34-a087-94d4-e81767f01940">No covariance term for the SRP21 was included in the calculations.</p>
 
-<table id="table2" anchor="table2" semx-id="_eecf7d18-e795-576b-2c0a-9b8f07829a97" autonum="2">
+<table id="table2" anchor="table2" semx-id="_5ce56fe7-9531-8330-668b-6ed33402bb20" autonum="2">
 <name id="_4aa61343-10b9-78ec-4de2-57b9375efd93" semx-id="_2d80aa91-36e6-81ed-54c2-ed27c12fbe30">Uncertainty budget for the SRP21</name><fmt-name id="_d90af0f5-ddd4-68e9-598d-d5db777a89b3"><span class="fmt-caption-label"><span class="fmt-element-name">Table</span> <semx element="autonum" source="table2">2</semx></span><span class="fmt-caption-delim">.<tab/></span><semx element="name" source="_4aa61343-10b9-78ec-4de2-57b9375efd93">Uncertainty budget for the SRP21</semx></fmt-name><fmt-xref-label><span class="fmt-element-name">Table</span> <semx element="autonum" source="table2">2</semx></fmt-xref-label>
 <thead><tr id="_3061ea41-d5dc-7212-0f84-94bda2c329fa" semx-id="_3061ea41-d5dc-7212-0f84-94bda2c329fa"><th id="_3f540fa1-3d43-1679-777b-a4ad4b30863c" valign="top" align="left" semx-id="_3f540fa1-3d43-1679-777b-a4ad4b30863c">Component</th>
 <th id="_b002df91-f63a-87c9-b755-160c5f8c3676" valign="top" align="center" semx-id="_b002df91-f63a-87c9-b755-160c5f8c3676">Value</th>
@@ -4536,7 +4526,7 @@ sourcecode .nt {
     </mrow>
   </mstyle>
 </math><asciimath>0.038 "unitsml(kPa)"</asciimath></semx></fmt-stem></td>
-</tr><tr id="_99856069-fa89-dd36-b931-cc3b5189577a" semx-id="_99856069-fa89-dd36-b931-cc3b5189577a"><th id="_2471ae9b-88a4-ac34-7273-a7166a8a9730" valign="top" rowspan="2" align="left" semx-id="_2471ae9b-88a4-ac34-7273-a7166a8a9730">Temperature (<stem block="false" type="MathML" id="_c98deb03-9821-99be-0c8c-0e09d2b67fcc"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_35e4ce04-2d71-dda1-7732-41f157ec22a1" semx-id="_35e4ce04-2d71-dda1-7732-41f157ec22a1"><th id="_2471ae9b-88a4-ac34-7273-a7166a8a9730" valign="top" rowspan="2" align="left" semx-id="_2471ae9b-88a4-ac34-7273-a7166a8a9730">Temperature (<stem block="false" type="MathML" id="_c98deb03-9821-99be-0c8c-0e09d2b67fcc"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>T</mi>
@@ -4549,7 +4539,7 @@ sourcecode .nt {
     </mstyle>
   </mstyle>
 </math><asciimath>ii(T)</asciimath></semx></fmt-stem>)</th>
-<td id="_7e84ecaf-2e3f-322c-5fcc-dd8994855092" valign="top" rowspan="2" align="center" semx-id="_7e84ecaf-2e3f-322c-5fcc-dd8994855092"><stem block="false" type="MathML" id="_e474564c-15ac-8c4a-75f8-21b33aed1bff"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_6e8ae1d6-4a9c-1b22-8768-bd09de7ea0b5" valign="top" rowspan="2" align="center" semx-id="_6e8ae1d6-4a9c-1b22-8768-bd09de7ea0b5"><stem block="false" type="MathML" id="_bdc55a1a-3e1a-cf3f-15bf-9dd5697cd660"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>273.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4557,12 +4547,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>°K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>273.15 "unitsml(degK)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_e474564c-15ac-8c4a-75f8-21b33aed1bff"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>273.15 "unitsml(degK)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_bdc55a1a-3e1a-cf3f-15bf-9dd5697cd660"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>273.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4570,7 +4559,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>°K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -4578,7 +4566,7 @@ sourcecode .nt {
 </math><asciimath>273.15 "unitsml(degK)"</asciimath></semx></fmt-stem></td>
 <td id="_5f5404a2-e308-df1e-981d-6be922bad390" valign="top" align="left" semx-id="_5f5404a2-e308-df1e-981d-6be922bad390">Probe</td>
 <td id="_34a470bd-deff-f1da-ee5d-41fede2ca726" valign="top" align="center" semx-id="_34a470bd-deff-f1da-ee5d-41fede2ca726">Rect</td>
-<td id="_8b463938-3e71-62d6-d8b7-4fcde03eab69" valign="top" align="center" semx-id="_8b463938-3e71-62d6-d8b7-4fcde03eab69"><stem block="false" type="MathML" id="_28958850-ba1c-2276-961d-902607193b08"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_c90828c7-3ed7-e4ac-08f2-7a3d8381ef81" valign="top" align="center" semx-id="_c90828c7-3ed7-e4ac-08f2-7a3d8381ef81"><stem block="false" type="MathML" id="_b3ea5d04-9df7-ea07-aed1-8993500e946b"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.115</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4586,12 +4574,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>0.115 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_28958850-ba1c-2276-961d-902607193b08"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>0.115 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_b3ea5d04-9df7-ea07-aed1-8993500e946b"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.115</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4599,13 +4586,12 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
 </math><asciimath>0.115 "unitsml(K)"</asciimath></semx></fmt-stem></td>
-<td id="_054d2101-d0a6-71c1-ccbf-a51bced42680" valign="top" rowspan="2" align="center" semx-id="_054d2101-d0a6-71c1-ccbf-a51bced42680"><stem block="false" type="MathML" id="_9a494e15-3086-9f19-fe43-98a21ca31ea6"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_2f94a81b-72a5-e320-b7b2-61e88fcaaf4b" valign="top" rowspan="2" align="center" semx-id="_2f94a81b-72a5-e320-b7b2-61e88fcaaf4b"><stem block="false" type="MathML" id="_81ec8228-0d3b-8dd7-26b5-607c8f751b94"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.129</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4613,12 +4599,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>0.129 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_9a494e15-3086-9f19-fe43-98a21ca31ea6"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>0.129 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_81ec8228-0d3b-8dd7-26b5-607c8f751b94"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.129</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4626,7 +4611,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -4678,9 +4662,9 @@ sourcecode .nt {
     <mi>x</mi>
   </mstyle>
 </math><asciimath>4.7 xx 10^(−3)x</asciimath></semx></fmt-stem></td>
-</tr><tr id="_9e5cb2be-6eb7-6f5b-49b4-c880a48158a9" semx-id="_9e5cb2be-6eb7-6f5b-49b4-c880a48158a9"><td id="_5395ea16-d90a-5abc-86aa-1b50b1d55faa" valign="top" align="left" semx-id="_5395ea16-d90a-5abc-86aa-1b50b1d55faa">Gradient</td>
+</tr><tr id="_bf27e86e-9e76-d7fc-d0ff-47958437646b" semx-id="_bf27e86e-9e76-d7fc-d0ff-47958437646b"><td id="_5395ea16-d90a-5abc-86aa-1b50b1d55faa" valign="top" align="left" semx-id="_5395ea16-d90a-5abc-86aa-1b50b1d55faa">Gradient</td>
 <td id="_8b5a975c-2f6e-1cfb-aa1d-c311c901a754" valign="top" align="center" semx-id="_8b5a975c-2f6e-1cfb-aa1d-c311c901a754">Rect</td>
-<td id="_eab7790c-dcf8-d8d0-c36f-ac34bbef3cb9" valign="top" align="left" semx-id="_eab7790c-dcf8-d8d0-c36f-ac34bbef3cb9"><stem block="false" type="MathML" id="_2ab19ecb-e45e-fd2e-8be5-4becf52dad40"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_c9ac2dde-c496-30d4-06fc-df51ea199d9e" valign="top" align="left" semx-id="_c9ac2dde-c496-30d4-06fc-df51ea199d9e"><stem block="false" type="MathML" id="_fa805672-1611-b60b-d02a-b9ab4eae4088"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.058</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4688,12 +4672,11 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
   </mstyle>
-</math><asciimath>0.058 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_2ab19ecb-e45e-fd2e-8be5-4becf52dad40"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>0.058 "unitsml(K)"</asciimath></stem><fmt-stem type="MathML"><semx element="stem" source="_fa805672-1611-b60b-d02a-b9ab4eae4088"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.058</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4701,7 +4684,6 @@ sourcecode .nt {
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>

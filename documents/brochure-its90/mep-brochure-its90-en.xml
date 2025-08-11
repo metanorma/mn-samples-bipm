@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.1" schema-version="v2.1.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.2" schema-version="v2.1.0" flavor="bipm">
 <bibdata type="standard">
 <title language="en" format="text/plain" type="title-main">The International Temperature Scale of 1990 (ITS-90)</title>
 
@@ -7,7 +7,7 @@
 
 <title language="fr" format="text/plain" type="title-main">Échelle Internationale de Température De 1990 (EIT-90)</title>
 
-<docidentifier primary="true" type="BIPM">BIPM ITS-90 MEP 1 1</docidentifier><docidentifier type="BIPM-parent-document">BIPM ITS-90 MEP</docidentifier><docnumber>ITS-90 MEP</docnumber><contributor><role type="author"/><organization>
+<docidentifier primary="true" type="BIPM">BIPM ITS-90 MEP-1 A1</docidentifier><docidentifier type="BIPM-parent-document">BIPM ITS-90 MEP</docidentifier><docnumber>ITS-90 MEP</docnumber><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
@@ -15,7 +15,7 @@
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>mise-en-pratique</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="CCT" language="en" script="Latn">Consultative Committee for Thermometry</committee><committee acronym="CCT" language="fr" script="Latn">Comité consultatif de thermométrie</committee></editorialgroup><structuredidentifier><docnumber>ITS-90 MEP</docnumber><part>1</part><appendix>1</appendix>
 </structuredidentifier><si-aspect>K_k</si-aspect></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">kelvin</UnitName>
         <UnitSymbol type="HTML">K</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -24,7 +24,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd5" id="U_uK">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">uK</UnitName>
         <UnitSymbol type="HTML">K</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -61,7 +61,7 @@
           <EnumeratedRootUnit unit="mole" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd6" id="U_umol">
-          <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+          <UnitSystem name="SI" type="SI_base" lang="en-US"/>
           <UnitName lang="en">umol</UnitName>
           <UnitSymbol type="HTML">mol</UnitSymbol>
           <UnitSymbol type="MathMl">
@@ -73,7 +73,7 @@
             <EnumeratedRootUnit unit="mole" prefix="u"/>
           </RootUnits>
         </Unit><Unit dimensionURL="#NISTd6" id="U_NISTu6">
-          <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+          <UnitSystem name="SI" type="SI_base" lang="en-US"/>
           <UnitName lang="en">mole</UnitName>
           <UnitSymbol type="HTML">mol</UnitSymbol>
           <UnitSymbol type="MathMl">
@@ -82,7 +82,7 @@
             </math>
           </UnitSymbol>
         </Unit><Unit dimensionURL="#NISTd5" id="U_mK">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">mK</UnitName>
         <UnitSymbol type="HTML">mK</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -93,9 +93,7 @@
         <RootUnits>
           <EnumeratedRootUnit unit="kelvin" prefix="m"/>
         </RootUnits>
-      </Unit></UnitSet><QuantitySet><Quantity id="NISTq5" quantityType="base" dimensionURL="#NISTd5">
-        <QuantityName lang="en-US">thermodynamic temperature</QuantityName>
-      </Quantity><Quantity id="NISTq6" quantityType="base" dimensionURL="#NISTd6">
+      </Unit></UnitSet><QuantitySet><Quantity id="NISTq6" quantityType="base" dimensionURL="#NISTd6">
           <QuantityName lang="en-US">amount of substance</QuantityName>
         </Quantity></QuantitySet><DimensionSet><Dimension id="NISTd5">
         <ThermodynamicTemperature symbol="Theta" powerNumerator="1"/>
@@ -142,7 +140,7 @@
 <p id="_d8cc3982-a59f-441d-7946-7f24f3baaa68">For material taken directly from the text of the ITS-90, the <em>mise en pratique</em> refers to “defined” or “assigned” values or procedures. Where additional material other than the ITS-90 text has been deemed essential for inclusion in the Technical Annex, the <em>mise en pratique</em> of the definition of the kelvin refers to “specified” values or procedures.</p>
 </clause></preface><sections>
 
-<clause id="_76d13964-d3a3-bfe5-e843-7ff32d2dbdc8" obligation="normative">
+<clause id="_3b2ced0a-66ec-5783-9a72-4d5312066a35" obligation="normative">
 <title id="_d074cbeb-3ece-aa31-5813-344b2d34836f">Isotopic composition and corrections for the triple point of water</title>
 <p id="_36fc96af-623d-59ef-49df-5b686d1bf322">The effects of isotopic composition on the triple point of water (TPW) are discussed in detail in [<eref type="inline" bibitemid="White2010" citeas="[17]"><display-text>White and Tew 2010</display-text></eref>, <eref type="inline" bibitemid="Ripple2005" citeas="[14]"><display-text>Ripple <em>et al.</em> 2005</display-text></eref>].</p>
 
@@ -241,7 +239,7 @@
   </mstyle>
 </math><asciimath>(""^{17}"O"//""^{16}"O")_{"VSMOW"}  =  0.0003799(9).</asciimath></stem></formula>
 
-<p id="_23256fea-aa22-9a44-cd5c-d77a59543ada">For the purposes of thermometry, these absolute values are specified for the isotopic composition of the water used for realizing the definition of the kelvin with the assigned temperature <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_4c96387e-088b-fe6e-c026-11bcdde80440">For the purposes of thermometry, these absolute values are specified for the isotopic composition of the water used for realizing the definition of the kelvin with the assigned temperature <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -261,7 +259,6 @@
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -802,13 +799,13 @@
 </math><asciimath>ii(delta) "D"</asciimath></stem> value is -427.5 ‰ instead of -428 ‰.</p>
 </clause>
 
-<clause id="_24d9bb71-6037-1e9e-0fc6-45232907becd" obligation="normative">
+<clause id="_e6f0da0d-5601-6fd4-588f-e53cde87a49d" obligation="normative">
 <title id="_c1538249-663c-7bf9-50a6-17da2d33aaf8">Isotopic composition and corrections for the triple point of equilibrium hydrogen</title>
 <p id="_ce898939-da09-ef63-0f39-d8435612f8ea">The effects of isotopic composition on the triple point of equilibrium hydrogen (e-H<sub>2</sub> TP) and uncertainties related to these effects are discussed in detail in [<eref type="inline" bibitemid="Steur2005" citeas="[15]"><display-text>Steur <em>et al.</em> 2005</display-text></eref>, <xref target="Fellmuth2005"><display-text>Fellmuth <em>et al.</em> 2005</display-text></xref>].</p>
 
 <p id="_b4e7f4d8-f173-0865-fdb4-ee75a5dbb8e8">The isotopic composition of commercially available hydrogen varies from an amount-of-substance ratio of about 27 micromole of D per mole of H to about 150 micromole of D per mole of H. It has been established that the discrepancies previously found at the triple point are mainly due to the variable deuterium content in the hydrogen used for its realization [<eref type="inline" bibitemid="Pavese2000" citeas="[9]"><display-text>Pavese and Tew 2000</display-text></eref>, <xref target="Pavese2002"><display-text>Pavese <em>et al.</em> 2002</display-text></xref>].</p>
 
-<p id="_2e5a144d-5718-7a39-619c-87e4a26c8ec8">It is therefore specified that the ITS-90 temperature assigned to the triple point of equilibrium hydrogen, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_bed3f7df-9d2c-79a3-23f7-dc0161bf3486">It is therefore specified that the ITS-90 temperature assigned to the triple point of equilibrium hydrogen, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -832,7 +829,6 @@
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -1034,13 +1030,13 @@
 <p id="_6c6eac09-3a0e-9460-3328-652bbe6c545c">To reduce the effect of isotopic fractionation while maintaining coherence over the entire vapour-pressure range (i.e., including the triple point), it is therefore specified that the ITS-90 relations for the vapour pressure of equilibrium hydrogen are referenced to an amount-of-substance ratio of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="false"><mn>0.00008902</mn></mstyle></math><asciimath>0.00008902</asciimath></stem> mole D per mole H, i.e. the isotopic ratio determined for SLAP.</p>
 </clause>
 
-<clause id="_3a76d9d9-70bf-7a01-61b8-1e61775add67" obligation="normative">
+<clause id="_a2b16a90-162a-1607-4977-dc312217ea89" obligation="normative">
 <title id="_8a4fb7f0-5810-fc65-5cac-3b2a9904b6f2">Isotopic composition and corrections for the triple point of neon</title>
 <p id="_6e5bf56a-088b-422f-ff32-68f078d64875">The effects of isotopic composition on the triple point of neon (Ne TP) and uncertainties related to these effects are discussed in detail in [<eref type="inline" bibitemid="Pavese2013" citeas="[13]"><display-text>Pavese <em>et al.</em> 2013</display-text></eref>, <eref type="inline" bibitemid="Steur2012" citeas="[16]"><display-text>Steur <em>et al.</em> 2012</display-text></eref>].</p>
 
 <p id="_82f633d1-8b2e-24c3-2c3b-9d252654738d">The isotopic composition of commercially available neon varies from an amount-of-substance ratio of about <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="false"><mn>0.0915</mn></mstyle></math><asciimath>0.0915</asciimath></stem> mole of <sup>22</sup>Ne per mole of Ne to about <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="false"><mn>0.0948</mn></mstyle></math><asciimath>0.0948</asciimath></stem> mole of <sup>22</sup>Ne per mole of Ne, and about <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="false"><mn>0.0027</mn></mstyle></math><asciimath>0.0027</asciimath></stem> mole of <sup>21</sup>Ne per mole of Ne to about <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="false"><mn>0.0028</mn></mstyle></math><asciimath>0.0028</asciimath></stem> mole of <sup>21</sup>Ne per mole of Ne. It has been established that the discrepancies previously found at the triple point are mainly due to the variable <sup>22</sup>Ne content in the neon used for its realization [<eref type="inline" bibitemid="Pavese2008a" citeas="[11]"><display-text>Pavese <em>et al.</em> 2008a</display-text></eref>, <eref type="inline" bibitemid="Pavese2008b" citeas="[12]"><display-text>Pavese <em>et al.</em> 2008b</display-text></eref>].</p>
 
-<p id="_df7a9ec2-f07b-d363-0a4c-550c046ac4e4">It is therefore specified that the ITS-90 temperature assigned to the triple point of neon, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_b08062f7-b0e7-beb6-fc8d-dab31d5f1a8b">It is therefore specified that the ITS-90 temperature assigned to the triple point of neon, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1060,7 +1056,6 @@
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -1145,7 +1140,7 @@
   </mstyle>
 </math><asciimath>ii(T)_{"meas"} = ii(T)_{90}("Ne TP") + k_0 + k_1 (""^{22}x + ""^{21}x//2) + k_2 (""^{22}x + ""^{21}x//2)^2 ,</asciimath></stem></formula>
 
-<p id="_b6303e01-d72e-26db-d7b5-cb935e1ee0bd">where <sup>22</sup><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_301751fa-0f42-a3fd-a10f-80cdb5771b23">where <sup>22</sup><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>x</mi>
   </mstyle>
@@ -1169,7 +1164,6 @@
       </mstyle>
       
       
-      
     </mrow>
   </mstyle>
 </math><asciimath>k_0 = -0.01382 "unitsml(K)"</asciimath></stem>, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1185,7 +1179,6 @@
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -1204,7 +1197,6 @@
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>

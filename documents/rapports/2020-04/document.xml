@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.1" schema-version="v2.1.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.2" schema-version="v2.1.0" flavor="bipm">
 <bibdata type="standard">
 <title language="en" format="text/plain" type="title-main">Comparison of Ozone Reference Standards of the ECCC and the BIPM</title>
 
@@ -81,7 +81,7 @@
           <EnumeratedRootUnit unit="mole" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_nm">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">nm</UnitName>
         <UnitSymbol type="HTML">nm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -90,10 +90,10 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" prefix="n"/>
+          <EnumeratedRootUnit unit="metre" prefix="n"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd8" id="U_cm2">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">cm^2</UnitName>
         <UnitSymbol type="HTML">cm
           <sup>2</sup>
@@ -111,10 +111,10 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" prefix="c" powerNumerator="2"/>
+          <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="2"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">kelvin</UnitName>
         <UnitSymbol type="HTML">K</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -135,7 +135,7 @@
           <EnumeratedRootUnit unit="pascal" prefix="k"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_N-1" id="U_mol-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">mol^-1</UnitName>
         <UnitSymbol type="HTML">mol
           <sup>−1</sup>
@@ -191,7 +191,7 @@
           <EnumeratedRootUnit unit="kelvin" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd29" id="U_cm-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">cm^-1</UnitName>
         <UnitSymbol type="HTML">cm
           <sup>−1</sup>
@@ -210,10 +210,10 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" prefix="c" powerNumerator="-1"/>
+          <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_cm">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">cm</UnitName>
         <UnitSymbol type="HTML">cm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -222,7 +222,7 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" prefix="c"/>
+          <EnumeratedRootUnit unit="metre" prefix="c"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu23">
         <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
@@ -255,11 +255,11 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="liter"/>
+          <EnumeratedRootUnit unit="litre"/>
           <EnumeratedRootUnit unit="minute" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd3" id="U_NISTu3">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">second</UnitName>
         <UnitSymbol type="HTML">s</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -267,11 +267,7 @@
             <mi mathvariant="normal">s</mi>
           </math>
         </UnitSymbol>
-      </Unit></UnitSet><QuantitySet><Quantity id="NISTq5" quantityType="base" dimensionURL="#NISTd5">
-        <QuantityName lang="en-US">thermodynamic temperature</QuantityName>
-      </Quantity><Quantity id="NISTq34" quantityType="base" dimensionURL="#NISTd5">
-        <QuantityName lang="en-US">Celsius temperature</QuantityName>
-      </Quantity></QuantitySet><DimensionSet><Dimension id="D_N0">
+      </Unit></UnitSet><DimensionSet><Dimension id="D_N0">
         <AmountOfSubstance symbol="N" powerNumerator="0"/>
       </Dimension><Dimension id="NISTd1">
         <Length symbol="L" powerNumerator="1"/>
@@ -811,11 +807,11 @@
 <p id="_0dc0b41f-e6f2-47ed-cace-88d501e7e869">All calculations were performed by the BIPM using the information on form BIPM.QM-K1-R1. It includes the difference from the reference value at two nominal ozone amount-of-substance fractions, which are considered as degrees of equivalence for the key comparison BIPM.QM-K1. For information, the difference from the reference value at all nominal ozone amount-of-substance fractions are reported in the same form, as well as the linear relationship between the participant’s standard and the common reference standard.</p>
 </clause>
 
-<clause id="_733027a8-5437-b422-834c-d532a392ba84" anchor="standards" obligation="normative">
+<clause id="_4ff993ef-bcce-04e4-f840-74870529944f" anchor="standards" obligation="normative">
 <title id="_bc593cd4-9fdc-0a74-881d-14e5e7590b3c">Measurement standards</title>
 <p id="_541a01ea-c766-5ce9-6616-c58f76f6ac6f">The instruments maintained by the BIPM and the ECCC are Standard Reference Photometers (SRP) built by the NIST. More details on the instrument’s operating principle and its capabilities can be found in <eref type="inline" bibitemid="paur" citeas="[1]"/>. The following section describes the measurement principle and the uncertainty budgets.</p>
 
-<clause id="_901d83ea-8ab3-a6f6-cce4-77e89809aef3" obligation="normative">
+<clause id="_f7815443-7aef-27eb-1edc-b89b6ecfb7fd" obligation="normative">
 <title id="_eaa9c1c1-f376-2c11-4eb4-ec0760e9f86f">Measurement equation of a NIST SRP</title>
 <p id="_2bf21e7e-5888-abc0-ce51-84dbc481cf4a">The measurement of the ozone amount-of-substance fraction by an SRP is based on the absorption of radiation at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -838,7 +834,7 @@
   </mstyle>
 </math><asciimath>ii(C)</asciimath></stem>) of ozone is calculated from:</p>
 
-<formula id="_e9a6a3bd-3895-b403-4913-272c6c647b8b" anchor="eq1"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<formula id="_586bfc89-f274-d2f6-2bf0-e12f22cc8f51" anchor="eq1"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mstyle mathvariant="italic">
       <mi>C</mi>
@@ -893,7 +889,7 @@
       <mo>)</mo>
     </mrow>
   </mstyle>
-</math><asciimath>ii(C) = (-1)/(2 ii(sigma) ii(L)_("opt")) ii(T)/ii(T)_("std") ii(P)_("std")/ii(P) "ln"(ii(D))</asciimath></stem><dl id="_34fd95c6-3aec-c6e1-aca5-e79e61ed09b7" key="true"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>ii(C) = (-1)/(2 ii(sigma) ii(L)_("opt")) ii(T)/ii(T)_("std") ii(P)_("std")/ii(P) "ln"(ii(D))</asciimath></stem><dl id="_be2d2605-8aca-badc-b5a2-293cffa3eddf" key="true"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>σ</mi>
@@ -971,7 +967,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(T)_("std")</asciimath></stem></dt>
-<dd id="_9ac1b69d-c64e-97aa-2f95-5c473dbe717e"><p id="_c4ca0095-1323-db9e-485f-3a1a447d5490">is the standard temperature (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_945062bc-898d-6164-cf1f-bca1d1de69ad"><p id="_bbb32510-37a3-128e-f9df-576c0a66f258">is the standard temperature (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>273.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -979,7 +975,6 @@
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -1460,7 +1455,7 @@
 <p id="_b2ef55a2-7d00-fc90-8ae1-3c35cc12073f">Compared to the original design described in <eref type="inline" bibitemid="paur" citeas="[1]"/>, SRP27 and SRP28 have been modified to take into account two biases revealed by the study conducted by the BIPM and the NIST <eref type="inline" bibitemid="viallon3" citeas="[3]"/>. In 2009, an “SRP upgrade kit” was installed in the instruments, as described in the report <eref type="inline" bibitemid="viallon4" citeas="[4]"/>.</p>
 </clause>
 
-<clause id="_5ad424fc-c437-f4a1-c6d4-3c1ea0c61646" obligation="normative">
+<clause id="_f11a1d1f-b1fe-6794-585c-2cf638d25d5c" obligation="normative">
 <title id="_395543f4-300b-fd20-6e4e-f37597735878">Uncertainty budget of the common reference BIPM-SRP27</title>
 <p id="_a6fd3d63-c229-0b90-0f16-d6acc7c4e93a">The uncertainty budget for the ozone amount-of-substance fraction in dry air (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1514,7 +1509,7 @@
   </mstyle>
 </math><asciimath>500 "unitsml(nmol/mol)"</asciimath></stem> is given in <xref target="table1"/>.</p>
 
-<table id="_3d5b182e-535e-35d6-01d0-7a7fe44ea0af" anchor="table1">
+<table id="_27f862dc-dfbf-7da9-d4ba-5e72b139932b" anchor="table1">
 <name id="_80144dcc-ac21-41f1-6fe5-1e746a56be42">Uncertainty budget for the SRPs maintained by the BIPM</name>
 <tbody><tr id="_732e89ce-db35-9304-228a-c0ef61d39a90"><th id="_4828bf95-3375-f56d-7f09-66b3fb22ab23" valign="top" rowspan="2" align="left">Component (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1791,7 +1786,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>0.017 "unitsml(kPa)"</asciimath></stem></td>
-</tr><tr id="_1b923d2a-1ada-252f-e2e0-37b35d2a2cbf"><th id="_180eef78-a412-a528-bd84-91a524718682" valign="top" rowspan="2" align="left">Temperature <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_69807026-8ebe-bb8c-c05d-6fa7fe59a51e"><th id="_180eef78-a412-a528-bd84-91a524718682" valign="top" rowspan="2" align="left">Temperature <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>T</mi>
@@ -1800,7 +1795,7 @@
 </math><asciimath>ii(T)</asciimath></stem></th>
 <td id="_3d158a52-a537-437a-8e06-e95df81b7eb0" valign="top" align="left">Temperature probe</td>
 <td id="_3b98ed2d-9236-45d6-583e-acf34ff0374c" valign="top" align="left">Rectangular</td>
-<td id="_9384db2d-acde-671f-3049-5b374d1fd6e4" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_e36dc85a-ae0d-9b00-6022-7d62e3733dbb" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.03</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -1810,11 +1805,10 @@
       </mstyle>
       
       
-      
     </mrow>
   </mstyle>
 </math><asciimath>0.03 "unitsml(K)"</asciimath></stem></td>
-<td id="_60be9d61-f8ba-3cc9-b90d-ba3b2962c9be" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_c30c5fe4-084d-3d5e-d53f-6bc919a17b59" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.07</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -1822,7 +1816,6 @@
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -1852,9 +1845,9 @@
     <mi>x</mi>
   </mstyle>
 </math><asciimath>2.29 xx 10^(−4)x</asciimath></stem></td>
-</tr><tr id="_0b81471e-95c5-ae4e-c17a-71ae30b6659b"><td id="_a923a301-497c-079f-3c9b-29853753ee75" valign="top" align="left">Temperature gradient</td>
+</tr><tr id="_903a2dc3-9459-7056-6b7a-e5c19d2089b4"><td id="_a923a301-497c-079f-3c9b-29853753ee75" valign="top" align="left">Temperature gradient</td>
 <td id="_07d33dae-5f11-bd61-71cf-c24b5fc9e2df" valign="top" align="left">Rectangular</td>
-<td id="_0f4b052f-d615-7dbe-d3be-6cd6e27e913f" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_a0698b97-f40e-d5d5-bad7-4b46ada4acb6" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.058</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -1862,7 +1855,6 @@
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -2243,7 +2235,7 @@
 <p id="_cb089408-94f3-6833-3ccf-f6d55bece1f3">The ECCC SRP12 was built by the NIST in 1988. It was modified in 2013 to install the same “SRP upgrade kit” as in the two BIPM SRPs.</p>
 </clause>
 
-<clause id="_2fcc3ee3-1793-8fb7-89d6-fadfd482d271" obligation="normative">
+<clause id="_b7740ab2-e781-dfe3-a317-de62e1008b14" obligation="normative">
 <title id="_5d39c8ce-5667-fbf1-6838-3b6494c08c3a">Uncertainty budget of the SRP12</title>
 <p id="_a2ff882b-0da9-e92c-8f84-bc7ceb26b976">The uncertainty budget for the ozone amount-of-substance fraction in dry air <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2365,7 +2357,7 @@
 
 <p id="_819d3f59-751f-1a44-e439-778006f8a4c0">No covariance term for the SRP12 was included in the calculations.</p>
 
-<table id="_a7582b93-de3d-51d9-739e-a75c002aa3fb" anchor="table2">
+<table id="_a4f09789-1e04-820f-f34e-a837f26ea7ff" anchor="table2">
 <name id="_d927dae3-0dc7-3bc7-e701-be8c8dfea4cb">Uncertainty budget for the SRP12</name>
 <tbody><tr id="_f8313ce4-777b-3c7f-fddc-e224c3ba34eb"><th id="_be991e98-d301-93ec-af8a-9518f8654532" valign="top" rowspan="2" align="left">Component (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2639,7 +2631,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>0.017 "unitsml(kPa)"</asciimath></stem></td>
-</tr><tr id="_dc23a7a0-7450-fc54-feac-c0c72a3c1cb9"><th id="_118a7057-34a5-78d4-9bcf-270c476fbe15" valign="top" rowspan="2" align="left">Temperature <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_ecd01a56-7a45-ff0f-5fef-6242b025ebf7"><th id="_118a7057-34a5-78d4-9bcf-270c476fbe15" valign="top" rowspan="2" align="left">Temperature <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>T</mi>
@@ -2648,7 +2640,7 @@
 </math><asciimath>ii(T)</asciimath></stem></th>
 <td id="_fd3a5e26-4a9f-a1dd-a52a-5ad3e17d5a04" valign="top" align="left">Temperature probe</td>
 <td id="_6a0b6d7c-de8d-98a2-ac83-01081a073058" valign="top" align="left">Rectangular</td>
-<td id="_6b40ee6f-0d96-9e2c-933f-1034fe92ae79" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_cb2adf5e-8bed-772e-7a05-c4ae4f391dab" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.03</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -2658,11 +2650,10 @@
       </mstyle>
       
       
-      
     </mrow>
   </mstyle>
 </math><asciimath>0.03 "unitsml(K)"</asciimath></stem></td>
-<td id="_06ed7b0a-b6c4-e9b2-9cb5-060cdfb7eab0" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_15e33f6c-f7f7-e9e1-955c-9731856fba05" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.07</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -2670,7 +2661,6 @@
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -2700,9 +2690,9 @@
     <mi>x</mi>
   </mstyle>
 </math><asciimath>2.29 xx 10^(−4)x</asciimath></stem></td>
-</tr><tr id="_8d2d6eb4-7915-43c9-f3bb-9766e0812481"><td id="_355986b4-1893-a1cb-436d-928521a3a43f" valign="top" align="left">Temperature gradient</td>
+</tr><tr id="_b4a7106f-c5e0-0ccf-4424-1be712adc3c0"><td id="_355986b4-1893-a1cb-436d-928521a3a43f" valign="top" align="left">Temperature gradient</td>
 <td id="_c0b11b73-8312-d3df-a5db-392820eba49e" valign="top" align="left">Rectangular</td>
-<td id="_f3c54c60-3245-08ff-55b7-c7b2a82e93dd" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_f381dcc6-b8cf-fbab-73cb-2a3cdbc1a0d4" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.058</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -2710,7 +2700,6 @@
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -3701,12 +3690,12 @@
 
 
 
-</sections><annex id="_768a8a98-74dc-6e0d-18a2-0ee688f8fc8a" anchor="appendix1" obligation="informative">
+</sections><annex id="_fdaca954-33f1-81dc-ae28-576afb30cea8" anchor="appendix1" obligation="informative">
 <title id="_82747614-fbbb-832c-494c-e6c2a687a03c">Form BIPM.QM-K1-R1-ECCC-20</title>
 <p id="_5cfad7d3-1d4f-765b-03f1-2cdabf5e1155">See next pages.</p>
 
 <pagebreak/>
-<clause id="_d3463641-eafd-5175-10c9-5c781681b19f" obligation="informative">
+<clause id="_28c692be-25e6-6160-2aa4-2c392aad9ae1" obligation="informative">
 <title id="_a08432b9-aa8b-7282-8e2d-650d4ea17239">OZONE COMPARISON RESULT — PROTOCOL A — DIRECT COMPARISON</title>
 <table id="_073aacb1-7f42-77f2-413f-4c133b4e16ad" unnumbered="true"><tbody><tr id="_b40feec5-e340-1692-0072-ed78d8f58f06"><th id="_36628ce1-2d07-101f-7979-128baceaea5c" colspan="2" valign="top" align="center">Participating institute information</th>
 </tr><tr id="_a3b75f4d-cde3-0806-43ba-0f22a9d9b667"><td id="_e7e9d38c-ff35-c616-7e35-1a573a2e6a53" valign="top" align="left">Institute</td>
@@ -4629,9 +4618,9 @@
 </dl>
 </clause>
 
-<clause id="_996265b0-8708-a8f7-3bdc-46e740b9d067" anchor="comparison_description" obligation="informative">
+<clause id="_8b631c13-5441-febb-3d25-ff617c838587" anchor="comparison_description" obligation="informative">
 <title id="_51212dbd-1fbd-586a-48f9-b991eac64d4e">Comparison conditions</title>
-<table id="_142fbab1-c4a5-44aa-fc85-c28dfa91d362">
+<table id="_cfbee483-64d5-347c-12c1-0c82c393fe5b">
 <name id="_8b8378da-2df5-ac25-5f4c-e12a2b2fcd7e">Comparison conditions</name>
 <tbody><tr id="_58295b38-bd1f-b993-4b04-dbf117d8691f"><td id="_735552af-f832-4805-baf9-eaf0387d55a4" valign="top" align="left">Ozone generator manufacturer</td>
 <td id="_f7516d5a-9ffc-4cb7-796e-2a6dfaaaa798" valign="top" align="left">Environics</td>
@@ -4639,14 +4628,13 @@
 <td id="_97e6954b-9585-51e7-3687-8eb9a9880496" valign="top" align="left">Model 6100</td>
 </tr><tr id="_9385f578-ffe7-f791-5f93-f1d8390025e4"><td id="_45690439-b49b-b7b2-9702-20fc4a74fba8" valign="top" align="left">Ozone generator serial number</td>
 <td id="_e521d160-5029-d5e9-a448-f123f5a50eab" valign="top" align="left">3428</td>
-</tr><tr id="_57380e86-f54c-882d-23b7-186f362fd804"><td id="_8883d696-f94e-1d75-e45f-e4b56fb48ee2" valign="top" align="left">Room temperature(min-max) / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_1ad5b468-10aa-0d76-7962-6b3bef50bba1"><td id="_3b4744ef-e43e-38cd-db9d-539b21423487" valign="top" align="left">Room temperature(min-max) / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu23">
       <mstyle mathvariant="normal">
         <mi>°C</mi>
       </mstyle>
-      
       
       
     </mrow>

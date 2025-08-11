@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.1" schema-version="v2.1.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.2" schema-version="v2.1.0" flavor="bipm">
 <bibdata type="standard">
 <title language="en" format="text/plain" type="title-main">Measuring Conditions and Uncertainties for the Comparison and Calibration of National Dosimetric Standards at the BIPM</title>
 
@@ -26,7 +26,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd5" id="U_mK">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">mK</UnitName>
         <UnitSymbol type="HTML">mK</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -38,7 +38,7 @@
           <EnumeratedRootUnit unit="kelvin" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">kelvin</UnitName>
         <UnitSymbol type="HTML">K</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -59,7 +59,7 @@
             <EnumeratedRootUnit unit="pascal" prefix="k"/>
           </RootUnits>
         </Unit><Unit dimensionURL="#NISTd1" id="U_cm">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">cm</UnitName>
         <UnitSymbol type="HTML">cm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -68,7 +68,7 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" prefix="c"/>
+          <EnumeratedRootUnit unit="metre" prefix="c"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd51" id="U_g.cm-2">
         <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
@@ -93,7 +93,7 @@
         </UnitSymbol>
         <RootUnits>
           <EnumeratedRootUnit unit="gram"/>
-          <EnumeratedRootUnit unit="meter" prefix="c" powerNumerator="-2"/>
+          <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="-2"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd18" id="U_kV">
         <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
@@ -108,7 +108,7 @@
           <EnumeratedRootUnit unit="volt" prefix="k"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_mm">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">mm</UnitName>
         <UnitSymbol type="HTML">mm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -117,7 +117,7 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" prefix="m"/>
+          <EnumeratedRootUnit unit="metre" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_L2M-1" id="U_cm2.g-1">
         <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
@@ -149,7 +149,7 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" prefix="c" powerNumerator="2"/>
+          <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="2"/>
           <EnumeratedRootUnit unit="gram" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_L-2T-1J" id="U_mGy.s-1">
@@ -178,7 +178,7 @@
           <EnumeratedRootUnit unit="second" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_um">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">um</UnitName>
         <UnitSymbol type="HTML">m</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -187,7 +187,7 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" prefix="u"/>
+          <EnumeratedRootUnit unit="metre" prefix="u"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd30" id="U_NISTu27p10_3.u1e-3/1">
         <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
@@ -212,7 +212,7 @@
         </UnitSymbol>
         <RootUnits>
           <EnumeratedRootUnit unit="gram" prefix="k"/>
-          <EnumeratedRootUnit unit="meter" powerNumerator="-3"/>
+          <EnumeratedRootUnit unit="metre" powerNumerator="-3"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_L2MM-1T-2I-1" id="U_J.C-1">
         <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
@@ -240,7 +240,7 @@
           <EnumeratedRootUnit unit="coulomb" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd10" id="U_cm3">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">cm^3</UnitName>
         <UnitSymbol type="HTML">cm
           <sup>3</sup>
@@ -258,9 +258,9 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" prefix="c" powerNumerator="3"/>
+          <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="3"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd24" id="U_TBq">
+      </Unit><Unit dimensionURL="#NISTd101" id="U_TBq">
         <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
         <UnitName lang="en">TBq</UnitName>
         <UnitSymbol type="HTML">TBq</UnitSymbol>
@@ -273,19 +273,15 @@
           <EnumeratedRootUnit unit="becquerel" prefix="T"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_NISTu1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
-        <UnitName lang="en">meter</UnitName>
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitName lang="en">metre</UnitName>
         <UnitSymbol type="HTML">m</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">m</mi>
           </math>
         </UnitSymbol>
-      </Unit></UnitSet><QuantitySet><Quantity id="NISTq34" quantityType="base" dimensionURL="#NISTd5">
-        <QuantityName lang="en-US">Celsius temperature</QuantityName>
-      </Quantity><Quantity id="NISTq5" quantityType="base" dimensionURL="#NISTd5">
-        <QuantityName lang="en-US">thermodynamic temperature</QuantityName>
-      </Quantity></QuantitySet><DimensionSet><Dimension id="NISTd5">
+      </Unit></UnitSet><DimensionSet><Dimension id="NISTd5">
         <ThermodynamicTemperature symbol="Theta" powerNumerator="1"/>
       </Dimension><Dimension id="NISTd14">
           <Length symbol="L" powerNumerator="-1"/>
@@ -318,7 +314,7 @@
         <ElectricCurrent symbol="I" powerNumerator="-1"/>
       </Dimension><Dimension id="NISTd10">
         <Length symbol="L" powerNumerator="3"/>
-      </Dimension><Dimension id="NISTd24">
+      </Dimension><Dimension id="NISTd101">
         <Time symbol="T" powerNumerator="-1"/>
       </Dimension></DimensionSet><PrefixSet><Prefix prefixBase="10" prefixPower="-3" id="NISTp10_-3">
         <PrefixName lang="en">milli</PrefixName>
@@ -389,7 +385,7 @@
 <p id="_ddaaeee1-4050-1fe1-ca7d-a02491ca99f4">The present report documents the conditions of measurement at the BIPM, the values for the physical constants and correction factors, and the estimated uncertainties in the determination of the primary quantities and of calibration coefficients.</p>
 </clause>
 
-<clause id="_c7cc5f07-0349-f4cb-4753-4bdc1452cf41" obligation="normative">
+<clause id="_6fbd41ab-8f25-e93c-48d5-c0f639d34340" obligation="normative">
 <title id="_c231f09f-c3bb-342b-be69-f90e6b254c53">General remarks</title>
 <p id="_ab0fefb5-e2f8-58a7-b542-c347df6c7d9e">The reference plane is specified in terms of a distance from the radiation source or, in the case of low-energy x-rays, from the beam exit window. The reference point is the intersection of the beam axis with the reference plane.</p>
 
@@ -399,7 +395,7 @@
 
 <p id="_262b670e-7231-1f9e-4bc7-c816a5635c13">The leakage current is normally measured before and after each set of measurements and a correction is applied, based on the mean value. A chamber for which the relative leakage current is high, and in particular for which the leakage is also variable, is unsuitable for use as a transfer instrument and might also be considered unsuitable for calibration. In the latter case, a study note is issued.</p>
 
-<p id="_837a5b77-50a7-909f-69ad-89dfb59a16e4">The irradiation facilities at the BIPM are temperature controlled (close to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_8fc6fd81-9762-3951-aadc-4daab5f74232">The irradiation facilities at the BIPM are temperature controlled (close to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>20</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -407,7 +403,6 @@
       <mstyle mathvariant="normal">
         <mi>°C</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -453,7 +448,6 @@
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -1116,7 +1110,7 @@
 </ol>
 </clause>
 
-<clause id="_82bf2f63-7a03-5138-dfab-984b1fae38ac" obligation="normative">
+<clause id="_ab67a81a-ae19-cdf1-3750-662fcf11c6b0" obligation="normative">
 <title id="_42158a06-310f-c0fa-5ef2-5f0fe3956bf5">Comparison and calibration uncertainties</title>
 <p id="_0a1e0f69-65f1-07fc-71ff-c8c05e84698d">The uncertainties associated with dosimetry measurements made at the BIPM are analysed in accordance with the <em>Guide to the Expression of Uncertainty in Measurement</em> (JCGM 2008). The uncertainty budgets for the dosimetry standards are given in <xref target="table3"/>, <xref target="table6"/>, <xref target="table8"/> and <xref target="table9"/>. For comparisons, the BIPM standard uncertainties are combined with those associated with the primary or transfer chamber, taking correlation into account, to give the combined standard uncertainty of the comparison results. The detailed uncertainty budgets are given in the comparison report. For the calibration of national reference standards, the BIPM standard uncertainties are combined with the uncertainties associated with the chamber under calibration to give the combined standard uncertainty of the calibration coefficient. This value is given in the calibration certificate.</p>
 
@@ -1675,7 +1669,7 @@
 <p id="_0271d28e-e262-1568-0c9e-d293569583ab" align="center"><strong>Physical constants and correction factors used in the BIPM determination of the air-kerma rate</strong><fn id="_f85640d6-8721-74d5-30f3-65193a5ad2ae" reference="1"><p id="_fc579934-1999-a252-213b-2c4e25d547b6">Details on the determination of the air-kerma rate are given in Boutillon <em>et al</em> (1969); correction factors are described by Burns (2004) and Burns <em>et al</em> (2009) for the W-anode qualities and by Kessler et al (2010) for the Mo-anode qualities.</p>
 </fn></p>
 
-<p id="_186e5a92-6b37-b1dd-676c-d45667fcf505">Dry air density <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_fbd23b3b-567c-a60b-6703-1e48447719e8">Dry air density <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mrow>
       <mo>(</mo>
@@ -1685,7 +1679,6 @@
         <mstyle mathvariant="normal">
           <mi>K</mi>
         </mstyle>
-        
         
         
       </mrow>
@@ -1756,7 +1749,7 @@
   </mstyle>
 </math><asciimath>ii(W)//e = 33.97 "unitsml(J*C^-1)"</asciimath></stem></p>
 
-<table id="_ddd39077-8d55-f137-8900-f3582a3804ad" anchor="table2">
+<table id="_f0d686a4-cf46-8d88-79f8-f4a71a0012ff" anchor="table2">
 <name id="_ee53795c-2f1c-2e69-da92-e31d76e60ae7">X-rays (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>10</mn>
@@ -1953,7 +1946,7 @@
 <td id="_61d8977d-0bd9-bf03-f883-48a0c9b09922" valign="top" align="center">1.0005</td>
 <td id="_01a1c8f3-a5af-d296-a06a-6a9bff1a07c1" valign="top" align="center">1.0005</td>
 <td id="_013f487c-fd1a-8ea6-e56c-7aa156df106a" valign="top" align="center">1.0005</td>
-</tr><tr id="_c598e7ae-bd43-5c4a-c9af-0eb1f3802c80"><td id="_5f700d82-8a07-6ec7-cecf-704dc9ddae4a" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_d4c2b9fe-70ef-9449-52a6-12c74790963d"><td id="_5f700d82-8a07-6ec7-cecf-704dc9ddae4a" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>k</mi>
@@ -1961,7 +1954,7 @@
     </msub>
   </mstyle>
 </math><asciimath>k_("a")</asciimath></stem></td>
-<td id="_6106511e-e3af-4e9d-9a0c-6352e982956e" valign="top" align="left">air attenuation<fn id="_ca361d02-7690-cf39-51fe-a817c60ccbdc" reference="b"><p id="_d6fde985-bea6-2e0f-7ff4-2993cced57a1">Values at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_78febb97-f319-f4cd-8621-27f564957ecc" valign="top" align="left">air attenuation<fn id="_eb39e00b-3e8a-d3a9-2be1-a076f8e7caf6" reference="b"><p id="_76b77e83-fe8a-72dd-cd55-9632ccba727d">Values at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -1969,7 +1962,6 @@
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -2079,7 +2071,7 @@
 </tr></tbody>
 </table>
 
-<table id="_a5ef04ec-2075-b624-a7b5-70df34137c09" unnumbered="true"><tbody><tr id="_5c47fde7-f027-c4e7-245b-635984fec252"><th id="_7c5280a4-311e-dad9-b3c5-b21273c1ef30" colspan="6" valign="top" align="left">Mo-anode x-ray tube</th>
+<table id="_31facb00-fc74-df33-c2b3-dfd79b3963ac" unnumbered="true"><tbody><tr id="_5c47fde7-f027-c4e7-245b-635984fec252"><th id="_7c5280a4-311e-dad9-b3c5-b21273c1ef30" colspan="6" valign="top" align="left">Mo-anode x-ray tube</th>
 </tr><tr id="_4ad00add-aa5b-d403-f159-a5f1c790555c"><td id="_2cdd853a-bfa4-95e3-11f4-55180a50373f" colspan="6" valign="top" align="left">Measuring volume FAC-L-02: <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1.2197</mn>
@@ -2241,7 +2233,7 @@
 <td id="_4910bad4-17db-e586-b67f-7bbddc4d92f5" valign="top" align="center">1.0000</td>
 <td id="_ec9c8eff-4093-e204-3140-b085eb46ca47" valign="top" align="center">1.0000</td>
 <td id="_c0b008bc-7e4f-8041-35c7-3162ba67af01" valign="top" align="center">1.0000</td>
-</tr><tr id="_8635108a-478d-653e-a4d7-589703b86428"><td id="_e37556a5-9eb2-2435-5b2f-6d7a2110d8ae" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_eabf5cc1-d0cd-fe8e-e7e6-a559f375aec2"><td id="_e37556a5-9eb2-2435-5b2f-6d7a2110d8ae" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>k</mi>
@@ -2249,7 +2241,7 @@
     </msub>
   </mstyle>
 </math><asciimath>k_("a")</asciimath></stem></td>
-<td id="_2c7c918c-e87b-338d-6e3c-6de439bbcf64" valign="top" align="left">air attenuation<fn id="_688abdfb-e8ac-b8c5-c8fc-6ac4f29067b1" reference="b"><p id="_9ead5e9e-436b-b2aa-8043-96f84bd9489a">Values at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_6cdace96-d1d6-87e2-1b0e-6ec42e53e347" valign="top" align="left">air attenuation<fn id="_b18f958c-e1a3-1bd1-e537-b5e8fb2066cf" reference="b"><p id="_2137e59c-a2f1-4297-3d64-dae97cffd78a">Values at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -2257,7 +2249,6 @@
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -2361,7 +2352,7 @@
 </tr></tbody>
 </table>
 
-<table id="_fbf3e684-1877-2c78-2a7c-ae760f104a57" unnumbered="true"><tbody><tr id="_9ee0da17-a60e-0df2-222b-f6d31e3f5533"><th id="_7684a96c-dd9b-04bc-a18c-9a1ec549abe4" colspan="9" valign="top" align="left">W-anode x-ray tube, Mo filter</th>
+<table id="_936a029a-1b6f-7bc0-e010-3f25553bfa32" unnumbered="true"><tbody><tr id="_9ee0da17-a60e-0df2-222b-f6d31e3f5533"><th id="_7684a96c-dd9b-04bc-a18c-9a1ec549abe4" colspan="9" valign="top" align="left">W-anode x-ray tube, Mo filter</th>
 </tr><tr id="_58fa8372-ff6c-25a9-29d0-0a9c57c4fc4a"><td id="_87bab475-24f7-6b1c-4468-ddfa284fb82f" colspan="9" valign="top" align="left">Measuring volume FAC-L-01: <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1.2004</mn>
@@ -2544,7 +2535,7 @@
 <td id="_a5080f42-1a53-7b54-0977-f50ec70a3633" valign="top" align="center">1.0005</td>
 <td id="_bd2e5973-4c1b-b4a3-5a7a-656d943260eb" valign="top" align="center">1.0005</td>
 <td id="_643d5f33-972a-c7b6-ce9d-125504a68ccf" valign="top" align="center">1.0005</td>
-</tr><tr id="_662677ab-32bd-967f-4c88-73f65f2d0eac"><td id="_c697f205-6643-9448-ba6e-14d8e0de01bb" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_e7852a3a-9362-2f89-b711-c14c63af8da3"><td id="_c697f205-6643-9448-ba6e-14d8e0de01bb" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>k</mi>
@@ -2552,7 +2543,7 @@
     </msub>
   </mstyle>
 </math><asciimath>k_("a")</asciimath></stem></td>
-<td id="_d86dc154-9460-9511-5050-bcdb62ad2181" valign="top" align="left">air attenuation<fn id="_149ba9ff-0a84-ed98-3b75-d7a9f380e60c" reference="b"><p id="_a71910fa-fde1-381c-c5dc-f0e96e3dd558">Values at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_d58ec042-ea82-513e-4da0-765264f5b11c" valign="top" align="left">air attenuation<fn id="_06163973-76be-7694-62ab-b3dba8a40b5d" reference="b"><p id="_4474fd23-40bf-d0ab-bac0-d340a4c4f339">Values at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -2560,7 +2551,6 @@
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -2684,7 +2674,7 @@
 
 <p id="_d7a3ec05-7900-12d4-1c35-ccf2e438f466" align="center"><strong>Estimated relative standard uncertainties in the BIPM determination of the air-kerma rate</strong></p>
 
-<table id="_49d5aa52-2ed8-c1df-79c2-be4e96ea03d4" anchor="table3">
+<table id="_9313b4fa-d383-30c2-8ba9-acac5e8d46a2" anchor="table3">
 <name id="_3f8afa45-a2ba-14c9-6b05-2983c8903d7c">X-rays (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>10</mn>
@@ -2756,7 +2746,7 @@
   </mstyle>
 </math><asciimath>u_("i")</asciimath></stem></td>
 </tr><tr id="_ecdacf94-86f8-07d5-5190-9ec4434a4602"><td id="_6b19aa26-193b-d552-4f39-033f13eeaff8" colspan="4" valign="top" align="left"><em>Physical constants</em></td>
-</tr><tr id="_52c537ee-658a-e224-aeed-179f51a7dbeb"><td id="_c11c0954-d289-7c1e-dfcb-6f779f2a2a63" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_754bafe8-81f0-7987-b028-3ef57d770e76"><td id="_c11c0954-d289-7c1e-dfcb-6f779f2a2a63" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -2766,7 +2756,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(rho)_("a")</asciimath></stem></td>
-<td id="_0d831bbd-d0dc-afe1-dd9d-5cab9c30cf7d" valign="top" align="left">dry air density (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_016d2e9e-e476-7f96-fba7-27f028fb8c79" valign="top" align="left">dry air density (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -2774,7 +2764,6 @@
       <mstyle mathvariant="normal">
         <mi>°C</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -3343,7 +3332,7 @@
 </fn> and absorbed-dose-to-water rate<fn id="_352259b1-c27b-3b9c-c306-afccefde4d8d" reference="3"><p id="_9fd9fdbe-00fa-458a-0230-7b7f56d03345">Details on the determination of the absorbed-dose-to-water rate are described by Burns (2017).</p>
 </fn> and conversion factor from air kerma to absorbed dose to water</strong></p>
 
-<p id="_6256c712-535b-2ee6-ea76-66b5c92a7478">Dry air density <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_043bedd6-3fe4-b821-8a3b-ce6187e2a570">Dry air density <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mrow>
       <mo>(</mo>
@@ -3353,7 +3342,6 @@
         <mstyle mathvariant="normal">
           <mi>K</mi>
         </mstyle>
-        
         
         
       </mrow>
@@ -3424,7 +3412,7 @@
   </mstyle>
 </math><asciimath>ii(W)//e = 33.97 "unitsml(J*C^-1)"</asciimath></stem></p>
 
-<table id="_9cdd67f3-00f4-fde7-732c-341f7d81a9ab" anchor="table5">
+<table id="_5077f5cc-ddb7-f693-6560-1b86815e9b34" anchor="table5">
 <name id="_11c64e24-ff3b-70f0-912f-3feb49577d79">X-rays (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>100</mn>
@@ -3614,7 +3602,7 @@
 <td id="_4aafda7d-9148-ebce-5a53-28f5dae5d1f3" valign="top" align="center">1.0002</td>
 <td id="_5f65541a-4f4e-ba46-e95d-9f4eca7c2dcd" valign="top" align="center">1.0002</td>
 <td id="_7cb65ab1-1cbf-0801-cb83-045ce0e2ee6d" valign="top" align="center">1.0002</td>
-</tr><tr id="_ad1ba1c7-6a52-2215-f143-3069bbf170ff"><td id="_3ff74e2c-a886-e28d-f29f-a21fd3fb9bfe" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_11b453cf-80ba-5737-033b-77be4234b0c6"><td id="_3ff74e2c-a886-e28d-f29f-a21fd3fb9bfe" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>k</mi>
@@ -3622,7 +3610,7 @@
     </msub>
   </mstyle>
 </math><asciimath>k_("a")</asciimath></stem></td>
-<td id="_eae46888-37e3-5883-f1dd-d876d773d66a" valign="top" align="left">air attenuation<fn id="_f09630a9-a760-a38c-17db-edf58e8b657d" reference="b"><p id="_9408aa43-d2ba-85df-ec34-95c0dcb6957a">Values at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_46321e9f-8c66-fc40-0d34-49f242b589e6" valign="top" align="left">air attenuation<fn id="_cf9d3b6e-28c6-91f6-ca55-54665becfcc2" reference="b"><p id="_80e75c65-df6d-390c-0c21-ec79ddb1c471">Values at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>293.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -3630,7 +3618,6 @@
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -3752,7 +3739,7 @@
 
 <p id="_5c3720ab-7215-cb61-3cec-0aeeb0989915" align="center"><strong>Estimated relative standard uncertainties in the BIPM determination of the air-kerma rate and absorbed-dose-to-water rate</strong></p>
 
-<table id="_ae54e453-749f-ed10-d2b5-4912a6950eb2" anchor="table6">
+<table id="_ec0f7b7e-f97e-ed4a-28bc-b201f456ac94" anchor="table6">
 <name id="_a36f4e76-5e0a-56b7-f94e-8240b2b98989">X-rays (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>100</mn>
@@ -3823,7 +3810,7 @@
   </mstyle>
 </math><asciimath>u_("i")</asciimath></stem></td>
 </tr><tr id="_b0575ece-0032-4745-45dc-7746b7661da5"><td id="_9064f3b0-d046-d521-bd06-90380bc5df40" colspan="4" valign="top" align="left"><em>Physical constants</em></td>
-</tr><tr id="_819c0da6-d155-055e-a846-28f0d05bd71b"><td id="_0738e671-2214-d99d-94a0-6ae47e8bd1b1" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_4e4ab202-bbed-abbf-844b-9e1d60cb706c"><td id="_0738e671-2214-d99d-94a0-6ae47e8bd1b1" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -3833,7 +3820,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(rho)_("a")</asciimath></stem></td>
-<td id="_3ba494db-3c59-a10a-763a-498bf0829b11" valign="top" align="left">dry air density (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_00a7a570-8d6c-2a1a-b988-0cc2f08452aa" valign="top" align="left">dry air density (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -3841,7 +3828,6 @@
       <mstyle mathvariant="normal">
         <mi>°C</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -4330,7 +4316,7 @@
 <p id="_93bc8875-fcad-a65f-7554-528245d072ef" align="center"><strong>Physical constants and correction factors used in the BIPM determination of the air-kerma rate<fn id="_fb443564-62e5-9560-845e-3e831fcf3ee3" reference="4"><p id="_ab0094a9-1593-70eb-e3ee-aab96a0a938e">Details on the determination of air kerma are described by Boutillon <em>et al</em> (1973), Burns (2006), Burns <em>et al</em> (2007) and the re-evaluation of the standard is described in Burns and Kessler (2018).</p>
 </fn>, and their estimated relative standard uncertainties</strong></p>
 
-<table id="_674a5e0e-2a7e-0127-c7b8-324b98c414b8" anchor="table8">
+<table id="_78b84da1-7c5a-281c-dc3f-263b57ed7237" anchor="table8">
 <name id="_5ad46869-2931-e86b-3173-127ce35958b7"><sup>60</sup>Co gamma radiation</name>
 <tbody><tr id="_dc63ea5e-749f-2849-f173-3fa42b45b5b4"><td id="_f2d7b876-54bd-b5a5-379b-0840a431ff29" valign="top" rowspan="2" align="left">Symbol</td>
 <td id="_82db8bfa-0769-04d1-7806-674a93c3ad63" valign="top" rowspan="2" align="left">Parameter / unit</td>
@@ -4376,7 +4362,7 @@
   </mstyle>
 </math><asciimath>u_("i")</asciimath></stem></td>
 </tr><tr id="_e46c5d03-791f-97cb-d486-e60799c8c851"><td id="_3737ba26-2984-f623-531f-d37f70ad32cb" colspan="6" valign="top" align="left"><em>Physical constants</em></td>
-</tr><tr id="_2eb01a19-4d29-ea6b-c283-44c4659c1fdd"><td id="_8bf8d58a-3699-ffcc-f873-6dcab6fb09ab" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_420f80ed-ccfe-77bb-3a2a-afed02fceec6"><td id="_8bf8d58a-3699-ffcc-f873-6dcab6fb09ab" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -4386,7 +4372,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(rho)_("a")</asciimath></stem></td>
-<td id="_a4affaac-f9b1-3e1c-6a0c-c96cc8dad17d" valign="top" align="left">dry air density (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_893e6892-e3fb-ef20-8687-e1c42b467161" valign="top" align="left">dry air density (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4394,7 +4380,6 @@
       <mstyle mathvariant="normal">
         <mi>°C</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -4727,7 +4712,7 @@
   </mstyle>
 </math><asciimath>5 "unitsml(g*cm^-2)"</asciimath></stem>, and their estimated relative standard uncertainties</strong></p>
 
-<table id="_a88a8414-aadb-a536-3536-f8692a28308c" anchor="table9">
+<table id="_ffe973c7-8351-f7d9-8961-192126fde69e" anchor="table9">
 <name id="_5574aa43-f878-efec-5d39-5718170d5d1b"><sup>60</sup>Co gamma radiation</name>
 <tbody><tr id="_a2de43e5-fc57-4564-6fad-7fa001a27c3e"><td id="_ad94086a-38b0-3861-046f-732ad83adfdc" valign="top" rowspan="2" align="left">Symbol</td>
 <td id="_bc297584-f2be-434d-cd3f-c628aae9321b" valign="top" rowspan="2" align="left">Parameter / unit</td>
@@ -4774,7 +4759,7 @@
   </mstyle>
 </math><asciimath>u_("i")</asciimath></stem></td>
 </tr><tr id="_8d8602a4-28b8-04e9-d716-d0ceaf4be459"><td id="_e1ef4036-0340-1f00-c64a-7444934b2d19" colspan="5" valign="top" align="left"><em>Physical constants</em></td>
-</tr><tr id="_c4a66061-8960-2865-1ba5-b60e95bb71d9"><td id="_96c302a6-68c2-ee63-1137-8c49481ef15d" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_5b41a9d0-9c40-425b-dbfc-bfe07fc14099"><td id="_96c302a6-68c2-ee63-1137-8c49481ef15d" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -4784,7 +4769,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(rho)_"a"</asciimath></stem></td>
-<td id="_096154b9-138a-f193-4c34-90abf7d44fa7" valign="top" align="left">dry air density (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_e3e35b4d-57db-c3eb-b7c6-1762fb850b44" valign="top" align="left">dry air density (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4792,7 +4777,6 @@
       <mstyle mathvariant="normal">
         <mi>°C</mi>
       </mstyle>
-      
       
       
     </mrow>

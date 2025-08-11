@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.1" schema-version="v2.1.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.2" schema-version="v2.1.0" flavor="bipm">
 <bibdata type="standard">
 <title language="en" format="text/plain" type="title-main">How to define the base units of the revised SI from seven constants with fixed numerical values</title>
 
@@ -14,7 +14,7 @@
 <abbreviation>BIPM</abbreviation></organization></contributor><edition>3</edition><version><revision-date>2018-04-06</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2018</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem><date type="circulated"/><version/></bibitem>
-</relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="BIPM" language="en" script="Latn">International Bureau of Weights and Measures</committee><committee acronym="BIPM" language="fr" script="Latn">Bureau International des Poids et Mesures</committee></editorialgroup><structuredidentifier><docnumber>BIPM-2018/02</docnumber></structuredidentifier><si-aspect>full</si-aspect></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd24" id="U_NISTu31">
+</relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="BIPM" language="en" script="Latn">International Bureau of Weights and Measures</committee><committee acronym="BIPM" language="fr" script="Latn">Bureau International des Poids et Mesures</committee></editorialgroup><structuredidentifier><docnumber>BIPM-2018/02</docnumber></structuredidentifier><si-aspect>full</si-aspect></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd101" id="U_NISTu31">
         <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
         <UnitName lang="en">hertz</UnitName>
         <UnitSymbol type="HTML">Hz</UnitSymbol>
@@ -60,7 +60,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd3" id="U_NISTu3">
-          <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+          <UnitSystem name="SI" type="SI_base" lang="en-US"/>
           <UnitName lang="en">second</UnitName>
           <UnitSymbol type="HTML">s</UnitSymbol>
           <UnitSymbol type="MathMl">
@@ -69,8 +69,8 @@
             </math>
           </UnitSymbol>
         </Unit><Unit dimensionURL="#NISTd1" id="U_NISTu1">
-          <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
-          <UnitName lang="en">meter</UnitName>
+          <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+          <UnitName lang="en">metre</UnitName>
           <UnitSymbol type="HTML">m</UnitSymbol>
           <UnitSymbol type="MathMl">
             <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -90,7 +90,7 @@
             <EnumeratedRootUnit unit="gram" prefix="k"/>
           </RootUnits>
         </Unit><Unit dimensionURL="#NISTd4" id="U_NISTu4">
-          <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+          <UnitSystem name="SI" type="SI_base" lang="en-US"/>
           <UnitName lang="en">ampere</UnitName>
           <UnitSymbol type="HTML">A</UnitSymbol>
           <UnitSymbol type="MathMl">
@@ -99,7 +99,7 @@
             </math>
           </UnitSymbol>
         </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-          <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+          <UnitSystem name="SI" type="SI_base" lang="en-US"/>
           <UnitName lang="en">kelvin</UnitName>
           <UnitSymbol type="HTML">K</UnitSymbol>
           <UnitSymbol type="MathMl">
@@ -108,7 +108,7 @@
             </math>
           </UnitSymbol>
         </Unit><Unit dimensionURL="#NISTd6" id="U_NISTu6">
-          <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+          <UnitSystem name="SI" type="SI_base" lang="en-US"/>
           <UnitName lang="en">mole</UnitName>
           <UnitSymbol type="HTML">mol</UnitSymbol>
           <UnitSymbol type="MathMl">
@@ -117,7 +117,7 @@
             </math>
           </UnitSymbol>
         </Unit><Unit dimensionURL="#NISTd7" id="U_NISTu7">
-          <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+          <UnitSystem name="SI" type="SI_base" lang="en-US"/>
           <UnitName lang="en">candela</UnitName>
           <UnitSymbol type="HTML">cd</UnitSymbol>
           <UnitSymbol type="MathMl">
@@ -125,8 +125,8 @@
               <mi mathvariant="normal">cd</mi>
             </math>
           </UnitSymbol>
-        </Unit><Unit dimensionURL="#NISTd24" id="U_NISTu3e-1/1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        </Unit><Unit dimensionURL="#NISTd101" id="U_NISTu3e-1/1">
+        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
         <UnitName lang="en">second to the power minus one</UnitName>
         <UnitSymbol type="HTML">s
           <sup>−1</sup>
@@ -177,7 +177,7 @@
         </UnitSymbol>
         <RootUnits>
           <EnumeratedRootUnit unit="gram" prefix="k"/>
-          <EnumeratedRootUnit unit="meter" powerNumerator="2"/>
+          <EnumeratedRootUnit unit="metre" powerNumerator="2"/>
           <EnumeratedRootUnit unit="second" powerNumerator="-2"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd17" id="U_A.s">
@@ -249,8 +249,8 @@
           </math>
         </UnitSymbol>
         <RootUnits>
-          <EnumeratedRootUnit unit="meter" powerNumerator="2"/>
-          <EnumeratedRootUnit unit="meter" powerNumerator="-2"/>
+          <EnumeratedRootUnit unit="metre" powerNumerator="2"/>
+          <EnumeratedRootUnit unit="metre" powerNumerator="-2"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd16" id="U_kg.m2.s-3">
         <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
@@ -285,7 +285,7 @@
         </UnitSymbol>
         <RootUnits>
           <EnumeratedRootUnit unit="gram" prefix="k"/>
-          <EnumeratedRootUnit unit="meter" powerNumerator="2"/>
+          <EnumeratedRootUnit unit="metre" powerNumerator="2"/>
           <EnumeratedRootUnit unit="second" powerNumerator="-3"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_L2MT-1" id="U_NISTu13.u3">
@@ -336,7 +336,7 @@
         </UnitSymbol>
         <RootUnits>
           <EnumeratedRootUnit unit="gram" prefix="k"/>
-          <EnumeratedRootUnit unit="meter" powerNumerator="2"/>
+          <EnumeratedRootUnit unit="metre" powerNumerator="2"/>
           <EnumeratedRootUnit unit="second" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd12" id="U_NISTu11">
@@ -373,7 +373,7 @@
         </UnitSymbol>
         <RootUnits>
           <EnumeratedRootUnit unit="gram" prefix="k"/>
-          <EnumeratedRootUnit unit="meter"/>
+          <EnumeratedRootUnit unit="metre"/>
           <EnumeratedRootUnit unit="second" powerNumerator="-2"/>
         </RootUnits>
       </Unit></UnitSet><QuantitySet><Quantity id="NISTq45" quantityType="base" dimensionURL="#NISTd24">
@@ -384,19 +384,19 @@
           <QuantityName lang="en-US">mass</QuantityName>
         </Quantity><Quantity id="NISTq4" quantityType="base" dimensionURL="#NISTd4">
           <QuantityName lang="en-US">electric current</QuantityName>
-        </Quantity><Quantity id="NISTq5" quantityType="base" dimensionURL="#NISTd5">
-          <QuantityName lang="en-US">thermodynamic temperature</QuantityName>
         </Quantity><Quantity id="NISTq6" quantityType="base" dimensionURL="#NISTd6">
           <QuantityName lang="en-US">amount of substance</QuantityName>
         </Quantity><Quantity id="NISTq7" quantityType="base" dimensionURL="#NISTd7">
           <QuantityName lang="en-US">luminous intensity</QuantityName>
-        </Quantity><Quantity id="NISTq11" quantityType="base" dimensionURL="#NISTd9">
+        </Quantity><Quantity id="NISTq11" quantityType="base" dimensionURL="#NISTd64">
         <QuantityName lang="en-US">solid angle</QuantityName>
       </Quantity><Quantity id="NISTq154" quantityType="base" dimensionURL="#NISTd60">
         <QuantityName lang="en-US">action</QuantityName>
       </Quantity><Quantity id="NISTq13" quantityType="base" dimensionURL="#NISTd12">
         <QuantityName lang="en-US">force</QuantityName>
       </Quantity></QuantitySet><DimensionSet><Dimension id="NISTd24">
+        <Time symbol="T" powerNumerator="-1"/>
+      </Dimension><Dimension id="NISTd101">
         <Time symbol="T" powerNumerator="-1"/>
       </Dimension><Dimension id="NISTd15">
         <Length symbol="L" powerNumerator="2"/>
@@ -429,7 +429,7 @@
         </Dimension><Dimension id="D_L0J">
         <Length symbol="L" powerNumerator="0"/>
         <LuminousIntensity symbol="J" powerNumerator="1"/>
-      </Dimension><Dimension id="NISTd9">
+      </Dimension><Dimension id="NISTd64">
         <PlaneAngle symbol="phi" powerNumerator="1"/>
       </Dimension><Dimension id="D_L0">
         <Length symbol="L" powerNumerator="0"/>
@@ -479,7 +479,7 @@
 
 <p id="_27474f8b-18a2-f10b-ef70-0dac8fbaa352">Appendices show how the same methodology could have been used to define the same base units in the present SI, as well as the mathematics which underpins the methodology.</p>
 </foreword></preface><sections>
-<clause id="_acfa1f1f-5809-c47d-0e01-2c91434112d5" anchor="introduction" obligation="normative">
+<clause id="_22c102d5-8876-c097-2ef7-e2b844faaf49" anchor="introduction" obligation="normative">
 <title id="_46069e95-51f4-1e9a-f2b9-70fe751a0935">Introduction</title>
 <p id="_b1b71b64-45e3-b465-99ef-4d022da67c3c">Preparations for the upcoming revision of the International System of Units (SI) began in earnest with Resolution 1 of the 24th meeting of the General Conference on Weights and Measures (CGPM) in 2011 <eref type="inline" bibitemid="cgpm2011" citeas="[1]"/>. The 26th CGPM in November 2018 is expected to give final approval to a revision of the present SI <eref type="inline" bibitemid="bipm2006" citeas="[2]"/> based on the guidance laid down in Ref. <eref type="inline" bibitemid="cgpm2011" citeas="[1]"/>. The SI will then become a system of units based on exact numerical values of seven defining constants, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -527,7 +527,7 @@
   </mstyle>
 </math><asciimath>ii(K)_("cd")</asciimath></stem> exactly as specified in the following bullets:</p>
 
-<ul id="_ebbac3f8-195e-e904-baf1-3520c016c455"><li><p id="_926e8d5e-0780-bb57-6e43-ae8a1377edd2">the unperturbed ground state hyperfine transition frequency of the caesium 133 atom <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<ul id="_425ab318-b0ae-9795-212d-dd87bb679fb0"><li><p id="_926e8d5e-0780-bb57-6e43-ae8a1377edd2">the unperturbed ground state hyperfine transition frequency of the caesium 133 atom <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">Δ</mi>
     <msub>
@@ -633,7 +633,7 @@
   </mstyle>
 </math><asciimath>6.02214076 xx 10^(23)" reciprocal mole"</asciimath></stem>,</p>
 </li>
-<li><p id="_7a5f1292-4e1b-64d8-f137-38ae5a0f3efc">the luminous efficacy of monochromatic radiation of frequency <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<li><p id="_2a12da5e-efa4-5c3b-e815-5c478f542b3e">the luminous efficacy of monochromatic radiation of frequency <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>540</mn>
     <mo>×</mo>
@@ -643,6 +643,7 @@
       <mstyle mathvariant="normal">
         <mi>Hz</mi>
       </mstyle>
+      
       
       
       
@@ -666,13 +667,14 @@
 </li>
 </ul>
 
-<p id="_04511645-6a45-ab8a-051e-c980a05e7c6f">The hertz, joule, coulomb, lumen, and watt, with unit symbols <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_70743fcd-7a41-977f-c6e8-7ab61a720907">The hertz, joule, coulomb, lumen, and watt, with unit symbols <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu31">
       <mstyle mathvariant="normal">
         <mi>Hz</mi>
       </mstyle>
+      
       
       
       
@@ -780,7 +782,6 @@
       </mstyle>
       
       
-      
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(K)"</asciimath></stem>, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -817,6 +818,7 @@
       
       
       
+      
     </mrow>
     <mo>=</mo>
     <mo rspace="thickmathspace">⁢</mo>
@@ -830,6 +832,7 @@
           <mn>1</mn>
         </mrow>
       </msup>
+      
       
       
     </mrow>
@@ -1062,9 +1065,9 @@
 <p id="_8f37355c-7f9a-3877-d00b-68ef29c638da">The following method is consistent with a more rigorous analysis provided by Mohr in 2008 <eref type="inline" bibitemid="mohr" citeas="[6]"/>, which the interested reader is encouraged to consult.</p>
 </clause>
 
-<clause id="_fb43dd86-d130-566a-458f-ec387760cab0" anchor="defining_constants" obligation="normative">
+<clause id="_78b912e0-03d1-a4e1-f07d-fccdefc604aa" anchor="defining_constants" obligation="normative">
 <title id="_0e21dd03-2dd7-c5c1-125a-fa1e7833d470">Defining constants written in terms of base units</title>
-<p id="_30bb9475-713d-c04a-9eb6-37c805bbec19">We begin with <xref target="table1"/>, which presents much of the information given in the bullets of <xref target="introduction"/> in more usable form. Note that the defining constants are shown as labels in the first column. The four new defining constants and the base units which are redefined in consequence are shown in red. The units of the defining constants can be expressed as the product of powers of the base units, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_da6ba209-40c3-b756-e2f6-e15183bc55f3">We begin with <xref target="table1"/>, which presents much of the information given in the bullets of <xref target="introduction"/> in more usable form. Note that the defining constants are shown as labels in the first column. The four new defining constants and the base units which are redefined in consequence are shown in red. The units of the defining constants can be expressed as the product of powers of the base units, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msup>
       <mo rspace="thickmathspace">⁢</mo>
@@ -1127,7 +1130,6 @@
         <mstyle mathvariant="normal">
           <mi>K</mi>
         </mstyle>
-        
         
         
       </mrow>
@@ -1239,7 +1241,7 @@
   </mstyle>
 </math><asciimath>ii(N)_"A"</asciimath></stem>, but with four different exponents.</p>
 
-<table id="_442363ae-b4a3-68a5-6703-b895f56e216c" anchor="table1"><tbody><tr id="_fb52b026-2ad7-f889-ccb4-33d0327e1a3b"><td id="_bd404a48-70d8-4778-8f0e-d91bf3166fb1" valign="top" align="center"/><th id="_0afa3def-9814-587d-8f29-8ed7cd604681" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<table id="_7e1c782a-ad04-b1a0-b80f-6bade2f6c296" anchor="table1"><tbody><tr id="_b522d17a-9c78-30c1-2d68-d4c46075732c"><td id="_bd404a48-70d8-4778-8f0e-d91bf3166fb1" valign="top" align="center"/><th id="_0afa3def-9814-587d-8f29-8ed7cd604681" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu3">
@@ -1294,7 +1296,7 @@
     </mstyle>
   </mstyle>
 </math><asciimath>color(red)("unitsml(A)")</asciimath></stem></th>
-<th id="_484f971c-b7c3-9813-a3ab-359f44567694" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_09be5c6d-3500-f77b-c1ea-00770871c028" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathcolor="red">
       <mo rspace="thickmathspace">⁢</mo>
@@ -1302,7 +1304,6 @@
         <mstyle mathvariant="normal">
           <mi>K</mi>
         </mstyle>
-        
         
         
       </mrow>
@@ -1651,7 +1652,7 @@
 </math><asciimath>h</asciimath></stem> also contains the inverse second and the metre squared (yellow cells).</p>
 </clause>
 
-<clause id="_e6ee2065-1819-8d4a-40e1-7ccb209da2be" anchor="base_units" obligation="normative">
+<clause id="_0c4a4a79-cfd4-17a5-9310-02ee4369733c" anchor="base_units" obligation="normative">
 <title id="_ed8a20fd-893b-b0f6-024b-38962c560ad5">Base units as defined by the “defining constants”</title>
 <p id="_a4e2f12a-c9f1-efae-2318-2bb1dfea6b87">The seven SI base units can be defined in terms of the seven defining constants. To do this, we create a second table, <xref target="table2"/>, that shows the combination of defining constants required to define each base unit. <xref target="table2"/> is the major contribution of this report.</p>
 
@@ -1780,7 +1781,7 @@
 </math><asciimath>7 xx 7</asciimath></stem> squares of numbers in <xref target="table1"/> and <xref target="table2"/> are called “lower triangular matrices” because all numbers above the diagonal are zero. The inverse of a triangular matrix is triangular as well, provided that the inverse exists. The inverse exists if and only if none of the numbers in the diagonal cells is zero.</p>
 </fn> Remember that the blank cells actually contain zero.</p>
 
-<table id="_8fe93c08-abc8-8ec5-d6bb-df3ec794884d" anchor="table2">
+<table id="_b3886dfb-296a-1691-c4b2-c27cded6953a" anchor="table2">
 <name id="_3af5d378-51f5-9e97-2a6d-b2846c20499e">The revised SI <eref type="inline" bibitemid="bipm2018" citeas="[4]"/>. Blank cells all contain zero (not displayed).</name>
 <tbody><tr id="_f28eb32f-322a-02d5-8c73-c152c0edb453"><td id="_9f1f9a81-dcce-98fd-4e03-3ae13406601f" valign="top" align="center"/><td id="_20977568-c0de-848f-397a-663562858fef" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1904,7 +1905,7 @@
 </math><asciimath>color(red)("unitsml(A)")</asciimath></stem></th>
 <td id="_9c8a038a-b4fa-00d1-1ee7-8f86ceedd31c" valign="top" align="center">1</td>
 <td id="_fc77fe46-9ad9-617e-4a67-2252818afe12" valign="top" align="center"/><td id="_79aa0693-b4b7-827f-fffa-1068c95b6b88" valign="top" align="center"/><td id="_928fbac8-33ca-694c-c208-0e8df6851969" valign="top" align="center">1</td>
-<td id="_e927a9ad-48b2-9326-c16e-0f206073d4bd" valign="top" align="center"/><td id="_f2e3b7d8-8544-d07b-c139-7c2b87b5f0da" valign="top" align="center"/><td id="_f3e20dfe-181d-e535-7797-11948a838969" valign="top" align="center"/></tr><tr id="_3d90b3e8-3408-e35b-db85-e8093842beb9"><th id="_a16d3ca7-2bc5-cdbe-f5f5-372769e1b4ba" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_e927a9ad-48b2-9326-c16e-0f206073d4bd" valign="top" align="center"/><td id="_f2e3b7d8-8544-d07b-c139-7c2b87b5f0da" valign="top" align="center"/><td id="_f3e20dfe-181d-e535-7797-11948a838969" valign="top" align="center"/></tr><tr id="_17bc7ba5-7599-9540-677b-d52ec3a3e6cc"><th id="_db5107b2-34c0-82f1-ae35-e3e0da2116e0" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathcolor="red">
       <mo rspace="thickmathspace">⁢</mo>
@@ -1912,7 +1913,6 @@
         <mstyle mathvariant="normal">
           <mi>K</mi>
         </mstyle>
-        
         
         
       </mrow>
@@ -2360,11 +2360,11 @@
 </clause>
 
 
-</sections><annex id="_0bc715d0-7ec9-ca5b-fc7c-938b4a57d7d4" anchor="present_si" obligation="informative">
+</sections><annex id="_41db872b-6e34-6865-5179-09262b2abdc8" anchor="present_si" obligation="informative">
 <title id="_bc245f95-45bb-d751-7531-33f6312c3b3e">The present SI</title>
 <p id="_e4c04952-3c26-91f4-e1a3-6399bc21aeee">The present SI <eref type="inline" bibitemid="bipm2006" citeas="[2]"/> could also have been formulated in terms of the six defining constants and one defining quantity that had been specified by the CGPM, either explicitly or implicitly, between 1889 and 1983:</p>
 
-<ul id="_53263110-7d94-479e-3a37-88dc342c99d1"><li><p id="_92277a23-9252-51f1-6c86-bba444543b4e">the unperturbed ground state hyperfine transition frequency of the caesium 133 atom <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<ul id="_47a59af9-b8a3-1633-322f-45130428471b"><li><p id="_92277a23-9252-51f1-6c86-bba444543b4e">the unperturbed ground state hyperfine transition frequency of the caesium 133 atom <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">Δ</mi>
     <msub>
@@ -2499,7 +2499,7 @@
   </mstyle>
 </math><asciimath>color(blue)(ii(M)""^(12)"C, is "0.012" kilogram per mole")</asciimath></stem>, (1971)</p>
 </li>
-<li><p id="_e099414d-8ba1-798b-ef7f-131514b1e1ab">the luminous efficacy of monochromatic radiation of frequency <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<li><p id="_8b4b3946-7bcd-69bb-7e6d-a891bc183ef4">the luminous efficacy of monochromatic radiation of frequency <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>540</mn>
     <mo>×</mo>
@@ -2509,6 +2509,7 @@
       <mstyle mathvariant="normal">
         <mi>Hz</mi>
       </mstyle>
+      
       
       
       
@@ -2590,7 +2591,7 @@
   </mstyle>
 </math><asciimath>7 xx 7</asciimath></stem> matrix. Again, this matrix is a table of exponents inferred from seven bullets, but now they are the bullets found in this Appendix. For ease of comparison with <xref target="table1"/> and <xref target="table2"/>, the order of units in the top row of <xref target="tableA1-1"/> is chosen to be identical to that of <xref target="table1"/>, and the order of quantities in the left column is chosen to produce a lower triangular matrix.</p>
 
-<table id="_1acc3631-eb61-11b2-3cbd-3ed47def3fe6" anchor="tableA1-1"><tbody><tr id="_4569f8aa-3a65-a6bc-1d17-e60acad3c3b9"><td id="_82ace8f6-81c3-139a-c998-bc0568526297" valign="top" align="center"/><th id="_bedcaf3b-796d-9ccb-de83-f1e43579fe64" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<table id="_9d4b9d1c-2304-2f8d-6ccb-1237d1e10838" anchor="tableA1-1"><tbody><tr id="_7202941d-ee4a-f714-3ce8-b80676aaaea4"><td id="_82ace8f6-81c3-139a-c998-bc0568526297" valign="top" align="center"/><th id="_bedcaf3b-796d-9ccb-de83-f1e43579fe64" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu3">
@@ -2645,7 +2646,7 @@
     </mstyle>
   </mstyle>
 </math><asciimath>color(blue)("unitsml(A)")</asciimath></stem></th>
-<th id="_43bc5058-dec2-641f-8bf0-777ddbf46815" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_33944c43-77a7-177f-1bc8-c00a168ac0f4" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathcolor="blue">
       <mo rspace="thickmathspace">⁢</mo>
@@ -2653,7 +2654,6 @@
         <mstyle mathvariant="normal">
           <mi>K</mi>
         </mstyle>
-        
         
         
       </mrow>
@@ -3028,7 +3028,7 @@
 
 <p id="_5c0138b4-5c4f-9638-53cb-41ac7865cfb1">Now transpose the labels of <xref target="tableA1-1"/> and invert its embedded matrix to arrive at <xref target="tableA1-2"/>. As with <xref target="table2"/>, cells containing zero are left blank.</p>
 
-<table id="_48ac88a5-72b3-a80f-3b48-0a2ddbcce928" anchor="tableA1-2">
+<table id="_d4ea200d-bd57-8b82-3e62-6a4818c50707" anchor="tableA1-2">
 <name id="_a36a2280-50d7-c9ba-d3c3-61e77ad3d673">The present SI <eref type="inline" bibitemid="bipm2006" citeas="[2]"/>. The blank cells all contain zero (not displayed).</name>
 <tbody><tr id="_b28821cb-099d-15c5-b6cb-bde0c32f4024"><td id="_cbcbced1-faea-aa70-340f-89aa2518f094" valign="top" align="center"/><th id="_c5a2ac05-ab05-7e8f-9e27-19a184230389" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -3175,7 +3175,7 @@
 <td id="_0c41c0fe-a3ac-3a9f-c359-525461ad1f6a" valign="top" align="center">1/2</td>
 <td id="_c30bc5f6-791c-241a-816b-b069c62a598e" valign="top" align="center">1/2</td>
 <td id="_0f3b1b6a-455c-fabf-f6f8-dd935255a05e" valign="top" align="center">-1/2</td>
-<td id="_07535705-0130-90d4-7261-319ec7ee3ff7" valign="top" align="center"/><td id="_26ade4d9-a041-b6d8-a5b1-e49f31180bee" valign="top" align="center"/><td id="_4f694463-52b8-d4b3-fd04-c9f9b1b5d734" valign="top" align="center"/></tr><tr id="_63dfce01-3c26-2df2-9ad5-e72be923ca95"><th id="_0d58448b-0ec5-7d8d-8f6a-2f41b6d91fe9" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_07535705-0130-90d4-7261-319ec7ee3ff7" valign="top" align="center"/><td id="_26ade4d9-a041-b6d8-a5b1-e49f31180bee" valign="top" align="center"/><td id="_4f694463-52b8-d4b3-fd04-c9f9b1b5d734" valign="top" align="center"/></tr><tr id="_6a736bcb-4b7c-03cc-7896-24c6244b3d3f"><th id="_e63b1dbb-148f-0950-deda-f27b859e773e" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathcolor="blue">
       <mo rspace="thickmathspace">⁢</mo>
@@ -3183,7 +3183,6 @@
         <mstyle mathvariant="normal">
           <mi>K</mi>
         </mstyle>
-        
         
         
       </mrow>
@@ -3626,7 +3625,7 @@
     </msub>
   </mstyle>
 </math><asciimath>m_(cc K)</asciimath></stem> is not a physical constant. Time will tell.) The impact of the revised SI on most users of the present SI has been assessed to be small by international experts <eref type="inline" bibitemid="cipm2018" citeas="[10]"/>.</p>
-</annex><annex id="_321d4ebb-b42e-1d7d-5d80-378c8f23c0fd" anchor="derivation_defs" obligation="informative">
+</annex><annex id="_38e38062-5539-8815-2a1b-bcf54055bfeb" anchor="derivation_defs" obligation="informative">
 <title id="_6c98692b-4517-91fe-0267-f3e5f498bf11">Derivation of definitions of the base units in the revised SI (see Ref. <eref type="inline" bibitemid="bipm2018" citeas="[4]"/> section 2.3.1); comparison with the method presented in <xref target="defining_constants"/> and <xref target="base_units"/> of this report [added March 2018]</title>
 <p id="_18d86a84-8874-b678-caa4-682a2a660a7c"><strong><em>Preliminary consideration of the defining constants specified in the bullets of <xref target="introduction"/></em></strong></p>
 
@@ -3842,7 +3841,7 @@
   </mstyle>
 </math><asciimath>ii(C)_i = {ii(C)_i}[ii(C)_i].</asciimath></stem></formula>
 
-<p id="_3b36e1ba-26b4-f333-6f96-79794c3cb7e0">Any coherent unit of the SI can be expressed as the product of powers of the seven base units <eref type="inline" bibitemid="bipm2006" citeas="[2]"/>, <eref type="inline" bibitemid="bipm2018" citeas="[4]"/>. We refer below to the <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_ed5d0415-29b5-b092-f97f-fabd4d427b9a">Any coherent unit of the SI can be expressed as the product of powers of the seven base units <eref type="inline" bibitemid="bipm2006" citeas="[2]"/>, <eref type="inline" bibitemid="bipm2018" citeas="[4]"/>. We refer below to the <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msup>
       <mi>i</mi>
@@ -3912,7 +3911,6 @@
       <mstyle mathvariant="normal">
         <mi>K</mi>
       </mstyle>
-      
       
       
     </mrow>
@@ -4565,7 +4563,7 @@
   </mstyle>
 </math><asciimath>bb A</asciimath></stem>.</p>
 
-<p id="_48c2de93-ef9e-aca0-5952-15cd845fedca">In <xref target="defining_constants"/>, <xref target="table1"/> is described as representing “much of the information” contained in the bullets of <xref target="introduction"/>. The information contained is that that the unit <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_6fcbb4c7-a546-0deb-158b-8f67257e552e">In <xref target="defining_constants"/>, <xref target="table1"/> is described as representing “much of the information” contained in the bullets of <xref target="introduction"/>. The information contained is that that the unit <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -4655,7 +4653,6 @@
         </mstyle>
         
         
-        
       </mrow>
       <mstyle mathvariant="italic">
         <mi>ε</mi>
@@ -4715,7 +4712,7 @@
   </mstyle>
 </math><asciimath>a_(ij)</asciimath></stem> for the chosen ordering of base units and defining constants. The ordering is arbitrary from a mathematical point of view and was therefore chosen in <xref target="defining_constants"/> for didactic reasons.</p>
 
-<p id="_b20fde71-348a-acd3-5629-4a1547bf3ccc">It is also true that the exact <strong>value</strong> of the <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_0f1916b1-89a6-43b7-9baf-1144d379d72a">It is also true that the exact <strong>value</strong> of the <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msup>
       <mi>i</mi>
@@ -4809,7 +4806,6 @@
         <mstyle mathvariant="normal">
           <mi>K</mi>
         </mstyle>
-        
         
         
       </mrow>
