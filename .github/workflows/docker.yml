@@ -10,7 +10,6 @@ permissions:
   contents: read
   pages: write
   id-token: write
-  packages: read
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
@@ -28,16 +27,16 @@ jobs:
           submodules: true
 
       - name: Metanorma generate site
-        uses: actions-mn/build-and-publish@v1
+        uses: actions-mn/build-and-publish@v2
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           agree-to-terms: true
-          destination: artifact
+          destination: gh-pages
 
   deploy:
+    if: github.ref_name == github.event.repository.default_branch
     runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Deploy to GitHub Pages
-        uses: actions-mn/deploy-pages@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+        uses: actions/deploy-pages@v4
