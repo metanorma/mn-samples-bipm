@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.8.3" schema-version="v2.1.5" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.8.7" schema-version="v2.1.6" flavor="bipm">
 <bibdata type="standard">
 <title language="en" type="title-main">Beam Characterization for Low-energy X-rays and New Reference Qualities at 1 m</title>
-<docidentifier primary="true" type="BIPM">BIPM BIPM-2020/03</docidentifier><docnumber>BIPM-2020/03</docnumber><contributor><role type="author"/><organization>
+<docidentifier primary="true" type="BIPM">BIPM BIPM-2020/03</docidentifier><docnumber>BIPM-2020/03</docnumber><date type="updated"><on>2020-04</on></date><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"/><person>
 <name><completename>Anna Villevalde</completename></name>
@@ -20,12 +20,11 @@
 <name language="fr">Bureau International des Poids et Mesures</name>
 <identifier>BIPM</identifier><identifier type="full">BIPM</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><version><revision-date>2020-04</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2020</from><owner><organization>
+<abbreviation>BIPM</abbreviation></organization></contributor><version>2020-04</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2020</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem/>
-</relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2020/03</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem/></relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2020/03</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
 <UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd1" id="U_NISTu1">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">metre</UnitName>
         <UnitSymbol type="HTML">m</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -34,7 +33,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd18" id="U_kV">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">kV</UnitName>
         <UnitSymbol type="HTML">kV</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -46,7 +45,7 @@
           <EnumeratedRootUnit unit="volt" prefix="k"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_mm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mm</UnitName>
         <UnitSymbol type="HTML">mm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -58,7 +57,7 @@
           <EnumeratedRootUnit unit="metre" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu23">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">degree Celsius</UnitName>
         <UnitSymbol type="HTML">°C</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -67,7 +66,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd14" id="U_kPa">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">kPa</UnitName>
         <UnitSymbol type="HTML">kPa</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -78,8 +77,8 @@
         <RootUnits>
           <EnumeratedRootUnit unit="pascal" prefix="k"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd30" id="U_mg.cm-3">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L-3M" id="U_mg.cm-3">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">mg*cm^-3</UnitName>
         <UnitSymbol type="HTML">mg cm
           <sup>−3</sup>
@@ -89,9 +88,7 @@
             <mi mathvariant="normal">mg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>3</mn>
@@ -104,7 +101,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="-3"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd4" id="U_pA">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">pA</UnitName>
         <UnitSymbol type="HTML">pA</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -116,7 +113,7 @@
           <EnumeratedRootUnit unit="ampere" prefix="p"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd3" id="U_NISTu3">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">second</UnitName>
         <UnitSymbol type="HTML">s</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -125,7 +122,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#D_L-2T-1J" id="U_mGy.s-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">mGy*s^-1</UnitName>
         <UnitSymbol type="HTML">mGy s
           <sup>−1</sup>
@@ -135,9 +132,7 @@
             <mi mathvariant="normal">mGy</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">s</mi>
-              </mrow>
+              <mi mathvariant="normal">s</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -150,7 +145,7 @@
           <EnumeratedRootUnit unit="second" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">kelvin</UnitName>
         <UnitSymbol type="HTML">K</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -158,8 +153,8 @@
             <mi mathvariant="normal">K</mi>
           </math>
         </UnitSymbol>
-      </Unit><Unit dimensionURL="#NISTd29" id="U_NISTu1e-1/1">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L-1" id="U_NISTu1e-1/1">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">meter to the power minus one</UnitName>
         <UnitSymbol type="HTML">m
           <sup>−1</sup>
@@ -167,9 +162,7 @@
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">m</mi>
-              </mrow>
+              <mi mathvariant="normal">m</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -178,9 +171,9 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd1" id="U_um">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">um</UnitName>
-        <UnitSymbol type="HTML">m</UnitSymbol>
+        <UnitSymbol type="HTML">µm</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µm</mi>
@@ -190,7 +183,7 @@
           <EnumeratedRootUnit unit="metre" prefix="u"/>
         </RootUnits>
       </Unit><Unit id="U_keV">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">keV</UnitName>
         <UnitSymbol type="HTML">keV</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -202,7 +195,7 @@
           <EnumeratedRootUnit unit="electronvolt" prefix="k"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd4" id="U_mA">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mA</UnitName>
         <UnitSymbol type="HTML">mA</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -214,9 +207,9 @@
           <EnumeratedRootUnit unit="ampere" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd4" id="U_uA">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">uA</UnitName>
-        <UnitSymbol type="HTML">A</UnitSymbol>
+        <UnitSymbol type="HTML">µA</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µA</mi>
@@ -226,9 +219,9 @@
           <EnumeratedRootUnit unit="ampere" prefix="u"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_L-2M-1I-1J" id="U_Gy.uC-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">Gy*uC^-1</UnitName>
-        <UnitSymbol type="HTML">Gy C
+        <UnitSymbol type="HTML">Gy µC
           <sup>−1</sup>
         </UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -236,9 +229,7 @@
             <mi mathvariant="normal">Gy</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">µC</mi>
-              </mrow>
+              <mi mathvariant="normal">µC</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -251,7 +242,7 @@
           <EnumeratedRootUnit unit="coulomb" prefix="u" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd27" id="U_NISTu28">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">gray</UnitName>
         <UnitSymbol type="HTML">Gy</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -260,17 +251,15 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#D_M-1I-1" id="U_uC-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">uC^-1</UnitName>
-        <UnitSymbol type="HTML">C
+        <UnitSymbol type="HTML">µC
           <sup>−1</sup>
         </UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">µC</mi>
-              </mrow>
+              <mi mathvariant="normal">µC</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -282,7 +271,7 @@
           <EnumeratedRootUnit unit="coulomb" prefix="u" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd18" id="U_NISTu16">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">volt</UnitName>
         <UnitSymbol type="HTML">V</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -303,7 +292,7 @@
         <Length symbol="L" powerNumerator="-1"/>
         <Mass symbol="M" powerNumerator="1"/>
         <Time symbol="T" powerNumerator="-2"/>
-      </Dimension><Dimension id="NISTd30">
+      </Dimension><Dimension id="D_L-3M">
         <Length symbol="L" powerNumerator="-3"/>
         <Mass symbol="M" powerNumerator="1"/>
       </Dimension><Dimension id="NISTd4">
@@ -315,6 +304,8 @@
         <Time symbol="T" powerNumerator="-1"/>
         <LuminousIntensity symbol="J" powerNumerator="1"/>
       </Dimension><Dimension id="NISTd29">
+        <Length symbol="L" powerNumerator="-1"/>
+      </Dimension><Dimension id="D_L-1">
         <Length symbol="L" powerNumerator="-1"/>
       </Dimension><Dimension id="D_L-2M-1I-1J">
         <Length symbol="L" powerNumerator="-2"/>
@@ -1255,7 +1246,7 @@
 </math><asciimath>0.3 "unitsml(mm)"</asciimath></stem>.</p>
 </clause>
 
-<clause id="_58f4b944-793f-c3f0-5be3-5b454a17dd22" obligation="normative">
+<clause id="_da5f14a9-1ad5-0e7c-e4d2-be8a6d185beb" obligation="normative">
 <title id="_3a9c6338-84ee-0ca0-2932-e4a6f13740cc">Re-measurement of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -1632,7 +1623,7 @@
   </mstyle>
 </math><asciimath>k_"a"</asciimath></stem> values is around 1 part in 10<sup>3</sup>.</p>
 
-<table id="_0f87c11b-d82e-acda-65da-51951c0f5560" anchor="table1">
+<table id="_cabf7c1a-d5f0-8ad0-c737-42e52b5d2006" anchor="table1">
 <name id="_a1c5ac59-a140-ab71-fb83-db9869a721f2">Results of the re-measurement of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -1783,7 +1774,7 @@
 <td id="_8eabcd62-dff8-09dd-5af7-32de2488e4ee" valign="top" align="center">0.1695</td>
 <td id="_71917009-bcd6-95eb-f6a1-50a22a13f829" valign="top" align="center">1.0155</td>
 <td id="_0af14586-6243-0c2e-91e0-794337fa5d9a" valign="top" align="center">2.2612</td>
-</tr><tr id="_987c4b75-336b-aa59-8faa-a6599e6e9751"><td id="_31789f06-b336-a1da-fe54-0fe846b99870" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_5c97f830-e48e-e3df-a1c8-b73e07c5daf3"><td id="_a646882f-1207-4a01-e1e4-393c33b1cb19" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1803,6 +1794,7 @@
           <mn>1</mn>
         </mrow>
       </msup>
+      
       
       
     </mrow>
@@ -1931,7 +1923,7 @@
   </mstyle>
 </math><asciimath>35 "unitsml(kV)"</asciimath></stem> W/Mo radiation qualities. The new measurements were made with the same attenuators as used previously. For both radiation qualities two attenuators were used. The results are presented in <xref target="table2"/>.</p>
 
-<table id="_8d1a7d53-6e7a-2d9c-4483-afbab6c9f014" anchor="table2">
+<table id="_9c6ce288-cb8a-21b5-e2ad-8cc21631d407" anchor="table2">
 <name id="_3f8e363c-05fb-76b3-ab93-3fb0b5b89fee">Results of the re-measurement of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -2042,7 +2034,7 @@
 </tr><tr id="_aa2c3ee1-76b9-0a41-3261-cf17981c4666"><td id="_ae569c0b-87af-8e2f-f2a7-2a62a60e4198" valign="top" align="left">measured 2019</td>
 <td id="_9206cbf8-3e1a-cfbe-a8af-29940564044a" valign="top" align="left">0.3313</td>
 <td id="_572525a7-2c92-d5fa-2aba-880fdae97911" valign="top" align="center">0.3877</td>
-</tr><tr id="_19741b8a-b60f-9bd4-50a5-42dbebc64e1f"><td id="_4a11c7fd-cc39-b06a-f550-5b1251b63d81" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_920f351b-1a15-460c-faac-ee61d4169e13"><td id="_937eeba7-6709-ce6f-e8a9-7865eb48e3f1" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -2062,6 +2054,7 @@
           <mn>1</mn>
         </mrow>
       </msup>
+      
       
       
     </mrow>
@@ -2100,7 +2093,7 @@
 </math><asciimath>k_"a"</asciimath></stem> are in agreement with the previous at the level of the stated combined standard uncertainty of 2 parts in 10<sup>4</sup>.</p>
 </clause>
 
-<clause id="_8efc0ab5-5123-2e98-8c2f-fe6a244bded9" obligation="normative">
+<clause id="_37fef623-1ecc-efb6-e40b-3b80ebb328d0" obligation="normative">
 <title id="_017e4ada-98c3-b0f5-c5ba-7b91a77f6270">Re-measurement of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -2276,7 +2269,7 @@
   </mstyle>
 </math><asciimath>101.325 "unitsml(kPa)"</asciimath></stem>.</p>
 
-<table id="_675ee955-31d4-6994-5dc9-0bf5f1c00605" anchor="table3">
+<table id="_96bd8695-e3a8-e6fb-bc2f-9382a619ae89" anchor="table3">
 <name id="_a9d50249-0fea-5c5f-786c-da3c97ab4edb">Results of the re-measurement of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -2387,7 +2380,7 @@
 </tr><tr id="_e643d2c8-ebb2-2851-d7cd-aa5c59679b68"><td id="_f11d8113-62df-d56b-df22-7d5861767918" valign="top" align="left">measured 2019</td>
 <td id="_81b67ac7-df99-28c9-ee5a-dc557e070a14" valign="top" align="left">0.2778</td>
 <td id="_7605a772-b92f-fea8-15a2-f98e5d4ee32f" valign="top" align="center">0.3651</td>
-</tr><tr id="_6a6d7a6c-e749-d5f7-349b-a39f5cc1dcaf"><td id="_396ff6ea-2791-616a-f2a0-073d620baaec" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_fcdf8c71-0abf-08fa-c74b-bd5cb14e5683"><td id="_4782586c-bbd5-78af-5b0c-8ba15d2cfa02" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -2407,6 +2400,7 @@
           <mn>1</mn>
         </mrow>
       </msup>
+      
       
       
     </mrow>
@@ -2587,7 +2581,7 @@
   </mstyle>
 </math><asciimath>k_"a"</asciimath></stem> values is consistent with the stated combined standard uncertainty of 2 parts in 10<sup>4</sup>.</p>
 
-<table id="_da9acd1b-2e3d-ca0c-3a47-aa45b2585b60" anchor="table4">
+<table id="_55afe214-0c3a-c169-eaeb-aa513b379675" anchor="table4">
 <name id="_5beb58f6-faba-72f9-1700-36f5b74b2568">Results for <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -2640,7 +2634,7 @@
 </math><asciimath>"unitsml(mm)"</asciimath></stem></td>
 <td id="_4b4797f4-f180-2557-cb48-3f004c905da1" valign="top" align="center">0.2774</td>
 <td id="_b97f2650-3f22-aaf3-40ba-f717a49d7d26" valign="top" align="center">0.2751</td>
-</tr><tr id="_294a0d22-121d-6f67-858e-a4174505f000"><td id="_94005b62-20f8-d028-da7d-527dc239c0a7" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_ebdff897-c47b-b6f0-9a32-4bc1402ab420"><td id="_e771f75c-8eb8-b5d3-e755-17d0912e89bc" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -2662,6 +2656,7 @@
       </msup>
       
       
+      
     </mrow>
   </mstyle>
 </math><asciimath>ii(mu)_("air") // "unitsml(m^-1)"</asciimath></stem></td>
@@ -2681,7 +2676,7 @@
 </table>
 </clause>
 
-<clause id="_cacf0cf8-245f-eaf3-8f57-02295b23fdc4" obligation="normative">
+<clause id="_9771c33a-fe6c-f4e3-d3d2-95d1eb32fc02" obligation="normative">
 <title id="_81e30507-8c90-47f1-1527-ca1bb4675be3">Measurement of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -2883,7 +2878,7 @@
   </mstyle>
 </math><asciimath>101.325 "unitsml(kPa)"</asciimath></stem>.</p>
 
-<table id="_7731e320-fc4c-3918-5293-4e1d74e52a28" anchor="table5">
+<table id="_ace3da8b-3d6d-adde-13dd-a90d4de3e935" anchor="table5">
 <name id="_53927262-7a05-514d-c3af-c1992fb41dea">Results of the measurement of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -3046,7 +3041,7 @@
 <td id="_6e07b57c-ce31-d130-dd56-6432c16d2697" valign="top" align="center">0.2654</td>
 <td id="_6b5a1752-4019-c884-f976-f599d63e50d9" valign="top" align="center">1.0414</td>
 <td id="_c7a2addd-ad61-86d0-1c18-2eadfaea67e8" valign="top" align="center">2.2737</td>
-</tr><tr id="_5d128a8a-a633-f5a5-6846-9e3f687ec24e"><td id="_39295cb4-46d4-7741-487a-5e318a569d53" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_33e0b1df-1d78-d598-9e3a-7ce4f03ffdef"><td id="_37a3bc7a-9805-6b2a-143b-18dafee55c17" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -3073,6 +3068,7 @@
             <mn>1</mn>
           </mrow>
         </msup>
+        
         
         
       </mrow>
@@ -3263,7 +3259,7 @@
   </mstyle>
 </math><asciimath>ii(mu)_("air")</asciimath></stem> values are compared with those measured during the BIPM.RI(I)-K2 comparison with the NRC in 2018 (<eref type="inline" bibitemid="Burns4" citeas="[4]"><display-text>Burns et al. 2019</display-text></eref>).</p>
 
-<table id="_3f10a484-7335-e4bf-eb83-9c10acf9141f" anchor="table6">
+<table id="_34d4e9da-d0ee-c154-46be-893301d1b278" anchor="table6">
 <name id="_e6b29bdd-fb14-be2d-66fe-7264fae2284f">New <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -3433,7 +3429,7 @@
 <td id="_fb7a85c7-21e4-f0d2-42ce-7940e916ea7b" valign="top" align="center">0.2654</td>
 <td id="_d8583512-61a8-c755-4b56-e659f4474aa2" valign="top" align="center">1.0414</td>
 <td id="_2c3a79e6-4ebe-0821-d7df-3066d77beb2b" valign="top" align="center">2.2737</td>
-</tr><tr id="_ee9e72a2-366d-61c8-5e00-1796bd25238a"><td id="_a748802c-d0b7-57f2-2a55-60a3892abfdc" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_5000afa0-edc8-5612-4cad-bf91d5241cbd"><td id="_36997b2d-deae-b718-07c3-33bad3242eab" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -3453,6 +3449,7 @@
           <mn>1</mn>
         </mrow>
       </msup>
+      
       
       
     </mrow>
@@ -3661,7 +3658,7 @@
   </mstyle>
 </math><asciimath>ii(mu)_("air")</asciimath></stem> is less than 2 parts in 10<sup>4</sup>.</p>
 
-<table id="_a195f90d-41aa-bc16-66f6-0bd5f49eb927" anchor="table7">
+<table id="_86350fad-58a7-bbbe-b40b-e120be650900" anchor="table7">
 <name id="_8460a17d-71a4-ec7a-3ed4-2fdfb37c5869">Results of the measurement of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -3858,7 +3855,7 @@
 <td id="_534f01f5-5fef-4b35-ed98-467b591497c5" valign="top" align="center">0.4031</td>
 <td id="_f6ca4bad-d38e-99f9-aeba-2515127a89ff" valign="top" align="center">0.4350</td>
 <td id="_f03873db-5a7d-e7a8-931a-3f2306289d09" valign="top" align="center">0.5127</td>
-</tr><tr id="_09042bcc-b8b2-7ebd-c2ff-961edfebbc3b"><td id="_88b15e9a-2b3a-8a76-182a-8cef57066299" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_034f980c-254f-6f1f-4762-b70d5951a502"><td id="_9ecad7a3-f427-858d-54b4-eea4c8c16c52" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -3879,6 +3876,7 @@
           <mn>1</mn>
         </mrow>
       </msup>
+      
       
       
     </mrow>
@@ -4295,7 +4293,7 @@
   </mstyle>
 </math><asciimath>1 "unitsml(m)"</asciimath></stem>, to increase the signal-to-noise ratio for chambers under calibration. The new rates are presented in <xref target="table8"/> and <xref target="table9"/> along with the corresponding values of the anode current and the generator software parameter Isend.</p>
 
-<table id="_3a5c44aa-693c-fb21-6800-ea6130e6ac74" anchor="table8">
+<table id="_64072903-a106-843e-227d-65b05836da15" anchor="table8">
 <name id="_3e5a5857-fbdf-4d86-8102-1ed9def68279">New air-kerma rates for the W/Al radiation qualities at the reference distance of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1</mn>
@@ -4432,7 +4430,7 @@
 <td id="_0e2c82ec-5ea7-6278-70b9-cd52b5eb5e3d" valign="top" align="center">0.2654</td>
 <td id="_199e8d80-3ef3-1379-f22f-96cb99c07f5d" valign="top" align="center">1.0414</td>
 <td id="_f1b0839d-cd0c-2946-5bc2-300e95743b61" valign="top" align="center">2.2737</td>
-</tr><tr id="_ddaf4ceb-d78d-1997-396b-1da5d528de8a"><td id="_336700d7-ad04-e641-a99f-6d2952711c1c" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_8c4e1811-0757-8f0b-0db9-fc6899708963"><td id="_1ae48f8b-bfe8-e775-bce5-4f31ae52275d" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -4453,6 +4451,7 @@
           <mn>1</mn>
         </mrow>
       </msup>
+      
       
       
     </mrow>
@@ -4527,7 +4526,7 @@
 </tr></tbody>
 </table>
 
-<table id="_72907b18-bd98-dbd4-b856-d23dc21a463f" anchor="table9">
+<table id="_ffdd75f5-a00a-fc6c-23c5-fc556eddea45" anchor="table9">
 <name id="_e646cdcf-a250-ad93-8366-1c12da1bea31">New air-kerma rates for the W/Mo radiation qualities at the reference distance of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1</mn>
@@ -4696,7 +4695,7 @@
 <td id="_8bc95c7a-1177-2ae8-2d9a-2d9ef519a1d2" valign="top" align="center">0.4031</td>
 <td id="_7fe55d16-a0d2-358f-4d98-9469a171a771" valign="top" align="center">0.4350</td>
 <td id="_cf2e0357-417a-8ae2-af3f-efc1c1a8ae31" valign="top" align="center">0.5127</td>
-</tr><tr id="_9a539046-aae7-f748-06a4-75d83e8fc4ac"><td id="_012753eb-363d-87d1-d5ac-4edf1cedb959" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_eb4db2e0-62d5-4ce2-6349-a067365263df"><td id="_2f9d1ec2-bc4f-a974-64fa-ded81d755476" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -4717,6 +4716,7 @@
           <mn>1</mn>
         </mrow>
       </msup>
+      
       
       
     </mrow>

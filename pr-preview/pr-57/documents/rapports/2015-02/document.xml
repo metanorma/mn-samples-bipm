@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.8.3" schema-version="v2.1.5" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.8.7" schema-version="v2.1.6" flavor="bipm">
 <bibdata type="standard">
 <title language="en" type="title-main">Comparison of Ozone Reference Standards of the DECCW and the BIPM</title>
-<docidentifier primary="true" type="BIPM">BIPM BIPM-2015/02</docidentifier><docnumber>BIPM-2015/02</docnumber><contributor><role type="author"/><organization>
+<docidentifier primary="true" type="BIPM">BIPM BIPM-2015/02</docidentifier><docnumber>BIPM-2015/02</docnumber><date type="updated"><on>2015-02</on></date><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="editor">Author for correspondence</role><person>
 <name><completename>Joële Viallon</completename></name>
@@ -32,12 +32,11 @@
 <name language="fr">Bureau International des Poids et Mesures</name>
 <identifier>BIPM</identifier><identifier type="full">BIPM</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2015-02</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2015</from><owner><organization>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version>2015-02</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2015</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem/>
-</relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2015/02</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem/></relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2015/02</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
 <UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#D_N0" id="U_nmol.mol-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">nmol*mol^-1</UnitName>
         <UnitSymbol type="HTML">nmol mol
           <sup>−1</sup>
@@ -47,9 +46,7 @@
             <mi mathvariant="normal">nmol</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mol</mi>
-              </mrow>
+              <mi mathvariant="normal">mol</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -62,9 +59,9 @@
           <EnumeratedRootUnit unit="mole" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_N0" id="U_umol.mol-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">umol*mol^-1</UnitName>
-        <UnitSymbol type="HTML">mol mol
+        <UnitSymbol type="HTML">µmol mol
           <sup>−1</sup>
         </UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -72,9 +69,7 @@
             <mi mathvariant="normal">µmol</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mol</mi>
-              </mrow>
+              <mi mathvariant="normal">mol</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -87,7 +82,7 @@
           <EnumeratedRootUnit unit="mole" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_nm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">nm</UnitName>
         <UnitSymbol type="HTML">nm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -98,8 +93,8 @@
         <RootUnits>
           <EnumeratedRootUnit unit="metre" prefix="n"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd8" id="U_cm2">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L2" id="U_cm2">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">cm^2</UnitName>
         <UnitSymbol type="HTML">cm
           <sup>2</sup>
@@ -107,12 +102,8 @@
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
-              <mrow>
-                <mn>2</mn>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
+              <mn>2</mn>
             </msup>
           </math>
         </UnitSymbol>
@@ -120,7 +111,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="2"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">kelvin</UnitName>
         <UnitSymbol type="HTML">°K</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -129,7 +120,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd14" id="U_kPa">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">kPa</UnitName>
         <UnitSymbol type="HTML">kPa</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -141,7 +132,7 @@
           <EnumeratedRootUnit unit="pascal" prefix="k"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_N-1" id="U_mol-1">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mol^-1</UnitName>
         <UnitSymbol type="HTML">mol
           <sup>−1</sup>
@@ -149,9 +140,7 @@
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mol</mi>
-              </mrow>
+              <mi mathvariant="normal">mol</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -159,8 +148,8 @@
             </msup>
           </math>
         </UnitSymbol>
-      </Unit><Unit dimensionURL="#NISTd48" id="U_NISTu13.u6e-1/1.u5e-1/1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L2MT-2Theta-1N-1" id="U_NISTu13.u6e-1/1.u5e-1/1">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">joule per mole kelvin</UnitName>
         <UnitSymbol type="HTML">J mol
           <sup>−1</sup> K
@@ -171,9 +160,7 @@
             <mi mathvariant="normal">J</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mol</mi>
-              </mrow>
+              <mi mathvariant="normal">mol</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -181,9 +168,7 @@
             </msup>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">K</mi>
-              </mrow>
+              <mi mathvariant="normal">K</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -196,8 +181,8 @@
           <EnumeratedRootUnit unit="mole" powerNumerator="-1"/>
           <EnumeratedRootUnit unit="kelvin" powerNumerator="-1"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd29" id="U_cm-1">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L-1" id="U_cm-1">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">cm^-1</UnitName>
         <UnitSymbol type="HTML">cm
           <sup>−1</sup>
@@ -205,9 +190,7 @@
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -219,7 +202,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_cm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">cm</UnitName>
         <UnitSymbol type="HTML">cm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -231,7 +214,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu23">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">degree Celsius</UnitName>
         <UnitSymbol type="HTML">°C</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -240,7 +223,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit id="U_L.min-1">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">L*min^-1</UnitName>
         <UnitSymbol type="HTML">L min
           <sup>−1</sup>
@@ -250,9 +233,7 @@
             <mi mathvariant="normal">L</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">min</mi>
-              </mrow>
+              <mi mathvariant="normal">min</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -265,7 +246,7 @@
           <EnumeratedRootUnit unit="minute" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd3" id="U_NISTu3">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">second</UnitName>
         <UnitSymbol type="HTML">s</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -277,7 +258,7 @@
         <AmountOfSubstance symbol="N" powerNumerator="0"/>
       </Dimension><Dimension id="NISTd1">
         <Length symbol="L" powerNumerator="1"/>
-      </Dimension><Dimension id="NISTd8">
+      </Dimension><Dimension id="D_L2">
         <Length symbol="L" powerNumerator="2"/>
       </Dimension><Dimension id="NISTd5">
         <ThermodynamicTemperature symbol="Theta" powerNumerator="1"/>
@@ -293,7 +274,13 @@
         <Time symbol="T" powerNumerator="-2"/>
         <ThermodynamicTemperature symbol="Theta" powerNumerator="-1"/>
         <AmountOfSubstance symbol="N" powerNumerator="-1"/>
-      </Dimension><Dimension id="NISTd29">
+      </Dimension><Dimension id="D_L2MT-2Theta-1N-1">
+        <Length symbol="L" powerNumerator="2"/>
+        <Mass symbol="M" powerNumerator="1"/>
+        <Time symbol="T" powerNumerator="-2"/>
+        <ThermodynamicTemperature symbol="Theta" powerNumerator="-1"/>
+        <AmountOfSubstance symbol="N" powerNumerator="-1"/>
+      </Dimension><Dimension id="D_L-1">
         <Length symbol="L" powerNumerator="-1"/>
       </Dimension><Dimension id="NISTd3">
         <Time symbol="T" powerNumerator="1"/>
@@ -806,11 +793,11 @@
 <p id="_0dc0b41f-e6f2-47ed-cace-88d501e7e869">All calculations were performed by the BIPM using the information on form BIPM.QM-K1-R1. It includes the difference from the reference value at two nominal ozone amount-of-substance fractions, which are considered as degrees of equivalence for the key comparison BIPM.QM-K1. For information, the difference from the reference value at all nominal ozone amount-of-substance fractions are reported in the same form, as well as the linear relationship between the participant’s standard and the common reference standard.</p>
 </clause>
 
-<clause id="_83a8f994-a4f4-e8a7-5f78-d7243adc12b4" anchor="standards" obligation="normative">
+<clause id="_d55184dc-6eda-6c77-bfe6-f67faf896a1d" anchor="standards" obligation="normative">
 <title id="_bc593cd4-9fdc-0a74-881d-14e5e7590b3c">Measurement standards</title>
 <p id="_37eb1625-a443-d9de-b8b9-71945743a9c1">The instruments maintained by the BIPM and the OEH are Standard Reference Photometers (SRP) built by the NIST. More details on the instrument’s operating principle and its capabilities can be found in <eref type="inline" bibitemid="paur" citeas="[1]"/>. The following section describes the measurement principle and the uncertainty budgets.</p>
 
-<clause id="_742ab796-41a7-b1a9-7f52-26c072373073" obligation="normative">
+<clause id="_1624c2f8-900b-5c4c-18d1-3e84b304a1d7" obligation="normative">
 <title id="_eaa9c1c1-f376-2c11-4eb4-ec0760e9f86f">Measurement equation of a NIST SRP</title>
 <p id="_2bf21e7e-5888-abc0-ce51-84dbc481cf4a">The measurement of the ozone amount-of-substance fraction by an SRP is based on the absorption of radiation at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1097,7 +1084,7 @@
   </mstyle>
 </math><asciimath>x</asciimath></stem>) of ozone in air:</p>
 
-<formula id="_8bfbd231-b773-1563-fe5e-6208efac46f5" anchor="eq3"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<formula id="_1c967d18-29e0-2561-1e95-e9c00918cfe1" anchor="eq3"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mi>x</mi>
     <mo>=</mo>
@@ -1147,7 +1134,7 @@
       <mo>)</mo>
     </mrow>
   </mstyle>
-</math><asciimath>x = (-1)/(2 ii(sigma) ii(L)_("opt")) ii(T)/ii(P) ii(R)/(ii(N)_"A") "ln"(ii(D))</asciimath></stem><key><dl id="_40dfe6f2-9dfa-f2fd-4c80-c9dec1d6cf22"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>x = (-1)/(2 ii(sigma) ii(L)_("opt")) ii(T)/ii(P) ii(R)/(ii(N)_"A") "ln"(ii(D))</asciimath></stem><key><dl id="_f99e0da5-18f8-caa8-e512-ebabe8a4b3dd"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1189,7 +1176,7 @@
     </mstyle>
   </mstyle>
 </math><asciimath>ii(R)</asciimath></stem></dt>
-<dd id="_576f5dd6-5ea8-fa07-72d0-480d023b473a"><p id="_d565bd95-32fd-1213-430c-180d23eec912">is the gas constant, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_005035ba-df86-2fa2-e27c-167945f4c3d6"><p id="_6b76974b-1a12-825d-4ec7-f8f77a6b6300">is the gas constant, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>8.314472</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -1217,6 +1204,7 @@
           <mn>1</mn>
         </mrow>
       </msup>
+      
       
       
     </mrow>

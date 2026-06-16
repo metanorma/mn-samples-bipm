@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.8.3" schema-version="v2.1.5" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.8.7" schema-version="v2.1.6" flavor="bipm">
 <bibdata type="standard">
 <title language="en" type="title-main">The International Temperature Scale of 1990 (ITS-90)</title>
 
@@ -14,7 +14,7 @@
 <title language="fr" type="title-part-prefix">Partie 1</title>
 
 <title language="fr" type="title-appendix-prefix">Appendice 1</title>
-<docidentifier primary="true" type="BIPM">BIPM ITS-90 MEP-1 A1</docidentifier><docidentifier type="BIPM-parent-document">BIPM ITS-90 MEP</docidentifier><docnumber>ITS-90 MEP</docnumber><contributor><role type="author"/><organization>
+<docidentifier primary="true" type="BIPM">BIPM ITS-90 MEP-1 A1</docidentifier><docidentifier type="BIPM-parent-document">BIPM ITS-90 MEP</docidentifier><docnumber>ITS-90 MEP</docnumber><date type="updated"><on>2017-06-28</on></date><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"><description>committee</description></role><organization>
 <name>Bureau International des Poids et Mesures</name>
@@ -24,12 +24,12 @@
 <name language="fr">Comité consultatif de thermométrie</name>
 <identifier>CCT</identifier><identifier type="full">CCT</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2017-06-28</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2017</from><owner><organization>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version>2017-06-28</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2017</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>mise-en-pratique</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>ITS-90 MEP</docnumber><part>1</part><appendix>1</appendix>
 </structuredidentifier><si-aspect>K_k</si-aspect></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
 <UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">kelvin</UnitName>
         <UnitSymbol type="HTML">K</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -38,9 +38,9 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd5" id="U_uK">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">uK</UnitName>
-        <UnitSymbol type="HTML">K</UnitSymbol>
+        <UnitSymbol type="HTML">µK</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µK</mi>
@@ -50,9 +50,9 @@
           <EnumeratedRootUnit unit="kelvin" prefix="u"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_N0" id="U_umol.mol-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">umol*mol^-1</UnitName>
-        <UnitSymbol type="HTML">mol mol
+        <UnitSymbol type="HTML">µmol mol
           <sup>−1</sup>
         </UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -60,9 +60,7 @@
             <mi mathvariant="normal">µmol</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mol</mi>
-              </mrow>
+              <mi mathvariant="normal">mol</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -75,9 +73,9 @@
           <EnumeratedRootUnit unit="mole" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd6" id="U_umol">
-          <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+          <UnitSystem name="SI" type="SI_base" lang="en"/>
           <UnitName lang="en">umol</UnitName>
-          <UnitSymbol type="HTML">mol</UnitSymbol>
+          <UnitSymbol type="HTML">µmol</UnitSymbol>
           <UnitSymbol type="MathMl">
             <math xmlns="http://www.w3.org/1998/Math/MathML">
               <mi mathvariant="normal">µmol</mi>
@@ -87,7 +85,7 @@
             <EnumeratedRootUnit unit="mole" prefix="u"/>
           </RootUnits>
         </Unit><Unit dimensionURL="#NISTd6" id="U_NISTu6">
-          <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+          <UnitSystem name="SI" type="SI_base" lang="en"/>
           <UnitName lang="en">mole</UnitName>
           <UnitSymbol type="HTML">mol</UnitSymbol>
           <UnitSymbol type="MathMl">
@@ -96,7 +94,7 @@
             </math>
           </UnitSymbol>
         </Unit><Unit dimensionURL="#NISTd5" id="U_mK">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mK</UnitName>
         <UnitSymbol type="HTML">mK</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -108,7 +106,7 @@
           <EnumeratedRootUnit unit="kelvin" prefix="m"/>
         </RootUnits>
       </Unit></UnitSet><QuantitySet><Quantity id="NISTq6" quantityType="base" dimensionURL="#NISTd6">
-          <QuantityName lang="en-US">amount of substance</QuantityName>
+          <QuantityName lang="en">amount of substance</QuantityName>
         </Quantity></QuantitySet><DimensionSet><Dimension id="NISTd5">
         <ThermodynamicTemperature symbol="Theta" powerNumerator="1"/>
       </Dimension><Dimension id="D_N0">

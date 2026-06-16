@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.8.3" schema-version="v2.1.5" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.8.7" schema-version="v2.1.6" flavor="bipm">
 <bibdata type="standard">
 <title language="en" type="title-main">Measuring Conditions and Uncertainties for the Comparison and Calibration of National Dosimetric Standards at the BIPM</title>
-<docidentifier primary="true" type="BIPM">BIPM BIPM-2018/06</docidentifier><docnumber>BIPM-2018/06</docnumber><contributor><role type="author"/><organization>
+<docidentifier primary="true" type="BIPM">BIPM BIPM-2018/06</docidentifier><docnumber>BIPM-2018/06</docnumber><date type="updated"><on>2018-12</on></date><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"/><person>
 <name><completename>C. Kessler</completename></name>
@@ -16,12 +16,12 @@
 <name language="fr">Bureau International des Poids et Mesures</name>
 <identifier>BIPM</identifier><identifier type="full">BIPM</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2018-12</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2018</from><owner><organization>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version>2018-12</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2018</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem><version><draft>Rapport BIPM-2011/04</draft></version></bibitem>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem><version>Rapport BIPM-2011/04</version></bibitem>
 </relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2018/06</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
 <UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd5" id="U_NISTu23">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">degree Celsius</UnitName>
         <UnitSymbol type="HTML">°C</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -30,7 +30,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd5" id="U_mK">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mK</UnitName>
         <UnitSymbol type="HTML">mK</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -42,7 +42,7 @@
           <EnumeratedRootUnit unit="kelvin" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">kelvin</UnitName>
         <UnitSymbol type="HTML">K</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -51,7 +51,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd14" id="U_kPa">
-          <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+          <UnitSystem name="SI" type="SI_derived" lang="en"/>
           <UnitName lang="en">kPa</UnitName>
           <UnitSymbol type="HTML">kPa</UnitSymbol>
           <UnitSymbol type="MathMl">
@@ -63,7 +63,7 @@
             <EnumeratedRootUnit unit="pascal" prefix="k"/>
           </RootUnits>
         </Unit><Unit dimensionURL="#NISTd1" id="U_cm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">cm</UnitName>
         <UnitSymbol type="HTML">cm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -74,8 +74,8 @@
         <RootUnits>
           <EnumeratedRootUnit unit="metre" prefix="c"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd51" id="U_g.cm-2">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L-2M" id="U_g.cm-2">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">g*cm^-2</UnitName>
         <UnitSymbol type="HTML">g cm
           <sup>−2</sup>
@@ -85,9 +85,7 @@
             <mi mathvariant="normal">g</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>2</mn>
@@ -100,7 +98,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="-2"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd18" id="U_kV">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">kV</UnitName>
         <UnitSymbol type="HTML">kV</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -112,7 +110,7 @@
           <EnumeratedRootUnit unit="volt" prefix="k"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_mm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mm</UnitName>
         <UnitSymbol type="HTML">mm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -124,7 +122,7 @@
           <EnumeratedRootUnit unit="metre" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_L2M-1" id="U_cm2.g-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">cm^2*g^-1</UnitName>
         <UnitSymbol type="HTML">cm
           <sup>2</sup> g
@@ -133,18 +131,12 @@
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
-              <mrow>
-                <mn>2</mn>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
+              <mn>2</mn>
             </msup>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">g</mi>
-              </mrow>
+              <mi mathvariant="normal">g</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -157,7 +149,7 @@
           <EnumeratedRootUnit unit="gram" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_L-2T-1J" id="U_mGy.s-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">mGy*s^-1</UnitName>
         <UnitSymbol type="HTML">mGy s
           <sup>−1</sup>
@@ -167,9 +159,7 @@
             <mi mathvariant="normal">mGy</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">s</mi>
-              </mrow>
+              <mi mathvariant="normal">s</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -182,9 +172,9 @@
           <EnumeratedRootUnit unit="second" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_um">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">um</UnitName>
-        <UnitSymbol type="HTML">m</UnitSymbol>
+        <UnitSymbol type="HTML">µm</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µm</mi>
@@ -193,8 +183,8 @@
         <RootUnits>
           <EnumeratedRootUnit unit="metre" prefix="u"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd30" id="U_NISTu27p10_3.u1e-3/1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L-3M" id="U_NISTu27p10_3.u1e-3/1">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">kilogram per cubic meter</UnitName>
         <UnitSymbol type="HTML">kg m
           <sup>−3</sup>
@@ -204,9 +194,7 @@
             <mi mathvariant="normal">kg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">m</mi>
-              </mrow>
+              <mi mathvariant="normal">m</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>3</mn>
@@ -219,7 +207,7 @@
           <EnumeratedRootUnit unit="metre" powerNumerator="-3"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_L2MM-1T-2I-1" id="U_J.C-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">J*C^-1</UnitName>
         <UnitSymbol type="HTML">J C
           <sup>−1</sup>
@@ -229,9 +217,7 @@
             <mi mathvariant="normal">J</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">C</mi>
-              </mrow>
+              <mi mathvariant="normal">C</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -243,8 +229,8 @@
           <EnumeratedRootUnit unit="joule"/>
           <EnumeratedRootUnit unit="coulomb" powerNumerator="-1"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd10" id="U_cm3">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L3" id="U_cm3">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">cm^3</UnitName>
         <UnitSymbol type="HTML">cm
           <sup>3</sup>
@@ -252,12 +238,8 @@
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
-              <mrow>
-                <mn>3</mn>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
+              <mn>3</mn>
             </msup>
           </math>
         </UnitSymbol>
@@ -265,7 +247,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="3"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd101" id="U_TBq">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">TBq</UnitName>
         <UnitSymbol type="HTML">TBq</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -277,7 +259,7 @@
           <EnumeratedRootUnit unit="becquerel" prefix="T"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_NISTu1">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">metre</UnitName>
         <UnitSymbol type="HTML">m</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -293,7 +275,7 @@
           <Time symbol="T" powerNumerator="-2"/>
         </Dimension><Dimension id="NISTd1">
         <Length symbol="L" powerNumerator="1"/>
-      </Dimension><Dimension id="NISTd51">
+      </Dimension><Dimension id="D_L-2M">
         <Length symbol="L" powerNumerator="-2"/>
         <Mass symbol="M" powerNumerator="1"/>
       </Dimension><Dimension id="NISTd18">
@@ -311,12 +293,15 @@
       </Dimension><Dimension id="NISTd30">
         <Length symbol="L" powerNumerator="-3"/>
         <Mass symbol="M" powerNumerator="1"/>
+      </Dimension><Dimension id="D_L-3M">
+        <Length symbol="L" powerNumerator="-3"/>
+        <Mass symbol="M" powerNumerator="1"/>
       </Dimension><Dimension id="D_L2MM-1T-2I-1">
         <Length symbol="L" powerNumerator="2"/>
         <Mass symbol="M" powerNumerator="-1"/>
         <Time symbol="T" powerNumerator="-2"/>
         <ElectricCurrent symbol="I" powerNumerator="-1"/>
-      </Dimension><Dimension id="NISTd10">
+      </Dimension><Dimension id="D_L3">
         <Length symbol="L" powerNumerator="3"/>
       </Dimension><Dimension id="NISTd101">
         <Time symbol="T" powerNumerator="-1"/>
@@ -1112,7 +1097,7 @@
 </ol>
 </clause>
 
-<clause id="_b1158f3d-3b62-6f35-3e7f-f21aa44874b6" obligation="normative">
+<clause id="_dfa6ddbb-c7b2-c129-2523-1418b16cd16c" obligation="normative">
 <title id="_42158a06-310f-c0fa-5ef2-5f0fe3956bf5">Comparison and calibration uncertainties</title>
 <p id="_0a1e0f69-65f1-07fc-71ff-c8c05e84698d">The uncertainties associated with dosimetry measurements made at the BIPM are analysed in accordance with the <em>Guide to the Expression of Uncertainty in Measurement</em> (JCGM 2008). The uncertainty budgets for the dosimetry standards are given in <xref target="table3"/>, <xref target="table6"/>, <xref target="table8"/> and <xref target="table9"/>. For comparisons, the BIPM standard uncertainties are combined with those associated with the primary or transfer chamber, taking correlation into account, to give the combined standard uncertainty of the comparison results. The detailed uncertainty budgets are given in the comparison report. For the calibration of national reference standards, the BIPM standard uncertainties are combined with the uncertainties associated with the chamber under calibration to give the combined standard uncertainty of the calibration coefficient. This value is given in the calibration certificate.</p>
 
@@ -1656,7 +1641,7 @@
 <p id="_0271d28e-e262-1568-0c9e-d293569583ab" align="center"><strong>Physical constants and correction factors used in the BIPM determination of the air-kerma rate</strong><fn id="_f85640d6-8721-74d5-30f3-65193a5ad2ae" reference="1"><p id="_fc579934-1999-a252-213b-2c4e25d547b6">Details on the determination of the air-kerma rate are given in Boutillon <em>et al</em> (1969); correction factors are described by Burns (2004) and Burns <em>et al</em> (2009) for the W-anode qualities and by Kessler et al (2010) for the Mo-anode qualities.</p>
 </fn></p>
 
-<p id="_fbd23b3b-567c-a60b-6703-1e48447719e8">Dry air density <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_91f65a95-049b-f96c-f538-2b540a1abebb">Dry air density <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mrow>
       <mo>(</mo>
@@ -1699,6 +1684,7 @@
           <mn>3</mn>
         </mrow>
       </msup>
+      
       
       
       
@@ -2658,7 +2644,7 @@
 
 <p id="_d7a3ec05-7900-12d4-1c35-ccf2e438f466" align="center"><strong>Estimated relative standard uncertainties in the BIPM determination of the air-kerma rate</strong></p>
 
-<table id="_5f39347d-4303-12de-ed9b-d70d71816ddd" anchor="table3">
+<table id="_fd4b39dd-cc4c-9102-1703-f6551915606b" anchor="table3">
 <name id="_3f8afa45-a2ba-14c9-6b05-2983c8903d7c">X-rays (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>10</mn>
@@ -2730,7 +2716,7 @@
   </mstyle>
 </math><asciimath>u_("i")</asciimath></stem></td>
 </tr><tr id="_ecdacf94-86f8-07d5-5190-9ec4434a4602"><td id="_6b19aa26-193b-d552-4f39-033f13eeaff8" colspan="4" valign="top" align="left"><em>Physical constants</em></td>
-</tr><tr id="_7f450fd9-5f1d-1550-c444-2fc8e6c2fa7f"><td id="_c11c0954-d289-7c1e-dfcb-6f779f2a2a63" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_7cbc0fe6-42f8-ea93-7067-aca4b110e0a2"><td id="_c11c0954-d289-7c1e-dfcb-6f779f2a2a63" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -2740,7 +2726,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(rho)_("a")</asciimath></stem></td>
-<td id="_bc2670c6-e7dd-81cf-af49-410936bdd942" valign="top" align="left">dry air density (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_d838b589-17ee-aa58-af3b-c629da06aa65" valign="top" align="left">dry air density (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -2781,6 +2767,7 @@
           <mn>3</mn>
         </mrow>
       </msup>
+      
       
       
       
@@ -3306,7 +3293,7 @@
 </fn> and absorbed-dose-to-water rate<fn id="_352259b1-c27b-3b9c-c306-afccefde4d8d" reference="3"><p id="_9fd9fdbe-00fa-458a-0230-7b7f56d03345">Details on the determination of the absorbed-dose-to-water rate are described by Burns (2017).</p>
 </fn> and conversion factor from air kerma to absorbed dose to water</strong></p>
 
-<p id="_043bedd6-3fe4-b821-8a3b-ce6187e2a570">Dry air density <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_86f4b3ca-0668-a7d5-8b23-5b5f3cf862b0">Dry air density <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mrow>
       <mo>(</mo>
@@ -3349,6 +3336,7 @@
           <mn>3</mn>
         </mrow>
       </msup>
+      
       
       
       
@@ -3712,7 +3700,7 @@
 
 <p id="_5c3720ab-7215-cb61-3cec-0aeeb0989915" align="center"><strong>Estimated relative standard uncertainties in the BIPM determination of the air-kerma rate and absorbed-dose-to-water rate</strong></p>
 
-<table id="_a48975f5-231a-83e7-6872-0496f44ccfef" anchor="table6">
+<table id="_c8330876-b49c-4d67-e4e9-3742118f4ddc" anchor="table6">
 <name id="_a36f4e76-5e0a-56b7-f94e-8240b2b98989">X-rays (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>100</mn>
@@ -3783,7 +3771,7 @@
   </mstyle>
 </math><asciimath>u_("i")</asciimath></stem></td>
 </tr><tr id="_b0575ece-0032-4745-45dc-7746b7661da5"><td id="_9064f3b0-d046-d521-bd06-90380bc5df40" colspan="4" valign="top" align="left"><em>Physical constants</em></td>
-</tr><tr id="_04b0e128-1517-177c-3def-66363023eff0"><td id="_0738e671-2214-d99d-94a0-6ae47e8bd1b1" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_283c6cfa-955f-b20c-327d-e2b18136ada9"><td id="_0738e671-2214-d99d-94a0-6ae47e8bd1b1" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -3793,7 +3781,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(rho)_("a")</asciimath></stem></td>
-<td id="_f95ed327-6a32-0fe9-7fd1-272b91ed2d0c" valign="top" align="left">dry air density (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_3a89de99-ab3c-8287-ee07-e68fbc993057" valign="top" align="left">dry air density (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -3834,6 +3822,7 @@
           <mn>3</mn>
         </mrow>
       </msup>
+      
       
       
       
@@ -4287,7 +4276,7 @@
 <p id="_93bc8875-fcad-a65f-7554-528245d072ef" align="center"><strong>Physical constants and correction factors used in the BIPM determination of the air-kerma rate<fn id="_fb443564-62e5-9560-845e-3e831fcf3ee3" reference="4"><p id="_ab0094a9-1593-70eb-e3ee-aab96a0a938e">Details on the determination of air kerma are described by Boutillon <em>et al</em> (1973), Burns (2006), Burns <em>et al</em> (2007) and the re-evaluation of the standard is described in Burns and Kessler (2018).</p>
 </fn>, and their estimated relative standard uncertainties</strong></p>
 
-<table id="_186760ca-12e3-bd39-7445-af59037ed062" anchor="table8">
+<table id="_46e18ac9-406f-49b1-95bf-718c13630176" anchor="table8">
 <name id="_5ad46869-2931-e86b-3173-127ce35958b7"><sup>60</sup>Co gamma radiation</name>
 <tbody><tr id="_dc63ea5e-749f-2849-f173-3fa42b45b5b4"><td id="_f2d7b876-54bd-b5a5-379b-0840a431ff29" valign="top" rowspan="2" align="left">Symbol</td>
 <td id="_82db8bfa-0769-04d1-7806-674a93c3ad63" valign="top" rowspan="2" align="left">Parameter / unit</td>
@@ -4333,7 +4322,7 @@
   </mstyle>
 </math><asciimath>u_("i")</asciimath></stem></td>
 </tr><tr id="_e46c5d03-791f-97cb-d486-e60799c8c851"><td id="_3737ba26-2984-f623-531f-d37f70ad32cb" colspan="6" valign="top" align="left"><em>Physical constants</em></td>
-</tr><tr id="_3dd75590-7593-a000-e4be-86a6292e0385"><td id="_8bf8d58a-3699-ffcc-f873-6dcab6fb09ab" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_4ae08e61-7848-c196-9979-1a425bc311b7"><td id="_8bf8d58a-3699-ffcc-f873-6dcab6fb09ab" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -4343,7 +4332,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(rho)_("a")</asciimath></stem></td>
-<td id="_c8f68c0b-039c-38fb-92fb-0ddfbd526039" valign="top" align="left">dry air density (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_40feada0-6658-b924-bf92-d198f392ec4d" valign="top" align="left">dry air density (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4384,6 +4373,7 @@
           <mn>3</mn>
         </mrow>
       </msup>
+      
       
       
       
@@ -4680,7 +4670,7 @@
   </mstyle>
 </math><asciimath>5 "unitsml(g*cm^-2)"</asciimath></stem>, and their estimated relative standard uncertainties</strong></p>
 
-<table id="_00bf6736-1a81-f3a1-3c04-b3ed982e5f13" anchor="table9">
+<table id="_c11d1c6b-ad10-edfc-b197-6b2f468dfaed" anchor="table9">
 <name id="_5574aa43-f878-efec-5d39-5718170d5d1b"><sup>60</sup>Co gamma radiation</name>
 <tbody><tr id="_a2de43e5-fc57-4564-6fad-7fa001a27c3e"><td id="_ad94086a-38b0-3861-046f-732ad83adfdc" valign="top" rowspan="2" align="left">Symbol</td>
 <td id="_bc297584-f2be-434d-cd3f-c628aae9321b" valign="top" rowspan="2" align="left">Parameter / unit</td>
@@ -4727,7 +4717,7 @@
   </mstyle>
 </math><asciimath>u_("i")</asciimath></stem></td>
 </tr><tr id="_8d8602a4-28b8-04e9-d716-d0ceaf4be459"><td id="_e1ef4036-0340-1f00-c64a-7444934b2d19" colspan="5" valign="top" align="left"><em>Physical constants</em></td>
-</tr><tr id="_8d9cc8e3-4352-871f-028d-b1afc633ed1e"><td id="_96c302a6-68c2-ee63-1137-8c49481ef15d" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_15044e4e-f5f2-0c85-6e0c-4c5619efa3f4"><td id="_96c302a6-68c2-ee63-1137-8c49481ef15d" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -4737,7 +4727,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(rho)_"a"</asciimath></stem></td>
-<td id="_9fc0b056-0028-9011-3a02-e88777560746" valign="top" align="left">dry air density (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_0c880387-0835-8b5a-e665-2a066af7e094" valign="top" align="left">dry air density (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4785,6 +4775,7 @@
           <mn>3</mn>
         </mrow>
       </msup>
+      
       
       
       

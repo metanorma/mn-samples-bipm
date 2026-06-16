@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.8.3" schema-version="v2.1.5" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.8.7" schema-version="v2.1.6" flavor="bipm">
 <bibdata type="standard">
 <title language="en" type="title-main">Procedures for Accurately Diluting and Dispensing Radioactive Solutions</title>
-<docidentifier primary="true" type="BIPM">BIPM BIPM-1</docidentifier><docnumber>BIPM-1</docnumber><contributor><role type="author"/><organization>
+<docidentifier primary="true" type="BIPM">BIPM BIPM-1</docidentifier><docnumber>BIPM-1</docnumber><date type="updated"><on>1975</on></date><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"><description>committee</description></role><organization>
 <name>Bureau International des Poids et Mesures</name>
@@ -12,11 +12,11 @@
 <name language="fr">Comité Consultatif des Rayonnements Ionisants</name>
 <identifier>CCRI</identifier><identifier type="full">CCRI</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>1975</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>1975</from><owner><organization>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version>1975</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>1975</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>monographie</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-1</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
 <UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd2" id="U_mg">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mg</UnitName>
         <UnitSymbol type="HTML">mg</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -28,9 +28,9 @@
           <EnumeratedRootUnit unit="gram" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd2" id="U_ug">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">ug</UnitName>
-        <UnitSymbol type="HTML">g</UnitSymbol>
+        <UnitSymbol type="HTML">µg</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µg</mi>
@@ -40,7 +40,7 @@
           <EnumeratedRootUnit unit="gram" prefix="u"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd2" id="U_NISTu27">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">gram</UnitName>
         <UnitSymbol type="HTML">g</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -49,7 +49,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#D_L-1Theta" id="U_K.m-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">K*m^-1</UnitName>
         <UnitSymbol type="HTML">K m
           <sup>−1</sup>
@@ -59,9 +59,7 @@
             <mi mathvariant="normal">K</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">m</mi>
-              </mrow>
+              <mi mathvariant="normal">m</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -74,7 +72,7 @@
           <EnumeratedRootUnit unit="metre" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu23">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">degree Celsius</UnitName>
         <UnitSymbol type="HTML">°C</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -83,9 +81,9 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#D_M0" id="U_ug.g-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">ug*g^-1</UnitName>
-        <UnitSymbol type="HTML">g g
+        <UnitSymbol type="HTML">µg g
           <sup>−1</sup>
         </UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -93,9 +91,7 @@
             <mi mathvariant="normal">µg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">g</mi>
-              </mrow>
+              <mi mathvariant="normal">g</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -108,7 +104,7 @@
           <EnumeratedRootUnit unit="gram" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd6" id="U_NISTu6">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mole</UnitName>
         <UnitSymbol type="HTML">mol</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -116,8 +112,8 @@
             <mi mathvariant="normal">mol</mi>
           </math>
         </UnitSymbol>
-      </Unit><Unit dimensionURL="#NISTd10" id="U_dm3">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L3" id="U_dm3">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">dm^3</UnitName>
         <UnitSymbol type="HTML">dm
           <sup>3</sup>
@@ -125,20 +121,16 @@
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">dm</mi>
-              </mrow>
-              <mrow>
-                <mn>3</mn>
-              </mrow>
+              <mi mathvariant="normal">dm</mi>
+              <mn>3</mn>
             </msup>
           </math>
         </UnitSymbol>
         <RootUnits>
           <EnumeratedRootUnit unit="metre" prefix="d" powerNumerator="3"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd10" id="U_cm3">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L3" id="U_cm3">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">cm^3</UnitName>
         <UnitSymbol type="HTML">cm
           <sup>3</sup>
@@ -146,12 +138,8 @@
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
-              <mrow>
-                <mn>3</mn>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
+              <mn>3</mn>
             </msup>
           </math>
         </UnitSymbol>
@@ -159,8 +147,8 @@
           <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="3"/>
         </RootUnits>
       </Unit><Unit id="U_mg.h-1">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">mg*h^-1</UnitName>
         <UnitSymbol type="HTML">mg h
           <sup>−1</sup>
@@ -170,9 +158,7 @@
             <mi mathvariant="normal">mg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">h</mi>
-              </mrow>
+              <mi mathvariant="normal">h</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -185,7 +171,7 @@
           <EnumeratedRootUnit unit="hour" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_mm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mm</UnitName>
         <UnitSymbol type="HTML">mm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -197,7 +183,7 @@
           <EnumeratedRootUnit unit="metre" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_cm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">cm</UnitName>
         <UnitSymbol type="HTML">cm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -208,8 +194,8 @@
         <RootUnits>
           <EnumeratedRootUnit unit="metre" prefix="c"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd30" id="U_g.cm-3">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L-3M" id="U_g.cm-3">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">g*cm^-3</UnitName>
         <UnitSymbol type="HTML">g cm
           <sup>−3</sup>
@@ -219,9 +205,7 @@
             <mi mathvariant="normal">g</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>3</mn>
@@ -234,7 +218,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="-3"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-            <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+            <UnitSystem name="SI" type="SI_base" lang="en"/>
             <UnitName lang="en">kelvin</UnitName>
             <UnitSymbol type="HTML">K</UnitSymbol>
             <UnitSymbol type="MathMl">
@@ -243,7 +227,7 @@
               </math>
             </UnitSymbol>
           </Unit><Unit id="U_keV">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">keV</UnitName>
         <UnitSymbol type="HTML">keV</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -255,9 +239,9 @@
           <EnumeratedRootUnit unit="electronvolt" prefix="k"/>
         </RootUnits>
       </Unit></UnitSet><QuantitySet><Quantity id="NISTq2" quantityType="base" dimensionURL="#NISTd2">
-        <QuantityName lang="en-US">mass</QuantityName>
+        <QuantityName lang="en">mass</QuantityName>
       </Quantity><Quantity id="NISTq6" quantityType="base" dimensionURL="#NISTd6">
-        <QuantityName lang="en-US">amount of substance</QuantityName>
+        <QuantityName lang="en">amount of substance</QuantityName>
       </Quantity></QuantitySet><DimensionSet><Dimension id="NISTd2">
         <Mass symbol="M" powerNumerator="1"/>
       </Dimension><Dimension id="D_L-1Theta">
@@ -269,11 +253,11 @@
         <Mass symbol="M" powerNumerator="0"/>
       </Dimension><Dimension id="NISTd6">
         <AmountOfSubstance symbol="N" powerNumerator="1"/>
-      </Dimension><Dimension id="NISTd10">
+      </Dimension><Dimension id="D_L3">
         <Length symbol="L" powerNumerator="3"/>
       </Dimension><Dimension id="NISTd1">
         <Length symbol="L" powerNumerator="1"/>
-      </Dimension><Dimension id="NISTd30">
+      </Dimension><Dimension id="D_L-3M">
         <Length symbol="L" powerNumerator="-3"/>
         <Mass symbol="M" powerNumerator="1"/>
       </Dimension></DimensionSet><PrefixSet><Prefix prefixBase="10" prefixPower="-3" id="NISTp10_-3">

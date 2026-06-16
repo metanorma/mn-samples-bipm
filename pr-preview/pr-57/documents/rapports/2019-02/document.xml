@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.8.3" schema-version="v2.1.5" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.8.7" schema-version="v2.1.6" flavor="bipm">
 <bibdata type="standard">
 <title language="en" type="title-main">Internal Standard Reference Data for qNMR: 3,5-Bis(trifluoromethyl)benzoic Acid [ISRD-05]</title>
-<docidentifier primary="true" type="BIPM">BIPM BIPM-2019/02</docidentifier><docnumber>BIPM-2019/02</docnumber><contributor><role type="author"/><organization>
+<docidentifier primary="true" type="BIPM">BIPM BIPM-2019/02</docidentifier><docnumber>BIPM-2019/02</docnumber><date type="updated"><on>2019-03-13</on></date><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"/><person>
 <name><completename>Steven Westwood</completename></name>
@@ -48,12 +48,11 @@
 <name language="fr">Bureau International des Poids et Mesures</name>
 <identifier>BIPM</identifier><identifier type="full">BIPM</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2019-03-13</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2019</from><owner><organization>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version>2019-03-13</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2019</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem/>
-</relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2019/02</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem/></relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2019/02</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
 <UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#D_M0" id="U_mg.g-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">mg*g^-1</UnitName>
         <UnitSymbol type="HTML">mg g
           <sup>−1</sup>
@@ -63,9 +62,7 @@
             <mi mathvariant="normal">mg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">g</mi>
-              </mrow>
+              <mi mathvariant="normal">g</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -78,8 +75,8 @@
           <EnumeratedRootUnit unit="gram" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit id="U_mg.mL-1">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">mg*mL^-1</UnitName>
         <UnitSymbol type="HTML">mg mL
           <sup>−1</sup>
@@ -89,9 +86,7 @@
             <mi mathvariant="normal">mg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mL</mi>
-              </mrow>
+              <mi mathvariant="normal">mL</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -104,7 +99,7 @@
           <EnumeratedRootUnit unit="litre" prefix="m" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_MN-1" id="U_g.mol-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">g*mol^-1</UnitName>
         <UnitSymbol type="HTML">g mol
           <sup>−1</sup>
@@ -114,9 +109,7 @@
             <mi mathvariant="normal">g</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mol</mi>
-              </mrow>
+              <mi mathvariant="normal">mol</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -129,7 +122,7 @@
           <EnumeratedRootUnit unit="mole" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu23">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">degree Celsius</UnitName>
         <UnitSymbol type="HTML">°C</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -137,8 +130,8 @@
             <mi mathvariant="normal">°C</mi>
           </math>
         </UnitSymbol>
-      </Unit><Unit dimensionURL="#NISTd30" id="U_NISTu27p10_3.u1e-3/1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L-3M" id="U_NISTu27p10_3.u1e-3/1">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">kilogram per cubic meter</UnitName>
         <UnitSymbol type="HTML">kg m
           <sup>−3</sup>
@@ -148,9 +141,7 @@
             <mi mathvariant="normal">kg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">m</mi>
-              </mrow>
+              <mi mathvariant="normal">m</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>3</mn>
@@ -163,7 +154,7 @@
           <EnumeratedRootUnit unit="metre" powerNumerator="-3"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd101" id="U_MHz">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">MHz</UnitName>
         <UnitSymbol type="HTML">MHz</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -175,7 +166,7 @@
           <EnumeratedRootUnit unit="hertz" prefix="M"/>
         </RootUnits>
       </Unit><Unit id="U_NISTu400">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">parts per million</UnitName>
         <UnitSymbol type="HTML">ppm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -184,7 +175,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd101" id="U_NISTu31">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">hertz</UnitName>
         <UnitSymbol type="HTML">Hz</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -193,9 +184,9 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd2" id="U_ug">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">ug</UnitName>
-        <UnitSymbol type="HTML">g</UnitSymbol>
+        <UnitSymbol type="HTML">µg</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µg</mi>
@@ -205,7 +196,7 @@
           <EnumeratedRootUnit unit="gram" prefix="u"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd2" id="U_mg">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mg</UnitName>
         <UnitSymbol type="HTML">mg</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -217,7 +208,7 @@
           <EnumeratedRootUnit unit="gram" prefix="m"/>
         </RootUnits>
       </Unit><Unit id="U_NISTu149">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">degree (degree of arc)</UnitName>
         <UnitSymbol type="HTML">°</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -226,7 +217,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd3" id="U_NISTu3">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">second</UnitName>
         <UnitSymbol type="HTML">s</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -235,8 +226,8 @@
           </math>
         </UnitSymbol>
       </Unit><Unit id="U_Hz.pt-1">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">Hz*pt^-1</UnitName>
         <UnitSymbol type="HTML">Hz pt
           <sup>−1</sup>
@@ -246,9 +237,7 @@
             <mi mathvariant="normal">Hz</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">pt</mi>
-              </mrow>
+              <mi mathvariant="normal">pt</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -261,7 +250,7 @@
           <EnumeratedRootUnit unit="tonne" prefix="p" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_mm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mm</UnitName>
         <UnitSymbol type="HTML">mm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -273,7 +262,7 @@
           <EnumeratedRootUnit unit="metre" prefix="m"/>
         </RootUnits>
       </Unit><Unit id="U_NISTu365">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">milliliter</UnitName>
         <UnitSymbol type="HTML">mL</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -285,9 +274,9 @@
           <EnumeratedRootUnit unit="litre" prefix="m"/>
         </RootUnits>
       </Unit><Unit id="U_uL">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">uL</UnitName>
-        <UnitSymbol type="HTML">L</UnitSymbol>
+        <UnitSymbol type="HTML">µL</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µL</mi>
@@ -297,7 +286,7 @@
           <EnumeratedRootUnit unit="litre" prefix="u"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">kelvin</UnitName>
         <UnitSymbol type="HTML">K</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -306,15 +295,15 @@
           </math>
         </UnitSymbol>
       </Unit></UnitSet><QuantitySet><Quantity id="NISTq186" quantityType="base" dimensionURL="#NISTd85">
-        <QuantityName lang="en-US">mass fraction</QuantityName>
-        <QuantityName lang="en-US">mole fraction</QuantityName>
+        <QuantityName lang="en">mass fraction</QuantityName>
+        <QuantityName lang="en">mole fraction</QuantityName>
       </Quantity><Quantity id="NISTq45" quantityType="base" dimensionURL="#NISTd24">
-        <QuantityName lang="en-US">frequency</QuantityName>
+        <QuantityName lang="en">frequency</QuantityName>
       </Quantity><Quantity id="NISTq9" quantityType="base" dimensionURL="#NISTd9">
-        <QuantityName lang="en-US">plane angle</QuantityName>
-        <QuantityName lang="en-US">angle</QuantityName>
+        <QuantityName lang="en">plane angle</QuantityName>
+        <QuantityName lang="en">angle</QuantityName>
       </Quantity><Quantity id="NISTq10" quantityType="base" dimensionURL="#NISTd10">
-        <QuantityName lang="en-US">volume</QuantityName>
+        <QuantityName lang="en">volume</QuantityName>
       </Quantity></QuantitySet><DimensionSet><Dimension id="D_M0">
         <Mass symbol="M" powerNumerator="0"/>
       </Dimension><Dimension id="D_MN-1">
@@ -323,6 +312,9 @@
       </Dimension><Dimension id="NISTd5">
         <ThermodynamicTemperature symbol="Theta" powerNumerator="1"/>
       </Dimension><Dimension id="NISTd30">
+        <Length symbol="L" powerNumerator="-3"/>
+        <Mass symbol="M" powerNumerator="1"/>
+      </Dimension><Dimension id="D_L-3M">
         <Length symbol="L" powerNumerator="-3"/>
         <Mass symbol="M" powerNumerator="1"/>
       </Dimension><Dimension id="NISTd101">
@@ -851,9 +843,9 @@
 </dl>
 </clause>
 
-<clause id="_efb05d8c-0a41-1018-fb72-a0d167af7e68" obligation="normative">
+<clause id="_764a9cc8-230e-34f8-490a-5d69ffceba93" obligation="normative">
 <title id="_4aa3e1a7-89f3-35f1-1677-fa0514e947a3">Properties of BTFMBA</title>
-<clause id="_a9e10b55-8b24-a1ef-0f2a-76536bb1f6b3" obligation="normative">
+<clause id="_67957573-2163-0c51-9cd9-e0111ccc7a8e" obligation="normative">
 <title id="_4566cd4b-3a29-0316-f267-1d04d4badeb7">Physical Properties</title>
 <dl id="_f9044bb9-c3e9-64b4-241e-c8391ce8e89a"><dt>IUPAC Name</dt>
 <dd id="_c58fa59b-df90-584a-d001-8d0ce7344263"><p id="_1c465bd9-6c11-b221-3a2f-60583c2556dd">3,5-Bis(trifluromethyl)benzoic acid</p>
@@ -865,7 +857,7 @@
 
 <figure id="_b3d25fc8-9de3-b6c6-98f6-2969aa4b3cbc" unnumbered="true"><image id="_bfb25608-8b89-7692-a87c-d1feedc402bc" src="data:image/png;base64,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" mimetype="image/png" height="auto" width="auto" filename="images/img02.png"/></figure>
 
-<dl id="_56ed4cf6-54e1-d10b-f98c-ce0b570c04a2"><dt>CAS Registry Number</dt>
+<dl id="_0912c36d-d36f-e70b-ec44-9417f05e7922"><dt>CAS Registry Number</dt>
 <dd id="_181d63e9-19f5-8eeb-3f3e-01169d985ec0"><p id="_45fb966d-5309-e932-4e70-9a2343f107ea">725-89-3</p>
 </dd>
 <dt>Molecular Formula</dt>
@@ -936,7 +928,7 @@
 </math><asciimath>142 "unitsml(degC)"</asciimath></stem></p>
 </dd>
 <dt>Density</dt>
-<dd id="_8925a18f-2f31-bde5-114d-0890a4d1c2c2"><p id="_8d3e991b-1775-f653-0249-5924321ea0ca"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_394197b6-78ce-f6cb-76eb-d5f099501ebd"><p id="_8d393996-9fef-4b74-939c-1e61a833d4eb"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1.72</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -954,6 +946,7 @@
           <mn>3</mn>
         </mrow>
       </msup>
+      
       
       
       
@@ -2828,7 +2821,7 @@
 </clause>
 
 
-</sections><bibliography><references id="_2e092d96-8c34-a738-697a-cb260d9d0d03" normative="false" obligation="informative">
+</sections><bibliography><references id="_6b39ba9b-8dea-d6a9-f9f7-eb8fa57e12eb" normative="false" obligation="informative">
 <title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="jungnickel" id="_3858bd05-5c0c-7117-e4dd-ebfaa4e4e952">
   <formattedref format="application/x-isodoc+xml">Jungnickel, J.; Forbes, J.; <em>Anal. Chem.</em> 1963, <strong>35</strong>, 938–942</formattedref>
   <docidentifier type="metanorma">[1]</docidentifier>
@@ -2864,28 +2857,41 @@
   <docidentifier type="metanorma">[7]</docidentifier>
   <language>en</language>
   <script>Latn</script>
-</bibitem><bibitem id="_2650335e-e0b7-9a4c-ccb4-3b03cb4a913d" type="standard" schema-version="v1.2.9" anchor="iso17511">
-  <fetched>2026-04-16</fetched>
+</bibitem><bibitem id="_5e05118a-2e3a-e23a-27b1-c162a53c4158" type="standard" schema-version="v1.5.6" anchor="iso17511">
+  <fetched>2026-06-16</fetched>
   
-<title type="title-intro" format="text/plain" language="en" script="Latn">In vitro diagnostic medical devices</title>
+<title language="en" script="Latn" type="title-intro">In vitro diagnostic medical devices</title>
 
   
-<title type="title-main" format="text/plain" language="en" script="Latn">Measurement of quantities in  biological samples</title>
+<title language="en" script="Latn" type="title-main">Measurement of quantities in  biological samples</title>
 
   
-<title type="title-part" format="text/plain" language="en" script="Latn">Metrological traceability of values assigned to calibrators and control materials</title>
+<title language="en" script="Latn" type="title-part">Metrological traceability of values assigned to calibrators and control materials</title>
 
   
-<title type="main" format="text/plain" language="en" script="Latn">In vitro diagnostic medical devices — Measurement of quantities in  biological samples — Metrological traceability of values assigned to calibrators and control materials</title>
+<title language="en" script="Latn" type="main">In vitro diagnostic medical devices — Measurement of quantities in  biological samples — Metrological traceability of values assigned to calibrators and control materials</title>
+
+  
+<title language="fr" script="Latn" type="title-intro">Dispositifs médicaux de diagnostic in vitro</title>
+
+  
+<title language="fr" script="Latn" type="title-main">Mesurage des grandeurs dans des échantillons d’origine biologique</title>
+
+  
+<title language="fr" script="Latn" type="title-part">Traçabilité métrologique des valeurs attribuées aux agents d’étalonnage et aux matériaux de contrôle</title>
+
+  
+<title language="fr" script="Latn" type="main">Dispositifs médicaux de diagnostic in vitro — Mesurage des grandeurs dans des échantillons d’origine biologique — Traçabilité métrologique des valeurs attribuées aux agents d’étalonnage et aux matériaux de contrôle</title>
 
   <uri type="src">https://www.iso.org/standard/30716.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:30716:en</uri>
   <uri type="rss">https://www.iso.org/contents/data/standard/03/07/30716.detail.rss</uri>
   <docidentifier type="ISO" primary="true">ISO 17511:2003</docidentifier><docidentifier type="metanorma">[8]</docidentifier>
   <docidentifier type="iso-reference">ISO 17511:2003(E)</docidentifier>
   <docidentifier type="URN">urn:iso:std:iso:17511:stage-95.99</docidentifier>
   <docnumber>17511</docnumber>
   <date type="published">
-    <on>2003-08</on>
+    <on>2003-08-22</on>
   </date>
   <contributor>
     <role type="publisher"/>
@@ -2897,13 +2903,27 @@
       <uri>www.iso.org</uri>
     </organization>
   </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <subdivision type="technical-committee" subtype="TC">
+        
+<name>Medical laboratories and in vitro diagnostic systems</name>
+
+        <identifier>ISO/TC 212</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
   <edition>1</edition>
   <language>en</language>
-  <language>fr</language>
   <script>Latn</script>
-  <abstract format="text/plain" language="en" script="Latn">ISO 17511:2003 specifies how to assure the metrological traceability of values assigned to calibrators and control materials intended to establish or verify trueness of measurement. The calibrators and control materials are those provided by the manufacturers as part of, or to be used together with, in vitro diagnostic medical devices.
-External quality assessment (survey) samples, with proven commutability, whose values have been assigned by means of internationally agreed reference measurement systems or internationally agreed conventional reference measurement systems fall within the scope of ISO 17511:2003.
-ISO 17511:2003 is not applicable to control materials that do not have an assigned value and are used only for assessing the precision of a measurement procedure, either its repeatability or reproducibility (precision control materials); control materials intended for intralaboratory quality control purposes and supplied with intervals of suggested acceptable values, each interval obtained by interlaboratory consensus with respect to one specified measurement procedure, and with limiting values that are not metrologically traceable; correlation between results of two measurement procedures at the same metrological level, purporting to measure the same quantity, because such “horizontal” correlation does not provide metrological traceability; calibration derived from correlation between the results of two measurement procedures at different metrological levels, but with quantities having analytes of different characteristics; metrological traceability of routine results to the product calibrator and their relations to any medical discrimination limit; and properties involving nominal scales, i.e. where no magnitude is involved (e.g. identification of blood cells).</abstract>
+  <abstract language="en" script="Latn">ISO 17511:2003 specifies how to assure the metrological traceability of values assigned to calibrators and control materials intended to establish or verify trueness of measurement. The calibrators and control materials are those provided by the manufacturers as part of, or to be used together with, in vitro diagnostic medical devices. External quality assessment (survey) samples, with proven commutability, whose values have been assigned by means of internationally agreed reference measurement systems or internationally agreed conventional reference measurement systems fall within the scope of ISO 17511:2003. ISO 17511:2003 is not applicable to control materials that do not have an assigned value and are used only for assessing the precision of a measurement procedure, either its repeatability or reproducibility (precision control materials); control materials intended for intralaboratory quality control purposes and supplied with intervals of suggested acceptable values, each interval obtained by interlaboratory consensus with respect to one specified measurement procedure, and with limiting values that are not metrologically traceable; correlation between results of two measurement procedures at the same metrological level, purporting to measure the same quantity, because such “horizontal” correlation does not provide metrological traceability; calibration derived from correlation between the results of two measurement procedures at different metrological levels, but with quantities having analytes of different characteristics; metrological traceability of routine results to the product calibrator and their relations to any medical discrimination limit; and properties involving nominal scales, i.e. where no magnitude is involved (e.g. identification of blood cells).</abstract>
   <status>
     <stage>95</stage>
     <substage>99</substage>
@@ -2918,16 +2938,6 @@ ISO 17511:2003 is not applicable to control materials that do not have an assign
       </organization>
     </owner>
   </copyright>
-  <relation type="updates">
-    <bibitem type="standard">
-      <formattedref format="text/plain">ISO 17511:2020</formattedref>
-      <docidentifier type="ISO" primary="true">ISO 17511:2020</docidentifier>
-      <date type="circulated">
-        <on>2020-04-24</on>
-      </date>
-    </bibitem>
-
-  </relation>
   <place>
     <city>Geneva</city>
   </place>
@@ -3041,23 +3051,29 @@ ISO 17511:2003 is not applicable to control materials that do not have an assign
   <docidentifier type="metanorma">[30]</docidentifier>
   <language>en</language>
   <script>Latn</script>
-</bibitem><bibitem id="_ec960bdd-2421-cbc7-0045-7156d8930008" type="standard" schema-version="v1.2.9" anchor="iso17034">
-  <fetched>2026-04-16</fetched>
+</bibitem><bibitem id="_ac9c81ab-5792-c8ec-4ba0-5755b0db0f64" type="standard" schema-version="v1.5.6" anchor="iso17034">
+  <fetched>2026-06-16</fetched>
   
-<title type="title-main" format="text/plain" language="en" script="Latn">General requirements for the competence of reference material producers</title>
+<title language="en" script="Latn" type="title-main">General requirements for the competence of reference material producers</title>
 
   
-<title type="main" format="text/plain" language="en" script="Latn">General requirements for the competence of reference material producers</title>
+<title language="en" script="Latn" type="main">General requirements for the competence of reference material producers</title>
+
+  
+<title language="fr" script="Latn" type="title-main">Exigences générales pour la compétence des producteurs de matériaux de référence</title>
+
+  
+<title language="fr" script="Latn" type="main">Exigences générales pour la compétence des producteurs de matériaux de référence</title>
 
   <uri type="src">https://www.iso.org/standard/29357.html</uri>
   <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:29357:en</uri>
   <uri type="rss">https://www.iso.org/contents/data/standard/02/93/29357.detail.rss</uri>
   <docidentifier type="ISO" primary="true">ISO 17034:2016</docidentifier><docidentifier type="metanorma">[31]</docidentifier>
   <docidentifier type="iso-reference">ISO 17034:2016(E)</docidentifier>
-  <docidentifier type="URN">urn:iso:std:iso:17034:stage-90.93</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:17034:stage-90.92</docidentifier>
   <docnumber>17034</docnumber>
   <date type="published">
-    <on>2016-11</on>
+    <on>2016-10-31</on>
   </date>
   <contributor>
     <role type="publisher"/>
@@ -3069,16 +3085,34 @@ ISO 17511:2003 is not applicable to control materials that do not have an assign
       <uri>www.iso.org</uri>
     </organization>
   </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <subdivision type="technical-committee" subtype="CASCO">
+        
+<name>ISO/CASCO</name>
+
+        <identifier>ISO/CASCO</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
   <edition>1</edition>
   <language>en</language>
+  <language>es</language>
   <language>fr</language>
+  <language>ru</language>
   <script>Latn</script>
-  <abstract format="text/plain" language="en" script="Latn">ISO 17034:2016 specifies general requirements for the competence and consistent operation of reference material producers.
-ISO 17034:2016 sets out the requirements in accordance with which reference materials are produced. It is intended to be used as part of the general quality assurance procedures of the reference material producer.
-ISO 17034:2016 covers the production of all reference materials, including certified reference materials.</abstract>
+  <script>Cyrl</script>
+  <abstract language="en" script="Latn">ISO 17034:2016 specifies general requirements for the competence and consistent operation of reference material producers. ISO 17034:2016 sets out the requirements in accordance with which reference materials are produced. It is intended to be used as part of the general quality assurance procedures of the reference material producer. ISO 17034:2016 covers the production of all reference materials, including certified reference materials.</abstract>
   <status>
     <stage>90</stage>
-    <substage>93</substage>
+    <substage>92</substage>
   </status>
   <copyright>
     <from>2016</from>
@@ -3091,9 +3125,19 @@ ISO 17034:2016 covers the production of all reference materials, including certi
     </owner>
   </copyright>
   <relation type="obsoletes">
-    <bibitem type="standard">
-      <formattedref format="text/plain">ISO Guide 34:2009</formattedref>
+    <bibitem>
+      <formattedref>ISO Guide 34:2009</formattedref>
       <docidentifier type="ISO" primary="true">ISO Guide 34:2009</docidentifier>
+      <date type="published">
+        <on>2009-11-20</on>
+      </date>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref>ISO/AWI 17034</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/AWI 17034</docidentifier>
     </bibitem>
 
   </relation>

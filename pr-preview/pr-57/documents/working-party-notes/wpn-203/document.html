@@ -615,7 +615,9 @@ main {
     background-color: #6C734A;
     color: white !important;
     cursor: pointer;
-    z-index: 100;
+    left: 0;
+    top: 0;
+    z-index: 103;
   }
   #toggle span {
     text-align: center;
@@ -1534,7 +1536,7 @@ pre.sourcecode .nt {
     <div class="doc-number">
       <span class="docnumber">BIPM 203</span>
       <span class="docnumber-separator">:</span>
-      <span class="docyear">1974 </span>
+      <span class="docyear">1974  (brouillon 11-1974)</span>
       
       
       <br />Date: 11-1974
@@ -1633,7 +1635,7 @@ pre.sourcecode .nt {
 
 
 
-</div><br /><div id="_6a388288-d990-98b1-0846-e4b2db0e74e7"><h1 id="_fbf21c5e-c3d7-43e4-a647-87962161bb39"><a class="anchor" href="#_6a388288-d990-98b1-0846-e4b2db0e74e7"></a><a class="header" href="#_6a388288-d990-98b1-0846-e4b2db0e74e7">1.  Densité d’intervalles pour deux oscillateurs superposés à largeurs finies d’impulsions</a></h1><p id="_f8874222-03ae-7e58-58ee-6e03bf648f81">Il ya quelque temps déjà que J.-J. Gostely (E.P.F.L., Lausanne) nous a communiqué le résultat d’une étude qui est en relation étroite avec la méthode dite des deux oscillateurs pour déterminer un temps mort. Mr Gostely a fort justement remarqué que la simple distribution rectangulaire pour la répartition d’intervalles, que l’on a pris l’habitude d’admettre, n’est valable que si l’on peut négliger la,largeur a des impulsions par rapport à la durée du temps mort <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</div><br /><div id="_6a388288-d990-98b1-0846-e4b2db0e74e7"><h1 id="_6b50518f-5ec0-4922-ae74-345522dde814"><a class="anchor" href="#_6a388288-d990-98b1-0846-e4b2db0e74e7"></a><a class="header" href="#_6a388288-d990-98b1-0846-e4b2db0e74e7">1.  Densité d’intervalles pour deux oscillateurs superposés à largeurs finies d’impulsions</a></h1><p id="_f8874222-03ae-7e58-58ee-6e03bf648f81">Il ya quelque temps déjà que J.-J. Gostely (E.P.F.L., Lausanne) nous a communiqué le résultat d’une étude qui est en relation étroite avec la méthode dite des deux oscillateurs pour déterminer un temps mort. Mr Gostely a fort justement remarqué que la simple distribution rectangulaire pour la répartition d’intervalles, que l’on a pris l’habitude d’admettre, n’est valable que si l’on peut négliger la,largeur a des impulsions par rapport à la durée du temps mort <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>τ</mi>
@@ -3213,24 +3215,51 @@ pre.sourcecode .nt {
       const jqToggle = $('#toggle');
       const animationSpeed = 'slow';
 
+      if(!jqNav.length || !jqToggle.length) {
+        return;
+      }
+
+      const navWidthExpanded = jqNav.outerWidth();
+      const bodyPaddingLeftExpanded =
+        parseFloat(jqBody.css('paddingLeft')) > 0 ?
+          jqBody.css('paddingLeft') : navWidthExpanded + 'px';
+      const expandedToggleLeft = navWidthExpanded + 'px';
+      let bandWidth = 0;
+
+      $('.document-stage-band:visible, .document-type-band:visible')
+        .each(function() {
+          const bounds = this.getBoundingClientRect();
+          bandWidth = Math.max(bandWidth, bounds.right);
+        });
+
+      const toggleWidth = jqToggle.outerWidth();
+      const collapsedToggleLeft = bandWidth + 'px';
+      const collapsedBodyPaddingLeft = bandWidth + toggleWidth + 'px';
+      jqToggle.css({
+        'left': jqNav.is(':visible') ? expandedToggleLeft : collapsedToggleLeft,
+        'top': '0px'
+      });
+
       jqToggle.on('click', function() {
         const isNavVisible = jqNav.is(':visible');
-        const fullNavWidth = jqNav.outerWidth();
-        const navLeft = isNavVisible ? '-' + fullNavWidth + 'px' : '0px';
-        const bodyMarginLeft = isNavVisible ? '0px' : fullNavWidth + 'px';
+        const navLeft = isNavVisible ? '-' + navWidthExpanded + 'px' : '0px';
+        const bodyPaddingLeft =
+          isNavVisible ? collapsedBodyPaddingLeft : bodyPaddingLeftExpanded;
+        const toggleLeft =
+          isNavVisible ? collapsedToggleLeft : expandedToggleLeft;
 
-        // Stop current animations
         jqNav.stop(true, true);
         jqBody.stop(true, true);
+        jqToggle.stop(true, true);
 
         if(!isNavVisible) {
-            jqNav.show();
+          jqNav.show();
         }
         jqNav.animate({'left': navLeft}, animationSpeed, function() {
           if(isNavVisible) {jqNav.hide()}
         });
-        jqBody.animate({'marginLeft': bodyMarginLeft}, animationSpeed);
-
+        jqBody.animate({'paddingLeft': bodyPaddingLeft}, animationSpeed);
+        jqToggle.animate({'left': toggleLeft}, animationSpeed);
       });
     })();
   </script>
@@ -3303,7 +3332,7 @@ pre.sourcecode .nt {
         if (!_this.box) {
           footnoteContent = $("[id='" + _this.footnoteId + "']").children().filter(":not('" + _this.options.hideFromContent + "')");
           linkOffset = _this.el.offset();
-          _this.box = $("<div />", {
+          _this.box = $("<div ></div>", {
             id: _this.options.boxId,
             html: footnoteContent.clone().find(_this.options.hideFromContent).remove().end(),
             css: {
@@ -3415,5 +3444,4 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 </script>
-
 </body></html>

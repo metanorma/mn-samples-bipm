@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.8.3" schema-version="v2.1.5" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.8.7" schema-version="v2.1.6" flavor="bipm">
 <bibdata type="standard">
 <title language="en" type="title-main">Internal Standard Reference Data for qNMR: 1,4-Bis(trimethylsilyl)benzene [ISRD-06]</title>
-<docidentifier primary="true" type="BIPM">BIPM BIPM-2019/03</docidentifier><docnumber>BIPM-2019/03</docnumber><contributor><role type="author"/><organization>
+<docidentifier primary="true" type="BIPM">BIPM BIPM-2019/03</docidentifier><docnumber>BIPM-2019/03</docnumber><date type="updated"><on>2019-03-13</on></date><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"/><person>
 <name><completename>Steven Westwood</completename></name>
@@ -48,12 +48,11 @@
 <name language="fr">Bureau International des Poids et Mesures</name>
 <identifier>BIPM</identifier><identifier type="full">BIPM</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2019-03-13</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2019</from><owner><organization>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version>2019-03-13</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2019</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem/>
-</relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2019/03</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem/></relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2019/03</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
 <UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#D_M0" id="U_mg.g-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">mg*g^-1</UnitName>
         <UnitSymbol type="HTML">mg g
           <sup>−1</sup>
@@ -63,9 +62,7 @@
             <mi mathvariant="normal">mg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">g</mi>
-              </mrow>
+              <mi mathvariant="normal">g</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -78,8 +75,8 @@
           <EnumeratedRootUnit unit="gram" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit id="U_mg.mL-1">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">mg*mL^-1</UnitName>
         <UnitSymbol type="HTML">mg mL
           <sup>−1</sup>
@@ -89,9 +86,7 @@
             <mi mathvariant="normal">mg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mL</mi>
-              </mrow>
+              <mi mathvariant="normal">mL</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -104,7 +99,7 @@
           <EnumeratedRootUnit unit="litre" prefix="m" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_MN-1" id="U_g.mol-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">g*mol^-1</UnitName>
         <UnitSymbol type="HTML">g mol
           <sup>−1</sup>
@@ -114,9 +109,7 @@
             <mi mathvariant="normal">g</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mol</mi>
-              </mrow>
+              <mi mathvariant="normal">mol</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -129,7 +122,7 @@
           <EnumeratedRootUnit unit="mole" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu23">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">degree Celsius</UnitName>
         <UnitSymbol type="HTML">°C</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -137,8 +130,8 @@
             <mi mathvariant="normal">°C</mi>
           </math>
         </UnitSymbol>
-      </Unit><Unit dimensionURL="#NISTd30" id="U_NISTu27p10_3.u1e-3/1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L-3M" id="U_NISTu27p10_3.u1e-3/1">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">kilogram per cubic meter</UnitName>
         <UnitSymbol type="HTML">kg m
           <sup>−3</sup>
@@ -148,9 +141,7 @@
             <mi mathvariant="normal">kg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">m</mi>
-              </mrow>
+              <mi mathvariant="normal">m</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>3</mn>
@@ -163,7 +154,7 @@
           <EnumeratedRootUnit unit="metre" powerNumerator="-3"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd101" id="U_MHz">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">MHz</UnitName>
         <UnitSymbol type="HTML">MHz</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -175,7 +166,7 @@
           <EnumeratedRootUnit unit="hertz" prefix="M"/>
         </RootUnits>
       </Unit><Unit id="U_NISTu400">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">parts per million</UnitName>
         <UnitSymbol type="HTML">ppm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -184,7 +175,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd101" id="U_NISTu31">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">hertz</UnitName>
         <UnitSymbol type="HTML">Hz</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -193,9 +184,9 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd2" id="U_ug">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">ug</UnitName>
-        <UnitSymbol type="HTML">g</UnitSymbol>
+        <UnitSymbol type="HTML">µg</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µg</mi>
@@ -205,7 +196,7 @@
           <EnumeratedRootUnit unit="gram" prefix="u"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd2" id="U_mg">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mg</UnitName>
         <UnitSymbol type="HTML">mg</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -217,7 +208,7 @@
           <EnumeratedRootUnit unit="gram" prefix="m"/>
         </RootUnits>
       </Unit><Unit id="U_NISTu149">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">degree (degree of arc)</UnitName>
         <UnitSymbol type="HTML">°</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -226,7 +217,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd3" id="U_NISTu3">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">second</UnitName>
         <UnitSymbol type="HTML">s</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -235,8 +226,8 @@
           </math>
         </UnitSymbol>
       </Unit><Unit id="U_Hz.pt-1">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">Hz*pt^-1</UnitName>
         <UnitSymbol type="HTML">Hz pt
           <sup>−1</sup>
@@ -246,9 +237,7 @@
             <mi mathvariant="normal">Hz</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">pt</mi>
-              </mrow>
+              <mi mathvariant="normal">pt</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -261,7 +250,7 @@
           <EnumeratedRootUnit unit="tonne" prefix="p" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_mm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mm</UnitName>
         <UnitSymbol type="HTML">mm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -273,7 +262,7 @@
           <EnumeratedRootUnit unit="metre" prefix="m"/>
         </RootUnits>
       </Unit><Unit id="U_NISTu365">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">milliliter</UnitName>
         <UnitSymbol type="HTML">mL</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -285,9 +274,9 @@
           <EnumeratedRootUnit unit="litre" prefix="m"/>
         </RootUnits>
       </Unit><Unit id="U_uL">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">uL</UnitName>
-        <UnitSymbol type="HTML">L</UnitSymbol>
+        <UnitSymbol type="HTML">µL</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µL</mi>
@@ -297,7 +286,7 @@
           <EnumeratedRootUnit unit="litre" prefix="u"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">kelvin</UnitName>
         <UnitSymbol type="HTML">K</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -306,15 +295,15 @@
           </math>
         </UnitSymbol>
       </Unit></UnitSet><QuantitySet><Quantity id="NISTq186" quantityType="base" dimensionURL="#NISTd85">
-        <QuantityName lang="en-US">mass fraction</QuantityName>
-        <QuantityName lang="en-US">mole fraction</QuantityName>
+        <QuantityName lang="en">mass fraction</QuantityName>
+        <QuantityName lang="en">mole fraction</QuantityName>
       </Quantity><Quantity id="NISTq45" quantityType="base" dimensionURL="#NISTd24">
-        <QuantityName lang="en-US">frequency</QuantityName>
+        <QuantityName lang="en">frequency</QuantityName>
       </Quantity><Quantity id="NISTq9" quantityType="base" dimensionURL="#NISTd9">
-        <QuantityName lang="en-US">plane angle</QuantityName>
-        <QuantityName lang="en-US">angle</QuantityName>
+        <QuantityName lang="en">plane angle</QuantityName>
+        <QuantityName lang="en">angle</QuantityName>
       </Quantity><Quantity id="NISTq10" quantityType="base" dimensionURL="#NISTd10">
-        <QuantityName lang="en-US">volume</QuantityName>
+        <QuantityName lang="en">volume</QuantityName>
       </Quantity></QuantitySet><DimensionSet><Dimension id="D_M0">
         <Mass symbol="M" powerNumerator="0"/>
       </Dimension><Dimension id="D_MN-1">
@@ -323,6 +312,9 @@
       </Dimension><Dimension id="NISTd5">
         <ThermodynamicTemperature symbol="Theta" powerNumerator="1"/>
       </Dimension><Dimension id="NISTd30">
+        <Length symbol="L" powerNumerator="-3"/>
+        <Mass symbol="M" powerNumerator="1"/>
+      </Dimension><Dimension id="D_L-3M">
         <Length symbol="L" powerNumerator="-3"/>
         <Mass symbol="M" powerNumerator="1"/>
       </Dimension><Dimension id="NISTd101">
@@ -865,7 +857,7 @@
 </dl>
 </clause>
 
-<clause id="_f525f5ba-625c-5ce9-58bd-e82e98b812a5" obligation="normative">
+<clause id="_aa0766ce-859b-975f-10f4-4460b9e68cab" obligation="normative">
 <title id="_c1ae387e-0b45-7ce3-dca4-a8cad3aa009f">Properties of BTMSB and BTMSB-<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -874,7 +866,7 @@
     </msub>
   </mstyle>
 </math><asciimath>d_4</asciimath></stem></title>
-<clause id="_df4f6eaf-6ca6-f825-d332-b3cf4a6c57f5" obligation="normative">
+<clause id="_b78ce5cc-e109-94a2-e2b2-086a5b6f71f5" obligation="normative">
 <title id="_4566cd4b-3a29-0316-f267-1d04d4badeb7">Physical Properties</title>
 <dl id="_15bde4ef-6a11-3e61-1b9b-2e4f185293a8"><dt>IUPAC Name</dt>
 <dd id="_efbacdc6-83a7-2ade-7c0e-2cee47995b99"><p id="_c497a6b4-4b00-a720-2f35-f2a9486ae68f">Trimethyl-(4-trimethylsilylphenyl)silane (R = H)<br/> Trimethyl-(2,3,5,6-Tetradeutero-4-trimethylsilylphenyl)silane (R = D)</p>
@@ -901,7 +893,7 @@
 </dd>
 </dl>
 
-<dl id="_8576b669-ae7c-0756-6222-c02499d20158"><dt>Molar Mass <eref type="inline" bibitemid="meija" citeas="[19]"/></dt>
+<dl id="_52e91a9c-bd38-2a06-8452-1dfe9c8d45bb"><dt>Molar Mass <eref type="inline" bibitemid="meija" citeas="[19]"/></dt>
 <dd id="_0e5b56b6-07b5-ac75-d358-9b1f4c6b8d27"><p id="_1c5f5a82-8060-0887-11d0-ec912c0fa0be"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>222.478</mn>
@@ -1015,7 +1007,7 @@
 </math><asciimath>91-94 "unitsml(degC)"</asciimath></stem></p>
 </dd>
 <dt>Density</dt>
-<dd id="_7aef0241-27ee-f837-786e-29a1573c9c8f"><p id="_7539bd5f-4d4a-6a81-8537-fd8166a4be63"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_51755449-2409-3cde-4d70-beee046d33e7"><p id="_fffc139a-4661-4773-8eab-b109c95ec340"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1.0</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -1033,6 +1025,7 @@
           <mn>3</mn>
         </mrow>
       </msup>
+      
       
       
       
@@ -3078,7 +3071,7 @@
 </clause>
 
 
-</sections><bibliography><references id="_83c13d6b-cb22-7639-0c06-f59b55cf5077" normative="false" obligation="informative">
+</sections><bibliography><references id="_173bcdd0-88e8-0758-f48c-ec01f366a15d" normative="false" obligation="informative">
 <title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="jungnickel" id="_3858bd05-5c0c-7117-e4dd-ebfaa4e4e952">
   <formattedref format="application/x-isodoc+xml">Jungnickel, J.; Forbes, J.; <em>Anal. Chem.</em> 1963, <strong>35</strong>, 938–942</formattedref>
   <docidentifier type="metanorma">[1]</docidentifier>
@@ -3114,28 +3107,41 @@
   <docidentifier type="metanorma">[7]</docidentifier>
   <language>en</language>
   <script>Latn</script>
-</bibitem><bibitem id="_2650335e-e0b7-9a4c-ccb4-3b03cb4a913d" type="standard" schema-version="v1.2.9" anchor="iso17511">
-  <fetched>2026-04-16</fetched>
+</bibitem><bibitem id="_5e05118a-2e3a-e23a-27b1-c162a53c4158" type="standard" schema-version="v1.5.6" anchor="iso17511">
+  <fetched>2026-06-16</fetched>
   
-<title type="title-intro" format="text/plain" language="en" script="Latn">In vitro diagnostic medical devices</title>
+<title language="en" script="Latn" type="title-intro">In vitro diagnostic medical devices</title>
 
   
-<title type="title-main" format="text/plain" language="en" script="Latn">Measurement of quantities in  biological samples</title>
+<title language="en" script="Latn" type="title-main">Measurement of quantities in  biological samples</title>
 
   
-<title type="title-part" format="text/plain" language="en" script="Latn">Metrological traceability of values assigned to calibrators and control materials</title>
+<title language="en" script="Latn" type="title-part">Metrological traceability of values assigned to calibrators and control materials</title>
 
   
-<title type="main" format="text/plain" language="en" script="Latn">In vitro diagnostic medical devices — Measurement of quantities in  biological samples — Metrological traceability of values assigned to calibrators and control materials</title>
+<title language="en" script="Latn" type="main">In vitro diagnostic medical devices — Measurement of quantities in  biological samples — Metrological traceability of values assigned to calibrators and control materials</title>
+
+  
+<title language="fr" script="Latn" type="title-intro">Dispositifs médicaux de diagnostic in vitro</title>
+
+  
+<title language="fr" script="Latn" type="title-main">Mesurage des grandeurs dans des échantillons d’origine biologique</title>
+
+  
+<title language="fr" script="Latn" type="title-part">Traçabilité métrologique des valeurs attribuées aux agents d’étalonnage et aux matériaux de contrôle</title>
+
+  
+<title language="fr" script="Latn" type="main">Dispositifs médicaux de diagnostic in vitro — Mesurage des grandeurs dans des échantillons d’origine biologique — Traçabilité métrologique des valeurs attribuées aux agents d’étalonnage et aux matériaux de contrôle</title>
 
   <uri type="src">https://www.iso.org/standard/30716.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:30716:en</uri>
   <uri type="rss">https://www.iso.org/contents/data/standard/03/07/30716.detail.rss</uri>
   <docidentifier type="ISO" primary="true">ISO 17511:2003</docidentifier><docidentifier type="metanorma">[8]</docidentifier>
   <docidentifier type="iso-reference">ISO 17511:2003(E)</docidentifier>
   <docidentifier type="URN">urn:iso:std:iso:17511:stage-95.99</docidentifier>
   <docnumber>17511</docnumber>
   <date type="published">
-    <on>2003-08</on>
+    <on>2003-08-22</on>
   </date>
   <contributor>
     <role type="publisher"/>
@@ -3147,13 +3153,27 @@
       <uri>www.iso.org</uri>
     </organization>
   </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <subdivision type="technical-committee" subtype="TC">
+        
+<name>Medical laboratories and in vitro diagnostic systems</name>
+
+        <identifier>ISO/TC 212</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
   <edition>1</edition>
   <language>en</language>
-  <language>fr</language>
   <script>Latn</script>
-  <abstract format="text/plain" language="en" script="Latn">ISO 17511:2003 specifies how to assure the metrological traceability of values assigned to calibrators and control materials intended to establish or verify trueness of measurement. The calibrators and control materials are those provided by the manufacturers as part of, or to be used together with, in vitro diagnostic medical devices.
-External quality assessment (survey) samples, with proven commutability, whose values have been assigned by means of internationally agreed reference measurement systems or internationally agreed conventional reference measurement systems fall within the scope of ISO 17511:2003.
-ISO 17511:2003 is not applicable to control materials that do not have an assigned value and are used only for assessing the precision of a measurement procedure, either its repeatability or reproducibility (precision control materials); control materials intended for intralaboratory quality control purposes and supplied with intervals of suggested acceptable values, each interval obtained by interlaboratory consensus with respect to one specified measurement procedure, and with limiting values that are not metrologically traceable; correlation between results of two measurement procedures at the same metrological level, purporting to measure the same quantity, because such “horizontal” correlation does not provide metrological traceability; calibration derived from correlation between the results of two measurement procedures at different metrological levels, but with quantities having analytes of different characteristics; metrological traceability of routine results to the product calibrator and their relations to any medical discrimination limit; and properties involving nominal scales, i.e. where no magnitude is involved (e.g. identification of blood cells).</abstract>
+  <abstract language="en" script="Latn">ISO 17511:2003 specifies how to assure the metrological traceability of values assigned to calibrators and control materials intended to establish or verify trueness of measurement. The calibrators and control materials are those provided by the manufacturers as part of, or to be used together with, in vitro diagnostic medical devices. External quality assessment (survey) samples, with proven commutability, whose values have been assigned by means of internationally agreed reference measurement systems or internationally agreed conventional reference measurement systems fall within the scope of ISO 17511:2003. ISO 17511:2003 is not applicable to control materials that do not have an assigned value and are used only for assessing the precision of a measurement procedure, either its repeatability or reproducibility (precision control materials); control materials intended for intralaboratory quality control purposes and supplied with intervals of suggested acceptable values, each interval obtained by interlaboratory consensus with respect to one specified measurement procedure, and with limiting values that are not metrologically traceable; correlation between results of two measurement procedures at the same metrological level, purporting to measure the same quantity, because such “horizontal” correlation does not provide metrological traceability; calibration derived from correlation between the results of two measurement procedures at different metrological levels, but with quantities having analytes of different characteristics; metrological traceability of routine results to the product calibrator and their relations to any medical discrimination limit; and properties involving nominal scales, i.e. where no magnitude is involved (e.g. identification of blood cells).</abstract>
   <status>
     <stage>95</stage>
     <substage>99</substage>
@@ -3168,16 +3188,6 @@ ISO 17511:2003 is not applicable to control materials that do not have an assign
       </organization>
     </owner>
   </copyright>
-  <relation type="updates">
-    <bibitem type="standard">
-      <formattedref format="text/plain">ISO 17511:2020</formattedref>
-      <docidentifier type="ISO" primary="true">ISO 17511:2020</docidentifier>
-      <date type="circulated">
-        <on>2020-04-24</on>
-      </date>
-    </bibitem>
-
-  </relation>
   <place>
     <city>Geneva</city>
   </place>
@@ -3286,23 +3296,29 @@ ISO 17511:2003 is not applicable to control materials that do not have an assign
   <docidentifier type="metanorma">[29]</docidentifier>
   <language>en</language>
   <script>Latn</script>
-</bibitem><bibitem id="_06ab643d-2536-12cc-0dbf-c9f2f001af32" type="standard" schema-version="v1.2.9" anchor="iso17034">
-  <fetched>2026-04-16</fetched>
+</bibitem><bibitem id="_5b6bc6cf-dfe1-ef6a-2cb9-1b758c0ccbf0" type="standard" schema-version="v1.5.6" anchor="iso17034">
+  <fetched>2026-06-16</fetched>
   
-<title type="title-main" format="text/plain" language="en" script="Latn">General requirements for the competence of reference material producers</title>
+<title language="en" script="Latn" type="title-main">General requirements for the competence of reference material producers</title>
 
   
-<title type="main" format="text/plain" language="en" script="Latn">General requirements for the competence of reference material producers</title>
+<title language="en" script="Latn" type="main">General requirements for the competence of reference material producers</title>
+
+  
+<title language="fr" script="Latn" type="title-main">Exigences générales pour la compétence des producteurs de matériaux de référence</title>
+
+  
+<title language="fr" script="Latn" type="main">Exigences générales pour la compétence des producteurs de matériaux de référence</title>
 
   <uri type="src">https://www.iso.org/standard/29357.html</uri>
   <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:29357:en</uri>
   <uri type="rss">https://www.iso.org/contents/data/standard/02/93/29357.detail.rss</uri>
   <docidentifier type="ISO" primary="true">ISO 17034:2016</docidentifier><docidentifier type="metanorma">[30]</docidentifier>
   <docidentifier type="iso-reference">ISO 17034:2016(E)</docidentifier>
-  <docidentifier type="URN">urn:iso:std:iso:17034:stage-90.93</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:17034:stage-90.92</docidentifier>
   <docnumber>17034</docnumber>
   <date type="published">
-    <on>2016-11</on>
+    <on>2016-10-31</on>
   </date>
   <contributor>
     <role type="publisher"/>
@@ -3314,16 +3330,34 @@ ISO 17511:2003 is not applicable to control materials that do not have an assign
       <uri>www.iso.org</uri>
     </organization>
   </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <subdivision type="technical-committee" subtype="CASCO">
+        
+<name>ISO/CASCO</name>
+
+        <identifier>ISO/CASCO</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
   <edition>1</edition>
   <language>en</language>
+  <language>es</language>
   <language>fr</language>
+  <language>ru</language>
   <script>Latn</script>
-  <abstract format="text/plain" language="en" script="Latn">ISO 17034:2016 specifies general requirements for the competence and consistent operation of reference material producers.
-ISO 17034:2016 sets out the requirements in accordance with which reference materials are produced. It is intended to be used as part of the general quality assurance procedures of the reference material producer.
-ISO 17034:2016 covers the production of all reference materials, including certified reference materials.</abstract>
+  <script>Cyrl</script>
+  <abstract language="en" script="Latn">ISO 17034:2016 specifies general requirements for the competence and consistent operation of reference material producers. ISO 17034:2016 sets out the requirements in accordance with which reference materials are produced. It is intended to be used as part of the general quality assurance procedures of the reference material producer. ISO 17034:2016 covers the production of all reference materials, including certified reference materials.</abstract>
   <status>
     <stage>90</stage>
-    <substage>93</substage>
+    <substage>92</substage>
   </status>
   <copyright>
     <from>2016</from>
@@ -3336,9 +3370,19 @@ ISO 17034:2016 covers the production of all reference materials, including certi
     </owner>
   </copyright>
   <relation type="obsoletes">
-    <bibitem type="standard">
-      <formattedref format="text/plain">ISO Guide 34:2009</formattedref>
+    <bibitem>
+      <formattedref>ISO Guide 34:2009</formattedref>
       <docidentifier type="ISO" primary="true">ISO Guide 34:2009</docidentifier>
+      <date type="published">
+        <on>2009-11-20</on>
+      </date>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref>ISO/AWI 17034</formattedref>
+      <docidentifier type="ISO" primary="true">ISO/AWI 17034</docidentifier>
     </bibitem>
 
   </relation>

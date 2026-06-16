@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.8.3" schema-version="v2.1.5" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.8.7" schema-version="v2.1.6" flavor="bipm">
 <bibdata type="standard">
 <title language="en" type="title-main">Report of a Comparison between the LNE-LNHB and the BIPM of Absorbed Dose to Graphite in a Co-60 Reference Beam</title>
-<docidentifier primary="true" type="BIPM">BIPM BIPM-2015/03</docidentifier><docnumber>BIPM-2015/03</docnumber><contributor><role type="author"/><organization>
+<docidentifier primary="true" type="BIPM">BIPM BIPM-2015/03</docidentifier><docnumber>BIPM-2015/03</docnumber><date type="updated"><on>2015-02</on></date><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"/><person>
 <name><completename>S. Picard</completename></name>
@@ -40,12 +40,11 @@
 <name language="fr">Bureau International des Poids et Mesures</name>
 <identifier>BIPM</identifier><identifier type="full">BIPM</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2015-02</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2015</from><owner><organization>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version>2015-02</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2015</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem/>
-</relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2015/03</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem/></relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2015/03</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
 <UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd1" id="U_cm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">cm</UnitName>
         <UnitSymbol type="HTML">cm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -57,7 +56,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_mm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mm</UnitName>
         <UnitSymbol type="HTML">mm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -68,8 +67,8 @@
         <RootUnits>
           <EnumeratedRootUnit unit="metre" prefix="m"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd51" id="U_g.cm-2">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L-2M" id="U_g.cm-2">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">g*cm^-2</UnitName>
         <UnitSymbol type="HTML">g cm
           <sup>−2</sup>
@@ -79,9 +78,7 @@
             <mi mathvariant="normal">g</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>2</mn>
@@ -94,7 +91,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="-2"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd14" id="U_kPa">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">kPa</UnitName>
         <UnitSymbol type="HTML">kPa</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -106,7 +103,7 @@
           <EnumeratedRootUnit unit="pascal" prefix="k"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu23">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">degree Celsius</UnitName>
         <UnitSymbol type="HTML">°C</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -115,7 +112,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#D_L-2M-1I-1J" id="U_Gy.C-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">Gy*C^-1</UnitName>
         <UnitSymbol type="HTML">Gy C
           <sup>−1</sup>
@@ -125,9 +122,7 @@
             <mi mathvariant="normal">Gy</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">C</mi>
-              </mrow>
+              <mi mathvariant="normal">C</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -139,8 +134,8 @@
           <EnumeratedRootUnit unit="gray"/>
           <EnumeratedRootUnit unit="coulomb" powerNumerator="-1"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd30" id="U_g.cm-3">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L-3M" id="U_g.cm-3">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">g*cm^-3</UnitName>
         <UnitSymbol type="HTML">g cm
           <sup>−3</sup>
@@ -150,9 +145,7 @@
             <mi mathvariant="normal">g</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>3</mn>
@@ -165,7 +158,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="-3"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_L-1T-1J" id="U_m.Gy.s-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">m*Gy*s^-1</UnitName>
         <UnitSymbol type="HTML">m Gy s
           <sup>−1</sup>
@@ -177,9 +170,7 @@
             <mi mathvariant="normal">Gy</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">s</mi>
-              </mrow>
+              <mi mathvariant="normal">s</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -193,8 +184,8 @@
           <EnumeratedRootUnit unit="second" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit id="U_Gy.min-1">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">Gy*min^-1</UnitName>
         <UnitSymbol type="HTML">Gy min
           <sup>−1</sup>
@@ -204,9 +195,7 @@
             <mi mathvariant="normal">Gy</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">min</mi>
-              </mrow>
+              <mi mathvariant="normal">min</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -219,7 +208,7 @@
           <EnumeratedRootUnit unit="minute" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd4" id="U_pA">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">pA</UnitName>
         <UnitSymbol type="HTML">pA</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -231,7 +220,7 @@
           <EnumeratedRootUnit unit="ampere" prefix="p"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd18" id="U_MV">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">MV</UnitName>
         <UnitSymbol type="HTML">MV</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -244,7 +233,7 @@
         </RootUnits>
       </Unit></UnitSet><DimensionSet><Dimension id="NISTd1">
         <Length symbol="L" powerNumerator="1"/>
-      </Dimension><Dimension id="NISTd51">
+      </Dimension><Dimension id="D_L-2M">
         <Length symbol="L" powerNumerator="-2"/>
         <Mass symbol="M" powerNumerator="1"/>
       </Dimension><Dimension id="NISTd14">
@@ -258,7 +247,7 @@
         <Mass symbol="M" powerNumerator="-1"/>
         <ElectricCurrent symbol="I" powerNumerator="-1"/>
         <LuminousIntensity symbol="J" powerNumerator="1"/>
-      </Dimension><Dimension id="NISTd30">
+      </Dimension><Dimension id="D_L-3M">
         <Length symbol="L" powerNumerator="-3"/>
         <Mass symbol="M" powerNumerator="1"/>
       </Dimension><Dimension id="D_L-1T-1J">

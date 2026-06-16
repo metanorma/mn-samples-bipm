@@ -615,7 +615,9 @@ main {
     background-color: #6C734A;
     color: white !important;
     cursor: pointer;
-    z-index: 100;
+    left: 0;
+    top: 0;
+    z-index: 103;
   }
   #toggle span {
     text-align: center;
@@ -1558,7 +1560,7 @@ pre.sourcecode .nt {
     <div class="doc-number">
       <span class="docnumber">BIPM 238</span>
       <span class="docnumber-separator">:</span>
-      <span class="docyear">1995 </span>
+      <span class="docyear">1995  (draft 01-1995)</span>
       
       
       <br />Date: 01-1995
@@ -1693,7 +1695,7 @@ pre.sourcecode .nt {
 </math>
 </span>
 </a></li>
-<li class="h1"><a href="#_d9fd6e46-70db-4b60-bb69-d88e50c2e0f9">      References</a></li></ul></div>
+<li class="h1"><a href="#_5fd1ae54-02d0-4730-83e6-6d5f857865aa">      References</a></li></ul></div>
 
 </nav>
 
@@ -1704,7 +1706,7 @@ pre.sourcecode .nt {
 
 
 
-</div><br /><div id="_98ac3f7d-9323-ec1b-09ce-344753661aa8"><h1 id="_43db1955-e4de-4e14-be8e-a5f7d86914dd"><a class="anchor" href="#_98ac3f7d-9323-ec1b-09ce-344753661aa8"></a><a class="header" href="#_98ac3f7d-9323-ec1b-09ce-344753661aa8">1.  The relation between the numbers <span class="stem">
+</div><br /><div id="_98ac3f7d-9323-ec1b-09ce-344753661aa8"><h1 id="_348d609d-a76a-48a4-ba6a-0d5e9129f3a0"><a class="anchor" href="#_98ac3f7d-9323-ec1b-09ce-344753661aa8"></a><a class="header" href="#_98ac3f7d-9323-ec1b-09ce-344753661aa8">1.  The relation between the numbers <span class="stem">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -3168,7 +3170,7 @@ pre.sourcecode .nt {
       <mn>60</mn>
     </msub>
   </mstyle>
-</math></span> in <a href="#abramowitz">[2]</a>.</p></div><br /><div><h1 class="Section3" id="_d9fd6e46-70db-4b60-bb69-d88e50c2e0f9">References</h1>
+</math></span> in <a href="#abramowitz">[2]</a>.</p></div><br /><div><h1 class="Section3" id="_5fd1ae54-02d0-4730-83e6-6d5f857865aa">References</h1>
 <p id="muller" class="Biblio">[1]  J.W. Müller: “Sums of alternate powers — an empirical approach”, Rapport BIPM-94/14 (1994)</p><p id="abramowitz" class="Biblio">[2]  “Handbook of Mathematical Functions”, eg. .. by M. Abramowitz and I.A. Stegun, NBS, AMS 55 (GPO, Washington, 1964)</p>
 
 
@@ -3205,24 +3207,51 @@ pre.sourcecode .nt {
       const jqToggle = $('#toggle');
       const animationSpeed = 'slow';
 
+      if(!jqNav.length || !jqToggle.length) {
+        return;
+      }
+
+      const navWidthExpanded = jqNav.outerWidth();
+      const bodyPaddingLeftExpanded =
+        parseFloat(jqBody.css('paddingLeft')) > 0 ?
+          jqBody.css('paddingLeft') : navWidthExpanded + 'px';
+      const expandedToggleLeft = navWidthExpanded + 'px';
+      let bandWidth = 0;
+
+      $('.document-stage-band:visible, .document-type-band:visible')
+        .each(function() {
+          const bounds = this.getBoundingClientRect();
+          bandWidth = Math.max(bandWidth, bounds.right);
+        });
+
+      const toggleWidth = jqToggle.outerWidth();
+      const collapsedToggleLeft = bandWidth + 'px';
+      const collapsedBodyPaddingLeft = bandWidth + toggleWidth + 'px';
+      jqToggle.css({
+        'left': jqNav.is(':visible') ? expandedToggleLeft : collapsedToggleLeft,
+        'top': '0px'
+      });
+
       jqToggle.on('click', function() {
         const isNavVisible = jqNav.is(':visible');
-        const fullNavWidth = jqNav.outerWidth();
-        const navLeft = isNavVisible ? '-' + fullNavWidth + 'px' : '0px';
-        const bodyMarginLeft = isNavVisible ? '0px' : fullNavWidth + 'px';
+        const navLeft = isNavVisible ? '-' + navWidthExpanded + 'px' : '0px';
+        const bodyPaddingLeft =
+          isNavVisible ? collapsedBodyPaddingLeft : bodyPaddingLeftExpanded;
+        const toggleLeft =
+          isNavVisible ? collapsedToggleLeft : expandedToggleLeft;
 
-        // Stop current animations
         jqNav.stop(true, true);
         jqBody.stop(true, true);
+        jqToggle.stop(true, true);
 
         if(!isNavVisible) {
-            jqNav.show();
+          jqNav.show();
         }
         jqNav.animate({'left': navLeft}, animationSpeed, function() {
           if(isNavVisible) {jqNav.hide()}
         });
-        jqBody.animate({'marginLeft': bodyMarginLeft}, animationSpeed);
-
+        jqBody.animate({'paddingLeft': bodyPaddingLeft}, animationSpeed);
+        jqToggle.animate({'left': toggleLeft}, animationSpeed);
       });
     })();
   </script>
@@ -3295,7 +3324,7 @@ pre.sourcecode .nt {
         if (!_this.box) {
           footnoteContent = $("[id='" + _this.footnoteId + "']").children().filter(":not('" + _this.options.hideFromContent + "')");
           linkOffset = _this.el.offset();
-          _this.box = $("<div />", {
+          _this.box = $("<div ></div>", {
             id: _this.options.boxId,
             html: footnoteContent.clone().find(_this.options.hideFromContent).remove().end(),
             css: {
@@ -3407,5 +3436,4 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 </script>
-
 </body></html>
