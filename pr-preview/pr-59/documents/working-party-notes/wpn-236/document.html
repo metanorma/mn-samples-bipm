@@ -1,0 +1,3295 @@
+
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>@charset "UTF-8";
+/*
+  0 CSS RESET
+*/
+/* http://meyerweb.com/eric/tools/css/reset/
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  vertical-align: baseline;
+}
+
+html, body, div, span, applet, object, iframe,
+p, blockquote,
+a, abbr, acronym, address, big, cite,
+del, dfn, em, img, ins, q, s,
+small, strike, strong, sub, sup, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: Times New Roman;
+}
+
+code, pre, tt, kbd, samp {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+}
+
+code *, pre *, tt *, kbd *, samp * {
+  font-family: "Space Mono",monospace !important;
+  font-variant-ligatures: none;
+}
+
+p code, dt code, li code, label code, legend code, caption code, th code, td code,
+p tt, dt tt, li tt, label tt, legend tt, caption tt, th tt, td tt,
+p kbd, dt kbd, li kbd, label kbd, legend kbd, caption kbd, th kbd, td kbd,
+p samp, dt samp, li samp, label samp, legend samp, caption samp, th samp, td samp {
+  font-size: ;
+}
+
+sub, sup {
+  font-size: 0.75em;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Times New Roman;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: Times New Roman;
+}
+
+blockquote, q {
+  quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+  content: "";
+  content: none;
+}
+
+.h2Annex {
+  font-family: Times New Roman;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+dl dt p, dl dd p {
+  margin-top: 0;
+}
+dl dt {
+  grid-column-start: 1;
+}
+dl dd {
+  grid-column-start: 2;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+div.document-stage-band, div.document-type-band {
+  background-color: #333333;
+}
+
+a.TableFootnoteRef, span.TableFootnoteRef,
+a.FootnoteRef, span.FootnoteRef {
+  vertical-align: super;
+}
+
+.addition {
+  color: blue;
+}
+
+.deletion {
+  color: red;
+  text-decoration: line-through;
+}
+
+ruby {
+  ruby-position: over;
+  -webkit-ruby-position: before;
+}
+
+ruby ruby {
+  ruby-position: under;
+  -webkit-ruby-position: after;
+}
+
+/* code highlighting with line numbers */
+table.rouge-line-table td.rouge-gutter {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-right: 1em;
+}
+
+table.rouge-line-table td.rouge-code {
+  -moz-user-select: all;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all;
+}
+
+table.rouge-line-table,
+table.rouge-line-table th,
+table.rouge-line-table td {
+  width: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+table.rouge-line-table pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;
+  font-size: 100%;
+}
+
+/* header § links */
+a.header {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.header:hover {
+  color: #a53221 !important;
+  background: inherit;
+  box-shadow: none;
+}
+
+a.header:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.anchor {
+  position: absolute;
+  z-index: 1001;
+  width: 1.5ex;
+  margin-left: -1.5ex;
+  display: block;
+  text-decoration: none !important;
+  visibility: hidden;
+  text-align: center;
+  font-weight: 400;
+}
+
+a.anchor::before {
+  content: "§";
+  font-size: 0.85em;
+  display: block;
+  padding-top: 0.1em;
+}
+
+a.anchor:hover {
+  color: #a53221;
+  background: inherit;
+  box-shadow: none;
+}
+
+h1 > a.anchor:hover,
+h2 > a.anchor:hover,
+h3 > a.anchor:hover,
+h4 > a.anchor:hover,
+h5 > a.anchor:hover,
+h6 > a.anchor:hover,
+.inline-header > a.anchor:hover,
+h1:hover > a.anchor,
+h2:hover > a.anchor,
+h3:hover > a.anchor,
+h4:hover > a.anchor,
+h5:hover > a.anchor,
+h6:hover > a.anchor,
+.inline-header:hover > a.anchor {
+  visibility: visible;
+}
+
+/* collapsible snippets: collapsible before hidable */
+.hidable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 3px 0;
+  margin: 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: "▼";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.active:after {
+  content: "▲";
+}
+
+/* collapsible: */
+.collapsible + .hidable {
+  margin-top: 0;
+}
+
+.collapsible:not(.active) + .hidable {
+  overflow: hidden;
+  padding: 0;
+}
+
+.svg-container {
+  width: 100%; /* or any desired width */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+svg {
+  width: 100%;
+  height: auto; /* ← key to maintaining aspect ratio */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+/* style dfn by override in flavor */
+dfn {
+  font-style: inherit;
+}
+
+#standard-band {
+  background-color: #0AC442;
+}
+
+#standard {
+  border-bottom: solid 3px #0AC442;
+}
+
+#directive-band {
+  background-color: #540D6E;
+}
+
+#directive {
+  border-bottom: solid 3px #540D6E;
+}
+
+#guide-band {
+  background-color: #D183C9;
+}
+
+#guide {
+  border-bottom: solid 3px #D183C9;
+}
+
+#specification-band {
+  background-color: #65AFFF;
+}
+
+#specification {
+  border-bottom: solid 3px #65AFFF;
+}
+
+#report-band {
+  background-color: #3A405A;
+}
+
+#report {
+  border-bottom: solid 3px #3A405A;
+}
+
+#amendment-band {
+  background-color: #F26430;
+}
+
+#amendment {
+  border-bottom: solid 3px #F26430;
+}
+
+#corrigendum-band {
+  background-color: #C84630;
+}
+
+#corrigendum {
+  border-bottom: solid 3px #C84630;
+}
+
+#administrative-band {
+  background-color: #BFAE48;
+}
+
+#administrative {
+  border-bottom: solid 3px #BFAE48;
+}
+
+#advisory-band {
+  background-color: #BD9391;
+}
+
+#advisory {
+  border-bottom: solid 3px #BD9391;
+}
+
+#proposal-band {
+  background-color: #39A0ED;
+}
+
+#proposal {
+  border-bottom: solid 3px #39A0ED;
+}
+
+#working-draft-band {
+  background-color: #2D7393;
+}
+
+#working-draft {
+  border-bottom: solid 3px #2D7393;
+}
+
+#committee-draft-band {
+  background-color: #2A6B7C;
+}
+
+#committee-draft {
+  border-bottom: solid 3px #2A6B7C;
+}
+
+#draft-standard-band {
+  background-color: #1C7F7A;
+}
+
+#draft-standard {
+  border-bottom: solid 3px #1C7F7A;
+}
+
+#final-draft-band {
+  background-color: #53C170;
+}
+
+#final-draft {
+  border-bottom: solid 3px #53C170;
+}
+
+#published-band {
+  background-color: #069E2D;
+}
+
+#published {
+  border-bottom: solid 3px #069E2D;
+}
+
+#withdrawn-band {
+  background-color: #004E64;
+}
+
+#withdrawn {
+  border-bottom: solid 3px #004E64;
+}
+
+#cancelled-band {
+  background-color: #2E382E;
+}
+
+#cancelled {
+  border-bottom: solid 3px #2E382E;
+}
+
+/*
+    1. HTML & Body
+*/
+body {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.4em;
+  color: #1d1d1d;
+  background-color: #ffffff;
+}
+body main {
+  margin: 0 3em 0 6em;
+}
+body {
+  font-weight: 400;
+}
+body pre * {
+  font-family: Times New Roman !important;
+}
+
+main {
+  margin: 0 3em 0 6em;
+}
+
+/*
+    2. Responsive navigation layout
+*/
+#toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
+  padding: 5px 10px;
+}
+#toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
+  color: #485094;
+  text-decoration: none;
+  display: block;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: #485094;
+}
+#toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
+  padding-left: 30px;
+}
+#toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
+  padding-left: 50px;
+}
+#toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+  padding-left: 70px;
+}
+#toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+  padding-left: 90px;
+}
+#toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+  padding-left: 110px;
+}
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  background: #6C734A;
+  box-shadow: inset -5px 0px 10px -5px #6C734A !important;
+}
+#toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: #485094;
+}
+@media print {
+  #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+    background: white;
+    box-shadow: none !important;
+  }
+  #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
+    color: #485094;
+  }
+  #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+    color: black;
+  }
+}
+#toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+  font-family: Times New Roman;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    padding: 0 1.5em;
+    overflow: visible;
+  }
+}
+#toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
+  color: white;
+}
+#toc .toc-active,
+#toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active,
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  box-shadow: none !important;
+}
+#toc .toc-active a,
+#toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a,
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: white;
+  background: none;
+  box-shadow: none;
+}
+#toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
+  text-transform: uppercase;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: white;
+}
+
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 323px;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0 0 0 30px;
+    background-color: #f7f7f7;
+  }
+}
+@media print {
+  nav {
+    position: relative;
+    width: auto;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0;
+    margin-right: 0;
+    background-color: white;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #toggle {
+    position: fixed;
+    height: 100%;
+    width: 30px;
+    background-color: #6C734A;
+    color: white !important;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    z-index: 103;
+  }
+  #toggle span {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+@media screen and (max-width: 768px) {
+  #toggle {
+    display: none;
+  }
+}
+@media print {
+  #toggle {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding-left: 360px;
+  }
+  .rule.toc {
+    display: none;
+  }
+  h1.toc-contents {
+    margin-top: 1em;
+  }
+  ul#toc-list, ul#toc-list > :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    padding: 0;
+    margin: 0;
+  }
+}
+figure figcaption {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+figure > img, figure > svg {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+figure {
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto;
+}
+
+table figure, figure pre {
+  padding: 0;
+  margin: 0;
+}
+
+/*
+    Document types + stages
+*/
+.document-type-band {
+  left: 0;
+  top: 180px;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 102;
+}
+.document-type-band > :first-child {
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-type-band {
+    display: none;
+  }
+}
+.document-type-band .document-type {
+  top: 20px;
+}
+
+.document-stage-band {
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 101;
+  box-shadow: -5px 0px 10px #1d1d1d;
+}
+.document-stage-band > :first-child {
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  height: 150;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-stage-band {
+    display: none;
+  }
+}
+
+.document-stage-band > :first-child {
+  font-weight: 300;
+}
+
+p.document-stage {
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  height: 150;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+
+#governance-band p.document-type {
+  height: 230px !important;
+}
+
+p.document-stage {
+  font-weight: 300;
+  height: 160px;
+}
+
+.coverpage-maturity {
+  font-family: Times New Roman;
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0 0 2em 0;
+  text-transform: uppercase;
+}
+
+/*
+    3. TYPOGRAPHY
+*/
+/*
+    3.1 Titles
+*/
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: Times New Roman;
+  color: #6C734A;
+  font-weight: 300;
+  margin-top: 1.6em;
+  margin-bottom: 0.3em;
+}
+
+h1, .h1 {
+  font-size: 1.6em;
+  text-transform: uppercase;
+  margin-top: 2em;
+}
+
+h1#content, .h1#content {
+  margin-top: 2em;
+}
+
+h2, .h2 {
+  margin-top: 1.3em;
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+h3, .h3 {
+  margin-top: 1.1em;
+  font-size: 1.1em;
+  font-weight: 100;
+}
+
+.TermNum {
+  font-weight: 100;
+}
+
+.TermNum, .Terms, .AltTerms {
+  color: #6C734A;
+}
+
+h2.TermNum {
+  margin-bottom: 0;
+}
+
+p.Terms {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+p.AltTerms {
+  /*
+  font-style: italic;
+   */
+  font-size: 1.1em;
+  margin: 0;
+}
+
+/*
+    3.2 Links
+*/
+a, a:visited {
+  text-decoration: none;
+  color: #485094;
+}
+
+a:hover {
+  color: white;
+  background: #6C734A;
+  box-shadow: 3px 0 0 #6C734A, -3px 0 0 #6C734A;
+}
+
+*::selection {
+  background: #6C734A;
+  color: white;
+}
+
+*::-moz-selection {
+  background: #6C734A;
+  color: white;
+}
+
+/*
+    3.3 Lists
+*/
+ul, ol {
+  margin-left: 1.2em;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li::before {
+  content: "—";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.2em;
+}
+
+ul li p {
+  display: inline;
+}
+
+ul > li:first-child {
+  margin-top: 1em;
+}
+
+ul ul > li:first-child {
+  margin-top: 0;
+}
+
+ol ul > li:first-child {
+  margin-top: 0;
+}
+
+#toc-list ul {
+  margin-bottom: 0.25em;
+}
+
+#toc-list li {
+  list-style-type: none;
+}
+
+#toc li::before {
+  content: " ";
+  display: none;
+}
+
+/* https://github.com/metanorma/metanorma-bipm/issues/47 */
+ol[class=alphabet] {
+  counter-reset: alphabet;
+}
+
+ol[class=roman] {
+  counter-reset: roman;
+}
+
+ol[class=alphabet] ol[class=alphabet] {
+  counter-reset: none;
+}
+
+ol[class=alphabet] > li {
+  list-style: none;
+  position: relative;
+}
+
+ol[class=alphabet] ol[class=alphabet] > li {
+  list-style: inherit;
+}
+
+ol[class=alphabet] > li::before {
+  counter-increment: alphabet;
+  content: counter(alphabet, lower-alpha) ") ";
+  position: absolute;
+  left: -1.4em;
+}
+
+ol[class=alphabet] ol[class=alphabet] > li::before {
+  counter-increment: none;
+  content: initial;
+}
+
+ol[class=roman] ol[class=roman] {
+  counter-reset: none;
+}
+
+ol[class=roman] > li {
+  list-style: none;
+  position: relative;
+}
+
+ol[class=roman] ol[class=roman] > li {
+  list-style: inherit;
+}
+
+ol[class=roman] > li::before {
+  counter-increment: roman;
+  content: "(" counter(roman, lower-roman) ") ";
+  position: absolute;
+  left: -2em;
+}
+
+ol[class=roman] ol[class=roman] > li::before {
+  counter-increment: none;
+  content: initial;
+}
+
+/*
+    3.4 Rules
+*/
+.rule {
+  width: 100%;
+  height: 1px;
+  background-color: #0e1a85;
+  margin: 2em 0;
+}
+
+/*
+    3.5 Bibliograhy
+*/
+p.Biblio, p.NormRef, div.Biblio, div.NormRef {
+  margin-top: 1em;
+  margin-left: 2em;
+}
+
+.Biblio.note, .Biblio.Note, .NormRef.note, .NormRef.Note {
+  margin-left: 3em;
+}
+
+/*
+    3.6 Source Code + figures
+*/
+figure .SourceTitle,
+pre .SourceTitle,
+.pseudocode .SourceTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+figure,
+pre,
+.pseudocode {
+  background-color: #f7f7f7;
+  font-size: ;
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto;
+}
+
+pre {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+}
+
+.AdmonitionTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.ListTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+  text-align: left;
+}
+
+figcaption,
+.SourceTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+/*
+    3.7 Notes
+*/
+.Note {
+  background-color: #fff495;
+  color: #47430c;
+  padding: 1.2em;
+  margin: 1em 0 1em 0;
+}
+.Note p {
+  margin: 0;
+}
+
+/*
+    3.8 Examples
+*/
+.example {
+  background-color: #e1eef1;
+  padding: 1.2em;
+  margin: 2em 0 1em 0;
+  text-align: left;
+}
+.example p {
+  margin: 0;
+}
+.example {
+  color: #424242;
+  padding-left: 2.7em;
+}
+.example .example-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: -1.5em;
+}
+.example .example-title {
+  margin-top: 0;
+}
+.example pre,
+.example .pseudocode {
+  background: none;
+}
+
+/*
+    3.9 Tables
+*/
+table {
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em;
+}
+table, table th, table td {
+  border: 1px solid black;
+  font-size: 0.95em;
+}
+table th, table td {
+  padding: 1em;
+}
+table td.header {
+  font-weight: 400;
+}
+table table.plain, table table.plain th, table table.plain td {
+  border: none !important;
+  font-size: 0.95em;
+}
+
+table > caption {
+  text-align: center;
+  margin-top: 2.5em;
+  font-weight: 400;
+}
+
+/*
+  3.10 Footnotes
+*/
+a.footnote-number {
+  vertical-align: super;
+  font-size: 0.8em;
+}
+
+.footnote {
+  font-size: 0.9em;
+}
+
+/*
+    3.11 Blockquotes
+*/
+.Quote {
+  background-color: #f2f2f2;
+  font-style: italic;
+  width: 80%;
+  padding: 1.5em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+    3.12 Formulas
+*/
+.formula {
+  background-color: #f7f7f7;
+  padding: 1.5em;
+  margin-top: 2em;
+  text-align: center;
+}
+
+/*
+    3.13 Contact Info
+*/
+.contact-info {
+  padding: 2em;
+  margin-top: 5em;
+  width: 250px;
+  text-align: left;
+  border: #6C734A solid 2px;
+  color: #6C734A !important;
+  border-radius: 25px;
+}
+
+.contact-info a,
+.contact-info a:hover {
+  color: #6C734A;
+}
+
+.contact-info p, .contact-info a {
+  font-family: "Space Mono",monospace;
+  font-weight: 400;
+}
+
+.contact-info .name {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.contact-info .address {
+  font-size: 1em;
+  line-height: 1.3em;
+  margin-top: 0;
+}
+
+/*
+    Keywords
+*/
+span.keyword {
+  font-weight: 600;
+}
+
+/*
+    Paragraphs
+*/
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h2 p, .h2 p {
+  display: inline;
+}
+
+/*
+    4.0 Page header
+*/
+/*
+    4.1 Top Logo
+*/
+.icon-svg {
+  width: 100%;
+  color: #5ecf86;
+}
+
+.wrapper-top {
+  background: linear-gradient(200deg, #007864, #6C734A);
+  color: #ffffff;
+  padding: 2em 0;
+  width: 100%;
+}
+
+.wrapper-top-bottom {
+  width: 0;
+  height: 0;
+  border-top: 100px solid #6C734A;
+  border-right: 100px solid transparent;
+  position: absolute;
+}
+
+.doc-number {
+  font-size: 0.5em;
+  font-family: Times New Roman;
+}
+
+.coverpage-title {
+  padding-bottom: 0.5em;
+  font-family: Times New Roman;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  font-weight: 100;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-transform: uppercase;
+}
+
+.WordSection11 {
+  padding: 0 2em 0 3em;
+}
+
+.info-section {
+  padding: 0 2em 0 5em;
+}
+
+.prefatory-section {
+  padding: 0 3em 0 6em;
+}
+
+.zzSTDTitle1, .MsoCommentText {
+  display: none;
+}
+
+.coverpage {
+  text-align: center;
+  padding-left: 1.5em;
+}
+
+.coverpage-logo span, .coverpage-tc-name span {
+  font-family: Times New Roman;
+  text-transform: none;
+  font-weight: 300;
+}
+
+.coverpage-tc-name {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin: 0.25em 0;
+}
+
+.logo-img {
+  width: 310px;
+  height: auto;
+  margin: auto;
+  padding: 0.5em;
+}
+
+/*
+    4.2 Document Identity
+*/
+.coverpage-doc-identity {
+  font-size: 2em;
+  line-height: 2em;
+}
+
+.coverpage-title .title-second {
+  font-size: 0.8em;
+}
+
+.coverpage-title .title-third {
+  font-size: 0.6em;
+}
+
+.coverpage-stage-block {
+  font-family: Times New Roman;
+  font-weight: 600;
+  font-size: 1.25em;
+  margin: 2em 0em 2em 0em;
+  text-transform: uppercase;
+}
+
+/*
+    4.3 Draft Warning
+*/
+.coverpage-warning {
+  border: #f36f36 solid 2px;
+  color: #f36f36 !important;
+  margin: 1em 2em;
+  color: #485094;
+  padding: 2em 1em 1em 1em;
+  border-radius: 25px;
+}
+
+.coverpage-warning .title {
+  font-family: Times New Roman;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+/*
+    4.4 Copyright
+*/
+.copyright {
+  padding: 1em;
+  font-size: 0.9em;
+  text-align: left;
+}
+
+/*  .copyright .name, .copyright .address {color: #485094;} */
+/*
+    5.0 Other styles
+*/
+/*
+To top button
+*/
+#myBtn {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  background-color: #1f8ca0;
+  opacity: 0.15;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px 10px 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  opacity: 1;
+}
+@media print {
+  #myBtn {
+    display: none;
+  }
+}
+#myBtn {
+  text-transform: uppercase;
+}
+#myBtn a.anchorjs-link:hover {
+  background: none;
+  color: #485094;
+  box-shadow: none;
+}
+
+@page {
+  margin: 2cm 1cm;
+}
+@media print {
+  .document-info, nav, .copyright {
+    page-break-before: always;
+  }
+  h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+    page-break-after: avoid;
+    margin-top: 1.2em;
+  }
+  .note, figure, pre, .pseudocode, table {
+    page-break-inside: avoid;
+  }
+  .info-section {
+    display: none;
+  }
+  .coverpage {
+    height: 23cm;
+  }
+  .wrapper-top {
+    top: 0;
+    padding-top: 4cm;
+    padding-bottom: 4cm;
+  }
+  .wrapper-top-bottom {
+    margin-top: -5px;
+  }
+  #toggle, .document-stage-band,
+  .document-type-band, button#myBtn {
+    display: none;
+  }
+  .container {
+    padding-left: 0;
+  }
+  h1.content, .h1.content {
+    margin-top: 2em;
+    line-height: 2.5em;
+  }
+  h1, .h1 {
+    font-size: 1.5em;
+    line-height: 1.5;
+  }
+  h2, .h2 {
+    font-size: 1.2em;
+  }
+  h3, .h3 {
+    font-size: 1em;
+  }
+  .Note {
+    background-color: #fff495;
+    color: #47430c;
+    padding: 5px;
+    margin: 2em 0 1em 0;
+  }
+  .Note p {
+    padding: 0 5px 0 5px;
+  }
+  .wrapper-top-bottom {
+    display: none;
+  }
+}
+</style><style>pre.sourcecode table td { padding: 5px; }
+pre.sourcecode table pre { margin: 0; }
+pre.sourcecode, pre.sourcecode .w {
+  color: #444444;
+}
+pre.sourcecode .cp {
+  color: #CC00A3;
+}
+pre.sourcecode .cs {
+  color: #CC00A3;
+}
+pre.sourcecode .c, pre.sourcecode .ch, pre.sourcecode .cd, pre.sourcecode .cm, pre.sourcecode .cpf, pre.sourcecode .c1 {
+  color: #FF0000;
+}
+pre.sourcecode .kc {
+  color: #C34E00;
+}
+pre.sourcecode .kd {
+  color: #0000FF;
+}
+pre.sourcecode .kr {
+  color: #007575;
+}
+pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
+  color: #0000FF;
+}
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .ld, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+  color: #009C00;
+}
+pre.sourcecode .sa {
+  color: #0000FF;
+}
+pre.sourcecode .nb, pre.sourcecode .bp {
+  color: #C34E00;
+}
+pre.sourcecode .nt {
+  color: #0000FF;
+}
+
+</style><title>Pooled variances</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--TOC script import-->
+<script type="text/javascript" src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
+<script type="text/javascript">function toclevel() { return "h1:not(:empty):not(.TermNum):not(.noTOC),h2:not(:empty):not(.TermNum):not(.noTOC)";}
+</script>
+
+<!--Google fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+
+<!--Font awesome import for the link icon-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
+<style class="anchorjs"></style>
+</head><body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container"><div class="title-section"><div class="document-stage-band" id="in-force-band">
+    <p class="document-stage">In Force</p>
+</div>
+
+<div class="document-type-band" id="brochure-band">
+  <p class="document-type">BIPM Brochure</p>
+</div>
+
+
+
+  <div id="toggle"> <span>•</span> </div>
+
+  <header>
+
+<!--<div class="WordSection1">-->
+  <div class="coverpage">
+    <div class="wrapper-top">
+
+  <div class="coverpage-doc-identity">
+    <div class="doc-number">
+      <span class="docnumber">BIPM 236</span>
+      <span class="docnumber-separator">:</span>
+      <span class="docyear">1993  (draft 04-1993)</span>
+      
+      
+      <br />Date: 04-1993
+      
+    </div>
+
+    <div class="coverpage-logo logo-img">
+      <image src="" mimetype="image/svg+xml"><svg xmlns="http://www.w3.org/2000/svg" id="uuid-4162b5c4-51d5-4227-8dcd-f05974f2b5f8" width="206.54mm" height="104.93mm" viewBox="0 0 585.46 297.43" preserveaspectratio="xMidYMin slice"><path d="M31.43,8h18.98c4.51,0,7.93,1.08,10.27,3.25s3.51,5.29,3.51,9.36c0,2.47-.44,4.52-1.33,6.14-.89,1.62-2.24,3-4.06,4.13,1.82.35,3.37.88,4.65,1.59,1.28.72,2.32,1.59,3.12,2.63.8,1.04,1.38,2.21,1.72,3.51.35,1.3.52,2.69.52,4.16,0,2.3-.4,4.33-1.2,6.11-.8,1.78-1.93,3.27-3.38,4.48-1.45,1.21-3.22,2.12-5.3,2.73-2.08.61-4.42.91-7.02.91h-20.48V8ZM44.17,27.23h2.34c3.99,0,5.98-1.58,5.98-4.75s-1.99-4.74-5.98-4.74h-2.34v9.49ZM44.17,47.13h2.79c3.21,0,5.5-.41,6.89-1.24,1.39-.82,2.08-2.14,2.08-3.96s-.69-3.14-2.08-3.96-3.68-1.24-6.89-1.24h-2.79v10.4Z" style="fill:#0f3c80;"></path><path d="M101.63,43.93c0,4.85-.98,8.4-2.94,10.66s-5.01,3.4-9.16,3.4-7.23-1.13-9.17-3.4c-1.95-2.26-2.92-5.82-2.92-10.66v-17.27h5.21v17.08c0,3.24.52,5.59,1.57,7.05,1.05,1.46,2.82,2.19,5.32,2.19s4.26-.72,5.28-2.16c1.03-1.44,1.54-3.8,1.54-7.08v-17.08h5.27v17.27Z" style="fill:#0f3c80;"></path><path d="M129.47,26.31l-1.24,5.14c-.38-.23-.79-.41-1.24-.52s-.92-.17-1.43-.17c-2.56,0-4.49,1.1-5.79,3.29-1.3,2.19-1.95,5.46-1.95,9.82v13.14h-5.17v-30.34h5.17v5.33c.74-2.18,1.81-3.77,3.21-4.76s3.26-1.49,5.59-1.49c.55,0,1.08.05,1.6.16s.94.24,1.25.41Z" style="fill:#0f3c80;"></path><path d="M161.05,42.63h-24.38c.19,3.28,1.16,5.82,2.9,7.63,1.75,1.81,4.08,2.71,7,2.71,2.22,0,4.11-.44,5.67-1.32,1.55-.88,2.79-2.2,3.7-3.95l4.35,2.29c-1.4,2.65-3.25,4.64-5.57,5.98-2.32,1.34-5.05,2.01-8.2,2.01-4.57,0-8.22-1.49-10.93-4.47s-4.08-6.93-4.08-11.84c0-4.57,1.44-8.37,4.32-11.39,2.88-3.03,6.42-4.54,10.63-4.54s7.83,1.39,10.54,4.16c2.71,2.77,4.06,6.41,4.06,10.92v1.81ZM155.88,38.95c-.28-2.6-1.25-4.63-2.92-6.08-1.67-1.45-3.84-2.17-6.51-2.17s-4.73.75-6.51,2.24c-1.78,1.49-2.82,3.5-3.14,6.01h19.08Z" style="fill:#0f3c80;"></path><path d="M197.59,57.01h-5.21v-5.01c-1.04,1.95-2.49,3.43-4.36,4.46-1.87,1.03-4.08,1.54-6.62,1.54-4.23,0-7.71-1.53-10.44-4.6-2.73-3.07-4.09-6.99-4.09-11.78s1.37-8.49,4.11-11.44c2.74-2.95,6.26-4.43,10.55-4.43,2.43,0,4.58.48,6.44,1.43,1.86.95,3.33,2.32,4.41,4.09v-4.6h5.21v30.34ZM192.38,41.48c0-3.32-.92-5.95-2.75-7.89-1.83-1.94-4.27-2.9-7.32-2.9s-5.49,1.01-7.38,3.02-2.84,4.67-2.84,7.97.93,6.06,2.79,8.16c1.86,2.09,4.25,3.14,7.17,3.14s5.42-1.07,7.38-3.22c1.96-2.15,2.94-4.9,2.94-8.27Z" style="fill:#0f3c80;"></path><path d="M232.19,43.93c0,4.85-.98,8.4-2.94,10.66s-5.01,3.4-9.16,3.4-7.23-1.13-9.17-3.4c-1.95-2.26-2.92-5.82-2.92-10.66v-17.27h5.21v17.08c0,3.24.52,5.59,1.57,7.05,1.05,1.46,2.82,2.19,5.32,2.19s4.26-.72,5.28-2.16c1.03-1.44,1.54-3.8,1.54-7.08v-17.08h5.27v17.27Z" style="fill:#0f3c80;"></path><path d="M153.42,202.46h-12.74v-49.01h20.28c5.5,0,9.72,1.43,12.64,4.29,2.92,2.86,4.39,6.89,4.39,12.09s-1.46,9.23-4.39,12.09c-2.92,2.86-7.14,4.29-12.64,4.29h-7.54v16.25ZM153.42,175.94h4.22c4.68,0,7.02-2.04,7.02-6.11s-2.34-6.11-7.02-6.11h-4.22v12.22Z" style="fill:#0f3c80;"></path><path d="M215.68,187.2c0,4.51-1.58,8.34-4.73,11.51-3.15,3.16-6.99,4.74-11.52,4.74s-8.29-1.58-11.41-4.73c-3.12-3.15-4.68-6.99-4.68-11.52s1.54-8.33,4.63-11.39c3.09-3.07,6.91-4.6,11.46-4.6s8.45,1.54,11.57,4.62c3.12,3.08,4.68,6.87,4.68,11.38ZM210.5,187.2c0-3.19-1.06-5.83-3.17-7.92-2.12-2.08-4.73-3.13-7.84-3.13s-5.75,1.04-7.84,3.13-3.14,4.72-3.14,7.92,1.06,5.9,3.19,8.06c2.13,2.16,4.72,3.24,7.79,3.24s5.75-1.08,7.85-3.24,3.16-4.84,3.16-8.06Z" style="fill:#0f3c80;"></path><path d="M230.6,160.16c0,.97-.35,1.81-1.06,2.51-.71.7-1.55,1.05-2.52,1.05s-1.81-.35-2.51-1.05c-.7-.7-1.05-1.53-1.05-2.51s.35-1.81,1.05-2.52c.7-.71,1.53-1.06,2.51-1.06s1.81.35,2.52,1.06c.71.71,1.06,1.55,1.06,2.52ZM229.62,202.46h-5.21v-30.34h5.21v30.34Z" style="fill:#0f3c80;"></path><path d="M269.3,202.46h-5.21v-5.01c-1.04,1.95-2.49,3.43-4.36,4.46-1.87,1.03-4.08,1.54-6.62,1.54-4.23,0-7.71-1.53-10.44-4.6-2.73-3.07-4.09-6.99-4.09-11.78s1.37-8.49,4.11-11.44c2.74-2.95,6.26-4.43,10.55-4.43,2.43,0,4.58.48,6.44,1.43,1.86.95,3.33,2.32,4.41,4.09v-27.9h5.21v53.64ZM264.09,186.94c0-3.32-.92-5.95-2.75-7.89-1.83-1.94-4.27-2.9-7.32-2.9s-5.49,1.01-7.38,3.02-2.84,4.67-2.84,7.97.93,6.06,2.79,8.16c1.86,2.09,4.25,3.14,7.17,3.14s5.42-1.07,7.38-3.22c1.96-2.15,2.94-4.9,2.94-8.27Z" style="fill:#0f3c80;"></path><path d="M298.95,194.28c0,2.79-1.02,5.02-3.05,6.68s-4.8,2.49-8.32,2.49c-2.64,0-4.88-.53-6.71-1.6-1.83-1.07-3.17-2.62-4.01-4.65l4.41-2.79c.61,1.46,1.47,2.55,2.57,3.27,1.1.72,2.45,1.08,4.06,1.08,1.78,0,3.19-.37,4.25-1.11,1.06-.74,1.59-1.76,1.59-3.05,0-1.42-.48-2.5-1.44-3.24-.96-.74-2.84-1.61-5.63-2.6-2.73-1.02-4.78-2.27-6.14-3.78-1.36-1.5-2.05-3.28-2.05-5.33,0-2.62.87-4.69,2.62-6.19,1.75-1.5,4.18-2.25,7.32-2.25,2.29,0,4.19.47,5.71,1.4,1.52.93,2.74,2.37,3.65,4.32l-4.28,2.6c-.55-1.27-1.25-2.21-2.1-2.81-.85-.6-1.9-.9-3.17-.9-1.46,0-2.6.33-3.43,1-.82.67-1.24,1.57-1.24,2.71s.43,2.14,1.29,2.92c.86.78,2.42,1.54,4.68,2.29,3.34,1.08,5.75,2.37,7.22,3.86,1.47,1.49,2.21,3.39,2.21,5.7Z" style="fill:#0f3c80;"></path><path d="M349.97,188.09h-24.38c.19,3.28,1.16,5.82,2.9,7.63,1.75,1.81,4.08,2.71,7,2.71,2.22,0,4.11-.44,5.67-1.32,1.55-.88,2.79-2.2,3.7-3.95l4.35,2.29c-1.4,2.65-3.25,4.64-5.57,5.98-2.32,1.34-5.05,2.01-8.2,2.01-4.57,0-8.22-1.49-10.93-4.47s-4.08-6.93-4.08-11.84c0-4.57,1.44-8.37,4.32-11.39,2.88-3.03,6.42-4.54,10.63-4.54s7.83,1.39,10.54,4.16c2.71,2.77,4.06,6.41,4.06,10.92v1.81ZM344.79,184.4c-.28-2.6-1.25-4.63-2.92-6.08-1.67-1.45-3.84-2.17-6.51-2.17s-4.73.75-6.51,2.24c-1.78,1.49-2.82,3.5-3.14,6.01h19.08Z" style="fill:#0f3c80;"></path><path d="M365.13,176.79h-4.82v25.68h-5.17v-25.68h-3.65v-4.67h3.65v-12.28h5.17v12.28h4.82v4.67Z" style="fill:#0f3c80;"></path><path d="M188.58,275.07l8.32-49.01h12.61l9.81,26.13,9.75-26.13h12.61l8.32,49.01h-12.67l-4.22-28.21-11.57,28.21h-5.07l-10.98-28.21-4.23,28.21h-12.67Z" style="fill:#0f3c80;"></path><path d="M284.57,260.69h-24.38c.19,3.28,1.16,5.82,2.9,7.63,1.75,1.81,4.08,2.71,7,2.71,2.22,0,4.11-.44,5.67-1.32,1.55-.88,2.79-2.2,3.7-3.95l4.35,2.29c-1.4,2.65-3.25,4.64-5.57,5.98-2.32,1.34-5.05,2.01-8.2,2.01-4.57,0-8.22-1.49-10.93-4.47s-4.08-6.93-4.08-11.84c0-4.57,1.44-8.37,4.32-11.39,2.88-3.03,6.42-4.54,10.63-4.54s7.83,1.39,10.54,4.16c2.71,2.77,4.06,6.41,4.06,10.92v1.81ZM279.39,257.01c-.28-2.6-1.25-4.63-2.92-6.08-1.67-1.45-3.84-2.17-6.51-2.17s-4.73.75-6.51,2.24c-1.78,1.49-2.82,3.5-3.14,6.01h19.08Z" style="fill:#0f3c80;"></path><path d="M310.2,266.88c0,2.79-1.02,5.02-3.05,6.68s-4.8,2.49-8.32,2.49c-2.64,0-4.88-.53-6.71-1.6-1.83-1.07-3.17-2.62-4.01-4.65l4.41-2.79c.61,1.46,1.47,2.55,2.57,3.27,1.1.72,2.45,1.08,4.06,1.08,1.78,0,3.19-.37,4.25-1.11,1.06-.74,1.59-1.76,1.59-3.05,0-1.42-.48-2.5-1.44-3.24-.96-.74-2.84-1.61-5.63-2.6-2.73-1.02-4.78-2.27-6.14-3.78-1.36-1.5-2.05-3.28-2.05-5.33,0-2.62.87-4.69,2.62-6.19,1.75-1.5,4.18-2.25,7.32-2.25,2.29,0,4.19.47,5.71,1.4,1.52.93,2.74,2.37,3.65,4.32l-4.28,2.6c-.55-1.27-1.25-2.21-2.1-2.81-.85-.6-1.9-.9-3.17-.9-1.46,0-2.6.33-3.43,1-.82.67-1.24,1.57-1.24,2.71s.43,2.14,1.29,2.92c.86.78,2.42,1.54,4.68,2.29,3.34,1.08,5.75,2.37,7.22,3.86,1.47,1.49,2.21,3.39,2.21,5.7Z" style="fill:#0f3c80;"></path><path d="M342.17,261.99c0,4.85-.98,8.4-2.94,10.66s-5.01,3.4-9.16,3.4-7.23-1.13-9.17-3.4c-1.95-2.26-2.92-5.82-2.92-10.66v-17.27h5.21v17.08c0,3.24.52,5.59,1.57,7.05,1.05,1.46,2.82,2.19,5.32,2.19s4.26-.72,5.28-2.16c1.03-1.44,1.54-3.8,1.54-7.08v-17.08h5.27v17.27Z" style="fill:#0f3c80;"></path><path d="M369.04,244.38l-1.24,5.14c-.38-.23-.79-.41-1.24-.52s-.92-.17-1.43-.17c-2.56,0-4.49,1.1-5.79,3.29-1.3,2.19-1.95,5.46-1.95,9.82v13.14h-5.17v-30.34h5.17v5.33c.74-2.18,1.81-3.77,3.21-4.76s3.26-1.49,5.59-1.49c.55,0,1.08.05,1.6.16s.94.24,1.25.41Z" style="fill:#0f3c80;"></path><path d="M399.65,260.69h-24.38c.19,3.28,1.16,5.82,2.9,7.63,1.75,1.81,4.08,2.71,7,2.71,2.22,0,4.11-.44,5.67-1.32,1.55-.88,2.79-2.2,3.7-3.95l4.35,2.29c-1.4,2.65-3.25,4.64-5.57,5.98-2.32,1.34-5.05,2.01-8.2,2.01-4.57,0-8.22-1.49-10.93-4.47s-4.08-6.93-4.08-11.84c0-4.57,1.44-8.37,4.32-11.39,2.88-3.03,6.42-4.54,10.63-4.54s7.83,1.39,10.54,4.16c2.71,2.77,4.06,6.41,4.06,10.92v1.81ZM394.47,257.01c-.28-2.6-1.25-4.63-2.92-6.08-1.67-1.45-3.84-2.17-6.51-2.17s-4.73.75-6.51,2.24c-1.78,1.49-2.82,3.5-3.14,6.01h19.08Z" style="fill:#0f3c80;"></path><path d="M425.28,266.88c0,2.79-1.02,5.02-3.05,6.68s-4.8,2.49-8.32,2.49c-2.64,0-4.88-.53-6.71-1.6-1.83-1.07-3.17-2.62-4.01-4.65l4.41-2.79c.61,1.46,1.47,2.55,2.57,3.27,1.1.72,2.45,1.08,4.06,1.08,1.78,0,3.19-.37,4.25-1.11,1.06-.74,1.59-1.76,1.59-3.05,0-1.42-.48-2.5-1.44-3.24-.96-.74-2.84-1.61-5.63-2.6-2.73-1.02-4.78-2.27-6.14-3.78-1.36-1.5-2.05-3.28-2.05-5.33,0-2.62.87-4.69,2.62-6.19,1.75-1.5,4.18-2.25,7.32-2.25,2.29,0,4.19.47,5.71,1.4,1.52.93,2.74,2.37,3.65,4.32l-4.28,2.6c-.55-1.27-1.25-2.21-2.1-2.81-.85-.6-1.9-.9-3.17-.9-1.46,0-2.6.33-3.43,1-.82.67-1.24,1.57-1.24,2.71s.43,2.14,1.29,2.92c.86.78,2.42,1.54,4.68,2.29,3.34,1.08,5.75,2.37,7.22,3.86,1.47,1.49,2.21,3.39,2.21,5.7Z" style="fill:#0f3c80;"></path><path d="M101.6,80.19v49.01h-12.74v-49.01h12.74Z" style="fill:#0f3c80;"></path><path d="M138.13,129.2h-5.21v-18.12c0-2.94-.52-5.1-1.57-6.47-1.05-1.38-2.71-2.06-5-2.06-2.6,0-4.59,1.03-5.95,3.08-1.37,2.05-2.05,5.06-2.05,9.01v14.57h-5.17v-30.34h5.17v4.47c.91-1.8,2.18-3.15,3.81-4.05,1.63-.9,3.62-1.35,5.97-1.35,3.11,0,5.55,1.03,7.33,3.08s2.67,4.93,2.67,8.63v19.55Z" style="fill:#0f3c80;"></path><path d="M158.93,103.52h-4.82v25.68h-5.17v-25.68h-3.65v-4.67h3.65v-12.28h5.17v12.28h4.82v4.67Z" style="fill:#0f3c80;"></path><path d="M192.55,114.82h-24.38c.19,3.28,1.16,5.82,2.9,7.63,1.75,1.81,4.08,2.71,7,2.71,2.22,0,4.11-.44,5.67-1.32,1.55-.88,2.79-2.2,3.7-3.95l4.35,2.29c-1.4,2.65-3.25,4.64-5.57,5.98-2.32,1.34-5.05,2.01-8.2,2.01-4.57,0-8.22-1.49-10.93-4.47s-4.08-6.93-4.08-11.84c0-4.57,1.44-8.37,4.32-11.39,2.88-3.03,6.42-4.54,10.63-4.54s7.83,1.39,10.54,4.16c2.71,2.77,4.06,6.41,4.06,10.92v1.81ZM187.37,111.14c-.28-2.6-1.25-4.63-2.92-6.08-1.67-1.45-3.84-2.17-6.51-2.17s-4.73.75-6.51,2.24c-1.78,1.49-2.82,3.5-3.14,6.01h19.08Z" style="fill:#0f3c80;"></path><path d="M217.66,98.51l-1.24,5.14c-.38-.23-.79-.41-1.24-.52s-.92-.17-1.43-.17c-2.56,0-4.49,1.1-5.79,3.29-1.3,2.19-1.95,5.46-1.95,9.82v13.14h-5.17v-30.34h5.17v5.33c.74-2.18,1.81-3.77,3.21-4.76s3.26-1.49,5.59-1.49c.55,0,1.08.05,1.6.16s.94.24,1.25.41Z" style="fill:#0f3c80;"></path><path d="M248.29,129.2h-5.21v-18.12c0-2.94-.52-5.1-1.57-6.47-1.05-1.38-2.71-2.06-5-2.06-2.6,0-4.59,1.03-5.95,3.08-1.37,2.05-2.05,5.06-2.05,9.01v14.57h-5.17v-30.34h5.17v4.47c.91-1.8,2.18-3.15,3.81-4.05,1.63-.9,3.62-1.35,5.97-1.35,3.11,0,5.55,1.03,7.33,3.08s2.67,4.93,2.67,8.63v19.55Z" style="fill:#0f3c80;"></path><path d="M287.27,129.2h-5.21v-5.01c-1.04,1.95-2.49,3.43-4.36,4.46-1.87,1.03-4.08,1.54-6.62,1.54-4.23,0-7.71-1.53-10.44-4.6-2.73-3.07-4.09-6.99-4.09-11.78s1.37-8.49,4.11-11.44c2.74-2.95,6.26-4.43,10.55-4.43,2.43,0,4.58.48,6.44,1.43,1.86.95,3.33,2.32,4.41,4.09v-4.6h5.21v30.34ZM282.07,113.68c0-3.32-.92-5.95-2.75-7.89-1.83-1.94-4.27-2.9-7.32-2.9s-5.49,1.01-7.38,3.02-2.84,4.67-2.84,7.97.93,6.06,2.79,8.16c1.86,2.09,4.25,3.14,7.17,3.14s5.42-1.07,7.38-3.22c1.96-2.15,2.94-4.9,2.94-8.27Z" style="fill:#0f3c80;"></path><path d="M308.54,103.52h-4.82v25.68h-5.17v-25.68h-3.65v-4.67h3.65v-12.28h5.17v12.28h4.82v4.67Z" style="fill:#0f3c80;"></path><path d="M322.93,86.89c0,.97-.35,1.81-1.06,2.51-.71.7-1.55,1.05-2.52,1.05s-1.81-.35-2.51-1.05c-.7-.7-1.05-1.53-1.05-2.51s.35-1.81,1.05-2.52c.7-.71,1.53-1.06,2.51-1.06s1.81.35,2.52,1.06c.71.71,1.06,1.55,1.06,2.52ZM321.94,129.2h-5.21v-30.34h5.21v30.34Z" style="fill:#0f3c80;"></path><path d="M363.05,113.93c0,4.51-1.58,8.34-4.73,11.51-3.15,3.16-6.99,4.74-11.52,4.74s-8.29-1.58-11.41-4.73c-3.12-3.15-4.68-6.99-4.68-11.52s1.54-8.33,4.63-11.39c3.09-3.07,6.91-4.6,11.46-4.6s8.45,1.54,11.57,4.62c3.12,3.08,4.68,6.87,4.68,11.38ZM357.88,113.93c0-3.19-1.06-5.83-3.17-7.92-2.12-2.08-4.73-3.13-7.84-3.13s-5.75,1.04-7.84,3.13-3.14,4.72-3.14,7.92,1.06,5.9,3.19,8.06c2.13,2.16,4.72,3.24,7.79,3.24s5.75-1.08,7.85-3.24,3.16-4.84,3.16-8.06Z" style="fill:#0f3c80;"></path><path d="M396.29,129.2h-5.21v-18.12c0-2.94-.52-5.1-1.57-6.47-1.05-1.38-2.71-2.06-5-2.06-2.6,0-4.59,1.03-5.95,3.08-1.37,2.05-2.05,5.06-2.05,9.01v14.57h-5.17v-30.34h5.17v4.47c.91-1.8,2.18-3.15,3.81-4.05,1.63-.9,3.62-1.35,5.97-1.35,3.11,0,5.55,1.03,7.33,3.08s2.67,4.93,2.67,8.63v19.55Z" style="fill:#0f3c80;"></path><path d="M435.27,129.2h-5.21v-5.01c-1.04,1.95-2.49,3.43-4.36,4.46-1.87,1.03-4.08,1.54-6.62,1.54-4.23,0-7.71-1.53-10.44-4.6-2.73-3.07-4.09-6.99-4.09-11.78s1.37-8.49,4.11-11.44c2.74-2.95,6.26-4.43,10.55-4.43,2.43,0,4.58.48,6.44,1.43,1.86.95,3.33,2.32,4.41,4.09v-4.6h5.21v30.34ZM430.06,113.68c0-3.32-.92-5.95-2.75-7.89-1.83-1.94-4.27-2.9-7.32-2.9s-5.49,1.01-7.38,3.02-2.84,4.67-2.84,7.97.93,6.06,2.79,8.16c1.86,2.09,4.25,3.14,7.17,3.14s5.42-1.07,7.38-3.22c1.96-2.15,2.94-4.9,2.94-8.27Z" style="fill:#0f3c80;"></path><path d="M451.59,129.2h-5.17v-53.64h5.17v53.64Z" style="fill:#0f3c80;"></path><path d="M507.57,129.2h-5.21v-5.01c-1.04,1.95-2.49,3.43-4.36,4.46-1.87,1.03-4.08,1.54-6.62,1.54-4.23,0-7.71-1.53-10.44-4.6-2.73-3.07-4.09-6.99-4.09-11.78s1.37-8.49,4.11-11.44c2.74-2.95,6.26-4.43,10.55-4.43,2.43,0,4.58.48,6.44,1.43,1.86.95,3.33,2.32,4.41,4.09v-27.9h5.21v53.64ZM502.36,113.68c0-3.32-.92-5.95-2.75-7.89-1.83-1.94-4.27-2.9-7.32-2.9s-5.49,1.01-7.38,3.02-2.84,4.67-2.84,7.97.93,6.06,2.79,8.16c1.86,2.09,4.25,3.14,7.17,3.14s5.42-1.07,7.38-3.22c1.96-2.15,2.94-4.9,2.94-8.27Z" style="fill:#0f3c80;"></path><path d="M540.66,114.82h-24.38c.19,3.28,1.16,5.82,2.9,7.63,1.75,1.81,4.08,2.71,7,2.71,2.22,0,4.11-.44,5.67-1.32,1.55-.88,2.79-2.2,3.7-3.95l4.35,2.29c-1.4,2.65-3.25,4.64-5.57,5.98-2.32,1.34-5.05,2.01-8.2,2.01-4.57,0-8.22-1.49-10.93-4.47s-4.08-6.93-4.08-11.84c0-4.57,1.44-8.37,4.32-11.39,2.88-3.03,6.42-4.54,10.63-4.54s7.83,1.39,10.54,4.16c2.71,2.77,4.06,6.41,4.06,10.92v1.81ZM535.49,111.14c-.28-2.6-1.25-4.63-2.92-6.08-1.67-1.45-3.84-2.17-6.51-2.17s-4.73.75-6.51,2.24c-1.78,1.49-2.82,3.5-3.14,6.01h19.08Z" style="fill:#0f3c80;"></path><path d="M567.26,121.01c0,2.79-1.02,5.02-3.05,6.68s-4.8,2.49-8.32,2.49c-2.64,0-4.88-.53-6.71-1.6-1.83-1.07-3.17-2.62-4.01-4.65l4.41-2.79c.61,1.46,1.47,2.55,2.57,3.27,1.1.72,2.45,1.08,4.06,1.08,1.78,0,3.19-.37,4.25-1.11,1.06-.74,1.59-1.76,1.59-3.05,0-1.42-.48-2.5-1.44-3.24-.96-.74-2.84-1.61-5.63-2.6-2.73-1.02-4.78-2.27-6.14-3.78-1.36-1.5-2.05-3.28-2.05-5.33,0-2.62.87-4.69,2.62-6.19,1.75-1.5,4.18-2.25,7.32-2.25,2.29,0,4.19.47,5.71,1.4,1.52.93,2.74,2.37,3.65,4.32l-4.28,2.6c-.55-1.27-1.25-2.21-2.1-2.81-.85-.6-1.9-.9-3.17-.9-1.46,0-2.6.33-3.43,1-.82.67-1.24,1.57-1.24,2.71s.43,2.14,1.29,2.92c.86.78,2.42,1.54,4.68,2.29,3.34,1.08,5.75,2.37,7.22,3.86,1.47,1.49,2.21,3.39,2.21,5.7Z" style="fill:#0f3c80;"></path><rect x="31.43" y="71.7" width="4.12" height="203.36" style="fill:#0f3c80;"></rect><rect x="26.32" y="104.96" width="14.34" height="14.34" transform="translate(89.1 9.16) rotate(45)" style="fill:#0f3c80;"></rect><rect x="86.8" y="144.12" width="4.12" height="130.95" style="fill:#0f3c80;"></rect><rect x="81.69" y="177.37" width="14.34" height="14.34" transform="translate(156.52 -8.78) rotate(45)" style="fill:#0f3c80;"></rect><rect x="140.91" y="216.92" width="4.12" height="58.15" style="fill:#0f3c80;"></rect><rect x="135.8" y="250.17" width="14.34" height="14.34" transform="translate(223.84 -25.72) rotate(45)" style="fill:#0f3c80;"></rect></svg></image>
+    </div>
+
+    <div class="coverpage-title">
+      
+      <span class="title-first">Pooled variances</span><br />
+      <span class="title-second"></span>
+      
+    </div>
+  </div>
+
+  <div class="coverpage-logo">
+    <span>Bureau International de Poids et Mesures 1993</span>
+  
+  </div>
+
+  
+
+  <div class="coverpage-tc-name">
+    <span></span>
+    <div class="coverpage-logo logo-img">
+      <image src="" mimetype="image/svg+xml"><svg xmlns="http://www.w3.org/2000/svg" id="uuid-025413ec-7b33-4cab-9252-e1a1cbcbc7d4" width="216.86mm" height="51.44mm" viewBox="0 0 614.73 145.8" preserveaspectratio="xMidYMin slice"><rect x="40.59" y="-.11" width="9.37" height="145.75" style="fill:#0f3c80;"></rect><rect x="84.49" y="-.11" width="9.37" height="145.75" style="fill:#0f3c80;"></rect><rect x="129.99" y="-.11" width="9.37" height="145.75" style="fill:#0f3c80;"></rect><rect x="122.95" y="101.81" width="24.05" height="24.05" transform="translate(120.03 -62.1) rotate(45)" style="fill:#0f3c80;"></rect><rect x="77.01" y="60.88" width="24.05" height="24.05" transform="translate(77.63 -41.61) rotate(45)" style="fill:#0f3c80;"></rect><rect x="33.12" y="21.55" width="24.05" height="24.05" transform="translate(36.97 -22.09) rotate(45)" style="fill:#0f3c80;"></rect><path d="M191.41,25.36h42.05c9.98,0,17.57,2.4,22.75,7.2,5.18,4.8,7.78,11.71,7.78,20.74,0,5.47-.99,10.01-2.95,13.61-1.97,3.6-4.97,6.65-9,9.14,4.03.77,7.46,1.94,10.3,3.53,2.83,1.58,5.13,3.53,6.91,5.83,1.78,2.3,3.05,4.9,3.82,7.78.77,2.88,1.15,5.95,1.15,9.22,0,5.09-.89,9.6-2.66,13.54-1.78,3.94-4.27,7.25-7.49,9.94-3.22,2.69-7.13,4.71-11.74,6.05-4.61,1.34-9.79,2.02-15.55,2.02h-45.36V25.36ZM219.63,67.98h5.18c8.83,0,13.25-3.5,13.25-10.51s-4.42-10.51-13.25-10.51h-5.18v21.02ZM219.63,112.05h6.19c7.1,0,12.19-.91,15.26-2.74,3.07-1.82,4.61-4.75,4.61-8.78s-1.54-6.96-4.61-8.78c-3.07-1.82-8.16-2.74-15.26-2.74h-6.19v23.04Z" style="fill:#0f3c80;"></path><path d="M315.68,25.36v108.58h-28.22V25.36h28.22Z" style="fill:#0f3c80;"></path><path d="M363.05,133.93h-28.22V25.36h44.93c12.19,0,21.53,3.17,28.01,9.5,6.48,6.34,9.72,15.26,9.72,26.78s-3.24,20.45-9.72,26.78c-6.48,6.34-15.82,9.5-28.01,9.5h-16.7v36ZM363.05,75.18h9.36c10.37,0,15.55-4.51,15.55-13.54s-5.18-13.54-15.55-13.54h-9.36v27.07Z" style="fill:#0f3c80;"></path><path d="M423.96,133.93l18.43-108.58h27.94l21.74,57.89,21.6-57.89h27.94l18.43,108.58h-28.08l-9.36-62.5-25.63,62.5h-11.23l-24.34-62.5-9.36,62.5h-28.08Z" style="fill:#0f3c80;"></path></svg></image>
+    </div>
+  </div>
+ 
+  
+  <div class="coverpage-tc-name">
+    
+    <span>Jörg W. Müller</span>.
+  </div>
+  
+
+  
+
+  
+
+  </div>
+
+    <div class="wrapper-top-bottom"></div>
+
+  <div class="WordSection11">
+  <div class="coverpage-stage-block">
+    <span class="coverpage-stage" id="brochure">BIPM Brochure</span>
+  </div>
+
+  <div class="coverpage-stage-block">
+    <p><span class="coverpage-maturity" id="in-force">In Force</span></p>
+</div>
+
+<div class="info-section">
+<div class="copyright">
+<div class="boilerplate-copyright">
+
+<div id="_b79088bf-aa2f-3da2-6225-63bf7aabbc0f"><p id="_26660ca8-3cdc-46cd-7f65-1a88ca421f5a" style="text-align:center;">© Bureau International des Poids et Mesures 1993 all rights reserved</p>
+</div>
+</div>
+  <div class="boilerplate-license">
+
+<div id="_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a"><h1 class="IntroTitle"><a class="anchor" href="#_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a"></a><a class="header" href="#_4ffcd5b5-8039-1aa4-59ce-390aa3b61c7a">Copyright statement</a></h1>
+
+<p id="_50719790-3c5b-c213-8298-0631d690bc21">This document is distributed under the terms of the Creative Commons Attribution 4.0 International License (<a href="http://creativecommons.org/licenses/by/4.0/:">http://creativecommons.org/licenses/by/4.0/:</a>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</p>
+</div>
+</div>
+  <div id="boilerplate-legal-destination"></div>
+<div class="boilerplate-feedback">
+
+<p id="_5926bc3f-b367-69e7-6cc6-442a91e32db2">BIPM<br /> Pavillon de Breteuil<br /> F-92312 Sèvres Cedex<br /> FRANCE</p>
+</div>
+</div>
+
+<div class="rule"></div>
+</div>
+  </div>
+
+
+</div>
+</header></div><br /><div class="prefatory-section"><nav>
+  <div id="toc"><h1 class="IntroTitle"><a class="anchor" href="#_5c1a45ef-0335-c28e-3f58-6bf64e3f6a5a"></a><a class="header" href="#_5c1a45ef-0335-c28e-3f58-6bf64e3f6a5a">Contents</a></h1><ul><li class="h1"><a href="#_ef48d518-5705-c0b6-30a7-6ad9a0f166be">      
+  
+  1.  Pooled variances
+</a></li>
+<li class="h1"><a href="#_9bd0879e-a824-4f73-8fc3-6b13c1b399a2">      References</a></li></ul></div>
+
+</nav>
+
+
+<div class="rule toc"></div>
+</div><br /><main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button><div class="authority">
+
+
+
+
+</div><br /><div id="_ef48d518-5705-c0b6-30a7-6ad9a0f166be"><h1 id="_209c9548-4213-4fe3-b948-14c751c25771"><a class="anchor" href="#_ef48d518-5705-c0b6-30a7-6ad9a0f166be"></a><a class="header" href="#_ef48d518-5705-c0b6-30a7-6ad9a0f166be">1.  Pooled variances</a></h1><p id="_c0e5eb13-34ce-3cba-e912-ba3a913cbcb7">Experimenters in general are weIl advised to subdivide lengthy measurements into a number of shorter ones, whenever feasible. This gives them the possibility — should anything have gone wrong — at least to be aware of the problem and to know roughly when it occurred. If the results do not indicate an anomaly, the partial results must be combined in such a way that the outcome characterizes the entire measuring period.</p><p id="_ef0ab20f-51ed-6117-3302-c9ebf08d51eb">Problems with recent measurements have led us to re-consider the question of how experimental values for the variance, obtained in sequences of runs, should be used to arrive at a “best” overall estimate.</p><p id="_630fff28-8f43-25a5-f287-3e3bfcefde09">This problem occurs rather frequently and, no doubt, has been treated many times. A few years ago we looked at the special case of two samples <a href="#muller">[1]</a>. In what follows these earlier findings are generalized to include an arbitrary number m of samples. It is shown that the contributions arising from the differences between the individual mean values can be incorporated in those terms that involve only the measured variances.</p><p id="_97f2dbe2-239e-aac4-43b8-fb02b41f0ec0">Suppose that we have to deal with a situation which is “under statistical control”. What we actually require is that the first two moments of the number <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>x</mi>
+  </mstyle>
+</math></span> of events, counted in a given time interval, show no significant trend with time.</p><p id="_8aba78ff-0eab-2bdd-6d00-fc01e10c9c73">Now consider measurements that have been performed on <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>m</mi>
+  </mstyle>
+</math></span> samples, of size <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>n</mi>
+      <mi>j</mi>
+    </msub>
+    <mtext> </mtext>
+    <mrow>
+      <mo>(</mo>
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+      <mo>,</mo>
+      <mn>2</mn>
+      <mo>,</mo>
+      <mo>…</mo>
+      <mo>,</mo>
+      <mi>m</mi>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math></span>, taken randomly from sorne stable population. Let the results be available in the form of me an values <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
+      </mover>
+      <mi>j</mi>
+    </msub>
+  </mstyle>
+</math></span> and variances <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msubsup>
+      <mi>s</mi>
+      <mi>j</mi>
+      <mn>2</mn>
+    </msubsup>
+  </mstyle>
+</math></span> (for a single measurement), which have been obtained by forming from the measurements <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>x</mi>
+      <mrow>
+        <mi>i</mi>
+        <mi>j</mi>
+      </mrow>
+    </msub>
+  </mstyle>
+</math></span> the quantities</p><div id="eq1"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
+      </mover>
+      <mi>j</mi>
+    </msub>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <msub>
+        <mi>n</mi>
+        <mi>j</mi>
+      </msub>
+    </mfrac>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>i</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <msub>
+          <mi>n</mi>
+          <mi>j</mi>
+        </msub>
+      </munderover>
+      <msub>
+        <mi>x</mi>
+        <mrow>
+          <mi>i</mi>
+          <mi>j</mi>
+        </mrow>
+      </msub>
+    </mrow>
+  </mstyle>
+</math></span>  (1)</p></div></div><p id="_2d07b0c2-8501-f375-2e81-6d4e02f56125">and</p><div id="eq2"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msubsup>
+      <mi>s</mi>
+      <mi>j</mi>
+      <mn>2</mn>
+    </msubsup>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <msub>
+          <mi>n</mi>
+          <mi>j</mi>
+        </msub>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </mfrac>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>i</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <msub>
+          <mi>n</mi>
+          <mi>j</mi>
+        </msub>
+      </munderover>
+      <msup>
+        <mrow>
+          <mo>(</mo>
+          <msub>
+            <mi>x</mi>
+            <mrow>
+              <mi>i</mi>
+              <mi>j</mi>
+            </mrow>
+          </msub>
+          <mo>−</mo>
+          <msub>
+            <mi>x</mi>
+            <mi>j</mi>
+          </msub>
+          <mo>)</mo>
+        </mrow>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+    <mo>.</mo>
+  </mstyle>
+</math></span>  (2)</p></div></div><p id="_8cd6d202-10ee-cf19-e713-0a9143f45bdc">This allows us to form the weighted mean value</p><div id="_1fbf17c6-f1f0-bf87-6831-f1174e2f675e"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mover>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
+      </mover>
+      <mo>¯</mo>
+    </mover>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mstyle mathvariant="italic">
+        <mi>N</mi>
+      </mstyle>
+    </mfrac>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>m</mi>
+      </munderover>
+      <msub>
+        <mi>n</mi>
+        <mi>j</mi>
+      </msub>
+    </mrow>
+    <msub>
+      <mi>x</mi>
+      <mi>j</mi>
+    </msub>
+    <mo>,</mo>
+  </mstyle>
+</math></span></p></div></div><p id="_c581f5f4-5c62-dc19-3e73-3cbfbb5061ed">where</p><div id="_a506d311-f88f-7b4d-b325-b85aa7fb0f58"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mstyle mathvariant="italic">
+      <mi>N</mi>
+    </mstyle>
+    <mo>=</mo>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>m</mi>
+      </munderover>
+      <msub>
+        <mi>n</mi>
+        <mi>j</mi>
+      </msub>
+    </mrow>
+  </mstyle>
+</math></span></p></div></div><p id="_a16d6bdc-45f2-9483-063e-92aaf83387fe">is the total number of measurements performed. Note that all the variances <a href="#eq2">Equation (2)</a> refer to a single measurement <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>x</mi>
+      <mrow>
+        <mi>i</mi>
+        <mi>j</mi>
+      </mrow>
+    </msub>
+  </mstyle>
+</math></span>, not to a mean value <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
+      </mover>
+      <mi>j</mi>
+    </msub>
+  </mstyle>
+</math></span>.</p><p id="_f7baf4c6-f864-0a50-03a2-d978d1860915">Our problem is to evaluate, on the basis of the data given in <a href="#eq1">Equation (1)</a> and <a href="#eq2">Equation (2)</a>, a value for the variance of a single measurement, denoted by <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math></span>. According to the definition of a variance, we have, considering all the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mstyle mathvariant="italic">
+      <mi>N</mi>
+    </mstyle>
+  </mstyle>
+</math></span> measurements performed, the estimation</p><div id="eq3"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mstyle mathvariant="italic">
+          <mi>N</mi>
+        </mstyle>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </mfrac>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>m</mi>
+      </munderover>
+      <mrow>
+        <munderover>
+          <mo>∑</mo>
+          <mrow>
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <msub>
+            <mi>n</mi>
+            <mi>j</mi>
+          </msub>
+        </munderover>
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <msub>
+              <mi>x</mi>
+              <mrow>
+                <mi>i</mi>
+                <mi>j</mi>
+              </mrow>
+            </msub>
+            <mo>−</mo>
+            <mover>
+              <mover>
+                <mi>x</mi>
+                <mo>¯</mo>
+              </mover>
+              <mo>¯</mo>
+            </mover>
+            <mo>)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </mrow>
+    <mo>.</mo>
+  </mstyle>
+</math></span>  (3)</p></div></div><p id="_27e66ffb-9a21-0813-32af-b305cf60d169">This expression will now be rearranged. In a first step we easily find</p><div id="_936834d0-73c9-8236-3c3c-c9872548d698"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>N</mi>
+      </mstyle>
+      <mo>−</mo>
+      <mn>1</mn>
+      <mo>)</mo>
+    </mrow>
+    <mo>⋅</mo>
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>m</mi>
+      </munderover>
+      <mrow>
+        <munderover>
+          <mo>∑</mo>
+          <mrow>
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <msub>
+            <mi>n</mi>
+            <mi>j</mi>
+          </msub>
+        </munderover>
+        <msup>
+          <mrow>
+            <mo>[</mo>
+            <mrow>
+              <mo>(</mo>
+              <msub>
+                <mi>x</mi>
+                <mrow>
+                  <mi>i</mi>
+                  <mi>j</mi>
+                </mrow>
+              </msub>
+              <mo>−</mo>
+              <msub>
+                <mover>
+                  <mi>x</mi>
+                  <mo>¯</mo>
+                </mover>
+                <mi>j</mi>
+              </msub>
+              <mo>)</mo>
+            </mrow>
+            <mo>+</mo>
+            <mrow>
+              <mo>(</mo>
+              <msub>
+                <mover>
+                  <mi>x</mi>
+                  <mo>¯</mo>
+                </mover>
+                <mi>j</mi>
+              </msub>
+              <mo>−</mo>
+              <mover>
+                <mover>
+                  <mi>x</mi>
+                  <mo>¯</mo>
+                </mover>
+                <mo>¯</mo>
+              </mover>
+              <mo>)</mo>
+            </mrow>
+            <mo>]</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+    </mrow>
+  </mstyle>
+</math></span></p></div></div><div id="eq4"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <mrow>
+      <munder>
+        <mo>∑</mo>
+        <mi>j</mi>
+      </munder>
+      <mrow>
+        <munder>
+          <mo>∑</mo>
+          <mi>i</mi>
+        </munder>
+        <mrow>
+          <mo>[</mo>
+          <msup>
+            <mrow>
+              <mo>(</mo>
+              <msub>
+                <mi>x</mi>
+                <mrow>
+                  <mi>i</mi>
+                  <mi>j</mi>
+                </mrow>
+              </msub>
+              <mo>−</mo>
+              <msub>
+                <mover>
+                  <mi>x</mi>
+                  <mo>¯</mo>
+                </mover>
+                <mi>j</mi>
+              </msub>
+              <mo>)</mo>
+            </mrow>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <msup>
+            <mrow>
+              <mo>(</mo>
+              <msub>
+                <mover>
+                  <mi>x</mi>
+                  <mo>¯</mo>
+                </mover>
+                <mi>j</mi>
+              </msub>
+              <mo>−</mo>
+              <mover>
+                <mover>
+                  <mi>x</mi>
+                  <mo>¯</mo>
+                </mover>
+                <mo>¯</mo>
+              </mover>
+              <mo>)</mo>
+            </mrow>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <mn>2</mn>
+          <mrow>
+            <mo>(</mo>
+            <msub>
+              <mi>x</mi>
+              <mrow>
+                <mi>i</mi>
+                <mi>j</mi>
+              </mrow>
+            </msub>
+            <mo>−</mo>
+            <msub>
+              <mover>
+                <mi>x</mi>
+                <mo>¯</mo>
+              </mover>
+              <mi>j</mi>
+            </msub>
+            <mo>)</mo>
+          </mrow>
+          <mrow>
+            <mo>(</mo>
+            <msub>
+              <mover>
+                <mi>x</mi>
+                <mo>¯</mo>
+              </mover>
+              <mi>j</mi>
+            </msub>
+            <mo>−</mo>
+            <mover>
+              <mover>
+                <mi>x</mi>
+                <mo>¯</mo>
+              </mover>
+              <mo>¯</mo>
+            </mover>
+            <mo>)</mo>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <mo>.</mo>
+  </mstyle>
+</math></span>  (4)</p></div></div><p id="_78954834-8aec-dbd5-70d7-20f09b0c098c">Since according to <a href="#eq1">Equation (1)</a></p><div id="_a2f0702b-4634-9a7c-269a-7f48847dacfc"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>i</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <msub>
+          <mi>n</mi>
+          <mi>j</mi>
+        </msub>
+      </munderover>
+      <mrow>
+        <mo>(</mo>
+        <msub>
+          <mi>x</mi>
+          <mrow>
+            <mi>i</mi>
+            <mi>j</mi>
+          </mrow>
+        </msub>
+        <mo>−</mo>
+        <msub>
+          <mover>
+            <mi>x</mi>
+            <mo>¯</mo>
+          </mover>
+          <mi>j</mi>
+        </msub>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+    <mo>=</mo>
+    <mn>0</mn>
+    <mo>,</mo>
+  </mstyle>
+</math></span></p></div></div><p id="_c12f691c-fd86-f954-f97c-98dd1700ec43">we arrive, by using <a href="#eq2">Equation (2)</a>, at the form</p><div id="eq5"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mstyle mathvariant="italic">
+          <mi>N</mi>
+        </mstyle>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </mfrac>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>m</mi>
+      </munderover>
+      <msup>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mo>(</mo>
+            <msub>
+              <mi>n</mi>
+              <mi>j</mi>
+            </msub>
+            <mo>−</mo>
+            <mn>1</mn>
+            <mo>)</mo>
+          </mrow>
+          <msubsup>
+            <mi>s</mi>
+            <mi>j</mi>
+            <mn>2</mn>
+          </msubsup>
+          <mo>+</mo>
+          <msub>
+            <mi>n</mi>
+            <mi>j</mi>
+          </msub>
+          <msup>
+            <mrow>
+              <mo>(</mo>
+              <msub>
+                <mover>
+                  <mi>x</mi>
+                  <mo>¯</mo>
+                </mover>
+                <mi>j</mi>
+              </msub>
+              <mo>−</mo>
+              <mover>
+                <mover>
+                  <mi>x</mi>
+                  <mo>¯</mo>
+                </mover>
+                <mo>¯</mo>
+              </mover>
+              <mo>)</mo>
+            </mrow>
+            <mn>2</mn>
+          </msup>
+          <mo>]</mo>
+        </mrow>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+    <mo>.</mo>
+  </mstyle>
+</math></span>  (5)</p></div></div><p id="_e6ae3be2-9edb-69ab-1749-b194bd652e24">This is a useful identity. For the special case of <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>m</mi>
+    <mo>=</mo>
+    <mn>2</mn>
+  </mstyle>
+</math></span> samples, it follows from <a href="#eq1">Equation (1)</a> that</p><div id="_09dae159-14ed-3cc1-3cb5-aab5222e3731"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
+      </mover>
+      <mn>1</mn>
+    </msub>
+    <mo>−</mo>
+    <mover>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
+      </mover>
+      <mo>¯</mo>
+    </mover>
+    <mo>=</mo>
+    <msub>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
+      </mover>
+      <mn>1</mn>
+    </msub>
+    <mo>−</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mstyle mathvariant="italic">
+        <mi>N</mi>
+      </mstyle>
+    </mfrac>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mi>n</mi>
+        <mn>1</mn>
+      </msub>
+      <msub>
+        <mover>
+          <mi>x</mi>
+          <mo>¯</mo>
+        </mover>
+        <mn>1</mn>
+      </msub>
+      <mo>+</mo>
+      <msub>
+        <mi>n</mi>
+        <mn>2</mn>
+      </msub>
+      <msub>
+        <mover>
+          <mi>x</mi>
+          <mo>¯</mo>
+        </mover>
+        <mn>2</mn>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mfrac>
+      <msub>
+        <mi>n</mi>
+        <mn>2</mn>
+      </msub>
+      <mstyle mathvariant="italic">
+        <mi>N</mi>
+      </mstyle>
+    </mfrac>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mover>
+          <mi>x</mi>
+          <mo>¯</mo>
+        </mover>
+        <mn>1</mn>
+      </msub>
+      <mo>−</mo>
+      <msub>
+        <mover>
+          <mi>x</mi>
+          <mo>¯</mo>
+        </mover>
+        <mn>2</mn>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+    <mo>,</mo>
+  </mstyle>
+</math></span></p></div></div><p id="_b6807d00-687f-c957-f347-4157d30d1113">and similarly</p><div id="_ca63850e-767b-60ef-4f62-32522daddfb4"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msub>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
+      </mover>
+      <mn>2</mn>
+    </msub>
+    <mo>−</mo>
+    <mover>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
+      </mover>
+      <mo>¯</mo>
+    </mover>
+    <mo>=</mo>
+    <mfrac>
+      <msub>
+        <mi>n</mi>
+        <mn>1</mn>
+      </msub>
+      <mstyle mathvariant="italic">
+        <mi>N</mi>
+      </mstyle>
+    </mfrac>
+    <mrow>
+      <mo>(</mo>
+      <msub>
+        <mover>
+          <mi>x</mi>
+          <mo>¯</mo>
+        </mover>
+        <mn>2</mn>
+      </msub>
+      <mo>−</mo>
+      <msub>
+        <mover>
+          <mi>x</mi>
+          <mo>¯</mo>
+        </mover>
+        <mn>1</mn>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+    <mo>.</mo>
+  </mstyle>
+</math></span></p></div></div><p id="_f0cef8f7-86b5-2826-bf87-e3190754d560">Hence, the relation <a href="#eq5">Equation (5)</a> takes the form</p><div id="eq6"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mstyle mathvariant="italic">
+          <mi>N</mi>
+        </mstyle>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </mfrac>
+    <mrow>
+      <mo>[</mo>
+      <mrow>
+        <mo>(</mo>
+        <msub>
+          <mi>n</mi>
+          <mn>1</mn>
+        </msub>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>)</mo>
+      </mrow>
+      <msubsup>
+        <mi>s</mi>
+        <mn>1</mn>
+        <mn>2</mn>
+      </msubsup>
+      <mo>+</mo>
+      <mrow>
+        <mo>(</mo>
+        <msub>
+          <mi>n</mi>
+          <mn>2</mn>
+        </msub>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>)</mo>
+      </mrow>
+      <msubsup>
+        <mi>s</mi>
+        <mn>2</mn>
+        <mn>2</mn>
+      </msubsup>
+      <mo>+</mo>
+      <mfrac>
+        <mrow>
+          <msub>
+            <mi>n</mi>
+            <mn>1</mn>
+          </msub>
+          <msub>
+            <mi>n</mi>
+            <mn>2</mn>
+          </msub>
+        </mrow>
+        <mstyle mathvariant="italic">
+          <mi>N</mi>
+        </mstyle>
+      </mfrac>
+      <msup>
+        <mrow>
+          <mo>(</mo>
+          <msub>
+            <mover>
+              <mi>x</mi>
+              <mo>¯</mo>
+            </mover>
+            <mn>1</mn>
+          </msub>
+          <mo>−</mo>
+          <msub>
+            <mover>
+              <mi>x</mi>
+              <mo>¯</mo>
+            </mover>
+            <mn>2</mn>
+          </msub>
+          <mo>)</mo>
+        </mrow>
+        <mn>2</mn>
+      </msup>
+      <mo>]</mo>
+    </mrow>
+    <mo>,</mo>
+  </mstyle>
+</math></span>  (6)</p></div></div><p id="_2d180f25-01ec-f3bc-4156-f338353b6ed8">in agreement with a result given in <a href="#muller">[1]</a>.</p><p id="_5869d67b-c19e-233b-fb0f-183024b7978e">This procedure can be taken a step furthero To see this, let us recall the general formula for the variance <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mover>
+        <mi>y</mi>
+        <mo>¯</mo>
+      </mover>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math></span> of a weighted mean value <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mover>
+      <mi>y</mi>
+      <mo>¯</mo>
+    </mover>
+  </mstyle>
+</math></span>, based on m measured results <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>y</mi>
+      <mi>k</mi>
+    </msub>
+  </mstyle>
+</math></span> with statistical weights <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>g</mi>
+      <mi>k</mi>
+    </msub>
+  </mstyle>
+</math></span>. This expression is known to be given by</p><div id="eq7"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mover>
+        <mi>y</mi>
+        <mo>¯</mo>
+      </mover>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mrow>
+          <munderover>
+            <mo>∑</mo>
+            <mrow>
+              <mi>k</mi>
+              <mo>=</mo>
+              <mn>1</mn>
+            </mrow>
+            <mi>m</mi>
+          </munderover>
+          <msub>
+            <mi>g</mi>
+            <mi>k</mi>
+          </msub>
+        </mrow>
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <msub>
+              <mi>y</mi>
+              <mi>k</mi>
+            </msub>
+            <mo>−</mo>
+            <mover>
+              <mi>y</mi>
+              <mo>¯</mo>
+            </mover>
+            <mo>)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+      <mrow>
+        <mrow>
+          <mo>(</mo>
+          <mi>m</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+          <mo>)</mo>
+        </mrow>
+        <mrow>
+          <munderover>
+            <mo>∑</mo>
+            <mrow>
+              <mi>k</mi>
+              <mo>=</mo>
+              <mn>1</mn>
+            </mrow>
+            <mi>m</mi>
+          </munderover>
+          <msub>
+            <mi>g</mi>
+            <mi>k</mi>
+          </msub>
+        </mrow>
+      </mrow>
+    </mfrac>
+    <mo>.</mo>
+  </mstyle>
+</math></span>  (7)</p></div></div><p id="_1d4841e9-014d-f078-2d5b-0feacfbb79ef">Since in our case, i.e. for the measurement <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
+      </mover>
+      <mi>j</mi>
+    </msub>
+  </mstyle>
+</math></span> the sample sizes <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>n</mi>
+      <mi>k</mi>
+    </msub>
+  </mstyle>
+</math></span> correspond to the weights <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>g</mi>
+      <mi>k</mi>
+    </msub>
+  </mstyle>
+</math></span> we have the relation</p><div id="_5c99c07f-5a64-12e1-3a3b-47a4f50dac7e"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>m</mi>
+      </munderover>
+      <msub>
+        <mi>n</mi>
+        <mi>j</mi>
+      </msub>
+    </mrow>
+    <msup>
+      <mrow>
+        <mo>(</mo>
+        <msub>
+          <mover>
+            <mi>x</mi>
+            <mo>¯</mo>
+          </mover>
+          <mi>j</mi>
+        </msub>
+        <mo>−</mo>
+        <mover>
+          <mover>
+            <mi>x</mi>
+            <mo>¯</mo>
+          </mover>
+          <mo>¯</mo>
+        </mover>
+        <mo>)</mo>
+      </mrow>
+      <mn>2</mn>
+    </msup>
+    <mo>=</mo>
+    <mrow>
+      <mo>(</mo>
+      <mi>m</mi>
+      <mo>−</mo>
+      <mn>1</mn>
+      <mo>)</mo>
+    </mrow>
+    <mrow>
+      <munder>
+        <mo>∑</mo>
+        <mi>j</mi>
+      </munder>
+      <msub>
+        <mi>n</mi>
+        <mi>j</mi>
+      </msub>
+    </mrow>
+    <mo>⋅</mo>
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mover>
+        <mover>
+          <mi>x</mi>
+          <mo>¯</mo>
+        </mover>
+        <mo>¯</mo>
+      </mover>
+      <mo>)</mo>
+    </mrow>
+  </mstyle>
+</math></span></p></div></div><div id="eq8"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mo>=</mo>
+    <mrow>
+      <mo>(</mo>
+      <mi>m</mi>
+      <mo>−</mo>
+      <mn>1</mn>
+      <mo>)</mo>
+    </mrow>
+    <mo>⋅</mo>
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>,</mo>
+  </mstyle>
+</math></span>  (8)</p></div></div><p id="_ca0e38e4-f4c6-c1f1-8ddd-2aade7f658e4">as <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mrow>
+      <munder>
+        <mo>∑</mo>
+        <mi>j</mi>
+      </munder>
+      <msub>
+        <mi>n</mi>
+        <mi>j</mi>
+      </msub>
+    </mrow>
+    <mo>=</mo>
+    <mstyle mathvariant="italic">
+      <mi>N</mi>
+    </mstyle>
+  </mstyle>
+</math></span> and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mover>
+        <mover>
+          <mi>x</mi>
+          <mo>¯</mo>
+        </mover>
+        <mo>¯</mo>
+      </mover>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>/</mo>
+    <mstyle mathvariant="italic">
+      <mi>N</mi>
+    </mstyle>
+  </mstyle>
+</math></span>.</p><p id="_a4da91f6-f0a7-8779-8cb5-a21e3d2d456c">Note, however, that the last equation is not an identity: it is a statistical relation. Thus, it does not always hold numerically. It is true on the average and requires that experimental conditions do not change.</p><p id="_9250a552-4158-f64a-0674-a27cd388d9d8">If we take advantage of <a href="#eq8">Equation (8)</a>, <a href="#eq5">Equation (5)</a> can be brought into the form</p><div id="_e41c6797-5f61-1617-2f7a-21fd76d30c21"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mrow>
+      <mo>(</mo>
+      <mstyle mathvariant="italic">
+        <mi>N</mi>
+      </mstyle>
+      <mo>−</mo>
+      <mn>1</mn>
+      <mo>)</mo>
+    </mrow>
+    <mo>⋅</mo>
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mrow>
+      <munder>
+        <mo>∑</mo>
+        <mi>j</mi>
+      </munder>
+      <mrow>
+        <mo>(</mo>
+        <msub>
+          <mi>n</mi>
+          <mi>j</mi>
+        </msub>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+    <mo>⋅</mo>
+    <msubsup>
+      <mi>s</mi>
+      <mi>j</mi>
+      <mn>2</mn>
+    </msubsup>
+    <mo>+</mo>
+    <mrow>
+      <mo>(</mo>
+      <mi>m</mi>
+      <mo>−</mo>
+      <mn>1</mn>
+      <mo>)</mo>
+    </mrow>
+    <mo>⋅</mo>
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>,</mo>
+  </mstyle>
+</math></span></p></div></div><p id="_17583f4d-8d85-7972-a4bf-48d61676eabb">or</p><div id="_34d8cff4-9d0a-a9dc-a1b7-ee7e9c3b615d"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mrow>
+      <mo>[</mo>
+      <mstyle mathvariant="italic">
+        <mi>N</mi>
+      </mstyle>
+      <mo>−</mo>
+      <mn>1</mn>
+      <mo>−</mo>
+      <mrow>
+        <mo>(</mo>
+        <mi>m</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>)</mo>
+      </mrow>
+      <mo>]</mo>
+    </mrow>
+    <mo>=</mo>
+    <mrow>
+      <munder>
+        <mo>∑</mo>
+        <mi>j</mi>
+      </munder>
+      <mrow>
+        <mo>(</mo>
+        <msub>
+          <mi>n</mi>
+          <mi>j</mi>
+        </msub>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+    <mo>⋅</mo>
+    <msubsup>
+      <mi>s</mi>
+      <mi>j</mi>
+      <mn>2</mn>
+    </msubsup>
+    <mo>.</mo>
+  </mstyle>
+</math></span></p></div></div><p id="_8ae661f1-6f53-e6a0-ee71-a7b2e2e370b5">Hence, we arrive at the general formula</p><div id="eq9"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mrow>
+          <munderover>
+            <mo>∑</mo>
+            <mrow>
+              <mi>j</mi>
+              <mo>=</mo>
+              <mn>1</mn>
+            </mrow>
+            <mi>m</mi>
+          </munderover>
+          <mrow>
+            <mo>(</mo>
+            <msub>
+              <mi>n</mi>
+              <mi>j</mi>
+            </msub>
+            <mo>−</mo>
+            <mn>1</mn>
+            <mo>)</mo>
+          </mrow>
+        </mrow>
+        <mo>⋅</mo>
+        <msubsup>
+          <mi>s</mi>
+          <mi>j</mi>
+          <mn>2</mn>
+        </msubsup>
+      </mrow>
+      <mrow>
+        <mstyle mathvariant="italic">
+          <mi>N</mi>
+        </mstyle>
+        <mo>−</mo>
+        <mi>m</mi>
+      </mrow>
+    </mfrac>
+    <mo>,</mo>
+  </mstyle>
+</math></span>  (9)</p></div></div><p id="_7aef52bb-85b9-2d42-33af-486549bbc767">which allows us to obtain the required variance from those measured in the <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>m</mi>
+  </mstyle>
+</math></span> samples. This form is quite remarkable in that the experimental mean values <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mover>
+        <mi>x</mi>
+        <mo>¯</mo>
+      </mover>
+      <mi>j</mi>
+    </msub>
+  </mstyle>
+</math></span>, present in <a href="#eq5">Equation (5)</a>, have disappeared.</p><p id="_63e39ab8-2ec3-df75-feec-6be290c3954a">For samples of equal size (<span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <msub>
+      <mi>n</mi>
+      <mi>j</mi>
+    </msub>
+    <mo>=</mo>
+    <mi>n</mi>
+  </mstyle>
+</math></span>) we are readily led to the expression</p><div id="eq10"><div class="formula"><p><span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <msup>
+      <mi>s</mi>
+      <mn>2</mn>
+    </msup>
+    <mrow>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mi>m</mi>
+    </mfrac>
+    <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mi>m</mi>
+      </munderover>
+      <mrow>
+        <msubsup>
+          <mi>s</mi>
+          <mi>j</mi>
+          <mn>2</mn>
+        </msubsup>
+        <mo>,</mo>
+      </mrow>
+    </mrow>
+  </mstyle>
+</math></span>  (10)</p></div></div><p id="_7aa75dc4-9642-22da-b1c4-9e6baba3221c">for which even a knowledge of the sample size is no longer required.</p><p id="_5ef04db7-5356-b12a-e1e1-955939089d9c">A comparison of <a href="#eq10">Equation (10)</a> with <a href="#eq3">Equation (3)</a> shows that, at least for equal groups of measurements obtained in stable conditions, pooled estimates of both the expectation value and the variance are obtained by simply forming arithmetical means. The reader, in hindsight, should feel free to find this result either trivial or quite remarkable. It is likely, although not proven, that analogous relations hold for the central moments of higher order.</p></div><br /><div><h1 class="Section3" id="_9bd0879e-a824-4f73-8fc3-6b13c1b399a2">References</h1>
+<p id="muller" class="Biblio">[1]  J.W. Müller: “Moments d’échantillons superposés”, BIPM WPN-215 (1980).</p>
+
+</div></main><script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "STIX",
+      linebreaks: {
+        automatic: true,
+        width: "container"  // or specify something like "90%"/"30em"
+      }
+    },
+    MathML: {
+      linebreaks: {
+        automatic: true
+      }
+    },
+    asciimath2jax: { delimiters: [['(#(', ')#)']] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
+  <script>
+    $("#toc").on('click', 'li', function(e) {
+    $(this).parent().find('li.toc-active').removeClass('toc-active');
+    $(this).addClass('toc-active');
+});
+  </script>
+
+  <script>
+    //TOC toggle animation
+    (function() {
+      const jqNav = $('nav');
+      const jqBody = $('body');
+      const jqToggle = $('#toggle');
+      const animationSpeed = 'slow';
+
+      if(!jqNav.length || !jqToggle.length) {
+        return;
+      }
+
+      const navWidthExpanded = jqNav.outerWidth();
+      const bodyPaddingLeftExpanded =
+        parseFloat(jqBody.css('paddingLeft')) > 0 ?
+          jqBody.css('paddingLeft') : navWidthExpanded + 'px';
+      const expandedToggleLeft = navWidthExpanded + 'px';
+      let bandWidth = 0;
+
+      $('.document-stage-band:visible, .document-type-band:visible')
+        .each(function() {
+          const bounds = this.getBoundingClientRect();
+          bandWidth = Math.max(bandWidth, bounds.right);
+        });
+
+      const toggleWidth = jqToggle.outerWidth();
+      const collapsedToggleLeft = bandWidth + 'px';
+      const collapsedBodyPaddingLeft = bandWidth + toggleWidth + 'px';
+      jqToggle.css({
+        'left': jqNav.is(':visible') ? expandedToggleLeft : collapsedToggleLeft,
+        'top': '0px'
+      });
+
+      jqToggle.on('click', function() {
+        const isNavVisible = jqNav.is(':visible');
+        const navLeft = isNavVisible ? '-' + navWidthExpanded + 'px' : '0px';
+        const bodyPaddingLeft =
+          isNavVisible ? collapsedBodyPaddingLeft : bodyPaddingLeftExpanded;
+        const toggleLeft =
+          isNavVisible ? collapsedToggleLeft : expandedToggleLeft;
+
+        jqNav.stop(true, true);
+        jqBody.stop(true, true);
+        jqToggle.stop(true, true);
+
+        if(!isNavVisible) {
+          jqNav.show();
+        }
+        jqNav.animate({'left': navLeft}, animationSpeed, function() {
+          if(isNavVisible) {jqNav.hide()}
+        });
+        jqBody.animate({'paddingLeft': bodyPaddingLeft}, animationSpeed);
+        jqToggle.animate({'left': toggleLeft}, animationSpeed);
+      });
+    })();
+  </script>
+
+<script>
+    // Scroll to top button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+<script>
+/*
+  $(document).ready(function() {
+	  $('[id^=toc]').each(function ()
+	  {
+	     var currentToc = $(this);
+       var url = window.location.href;
+            currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "'></a>");
+	  });
+});
+*/
+</script>
+
+  <script>
+    document.querySelectorAll('*|svg a').forEach(function(item) {
+      var loc = item.getAttribute('href');
+      if (loc !== null && loc.startsWith('#')) {
+  item.setAttribute('href', location.pathname + loc);
+      }
+});
+  </script>
+
+
+<script>
+
+// jQuery Inline Footnotes v1.0.3
+// Copyright (c) 2011 Vesa Vänskä, released under the MIT License.
+
+// Generated by CoffeeScript 1.6.1
+(function() {
+
+  (function($) {
+    $.inlineFootnote = function(el, options) {
+      var _this = this;
+      this.el = $(el);
+      this.el.data("inlineFootnote", this);
+      this.initialize = function() {
+        this.options = $.extend({}, $.inlineFootnote.defaultOptions, options);
+        this.footnoteId = this.el.attr("href").match(/#(.*)/)[1];
+        if (this.footnoteId) {
+          this.el.mouseenter(this.openBox);
+          return $("body").mousemove(this.closeBox);
+        }
+      };
+      this.openBox = function(event) {
+        var footnoteContent, linkOffset;
+        if (!_this.box) {
+          footnoteContent = $("[id='" + _this.footnoteId + "']").children().filter(":not('" + _this.options.hideFromContent + "')");
+          linkOffset = _this.el.offset();
+          _this.box = $("<div ></div>", {
+            id: _this.options.boxId,
+            html: footnoteContent.clone().find(_this.options.hideFromContent).remove().end(),
+            css: {
+              position: "absolute",
+              top: linkOffset.top,
+              left: linkOffset.left + _this.el.outerWidth()
+            }
+          }).appendTo("body");
+          return _this.positionBox();
+        }
+      };
+      this.closeBox = function(event) {
+        if (_this.box) {
+          if (_this.isHoveringFootnote(event)) {
+            clearTimeout(_this.closeTimeout);
+            return _this.closeTimeout = null;
+          } else {
+            if (!_this.closeTimeout) {
+              return _this.closeTimeout = setTimeout((function() {
+                _this.box.remove();
+                return _this.box = null;
+              }), _this.options.hideDelay);
+            }
+          }
+        }
+      };
+      this.isHoveringFootnote = function(event) {
+        return this.box.is(event.target) || $(event.target).closest(this.box).length > 0 || event.target === this.el[0];
+      };
+      this.positionBox = function() {
+        var boxHorizontalPadding, boxLeft, boxWidth, linkLeftOffset, windowWidth;
+        boxHorizontalPadding = parseInt(this.box.css("padding-left")) + parseInt(this.box.css("padding-right"));
+        linkLeftOffset = this.el.offset().left;
+        windowWidth = $(window).width();
+        if ((windowWidth / 2) > linkLeftOffset) {
+          boxLeft = linkLeftOffset + 20;
+          boxWidth = windowWidth - boxLeft - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+        } else {
+          boxWidth = linkLeftOffset - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+          boxLeft = linkLeftOffset - boxWidth - this.options.boxMargin * 2;
+        }
+        return this.box.css({
+          width: boxWidth,
+          left: boxLeft
+        });
+      };
+      return this.initialize();
+    };
+    $.inlineFootnote.defaultOptions = {
+      boxMargin: 20,
+      hideDelay: 200,
+      hideFromContent: "[rel=footnote]",
+      maximumBoxWidth: 500,
+      boxId: "footnote_box"
+    };
+    return $.fn.inlineFootnote = function(options) {
+      return this.each(function() {
+        return new $.inlineFootnote(this, options);
+      });
+    };
+  })(jQuery);
+
+}).call(this);
+</script>
+
+<script>
+      $(function() {
+        $("[rel=footnote]").inlineFootnote();
+        });
+</script>
+  <script>
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+//
+// AnchorJS - v4.2.2 - 2020-04-20
+// https://www.bryanbraun.com/anchorjs/
+// Copyright (c) 2020 Bryan Braun; Licensed MIT
+//
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+!function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function f(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.base=A.hasOwnProperty("base")?A.base:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64,A.titleText=A.hasOwnProperty("titleText")?A.titleText:""}function p(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}this.options=A||{},this.elements=[],f(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var e,t,i,n,o,s,a,r,c,h,l,u,d=[];if(f(this.options),"touch"===(l=this.options.visible)&&(l=this.isTouchDevice()?"always":"hover"),0===(e=p(A=A||"h2, h3, h4, h5, h6")).length)return this;for(!function(){if(null!==document.head.querySelector("style.anchorjs"))return;var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"],style'))?document.head.appendChild(e):document.head.insertBefore(e,A);e.sheet.insertRule(".anchorjs-link{opacity:0;text-decoration:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}",e.sheet.cssRules.length),e.sheet.insertRule(":hover>.anchorjs-link,.anchorjs-link:focus{opacity:1}",e.sheet.cssRules.length),e.sheet.insertRule("[data-anchorjs-icon]::after{content:attr(data-anchorjs-icon)}",e.sheet.cssRules.length),e.sheet.insertRule('@font-face{font-family:anchorjs-icons;src:url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype")}',e.sheet.cssRules.length)}(),t=document.querySelectorAll("[id]"),i=[].map.call(t,function(A){return A.id}),o=0;o<e.length;o++)if(this.hasAnchorJSLink(e[o]))d.push(o);else{if(e[o].hasAttribute("id"))n=e[o].getAttribute("id");else if(e[o].hasAttribute("data-anchor-id"))n=e[o].getAttribute("data-anchor-id");else{for(c=r=this.urlify(e[o].textContent),a=0;void 0!==s&&(c=r+"-"+a),a+=1,-1!==(s=i.indexOf(c)););s=void 0,i.push(c),e[o].setAttribute("id",c),n=c}(h=document.createElement("a")).className="anchorjs-link "+this.options.class,h.setAttribute("aria-label",this.options.ariaLabel),h.setAttribute("data-anchorjs-icon",this.options.icon),this.options.titleText&&(h.title=this.options.titleText),u=document.querySelector("base")?window.location.pathname+window.location.search:"",u=this.options.base||u,h.href=u+"#"+n,"always"===l&&(h.style.opacity="1"),""===this.options.icon&&(h.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(h.style.lineHeight="inherit")),"left"===this.options.placement?(h.style.position="absolute",h.style.marginLeft="-1em",h.style.paddingRight="0.5em",e[o].insertBefore(h,e[o].firstChild)):(h.style.paddingLeft="0.375em",e[o].appendChild(h))}for(o=0;o<d.length;o++)e.splice(d[o]-o,1);return this.elements=this.elements.concat(e),this},this.remove=function(A){for(var e,t,i=p(A),n=0;n<i.length;n++)(t=i[n].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(i[n]))&&this.elements.splice(e,1),i[n].removeChild(t));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){return this.options.truncate||f(this.options),A.trim().replace(/\'/gi,"").replace(/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&-1<(" "+A.firstChild.className+" ").indexOf(" anchorjs-link "),t=A.lastChild&&-1<(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ");return e||t||!1}}});
+// @license-end
+  </script>
+    <script>
+  anchors.options = {
+  placement: 'left'
+};
+anchors.add('h1, h2, h3, h4');
+</script>
+
+<script>
+// use .collapsible element to toggle visibility of element following it
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+</body></html>
