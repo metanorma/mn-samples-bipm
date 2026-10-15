@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.2" schema-version="v2.1.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.0" schema-version="v2.2.0" flavor="bipm">
 <bibdata type="standard">
-<title language="en" format="text/plain" type="title-main">Calibrant Assessment Guideline: Aflatoxin B<sub>1</sub> [CAG-01]</title>
-
-<docidentifier primary="true" type="BIPM">BIPM BIPM-2019/07</docidentifier><docnumber>BIPM-2019/07</docnumber><contributor><role type="author"/><organization>
+<title language="en" type="title-main">Calibrant Assessment Guideline: Aflatoxin B<sub>1</sub> [CAG-01]</title>
+<docidentifier primary="true" type="BIPM">BIPM BIPM-2019/07</docidentifier><docnumber>BIPM-2019/07</docnumber><date type="updated"><on>2019-09-25</on></date><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"/><person>
 <name><completename>Gustavo Martos</completename></name>
@@ -29,13 +28,19 @@
 <name><completename>Robert Wielgosz</completename></name>
 <affiliation><organization>
 <name>BIPM</name>
-</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+</organization></affiliation></person></contributor><contributor><role type="author"><description>committee</description></role><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2019-09-25</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2019</from><owner><organization>
+<subdivision type="Committee">
+<name language="en">International Bureau of Weights and Measures</name>
+
+<name language="fr">Bureau International des Poids et Mesures</name>
+<identifier>BIPM</identifier><identifier type="full">BIPM</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem><date type="circulated"/><version/></bibitem>
-</relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="BIPM" language="en" script="Latn">International Bureau of Weights and Measures</committee><committee acronym="BIPM" language="fr" script="Latn">Bureau International des Poids et Mesures</committee></editorialgroup><structuredidentifier><docnumber>BIPM-2019/07</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#D_M0" id="U_mg.kg-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version>2019-09-25</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2019</from><owner><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="successorOf"><bibitem/></relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2019/07</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#D_M0" id="U_mg.kg-1">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">mg*kg^-1</UnitName>
         <UnitSymbol type="HTML">mg kg
           <sup>−1</sup>
@@ -45,9 +50,7 @@
             <mi mathvariant="normal">mg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">kg</mi>
-              </mrow>
+              <mi mathvariant="normal">kg</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -60,7 +63,7 @@
           <EnumeratedRootUnit unit="gram" prefix="k" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_MN-1" id="U_g.mol-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">g*mol^-1</UnitName>
         <UnitSymbol type="HTML">g mol
           <sup>−1</sup>
@@ -70,9 +73,7 @@
             <mi mathvariant="normal">g</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mol</mi>
-              </mrow>
+              <mi mathvariant="normal">mol</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -85,7 +86,7 @@
           <EnumeratedRootUnit unit="mole" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu23">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">degree Celsius</UnitName>
         <UnitSymbol type="HTML">°C</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -94,10 +95,10 @@
           </math>
         </UnitSymbol>
       </Unit><Unit id="U_ug.mL-1">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">ug*mL^-1</UnitName>
-        <UnitSymbol type="HTML">g mL
+        <UnitSymbol type="HTML">µg mL
           <sup>−1</sup>
         </UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -105,9 +106,7 @@
             <mi mathvariant="normal">µg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mL</mi>
-              </mrow>
+              <mi mathvariant="normal">mL</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -120,7 +119,7 @@
           <EnumeratedRootUnit unit="litre" prefix="m" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_nm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">nm</UnitName>
         <UnitSymbol type="HTML">nm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -132,7 +131,7 @@
           <EnumeratedRootUnit unit="metre" prefix="n"/>
         </RootUnits>
       </Unit><Unit id="U_NISTu365">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">milliliter</UnitName>
         <UnitSymbol type="HTML">mL</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -144,7 +143,7 @@
           <EnumeratedRootUnit unit="litre" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_mm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mm</UnitName>
         <UnitSymbol type="HTML">mm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -156,9 +155,9 @@
           <EnumeratedRootUnit unit="metre" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_um">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">um</UnitName>
-        <UnitSymbol type="HTML">m</UnitSymbol>
+        <UnitSymbol type="HTML">µm</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µm</mi>
@@ -168,7 +167,7 @@
           <EnumeratedRootUnit unit="metre" prefix="u"/>
         </RootUnits>
       </Unit><Unit id="U_mL.min-1">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">mL*min^-1</UnitName>
         <UnitSymbol type="HTML">mL min
           <sup>−1</sup>
@@ -178,9 +177,7 @@
             <mi mathvariant="normal">mL</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">min</mi>
-              </mrow>
+              <mi mathvariant="normal">min</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -193,9 +190,9 @@
           <EnumeratedRootUnit unit="minute" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit id="U_uL">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">uL</UnitName>
-        <UnitSymbol type="HTML">L</UnitSymbol>
+        <UnitSymbol type="HTML">µL</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µL</mi>
@@ -205,7 +202,7 @@
           <EnumeratedRootUnit unit="litre" prefix="u"/>
         </RootUnits>
       </Unit><Unit id="U_NISTu36">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">minute</UnitName>
         <UnitSymbol type="HTML">min</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -214,7 +211,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd18" id="U_NISTu16">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">volt</UnitName>
         <UnitSymbol type="HTML">V</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -223,8 +220,8 @@
           </math>
         </UnitSymbol>
       </Unit><Unit id="U_nm.min-1">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">nm*min^-1</UnitName>
         <UnitSymbol type="HTML">nm min
           <sup>−1</sup>
@@ -234,9 +231,7 @@
             <mi mathvariant="normal">nm</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">min</mi>
-              </mrow>
+              <mi mathvariant="normal">min</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -249,7 +244,7 @@
           <EnumeratedRootUnit unit="minute" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd3" id="U_NISTu3">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">second</UnitName>
         <UnitSymbol type="HTML">s</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -258,7 +253,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd2" id="U_mg">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mg</UnitName>
         <UnitSymbol type="HTML">mg</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -270,7 +265,7 @@
           <EnumeratedRootUnit unit="gram" prefix="m"/>
         </RootUnits>
       </Unit><Unit id="U_NISTu130">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">litre</UnitName>
         <UnitSymbol type="HTML">L</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -279,7 +274,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd2" id="U_NISTu27">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">gram</UnitName>
         <UnitSymbol type="HTML">g</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -288,7 +283,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#D_M0" id="U_mg.g-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">mg*g^-1</UnitName>
         <UnitSymbol type="HTML">mg g
           <sup>−1</sup>
@@ -298,9 +293,7 @@
             <mi mathvariant="normal">mg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">g</mi>
-              </mrow>
+              <mi mathvariant="normal">g</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -313,9 +306,9 @@
           <EnumeratedRootUnit unit="gram" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_M0" id="U_ug.g-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">ug*g^-1</UnitName>
-        <UnitSymbol type="HTML">g g
+        <UnitSymbol type="HTML">µg g
           <sup>−1</sup>
         </UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -323,9 +316,7 @@
             <mi mathvariant="normal">µg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">g</mi>
-              </mrow>
+              <mi mathvariant="normal">g</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -338,7 +329,7 @@
           <EnumeratedRootUnit unit="gram" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit id="U_NISTu37">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">hour</UnitName>
         <UnitSymbol type="HTML">h</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -347,7 +338,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#D_M0" id="U_ng.g-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">ng*g^-1</UnitName>
         <UnitSymbol type="HTML">ng g
           <sup>−1</sup>
@@ -357,9 +348,7 @@
             <mi mathvariant="normal">ng</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">g</mi>
-              </mrow>
+              <mi mathvariant="normal">g</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -372,12 +361,12 @@
           <EnumeratedRootUnit unit="gram" powerNumerator="-1"/>
         </RootUnits>
       </Unit></UnitSet><QuantitySet><Quantity id="NISTq10" quantityType="base" dimensionURL="#NISTd10">
-        <QuantityName lang="en-US">volume</QuantityName>
+        <QuantityName lang="en">volume</QuantityName>
       </Quantity><Quantity id="NISTq3" quantityType="base" dimensionURL="#NISTd3">
-        <QuantityName lang="en-US">time</QuantityName>
-        <QuantityName lang="en-US">duration</QuantityName>
+        <QuantityName lang="en">time</QuantityName>
+        <QuantityName lang="en">duration</QuantityName>
       </Quantity><Quantity id="NISTq2" quantityType="base" dimensionURL="#NISTd2">
-        <QuantityName lang="en-US">mass</QuantityName>
+        <QuantityName lang="en">mass</QuantityName>
       </Quantity></QuantitySet><DimensionSet><Dimension id="D_M0">
         <Mass symbol="M" powerNumerator="0"/>
       </Dimension><Dimension id="D_MN-1">
@@ -422,11 +411,10 @@
         <PrefixSymbol type="unicode">n</PrefixSymbol>
         <PrefixSymbol type="LaTeX">n</PrefixSymbol>
         <PrefixSymbol type="HTML">n</PrefixSymbol>
-      </Prefix></PrefixSet></UnitsML><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+      </Prefix></PrefixSet></UnitsML><presentation-metadata><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
 <boilerplate><copyright-statement>
 
-<clause id="_7a4b89a5-ccba-a0ac-c445-6c15a20657d1" obligation="normative">
-<p id="_2c83afdd-6f3c-8a19-1954-83e4ede65ae8" align="center">© Bureau International des Poids et Mesures 2019 all rights reserved</p>
+<clause id="_de529b36-05ca-b9e4-a8ac-4c41964770f0" obligation="normative"><p id="_2c83afdd-6f3c-8a19-1954-83e4ede65ae8" align="center">© Bureau International des Poids et Mesures 2019 all rights reserved</p>
 </clause>
 </copyright-statement>
 
@@ -1547,9 +1535,9 @@
 </clause>
 </clause>
 
-<clause id="_338e77b9-2cb4-ff05-fe06-a2032ed18091" obligation="normative">
+<clause id="_5e44e884-5e29-1ef1-aebe-0ad3f6b295c1" obligation="normative">
 <title id="_938f46e3-113a-38c3-025a-f2033095631d">Characterization summary of the aflatoxin B<sub>1</sub> stock solution</title>
-<clause id="_c2d78f55-f847-7bb2-9702-f2938fa4914a" anchor="prep_value_assignment" obligation="normative">
+<clause id="_4cfeb37c-4149-5441-5176-c5a54c4ceef0" anchor="prep_value_assignment" obligation="normative">
 <title id="_08839acf-9697-2735-22c5-b95f0b7f737f">Preparation and value assignment</title>
 <p id="_bc99d924-11f7-b0c4-b18e-6f2c5fcdcd50">The aflatoxin B<sub>1</sub> stock solution (OGP.030) was prepared gravimetrically by dissolving about <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1579,7 +1567,7 @@
   </mstyle>
 </math><asciimath>1 "unitsml(L)"</asciimath></stem> of acetonitrile. Mettler Toledo balances MX5 and XP<sub>1</sub>0002S were used for the weighing of OGP.193a and the final solution mass, respectively. <xref target="table2"/> demonstrates the preparation of the stock solution and the mass fraction assignment, calculated according to <xref target="eq1"/>. The purity of OGP.193a was determined in-house by quantitative NMR corrected for related structure impurities, as described in the Aflatoxin B<sub>1</sub> purity evaluation guideline. <eref type="inline" bibitemid="westwood" citeas="[5]"/></p>
 
-<table id="_c061705c-0af8-be17-914c-f3b153cd7a4c" anchor="table2">
+<table id="_d2fb2d64-ec7a-02fb-4f09-202f9eaf8b38" anchor="table2">
 <name id="_fd64832e-e7ab-ee16-56a8-23774b0da73c">Experimental data corresponding to the preparation of the aflatoxin B<sub>1</sub> stock solution and the calculated mass fraction.</name>
 <thead><tr id="_02f4d5bc-c6d0-3806-5158-ee1e96d81d75"><th id="_caec9da5-d91d-403f-5eb2-d3e6acc6226d" colspan="4" valign="top" align="center">Aflatoxin B<sub>1</sub> Stock solution preparation</th>
 </tr></thead>
@@ -1600,9 +1588,8 @@
     <mi>b</mi>
   </mstyle>
 </math><asciimath>m xx b</asciimath></stem></th>
-</tr><tr id="_18b74fdc-c402-2367-3873-c28e1d17b58a"><th id="_9562f630-26d6-89d5-393e-602491b2973c" valign="top" align="left">AfB<sub>1</sub> powder (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_c87ac98c-fab6-7ec0-f229-b015f18d0222"><th id="_d9488c16-b51e-8272-88c8-ad3990509833" valign="top" align="left">AfB<sub>1</sub> powder (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mg">
       <mstyle mathvariant="normal">
         <mi>mg</mi>
@@ -1616,9 +1603,8 @@
 <td id="_a9cfd37a-5c26-9f0b-db30-530ca64d88b9" valign="top" align="left">102.630</td>
 <td id="_523a8746-866b-f482-a13a-00ae0a81578a" valign="top" align="left">1.000596</td>
 <td id="_df1be0a8-5a34-123d-683b-c1095b54416b" valign="top" align="left">102.691</td>
-</tr><tr id="_edebff04-da1c-b825-5f06-26d1f1848703"><th id="_e2373ae1-1689-021c-4ba0-34b9ecb134b8" valign="top" align="left">stock solution (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_5717c644-498d-82d7-3207-68f17228153b"><th id="_bc49cbf8-fc16-2353-8daa-ec8129eb044a" valign="top" align="left">stock solution (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu27">
       <mstyle mathvariant="normal">
         <mi>g</mi>
@@ -1663,9 +1649,8 @@
   </mstyle>
 </math><asciimath>+- u" "("unitsml(mg/g)")</asciimath></stem>*</th>
 <td id="_193f1cb1-7faa-6bdb-eb20-0262f6382fec" valign="top" align="left">979.6 ± 2.3</td>
-<td id="_93a1ad4b-3945-7385-9fd1-67555c02fc49" valign="top" align="left"/><td id="_19891d1e-9595-213a-2219-f6a44ae9101f" valign="top" align="left"/></tr><tr id="_4652b5c2-bc04-bcf1-a123-ee580ac3ccb7"><th id="_e300102a-6a48-c2c8-dca2-52fba8cb1409" valign="top" align="left">Mass fraction (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_93a1ad4b-3945-7385-9fd1-67555c02fc49" valign="top" align="left"/><td id="_19891d1e-9595-213a-2219-f6a44ae9101f" valign="top" align="left"/></tr><tr id="_7451b98f-8552-7ec8-54f7-ffe8fbaac351"><th id="_ce0c7320-ac78-7b75-2386-69b8bd19f628" valign="top" align="left">Mass fraction (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_ug.g-1">
       <mstyle mathvariant="normal">
         <mi>µg</mi>
@@ -1727,7 +1712,7 @@
       </mrow>
     </mfrac>
   </mstyle>
-</math><asciimath>w_("stock") = (m_p*b_p*w_p)/(m_("sol")*b_("sol"))</asciimath></stem><dl id="_6f847a5d-9b74-3c83-8264-28622813e4b0" key="true"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>w_("stock") = (m_p*b_p*w_p)/(m_("sol")*b_("sol"))</asciimath></stem><key><dl id="_f93ce9fa-ba37-90e4-6623-03d4b523552f"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>m</mi>
@@ -1735,7 +1720,7 @@
     </msub>
   </mstyle>
 </math><asciimath>m_p</asciimath></stem></dt>
-<dd id="_09c18cd8-eae3-2612-ad6c-76f23553b1d1"><p id="_f5fae1d6-9e3f-fd4d-9635-a4b725cf6372">weighed mass of AfB<sub>1</sub> powder</p>
+<dd id="_36867c4a-5213-6d3e-55a5-e4a67e1723dc"><p id="_aeb41d35-3295-e3c6-d272-b14d8e3bab27">weighed mass of AfB<sub>1</sub> powder</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1745,7 +1730,7 @@
     </msub>
   </mstyle>
 </math><asciimath>b_p</asciimath></stem></dt>
-<dd id="_00d60306-ba2f-01bc-9200-065f549a04fc"><p id="_5d692b75-9b7a-e49f-6eb4-14da6724b7d8">buoyancy correction of powder weighing</p>
+<dd id="_36d80b50-e894-12aa-312f-d50901ef576e"><p id="_f98cef51-bf5a-669f-ab27-fec370715f5b">buoyancy correction of powder weighing</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1755,7 +1740,7 @@
     </msub>
   </mstyle>
 </math><asciimath>w_p</asciimath></stem></dt>
-<dd id="_1ec997f6-9516-edb5-365b-90719ecbe88d"><p id="_2f5b4478-710f-8bd5-7cf2-d21fe2e06a19">purity of AfB<sub>1</sub> powder</p>
+<dd id="_399e5f04-c9e4-95c4-82c4-529013b6326b"><p id="_53a134c3-c484-556a-c46b-b7851122168a">purity of AfB<sub>1</sub> powder</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1765,7 +1750,7 @@
     </msub>
   </mstyle>
 </math><asciimath>m_("sol")</asciimath></stem></dt>
-<dd id="_ac12c01c-2836-d469-68e2-de3b9efa9ab9"><p id="_36204a6e-4e87-044e-136d-f6b92cfd5a23">weighed mass of stock solution</p>
+<dd id="_7319f334-fd68-7ee5-8f44-211a943ca446"><p id="_eecc09d1-7a71-f741-66b3-98ec94bba373">weighed mass of stock solution</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1775,9 +1760,9 @@
     </msub>
   </mstyle>
 </math><asciimath>b_("sol")</asciimath></stem></dt>
-<dd id="_fe21f5d5-407c-4fda-d38d-72f416a216e0"><p id="_9848545e-20d1-b7b5-9cde-4cd711649a7d">buoyancy correction of solution weighing</p>
+<dd id="_b3358125-462e-5a17-c115-bed02e429968"><p id="_e438366e-aa0a-6917-40d2-c427cccd96fa">buoyancy correction of solution weighing</p>
 </dd>
-</dl></formula>
+</dl></key></formula>
 
 
 
@@ -1967,9 +1952,9 @@
   </mstyle>
 </math><asciimath>u(w_("stock")) = w_("stock") * sqrt([(u(m_p))/m_p]^2 + [(u(b_p))/b_p]^2 + [(u(w_p))/w_p]^2 + [(u(m_("sol")))/m_("sol")]^2 + [(u(b_("sol")))/b_("sol")]^2 + [(u(ii(V)))/ii(V)]^2)</asciimath></stem></formula>
 
-<table id="_eddca9d9-ae63-dd4b-6173-21c7981c553f" anchor="table3">
+<table id="_23dd140c-c52d-6341-9648-097c8d2cdb85" anchor="table3">
 <name id="_bca6ff8d-2c54-35d1-5049-73b939c994a2">Individual uncertainty components contributing to the final combined uncertainty of the AfB<sub>1</sub> stock solution mass fraction.</name>
-<tbody><tr id="_56b6557c-bd06-067a-1d44-a8032106c751"><td id="_606288b1-3061-4423-521d-ff1c2a4a4e1a" valign="top" align="center">Unc. source</td>
+<tbody><tr id="_40efbba9-6b10-008d-0bb3-4caab4a43f4d"><td id="_606288b1-3061-4423-521d-ff1c2a4a4e1a" valign="top" align="center">Unc. source</td>
 <td id="_aa84c033-34fb-2cde-6717-5d616cf45489" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mfrac>
@@ -2098,7 +2083,7 @@
     </msub>
   </mstyle>
 </math><asciimath>u_"rel"</asciimath></stem> (%)</td>
-<td id="_b7d0fe03-0085-9061-dafd-ddaf48614725" valign="top" align="center"><p id="_9ebdd94b-f1b0-54ec-dd36-8040182d66a4"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_f105bb36-2a32-5223-6348-6c55e4bc1057" valign="top" align="center"><p id="_6696e994-0745-5c2c-be4e-dca6e01cc422"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
     <mrow>
@@ -2112,7 +2097,6 @@
   </mstyle>
 </math><asciimath>u(w_"stock")</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_ug.g-1">
       <mstyle mathvariant="normal">
         <mi>µg</mi>
@@ -2284,7 +2268,7 @@
 <image id="_68ecb0ae-c77d-5e52-c82c-3b246ba00571" src="data:image/png;base64,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" mimetype="image/png" height="auto" width="auto" filename="images/img13.png"/></figure>
 </clause>
 
-<clause id="_ad9a3eeb-5021-50dd-0a20-4e13f4e5c903" obligation="normative">
+<clause id="_879cd525-8c2e-9e0a-ec9b-50d68aff80f0" obligation="normative">
 <title id="_74bb0afe-bad4-830c-6cee-73875df37b4e">Homogeneity study and combined uncertainty</title>
 <p id="_5421edcd-9a00-910a-e420-f674ebe1d13e">The homogeneity study for the AfB<sub>1</sub> stock solution is analogous to that of the calibration solution, which is discussed in detail in <xref target="homogeneity_study"/>. The present discussion is therefore limited to a summary of the results. AfB<sub>1</sub> and its impurities in the selected homogeneity samples were measured by LC-DAD and LC-MS/MS, respectively.</p>
 
@@ -2454,9 +2438,9 @@
   </mstyle>
 </math><asciimath>u(w_"stock")</asciimath></stem> in <xref target="prep_value_assignment"/> − to produce a final estimate of the mass fraction uncertainty of the batch (<xref target="table5"/>).</p>
 
-<table id="_1838c7fd-f3c0-1028-ffd0-a5345f6ef0f1" anchor="table5">
+<table id="_bdc97c7e-d15f-9df8-6460-f274f5a9ab09" anchor="table5">
 <name id="_9a83f9e6-4547-aba9-a0b6-dd675b89c021">Combination of the uncertainty from the gravimetric value assignment and the uncertainty from between-ampoule homogeneity to estimate the final uncertainty of the AfB<sub>1</sub> mass fraction in the batch of the stock solution.</name>
-<tbody><tr id="_2ea66f00-b287-464c-96b2-d48fcb249667"><td id="_68dc1d0c-ecdc-3a27-5eb9-742bbde10584" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<tbody><tr id="_ad86ee99-e30a-3cc9-14b0-cd9920113bad"><td id="_68dc1d0c-ecdc-3a27-5eb9-742bbde10584" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
     <msub>
@@ -2493,7 +2477,7 @@
     </msub>
   </mstyle>
 </math><asciimath>u("comb")_"rel"</asciimath></stem> (%)</td>
-<td id="_dd1ff73a-d40d-d208-0852-fb4457317d98" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_06ae14e9-5d77-498a-a841-90d769356376" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>w</mi>
@@ -2502,7 +2486,6 @@
   </mstyle>
 </math><asciimath>w_"stock"</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_ug.g-1">
       <mstyle mathvariant="normal">
         <mi>µg</mi>
@@ -2523,9 +2506,8 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(ug/g)"</asciimath></stem></td>
-<td id="_aefec6b7-8419-9f56-761a-2113b0dfe16b" valign="top" align="center">U(comb) <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_e6208aaf-8bae-f9d4-9ceb-cd53b7a74307" valign="top" align="center">U(comb) <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_ug.g-1">
       <mstyle mathvariant="normal">
         <mi>µg</mi>
@@ -2556,7 +2538,7 @@
 </clause>
 </clause>
 
-<clause id="_eec3fe8d-eca1-bf8d-c3fc-ca363d860f26" anchor="prep_characterization" obligation="normative">
+<clause id="_7a744773-1691-69a4-402e-c2e1307379e0" anchor="prep_characterization" obligation="normative">
 <title id="_1f834bac-c4c5-a974-abf6-6cab36d2cd36">Preparation and characterization of the aflatoxin B<sub>1</sub> calibration solution</title>
 <clause id="_287ed7bd-3979-5b3c-f453-a02f3c768d39" anchor="prep_ampouling" obligation="normative">
 <title id="_85c45057-4b2d-9d50-5663-ec0935bbf87c">Preparation and ampouling</title>
@@ -3701,7 +3683,7 @@
 </clause>
 </clause>
 
-<clause id="_64a3f7a4-8f3f-f01c-2136-f82be8abb496" obligation="normative">
+<clause id="_1893e65a-f576-7c05-8f93-8ae5d5a6b9d7" obligation="normative">
 <title id="_1bc25738-8253-651f-9fbc-386a1b34e4a7">Mass fraction value assignment and uncertainty</title>
 <p id="_dd37fe5b-2e08-6692-feb0-38ad661906b4">The preparation of the calibration solution and the mass fraction assignment, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -3712,7 +3694,7 @@
   </mstyle>
 </math><asciimath>w_"cal"</asciimath></stem>, are shown in <xref target="table9"/>. Mettler Toledo balance XP<sub>1</sub>0002S was used for all mass determinations.</p>
 
-<table id="_4dedb4ea-5136-b7c1-751f-6d94996d7eaa" anchor="table9">
+<table id="_1744dc58-b879-0dd4-8027-7460ee19cd01" anchor="table9">
 <name id="_ad58df27-69cd-3107-8fc8-425f84a24b73">Experimental data corresponding to the preparation of the aflatoxin B<sub>1</sub> calibration solution and the calculated mass fraction.</name>
 <tbody><tr id="_2d5d5b9e-b9d0-3fe6-34f5-36749185e4b3"><th id="_17de15b1-4465-b56a-68da-f1215dada4c9" colspan="4" valign="top" align="center">Aflatoxin B<sub>1</sub> calibration solution preparation</th>
 </tr><tr id="_8bb039ec-f5ab-aa72-a44e-6445a76a0fe0"><td id="_79d925dc-543e-91fe-6058-2c149e41672a" valign="top" align="left"/><th id="_ec5ed250-1277-2c28-f8bb-a9ba8c527231" valign="top" align="left">Weighed mass (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -3732,9 +3714,8 @@
     <mi>b</mi>
   </mstyle>
 </math><asciimath>m xx b</asciimath></stem></th>
-</tr><tr id="_0d9a7a6a-0ab1-e802-4eeb-ac48b5ed44eb"><th id="_d5e3d5ec-2916-408a-5c6f-268233686059" valign="top" align="left">AfB<sub>1</sub> stock sol. (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_36182328-a453-7f61-dcdd-284a59c65a11"><th id="_97ac0a7f-7b5b-c692-1d55-4f5092917e5b" valign="top" align="left">AfB<sub>1</sub> stock sol. (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mg">
       <mstyle mathvariant="normal">
         <mi>mg</mi>
@@ -3748,9 +3729,8 @@
 <td id="_66232fbf-37af-8b24-dcc5-a85584f66da9" valign="top" align="left">39.02</td>
 <td id="_9a30bd8c-8df3-7258-0cda-67da4c714695" valign="top" align="left">1.001386</td>
 <td id="_2bbaa303-4e22-0478-cf7c-b07cdf9d49f1" valign="top" align="left">39.074</td>
-</tr><tr id="_225cafb2-7df2-5246-6d9c-ef08f9d3aa9e"><th id="_9a031839-257f-b39b-857d-dc6c1f461ca4" valign="top" align="left">Calibration sol. (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_dca32f7e-3c3c-24fd-43f0-d8633d8d375b"><th id="_0e683b1e-ad0b-51d3-aa9f-1e24283700e2" valign="top" align="left">Calibration sol. (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu27">
       <mstyle mathvariant="normal">
         <mi>g</mi>
@@ -3764,9 +3744,8 @@
 <td id="_50f28c08-2485-9ddc-ed4b-652e9ccfd476" valign="top" align="left">779.640</td>
 <td id="_a0597572-d996-22b5-2d06-39745a09ce09" valign="top" align="left">1.001386</td>
 <td id="_a8d39950-4fce-daaf-1e31-e4e33ce5bdc0" valign="top" align="left">780.721</td>
-</tr><tr id="_5d52b1f1-9407-8df9-23e0-148d27777107"><th id="_d57072c5-f1e3-4abd-3bb7-766a5b4fb12d" valign="top" align="left">w(“stock”) ± u (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_592d0976-1811-7358-c6b3-a8cf381331ca"><th id="_ba50ea7a-1a35-44cc-354c-e454ac30699e" valign="top" align="left">w(“stock”) ± u (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mg.g-1">
       <mstyle mathvariant="normal">
         <mi>mg</mi>
@@ -3789,7 +3768,7 @@
 </math><asciimath>"unitsml(mg/g)"</asciimath></stem>)</th>
 <td id="_360773db-63b1-f734-64ee-b21ac1bac832" valign="top" align="left">128.95 ± 0.30<fn id="_c475aebb-84a0-28fe-5752-dcf6e507d275" reference="a"><p id="_dbb17762-b357-1aac-444f-fb77dc0e9316">The uncertainty of the stock solution mass fraction does not comprise any homogeneity contribution since the bulk stock solution (prior to ampouling) was used as source material.</p>
 </fn></td>
-<td id="_6e59cddf-8fcc-57d6-7a5b-b89131846eed" valign="top" align="left"/><td id="_c5d28f54-a43c-befa-eca6-51c5bd0a66cc" valign="top" align="left"/></tr><tr id="_7dcb1469-834c-2413-43e4-b80030e54808"><th id="_9b9feb83-1769-9bb2-b2b4-970085a8f3c1" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_6e59cddf-8fcc-57d6-7a5b-b89131846eed" valign="top" align="left"/><td id="_c5d28f54-a43c-befa-eca6-51c5bd0a66cc" valign="top" align="left"/></tr><tr id="_163a9434-5b85-3e3f-2eb0-d19e42dca7b2"><th id="_aa367d8d-2185-3e4e-bbf1-06c529387ad7" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>w</mi>
@@ -3798,7 +3777,6 @@
   </mstyle>
 </math><asciimath>w_"cal"</asciimath></stem> (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_ug.g-1">
       <mstyle mathvariant="normal">
         <mi>µg</mi>
@@ -3889,7 +3867,7 @@
       </mrow>
     </mfrac>
   </mstyle>
-</math><asciimath>w_(cal) = (m_("stock")*b_("stock")*w_("stock"))/(m_("sol")*b_("sol"))</asciimath></stem><dl id="_b1b3815b-8046-413d-f529-81c8cb99b71f" key="true"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>w_(cal) = (m_("stock")*b_("stock")*w_("stock"))/(m_("sol")*b_("sol"))</asciimath></stem><key><dl id="_a7e72860-af50-cce1-e9fc-68a592ce4f08"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>m</mi>
@@ -3897,7 +3875,7 @@
     </msub>
   </mstyle>
 </math><asciimath>m_("stock")</asciimath></stem></dt>
-<dd id="_a093d286-5469-e1f6-6712-85b874e77e1c"><p id="_aec8f688-c57e-7988-848c-ede1da8ad16a">weighed mass of AfB<sub>1</sub> stock solution</p>
+<dd id="_fd2a67f2-b030-b90f-7ca8-c9097a1153a3"><p id="_db5bd208-786e-19ae-912d-e3c1ec06d121">weighed mass of AfB<sub>1</sub> stock solution</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -3907,7 +3885,7 @@
     </msub>
   </mstyle>
 </math><asciimath>b_("stock")</asciimath></stem></dt>
-<dd id="_89a5f0d8-45fb-90e7-7cb6-01d42d8567ae"><p id="_b6ed5cf8-7058-67dd-3e12-cca6a2eb7378">buoyancy correction of stock solution weighing</p>
+<dd id="_41c055a7-4c35-feb9-44a6-75f539480ef9"><p id="_ebf42add-4d9b-c1d4-6954-3511f2851570">buoyancy correction of stock solution weighing</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -3917,7 +3895,7 @@
     </msub>
   </mstyle>
 </math><asciimath>w_("stock")</asciimath></stem></dt>
-<dd id="_eb0c9524-2a17-d35d-6f8a-3f4ac0e303f2"><p id="_07ec7120-220a-2752-1488-3a9bdde068ac">AfB<sub>1</sub> mass fraction of the stock solution</p>
+<dd id="_0febc39e-5104-7554-f786-8b40096f8e93"><p id="_55bd2ac5-8307-cf12-0092-946b699b0c69">AfB<sub>1</sub> mass fraction of the stock solution</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -3927,7 +3905,7 @@
     </msub>
   </mstyle>
 </math><asciimath>m_("sol")</asciimath></stem></dt>
-<dd id="_9e1f4178-a8be-5758-5c11-9ce6fce3aaa2"><p id="_4f1dae19-ec1c-8430-0fe4-cb25aa6df924">weighed mass of calibration solution OGP.029</p>
+<dd id="_98153ba7-e9b7-53e1-f4af-d85821a3060e"><p id="_4d54e26d-eed9-2b2c-3d43-d9a0926b017a">weighed mass of calibration solution OGP.029</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -3937,9 +3915,9 @@
     </msub>
   </mstyle>
 </math><asciimath>b_("sol")</asciimath></stem></dt>
-<dd id="_b8572465-a42f-ac60-1804-a581d7767339"><p id="_6f94018f-e7dc-ebb4-b27f-cd11135bc587">buoyancy correction of calibration solution weighing</p>
+<dd id="_3bfde36f-4df0-219b-2b2f-261c18f2572a"><p id="_6f825a7b-af00-1f61-0f31-b61650b8fcc4">buoyancy correction of calibration solution weighing</p>
 </dd>
-</dl></formula>
+</dl></key></formula>
 
 
 
@@ -4159,9 +4137,9 @@
   </mstyle>
 </math><asciimath>u(w_(cal)) = w_(cal) * sqrt([(u(m_("stock")))/m_("stock")]^2 + [(u(b_("stock")))/b_("stock")]^2 + [(u(w_("stock")))/w_("stock")]^2 + [(u(m_("sol")))/m_("sol")]^2 + [(u(b_("sol")))/b_("sol")]^2 + 2*[(u(ii(V)))/ii(V)]^2)</asciimath></stem></formula>
 
-<table id="_08102f25-3d2e-0a2f-4a3f-ce083d3015bb" anchor="table10">
+<table id="_beaa6004-639f-aea8-2eb7-f69b0f0fb5f5" anchor="table10">
 <name id="_8f742d87-1f37-cce9-4b77-43ffddaf4b4c">Individual uncertainty components contributing to the final combined uncertainty of OGP.029 mass fraction.</name>
-<tbody><tr id="_7e343253-e598-7235-69df-7ccfb2fb7e9a"><td id="_fe920890-5fcf-a0fe-bc82-366e48a8a16a" valign="top" align="center">Unc. source</td>
+<tbody><tr id="_c9342ceb-2d0a-5019-942e-f7ff66113082"><td id="_fe920890-5fcf-a0fe-bc82-366e48a8a16a" valign="top" align="center">Unc. source</td>
 <td id="_4c806c5b-a86e-05b6-e2cf-10ef573e0650" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mfrac>
@@ -4294,7 +4272,7 @@
     </msub>
   </mstyle>
 </math><asciimath>u_"rel"</asciimath></stem> (%)</td>
-<td id="_0fb633bc-0fb3-bc21-4072-32b54c6e433e" valign="top" align="center"><p id="_94835afa-c684-8c66-ca4c-d6394d14d12d"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_4c24a6e0-9e36-e42b-31ec-763f3a345dbd" valign="top" align="center"><p id="_3d4d5d28-5e18-3cf0-c8a1-1c15dbebfb05"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
     <mrow>
@@ -4308,7 +4286,6 @@
   </mstyle>
 </math><asciimath>u(w_"stock")</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_ug.g-1">
       <mstyle mathvariant="normal">
         <mi>µg</mi>
@@ -4418,9 +4395,9 @@
   </mstyle>
 </math><asciimath>u_"bb" = 0.32%</asciimath></stem> (<xref target="table7"/>, <xref target="homogeneity_study"/>) to produce a final estimate of the mass fraction uncertainty of the batch (<xref target="table11"/>).</p>
 
-<table id="_4049836b-319e-932f-39a6-83e1da03f84d" anchor="table11">
+<table id="_abeea6b2-3ed2-4de7-b168-027cb19d7806" anchor="table11">
 <name id="_95f13a45-918e-283c-395d-8805f6adc068">Combination of the uncertainty from the gravimetric value assignment and the uncertainty from between-ampoule homogeneity to estimate the final uncertainty of the AfB<sub>1</sub> mass fraction in the batch of the calibration solution OGP.029.</name>
-<tbody><tr id="_4f1e203d-2e4f-eefc-85df-2ed2ac1750a8"><td id="_55f14e29-7055-766e-7ae5-d8b955909011" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<tbody><tr id="_4908280a-8c90-0eab-ba55-535a9c1bd83c"><td id="_55f14e29-7055-766e-7ae5-d8b955909011" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
     <msub>
@@ -4457,7 +4434,7 @@
     </msub>
   </mstyle>
 </math><asciimath>u("comb")_"rel"</asciimath></stem> (%)</td>
-<td id="_73f79424-7322-df41-6db2-a24d828291fc" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_748df05e-7a2c-8c41-d4f6-df84c22b2537" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>w</mi>
@@ -4466,7 +4443,6 @@
   </mstyle>
 </math><asciimath>w_"cal"</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_ug.g-1">
       <mstyle mathvariant="normal">
         <mi>µg</mi>
@@ -4667,39 +4643,59 @@
 </clause>
 
 
-</sections><bibliography><references id="_c11be718-9f64-f161-18ef-655f20dbd365" normative="false" obligation="informative">
-<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="cbkt" id="_5d3fa4c4-c517-bb67-1c6b-b45c98bef4e3">
+</sections><bibliography><references id="_94d3d618-a4ca-044d-0b5d-e37bec983959" normative="false" obligation="informative">
+<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="cbkt" id="_a6e073a1-e4ea-7103-876c-19fbabdeaa1b">
   <formattedref format="application/x-isodoc+xml">
     <em>BIPM CBKT programme: Safe Food and Feed in Developing Economies.</em>
   </formattedref>
   <docidentifier type="metanorma">[1]</docidentifier>
-</bibitem><bibitem anchor="rasff" id="_8d0d9ccc-c3e0-67c6-36cd-f33accd72f37">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="rasff" id="_ae3dba59-fcd1-25b7-f7a9-d48a78a0af9a">
   <formattedref format="application/x-isodoc+xml"><em>European Union RASFF – The rapid alert system for food and feed – 2017 Annual Report.</em> Luxembourg : Publications Office of the European Union, 2017.</formattedref>
   <docidentifier type="metanorma">[2]</docidentifier>
-</bibitem><bibitem anchor="williams" id="_b85bbea8-0543-463c-5ebf-3cf5669ea9f6">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="williams" id="_11e46c87-3cf5-e9e2-8cab-163354a7cf7d">
   <formattedref format="application/x-isodoc+xml">Williams J.H., Phillips T.D., Jolly P.E., Stiles J.K., Jolly C.M., Aggarwal D. <em>Human aflatoxicosis in developing countries: A review of toxicology, exposure, potential health consequences, and interventions.</em> s.l. : Am. J. Clin. Nutr., 2004. pp. 1106–1122. Vol. 80.</formattedref>
   <docidentifier type="metanorma">[3]</docidentifier>
-</bibitem><bibitem anchor="wu" id="_967573c5-4ca9-3266-a08e-ccd86569f8c6">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="wu" id="_aaa8426c-5acb-cee5-288a-e1eedaa4149e">
   <formattedref format="application/x-isodoc+xml">Wu HC, Santella R. <em>The role of aflatoxins in hepatocellular carcinoma.</em> 2012. Vol. 12.</formattedref>
   <docidentifier type="metanorma">[4]</docidentifier>
-</bibitem><bibitem anchor="westwood" id="_566dd7fb-aec6-3c53-d40b-d92bcdb9f14f">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="westwood" id="_c55f8d35-6d2e-0dd9-de25-fa2a38e35cef">
   <formattedref format="application/x-isodoc+xml">Westwood. <em>Purity Evaluation Guideline: Aflatoxin B<sub>1</sub>. BIPM-PEG-02. Rapport BIPM-2019/06.</em> Sevres (France) : Bureau International des Poids et Mesures, 2019.</formattedref>
   <docidentifier type="metanorma">[5]</docidentifier>
-</bibitem><bibitem anchor="oneil" id="_315192e8-d82f-7a86-0023-fdbd1253a051">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="oneil" id="_e8b43d94-87c5-fd1f-e92d-131c5ee56cda">
   <formattedref format="application/x-isodoc+xml">O’Neil MJ, Smith A, Heckelman PE, Budavari S. <em>The Merck Index.</em> 13th ed. s.l. : Whitehouse Station, NJ: Merck &amp; Co, 2001.</formattedref>
   <docidentifier type="metanorma">[6]</docidentifier>
-</bibitem><bibitem anchor="aoac" id="_b0c5e7e6-fde8-e9a8-617b-49d6801dc331">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="aoac" id="_ab456415-8f20-183c-2dd2-cfc5daf7d53d">
   <formattedref format="application/x-isodoc+xml">AOAC Official methods of analysis. 2000, 49, p. 3.</formattedref>
   <docidentifier type="metanorma">[7]</docidentifier>
-</bibitem><bibitem anchor="reichmuth" id="_e6089774-7f20-4e9f-1336-72b1c93ad9de">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="reichmuth" id="_56b40173-3549-350f-5c0a-9d7fc2692003">
   <formattedref format="application/x-isodoc+xml">Reichmuth A, Wunderli S, Weber , Meyer R. <em>The Uncertainty of weighing data obtained with electronic analytical balances.</em> s.l. : Microchim. Acta, 2004. pp. 133-141. Vol. 148.</formattedref>
   <docidentifier type="metanorma">[8]</docidentifier>
-</bibitem><bibitem anchor="lamberty" id="_290395d8-6252-7a9d-d640-a6e524196ce6">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="lamberty" id="_24e07652-ef3b-4d4c-87e3-b713aa96f544">
   <formattedref format="application/x-isodoc+xml">Lamberty A, Shimmel H, Pauwels J. <em>The study of stability of reference materials by isochronous measurements.</em> s.l. : Fresenius J Anal Chem., 1998. pp. 359-361. Vol. 360.</formattedref>
   <docidentifier type="metanorma">[9]</docidentifier>
-</bibitem><bibitem anchor="linsinger" id="_48e2b78c-2d10-a963-da7e-eba936c4386c">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="linsinger" id="_ee42d560-0bc6-0a01-7685-160eebc6b1e2">
   <formattedref format="application/x-isodoc+xml">Linsinger TPJ, Powels J, van der Veen AMH, Schimmel H, Lamberty A. <em>Homogeneity and stability of reference materials.</em> s.l. : Accred Qual Assur., 2001. pp. 20-25. Vol. 6.</formattedref>
   <docidentifier type="metanorma">[10]</docidentifier>
+  <language>en</language>
+  <script>Latn</script>
 </bibitem>
 
 

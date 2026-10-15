@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.2" schema-version="v2.1.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.0" schema-version="v2.2.0" flavor="bipm">
 <bibdata type="standard">
-<title language="en" format="text/plain" type="title-main">Beam Characterization for Low-energy X-rays and New Reference Qualities at 1 m</title>
-
-<docidentifier primary="true" type="BIPM">BIPM BIPM-2020/03</docidentifier><docnumber>BIPM-2020/03</docnumber><contributor><role type="author"/><organization>
+<title language="en" type="title-main">Beam Characterization for Low-energy X-rays and New Reference Qualities at 1 m</title>
+<docidentifier primary="true" type="BIPM">BIPM BIPM-2020/03</docidentifier><docnumber>BIPM-2020/03</docnumber><date type="updated"><on>2020-04</on></date><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"/><person>
 <name><completename>Anna Villevalde</completename></name>
@@ -13,13 +12,19 @@
 <name><completename>D T Burns</completename></name>
 </person></contributor><contributor><role type="author"/><person>
 <name><completename>C Kessler</completename></name>
-</person></contributor><contributor><role type="publisher"/><organization>
+</person></contributor><contributor><role type="author"><description>committee</description></role><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><version><revision-date>2020-04</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2020</from><owner><organization>
+<subdivision type="Committee">
+<name language="en">International Bureau of Weights and Measures</name>
+
+<name language="fr">Bureau International des Poids et Mesures</name>
+<identifier>BIPM</identifier><identifier type="full">BIPM</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem><date type="circulated"/><version/></bibitem>
-</relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="BIPM" language="en" script="Latn">International Bureau of Weights and Measures</committee><committee acronym="BIPM" language="fr" script="Latn">Bureau International des Poids et Mesures</committee></editorialgroup><structuredidentifier><docnumber>BIPM-2020/03</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd1" id="U_NISTu1">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+<abbreviation>BIPM</abbreviation></organization></contributor><version>2020-04</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2020</from><owner><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="successorOf"><bibitem/></relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2020/03</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd1" id="U_NISTu1">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">metre</UnitName>
         <UnitSymbol type="HTML">m</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -28,7 +33,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd18" id="U_kV">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">kV</UnitName>
         <UnitSymbol type="HTML">kV</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -40,7 +45,7 @@
           <EnumeratedRootUnit unit="volt" prefix="k"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_mm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mm</UnitName>
         <UnitSymbol type="HTML">mm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -52,7 +57,7 @@
           <EnumeratedRootUnit unit="metre" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu23">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">degree Celsius</UnitName>
         <UnitSymbol type="HTML">°C</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -61,7 +66,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd14" id="U_kPa">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">kPa</UnitName>
         <UnitSymbol type="HTML">kPa</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -72,8 +77,8 @@
         <RootUnits>
           <EnumeratedRootUnit unit="pascal" prefix="k"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd30" id="U_mg.cm-3">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L-3M" id="U_mg.cm-3">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">mg*cm^-3</UnitName>
         <UnitSymbol type="HTML">mg cm
           <sup>−3</sup>
@@ -83,9 +88,7 @@
             <mi mathvariant="normal">mg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>3</mn>
@@ -98,7 +101,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="-3"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd4" id="U_pA">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">pA</UnitName>
         <UnitSymbol type="HTML">pA</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -110,7 +113,7 @@
           <EnumeratedRootUnit unit="ampere" prefix="p"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd3" id="U_NISTu3">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">second</UnitName>
         <UnitSymbol type="HTML">s</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -119,7 +122,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#D_L-2T-1J" id="U_mGy.s-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">mGy*s^-1</UnitName>
         <UnitSymbol type="HTML">mGy s
           <sup>−1</sup>
@@ -129,9 +132,7 @@
             <mi mathvariant="normal">mGy</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">s</mi>
-              </mrow>
+              <mi mathvariant="normal">s</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -144,7 +145,7 @@
           <EnumeratedRootUnit unit="second" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">kelvin</UnitName>
         <UnitSymbol type="HTML">K</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -152,8 +153,8 @@
             <mi mathvariant="normal">K</mi>
           </math>
         </UnitSymbol>
-      </Unit><Unit dimensionURL="#NISTd29" id="U_NISTu1e-1/1">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L-1" id="U_NISTu1e-1/1">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">meter to the power minus one</UnitName>
         <UnitSymbol type="HTML">m
           <sup>−1</sup>
@@ -161,9 +162,7 @@
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">m</mi>
-              </mrow>
+              <mi mathvariant="normal">m</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -172,9 +171,9 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd1" id="U_um">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">um</UnitName>
-        <UnitSymbol type="HTML">m</UnitSymbol>
+        <UnitSymbol type="HTML">µm</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µm</mi>
@@ -184,7 +183,7 @@
           <EnumeratedRootUnit unit="metre" prefix="u"/>
         </RootUnits>
       </Unit><Unit id="U_keV">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">keV</UnitName>
         <UnitSymbol type="HTML">keV</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -196,7 +195,7 @@
           <EnumeratedRootUnit unit="electronvolt" prefix="k"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd4" id="U_mA">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mA</UnitName>
         <UnitSymbol type="HTML">mA</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -208,9 +207,9 @@
           <EnumeratedRootUnit unit="ampere" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd4" id="U_uA">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">uA</UnitName>
-        <UnitSymbol type="HTML">A</UnitSymbol>
+        <UnitSymbol type="HTML">µA</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µA</mi>
@@ -220,9 +219,9 @@
           <EnumeratedRootUnit unit="ampere" prefix="u"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_L-2M-1I-1J" id="U_Gy.uC-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">Gy*uC^-1</UnitName>
-        <UnitSymbol type="HTML">Gy C
+        <UnitSymbol type="HTML">Gy µC
           <sup>−1</sup>
         </UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -230,9 +229,7 @@
             <mi mathvariant="normal">Gy</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">µC</mi>
-              </mrow>
+              <mi mathvariant="normal">µC</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -245,7 +242,7 @@
           <EnumeratedRootUnit unit="coulomb" prefix="u" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd27" id="U_NISTu28">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">gray</UnitName>
         <UnitSymbol type="HTML">Gy</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -254,17 +251,15 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#D_M-1I-1" id="U_uC-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">uC^-1</UnitName>
-        <UnitSymbol type="HTML">C
+        <UnitSymbol type="HTML">µC
           <sup>−1</sup>
         </UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">µC</mi>
-              </mrow>
+              <mi mathvariant="normal">µC</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -276,7 +271,7 @@
           <EnumeratedRootUnit unit="coulomb" prefix="u" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd18" id="U_NISTu16">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">volt</UnitName>
         <UnitSymbol type="HTML">V</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -297,7 +292,7 @@
         <Length symbol="L" powerNumerator="-1"/>
         <Mass symbol="M" powerNumerator="1"/>
         <Time symbol="T" powerNumerator="-2"/>
-      </Dimension><Dimension id="NISTd30">
+      </Dimension><Dimension id="D_L-3M">
         <Length symbol="L" powerNumerator="-3"/>
         <Mass symbol="M" powerNumerator="1"/>
       </Dimension><Dimension id="NISTd4">
@@ -309,6 +304,8 @@
         <Time symbol="T" powerNumerator="-1"/>
         <LuminousIntensity symbol="J" powerNumerator="1"/>
       </Dimension><Dimension id="NISTd29">
+        <Length symbol="L" powerNumerator="-1"/>
+      </Dimension><Dimension id="D_L-1">
         <Length symbol="L" powerNumerator="-1"/>
       </Dimension><Dimension id="D_L-2M-1I-1J">
         <Length symbol="L" powerNumerator="-2"/>
@@ -354,11 +351,10 @@
         <PrefixSymbol type="unicode">μ</PrefixSymbol>
         <PrefixSymbol type="LaTeX">$mu$</PrefixSymbol>
         <PrefixSymbol type="HTML">µ</PrefixSymbol>
-      </Prefix></PrefixSet></UnitsML><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+      </Prefix></PrefixSet></UnitsML><presentation-metadata><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
 <boilerplate><copyright-statement>
 
-<clause id="_fcb1ee9c-c5cc-bec7-e544-c67f81841cd7" obligation="normative">
-<p id="_cc34320a-14bd-29a7-b3e4-f9925ddbe0eb" align="center">© Bureau International des Poids et Mesures 2020 all rights reserved</p>
+<clause id="_6cbc3777-3837-c699-2c6a-b68369788f3c" obligation="normative"><p id="_cc34320a-14bd-29a7-b3e4-f9925ddbe0eb" align="center">© Bureau International des Poids et Mesures 2020 all rights reserved</p>
 </clause>
 </copyright-statement>
 
@@ -1250,7 +1246,7 @@
 </math><asciimath>0.3 "unitsml(mm)"</asciimath></stem>.</p>
 </clause>
 
-<clause id="_c2a4f7fb-950b-6eba-0a06-454ec349d8b9" obligation="normative">
+<clause id="_da5f14a9-1ad5-0e7c-e4d2-be8a6d185beb" obligation="normative">
 <title id="_3a9c6338-84ee-0ca0-2932-e4a6f13740cc">Re-measurement of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -1627,7 +1623,7 @@
   </mstyle>
 </math><asciimath>k_"a"</asciimath></stem> values is around 1 part in 10<sup>3</sup>.</p>
 
-<table id="_ed51578b-6b73-9ec7-48d4-6f9cf7e2e077" anchor="table1">
+<table id="_cabf7c1a-d5f0-8ad0-c737-42e52b5d2006" anchor="table1">
 <name id="_a1c5ac59-a140-ab71-fb83-db9869a721f2">Results of the re-measurement of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -1709,9 +1705,8 @@
     <mtext>a</mtext>
   </mstyle>
 </math><asciimath>50 "unitsml(kV)""a"</asciimath></stem></td>
-</tr><tr id="_18621f43-a245-7e88-9d1a-a2498e5df273"><td id="_8e67ce1b-cc82-4a7b-a152-fac2c852964e" colspan="2" valign="top" align="left">Generating potential / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_7e70962d-4709-81a3-24f9-3a46d323dd73"><td id="_83e17f12-3c47-fafa-26c5-ee9826c4d7a8" colspan="2" valign="top" align="left">Generating potential / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_kV">
       <mstyle mathvariant="normal">
         <mi>kV</mi>
@@ -1726,9 +1721,8 @@
 <td id="_f3c0e2dc-5262-3cdd-2b7b-7493d2dedbf0" valign="top" align="center">30</td>
 <td id="_7c140365-9b5a-37dd-a23d-9d177b80afef" valign="top" align="center">50</td>
 <td id="_0c2f9d94-d870-95d2-2bf6-9e6303097586" valign="top" align="center">50</td>
-</tr><tr id="_7d96ea23-248e-b25e-93d9-cb9e2102fb90"><td id="_6431e5e7-bf5d-4fa2-a9da-bdeb10febbc2" colspan="2" valign="top" align="left">Al filtration / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_add0e8e2-5f76-dc4b-a77f-83a0261a4014"><td id="_d50039b2-c928-7e90-1bed-77a414a07b24" colspan="2" valign="top" align="left">Al filtration / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mm">
       <mstyle mathvariant="normal">
         <mi>mm</mi>
@@ -1743,9 +1737,8 @@
 <td id="_028d2bed-9143-aa39-4593-6c8aac7f5250" valign="top" align="center">0.2082</td>
 <td id="_6785d821-fc44-5ba2-56b7-e487b1e69894" valign="top" align="center">1.0082</td>
 <td id="_77c87eb3-acf2-1f97-ee0e-b52bfc7946a8" valign="top" align="center">3.989</td>
-</tr><tr id="_9258283c-ff16-0214-6e5d-85ec05684195"><td id="_d9a55673-2437-32f2-0b8c-0a7738404f8f" colspan="2" valign="top" align="left">Reference distance / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_d4c49984-704e-d967-4b80-932ad544ac77"><td id="_b7688691-ad47-0a27-d012-12b9fce46e99" colspan="2" valign="top" align="left">Reference distance / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu1">
       <mstyle mathvariant="normal">
         <mi>m</mi>
@@ -1759,9 +1752,8 @@
 <td id="_b4bf207f-6533-8714-e2b0-5cece8f0fb70" valign="top" align="center">0.5</td>
 <td id="_8e60109e-76a8-0424-d612-54525f5cfd45" valign="top" align="center">0.5</td>
 <td id="_d991924d-3bd7-551a-c29b-feaff7dae380" valign="top" align="center">0.5</td>
-</tr><tr id="_5b12eb8c-6de8-7622-829c-87a1f702097e"><td id="_f1004d9d-bca0-646b-8a25-ed18a8c2047b" valign="top" rowspan="2" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_8c575755-ba23-5019-ca82-4954117893e1"><td id="_c731a1f7-0db1-244f-a3e1-ae6af536cebb" valign="top" rowspan="2" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mm">
       <mstyle mathvariant="normal">
         <mi>mm</mi>
@@ -1782,7 +1774,7 @@
 <td id="_8eabcd62-dff8-09dd-5af7-32de2488e4ee" valign="top" align="center">0.1695</td>
 <td id="_71917009-bcd6-95eb-f6a1-50a22a13f829" valign="top" align="center">1.0155</td>
 <td id="_0af14586-6243-0c2e-91e0-794337fa5d9a" valign="top" align="center">2.2612</td>
-</tr><tr id="_987c4b75-336b-aa59-8faa-a6599e6e9751"><td id="_31789f06-b336-a1da-fe54-0fe846b99870" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_5c97f830-e48e-e3df-a1c8-b73e07c5daf3"><td id="_a646882f-1207-4a01-e1e4-393c33b1cb19" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1802,6 +1794,7 @@
           <mn>1</mn>
         </mrow>
       </msup>
+      
       
       
     </mrow>
@@ -1930,7 +1923,7 @@
   </mstyle>
 </math><asciimath>35 "unitsml(kV)"</asciimath></stem> W/Mo radiation qualities. The new measurements were made with the same attenuators as used previously. For both radiation qualities two attenuators were used. The results are presented in <xref target="table2"/>.</p>
 
-<table id="_2da5f8c6-185a-4392-8bea-e90e716511db" anchor="table2">
+<table id="_9c6ce288-cb8a-21b5-e2ad-8cc21631d407" anchor="table2">
 <name id="_3f8e363c-05fb-76b3-ab93-3fb0b5b89fee">Results of the re-measurement of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -1982,9 +1975,8 @@
     </mrow>
   </mstyle>
 </math><asciimath>35 "unitsml(kV)"</asciimath></stem></td>
-</tr><tr id="_3af2c154-b708-9f67-575c-3ffaa72fbb47"><td id="_850364ee-7dd1-c357-0019-c5cd923785f9" colspan="2" valign="top" align="left">Generating potential / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_f3ab845a-1f1d-e7e8-960a-249413bddad1"><td id="_c20057c2-29e1-e598-6948-b90f4c59c7ee" colspan="2" valign="top" align="left">Generating potential / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_kV">
       <mstyle mathvariant="normal">
         <mi>kV</mi>
@@ -1997,9 +1989,8 @@
 </math><asciimath>"unitsml(kV)"</asciimath></stem></td>
 <td id="_2fa02581-df6e-87bf-8e0d-6bfedbc418f6" valign="top" align="left">23</td>
 <td id="_3de33957-eb54-56da-9305-545874d67c04" valign="top" align="center">35</td>
-</tr><tr id="_3d14828d-67d0-f690-3121-f8235fa70222"><td id="_ab20dfed-ef44-c8fb-f61d-ac5acf4b3fdc" colspan="2" valign="top" align="left">Mo filtration / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_d607411d-acc5-ba8d-104d-4ec28bc37b22"><td id="_95d5c1a1-bfeb-3ebb-e4dd-cc681e49757d" colspan="2" valign="top" align="left">Mo filtration / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_um">
       <mstyle mathvariant="normal">
         <mi>µm</mi>
@@ -2012,9 +2003,8 @@
 </math><asciimath>"unitsml(um)"</asciimath></stem></td>
 <td id="_431ed309-2559-2350-936e-e2238f43e384" valign="top" align="left">60</td>
 <td id="_a7453ba2-7b0a-e6fc-240b-b7a77a7b80a2" valign="top" align="center">60</td>
-</tr><tr id="_8dab8083-0a53-6004-8412-3456d51c26e6"><td id="_60ef20ff-1ffd-7a96-36b2-35303d4cc085" colspan="2" valign="top" align="left">Reference distance / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_55f5bc86-f6eb-fc1b-d4ab-ae598f26d0c2"><td id="_18285c82-5271-1493-7924-0a358b9c33bb" colspan="2" valign="top" align="left">Reference distance / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu1">
       <mstyle mathvariant="normal">
         <mi>m</mi>
@@ -2026,9 +2016,8 @@
 </math><asciimath>"unitsml(m)"</asciimath></stem></td>
 <td id="_638c3e76-4e07-41b5-e74b-10a760727c12" valign="top" align="left">0.5</td>
 <td id="_8d90a220-7aa4-0355-91be-0f028e4e90f9" valign="top" align="center">0.5</td>
-</tr><tr id="_f77c5672-45e7-1706-63e4-219ab6e53ac8"><td id="_b976035f-2d52-b9e0-6b9e-c44cdee3dc2f" valign="top" rowspan="2" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_9273eab2-152a-72a2-7b24-d1f5e4040fcc"><td id="_2854bbb0-c040-58b4-5a31-6d10503059a0" valign="top" rowspan="2" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mm">
       <mstyle mathvariant="normal">
         <mi>mm</mi>
@@ -2045,7 +2034,7 @@
 </tr><tr id="_aa2c3ee1-76b9-0a41-3261-cf17981c4666"><td id="_ae569c0b-87af-8e2f-f2a7-2a62a60e4198" valign="top" align="left">measured 2019</td>
 <td id="_9206cbf8-3e1a-cfbe-a8af-29940564044a" valign="top" align="left">0.3313</td>
 <td id="_572525a7-2c92-d5fa-2aba-880fdae97911" valign="top" align="center">0.3877</td>
-</tr><tr id="_19741b8a-b60f-9bd4-50a5-42dbebc64e1f"><td id="_4a11c7fd-cc39-b06a-f550-5b1251b63d81" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_920f351b-1a15-460c-faac-ee61d4169e13"><td id="_937eeba7-6709-ce6f-e8a9-7865eb48e3f1" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -2065,6 +2054,7 @@
           <mn>1</mn>
         </mrow>
       </msup>
+      
       
       
     </mrow>
@@ -2103,7 +2093,7 @@
 </math><asciimath>k_"a"</asciimath></stem> are in agreement with the previous at the level of the stated combined standard uncertainty of 2 parts in 10<sup>4</sup>.</p>
 </clause>
 
-<clause id="_d60bc389-6fa8-22de-4ad2-13d6df78cf7f" obligation="normative">
+<clause id="_37fef623-1ecc-efb6-e40b-3b80ebb328d0" obligation="normative">
 <title id="_017e4ada-98c3-b0f5-c5ba-7b91a77f6270">Re-measurement of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -2279,7 +2269,7 @@
   </mstyle>
 </math><asciimath>101.325 "unitsml(kPa)"</asciimath></stem>.</p>
 
-<table id="_c6e23bc2-7bc6-1cdf-1a9a-a293e84ca490" anchor="table3">
+<table id="_96bd8695-e3a8-e6fb-bc2f-9382a619ae89" anchor="table3">
 <name id="_a9d50249-0fea-5c5f-786c-da3c97ab4edb">Results of the re-measurement of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -2331,9 +2321,8 @@
     </mrow>
   </mstyle>
 </math><asciimath>35 "unitsml(kV)"</asciimath></stem></td>
-</tr><tr id="_e172714a-0bcd-a0b9-a36b-203c756302af"><td id="_bd444520-31a7-a7e7-b219-e4c1351f4732" colspan="2" valign="top" align="left">Generating potential / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_7debfbe4-6ed9-f794-9781-ff62cefb8e1b"><td id="_b07f2c16-e91d-9afe-2c4c-942c432f8815" colspan="2" valign="top" align="left">Generating potential / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_kV">
       <mstyle mathvariant="normal">
         <mi>kV</mi>
@@ -2346,9 +2335,8 @@
 </math><asciimath>"unitsml(kV)"</asciimath></stem></td>
 <td id="_a4b07bd3-9530-3dab-3084-59bd97aa6440" valign="top" align="left">25</td>
 <td id="_57b919f5-42ba-f7b8-9d6f-50dccbe74189" valign="top" align="center">35</td>
-</tr><tr id="_c57e1566-4b25-d1bb-1c6d-7a2c8e0800e3"><td id="_50cc9761-ce40-d44b-984c-2a1292594853" colspan="2" valign="top" align="left">Mo filtration / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_c4f39f2f-80cb-c8e1-92cd-14293334d59b"><td id="_cb2500b4-e27a-218d-08ba-41de65c9b711" colspan="2" valign="top" align="left">Mo filtration / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_um">
       <mstyle mathvariant="normal">
         <mi>µm</mi>
@@ -2361,9 +2349,8 @@
 </math><asciimath>"unitsml(um)"</asciimath></stem></td>
 <td id="_49fcb2f0-800f-2e08-13e4-47affcf801e6" valign="top" align="left">30</td>
 <td id="_4e90c26d-3f73-9553-2335-788a7539040b" valign="top" align="center">30</td>
-</tr><tr id="_c9522f72-6b5d-9c38-2f6b-da14cce5fc48"><td id="_ddd42131-fc31-f77f-813d-ae7e53f36411" colspan="2" valign="top" align="left">Reference distance / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_f6d8d09c-94d9-6350-babb-28e9e981d68e"><td id="_234e4f2a-6697-a69b-7e7e-44fb4f97518f" colspan="2" valign="top" align="left">Reference distance / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu1">
       <mstyle mathvariant="normal">
         <mi>m</mi>
@@ -2375,9 +2362,8 @@
 </math><asciimath>"unitsml(m)"</asciimath></stem></td>
 <td id="_15ffbf57-098d-1012-da9b-2dcb4fc6f2b1" valign="top" align="left">0.6</td>
 <td id="_9413e5f7-1b75-546f-78d7-1b7dba6b2518" valign="top" align="center">0.6</td>
-</tr><tr id="_509407db-9cf2-2d00-a3f3-41870e78e202"><td id="_1541f74c-a679-fc62-7958-dfb328969b55" valign="top" rowspan="2" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_6459d358-be81-7e9b-4028-2cb9bc58c334"><td id="_5513a407-ffdc-6e56-a9dc-166340d2b41f" valign="top" rowspan="2" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mm">
       <mstyle mathvariant="normal">
         <mi>mm</mi>
@@ -2394,7 +2380,7 @@
 </tr><tr id="_e643d2c8-ebb2-2851-d7cd-aa5c59679b68"><td id="_f11d8113-62df-d56b-df22-7d5861767918" valign="top" align="left">measured 2019</td>
 <td id="_81b67ac7-df99-28c9-ee5a-dc557e070a14" valign="top" align="left">0.2778</td>
 <td id="_7605a772-b92f-fea8-15a2-f98e5d4ee32f" valign="top" align="center">0.3651</td>
-</tr><tr id="_6a6d7a6c-e749-d5f7-349b-a39f5cc1dcaf"><td id="_396ff6ea-2791-616a-f2a0-073d620baaec" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_fcdf8c71-0abf-08fa-c74b-bd5cb14e5683"><td id="_4782586c-bbd5-78af-5b0c-8ba15d2cfa02" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -2414,6 +2400,7 @@
           <mn>1</mn>
         </mrow>
       </msup>
+      
       
       
     </mrow>
@@ -2594,7 +2581,7 @@
   </mstyle>
 </math><asciimath>k_"a"</asciimath></stem> values is consistent with the stated combined standard uncertainty of 2 parts in 10<sup>4</sup>.</p>
 
-<table id="_441af7fb-3077-a6e6-743d-6bc3d021f3ec" anchor="table4">
+<table id="_55afe214-0c3a-c169-eaeb-aa513b379675" anchor="table4">
 <name id="_5beb58f6-faba-72f9-1700-36f5b74b2568">Results for <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -2633,9 +2620,8 @@
 <tbody><tr id="_b53bd666-e09a-404d-594b-0512231be119"><td id="_c68761ba-487e-6f82-8160-629a85264ba5" valign="top" align="left">Measured</td>
 <td id="_da9c11c5-0382-7e74-3215-8e03397575d4" valign="top" align="center">with Be windows (normal)</td>
 <td id="_6062bcdd-e83b-ba40-f618-5d62581df870" valign="top" align="center">without Be windows</td>
-</tr><tr id="_9d44bd8a-a7b7-3afe-3245-9e460920c498"><td id="_a9806b6f-5478-5f10-6b50-e83692455253" valign="top" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_c5a03698-6e2b-76b2-94ce-77dac62fb8b3"><td id="_3a907de2-5316-3ec6-84cc-eaf61a7397b5" valign="top" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mm">
       <mstyle mathvariant="normal">
         <mi>mm</mi>
@@ -2648,7 +2634,7 @@
 </math><asciimath>"unitsml(mm)"</asciimath></stem></td>
 <td id="_4b4797f4-f180-2557-cb48-3f004c905da1" valign="top" align="center">0.2774</td>
 <td id="_b97f2650-3f22-aaf3-40ba-f717a49d7d26" valign="top" align="center">0.2751</td>
-</tr><tr id="_294a0d22-121d-6f67-858e-a4174505f000"><td id="_94005b62-20f8-d028-da7d-527dc239c0a7" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_ebdff897-c47b-b6f0-9a32-4bc1402ab420"><td id="_e771f75c-8eb8-b5d3-e755-17d0912e89bc" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -2670,6 +2656,7 @@
       </msup>
       
       
+      
     </mrow>
   </mstyle>
 </math><asciimath>ii(mu)_("air") // "unitsml(m^-1)"</asciimath></stem></td>
@@ -2689,7 +2676,7 @@
 </table>
 </clause>
 
-<clause id="_154597b5-6761-5ae1-00e2-a1a6e8837075" obligation="normative">
+<clause id="_9771c33a-fe6c-f4e3-d3d2-95d1eb32fc02" obligation="normative">
 <title id="_81e30507-8c90-47f1-1527-ca1bb4675be3">Measurement of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -2891,7 +2878,7 @@
   </mstyle>
 </math><asciimath>101.325 "unitsml(kPa)"</asciimath></stem>.</p>
 
-<table id="_2f9bcb8c-9f33-84d7-00e4-8eebf638a60a" anchor="table5">
+<table id="_ace3da8b-3d6d-adde-13dd-a90d4de3e935" anchor="table5">
 <name id="_53927262-7a05-514d-c3af-c1992fb41dea">Results of the measurement of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -2987,9 +2974,8 @@
     <mtext>a</mtext>
   </mstyle>
 </math><asciimath>50 "unitsml(kV)""a"</asciimath></stem></td>
-</tr><tr id="_f4493d6b-79e8-25ad-06ff-ffd505cff4d4"><td id="_e32aa852-8725-a335-be0c-65f8bdb4a181" valign="top" align="left">Generating potential / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_fbf6c70d-f9ac-81e1-fa09-2c7856d4b10c"><td id="_bc3cac81-d7f7-fb23-6c8c-eef1684779bd" valign="top" align="left">Generating potential / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_kV">
       <mstyle mathvariant="normal">
         <mi>kV</mi>
@@ -3005,9 +2991,8 @@
 <td id="_73997b47-4131-28fc-3675-c94b08b17ad9" valign="top" align="center">25</td>
 <td id="_17ec4dab-81c6-4465-7f32-0aa347679155" valign="top" align="center">50</td>
 <td id="_9a7c7bde-dca8-4f61-eed4-f0436760e323" valign="top" align="center">50</td>
-</tr><tr id="_eb305ca8-d5e7-a299-fcf1-20012c380a46"><td id="_22111fd4-d6fc-620a-0252-185b7fc68dad" valign="top" align="left">Al filtration / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_718a65f4-4ac2-bb51-6b91-066c1611fbf1"><td id="_e7100a97-0ec7-8fb7-5a85-a78eeb091777" valign="top" align="left">Al filtration / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mm">
       <mstyle mathvariant="normal">
         <mi>mm</mi>
@@ -3023,9 +3008,8 @@
 <td id="_7807f725-6c7c-f16c-aae5-e4ea563fd2b1" valign="top" align="center">0.3723</td>
 <td id="_adf86304-02b4-0845-2f38-facaa73d4107" valign="top" align="center">1.0082</td>
 <td id="_b084198e-447b-d1cd-dd12-e97c10a5111e" valign="top" align="center">3.989</td>
-</tr><tr id="_1f1748a8-f6ed-2b85-dc8c-019b880e5083"><td id="_e790d9d8-a020-16a5-ff1b-7332da9ec764" valign="top" align="left">Reference distance / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_f2335738-e17e-5704-de1e-c8025067c82c"><td id="_4a4e9519-15fc-f8be-c05a-fd3a4b69d6c3" valign="top" align="left">Reference distance / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu1">
       <mstyle mathvariant="normal">
         <mi>m</mi>
@@ -3040,9 +3024,8 @@
 <td id="_a723de56-77be-bb45-8a91-daf08acab044" valign="top" align="center">1</td>
 <td id="_450d73f6-7abe-83d8-456b-87110a66afee" valign="top" align="center">1</td>
 <td id="_8bec1854-dc32-80a2-d334-99de4c3dcefa" valign="top" align="center">1</td>
-</tr><tr id="_a421a40d-47fd-d886-1632-144d614ac130"><td id="_61cf03b2-0c8a-4c62-ff9a-f7b737537415" valign="top" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_0bde082f-eb6a-e8b8-33c8-11cdf95b4e8c"><td id="_d174b755-7a4e-8293-17c7-21532e86fe55" valign="top" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mm">
       <mstyle mathvariant="normal">
         <mi>mm</mi>
@@ -3058,7 +3041,7 @@
 <td id="_6e07b57c-ce31-d130-dd56-6432c16d2697" valign="top" align="center">0.2654</td>
 <td id="_6b5a1752-4019-c884-f976-f599d63e50d9" valign="top" align="center">1.0414</td>
 <td id="_c7a2addd-ad61-86d0-1c18-2eadfaea67e8" valign="top" align="center">2.2737</td>
-</tr><tr id="_5d128a8a-a633-f5a5-6846-9e3f687ec24e"><td id="_39295cb4-46d4-7741-487a-5e318a569d53" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_33e0b1df-1d78-d598-9e3a-7ce4f03ffdef"><td id="_37a3bc7a-9805-6b2a-143b-18dafee55c17" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -3085,6 +3068,7 @@
             <mn>1</mn>
           </mrow>
         </msup>
+        
         
         
       </mrow>
@@ -3275,7 +3259,7 @@
   </mstyle>
 </math><asciimath>ii(mu)_("air")</asciimath></stem> values are compared with those measured during the BIPM.RI(I)-K2 comparison with the NRC in 2018 (<eref type="inline" bibitemid="Burns4" citeas="[4]"><display-text>Burns et al. 2019</display-text></eref>).</p>
 
-<table id="_a1a1c17a-deab-7f96-a374-ec3f356510c1" anchor="table6">
+<table id="_34d4e9da-d0ee-c154-46be-893301d1b278" anchor="table6">
 <name id="_e6b29bdd-fb14-be2d-66fe-7264fae2284f">New <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -3371,9 +3355,8 @@
     <mtext>a</mtext>
   </mstyle>
 </math><asciimath>50 "unitsml(kV)""a"</asciimath></stem></td>
-</tr><tr id="_7f01cf8e-75b3-1b3b-23da-869eb38a87f3"><td id="_a16125a8-4936-1eff-257a-5700a96b0789" colspan="2" valign="top" align="left">Generating potential / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_e5616b9a-c1fa-5330-4e7a-5e1b544515eb"><td id="_24e05fa0-16e7-2dba-9ea2-ddd66d80d574" colspan="2" valign="top" align="left">Generating potential / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_kV">
       <mstyle mathvariant="normal">
         <mi>kV</mi>
@@ -3389,9 +3372,8 @@
 <td id="_40f50d59-ca83-0856-19f0-9212df513657" valign="top" align="center">25</td>
 <td id="_719bac2f-b4ce-4cf0-d3fa-e0d4cb4458f2" valign="top" align="center">50</td>
 <td id="_43210379-5cec-2649-8ab8-b753273b05bb" valign="top" align="center">50</td>
-</tr><tr id="_6e786a96-b528-0b48-1cf8-2d36ec1dd96c"><td id="_9bfd7659-9e17-5d57-9762-81abd1cc242c" colspan="2" valign="top" align="left">Al filtration / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_a496b7c7-f72b-a00d-e2e5-cdb50603d359"><td id="_59f75e8a-d7cd-f727-793a-41116cd87ec3" colspan="2" valign="top" align="left">Al filtration / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mm">
       <mstyle mathvariant="normal">
         <mi>mm</mi>
@@ -3407,9 +3389,8 @@
 <td id="_29e23947-4a69-1fb7-3236-3480c366636b" valign="top" align="center">0.3723</td>
 <td id="_8adc9b11-f883-5491-de82-0c91a8240109" valign="top" align="center">1.0082</td>
 <td id="_b7378a58-c7d5-c3c4-10b5-a1f1cfd1de86" valign="top" align="center">3.989</td>
-</tr><tr id="_08bd4c4e-baaf-c0bb-ffde-6787f67e7e19"><td id="_53478a15-33f9-9dbd-47c7-05e463355a60" colspan="2" valign="top" align="left">Reference distance / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_88f70bf9-65a2-0698-4e6e-30a8afe1e643"><td id="_45376021-8039-6977-348f-0b02d072e59e" colspan="2" valign="top" align="left">Reference distance / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu1">
       <mstyle mathvariant="normal">
         <mi>m</mi>
@@ -3424,9 +3405,8 @@
 <td id="_26e23386-534c-289f-2003-130ac716cc44" valign="top" align="center">1</td>
 <td id="_33d3a499-441c-3747-df04-f846df89712b" valign="top" align="center">1</td>
 <td id="_a505ee5a-ad54-1daa-0bb0-a6c68fbe88e2" valign="top" align="center">1</td>
-</tr><tr id="_3beeba67-2269-6bc8-bbf3-92a32a7b1def"><td id="_39687b3a-c708-95a1-9ab0-07518a777f8a" valign="top" rowspan="2" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_7fc07401-5f6a-1c40-157c-17aa9ff02f59"><td id="_71482e3c-6e2c-190a-09a2-a24a135e6d15" valign="top" rowspan="2" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mm">
       <mstyle mathvariant="normal">
         <mi>mm</mi>
@@ -3449,7 +3429,7 @@
 <td id="_fb7a85c7-21e4-f0d2-42ce-7940e916ea7b" valign="top" align="center">0.2654</td>
 <td id="_d8583512-61a8-c755-4b56-e659f4474aa2" valign="top" align="center">1.0414</td>
 <td id="_2c3a79e6-4ebe-0821-d7df-3066d77beb2b" valign="top" align="center">2.2737</td>
-</tr><tr id="_ee9e72a2-366d-61c8-5e00-1796bd25238a"><td id="_a748802c-d0b7-57f2-2a55-60a3892abfdc" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_5000afa0-edc8-5612-4cad-bf91d5241cbd"><td id="_36997b2d-deae-b718-07c3-33bad3242eab" valign="top" rowspan="2" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -3469,6 +3449,7 @@
           <mn>1</mn>
         </mrow>
       </msup>
+      
       
       
     </mrow>
@@ -3677,7 +3658,7 @@
   </mstyle>
 </math><asciimath>ii(mu)_("air")</asciimath></stem> is less than 2 parts in 10<sup>4</sup>.</p>
 
-<table id="_184a8c42-8bee-77cc-fc0a-f1f1d8ce665b" anchor="table7">
+<table id="_86350fad-58a7-bbbe-b40b-e120be650900" anchor="table7">
 <name id="_8460a17d-71a4-ec7a-3ed4-2fdfb37c5869">Results of the measurement of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -3799,9 +3780,8 @@
     </mrow>
   </mstyle>
 </math><asciimath>50 "unitsml(kV)"</asciimath></stem></td>
-</tr><tr id="_fbeb64c9-d2dd-2a30-76bf-627cbcc3f53d"><td id="_f3be878a-6509-9cd6-a342-f8898d400b44" valign="top" align="left">Generating potential / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_23db8cad-1b8b-c1b4-9a1f-fbdd746eef21"><td id="_5d085e94-d298-681d-83fd-afb7db51252a" valign="top" align="left">Generating potential / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_kV">
       <mstyle mathvariant="normal">
         <mi>kV</mi>
@@ -3819,9 +3799,8 @@
 <td id="_4fd5c1f4-8ce0-9e6a-ea5e-ba85ac6981e3" valign="top" align="center">35</td>
 <td id="_8b3f72ea-1d72-138e-1960-67cbcb3497e9" valign="top" align="center">40</td>
 <td id="_321077a8-1e75-cb66-7cc1-d8d71fb186f7" valign="top" align="center">50</td>
-</tr><tr id="_2336ccf1-9443-518b-ad53-fd87399e3168"><td id="_e5118d4d-efac-bc2c-4a9a-34fe865381a4" valign="top" align="left">Mo filtration / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_38aa21a6-d6e8-c89c-283d-0894cb623f72"><td id="_04716d55-aaab-34c7-8d2b-12a833584f0b" valign="top" align="left">Mo filtration / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_um">
       <mstyle mathvariant="normal">
         <mi>µm</mi>
@@ -3839,9 +3818,8 @@
 <td id="_8706f1da-f7f2-7056-7f2a-a350d33197b6" valign="top" align="center">60</td>
 <td id="_9cef6c87-65b1-e192-37ea-af45e73c3a4e" valign="top" align="center">60</td>
 <td id="_f5e54f2e-3d37-5047-e058-a768ed70e24d" valign="top" align="center">60</td>
-</tr><tr id="_cc6c5c1c-08d9-936f-7490-c81607be03ed"><td id="_77fdff14-70a2-0eec-4a11-72c607aab73d" valign="top" align="left">Reference distance / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_b8d490a2-a42e-4023-e5bc-1491686767bc"><td id="_8b1ee806-18fd-f52a-af44-128c95881612" valign="top" align="left">Reference distance / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu1">
       <mstyle mathvariant="normal">
         <mi>m</mi>
@@ -3858,9 +3836,8 @@
 <td id="_518824a3-1404-41b8-d9d0-21bc80f43215" valign="top" align="center">1</td>
 <td id="_a2b66ef5-72cf-bc24-72cf-66f20d11c9a8" valign="top" align="center">1</td>
 <td id="_2f505df3-67b2-99dd-74fe-0b72ea8160a6" valign="top" align="center">1</td>
-</tr><tr id="_a76727d3-e1b2-ca91-bd9a-83ede6b01e52"><td id="_30e81561-cdc4-e0a4-0397-41bec20c96b4" valign="top" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_d2dfdb5b-b3c3-2d4d-a069-777d9be0cd62"><td id="_79d79e0e-60e4-10ae-c49a-aa360ac892d3" valign="top" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mm">
       <mstyle mathvariant="normal">
         <mi>mm</mi>
@@ -3878,7 +3855,7 @@
 <td id="_534f01f5-5fef-4b35-ed98-467b591497c5" valign="top" align="center">0.4031</td>
 <td id="_f6ca4bad-d38e-99f9-aeba-2515127a89ff" valign="top" align="center">0.4350</td>
 <td id="_f03873db-5a7d-e7a8-931a-3f2306289d09" valign="top" align="center">0.5127</td>
-</tr><tr id="_ea9ede16-bfbf-6a5e-cf12-926edc352e4f"><td id="_d619e5d0-361f-6e67-04dc-5edf37f209d4" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_034f980c-254f-6f1f-4762-b70d5951a502"><td id="_9ecad7a3-f427-858d-54b4-eea4c8c16c52" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -3889,7 +3866,6 @@
   </mstyle>
 </math><asciimath>ii(mu)_("air")</asciimath></stem> / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu1e-1/1">
       <msup>
         <mstyle mathvariant="normal">
@@ -3900,6 +3876,7 @@
           <mn>1</mn>
         </mrow>
       </msup>
+      
       
       
     </mrow>
@@ -4316,7 +4293,7 @@
   </mstyle>
 </math><asciimath>1 "unitsml(m)"</asciimath></stem>, to increase the signal-to-noise ratio for chambers under calibration. The new rates are presented in <xref target="table8"/> and <xref target="table9"/> along with the corresponding values of the anode current and the generator software parameter Isend.</p>
 
-<table id="_3a19590b-b481-0b78-4624-584f601bc107" anchor="table8">
+<table id="_64072903-a106-843e-227d-65b05836da15" anchor="table8">
 <name id="_3e5a5857-fbdf-4d86-8102-1ed9def68279">New air-kerma rates for the W/Al radiation qualities at the reference distance of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1</mn>
@@ -4403,9 +4380,8 @@
     <mtext>a</mtext>
   </mstyle>
 </math><asciimath>50 "unitsml(kV)""a"</asciimath></stem></td>
-</tr><tr id="_3f8da4bb-4e39-d5d7-23bc-b65c4f7a0572"><td id="_83fefdd8-08f0-d170-d851-9b816dac63da" valign="top" align="left">Al filtration / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_c20a8675-8d7c-1c8c-d144-56d57135ecc6"><td id="_e2b7cb12-0148-106c-e870-a90526be6a3e" valign="top" align="left">Al filtration / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mm">
       <mstyle mathvariant="normal">
         <mi>mm</mi>
@@ -4421,9 +4397,8 @@
 <td id="_52f1cbea-7730-2251-8346-1dc639f4406c" valign="top" align="center">0.3723</td>
 <td id="_b60b47f4-6a12-7bb8-b3b1-1efa07d5765c" valign="top" align="center">1.0082</td>
 <td id="_fe0a2f80-5223-ad1c-fba2-9164ab0195a3" valign="top" align="center">3.989</td>
-</tr><tr id="_0dc6c63e-c989-305a-b17e-959440fbd98d"><td id="_6239ddf8-289b-4d1d-927d-0ff540f51f87" valign="top" align="left">Reference distance / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_e0bab69d-5c94-833a-44ca-3548a7b2fc12"><td id="_56461644-8a91-d83d-c332-c9563357e1ac" valign="top" align="left">Reference distance / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu1">
       <mstyle mathvariant="normal">
         <mi>m</mi>
@@ -4438,9 +4413,8 @@
 <td id="_e791d1e3-0c85-afe4-44b5-c4df6b2b14fa" valign="top" align="center">1</td>
 <td id="_3688eb10-c4da-d004-5824-43771ace00f0" valign="top" align="center">1</td>
 <td id="_7a472210-29f5-0a3f-4886-caf8787bc273" valign="top" align="center">1</td>
-</tr><tr id="_79ae5b53-8432-aea3-21bd-4854adc91598"><td id="_331138f6-2b18-6990-a629-8660634d590c" valign="top" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_17fa1c8f-440b-0bec-750a-c4b22e85df4f"><td id="_c9de8fb6-fa3c-0f83-97d7-8dc07f233bd4" valign="top" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mm">
       <mstyle mathvariant="normal">
         <mi>mm</mi>
@@ -4456,7 +4430,7 @@
 <td id="_0e2c82ec-5ea7-6278-70b9-cd52b5eb5e3d" valign="top" align="center">0.2654</td>
 <td id="_199e8d80-3ef3-1379-f22f-96cb99c07f5d" valign="top" align="center">1.0414</td>
 <td id="_f1b0839d-cd0c-2946-5bc2-300e95743b61" valign="top" align="center">2.2737</td>
-</tr><tr id="_cbb562fd-b09d-b3e8-e598-8c281103cc15"><td id="_ff2d5ffc-8f37-0ab1-6836-c2b4ef99f4c0" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_8c4e1811-0757-8f0b-0db9-fc6899708963"><td id="_1ae48f8b-bfe8-e775-bce5-4f31ae52275d" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -4467,7 +4441,6 @@
   </mstyle>
 </math><asciimath>ii(mu)_("air")</asciimath></stem> / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu1e-1/1">
       <msup>
         <mstyle mathvariant="normal">
@@ -4480,6 +4453,7 @@
       </msup>
       
       
+      
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(m^-1)"</asciimath></stem></td>
@@ -4488,9 +4462,8 @@
 <td id="_06708c82-b079-2b28-5833-df5377193fd9" valign="top" align="center">0.2863</td>
 <td id="_466baa99-94a8-3151-8e8a-cf2fc4f204c7" valign="top" align="center">0.0874</td>
 <td id="_06b693ae-e3c3-cc20-4ad1-f380cd0fee02" valign="top" align="center">0.0474</td>
-</tr><tr id="_4ff481d0-8c74-a6ae-f60f-139c4bb14c60"><td id="_371e9c2d-1768-5b67-f03a-405121eb1114" valign="top" align="left">Anode current / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_a472c91c-8b10-e951-b2c1-827f436b511d"><td id="_4ca048ec-f4a6-ddae-0351-b54dcee7e87b" valign="top" align="left">Anode current / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mA">
       <mstyle mathvariant="normal">
         <mi>mA</mi>
@@ -4506,9 +4479,8 @@
 <td id="_b9d1edf3-5052-08bd-50b2-f030b797e32e" valign="top" align="center">14.865</td>
 <td id="_3762a2de-511c-532e-4a62-4d14aed5125f" valign="top" align="center">12.710</td>
 <td id="_5e179bb6-793e-ac47-249b-a7162f7822b3" valign="top" align="center">17.270</td>
-</tr><tr id="_44ca12fc-d170-e380-e008-f10712d8e260"><td id="_acfdbc6c-9322-2799-4f33-cacf21fb9d03" valign="top" align="left">Isend / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_6ffbfe42-4fb5-32b1-d706-194dc4857eb5"><td id="_b3de6fec-d8b1-014f-4e04-9708ec65ea67" valign="top" align="left">Isend / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_uA">
       <mstyle mathvariant="normal">
         <mi>µA</mi>
@@ -4524,9 +4496,8 @@
 <td id="_f5e7eab7-e1e0-65c0-71cc-461cc23e2dc1" valign="top" align="center">14962</td>
 <td id="_2fd3b4ab-3e71-a3da-f76a-ebc4ec4bcddf" valign="top" align="center">12980</td>
 <td id="_c438ccd5-011e-381d-09fd-2c38085c28a7" valign="top" align="center">17510</td>
-</tr><tr id="_02d11338-023a-5c20-7d20-86b9b0a0ae70"><td id="_f7aa75ee-dc3c-881c-8e5f-5f75973b882b" valign="top" align="left">New air-kerma rate / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_d0e2f6f7-b6ef-04b6-555b-9912f1a4a478"><td id="_6e5d65af-8f75-4f8b-3eea-d3a0025b94ba" valign="top" align="left">New air-kerma rate / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mGy.s-1">
       <mstyle mathvariant="normal">
         <mi>mGy</mi>
@@ -4555,7 +4526,7 @@
 </tr></tbody>
 </table>
 
-<table id="_f1c21d19-1d46-53df-2c22-1a984151a42b" anchor="table9">
+<table id="_ffdd75f5-a00a-fc6c-23c5-fc556eddea45" anchor="table9">
 <name id="_e646cdcf-a250-ad93-8366-1c12da1bea31">New air-kerma rates for the W/Mo radiation qualities at the reference distance of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1</mn>
@@ -4668,9 +4639,8 @@
     </mrow>
   </mstyle>
 </math><asciimath>50 "unitsml(kV)"</asciimath></stem></td>
-</tr><tr id="_4b23c94b-16a1-ee8a-5682-9a8bca398a1e"><td id="_99d38467-3268-690f-0e70-9f9d972f06e3" valign="top" align="left">Mo filtration / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_fd0badd2-1620-0155-10c4-c2e74378453d"><td id="_b437bc2e-b92e-bc26-3a58-572f36976ed1" valign="top" align="left">Mo filtration / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mm">
       <mstyle mathvariant="normal">
         <mi>mm</mi>
@@ -4688,9 +4658,8 @@
 <td id="_54c5953e-deff-3878-4a84-d2f6c3425f29" valign="top" align="center">0.06</td>
 <td id="_9e5665d2-2d19-8d01-0060-ff981e26321e" valign="top" align="center">0.06</td>
 <td id="_d68caff1-34c8-4e32-1e23-c5b309c5f6bf" valign="top" align="center">0.06</td>
-</tr><tr id="_aefe8508-408e-152c-6e99-8814ec4ca82b"><td id="_0d1db49c-9a85-b9fa-f247-ab8562da44f1" valign="top" align="left">Reference distance / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_9c418a18-72a3-c907-823f-dd04f34ee504"><td id="_34c2d998-07f3-bb00-8255-cf4e8d43b5fb" valign="top" align="left">Reference distance / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu1">
       <mstyle mathvariant="normal">
         <mi>m</mi>
@@ -4707,9 +4676,8 @@
 <td id="_6abcde01-e69f-19b5-8674-b317aef63b72" valign="top" align="center">1</td>
 <td id="_5eb93cb3-c73d-3f8f-a815-469da5fc12f2" valign="top" align="center">1</td>
 <td id="_12e08d29-2a9b-e26c-b566-298b1345060e" valign="top" align="center">1</td>
-</tr><tr id="_70de71ae-8c9a-7b8b-28a8-a8c083bc8066"><td id="_1c96296e-6dbb-dc16-2f63-c03514280dd2" valign="top" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_dd9a3b5f-4169-713c-d07c-d0bf512191bd"><td id="_a472cb66-b778-9f20-2fa8-5dfbb0f50e43" valign="top" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mm">
       <mstyle mathvariant="normal">
         <mi>mm</mi>
@@ -4727,7 +4695,7 @@
 <td id="_8bc95c7a-1177-2ae8-2d9a-2d9ef519a1d2" valign="top" align="center">0.4031</td>
 <td id="_7fe55d16-a0d2-358f-4d98-9469a171a771" valign="top" align="center">0.4350</td>
 <td id="_cf2e0357-417a-8ae2-af3f-efc1c1a8ae31" valign="top" align="center">0.5127</td>
-</tr><tr id="_ce777904-2ac4-01a7-5bbd-59005c4d1ad4"><td id="_a8a5ba16-9abc-d4c1-c602-3736615d01fc" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_eb4db2e0-62d5-4ce2-6349-a067365263df"><td id="_2f9d1ec2-bc4f-a974-64fa-ded81d755476" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -4738,7 +4706,6 @@
   </mstyle>
 </math><asciimath>ii(mu)_("air")</asciimath></stem> / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu1e-1/1">
       <msup>
         <mstyle mathvariant="normal">
@@ -4751,6 +4718,7 @@
       </msup>
       
       
+      
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(m^-1)"</asciimath></stem></td>
@@ -4761,9 +4729,8 @@
 <td id="_9095dc06-4575-03ad-7c90-0cca80292ffa" valign="top" align="center">0.1835</td>
 <td id="_ff0d38e6-0ae1-48ef-ed9d-6fe8e10129c1" valign="top" align="center">0.1748</td>
 <td id="_d46f6faf-437c-3676-238d-783d57b7b0a3" valign="top" align="center">0.1600</td>
-</tr><tr id="_be3c0210-7b01-7402-e6c1-d7b4a851f42d"><td id="_10fd1209-d013-a57b-94ca-dcc409ef0bd7" valign="top" align="left">Anode current / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_433e388e-0fe9-b73f-497d-31f5a52c89d4"><td id="_32a136af-ddbe-578f-abdb-26c27976f766" valign="top" align="left">Anode current / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mA">
       <mstyle mathvariant="normal">
         <mi>mA</mi>
@@ -4781,9 +4748,8 @@
 <td id="_47007b5a-b9d4-fc98-7d0d-d5c9d0e0e98b" valign="top" align="center">15.955</td>
 <td id="_4114e4a5-eb1d-5da6-ba02-ec5b3f1d2f46" valign="top" align="center">15.544</td>
 <td id="_c460be57-ca06-2188-1ef7-fa976a43104e" valign="top" align="center">13.144</td>
-</tr><tr id="_7ae1d567-df15-15b5-796d-4c0c0edf9c05"><td id="_204d74c7-7862-31ab-16d6-f1145f01daff" valign="top" align="left">Isend / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_0eb97a39-fe59-ff70-8fbd-1c7775854293"><td id="_ad4436f8-6cec-babc-a4ba-186105d311be" valign="top" align="left">Isend / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_uA">
       <mstyle mathvariant="normal">
         <mi>µA</mi>
@@ -4801,9 +4767,8 @@
 <td id="_90e67b4b-e4fb-365a-34e5-cbff8a4d8ee2" valign="top" align="center">16103</td>
 <td id="_f4f272ae-1567-b7a9-8217-c12628527997" valign="top" align="center">15729</td>
 <td id="_6ccc9c5e-cc44-4e51-fdc4-c52d8d7f26fa" valign="top" align="center">13413</td>
-</tr><tr id="_c1241a94-2225-8f48-0856-c81490c984de"><td id="_e4034e65-628d-99bd-370e-be15130e50d4" valign="top" align="left">New air-kerma rate / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_003d5179-5a42-fc79-ee70-e6f1659fd0e7"><td id="_a26dff5c-69fa-0f71-b94d-f688057ec06c" valign="top" align="left">New air-kerma rate / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mGy.s-1">
       <mstyle mathvariant="normal">
         <mi>mGy</mi>
@@ -4842,7 +4807,7 @@
 <p id="_f2bf311d-ee38-2164-cd3b-af81ce27103c">A new labelled box for the US and C series filters was organized. As some of the US filters are combined in the same holder in non-sequential order, numerical labelling is not appropriate. A system of coloured labels on the holders, in the box and in the spreadsheet was implemented to make it easier to locate and replace filters. Labels were also included in the box for the filter series with numbers only.</p>
 </clause>
 
-<clause id="_1601d4ba-06f9-0d47-f185-f8a621d8bd0d" obligation="normative">
+<clause id="_29fd5b35-6488-6737-376b-e950195b0328" obligation="normative">
 <title id="_fc24c4df-dc10-cc8d-687d-9f30bee0db51">Calibration of BIPM reference chambers at selected radiation qualities</title>
 <p id="_1c8bff6e-9828-826b-fcdc-a137161d2a99">To check the stability of the primary standard and at the same time gather information on the long-term behavior of commercial ionization chambers, three chambers of the BIPM – Shonka serial number 1, PTW23344 serial number 683 and Radcal RC6M serial number 9112 – were calibrated at selected W/Al x-ray radiation qualities at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -4858,7 +4823,7 @@
   </mstyle>
 </math><asciimath>0.5 "unitsml(m)"</asciimath></stem> distance.</p>
 
-<p id="_4df2ce78-93af-7cab-3050-63522cf71a20">The new results for the air-kerma calibration coefficients <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_ecec4536-0260-4aa8-58ed-162efb4a3569">The new results for the air-kerma calibration coefficients <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -4869,7 +4834,6 @@
   </mstyle>
 </math><asciimath>ii(N)_K</asciimath></stem>, expressed in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_Gy.uC-1">
       <mstyle mathvariant="normal">
         <mi>Gy</mi>
@@ -4898,7 +4862,7 @@
   </mstyle>
 </math><asciimath>k_("pol")</asciimath></stem> are presented in <xref target="table10"/> to <xref target="table12"/> alongside the values determined previously and corrected for the changes to the primary standard made in 2009 and 2019.</p>
 
-<table id="_6d7bb011-a11a-51f2-2fd8-9d5bdd8216d7" anchor="table10">
+<table id="_8b2d029a-7424-43b1-5c6c-e2e26947b9a8" anchor="table10">
 <name id="_79696785-e420-a048-f176-897ba967ced6">Calibration coefficients and polarity correction for the Shonka serial no. 1 ionization chamber</name>
 <tbody><tr id="_9e8d65b3-3f8f-fd70-91d4-78ce36962cf0"><td id="_2e5b96a3-b940-4f70-acc1-33e0cd4edbb3" valign="top" align="left">Radiation quality</td>
 <td id="_039972ad-4d82-f401-d1ad-665f318d7bf4" colspan="2" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -4944,9 +4908,8 @@
     <mtext>b</mtext>
   </mstyle>
 </math><asciimath>50 "unitsml(kV)""b"</asciimath></stem></td>
-</tr><tr id="_9545befc-3c27-05ba-4135-6ae369aba83d"><td id="_3423885c-1776-e356-5b17-bf1fe8746956" valign="top" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_d9f86696-6d03-7539-cb60-ace8cbb8de43"><td id="_67948250-54c1-72d3-8e0b-6dfab913d1ab" valign="top" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mm">
       <mstyle mathvariant="normal">
         <mi>mm</mi>
@@ -4960,7 +4923,7 @@
 <td id="_03d046d4-a1a8-beca-dc4d-971b90d121a6" colspan="2" valign="top" align="center">0.0729</td>
 <td id="_0a305c4b-eaf9-a841-2044-460a9683d847" colspan="2" valign="top" align="center">0.1694</td>
 <td id="_9c2023fe-0ea6-55c8-e5ee-a29744124d11" colspan="2" valign="top" align="center">1.0168</td>
-</tr><tr id="_f8e935ea-010f-3c8b-2da4-c4f85973b520"><td id="_4a7abae9-e1f5-76eb-119c-175818ad3f69" valign="top" align="left"/><td id="_d9a62f79-2620-cadd-6e78-23a46a66e124" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_724611e0-477a-dee6-0d41-f13627b2e5f8"><td id="_4a7abae9-e1f5-76eb-119c-175818ad3f69" valign="top" align="left"/><td id="_c943d134-5800-97a0-4bde-478c61d2d0c8" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -4984,7 +4947,6 @@
   </mstyle>
 </math><asciimath>// "unitsml(Gy)"</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_uC-1">
       <msup>
         <mstyle mathvariant="normal">
@@ -5009,7 +4971,7 @@
     </msub>
   </mstyle>
 </math><asciimath>k_("pol")</asciimath></stem></td>
-<td id="_e0a4e111-796b-e01a-51ea-bd9a2d08b427" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_c3baf5c4-ce47-bb50-09c1-19819d9d37a0" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -5033,7 +4995,6 @@
   </mstyle>
 </math><asciimath>// "unitsml(Gy)"</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_uC-1">
       <msup>
         <mstyle mathvariant="normal">
@@ -5058,7 +5019,7 @@
     </msub>
   </mstyle>
 </math><asciimath>k_("pol")</asciimath></stem></td>
-<td id="_52051ecb-df37-ed44-2cd8-1e35143b2237" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_5de02f84-a46e-3036-9115-0412553475a1" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -5082,7 +5043,6 @@
   </mstyle>
 </math><asciimath>// "unitsml(Gy)"</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_uC-1">
       <msup>
         <mstyle mathvariant="normal">
@@ -5162,10 +5122,9 @@
 
 <p id="_48352207-6037-4484-9db8-9169f574412d">For the Shonka chamber the measurements were performed at both polarities, for the other two chambers only one polarity was used. It should be also noted that the PTW 23344 chamber was not quite stable during the measurements (still drifting after several hours of irradiation) and that it does not respond well to a change in polarity, resulting in a significant drift in response over several hours.</p>
 
-<table id="_c059b2c1-03d8-2e1f-8239-900ffb7d2eea" anchor="table11">
-<name id="_4f6831d1-2909-4f9a-767c-711971d06e3c">Calibration coefficients (in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<table id="_9299b395-619f-c515-d461-a8b85950b90b" anchor="table11">
+<name id="_1aaeb7b3-893d-9751-7f7a-d35535a58c6c">Calibration coefficients (in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_Gy.uC-1">
       <mstyle mathvariant="normal">
         <mi>Gy</mi>
@@ -5216,9 +5175,8 @@
     <mtext>b</mtext>
   </mstyle>
 </math><asciimath>50 "unitsml(kV)""b"</asciimath></stem></td>
-</tr><tr id="_77079fdf-42bd-bfcb-3bb2-81e335afb3b9"><td id="_33c61927-6128-987f-34fc-890f0e844b21" valign="top" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_39417bf5-3c33-c73f-1957-c90fb9cd048d"><td id="_eb5e2d1e-a0b6-983d-721d-77d45a34ae1a" valign="top" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mm">
       <mstyle mathvariant="normal">
         <mi>mm</mi>
@@ -5252,10 +5210,9 @@
 </tr></tbody>
 </table>
 
-<table id="_12d1b8df-ebac-5f70-9af4-83cd59238353" anchor="table12">
-<name id="_21bc5e24-428f-732d-5aec-4f732e8eebf6">Calibration coefficients (in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<table id="_9c24329b-574e-b125-915f-a0cc7bef2f9c" anchor="table12">
+<name id="_8df91c4a-ca25-9f5b-02b2-566c76d57991">Calibration coefficients (in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_Gy.uC-1">
       <mstyle mathvariant="normal">
         <mi>Gy</mi>
@@ -5334,9 +5291,8 @@
     <mtext>b</mtext>
   </mstyle>
 </math><asciimath>50 "unitsml(kV)""b"</asciimath></stem></td>
-</tr><tr id="_59c42f2a-550c-1122-f139-e0bf0236e9e6"><td id="_0636b1bd-18a9-bf75-ebd3-8cfcb32a468c" valign="top" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_235e8c89-6f99-e764-aff6-6372d9f066ad"><td id="_49b24a83-59be-7920-11dc-702635b8d969" valign="top" align="left">Al HVL / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mm">
       <mstyle mathvariant="normal">
         <mi>mm</mi>
@@ -5810,8 +5766,8 @@
 </clause>
 
 
-</sections><bibliography><references id="_8f26c656-6b15-be22-fd86-7d4171648dc7" normative="false" obligation="informative">
-<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="Boutillon" id="_5e29c268-9a7a-9e27-464e-0c30c99f0389">
+</sections><bibliography><references id="_0ad72006-17f3-1024-1228-0e5ca66af2af" normative="false" obligation="informative">
+<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="Boutillon" id="_c2f630af-774f-8c5b-7af1-7c8d0903c222">
   <formattedref format="application/x-isodoc+xml">M Boutillon, W H Henry, P J Lamperti 1969 Comparison of exposure standards in the <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>10</mn>
@@ -5829,23 +5785,33 @@
   </mstyle>
 </math><asciimath>10–50 "unitsml(kV)"</asciimath></stem> x-ray region <em>Metrologia</em> <strong>5</strong> No 1</formattedref>
   <docidentifier type="metanorma">[1]</docidentifier>
-</bibitem><bibitem anchor="Burns2" id="_11cd4c63-afba-e1d5-b42d-fcf62444e7ae">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Burns2" id="_738a22bf-d56a-fb52-eb59-4cdf03d028f0">
   <formattedref format="application/x-isodoc+xml">D T Burns, P Roger 2001 Characterization of the BIPM low-energy x-ray facility following a change of x-ray tube and high-voltage generator <em>CCRI(I)/01-07</em></formattedref>
   <docidentifier type="metanorma">[2]</docidentifier>
-</bibitem><bibitem anchor="Burns3" id="_6a77d73f-1934-415d-9831-a304732dd49f">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Burns3" id="_3813813b-7659-4523-ad75-5e856d5d9fde">
   <formattedref format="application/x-isodoc+xml">D T Burns and L Büermann 2009 Free-air ionization chambers <em>Metrologia</em> <strong>46</strong> S9</formattedref>
   <docidentifier type="metanorma">[3]</docidentifier>
-</bibitem><bibitem anchor="Burns4" id="_fdb8704f-f79c-1841-7e31-eaaea333119f">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Burns4" id="_0a0d2b4b-c2a5-46b3-d804-aac8295515df">
   <formattedref format="application/x-isodoc+xml">D T Burns, C Kessler, E Mainegra-Hing, H Shen and M R McEwen 2019 Key comparison BIPM.RI(I)-K2 of the air-kerma standards of the NRC, Canada, and the BIPM in low-energy x-rays <em>Metrologia</em> <strong>56</strong> No 1A</formattedref>
   <docidentifier type="metanorma">[4]</docidentifier>
-</bibitem><bibitem anchor="Kessler" id="_effd3aeb-ef24-ca05-9196-fdbf55c48694">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Kessler" id="_ea1bab03-b60b-4ff5-f77c-8643ea4f886f">
   <formattedref format="application/x-isodoc+xml">C Kessler and D Burns 2018 Measuring conditions and uncertainties for the comparison and calibration of national dosimetric standards at the BIPM <em>Rapport BIPM</em>-2018/06</formattedref>
   <docidentifier>Kessler</docidentifier>
-  
-</bibitem><bibitem anchor="Poludniowski" id="_ae56bf32-6b53-cb58-e954-2932d9e6ceea">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Poludniowski" id="_5a98a7ba-20ff-8bd3-fce6-6711cfa0e592">
   <formattedref format="application/x-isodoc+xml">G Poludniowski, G Landry, F DeBlois, P M Evans and F Verhaegen 2009 SpekCalc: a program to calculate photon spectra from tungsten anode x-ray tubes <em>Phys. Med. Biol.</em> <strong>54</strong> N433</formattedref>
   <docidentifier>Poludniowski</docidentifier>
-  
+  <language>en</language>
+  <script>Latn</script>
 </bibitem>
 
 

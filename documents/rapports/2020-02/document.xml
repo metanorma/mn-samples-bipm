@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.2" schema-version="v2.1.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.0" schema-version="v2.2.0" flavor="bipm">
 <bibdata type="standard">
-<title language="en" format="text/plain" type="title-main">Calibrant Assessment Guideline: ZEN (CAG-02)</title>
-
-<docidentifier primary="true" type="BIPM">BIPM BIPM-2020/02</docidentifier><docnumber>BIPM-2020/02</docnumber><contributor><role type="author"/><organization>
+<title language="en" type="title-main">Calibrant Assessment Guideline: ZEN (CAG-02)</title>
+<docidentifier primary="true" type="BIPM">BIPM BIPM-2020/02</docidentifier><docnumber>BIPM-2020/02</docnumber><date type="updated"><on>2020-04-07</on></date><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"/><person>
 <name><completename>Gustavo Martos</completename></name>
@@ -41,15 +40,21 @@
 <name><completename>Robert Wielgosz</completename></name>
 <affiliation><organization>
 <name>BIPM</name>
-</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+</organization></affiliation></person></contributor><contributor><role type="author"><description>committee</description></role><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2020-04-07</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2020</from><owner><organization>
+<subdivision type="Committee">
+<name language="en">International Bureau of Weights and Measures</name>
+
+<name language="fr">Bureau International des Poids et Mesures</name>
+<identifier>BIPM</identifier><identifier type="full">BIPM</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem><date type="circulated"/><version/></bibitem>
-</relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="BIPM" language="en" script="Latn">International Bureau of Weights and Measures</committee><committee acronym="BIPM" language="fr" script="Latn">Bureau International des Poids et Mesures</committee></editorialgroup><structuredidentifier><docnumber>BIPM-2020/02</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#D_M0" id="U_ug.g-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version>2020-04-07</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2020</from><owner><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="successorOf"><bibitem/></relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2020/02</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#D_M0" id="U_ug.g-1">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">ug*g^-1</UnitName>
-        <UnitSymbol type="HTML">g g
+        <UnitSymbol type="HTML">µg g
           <sup>−1</sup>
         </UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -57,9 +62,7 @@
             <mi mathvariant="normal">µg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">g</mi>
-              </mrow>
+              <mi mathvariant="normal">g</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -72,7 +75,7 @@
           <EnumeratedRootUnit unit="gram" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_MN-1" id="U_g.mol-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">g*mol^-1</UnitName>
         <UnitSymbol type="HTML">g mol
           <sup>−1</sup>
@@ -82,9 +85,7 @@
             <mi mathvariant="normal">g</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mol</mi>
-              </mrow>
+              <mi mathvariant="normal">mol</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -97,7 +98,7 @@
           <EnumeratedRootUnit unit="mole" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu23">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">degree Celsius</UnitName>
         <UnitSymbol type="HTML">°C</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -106,7 +107,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd1" id="U_nm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">nm</UnitName>
         <UnitSymbol type="HTML">nm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -118,7 +119,7 @@
           <EnumeratedRootUnit unit="metre" prefix="n"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_M0" id="U_mg.kg-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">mg*kg^-1</UnitName>
         <UnitSymbol type="HTML">mg kg
           <sup>−1</sup>
@@ -128,9 +129,7 @@
             <mi mathvariant="normal">mg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">kg</mi>
-              </mrow>
+              <mi mathvariant="normal">kg</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -143,7 +142,7 @@
           <EnumeratedRootUnit unit="gram" prefix="k" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit id="U_NISTu365">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">milliliter</UnitName>
         <UnitSymbol type="HTML">mL</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -155,7 +154,7 @@
           <EnumeratedRootUnit unit="litre" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_mm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mm</UnitName>
         <UnitSymbol type="HTML">mm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -167,9 +166,9 @@
           <EnumeratedRootUnit unit="metre" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_um">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">um</UnitName>
-        <UnitSymbol type="HTML">m</UnitSymbol>
+        <UnitSymbol type="HTML">µm</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µm</mi>
@@ -179,7 +178,7 @@
           <EnumeratedRootUnit unit="metre" prefix="u"/>
         </RootUnits>
       </Unit><Unit id="U_mL.min-1">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">mL*min^-1</UnitName>
         <UnitSymbol type="HTML">mL min
           <sup>−1</sup>
@@ -189,9 +188,7 @@
             <mi mathvariant="normal">mL</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">min</mi>
-              </mrow>
+              <mi mathvariant="normal">min</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -204,9 +201,9 @@
           <EnumeratedRootUnit unit="minute" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit id="U_uL">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">uL</UnitName>
-        <UnitSymbol type="HTML">L</UnitSymbol>
+        <UnitSymbol type="HTML">µL</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µL</mi>
@@ -216,7 +213,7 @@
           <EnumeratedRootUnit unit="litre" prefix="u"/>
         </RootUnits>
       </Unit><Unit id="U_NISTu36">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">minute</UnitName>
         <UnitSymbol type="HTML">min</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -225,7 +222,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd18" id="U_NISTu16">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">volt</UnitName>
         <UnitSymbol type="HTML">V</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -234,7 +231,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd3" id="U_ms">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">ms</UnitName>
         <UnitSymbol type="HTML">ms</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -246,8 +243,8 @@
           <EnumeratedRootUnit unit="second" prefix="m"/>
         </RootUnits>
       </Unit><Unit id="U_nm.min-1">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">nm*min^-1</UnitName>
         <UnitSymbol type="HTML">nm min
           <sup>−1</sup>
@@ -257,9 +254,7 @@
             <mi mathvariant="normal">nm</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">min</mi>
-              </mrow>
+              <mi mathvariant="normal">min</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -272,7 +267,7 @@
           <EnumeratedRootUnit unit="minute" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd3" id="U_NISTu3">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">second</UnitName>
         <UnitSymbol type="HTML">s</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -281,7 +276,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd2" id="U_mg">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mg</UnitName>
         <UnitSymbol type="HTML">mg</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -293,7 +288,7 @@
           <EnumeratedRootUnit unit="gram" prefix="m"/>
         </RootUnits>
       </Unit><Unit id="U_NISTu130">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">litre</UnitName>
         <UnitSymbol type="HTML">L</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -302,7 +297,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd2" id="U_NISTu27">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">gram</UnitName>
         <UnitSymbol type="HTML">g</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -311,7 +306,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#D_M0" id="U_mg.g-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">mg*g^-1</UnitName>
         <UnitSymbol type="HTML">mg g
           <sup>−1</sup>
@@ -321,9 +316,7 @@
             <mi mathvariant="normal">mg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">g</mi>
-              </mrow>
+              <mi mathvariant="normal">g</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -336,7 +329,7 @@
           <EnumeratedRootUnit unit="gram" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit id="U_NISTu37">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">hour</UnitName>
         <UnitSymbol type="HTML">h</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -345,9 +338,9 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd2" id="U_ug">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">ug</UnitName>
-        <UnitSymbol type="HTML">g</UnitSymbol>
+        <UnitSymbol type="HTML">µg</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µg</mi>
@@ -357,7 +350,7 @@
           <EnumeratedRootUnit unit="gram" prefix="u"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_M0" id="U_ng.g-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">ng*g^-1</UnitName>
         <UnitSymbol type="HTML">ng g
           <sup>−1</sup>
@@ -367,9 +360,7 @@
             <mi mathvariant="normal">ng</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">g</mi>
-              </mrow>
+              <mi mathvariant="normal">g</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -382,12 +373,12 @@
           <EnumeratedRootUnit unit="gram" powerNumerator="-1"/>
         </RootUnits>
       </Unit></UnitSet><QuantitySet><Quantity id="NISTq10" quantityType="base" dimensionURL="#NISTd10">
-        <QuantityName lang="en-US">volume</QuantityName>
+        <QuantityName lang="en">volume</QuantityName>
       </Quantity><Quantity id="NISTq3" quantityType="base" dimensionURL="#NISTd3">
-        <QuantityName lang="en-US">time</QuantityName>
-        <QuantityName lang="en-US">duration</QuantityName>
+        <QuantityName lang="en">time</QuantityName>
+        <QuantityName lang="en">duration</QuantityName>
       </Quantity><Quantity id="NISTq2" quantityType="base" dimensionURL="#NISTd2">
-        <QuantityName lang="en-US">mass</QuantityName>
+        <QuantityName lang="en">mass</QuantityName>
       </Quantity></QuantitySet><DimensionSet><Dimension id="D_M0">
         <Mass symbol="M" powerNumerator="0"/>
       </Dimension><Dimension id="D_MN-1">
@@ -432,11 +423,10 @@
         <PrefixSymbol type="unicode">k</PrefixSymbol>
         <PrefixSymbol type="LaTeX">k</PrefixSymbol>
         <PrefixSymbol type="HTML">k</PrefixSymbol>
-      </Prefix></PrefixSet></UnitsML><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+      </Prefix></PrefixSet></UnitsML><presentation-metadata><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
 <boilerplate><copyright-statement>
 
-<clause id="_fcb1ee9c-c5cc-bec7-e544-c67f81841cd7" obligation="normative">
-<p id="_cc34320a-14bd-29a7-b3e4-f9925ddbe0eb" align="center">© Bureau International des Poids et Mesures 2020 all rights reserved</p>
+<clause id="_6cbc3777-3837-c699-2c6a-b68369788f3c" obligation="normative"><p id="_cc34320a-14bd-29a7-b3e4-f9925ddbe0eb" align="center">© Bureau International des Poids et Mesures 2020 all rights reserved</p>
 </clause>
 </copyright-statement>
 
@@ -722,13 +712,13 @@
 </clause>
 </clause>
 
-<clause id="_958139c6-210a-05db-4bd1-2500d69718fb" anchor="methods" obligation="normative">
+<clause id="_135f7a0e-c1ba-29c4-1db7-77076398e638" anchor="methods" obligation="normative">
 <title id="_c77e8a97-8d8d-85ad-26b3-53f187e881e4">Methods for the characterization of zearalenone solutions</title>
 <p id="_88e95548-d136-2cc6-7106-622b4f297f88">This section of the Guideline describes the methods developed during the BIPM MMCBKT programme for the characterization of ZEN stock and calibration solutions prepared from the source ZEN material. The methods are the basis for the stability and homogeneity studies and for the analytical confirmation of the ZEN mass fraction value assigned gravimetrically.</p>
 
 <p id="_9f1cbca6-2610-e181-41fc-1011ef0049f3"><strong>DISCLAIMER:</strong> Commercial instruments, software and materials are identified in this document in order to describe some procedures. This does not imply a recommendation or endorsement by the BIPM nor does it imply that any of the instruments, equipment and materials identified are necessarily the best available for the purpose.</p>
 
-<clause id="_1674cc95-17c5-fdbb-bef8-3403cca0d38a" obligation="normative">
+<clause id="_70ecb88c-f775-cf13-dfbc-9382a99b600e" obligation="normative">
 <title id="_99480420-e9bf-42f8-63a6-af16bd7f88e1">ZEN and related structure impurities analysis by LC-DAD-MS/MS</title>
 <p id="_d7911683-9d82-fb2f-3c55-684e24b218ab">A method based on liquid chromatography inline coupled to diode array detection (DAD) and tandem mass spectrometry (MS/MS) was developed for the quantification of related structure impurities in the ZEN source material (BIPM ref. OGO.178). Details on the method development and validation are described in the purity evaluation guideline. <eref type="inline" bibitemid="westwood" citeas="[4]"/> Briefly, commercial standards were purchased for the potential impurities ZAN, a-ZEL, b-ZEL, a-ZAL and b-ZAL (<xref target="fig2"/>). The purity of ZAN was assessed by qNMR while for the rest of impurities it was taken from information in the supplier’s certificates. ZEN (BIPM ref. OGO.178) and ZAN (BIPM ref. OGO.182) materials obtained from <em>Chemtek., Inc. First Standard</em> were used to prepare <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1316,7 +1306,7 @@
 </math><asciimath>4 "unitsml(mm)"</asciimath></stem>, respectively).</p>
 </clause>
 
-<clause id="_f5efd635-b3cf-0bcb-9954-fe36b4cabdee" obligation="normative">
+<clause id="_6cb0ed66-e124-f33b-c424-10891a30d31b" obligation="normative">
 <title id="_018b7de4-f7de-c8cf-5d75-710e86e75b49">MS/MS detection parameters</title>
 <p id="_e376e911-6a34-d1f3-73fe-240164abedb3">The 4000 QTRAP was operated in negative electrospray ionization (ESI) mode. The capillary voltage was set at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1345,9 +1335,9 @@
   </mstyle>
 </math><asciimath>550 "unitsml(degC)"</asciimath></stem>. Nitrogen was used as the ion source gas, curtain gas and collision gas. The Gas 1 and Gas 2 of the ion source were set at 55 psi and 50 psi, respectively. The curtain gas (CUR) was set at 15 psi. The Collision Gas (CAD) was set at “Mid”. <xref target="table1"/> lists the optimized transitions and conditions for multiple reaction monitoring (MRM) detection of (<em>trans</em>- and <em>cis</em>-) ZEN and its most frequent, structurally related impurities are depicted in <xref target="fig2"/>.</p>
 
-<table id="_4440c617-9f7a-c99d-2b8e-13b5c720c334" anchor="table1">
+<table id="_6f668f23-ceff-b152-688b-32dc502dc2a6" anchor="table1">
 <name id="_7951efd0-667b-0575-6622-3e9a981d3423">Transition ions and MS/MS parameters for the detection of ZEN and its impurities in MRM mode. Transitions marked with an asterisk were used for quantification purposes.</name>
-<thead><tr id="_fdc0ef15-a066-8e29-b97c-d07f638c1e53"><th id="_f4e84a06-3985-1a70-b066-f46a0b0e2f64" valign="top" align="left"><em>Compounds</em></th>
+<thead><tr id="_840fd6a9-3c1e-5b8b-52c8-8a6a37f5d199"><th id="_f4e84a06-3985-1a70-b066-f46a0b0e2f64" valign="top" align="left"><em>Compounds</em></th>
 <th id="_1646f326-b676-b2cb-0093-fa1f50bfc2b8" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">Q</mi>
@@ -1368,9 +1358,8 @@
     <mi>z</mi>
   </mstyle>
 </math><asciimath>Q3" "m//z</asciimath></stem></th>
-<th id="_6dc32e12-7616-fc5a-c9d7-31436a0d7f6b" valign="top" align="left"><em>Time (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_f18e2e2a-e552-200e-0a2f-e97e2fb95b62" valign="top" align="left"><em>Time (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_ms">
       <mstyle mathvariant="normal">
         <mi>ms</mi>
@@ -1841,9 +1830,9 @@
 </clause>
 </clause>
 
-<clause id="_51127430-ad21-44e9-6801-7a2f36559ed1" obligation="normative">
+<clause id="_b57052d5-29ba-c493-d90d-d32d4495d747" obligation="normative">
 <title id="_4f3ffb18-63da-489d-a090-c59ee1f2e40a">Characterization summary of the zearalenone stock solution</title>
-<clause id="_b0ea7828-8e2f-54da-7375-8dadc29daea3" anchor="characterization-preparation" obligation="normative">
+<clause id="_b0ccada8-efdc-da28-051b-a085dff0d3c7" anchor="characterization-preparation" obligation="normative">
 <title id="_08839acf-9697-2735-22c5-b95f0b7f737f">Preparation and value assignment</title>
 <p id="_ff604462-7742-42ce-5fdc-31a98e47baff">The ZEN stock solution (OGP.025) was prepared gravimetrically by dissolving about <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1873,7 +1862,7 @@
   </mstyle>
 </math><asciimath>1 "unitsml(L)"</asciimath></stem> of acetonitrile. Mettler Toledo balances MX5 and XP<sub>1</sub>0002S were used for the mass determination of OGO.178 and the final solution, respectively. <xref target="table2"/> summarizes the preparation of the stock solution and the mass fraction assignment, calculated according to <xref target="eq1"/>. The purity of OGO.178 was determined in-house by quantitative NMR corrected for related structure impurities, as described in a separate purity evaluation guideline. <eref type="inline" bibitemid="westwood" citeas="[4]"/></p>
 
-<table id="_a76edfa9-9a0c-b158-39a9-4a4319996306" anchor="table2">
+<table id="_b95a1bb5-2cf7-0472-f2cf-b0d1bd91cbd9" anchor="table2">
 <name id="_4fbe33f0-b96e-251f-f1d5-e8fe7fc7c61e">Experimental data corresponding to the preparation of the ZEN stock solution and the calculated mass fraction.</name>
 <tbody><tr id="_10311317-a4b8-b68a-9b59-0818af7685c5"><th id="_fb3ecd87-a9cf-12f6-aa8b-c2e71c550685" colspan="4" valign="top" align="center"><em>trans</em>-Zearalenone stock solution preparation</th>
 </tr><tr id="_fd5fce41-40be-c777-c2e0-0a41466ba7aa"><td id="_23d4a622-8b89-4b6f-2db3-45b203a6c3fc" valign="top" align="left"/><th id="_6eae0cc8-9485-ec5b-e764-6c4b31496ea4" valign="top" align="left">Weighed mass (m)</th>
@@ -1885,9 +1874,8 @@
     <mi>b</mi>
   </mstyle>
 </math><asciimath>m xx b</asciimath></stem></th>
-</tr><tr id="_ba23df63-304d-3c88-235b-a5bd8cc04997"><th id="_6bf5d47c-2d55-1e0b-e897-afa8225c2ab9" valign="top" align="left">ZEN powder (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_c3c596a2-12b4-f88b-0965-df4dbebfce8e"><th id="_0a776947-5bf0-de74-b63b-2477948cbbee" valign="top" align="left">ZEN powder (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mg">
       <mstyle mathvariant="normal">
         <mi>mg</mi>
@@ -1901,9 +1889,8 @@
 <td id="_44b74c75-b361-4c70-b8ff-e52cd0a4950c" valign="top" align="left">101.605</td>
 <td id="_ffdfaa8a-0ad6-d0c1-4ba3-af9dd208f83d" valign="top" align="left">1.000872</td>
 <td id="_fbc64807-24c8-48e8-ac42-5e5685793c1c" valign="top" align="left">101.694</td>
-</tr><tr id="_b0170d33-82a1-0c80-ff25-58f16c7a4197"><th id="_6a954bb3-9acb-85a8-430d-7bfdb2e63412" valign="top" align="left">stock solution (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_815d1dd1-c4db-15a7-cd36-f28800319e19"><th id="_ce62c2d9-c0c3-cc27-9c8c-4d8a649849ed" valign="top" align="left">stock solution (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu27">
       <mstyle mathvariant="normal">
         <mi>g</mi>
@@ -1917,9 +1904,8 @@
 <td id="_7efe7ce9-bba8-d5c3-4ed0-f597d229bba1" valign="top" align="left">778.11</td>
 <td id="_e04df3fb-20c8-17b8-74d8-515b3d548bd2" valign="top" align="left">1.001386</td>
 <td id="_14b787c7-7f39-b735-887a-5bcdd594ac74" valign="top" align="left">779.189</td>
-</tr><tr id="_acf9f5c4-4288-51b0-d9ad-8e5fcba90bb7"><th id="_33384b5f-7ff5-91a1-7899-7cccf10d4cf0" valign="top" align="left">purity ± U (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_7a4eb4fe-db02-6ce6-4e7a-d04cb1a351e4"><th id="_30409763-75e3-fa91-8e0a-dd9dbc70457d" valign="top" align="left">purity ± U (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mg.g-1">
       <mstyle mathvariant="normal">
         <mi>mg</mi>
@@ -1947,9 +1933,8 @@
     <mn>1.9</mn>
   </mstyle>
 </math><asciimath>996.7 +- 1.9</asciimath></stem></td>
-<td id="_2ac1b1b9-7d81-6cd7-6c4f-21cceb40cb77" valign="top" align="left"/><td id="_ef1292ef-6f7e-79d3-5d9b-cc23648ae551" valign="top" align="left"/></tr><tr id="_f9543ad6-f500-6a23-911e-1e60c498058d"><th id="_d72428c5-3c99-4851-ae13-0ab475b0e058" valign="top" align="left">Mass fraction (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_2ac1b1b9-7d81-6cd7-6c4f-21cceb40cb77" valign="top" align="left"/><td id="_ef1292ef-6f7e-79d3-5d9b-cc23648ae551" valign="top" align="left"/></tr><tr id="_8e70706d-8235-1e2f-1051-b8106a4ef91e"><th id="_96b7a8f6-6ce4-a10d-d956-ce499f45a605" valign="top" align="left">Mass fraction (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_ug.g-1">
       <mstyle mathvariant="normal">
         <mi>µg</mi>
@@ -2011,7 +1996,7 @@
       </mrow>
     </mfrac>
   </mstyle>
-</math><asciimath>w_("stock") = (m_p*b_p*w_p)/(m_("sol")*b_("sol"))</asciimath></stem><dl id="_3149fed3-93f8-4e3d-4436-73e1543d1bbc" key="true"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>w_("stock") = (m_p*b_p*w_p)/(m_("sol")*b_("sol"))</asciimath></stem><key><dl id="_7f59e0f1-eca1-7a93-9307-03e21fddb0d0"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>m</mi>
@@ -2019,7 +2004,7 @@
     </msub>
   </mstyle>
 </math><asciimath>m_p</asciimath></stem></dt>
-<dd id="_1b4acb35-c0e4-f894-c482-b1de8e30e69b"><p id="_ddcdee05-b11d-e682-74c2-af7eef365f8b">observed mass of ZEN powder</p>
+<dd id="_5bb1a029-e3b3-b9f8-67e1-e3d5e71e0ec6"><p id="_7990f9ea-7541-9582-58d8-609fb8a6e778">observed mass of ZEN powder</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2029,7 +2014,7 @@
     </msub>
   </mstyle>
 </math><asciimath>b_p</asciimath></stem></dt>
-<dd id="_00d60306-ba2f-01bc-9200-065f549a04fc"><p id="_5d692b75-9b7a-e49f-6eb4-14da6724b7d8">buoyancy correction of powder weighing</p>
+<dd id="_36d80b50-e894-12aa-312f-d50901ef576e"><p id="_f98cef51-bf5a-669f-ab27-fec370715f5b">buoyancy correction of powder weighing</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2039,7 +2024,7 @@
     </msub>
   </mstyle>
 </math><asciimath>w_p</asciimath></stem></dt>
-<dd id="_710852c6-7377-9d1a-63b9-cd95a92197f7"><p id="_5eddf463-72cb-2b19-0443-c9590c7ee833">mass fraction of ZEN powder</p>
+<dd id="_a87b3e63-1f57-b28b-b67d-ee3ee7bbf227"><p id="_1ff7595b-8b01-24d0-0cf3-724e3c44ab21">mass fraction of ZEN powder</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2049,7 +2034,7 @@
     </msub>
   </mstyle>
 </math><asciimath>m_("sol")</asciimath></stem></dt>
-<dd id="_c5de1a99-c1bc-c922-e62b-ace76a8f2f2f"><p id="_243ed6b0-2758-1b25-b311-433e3fa58fdd">observed mass of stock solution</p>
+<dd id="_1b1f486b-c9c9-347e-9204-ff4806f53ec3"><p id="_4c394e6f-8920-86c2-f2b3-c28dd6854014">observed mass of stock solution</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2059,9 +2044,9 @@
     </msub>
   </mstyle>
 </math><asciimath>b_("sol")</asciimath></stem></dt>
-<dd id="_fe21f5d5-407c-4fda-d38d-72f416a216e0"><p id="_9848545e-20d1-b7b5-9cde-4cd711649a7d">buoyancy correction of solution weighing</p>
+<dd id="_b3358125-462e-5a17-c115-bed02e429968"><p id="_e438366e-aa0a-6917-40d2-c427cccd96fa">buoyancy correction of solution weighing</p>
 </dd>
-</dl></formula>
+</dl></key></formula>
 
 
 
@@ -2949,7 +2934,7 @@
 </clause>
 </clause>
 
-<clause id="_16410df9-e071-51fc-15a8-c970f1f0320d" anchor="preparation" obligation="normative">
+<clause id="_394644ae-c562-2dba-144c-255d257ea1cd" anchor="preparation" obligation="normative">
 <title id="_877500c4-0f4b-b13f-44d0-b48988fced90">Preparation and characterization of the zearalenone calibration solution</title>
 <clause id="_a78f1c94-6b0e-f056-1427-e455e38d804f" anchor="prep-ampouling" obligation="normative">
 <title id="_85c45057-4b2d-9d50-5663-ec0935bbf87c">Preparation and ampouling</title>
@@ -4453,7 +4438,7 @@
 </clause>
 </clause>
 
-<clause id="_e99c9e8d-b435-7f3c-841d-1f391e6c17e2" anchor="mass-fr-assignment" obligation="normative">
+<clause id="_08cbe4fe-8015-5bf4-10a8-b4815b924057" anchor="mass-fr-assignment" obligation="normative">
 <title id="_1bc25738-8253-651f-9fbc-386a1b34e4a7">Mass fraction value assignment and uncertainty</title>
 <p id="_f511a458-2c28-0cf5-c004-a552ba7a5969">The preparation of the calibration solution and the mass fraction assignment, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -4464,7 +4449,7 @@
   </mstyle>
 </math><asciimath>w_("cal")</asciimath></stem>, are shown in <xref target="table9"/>. Mettler Toledo balances AX504 and XP<sub>1</sub>0002S were used for mass determinations.</p>
 
-<table id="_0c3c1e32-0109-73c6-5c2c-ea7c1da85e2f" anchor="table9">
+<table id="_3bbcdff1-3432-bda7-002f-4bd6b30cc0d0" anchor="table9">
 <name id="_d5017221-f034-746c-76cb-15e59dc4a294">Experimental data corresponding to the preparation of the ZEN calibration solution and the calculated mass fraction.</name>
 <tbody><tr id="_2ed71183-dc89-27a4-1ee4-de78aa22e7c4"><th id="_5a1b36b9-041c-5c3d-5f10-e1a9438a6459" colspan="4" valign="top" align="center"><em>trans</em>-Zearalenone calibration solution preparation</th>
 </tr><tr id="_8bb039ec-f5ab-aa72-a44e-6445a76a0fe0"><td id="_79d925dc-543e-91fe-6058-2c149e41672a" valign="top" align="left"/><th id="_ec5ed250-1277-2c28-f8bb-a9ba8c527231" valign="top" align="left">Weighed mass (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -4484,9 +4469,8 @@
     <mi>b</mi>
   </mstyle>
 </math><asciimath>m xx b</asciimath></stem></th>
-</tr><tr id="_c9d7d311-ac7b-0afd-edd2-8b9c7f22cafc"><th id="_2946978e-ed15-07af-e116-234cb356b7f2" valign="top" align="left">ZEN stock sol. (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_129240f3-2bdf-ff8e-4272-f7ac4cd81133"><th id="_3d4e69fa-378b-737b-8c89-c8ecad35427f" valign="top" align="left">ZEN stock sol. (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mg">
       <mstyle mathvariant="normal">
         <mi>mg</mi>
@@ -4500,9 +4484,8 @@
 <td id="_aa73a90a-f0a7-c420-b98b-f06546e61d2f" valign="top" align="left">77.694</td>
 <td id="_9a30bd8c-8df3-7258-0cda-67da4c714695" valign="top" align="left">1.001386</td>
 <td id="_4aa87439-c4ff-bb23-4886-36a39a4194fa" valign="top" align="left">77.802</td>
-</tr><tr id="_40e2f584-7ae6-9413-ebc8-a8fcd2a7d345"><th id="_9a031839-257f-b39b-857d-dc6c1f461ca4" valign="top" align="left">Calibration sol. (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_75e96b26-fd6f-a1aa-4e84-b918ac315dd2"><th id="_0e683b1e-ad0b-51d3-aa9f-1e24283700e2" valign="top" align="left">Calibration sol. (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu27">
       <mstyle mathvariant="normal">
         <mi>g</mi>
@@ -4652,7 +4635,7 @@
       </mrow>
     </mfrac>
   </mstyle>
-</math><asciimath>w_("cal") = (m_("stock")*b_("stock")*w_("stock"))/(m_"sol"*b_"sol")</asciimath></stem><dl id="_9e5e2d70-2411-df6f-d785-2c4bf3225850" key="true"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>w_("cal") = (m_("stock")*b_("stock")*w_("stock"))/(m_"sol"*b_"sol")</asciimath></stem><key><dl id="_9b8ae021-aa0e-211c-6721-c085ef9f2d71"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>m</mi>
@@ -4660,7 +4643,7 @@
     </msub>
   </mstyle>
 </math><asciimath>m_("stock")</asciimath></stem></dt>
-<dd id="_00f9ba3e-9dc6-fda9-35e6-cb612b8a5bd2"><p id="_e5bf0325-f3e8-7dbe-c588-166e4984b17d">weighed mass of ZEN stock solution</p>
+<dd id="_3abaae65-8b7f-301a-2843-f700f038fd9e"><p id="_8a12e31a-7e2e-5a42-e2db-18b9ae33a858">weighed mass of ZEN stock solution</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -4670,7 +4653,7 @@
     </msub>
   </mstyle>
 </math><asciimath>b_("stock")</asciimath></stem></dt>
-<dd id="_89a5f0d8-45fb-90e7-7cb6-01d42d8567ae"><p id="_b6ed5cf8-7058-67dd-3e12-cca6a2eb7378">buoyancy correction of stock solution weighing</p>
+<dd id="_41c055a7-4c35-feb9-44a6-75f539480ef9"><p id="_ebf42add-4d9b-c1d4-6954-3511f2851570">buoyancy correction of stock solution weighing</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -4680,7 +4663,7 @@
     </msub>
   </mstyle>
 </math><asciimath>w_("stock")</asciimath></stem></dt>
-<dd id="_8726ab79-35de-ae39-d7b5-0d3f2355b0af"><p id="_e8138b8d-715c-4801-5bb3-8c54ea2d9b3e">ZEN mass fraction of the stock solution</p>
+<dd id="_6097286b-8f8d-4710-ca6a-d5616825c490"><p id="_5ec68cba-5b2f-c96f-949e-0f0268e87a09">ZEN mass fraction of the stock solution</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -4690,7 +4673,7 @@
     </msub>
   </mstyle>
 </math><asciimath>m_("sol")</asciimath></stem></dt>
-<dd id="_3b38557a-a8ce-0dd5-651a-e0d9cb5d857f"><p id="_254f45df-3d5b-58cd-f7e8-2cc51897f405">weighed mass of calibration solution OGP.024</p>
+<dd id="_23f82f06-b471-7d9e-7367-2ab1bff88dda"><p id="_5b032d7c-e685-dccb-1c99-67e9a1387bb5">weighed mass of calibration solution OGP.024</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -4700,9 +4683,9 @@
     </msub>
   </mstyle>
 </math><asciimath>b_("sol")</asciimath></stem></dt>
-<dd id="_b8572465-a42f-ac60-1804-a581d7767339"><p id="_6f94018f-e7dc-ebb4-b27f-cd11135bc587">buoyancy correction of calibration solution weighing</p>
+<dd id="_3bfde36f-4df0-219b-2b2f-261c18f2572a"><p id="_6f825a7b-af00-1f61-0f31-b61650b8fcc4">buoyancy correction of calibration solution weighing</p>
 </dd>
-</dl></formula>
+</dl></key></formula>
 
 
 
@@ -5403,46 +5386,68 @@
 </clause>
 
 
-</sections><bibliography><references id="_aa4e80ba-e225-f9cc-0449-e18eaed33814" normative="false" obligation="informative">
-<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="bipm_cbkt" id="_5d3fa4c4-c517-bb67-1c6b-b45c98bef4e3">
+</sections><bibliography><references id="_253bc808-9b83-39af-57b7-402a2746f975" normative="false" obligation="informative">
+<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="bipm_cbkt" id="_a6e073a1-e4ea-7103-876c-19fbabdeaa1b">
   <formattedref format="application/x-isodoc+xml">
     <em>BIPM CBKT programme: Safe Food and Feed in Developing Economies.</em>
   </formattedref>
   <docidentifier type="metanorma">[1]</docidentifier>
-</bibitem><bibitem anchor="whitlow" id="_ffbad3ca-6dc0-7cb3-9d63-ac67eff9e3c1">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="whitlow" id="_60885493-a82e-e3ac-1f89-90dbce15b509">
   <formattedref format="application/x-isodoc+xml">Whitlow, L and Hagler, W. <em>Nutritional Biotechnology in the feed and food industries. Proceedings of All tech’s. 20th Annual Symposium: re-imagining the feed industry.</em> Lexington, Kentucky, USA. : s.n., 23-26 May 2004.</formattedref>
   <docidentifier type="metanorma">[2]</docidentifier>
-</bibitem><bibitem anchor="omotayo" id="_9c99f313-674c-5ba5-bf2c-0c2360e43c12">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="omotayo" id="_04e92aa6-e874-f540-43e4-469c7dea6b6c">
   <formattedref format="application/x-isodoc+xml">Omotayo, Oluwadara Pelumi et al. <em>Prevalence of mycotoxins and their consequences on human health.</em> 2019. pp. 1-7. Vol. 35.</formattedref>
   <docidentifier type="metanorma">[3]</docidentifier>
-</bibitem><bibitem anchor="westwood" id="_41582368-899c-8a88-4d7f-460102d85a3c">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="westwood" id="_8eea9788-77c6-fe86-8eed-fcd1f066a6bc">
   <formattedref format="application/x-isodoc+xml">
     <link target="https://www.bipm.org/utils/common/pdf/rapportBIPM/RapportBIPM-2019-06.pdf">Westwood, S. <em>Purity Evaluation Guideline: Zearalenone. BIPM-PEG-01. Rapport BIPM-2019/06.</em> Sèvres (France) : Bureau International des Poids et Mesures, 2019.</link>
   </formattedref>
   <docidentifier type="metanorma">[4]</docidentifier>
-</bibitem><bibitem anchor="crc" id="_f94eff18-fdf9-689a-f815-c172cbed86fb">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="crc" id="_194c3beb-f46c-cd3f-dbf7-bb0bc7361e3f">
   <formattedref format="application/x-isodoc+xml">
     <em>CRC Handbook of Chemistry and Physics, 97th ed.</em>
   </formattedref>
   <docidentifier type="metanorma">[5]</docidentifier>
-</bibitem><bibitem anchor="oneil" id="_315192e8-d82f-7a86-0023-fdbd1253a051">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="oneil" id="_e8b43d94-87c5-fd1f-e92d-131c5ee56cda">
   <formattedref format="application/x-isodoc+xml">O’Neil MJ, Smith A, Heckelman PE, Budavari S. <em>The Merck Index.</em> 13th ed. s.l. : Whitehouse Station, NJ: Merck &amp; Co, 2001.</formattedref>
   <docidentifier type="metanorma">[6]</docidentifier>
-</bibitem><bibitem anchor="krska" id="_1a676568-67e4-c620-fb0f-f68f379fa4e1">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="krska" id="_18ca322e-171e-7e8a-d258-11ffc8d80091">
   <formattedref format="application/x-isodoc+xml">Krska, Rudolf, Welzig, Elvira et al. <em>Purity Assessment of Crystalline Zearalenone</em> . s.l. : J. AOAC Intl., 2003.</formattedref>
   <docidentifier type="metanorma">[7]</docidentifier>
-</bibitem><bibitem anchor="reichmuth" id="_e6089774-7f20-4e9f-1336-72b1c93ad9de">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="reichmuth" id="_56b40173-3549-350f-5c0a-9d7fc2692003">
   <formattedref format="application/x-isodoc+xml">Reichmuth A, Wunderli S, Weber , Meyer R. <em>The Uncertainty of weighing data obtained with electronic analytical balances.</em> s.l. : Microchim. Acta, 2004. pp. 133-141. Vol. 148.</formattedref>
   <docidentifier type="metanorma">[8]</docidentifier>
-</bibitem><bibitem anchor="josephs" id="_65a3c998-bb38-22a3-895d-f6cc85fbca89">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="josephs" id="_6efbb3f5-883f-7e05-18f1-7459e4f6cea1">
   <formattedref format="application/x-isodoc+xml">Josephs, RD. CCQM-154a / K154a.1 Key Comparison (draft B) report. <em>Gravimetric preparation and value assignment of _trans</em>-zearalenone (ZEN) in acetonitrile (ACN)._ Sèvres (France) : Bureau International des Poids et Mesures, 2020.</formattedref>
   <docidentifier type="metanorma">[9]</docidentifier>
-</bibitem><bibitem anchor="lamberty" id="_af9133c5-9a21-590a-f57e-3cb418f7ca2c">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="lamberty" id="_91bed681-5272-7ceb-5b47-68fd49410290">
   <formattedref format="application/x-isodoc+xml">Lamberty A, Shimmel H, Pauwels J. <em>The study of stability of reference materials by isochronous measurements.</em> s.l. : Fresenius J Anal Chem., 1998. pp. 359-361. Vol. 360.</formattedref>
   <docidentifier type="metanorma">[10]</docidentifier>
-</bibitem><bibitem anchor="linsinger" id="_d8c7876f-c68f-7ea4-0c7d-9aa78f9752e6">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="linsinger" id="_ffa03c4c-085a-1dec-6881-a5abd492a58b">
   <formattedref format="application/x-isodoc+xml">Linsinger TPJ, Powels J, van der Veen AMH, Schimmel H, Lamberty A. <em>Homogeneity and stability of reference materials.</em> s.l. : Accred Qual Assur., 2001. pp. 20-25. Vol. 6.</formattedref>
   <docidentifier type="metanorma">[11]</docidentifier>
+  <language>en</language>
+  <script>Latn</script>
 </bibitem>
 
 

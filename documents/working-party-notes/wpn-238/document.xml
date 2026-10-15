@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.2" schema-version="v2.1.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.0" schema-version="v2.2.0" flavor="bipm">
 <bibdata type="standard">
-<title language="en" format="text/plain" type="title-main">The relation between the numbers <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<title language="en" type="title-main">The relation between the numbers <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -20,21 +20,25 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(B)_j</asciimath></stem></title>
-
-<docidentifier primary="true" type="BIPM">BIPM 238</docidentifier><docnumber>238</docnumber><contributor><role type="author"/><organization>
+<docidentifier primary="true" type="BIPM">BIPM 238</docidentifier><docnumber>238</docnumber><date type="updated"><on>01-1995</on></date><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"/><person>
 <name><completename>Jörg W. Müller</completename></name>
-<affiliation><organization>
-</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+<affiliation><organization/></affiliation></person></contributor><contributor><role type="author"><description>committee</description></role><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><version><revision-date>01-1995</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>1995</from><owner><organization>
+<subdivision type="Committee">
+<name language="en">International Bureau of Weights and Measures</name>
+
+<name language="fr">Bureau International des Poids et Mesures</name>
+<identifier>BIPM</identifier><identifier type="full">BIPM</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>brochure</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="BIPM" language="en" script="Latn">International Bureau of Weights and Measures</committee><committee acronym="BIPM" language="fr" script="Latn">Bureau International des Poids et Mesures</committee></editorialgroup><structuredidentifier><docnumber>238</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<abbreviation>BIPM</abbreviation></organization></contributor><version>01-1995</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>1995</from><owner><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>brochure</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>238</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<presentation-metadata><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
 <boilerplate><copyright-statement>
 
-<clause id="_2f3c2470-f378-fa9e-1da5-209083dad90b" obligation="normative">
-<p id="_4beb3a0d-0fba-fd28-5948-ebf44a6f3b01" align="center">© Bureau International des Poids et Mesures 1995 all rights reserved</p>
+<clause id="_ac0a25c2-e8a6-80a5-ec5c-afeb3a5d8f42" obligation="normative"><p id="_4beb3a0d-0fba-fd28-5948-ebf44a6f3b01" align="center">© Bureau International des Poids et Mesures 1995 all rights reserved</p>
 </clause>
 </copyright-statement>
 
@@ -1586,13 +1590,17 @@
 </clause>
 
 
-</sections><bibliography><references id="_cd8d272e-8b08-087f-df80-c76042184199" normative="false" obligation="informative">
-<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="muller" id="_c940cf91-28c4-b3c9-ee67-b8ba4b5af15a">
+</sections><bibliography><references id="_3926c042-daca-084b-9f66-d7d7b3643dcc" normative="false" obligation="informative">
+<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="muller" id="_f480fb74-3ab8-3c40-fb04-483da56cc3f2">
   <formattedref format="application/x-isodoc+xml">J.W. Müller: “Sums of alternate powers — an empirical approach”, Rapport BIPM-94/14 (1994)</formattedref>
   <docidentifier type="metanorma">[1]</docidentifier>
-</bibitem><bibitem anchor="abramowitz" id="_ac30f5c2-8eef-48fd-a7e4-8a3032a357d4">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="abramowitz" id="_2510660a-cf7e-cbc4-4788-220d9b264976">
   <formattedref format="application/x-isodoc+xml">“Handbook of Mathematical Functions”, eg. .. by M. Abramowitz and I.A. Stegun, NBS, AMS 55 (GPO, Washington, 1964)</formattedref>
   <docidentifier type="metanorma">[2]</docidentifier>
+  <language>en</language>
+  <script>Latn</script>
 </bibitem>
 
 

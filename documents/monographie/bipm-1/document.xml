@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.2" schema-version="v2.1.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.0" schema-version="v2.2.0" flavor="bipm">
 <bibdata type="standard">
-<title language="en" format="text/plain" type="title-main">Procedures for Accurately Diluting and Dispensing Radioactive Solutions</title>
+<title language="en" type="title-main">Procedures for Accurately Diluting and Dispensing Radioactive Solutions</title>
+<docidentifier primary="true" type="BIPM">BIPM BIPM-1</docidentifier><docnumber>BIPM-1</docnumber><date type="updated"><on>1975</on></date><contributor><role type="author"/><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"><description>committee</description></role><organization>
+<name>Bureau International des Poids et Mesures</name>
+<subdivision type="Committee">
+<name language="en">Consultative Committee for Ionizing Radiation</name>
 
-<docidentifier primary="true" type="BIPM">BIPM BIPM-1</docidentifier><docnumber>BIPM-1</docnumber><contributor><role type="author"/><organization>
+<name language="fr">Comité Consultatif des Rayonnements Ionisants</name>
+<identifier>CCRI</identifier><identifier type="full">CCRI</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"/><person>
-<name><completename/></name>
-</person></contributor><contributor><role type="publisher"/><organization>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version>1975</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>1975</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>1975</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>1975</from><owner><organization>
-<name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>monographie</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="CCRI" language="en" script="Latn">Consultative Committee for Ionizing Radiation</committee><committee acronym="CCRI" language="fr" script="Latn">Comité Consultatif des Rayonnements Ionisants</committee></editorialgroup><structuredidentifier><docnumber>BIPM-1</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd2" id="U_mg">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>monographie</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-1</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd2" id="U_mg">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mg</UnitName>
         <UnitSymbol type="HTML">mg</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -24,9 +28,9 @@
           <EnumeratedRootUnit unit="gram" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd2" id="U_ug">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">ug</UnitName>
-        <UnitSymbol type="HTML">g</UnitSymbol>
+        <UnitSymbol type="HTML">µg</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µg</mi>
@@ -36,7 +40,7 @@
           <EnumeratedRootUnit unit="gram" prefix="u"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd2" id="U_NISTu27">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">gram</UnitName>
         <UnitSymbol type="HTML">g</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -45,7 +49,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#D_L-1Theta" id="U_K.m-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">K*m^-1</UnitName>
         <UnitSymbol type="HTML">K m
           <sup>−1</sup>
@@ -55,9 +59,7 @@
             <mi mathvariant="normal">K</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">m</mi>
-              </mrow>
+              <mi mathvariant="normal">m</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -70,7 +72,7 @@
           <EnumeratedRootUnit unit="metre" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu23">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">degree Celsius</UnitName>
         <UnitSymbol type="HTML">°C</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -79,9 +81,9 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#D_M0" id="U_ug.g-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">ug*g^-1</UnitName>
-        <UnitSymbol type="HTML">g g
+        <UnitSymbol type="HTML">µg g
           <sup>−1</sup>
         </UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -89,9 +91,7 @@
             <mi mathvariant="normal">µg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">g</mi>
-              </mrow>
+              <mi mathvariant="normal">g</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -104,7 +104,7 @@
           <EnumeratedRootUnit unit="gram" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd6" id="U_NISTu6">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mole</UnitName>
         <UnitSymbol type="HTML">mol</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -112,8 +112,8 @@
             <mi mathvariant="normal">mol</mi>
           </math>
         </UnitSymbol>
-      </Unit><Unit dimensionURL="#NISTd10" id="U_dm3">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L3" id="U_dm3">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">dm^3</UnitName>
         <UnitSymbol type="HTML">dm
           <sup>3</sup>
@@ -121,20 +121,16 @@
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">dm</mi>
-              </mrow>
-              <mrow>
-                <mn>3</mn>
-              </mrow>
+              <mi mathvariant="normal">dm</mi>
+              <mn>3</mn>
             </msup>
           </math>
         </UnitSymbol>
         <RootUnits>
           <EnumeratedRootUnit unit="metre" prefix="d" powerNumerator="3"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd10" id="U_cm3">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L3" id="U_cm3">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">cm^3</UnitName>
         <UnitSymbol type="HTML">cm
           <sup>3</sup>
@@ -142,12 +138,8 @@
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
-              <mrow>
-                <mn>3</mn>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
+              <mn>3</mn>
             </msup>
           </math>
         </UnitSymbol>
@@ -155,8 +147,8 @@
           <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="3"/>
         </RootUnits>
       </Unit><Unit id="U_mg.h-1">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">mg*h^-1</UnitName>
         <UnitSymbol type="HTML">mg h
           <sup>−1</sup>
@@ -166,9 +158,7 @@
             <mi mathvariant="normal">mg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">h</mi>
-              </mrow>
+              <mi mathvariant="normal">h</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -181,7 +171,7 @@
           <EnumeratedRootUnit unit="hour" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_mm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mm</UnitName>
         <UnitSymbol type="HTML">mm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -193,7 +183,7 @@
           <EnumeratedRootUnit unit="metre" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_cm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">cm</UnitName>
         <UnitSymbol type="HTML">cm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -204,8 +194,8 @@
         <RootUnits>
           <EnumeratedRootUnit unit="metre" prefix="c"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd30" id="U_g.cm-3">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L-3M" id="U_g.cm-3">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">g*cm^-3</UnitName>
         <UnitSymbol type="HTML">g cm
           <sup>−3</sup>
@@ -215,9 +205,7 @@
             <mi mathvariant="normal">g</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>3</mn>
@@ -230,7 +218,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="-3"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-            <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+            <UnitSystem name="SI" type="SI_base" lang="en"/>
             <UnitName lang="en">kelvin</UnitName>
             <UnitSymbol type="HTML">K</UnitSymbol>
             <UnitSymbol type="MathMl">
@@ -239,7 +227,7 @@
               </math>
             </UnitSymbol>
           </Unit><Unit id="U_keV">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">keV</UnitName>
         <UnitSymbol type="HTML">keV</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -251,9 +239,9 @@
           <EnumeratedRootUnit unit="electronvolt" prefix="k"/>
         </RootUnits>
       </Unit></UnitSet><QuantitySet><Quantity id="NISTq2" quantityType="base" dimensionURL="#NISTd2">
-        <QuantityName lang="en-US">mass</QuantityName>
+        <QuantityName lang="en">mass</QuantityName>
       </Quantity><Quantity id="NISTq6" quantityType="base" dimensionURL="#NISTd6">
-        <QuantityName lang="en-US">amount of substance</QuantityName>
+        <QuantityName lang="en">amount of substance</QuantityName>
       </Quantity></QuantitySet><DimensionSet><Dimension id="NISTd2">
         <Mass symbol="M" powerNumerator="1"/>
       </Dimension><Dimension id="D_L-1Theta">
@@ -265,11 +253,11 @@
         <Mass symbol="M" powerNumerator="0"/>
       </Dimension><Dimension id="NISTd6">
         <AmountOfSubstance symbol="N" powerNumerator="1"/>
-      </Dimension><Dimension id="NISTd10">
+      </Dimension><Dimension id="D_L3">
         <Length symbol="L" powerNumerator="3"/>
       </Dimension><Dimension id="NISTd1">
         <Length symbol="L" powerNumerator="1"/>
-      </Dimension><Dimension id="NISTd30">
+      </Dimension><Dimension id="D_L-3M">
         <Length symbol="L" powerNumerator="-3"/>
         <Mass symbol="M" powerNumerator="1"/>
       </Dimension></DimensionSet><PrefixSet><Prefix prefixBase="10" prefixPower="-3" id="NISTp10_-3">
@@ -302,11 +290,10 @@
         <PrefixSymbol type="unicode">k</PrefixSymbol>
         <PrefixSymbol type="LaTeX">k</PrefixSymbol>
         <PrefixSymbol type="HTML">k</PrefixSymbol>
-      </Prefix></PrefixSet></UnitsML><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+      </Prefix></PrefixSet></UnitsML><presentation-metadata><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
 <boilerplate><copyright-statement>
 
-<clause id="_22fa5da8-4276-abd4-c979-999b7e3fa29c" obligation="normative">
-<p id="_e474a917-3e60-5e00-c33d-7d870b726c81" align="center">© Bureau International des Poids et Mesures 1975 all rights reserved</p>
+<clause id="_f3f0a89f-3b2e-786d-554b-d097b5cba4ef" obligation="normative"><p id="_e474a917-3e60-5e00-c33d-7d870b726c81" align="center">© Bureau International des Poids et Mesures 1975 all rights reserved</p>
 </clause>
 </copyright-statement>
 
@@ -2644,62 +2631,98 @@ uncertainty due to wall attenuation is not greater than <stem block="false" type
     <mi>%</mi>
   </mstyle>
 </math><asciimath>+- 0.03%</asciimath></stem>. However for some radionuclides, for example  <sup>125</sup>I, it may be desirable to select ampoules in order to obtain even better uniformity.</p>
-</annex><bibliography><references id="_1d7d84bd-fc6c-348d-0fdd-071731394522" normative="false" obligation="informative">
-<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="macurdy" id="_3f708681-57e9-9d80-b03d-633d31e17d15">
+</annex><bibliography><references id="_416e720a-5618-31ba-fefa-4a28cb018b3c" normative="false" obligation="informative">
+<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="macurdy" id="_7090b565-94ed-b976-6cbb-3e3feb4e0a76">
   <formattedref format="application/x-isodoc+xml">Macurdy, L.B., “Measurement of mass”, in “Treatise on Analytical Chemistry”, edited by Kolthoff, Elving and Sandell, Part 1, vol. 7, p. 4247, Wiley, New York (1967)</formattedref>
   <docidentifier type="metanorma">[1]</docidentifier>
-</bibitem><bibitem anchor="eijk1972" id="_36ba38cb-3a5d-64d3-007b-f07dd2166583">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="eijk1972" id="_a8d9fba8-878b-0cae-87d9-dbf0228bb2b1">
   <formattedref format="application/x-isodoc+xml">van der Eijk, W. and Vaninbroukx, R., “Sampling and dilution problems in radioactivity measurements”, Nucl. Instr. and Meth. 102,581 (1972)</formattedref>
   <docidentifier type="metanorma">[2]</docidentifier>
-</bibitem><bibitem anchor="moret" id="_55ba3ec3-3da2-1379-9485-0f6f9068b2ea">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="moret" id="_376fc748-4923-2f51-4633-90c24e0ec82f">
   <formattedref format="application/x-isodoc+xml">Moret, H., Brulmans, J. and Rytz, A., “Intercomparison of small mass metrology”, Bureau International des Poids et Mesures, Rapport BI PM-73/ 7 (1973)</formattedref>
   <docidentifier type="metanorma">[3]</docidentifier>
-</bibitem><bibitem anchor="merritt1973" id="_bbf157b4-7624-b358-ed47-bbd10eb72cd9">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="merritt1973" id="_134a17b8-0af9-907b-e925-603878b2d918">
   <formattedref format="application/x-isodoc+xml">Merritt, J.S., “Present status in quantitative source preparation”, Nucl. Instr. and Meth. <strong>112</strong>, 325 (1973)</formattedref>
   <docidentifier type="metanorma">[4]</docidentifier>
-</bibitem><bibitem anchor="brulmans" id="_25e03d2e-f6d1-47f8-9bea-5793e884d7d2">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="brulmans" id="_5e8afe4a-21c3-a6c2-d6d7-bc9e94118566">
   <formattedref format="application/x-isodoc+xml">Brulmans, J., van der Eijk, W. and Moret, H., “Performance of microbolances”, Central Bureau for Nuclear Measurements, Report EUR 4894e (1972)</formattedref>
   <docidentifier type="metanorma">[5]</docidentifier>
-</bibitem><bibitem anchor="gallic1973" id="_0b65641f-29eb-b808-5d42-d4330e8fbd5f">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="gallic1973" id="_96b0bdc0-f5de-8598-462e-7cdbe2365fdf">
   <formattedref format="application/x-isodoc+xml">Le Gallic, Y., “Problems in microweighing”, Nucl. Instr. and Meth. <strong>112</strong>, 333 (1973)</formattedref>
   <docidentifier type="metanorma">[6]</docidentifier>
-</bibitem><bibitem anchor="lashof" id="_7c1c1c3b-484a-1d51-6e3c-6f33b9f83517">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="lashof" id="_338dec56-f205-1a9c-c243-5330ceb5a4bf">
   <formattedref format="application/x-isodoc+xml">Lashof, T.W. and Macurdy, L.B., “Testing a quick weighing balance”, Analyt. Chem. <strong>26</strong>, 707 (1954)</formattedref>
   <docidentifier type="metanorma">[7]</docidentifier>
-</bibitem><bibitem anchor="bell" id="_871a219b-5ad9-73de-149f-623474570207">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="bell" id="_3d5915aa-0377-eaef-1453-211af551388d">
   <formattedref format="application/x-isodoc+xml">Bell, G.A., “The calibration of weights in balances with automatic weight loading”, Commonwealth Scientific and Industrial Research Organization, Australia, National Standards Laboratory Technical Paper No. 6 (1955)</formattedref>
   <docidentifier type="metanorma">[8]</docidentifier>
-</bibitem><bibitem anchor="humphries" id="_53de3499-74f7-6ca8-d4ae-b1dcc358fd9b">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="humphries" id="_a724a6c1-03b9-e16f-4c5f-67fff5a0f4c5">
   <formattedref format="application/x-isodoc+xml">Humphries, J.W., “The calibration of the weights built into a balance”, Austr. J. Appl. Sci., <strong>2</strong>, 360 (1960)</formattedref>
   <docidentifier type="metanorma">[9]</docidentifier>
-</bibitem><bibitem anchor="norman" id="_e6e52d1b-b602-848e-68c0-6294d3f1f910">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="norman" id="_70ae597b-6842-8ee6-9975-80c7895825cc">
   <formattedref format="application/x-isodoc+xml">Norman, V.J. and Schunke, R.H., “The calibration of a set of analytical weights using direct reading balances”, Austr. J. Appl. Sci. <strong>14</strong>, 186 (1963)</formattedref>
   <docidentifier type="metanorma">[10]</docidentifier>
-</bibitem><bibitem anchor="astm" id="_9b3cf8eb-72fd-6b7d-f975-799c7faefb7e">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="astm" id="_7dcd0719-4a8b-d771-10a4-40248119254f">
   <formattedref format="application/x-isodoc+xml">“Standard methods of testing single-arm balances”, American Society of Testing and Materials, ASTM E 319-68 (1968)</formattedref>
   <docidentifier type="metanorma">[11]</docidentifier>
-</bibitem><bibitem anchor="gallic1971" id="_3a435a2a-aae9-8393-ee4c-a27a619c43c0">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="gallic1971" id="_973f29fd-89f0-6ecb-91b9-5661c472a267">
   <formattedref format="application/x-isodoc+xml">Le Gallic, Y., “La micropesée, source importante d’erreur en métrologie d’activité”, Centre d’Etudes Nucléaires de Saclay, Rapport CEA-R-4169 (1971)</formattedref>
   <docidentifier type="metanorma">[12]</docidentifier>
-</bibitem><bibitem anchor="colas1973" id="_47743178-16b3-1ef3-7584-2d118a44514f">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="colas1973" id="_86816afd-d053-b693-a769-4238617138fe">
   <formattedref format="application/x-isodoc+xml">Colas, C., Rytz, A. and Veyradier, C., “Application d’une balance Mettler du type ME22 à l’étalonnage de radionucléides”, Bureau International des Poids et Mesures, Rapport BIPM-73/13 (1973)</formattedref>
   <docidentifier type="metanorma">[13]</docidentifier>
-</bibitem><bibitem anchor="hamilton" id="_41f60189-8845-f5bf-9b92-eb8e0cf6d7b6">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="hamilton" id="_78bd9890-92f0-9abf-b894-0951992d29cd">
   <formattedref format="application/x-isodoc+xml">Hamilton, E., “Storage of standard solutions in polythene bottles”, Nature, Lond. <strong>193</strong>, 200 (1962)</formattedref>
   <docidentifier type="metanorma">[14]</docidentifier>
-</bibitem><bibitem anchor="keith" id="_06d3a969-0928-6b8a-264e-e9fbca3e492b">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="keith" id="_c2e1d40a-c2fe-e01b-adc8-ce4c61d4bfd3">
   <formattedref format="application/x-isodoc+xml">Keith, R.L.G., “Storage of standardized radioactive solutions”, Nature, Lond. <strong>196</strong>, 500 (1962)</formattedref>
   <docidentifier type="metanorma">[15]</docidentifier>
-</bibitem><bibitem anchor="merritt1967" id="_5c7f078c-2875-abf6-1948-12296a5e57ca">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="merritt1967" id="_b910c507-bc8c-6d0e-0daa-bd400c7c3e42">
   <formattedref format="application/x-isodoc+xml">Merritt, J.S. and Taylor, J.G. V., “Gravimetric sampling in the standardization of solutions of radionuclides”, Atomic Energy of Canada Ltd., Chalk River, Report AECL-2679 (1967)</formattedref>
   <docidentifier type="metanorma">[16]</docidentifier>
-</bibitem><bibitem anchor="rytz" id="_b5d6b0a1-b241-c77a-0fc8-31faaf4af769">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="rytz" id="_12e6266b-ab9b-0b89-5efb-e2cc1ec13996">
   <formattedref format="application/x-isodoc+xml">Rytz, A., Colas, C. and Veyradier, C., “Some experiments on the dilution of radioactive solutions and the uniformity of mixing”, Bureau International des Poids et Mesures, Rapport (January 1969)</formattedref>
   <docidentifier type="metanorma">[17]</docidentifier>
-</bibitem><bibitem anchor="bowes" id="_cbda0434-c2af-8a51-f624-9168b0a06af2">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="bowes" id="_7bd19057-12ea-eaf2-c1e9-d2df67e6ed86">
   <formattedref format="application/x-isodoc+xml">Bowes, G.C. and Boerg, A.P., “Sampling and storage of radioactive solutions”, National Research Council of Canada, Ottawa, Report NRC-11513 (1970)</formattedref>
   <docidentifier type="metanorma">[18]</docidentifier>
-</bibitem><bibitem anchor="pate" id="_05f080b9-21a5-8955-8427-18420fbd06e5">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="pate" id="_08cecacd-e73c-0726-11b0-9e8870bbebec">
   <formattedref format="application/x-isodoc+xml">Pate, B.D. and Yaffe, L., “A new material and techniques for the fabrication and measurement of very thin films for use in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4</mn>
@@ -2707,7 +2730,9 @@ uncertainty due to wall attenuation is not greater than <stem block="false" type
   </mstyle>
 </math><asciimath>4pi</asciimath></stem>-counting”, Can. J. Chem. <strong>33</strong>, 15 (1955)</formattedref>
   <docidentifier type="metanorma">[19]</docidentifier>
-</bibitem><bibitem anchor="lowenthal1964" id="_aab57252-1dc1-b167-4e9f-e95f1b07bb2a">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="lowenthal1964" id="_fec1b3f3-6978-b361-3e4f-ce7c5ad41b24">
   <formattedref format="application/x-isodoc+xml">Lowenthal, G.C. and Smith, A.M., “Use of Au-20% Pd for metallising thin source supports for <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4</mn>
@@ -2715,7 +2740,9 @@ uncertainty due to wall attenuation is not greater than <stem block="false" type
   </mstyle>
 </math><asciimath>4pi</asciimath></stem> proportional gas flow counters”, Nucl. Instr. and Meth. <strong>30</strong>, 363 (1964)</formattedref>
   <docidentifier type="metanorma">[20]</docidentifier>
-</bibitem><bibitem anchor="colas1971" id="_60a98d79-4d3c-7280-7edd-aef7b8b0d613">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="colas1971" id="_5bc58ea9-f306-18a4-1f5c-ae41b6366914">
   <formattedref format="application/x-isodoc+xml">Colas, C. and Rytz, A., “La résistance électrique des supports et des sources utilisés dans le comptage <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4</mn>
@@ -2726,43 +2753,69 @@ uncertainty due to wall attenuation is not greater than <stem block="false" type
   </mstyle>
 </math><asciimath>4pi beta-gamma</asciimath></stem>“, Bureau International des Poids et Mesures, Rapport BIPM-71/1 (1971)</formattedref>
   <docidentifier type="metanorma">[21]</docidentifier>
-</bibitem><bibitem anchor="campion1964" id="_eac71b7e-f15d-173b-206e-700abc18630d">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="campion1964" id="_361ec61b-b954-960c-ee86-4644b1a33815">
   <formattedref format="application/x-isodoc+xml">Campion, P.J., Dale, J.W.G. and Williams, A., “A study of weighing techniques used in radionuclide standardization”, Nucl. Instr. and Meth. <strong>31</strong>, 253 (1964)</formattedref>
   <docidentifier type="metanorma">[22]</docidentifier>
-</bibitem><bibitem anchor="eijk1967" id="_1d3a6a24-381c-7eee-c1fe-b18d160b3673">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="eijk1967" id="_e50a090d-a802-651b-7aee-f7746396402f">
   <formattedref format="application/x-isodoc+xml">van der Eijk, W. and Moret, H., “Precise determination of drop weights”, in “Proceedings of a Symposium on Standardization of Radionuclides”, International Atomic Energy Agency, Vienna, p. 529 (1967)</formattedref>
   <docidentifier type="metanorma">[23]</docidentifier>
-</bibitem><bibitem anchor="preiss" id="_b8bdc058-b110-683d-2c27-823fb267bf3c">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="preiss" id="_595e4255-dfc5-dff3-b17e-5ff331ee9ae2">
   <formattedref format="application/x-isodoc+xml">Preiss, I.L. and Fink, R.W., “Carrier-free solution storage in glass”, Nucleonics <strong>15</strong>, 10, 108 (1957)</formattedref>
   <docidentifier type="metanorma">[24]</docidentifier>
-</bibitem><bibitem anchor="gallic1967" id="_9fe306bd-21c5-6170-6138-75ea425bf673">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="gallic1967" id="_05e8be07-da0e-2ff5-ec4a-bd140140a739">
   <formattedref format="application/x-isodoc+xml">Le Gallic, Y., Thénard, M. and Biettmann, D., “Precision sur les solutions radioactives étalonnées”, in “Proceedings of a Symposium on Standardization of Radionuclides”, International Atomic Energy Agency, Vienna, p. 387 (1967)</formattedref>
   <docidentifier type="metanorma">[25]</docidentifier>
-</bibitem><bibitem anchor="korenman" id="_6f1ef5e0-5a67-8d22-056d-808139d01b73">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="korenman" id="_3d590736-22c4-d75c-9467-193183e4277c">
   <formattedref format="application/x-isodoc+xml">Korenman, I.M., “Analytical chemistry of low concentrations”, translated from Russian and published by Israel Program for Scientific Publications, Jerusalem (1968)</formattedref>
   <docidentifier type="metanorma">[26]</docidentifier>
-</bibitem><bibitem anchor="lowenthal1973" id="_3fbb18c8-9c46-6fa7-db76-d48a79ec7eee">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="lowenthal1973" id="_2ee235c2-8a48-7eae-802c-cd723e128c51">
   <formattedref format="application/x-isodoc+xml">Lowenthal, G.C. and Wyllie, H.A., “The storage of radioactive solutions with standardized disintegration rates”, Nucl. Instr. and Meth. <strong>112</strong>, 367 (1973)</formattedref>
   <docidentifier type="metanorma">[27]</docidentifier>
-</bibitem><bibitem anchor="smith" id="_48ca66bf-5185-6f3d-3795-46ae3bfcd0d9">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="smith" id="_6164f8ac-9c6e-4bb7-5d0b-69f3eb904ab7">
   <formattedref format="application/x-isodoc+xml">Smith, V.C., “Preparation of ultrapure water”, in “Ultrapurity; methods and techniques”, edited by Zief and Speights, Dekker, New York (1972)</formattedref>
   <docidentifier type="metanorma">[28]</docidentifier>
-</bibitem><bibitem anchor="usaec" id="_7cdb0040-2bea-9199-057b-070d4d43f067">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="usaec" id="_4d5fb7bf-4cf8-2876-c4b8-be25716684b3">
   <formattedref format="application/x-isodoc+xml">“Users’ guides for radioactivity standards” (revised edition), National Academy of Sciences-National Research Council, Nuclear Science Series Monograph NAS-NS-3115, USAEC Technical Information Center (1974)</formattedref>
   <docidentifier type="metanorma">[29]</docidentifier>
-</bibitem><bibitem anchor="grinberg" id="_396dc59f-0d6f-0e1e-df9c-64c7e54b9120">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="grinberg" id="_17a93052-0dbe-2517-72eb-534789c1fbd8">
   <formattedref format="application/x-isodoc+xml">Grinberg, B., Private communication (1972)</formattedref>
   <docidentifier type="metanorma">[30]</docidentifier>
-</bibitem><bibitem anchor="williams" id="_131c4912-10da-aecb-e32b-fbaf41cf1bf9">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="williams" id="_571e4ec7-75e0-affc-caae-8d38f59c3bff">
   <formattedref format="application/x-isodoc+xml">Williams, A., Private communication (1974)</formattedref>
   <docidentifier type="metanorma">[31]</docidentifier>
-</bibitem><bibitem anchor="eijk1973" id="_28498f46-e50f-4c19-e9a2-26e028affd3d">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="eijk1973" id="_b22d097b-2e94-7077-0a2a-2203c8643c68">
   <formattedref format="application/x-isodoc+xml">van der Eijk, W., Oldenhof, W. and Zehner, W., “Preparation of thin sources, a review”, Nucl. Instr. and Meth. <strong>112</strong>, 343 (1973)</formattedref>
   <docidentifier type="metanorma">[32]</docidentifier>
-</bibitem><bibitem anchor="garfinkel" id="_3cbb017a-d075-b488-81e3-5f0997a175bc">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="garfinkel" id="_73a5a197-48b0-4472-a3ac-29ada1fd0534">
   <formattedref format="application/x-isodoc+xml">Garfinkel, S.B., Mann, W.B., Medlock, R.W. and Yura, O., “The calibration of the National Bureau of Standards’ tritiated-toluene standard of radioactivity”, Int. J. Appl. Radiat. and Isotopes <strong>16</strong>, 27 (1965)</formattedref>
   <docidentifier type="metanorma">[33]</docidentifier>
-</bibitem><bibitem anchor="vaninbroukx" id="_4a40a3a2-c835-d5ff-bab6-886f8d0eef7d">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="vaninbroukx" id="_8b1cd45d-91b9-a180-35ba-050418bb8614">
   <formattedref format="application/x-isodoc+xml">Vaninbroukx, R. and Spernol, A., “High precision <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4</mn>
@@ -2770,22 +2823,34 @@ uncertainty due to wall attenuation is not greater than <stem block="false" type
   </mstyle>
 </math><asciimath>4pi</asciimath></stem> liquid scintillation counting”, Int. J. Appl. Radiat. and Isotopes <strong>16</strong>, 289 (1965)</formattedref>
   <docidentifier type="metanorma">[34]</docidentifier>
-</bibitem><bibitem anchor="scales" id="_d887bf80-7936-a0c0-1b0a-a9620da51546">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="scales" id="_d0eafecf-4211-73a6-63ed-226174f34b2d">
   <formattedref format="application/x-isodoc+xml">Scales, B., “Questions regarding the occurrence of unwanted luminescence in liquid scintillation samples”, in “Liquid Scintillation Counting”, Vol. 2, Heyden, London (1972)</formattedref>
   <docidentifier type="metanorma">[35]</docidentifier>
-</bibitem><bibitem anchor="goodier" id="_ea60a1fb-2a1b-637d-6f59-f4ad8c40543c">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="goodier" id="_2e201ebc-a093-dd50-2069-fa48e18a76e2">
   <formattedref format="application/x-isodoc+xml">Goodier, I.W. and Pritchard, D.H., “Evaporation losses during radioisotope standardization procedures”, Int. J. Appl. Radiat. and Isotopes <strong>18</strong>, 332 (1967)</formattedref>
   <docidentifier type="metanorma">[36]</docidentifier>
-</bibitem><bibitem anchor="adams" id="_5847f224-5a2d-9941-5d78-1bacfb1ca72e">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="adams" id="_f73030e0-1b52-9565-c5f0-0e88f5a9f770">
   <formattedref format="application/x-isodoc+xml">Adams, P.B., “Glass containers for ultrapure solutions”, in “Ultrapurity; methods and techniques”, edited by Zief and Speights, Dekker, New York (1972)</formattedref>
   <docidentifier type="metanorma">[37]</docidentifier>
-</bibitem><bibitem anchor="colas" id="_321f867e-d3ad-9dd0-5ba1-5b33fd614ed2">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="colas" id="_c762e758-5831-1850-8f1b-ecfb8e51e701">
   <formattedref format="application/x-isodoc+xml">Colas, C. and Müller, J.W., “On the practical evaluation of the buoyancy correction for radioactive standard sources”, Bureau International des Poids et Mesures, Rapport BIPM-104 (1967)</formattedref>
   <docidentifier type="metanorma">[38]</docidentifier>
-</bibitem><bibitem anchor="faure" id="_5018208b-fdf3-df6f-5335-5ac3c2bd38eb">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="faure" id="_2e12a7d8-ad13-42a3-63ed-29782dc1a9ca">
   <formattedref format="application/x-isodoc+xml">Faure, P.K. and Gledhill, J.A., “Rapid method for applying vacuum corrections to weights”, Anal. Chem. <strong>30</strong>, 1304 (1958)</formattedref>
   <docidentifier type="metanorma">[39]</docidentifier>
-</bibitem><bibitem anchor="weiss" id="_28f24fe4-9102-7be0-f3f2-a7edb8bc4bcb">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="weiss" id="_527559e9-f6c5-d3b9-5f1d-3a3c11d3ef3d">
   <formattedref format="application/x-isodoc+xml">Weiss, H.M., “<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4</mn>
@@ -2794,12 +2859,18 @@ uncertainty due to wall attenuation is not greater than <stem block="false" type
   </mstyle>
 </math><asciimath>4pi gamma</asciimath></stem>-ionization chamber measurements”, Nucl. Instr. and Meth. <strong>112</strong>, 291 (1973)</formattedref>
   <docidentifier type="metanorma">[40]</docidentifier>
-</bibitem><bibitem anchor="mann" id="_d882b13d-f3b6-eef5-1d70-0604610c2762">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="mann" id="_b80c9979-b0ef-e1dd-0e77-c956534be207">
   <formattedref format="application/x-isodoc+xml">Mann, W.B. and Seliger, H.H., “Preparation, maintenance and application of standards of radioactivity”, National Bureau of Standards, Washington, Circular 594 (1958)</formattedref>
   <docidentifier type="metanorma">[41]</docidentifier>
-</bibitem><bibitem anchor="campion1965" id="_fd110dfd-848a-007b-c1ae-176e0b986328">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="campion1965" id="_0301d5f3-05b3-18a0-95d9-34a7316e9806">
   <formattedref format="application/x-isodoc+xml">Campion, P.J. and Williams, A., “Standards of radioactivity”, Health Physics <strong>11</strong>, 769 (1965)</formattedref>
   <docidentifier type="metanorma">[42]</docidentifier>
+  <language>en</language>
+  <script>Latn</script>
 </bibitem>
 
 

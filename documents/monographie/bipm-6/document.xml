@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.2" schema-version="v2.1.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.0" schema-version="v2.2.0" flavor="bipm">
 <bibdata type="standard">
-<title language="en" format="text/plain" type="title-main">Thermodynamic Stability of Radioactivity Standard Solutions</title>
-
-<docidentifier primary="true" type="BIPM">BIPM BIPM-6</docidentifier><docnumber>BIPM-6</docnumber><contributor><role type="author"/><organization>
+<title language="en" type="title-main">Thermodynamic Stability of Radioactivity Standard Solutions</title>
+<docidentifier primary="true" type="BIPM">BIPM BIPM-6</docidentifier><docnumber>BIPM-6</docnumber><date type="updated"><on>2007-04</on></date><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"/><person>
 <name><completename>Marie-Gabrielle Iroulart</completename></name>
-</person></contributor><contributor><role type="publisher"/><organization>
+</person></contributor><contributor><role type="author"><description>committee</description></role><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2007-04</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2007</from><owner><organization>
+<subdivision type="Committee">
+<name language="en">Consultative Committee for Ionizing Radiation</name>
+
+<name language="fr">Comité Consultatif des Rayonnements Ionisants</name>
+<identifier>CCRI</identifier><identifier type="full">CCRI</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>monographie</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="CCRI" language="en" script="Latn">Consultative Committee for Ionizing Radiation</committee><committee acronym="CCRI" language="fr" script="Latn">Comité Consultatif des Rayonnements Ionisants</committee></editorialgroup><structuredidentifier><docnumber>BIPM-6</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#D_M-1T-1" id="U_Bq.g-1">
-          <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version>2007-04</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2007</from><owner><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>monographie</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-6</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#D_M-1T-1" id="U_Bq.g-1">
+          <UnitSystem name="SI" type="SI_derived" lang="en"/>
           <UnitName lang="en">Bq*g^-1</UnitName>
           <UnitSymbol type="HTML">Bq g
             <sup>−1</sup>
@@ -22,9 +28,7 @@
               <mi mathvariant="normal">Bq</mi>
               <mo rspace="thickmathspace">⁢</mo>
               <msup>
-                <mrow>
-                  <mi mathvariant="normal">g</mi>
-                </mrow>
+                <mi mathvariant="normal">g</mi>
                 <mrow>
                   <mo>−</mo>
                   <mn>1</mn>
@@ -37,7 +41,7 @@
             <EnumeratedRootUnit unit="gram" powerNumerator="-1"/>
           </RootUnits>
         </Unit><Unit dimensionURL="#D_L2MT4I2" id="U_MOhm">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">MOhm</UnitName>
         <UnitSymbol type="HTML">MΩ</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -49,7 +53,7 @@
           <EnumeratedRootUnit unit="ohm" prefix="M"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_cm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">cm</UnitName>
         <UnitSymbol type="HTML">cm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -61,7 +65,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu23">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">degree Celsius</UnitName>
         <UnitSymbol type="HTML">°C</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -70,7 +74,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit id="U_NISTu365">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">milliliter</UnitName>
         <UnitSymbol type="HTML">ml</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -82,7 +86,7 @@
           <EnumeratedRootUnit unit="litre" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_M-1T-1" id="U_kBq.g-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">kBq*g^-1</UnitName>
         <UnitSymbol type="HTML">kBq g
           <sup>−1</sup>
@@ -92,9 +96,7 @@
             <mi mathvariant="normal">kBq</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">g</mi>
-              </mrow>
+              <mi mathvariant="normal">g</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -107,9 +109,9 @@
           <EnumeratedRootUnit unit="gram" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_M0" id="U_ug.g-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">ug*g^-1</UnitName>
-        <UnitSymbol type="HTML">g g
+        <UnitSymbol type="HTML">µg g
           <sup>−1</sup>
         </UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -117,9 +119,7 @@
             <mi mathvariant="normal">µg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">g</mi>
-              </mrow>
+              <mi mathvariant="normal">g</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -132,7 +132,7 @@
           <EnumeratedRootUnit unit="gram" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_M-1T-1" id="U_MBq.g-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">MBq*g^-1</UnitName>
         <UnitSymbol type="HTML">MBq g
           <sup>−1</sup>
@@ -142,9 +142,7 @@
             <mi mathvariant="normal">MBq</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">g</mi>
-              </mrow>
+              <mi mathvariant="normal">g</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -157,7 +155,7 @@
           <EnumeratedRootUnit unit="gram" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd2" id="U_mg">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mg</UnitName>
         <UnitSymbol type="HTML">mg</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -168,8 +166,8 @@
         <RootUnits>
           <EnumeratedRootUnit unit="gram" prefix="m"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd8" id="U_cm2">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L2" id="U_cm2">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">cm^2</UnitName>
         <UnitSymbol type="HTML">cm
           <sup>2</sup>
@@ -177,12 +175,8 @@
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
-              <mrow>
-                <mn>2</mn>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
+              <mn>2</mn>
             </msup>
           </math>
         </UnitSymbol>
@@ -190,10 +184,10 @@
           <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="2"/>
         </RootUnits>
       </Unit><Unit id="U_ug.mL-1">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">ug*mL^-1</UnitName>
-        <UnitSymbol type="HTML">g mL
+        <UnitSymbol type="HTML">µg mL
           <sup>−1</sup>
         </UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -201,9 +195,7 @@
             <mi mathvariant="normal">µg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mL</mi>
-              </mrow>
+              <mi mathvariant="normal">mL</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -215,8 +207,8 @@
           <EnumeratedRootUnit unit="gram" prefix="u"/>
           <EnumeratedRootUnit unit="litre" prefix="m" powerNumerator="-1"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd51" id="U_mg.cm-2">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L-2M" id="U_mg.cm-2">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">mg*cm^-2</UnitName>
         <UnitSymbol type="HTML">mg cm
           <sup>−2</sup>
@@ -226,9 +218,7 @@
             <mi mathvariant="normal">mg</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>2</mn>
@@ -241,8 +231,8 @@
           <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="-2"/>
         </RootUnits>
       </Unit><Unit id="U_g.L-1">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">g*L^-1</UnitName>
         <UnitSymbol type="HTML">g L
           <sup>−1</sup>
@@ -252,9 +242,7 @@
             <mi mathvariant="normal">g</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">L</mi>
-              </mrow>
+              <mi mathvariant="normal">L</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -267,7 +255,7 @@
           <EnumeratedRootUnit unit="litre" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">kelvin</UnitName>
         <UnitSymbol type="HTML">K</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -276,7 +264,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd1" id="U_nm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">nm</UnitName>
         <UnitSymbol type="HTML">nm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -288,7 +276,7 @@
           <EnumeratedRootUnit unit="metre" prefix="n"/>
         </RootUnits>
       </Unit></UnitSet><QuantitySet><Quantity id="NISTq10" quantityType="base" dimensionURL="#NISTd10">
-        <QuantityName lang="en-US">volume</QuantityName>
+        <QuantityName lang="en">volume</QuantityName>
       </Quantity></QuantitySet><DimensionSet><Dimension id="D_M-1T-1">
           <Mass symbol="M" powerNumerator="-1"/>
           <Time symbol="T" powerNumerator="-1"/>
@@ -307,9 +295,9 @@
         <Mass symbol="M" powerNumerator="0"/>
       </Dimension><Dimension id="NISTd2">
         <Mass symbol="M" powerNumerator="1"/>
-      </Dimension><Dimension id="NISTd8">
+      </Dimension><Dimension id="D_L2">
         <Length symbol="L" powerNumerator="2"/>
-      </Dimension><Dimension id="NISTd51">
+      </Dimension><Dimension id="D_L-2M">
         <Length symbol="L" powerNumerator="-2"/>
         <Mass symbol="M" powerNumerator="1"/>
       </Dimension></DimensionSet><PrefixSet><Prefix prefixBase="10" prefixPower="6" id="NISTp10_6">
@@ -348,11 +336,10 @@
         <PrefixSymbol type="unicode">n</PrefixSymbol>
         <PrefixSymbol type="LaTeX">n</PrefixSymbol>
         <PrefixSymbol type="HTML">n</PrefixSymbol>
-      </Prefix></PrefixSet></UnitsML><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+      </Prefix></PrefixSet></UnitsML><presentation-metadata><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
 <boilerplate><copyright-statement>
 
-<clause id="_9af2be95-d07a-410e-32ff-3087398fa006" obligation="normative">
-<p id="_828a0cf3-3586-04a9-01a1-af1410cfe9a2" align="center">© Bureau International des Poids et Mesures 2007 all rights reserved</p>
+<clause id="_7d766ce2-0aaf-8a49-6a07-6add85f53442" obligation="normative"><p id="_828a0cf3-3586-04a9-01a1-af1410cfe9a2" align="center">© Bureau International des Poids et Mesures 2007 all rights reserved</p>
 </clause>
 </copyright-statement>
 
@@ -482,9 +469,9 @@
 </ul>
 </clause>
 
-<clause id="_e16bd290-5c04-bbf0-82fe-a4c6353cfd8c" obligation="normative">
+<clause id="_9fc8f399-cb25-1906-ca32-c4d080dc4060" obligation="normative">
 <title id="_6444270e-bc2a-006d-4934-e25f4cb09000">Chemical Properties of Solutions</title>
-<clause id="_c6939766-0e89-3fa1-3cd5-bd7ff6fa7ab6" obligation="normative">
+<clause id="_2d8a8283-20e5-cef0-9d7d-7763f8c840db" obligation="normative">
 <title id="_42d44358-32eb-ac81-5292-f3f6b143846c">Solubilization media</title>
 <clause id="_731eacbb-0157-23ba-3628-20a22eb15fa4" obligation="normative">
 <title id="_590257bc-5156-ddcb-b95d-aeb80686fbca">Ultra-pure water</title>
@@ -803,7 +790,7 @@
 <image id="_d3d96663-90ce-05ec-4454-11d23e6c7eac" src="data:image/png;base64,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J5+cQa6cmnLMNZFIJCYXMeYq/CEFyIplVsXRHg+CYJNc+wQvh+ZqvFWUposvvrjZc889i3n4hhtuKC8QuZIk10QikZhcBLkyC1t27pZbbpmxnmuS65ADuZrfuttuuzU33XRTidbENHz88ceXsdbUXBOJRGJqUGuunE1jKs6g2uMk1z4CuYrOhFy/8IUvlPFWY6802L/+9a/FNMypyUselJ0/kUgkEn+PIFdjrhG4P72FOwLkOt9885W5rbfddltz2GGHlR4Sj2GRQIDmmuSaSCQSk4tac0Wu2ufHH3/82bP9R5JrHxHkahFe6wSeffbZzeqrr958/OMffzZFk2OuiUQiMQVArhFbWPjDiy66qPnDH/7w7Nn+I8m1j2iTqwHzLbfcsll66aWb7bbbrvnKV77S/PGPf8y5rolEIjHJCM2VM9OLXvSismpZznPtCOox18suu6zZe++9y/JGFk+3CsMb3vCG5oILLiju34lEIpGYPAS5apNf+tKXNueee+6M4bpBIMm1j0CuvIXNbTVB2XzXF7zgBcW+T174wheWua8PPvhgedGJRCKRmBwEuVoVRxCJY489tnniiSeePdt/JLn2EUGuNNfDDz+8WWuttQq5epFzzDFHIVhTc+65557iOZxIJBKJyUGQa4y5nnPOOam5dgXIVYSmLbbYojn55JObXXbZpay+gFSRK83VGOwPfvCD1FwTiURiEhHkaoiOafj2228vUyMHhSTXPsJi6UsssURxYOIpzKbPW9jgORv/8ssv31x11VUD9VBLJBKJxN+jJldy4403Nv/xH//x7Nn+I8m1j6C5Lrjggs2mm27a3H333YVEzzjjjGKCmGeeeZq77rqrvMycipNIJBKTC+QaU3E4mcZ6roNCkmsfQXM15ioyE6clc1pFajJp+e1vf3uZfmOsNck1kUgkJhdBrtpjw3QHHXRQ89hjj5X2OGMLDzlorgL3v+c97ynzXAWFFsBflCaaK002YwsnEonE5CPMwkLSmut6+eWXl7gDSa4dAHJdbLHFmuWWW668uL/85S/N17/+9eatb31rsfH/8Ic/LAPoGUAikUgkJhehuYpFwMl0jz32aB566KFnz/YffSdXxFGTR/xuSxvRe2if65V2WBHkuvjii5fQWoL1I9Rdd921TMf57Gc/2/z7v/97p/KUSCQS0wFBrnPPPXeZxXHSSSc1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kJb93/SkHXbYoVlyySWLOdhYwEc/+tHOxFZOJBKJYUZNrqZ4UoAoMaaI3nLLLSMO3fUDSa59Qk2unLaCXHu9OGmJcwJocPYSPAO5fuYznynEO9K1iUQikRgbkKshNmLVsgsvvLCYhc1eobkmuXYAvch1JHjhelJBsgjWvF/kGlNxklwTiURiYgjN1birMVftK/8W5KrNpcj0si72A0mufcKskmsQpy2i9eIXX3zxEt3p61//erlfIpFIJMaPIFeaq6iBd955ZyFW8RZEx3vssceeTdl/JLn2CbNCrm0gWAPr++23X3FwGnTMy0QikZgdEBZC29///vclIp6pjwhWfAWEm5rrkGMi5ArI9NBDDy0Bpb/4xS82f/3rX589k0gkEonxAKkyCRPxFDgx0VopMfbFXxjU8NuUkysS+d73vlciFpEHH3ywk8RSk6upOPIxVni55luZ4Gz+FXIWaEPFiPODqgCJRCIxXUErDXLl0CS4D811WpNrEMZTTz3VnHjiiWVVHGLVAuESu4aaXDfddNNi23dsLC9OGpqriCFzzz13ifDEq40nm8qBZAdlukgkEonpitBctcWclz7ykY8Ux1Hx3y+99NLiTDptyfXxxx9v9t133xLIX0zevfbaqwTw7xpqchV5iT1/rG7eiBO5Cua/2GKLlQD+p5xySvntvrRaFSSRSCQSY4O2F7lqQ23NcxVHALlqp3kO/+pXv5pe5CozCMVW5k499dSy3Bwxz7OLQRRqcn3rW99a1qhFmI7PDMoCgf7lL38pq+QwWRx22GFlMYMg13RwSiQSiVmDtjXIleYaS84JInHjjTeWIchBWQWnlFwj4zxlBbOXUdqeguga5CPCH77//e8v48jRa5oZpJNvMO5Me7UmLDNxEG+SayKRSMwatJ8x5opcDzrooEKuc801VzfHXD1sL4lzQaztc4H272FGPD8SpW3y9g1v4cjnzBDkavvnP/+5WXvttZs111yzueyyy8rxINculUsikUhMNZCq9lP7LDjPZz/72bL6mNjCnQt/6EHbxBkP3+tcm4DqNMMOzxmD5eTMM88sA+Uziy3chnTIU1pzsZiGOTUdddRRxX08el6JRCKRGDu0qdE+m9N60003lQhNZmXcdttthXgHhYGQay1txHGZpqnZRjoE0z42zPCcnjme+xvf+EYJwG+1m+985zvPppo55DUI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" mimetype="image/png" height="auto" width="auto" filename="images/img01.png"/></figure>
 </clause>
 
-<clause id="_aa48254a-5320-6b3f-55a0-058ec36ce158" obligation="normative">
+<clause id="_fbd2265b-2322-f9b3-9b59-aa345132751b" obligation="normative">
 <title id="_8d4095b6-6b04-02b2-408d-4fc54a04605d">Acid media</title>
 <p id="_eaade2fa-277b-3dda-3894-5fcd3b57ced4">The observation was made that, for most of the standard solutions prepared by the Henri Becquerel National Laboratory, most of the solubilization media were acid media of different concentrations. The effect of the concentration of acids on corrosion of the glass ampoules in which the solutions are generally stored is considered later (<xref target="mechanisms"/>). The extremely corrosive effect of alkaline solutions is also covered.</p>
 
@@ -972,7 +959,7 @@
 
 <p id="_dd90421b-e097-a594-b1d9-fb9ddb1a1165">Analysis of the results shows that difference in concentration of the carrier did not affect the ionization chamber measurement. However, a change in the molar concentration of the hydrochloric acid from 0.1 M to 1 M resulted in underestimating the measured activity concentration by around 2 %. This underestimation can be explained by the increase in the self-absorption of the low-energy photons emitted by the <sup>133</sup>Ba in the more concentrated acid medium.</p>
 
-<table id="_6b22bc82-8cbb-34a2-9b61-dacd690f2fc7" anchor="table1">
+<table id="_101a5c83-4438-abd9-f73f-9d7846411afc" anchor="table1">
 <name id="_925beda1-538b-984b-faee-710bae7a0484">Activity concentration of <sup>133</sup>Ba solution varying with: * carrier concentration: <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>15</mn>
@@ -1020,10 +1007,9 @@
     </mrow>
   </mstyle>
 </math><asciimath>150 "unitsml(ug/g)"</asciimath></stem> of BaCl<sub>2</sub>, * molarity of the hydrochloric acid solution: 0.1 M and 1 M. Measurements made in an ionization chamber sensitive to x-rays. The system was calibrated with a solution of BaCl<sub>2</sub> in 0.1 M HCl. The carrier concentration of this solution was unknown.</name>
-<thead><tr id="_cbdf27fc-cb47-f0b0-212a-ddea8adaab57"><th id="_a58bfac4-76cc-fad1-7343-3c8aab9b5d28" valign="top" align="center">Chemical compositions of the sources measured</th>
-<th id="_2855e5fb-6467-a9ca-93f9-da2443e40111" valign="top" align="center">Measured activity concentration (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<thead><tr id="_3b75abea-952f-f565-1a9e-60b340c8f1b7"><th id="_a58bfac4-76cc-fad1-7343-3c8aab9b5d28" valign="top" align="center">Chemical compositions of the sources measured</th>
+<th id="_3b743375-30fe-eed3-fe50-13bd6c381aa5" valign="top" align="center">Measured activity concentration (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_kBq.g-1">
       <mstyle mathvariant="normal">
         <mi>kBq</mi>
@@ -1045,9 +1031,8 @@
   </mstyle>
 </math><asciimath>"unitsml(kBq/g)"</asciimath></stem>)</th>
 <th id="_3569eab2-3b1a-0666-7c8f-7935cedb76f4" valign="top" align="center">Uncertainty (%)</th>
-<th id="_b393a5d5-1029-72c4-172d-d3a563c4b620" valign="top" align="center">Dilution activity concentration (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_62cd3f38-afd0-114b-4124-dcb3aa6eb528" valign="top" align="center">Dilution activity concentration (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_kBq.g-1">
       <mstyle mathvariant="normal">
         <mi>kBq</mi>
@@ -1192,7 +1177,7 @@
 </clause>
 </clause>
 
-<clause id="_97262c4b-9cb8-7864-36d5-737169b76921" obligation="normative">
+<clause id="_35662f2d-1229-31b2-03c6-de804ba56e45" obligation="normative">
 <title id="_124c5242-df22-dedb-e802-92a36a6a07ad">Carriers</title>
 <p id="_bb14b364-9801-3d1f-52d1-2d4251d0c421">As a general rule, the molar concentrations of the radionuclides in solution are very low. For instance, an activity concentration of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1271,7 +1256,7 @@
 <p id="_6a46d7dd-2888-b523-e6bc-286c5df14777">The carrier of a radioelement<fn id="_0d363702-48da-67b6-e268-34e4670c6c25" reference="2"><p id="_1a79079e-85b1-3ec3-e324-d14fbb14310c">A radioelement is an element having only radioactive isotopes.</p>
 </fn> (if its concentration is very low) can be a radioactive isotope with a long half-life or a chemically homologous element in the periodic chart (for instance Barium for Radium, Cesium for Francium, or Tellurium for Polonium (<eref type="inline" bibitemid="adloff3" citeas="Adloff and Guillaumont, 1993"/>).</p>
 
-<clause id="_9079aae4-0db0-26ba-6915-7d51200ad549" obligation="normative">
+<clause id="_cda67030-41c8-bc76-b963-cc2d59236fd2" obligation="normative">
 <title id="_cdab8682-d653-5462-1a74-f5cf1e3ba7b1">Concentration</title>
 <p id="_d7831a61-0d87-5722-5619-b32a5e254984">Concentration of the carrier must be selected on the basis of two main criteria:</p>
 
@@ -1283,9 +1268,8 @@
 
 <p id="_1415e841-a219-ea9d-df16-16eb3e64e448">A suitable compromise is therefore required.</p>
 
-<p id="_94449332-b50e-aed1-cc4a-04555c0ee0b3">The carrier concentration is expressed in micrograms of salt (with the detailed chemical formula) per gram of solution (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_24464c78-dbf2-58a4-42a6-1dc6a9ce9be5">The carrier concentration is expressed in micrograms of salt (with the detailed chemical formula) per gram of solution (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_ug.g-1">
       <mstyle mathvariant="normal">
         <mi>µg</mi>
@@ -1633,9 +1617,9 @@
 </clause>
 </clause>
 
-<clause id="_27d3bc34-0b2d-f425-9fd0-28e1da867f9a" anchor="method" obligation="normative">
+<clause id="_c0a83b0e-9a98-6ecf-5cf9-125b5b58f2a8" anchor="method" obligation="normative">
 <title id="_6f71448e-9289-8121-7d14-81b6665a1b81">Method of Preparation, Packing and Storage</title>
-<clause id="_538abab7-3fdd-78e0-e143-c258af877e82" anchor="glass" obligation="normative">
+<clause id="_28ea523e-2761-6e9f-aed6-ce00d65f9e7b" anchor="glass" obligation="normative">
 <title id="_c3065843-477b-a5e6-451f-9119c4018a8a">Glass ampoules</title>
 <note id="_6797736b-bdbd-8dd6-81ea-3193760a44ae"><p id="_7ae8f068-7aa9-9e69-ad2a-01a18b75f1a0">The glass ampoules usually used by the LNHB are referred to as “<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1875,13 +1859,13 @@
 </figure>
 </clause>
 
-<clause id="_1ae41658-2e42-a67e-8e97-60701fa1e2d1" anchor="mechanisms" obligation="normative">
+<clause id="_1f17f985-9cd7-9934-7467-8c38e6b37fdf" anchor="mechanisms" obligation="normative">
 <title id="_0e0ded29-9b90-f3f1-4d90-32b0e6bf9386">Mechanisms of dissolution of glass</title>
 <p id="_8882b688-f2ae-bfd0-5ae7-0b9d9a5347f0">Experimental work on the dissolution of a wide variety of crystallized and vitreous silicate materials has made it possible to develop and apply theories enabling modelling of the phenomena of corrosion in aqueous solutions (<eref type="inline" bibitemid="advocat6" citeas="Advocat et al., 1993b"/>).</p>
 
 <p id="_4783d496-f20f-cbc0-7169-0819caf08740">According to these theories, all heterogeneous chemical reactions proceed as elementary reactions located at the solid-solution interface. The overall process consists of five stages (see <xref target="fig4"/>):</p>
 
-<ol id="_408b1c37-1e52-8dfa-c462-8cf4a1a2bdb9" type="arabic"><li id="_36f3ceaa-393a-7ad9-ac52-bb7364d3d836" anchor="s1"><p id="_0d228e37-44fe-c575-93d8-882ee04ea77c">Transport of reagents to the surface of the glass.</p>
+<ol id="_408b1c37-1e52-8dfa-c462-8cf4a1a2bdb9" type="arabic" class="steps"><li id="_36f3ceaa-393a-7ad9-ac52-bb7364d3d836" anchor="s1"><p id="_0d228e37-44fe-c575-93d8-882ee04ea77c">Transport of reagents to the surface of the glass.</p>
 </li>
 <li id="_9fea0c78-7f4c-f3dd-7166-5bf556981212" anchor="s2"><p id="_5e1e8498-1f7b-7c79-c381-107e864b605c">Adsorption of the reagents at the surface of the glass.</p>
 </li>
@@ -2135,15 +2119,14 @@
 
 <p id="_0a8283bc-d0c2-230f-4a88-1f6b5fa264aa">In the data in <xref target="table4"/>, it can be seen that, for the same storage time of solution, when the concentration of hydrochloric acid is increased from 0.1 M to 1 M (10 times), the concentration of the solids removed from the glass also increases (approximately twice as great).</p>
 
-<table id="_90ba8775-7142-f9e3-4a44-fb0ae50d083f" anchor="table4">
+<table id="_e7989871-8f47-9775-3c75-0d261e8a86da" anchor="table4">
 <name id="_858f234d-bbf7-f254-4070-343c571e2c63">Concentrations of inactive solids in water and hydrochloric acid removed from a Pyrex<sup>®</sup> glass container over a specific time of storage. Reprinted from (<eref type="inline" bibitemid="lowenthal25" citeas="Lowenthal and Wyllie, 1973"/>). Copyright (1973), with permission from Elsevier.</name>
-<tbody><tr id="_532204c5-e727-fe05-80aa-3d807fd6eba9"><th id="_5312c8f7-1ba2-7dc2-9d1b-b177acf016fc" valign="top" align="center">TYPE OF SOLVENT</th>
+<tbody><tr id="_b37dfdf8-beed-de91-fc4b-e1b7026cf579"><th id="_5312c8f7-1ba2-7dc2-9d1b-b177acf016fc" valign="top" align="center">TYPE OF SOLVENT</th>
 <th id="_40a27a88-38d5-3219-9437-578009a1c8a7" valign="top" align="center">STORAGE TIME</th>
 <th id="_c58f7aa6-b530-ec6f-458e-cade78363ad5" valign="top" align="center">MATERIAL OF STORAGE VESSEL</th>
-<th id="_9db88186-e8c9-8287-949f-1b0a05074546" valign="top" align="center">RESULTS<fn id="_0b13f862-ed55-6ee8-368d-5c3ab7f05b63" reference="a"><p id="_acacf983-4c5b-dcf9-d4aa-551782a33f9d">Each result refers to an independent measurement.</p>
+<th id="_7d19e425-2cd0-a96e-7c0a-5fae44e6749b" valign="top" align="center">RESULTS<fn id="_0b13f862-ed55-6ee8-368d-5c3ab7f05b63" reference="a"><p id="_acacf983-4c5b-dcf9-d4aa-551782a33f9d">Each result refers to an independent measurement.</p>
 </fn> (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_ug.mL-1">
       <mstyle mathvariant="normal">
         <mi>µg</mi>
@@ -2289,9 +2272,8 @@
 
 <p id="_29c5e99b-08bc-37ee-548e-c03d87e504fd">It can be seen that 1 M HCl hydrochloric acid is therefore more corrosive of borosilicate glass than 0.1 M HCl hydrochloric acid. Consequently, if 0.1 M HCl solubilization medium may be used for preparing a standard solution of a given radionuclide (that is if the solution is stable), it is preferable to use it rather than 1 M HCl as it is less corrosive as regards the glass that constitutes the container of the solution (ampoule).</p>
 
-<p id="_7a986dea-92f7-1f84-4734-b270f82ccbc7"><xref target="table6"/> shows a comparison of the corrosion of borosilicate glass by a strong alkali (5 % NaOH) and a strong acid (5 % HCl), in terms of loss of mass (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_6a836efa-f341-6029-608c-9902ace09692"><xref target="table6"/> shows a comparison of the corrosion of borosilicate glass by a strong alkali (5 % NaOH) and a strong acid (5 % HCl), in terms of loss of mass (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mg.cm-2">
       <mstyle mathvariant="normal">
         <mi>mg</mi>
@@ -2326,10 +2308,9 @@
   </mstyle>
 </math><asciimath>95 "unitsml(degC)"</asciimath></stem> (<eref type="inline" bibitemid="adams2" citeas="Adams, 1972"/>). It is found that, under these experimental conditions, alkali attack is in general 1000 times more severe than acid attack.</p>
 
-<table id="_38f96541-3b3a-d929-4cc9-78a943c9908c" anchor="table6">
-<name id="_3dcd2361-1d98-c29a-7820-72945a97aa1a">Comparison of the corrosion of borosilicate glass, expressed in terms of mass loss (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<table id="_24ddd1be-e0ee-f5ac-9fb4-4f532d88f0ac" anchor="table6">
+<name id="_667475c3-96c3-891b-07b2-26c147d2e044">Comparison of the corrosion of borosilicate glass, expressed in terms of mass loss (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mg.cm-2">
       <mstyle mathvariant="normal">
         <mi>mg</mi>
@@ -2351,8 +2332,8 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(mg/cm^2)"</asciimath></stem>), in the presence of a strong alkali and a strong acid (<eref type="inline" bibitemid="adams2" citeas="Adams, 1972"/>). Copyright (1972) by Marcel Dekker Inc. Reprinted by permission via the Copyright Clearance Center.</name>
-<tbody><tr id="_63fe7425-ef8a-432b-828d-efcacb697d9f"><th id="_5100498b-0a55-509a-91e2-59cf153621d0" valign="middle" rowspan="2" align="center">GLASS TYPE</th>
-<th id="_deaaa6c7-5b24-9624-c25a-a3be7b522e7a" colspan="2" valign="top" align="center">Mass loss in 24 hours at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<tbody><tr id="_599171ae-0735-4bf5-01ef-9f6f3f8411c9"><th id="_5100498b-0a55-509a-91e2-59cf153621d0" valign="middle" rowspan="2" align="center">GLASS TYPE</th>
+<th id="_934fdc90-2c9e-60a8-a891-d895d92e3493" colspan="2" valign="top" align="center">Mass loss in 24 hours at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>95</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -2366,7 +2347,6 @@
   </mstyle>
 </math><asciimath>95 "unitsml(degC)"</asciimath></stem> (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mg.cm-2">
       <mstyle mathvariant="normal">
         <mi>mg</mi>
@@ -2424,9 +2404,8 @@
 </tr></tbody>
 </table>
 
-<p id="_3bc9c00c-e9dd-6c73-7cef-1a81da7f48de"><xref target="fig6"/> shows the solubility of borosilicate glass in terms of mass loss (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_f39fe53c-17a6-aa6d-dbc7-c9c6b0888acf"><xref target="fig6"/> shows the solubility of borosilicate glass in terms of mass loss (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mg.cm-2">
       <mstyle mathvariant="normal">
         <mi>mg</mi>
@@ -2461,10 +2440,9 @@
   </mstyle>
 </math><asciimath>95 "unitsml(degC)"</asciimath></stem> (<eref type="inline" bibitemid="adams2" citeas="Adams, 1972"/>). Alkali attack is found to vary greatly with the pH. Mass loss increased by a factor of around 3 for each pH number increment.</p>
 
-<figure id="_d0a5db66-026a-ac3d-3812-0538e0c30cf5" anchor="fig6">
-<name id="_13e8e90f-1274-05dd-eb6d-0c4403f5d0a1">Alkali attack of borosilicate glass in terms of mass loss (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<figure id="_9dcb900e-f4ec-9a37-2613-b0d62124f520" anchor="fig6">
+<name id="_e4dd935f-61d0-fd9b-984e-3616a3926dfe">Alkali attack of borosilicate glass in terms of mass loss (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mg.cm-2">
       <mstyle mathvariant="normal">
         <mi>mg</mi>
@@ -2520,9 +2498,8 @@
 
 <p id="_75df10eb-1201-1e42-d3f7-cd78cdf21585">According to Adams (1972), most organic solvents are capable of significant dissolution of certain glass compositions. An example quoted by the author is the extraction of boron from borosilicate glass by methanol. Surface reactions at the interface between the organic solvent and the glass surface would appear to be involved.</p>
 
-<p id="_29b529c3-19d6-8898-9095-53f63b5f6fe7"><xref target="table7"/> shows the estimated upper limits of borosilicate glass corrosion by several types of reagents: strong alkali, strong chelate, strong acid, water, salts, and organic solvents. Mass loss (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_d309dbb6-2c60-87e9-98f7-6b2fe76a7e71"><xref target="table7"/> shows the estimated upper limits of borosilicate glass corrosion by several types of reagents: strong alkali, strong chelate, strong acid, water, salts, and organic solvents. Mass loss (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mg.cm-2">
       <mstyle mathvariant="normal">
         <mi>mg</mi>
@@ -2569,12 +2546,11 @@
   </mstyle>
 </math><asciimath>100 "unitsml(degC)"</asciimath></stem>). It will be noticed that corrosion tends to increase with temperature. The most corrosive media correspond to strong alkalis and strong chelates. These are followed by strong acid media, salts and water. Finally, organic solvents would appear to be the least corrosive.</p>
 
-<table id="_af4e6a9a-735e-5068-61c1-781157cd0537" anchor="table7">
+<table id="_09bd6ac5-582e-148c-beb0-9985845f739c" anchor="table7">
 <name id="_cf95f42f-de44-ccd0-c9ed-93f107ade194">Estimated upper limits of corrosion of borosilicate glass by various reagents at two different temperatures (<eref type="inline" bibitemid="adams2" citeas="Adams, 1972"/>). Copyright (1972). Reprinted by permission of Marcel Dekker Inc. via the Copyright Clearance Center.</name>
-<tbody><tr id="_adb63a3c-90f3-116b-bcce-2cf8dc7cfc7e"><th id="_01906c96-5173-b9b4-77a5-c017b7ac6f5c" valign="middle" rowspan="3" align="center">TYPE OF GLASS</th>
-<th id="_49a0a56f-a767-ee7e-0316-d3b03c0b2299" valign="middle" rowspan="3" align="center">TEMPERATURE (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<tbody><tr id="_102665f3-20ae-3999-0893-be3ebfe9ae19"><th id="_01906c96-5173-b9b4-77a5-c017b7ac6f5c" valign="middle" rowspan="3" align="center">TYPE OF GLASS</th>
+<th id="_365cfa82-7cb6-3fda-075f-1c110769baf4" valign="middle" rowspan="3" align="center">TEMPERATURE (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu23">
       <mstyle mathvariant="normal">
         <mi>°C</mi>
@@ -3927,24 +3903,32 @@
 </clause>
 
 
-</sections><bibliography><references id="_7702b07d-89cf-5a9b-6391-128b90c307e6" normative="false" obligation="informative">
-<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="adams1" id="_30fb34c8-4076-d446-1c55-8f871c8a7d93">
+</sections><bibliography><references id="_ffdc8ffb-e98b-9424-001f-77f035dcc750" normative="false" obligation="informative">
+<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="adams1" id="_2d8a4376-bf06-f717-054c-e3c3923d4201">
   <formattedref format="application/x-isodoc+xml">Adams P.B., 1969. The biology of glass. <em>New Scientist</em>, <strong>2</strong>, pp. 25-27.</formattedref>
   <docidentifier>Adams, 1969</docidentifier>
   <docnumber>1969</docnumber>
-</bibitem><bibitem anchor="adams2" id="_8a708da7-1c5a-c41d-cc99-b2ae3d176d5a">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="adams2" id="_f2451ea0-7fa6-08a0-d34e-229b2e58b8bc">
   <formattedref format="application/x-isodoc+xml">Adams P.B., 1972. Glass containers for ultrapure solutions. Ultrapurity; methods and techniques. Zief and Speights, Dekker, New York, pp. 293-351 (Chapter 14).</formattedref>
   <docidentifier>Adams, 1972</docidentifier>
   <docnumber>1972</docnumber>
-</bibitem><bibitem anchor="adloff3" id="_29e9cbc8-91aa-2953-acc1-9aab5e2996d2">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="adloff3" id="_bfb2ce24-9dcd-a7ae-bccc-9ee3701348c0">
   <formattedref format="application/x-isodoc+xml">Adloff J.P., Guillaumont R., 1993. Fundamentals of radiochemistry. CRC Press, Inc. U.S.A., p. 145.</formattedref>
   <docidentifier>Adloff and Guillaumont, 1993</docidentifier>
   <docnumber>1993</docnumber>
-</bibitem><bibitem anchor="advocat4" id="_9840e100-5448-3aed-9cbe-714cbe29601d">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="advocat4" id="_164fb06a-f576-906a-5309-ecfb69b42f42">
   <formattedref format="application/x-isodoc+xml">Advocat T., 1991. Les mécanismes de corrosion en phase aqueuse du verre nucléaire R7 T7. Approche expérimentale. Essais de modélisation thermodynamique et cinétique. Thèse d’Université. Université Louis Pasteur (Strasbourg), pp. 15-19.</formattedref>
   <docidentifier>Advocat, 1991</docidentifier>
   <docnumber>1991</docnumber>
-</bibitem><bibitem anchor="advocat5" id="_8d6bf8dc-9d25-cc06-acba-5c2b6842f0d5">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="advocat5" id="_cae9f6df-8650-6986-8ca7-09c32796bb1b">
   <formattedref format="application/x-isodoc+xml">Advocat T., Chouchan J., Ghaleb D., Vernaz E., 1993a. Mécanismes et vitesses de dissolution initiales du verre de référence R7 T7 inactif dans l’eau à <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>50</mn>
@@ -3960,7 +3944,9 @@
 </math><asciimath>50 "unitsml(degC)"</asciimath></stem>. <em>Technical Note</em> NT-SCD-93-24. DCC-DRDD-CEA. Centre de la vallée du Rhône. BP 171. 30207 Bagnols sur Cèze Cedex, pp. 1-75.</formattedref>
   <docidentifier>Advocat et al., 1993a</docidentifier>
   <docnumber>1993a</docnumber>
-</bibitem><bibitem anchor="advocat6" id="_5f72fa5e-220f-61d1-e55e-03c0f8b773fe">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="advocat6" id="_0164d47a-8f14-85f5-790f-92453c354815">
   <formattedref format="application/x-isodoc+xml">], Advocat T., Ghaleb D., Vernaz E., 1993b. Mécanismes et lois cinétiques de la dissolution du verre de référence R7 T7 inactif dans l’eau à <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>90</mn>
@@ -3976,87 +3962,128 @@
 </math><asciimath>90 "unitsml(degC)"</asciimath></stem> : mesures de la vitesse de dissolution initiale. Rapport CEA-R-5633, pp. 1-52.</formattedref>
   <docidentifier>Advocat et al., 1993b</docidentifier>
   <docnumber>1993b</docnumber>
-</bibitem><bibitem anchor="astm7" id="_f9667319-efe0-d84a-2e1b-e40504103d86">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="astm7" id="_9a75f929-4a17-def1-4c08-e78280e07014">
   <formattedref format="application/x-isodoc+xml">ASTM E 438–90, 1990. Standard Specification for Glasses in Laboratory Apparatus. American Society for Testing and Materials, pp. 296-297.</formattedref>
   <docidentifier>ASTM E 438-90, 1990</docidentifier>
   <docnumber>438-90, 1990</docnumber>
-</bibitem><bibitem anchor="bunker8" id="_35e45cd6-8e39-6c56-490a-5d15edbc0997">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="bunker8" id="_fe3ca4ee-3a70-a5be-9740-17134242eb12">
   <formattedref format="application/x-isodoc+xml">Bunker B.C., Tallant D.R., Headley T.J., Turner G.L., Kirkpatrick R.J., 1988. The structure of leached sodium borosilicate glass. <em>Physics and Chemistry of Glasses</em>, <strong>29</strong>, 3, pp. 106-120.</formattedref>
   <docidentifier>Bunker et al., 1988</docidentifier>
   <docnumber>1988</docnumber>
-</bibitem><bibitem anchor="campion9" id="_b9e06c92-f195-e868-dcc8-c3c3e8a8fb78">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="campion9" id="_1153408d-73f9-b2f5-74a7-dae2af4dcb7a">
   <formattedref format="application/x-isodoc+xml">Campion P.J., 1975. Procedures for accurately diluting and dispensing radioactive solutions . <em>Monographie BIPM</em>–1, pp. 1-32.</formattedref>
   <docidentifier>Campion, 1975</docidentifier>
   <docnumber>1975</docnumber>
-</bibitem><bibitem anchor="cavellec10" id="_ba181ba6-d61d-d2db-da50-31e2652bf014">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="cavellec10" id="_b0afe1e6-5003-d058-9537-052309edf165">
   <formattedref format="application/x-isodoc+xml">Cavellec R., Lucas C., Simoni E., Hubert S., 1998. Structural Characterization of Sorption Complexes of Cm(III) at the Phosphate Minerals – Solution Interface. Using Laser Spectrofluorimetry. <em>Radiochimica Acta</em>, <strong>82</strong>, pp. 221-225.</formattedref>
   <docidentifier>Cavellec et al., 1998</docidentifier>
   <docnumber>1998</docnumber>
-</bibitem><bibitem anchor="cotton11" id="_09043d87-4727-7d84-28ab-6b543bf12d8c">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="cotton11" id="_6253102d-abcc-4014-29f3-049d1a2248ba">
   <formattedref format="application/x-isodoc+xml">Cotton F.A., Wilkinson G., 1966. Advanced inorganic chemistry. Interscience Publishers. John Wiley and Sons, Inc, New York, (Chapter 19, § 6).</formattedref>
   <docidentifier>Cotton and Wilkinson, 1966</docidentifier>
   <docnumber>1966</docnumber>
-</bibitem><bibitem anchor="drot12" id="_8d9fafd7-f876-4872-af2a-1bed527599b8">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="drot12" id="_2c46889e-4784-4137-f608-7876b0b09928">
   <formattedref format="application/x-isodoc+xml">Drot R., Simoni E., 1999. Uranium (VI) and Europium (III) Speciation at the Phosphate Compounds – Solutions Interface. <em>Langmuir</em>, <strong>15</strong>, pp. 4820-4827.</formattedref>
   <docidentifier>Drot and Simoni, 1999</docidentifier>
   <docnumber>1999</docnumber>
-</bibitem><bibitem anchor="duval13" id="_f85387e8-2f72-6a27-6928-11d0e417d1a6">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="duval13" id="_4cf03fe4-f235-8a64-4ab4-ecd401a84464">
   <formattedref format="application/x-isodoc+xml">Duval C., Duval R., 1978. Dictionnaire de la chimie et de ses applications. Technique et Documentation, 3<sup>e</sup> édition, p. 989.</formattedref>
   <docidentifier>Duval and Duval, 1978</docidentifier>
   <docnumber>1978</docnumber>
-</bibitem><bibitem anchor="dzombak14" id="_1ae8e567-6423-0008-3e2c-d0a9e30e58ba">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="dzombak14" id="_2c5691a4-26ac-672c-6173-8b1675d637bb">
   <formattedref format="application/x-isodoc+xml">Dzombak D.A., Morel F.M.M. 1990. Surface complexation modeling: Hydrous Ferric Oxide.</formattedref>
   <docidentifier>Dzombak and Morel, 1990</docidentifier>
   <docnumber>1990</docnumber>
-</bibitem><bibitem anchor="wiley15" id="_28fc349e-9385-ecc0-c05c-d1e51395d625">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="wiley15" id="_3be57f37-edb0-d2a8-b7bb-eabf2e3b5031">
   <formattedref format="application/x-isodoc+xml">John Wiley &amp; Sons, New York, pp. 45-47.</formattedref>
   <docidentifier>John Wiley  Sons, Inc</docidentifier>
-  
-</bibitem><bibitem anchor="elga16" id="_8d84cbd6-6e7c-073f-4dd8-05e18c33af6b">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="elga16" id="_2ca1cd83-87df-e2c2-cbd4-a7c49b79f66a">
   <formattedref format="application/x-isodoc+xml">Elga-Vivendi-waters, 2002. <em>Guide de l’eau pure et ultrapure</em>, pp. 2-5.</formattedref>
   <docidentifier>Elga-Vivendi-waters, 2002</docidentifier>
   <docnumber>2002</docnumber>
-</bibitem><bibitem anchor="geelhoed17" id="_73942532-e939-c70b-8a16-cd74268f90f6">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="geelhoed17" id="_930ecf66-9a99-c83e-ba66-2fd99eb8992f">
   <formattedref format="application/x-isodoc+xml">Geelhoed J.S., Hiemstra T., Van Riemsdijk W.H., 1997. Phosphate and sulfate adsorption on goethite: Single anion and competitive adsorption. <em>Geochimica et Cosmochimica Acta</em>, <strong>61</strong>, 12, pp. 2389-2396.</formattedref>
   <docidentifier>Geelhoed et al., 1997</docidentifier>
   <docnumber>1997</docnumber>
-</bibitem><bibitem anchor="hair18" id="_3404e78a-fba0-6bcd-8183-bc8dab49a6d7">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="hair18" id="_70fccad1-8cd9-53bb-d327-f00a94bf1b7d">
   <formattedref format="application/x-isodoc+xml">Hair M.L., 1975. Hydroxyl Groups on Silica Surface. <em>Journal of Non-Crystalline Solids</em>, <strong>19</strong>, pp. 299-309.</formattedref>
   <docidentifier>Hair, 1975</docidentifier>
   <docnumber>1975</docnumber>
-</bibitem><bibitem anchor="iroulart19" id="_6edf679c-54f2-43c3-bd4b-f97a51c6b872">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="iroulart19" id="_626c1937-5746-76cb-c470-88c04ed964ac">
   <formattedref format="application/x-isodoc+xml">Iroulart M.G., 2006. Thermodynamic stability of radioactivity standard solutions. <em>Applied Radiation and Isotopes</em>, <strong>64</strong>, 10-11, pp. 1265-1270.</formattedref>
   <docidentifier>Iroulart, 2006</docidentifier>
   <docnumber>2006</docnumber>
-</bibitem><bibitem anchor="francillon20" id="_9e4b721c-13d6-01ba-88be-febfec481ed6">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="francillon20" id="_4ddcc181-cad0-6c0f-7d48-9673a36d7f6d">
   <formattedref format="application/x-isodoc+xml">Jacquet-Francillon N., 1994. Les verres dans les stockages. <em>Rapport CEA</em>-R-5656, pp. 10-33.</formattedref>
   <docidentifier>Jacquet-Francillon, 1994</docidentifier>
   <docnumber>1994</docnumber>
-</bibitem><bibitem anchor="jang21" id="_618fe0c3-d7c5-d519-6712-d5645fcec3ff">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="jang21" id="_dbf2efb6-48c3-a4b7-f64a-b916e934194b">
   <formattedref format="application/x-isodoc+xml">Jang H.M., Fuerstenau D.W., 1987. The nature of simple monovalent cation-silica interaction as reflected in the spin-lattice relaxation time of <sup>23</sup>Na. <em>Langmuir</em>, <strong>3</strong>, pp. 1114-1118.</formattedref>
   <docidentifier>Jang and Fuerstenau, 1987</docidentifier>
   <docnumber>1987</docnumber>
-</bibitem><bibitem anchor="jolivet22" id="_cea9089e-cbee-8794-e841-fd4c2b5ed793">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="jolivet22" id="_22bcca27-35f7-9afd-ecbf-2468fca2ed8e">
   <formattedref format="application/x-isodoc+xml">Jolivet J.P., 2000. Metal Oxyde Chemistry and Synthesis. From Solution to Solid State. John Wiley &amp; Sons Ltd, Chichester, pp. 211-217.</formattedref>
   <docidentifier>Jolivet, 2000</docidentifier>
   <docnumber>2000</docnumber>
-</bibitem><bibitem anchor="kimble23" id="_b3cc0788-7ccf-96c1-fbf5-77ada4540b06">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="kimble23" id="_fb03c09d-ea41-f323-1d70-e9557984f4a6">
   <formattedref format="application/x-isodoc+xml">Kimble Kontess, 1996. The complete laboratory glassware catalog KK-148, p. XVI.</formattedref>
   <docidentifier>Kimble Kontess, 1996</docidentifier>
   <docnumber>1996</docnumber>
-</bibitem><bibitem anchor="kragten24" id="_d2a2d5e5-03f4-5cd4-3cd4-0f7bfddd1be0">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="kragten24" id="_91f97209-f8e3-99a4-9dc2-afdbaa5d3d83">
   <formattedref format="application/x-isodoc+xml">Kragten J., 1978. Atlas of metal — Ligand Equilibria in Aqueous Solution. Ellis Horwood Limited Publishers, pp. 25-29.</formattedref>
   <docidentifier>Kragten, 1978</docidentifier>
   <docnumber>1978</docnumber>
-</bibitem><bibitem anchor="lowenthal25" id="_8380f742-08de-fc1d-ef56-536657169aa3">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="lowenthal25" id="_47b87202-a596-4b86-abb0-767aeb6b4efb">
   <formattedref format="application/x-isodoc+xml">Lowenthal G.C., Wyllie H.A., 1973. The storage of radioactive solutions with standardised disintegration rates. <em>Nuclear Instruments and Methods</em>, <strong>112</strong>, pp. 367-371.</formattedref>
   <docidentifier>Lowenthal and Wyllie, 1973</docidentifier>
   <docnumber>1973</docnumber>
-</bibitem><bibitem anchor="manning26" id="_89ea14be-2b6e-4b7b-546e-42eb0b713f43">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="manning26" id="_6c74ae03-3e47-b5e0-8d10-db1903972312">
   <formattedref format="application/x-isodoc+xml">Manning B.A., Goldberg S., 1996. Modeling Competitive Adsorption of Arsenate with Phosphate and Molybdate on Oxide Minerals. <em>Soil Science Society of America Journal</em>, <strong>60</strong>, pp. 121-131.</formattedref>
   <docidentifier>Manning and Goldberg, 1996</docidentifier>
   <docnumber>1996</docnumber>
-</bibitem><bibitem anchor="cafferty27" id="_127a1099-d99c-890f-b2fb-50e623f9dab8">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="cafferty27" id="_bebf81e2-9636-c58c-aed3-e982f0592551">
   <formattedref format="application/x-isodoc+xml">Mc Cafferty E., Zettlermoyer A.C., 1971. Adsorption of Water Vapour on <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">α</mi>
@@ -4064,19 +4091,27 @@
 </math><asciimath>alpha</asciimath></stem>-Fe<sub>2</sub>O<sub>3</sub>. <em>Discussions of the Faraday Society</em>, <strong>52</strong>, p. 248.</formattedref>
   <docidentifier>Mc Cafferty and Zettlermoyer, 1971</docidentifier>
   <docnumber>1971</docnumber>
-</bibitem><bibitem anchor="meng28" id="_b20ec446-4042-9a34-2b76-9c075af37b0b">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="meng28" id="_45a80e7c-5db4-91f0-67cb-e2903afdd4a2">
   <formattedref format="application/x-isodoc+xml">Meng X., Letterman R.D., 1993. Modeling Ion Adsorption on Aluminium Hydroxide Modified Silica. <em>Environmental Science &amp; Technology</em>, <strong>27</strong>, 9, pp. 1924-1929.</formattedref>
   <docidentifier>Meng and Letterman, 1993</docidentifier>
   <docnumber>1993</docnumber>
-</bibitem><bibitem anchor="millipore29" id="_147991b1-f646-0fe8-a995-0ff8d1776e72">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="millipore29" id="_a5d971c2-ded6-19a8-6bce-6b3c3e200daa">
   <formattedref format="application/x-isodoc+xml">Millipore, 2002. L’eau pure au laboratoire. Séminaire, Paris (Chapters I and II).</formattedref>
   <docidentifier>Millipore, 2002</docidentifier>
   <docnumber>2002</docnumber>
-</bibitem><bibitem anchor="picot30" id="_14afc768-be69-4411-92b2-dd4e907bb97e">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="picot30" id="_1f7ad7fc-72dd-ec7c-dfcb-4a995db5d5ad">
   <formattedref format="application/x-isodoc+xml">Picot A., Grenouillet P., 1992. La sécurité en laboratoire de chimie et de biochimie. 2<sup>e</sup> édition. Technique et Documentation, Paris, pp. 24-25, 132, 284.</formattedref>
   <docidentifier>Picot and Grenouillet, 1992</docidentifier>
   <docnumber>1992</docnumber>
-</bibitem><bibitem anchor="plummer31" id="_461bf5d2-2189-32a5-c3d4-696d7b3c5720">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="plummer31" id="_3b83c2ce-019e-9978-b402-3d271bf8d733">
   <formattedref format="application/x-isodoc+xml">Plummer L.N., Busenberg E., 1982. The solubilities of calcite, aragonite and vaterite in CO<sub>2</sub>-H<sub>2</sub>O solutions between 0 and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>90</mn>
@@ -4092,39 +4127,57 @@
 </math><asciimath>90 "unitsml(degC)"</asciimath></stem>, and an evaluation of the aqueous model for the system CaCO<sub>3</sub>-CO<sub>2</sub>-H<sub>2</sub>O. <em>Geochimica &amp; Cosmochimica Acta</em>, <strong>46</strong>, pp. 1011-1040.</formattedref>
   <docidentifier>Plummer and Busenberg, 1982</docidentifier>
   <docnumber>1982</docnumber>
-</bibitem><bibitem anchor="preiss32" id="_308163de-0da9-b7b0-441c-8d2f073a49a4">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="preiss32" id="_80f84bc0-b956-37e4-dad6-edf5dd8d4b63">
   <formattedref format="application/x-isodoc+xml">Preiss I.L., Fink R.W., 1957. Carrier-Free Solution Storage in Glass. <em>Nucleonics</em>, <strong>15</strong>, 10, p. 108.</formattedref>
   <docidentifier>Preiss and Fink, 1957</docidentifier>
   <docnumber>1957</docnumber>
-</bibitem><bibitem anchor="puukko33" id="_e0389f62-b5ec-f44e-6812-6a3471eacc28">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="puukko33" id="_d0456c4d-f77e-31c5-2bbc-7f297db0554a">
   <formattedref format="application/x-isodoc+xml">Puukko E., Hakanen M., 1995. Surface complexation modelling: Experiments on the sorption of nickel on quartz. Lab. of Radiochemistry. University of Helsinki. Nuclear Waste Commission of Finnish Power Companies. Report YJT-95-12. Finland, pp. 1-19.</formattedref>
   <docidentifier>Puukko and Hakanen, 1995</docidentifier>
   <docnumber>1995</docnumber>
-</bibitem><bibitem anchor="raggon34" id="_27355b49-c158-3f78-80c8-906c4d1be6cd">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="raggon34" id="_edb41b6d-ea10-9880-53ea-0ce6e4fb491d">
   <formattedref format="application/x-isodoc+xml">Raggon F.C., Bacon F.R., 1954. The action of Hydrochloric Acid Solutions on Borosilicate and Soda-Lime glass Bottles. <em>American Ceramic Society Bulletin</em>, <strong>33</strong>, 9, pp. 267-271.</formattedref>
   <docidentifier>Raggon and Bacon, 1954</docidentifier>
   <docnumber>1954</docnumber>
-</bibitem><bibitem anchor="ratel35" id="_14ebacf5-2202-ed90-b84b-2c380fc71cc5">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="ratel35" id="_a1e98351-0088-59cf-ee23-3b7f505ee8ec">
   <formattedref format="application/x-isodoc+xml">Ratel G., 1999. Trial comparison of activity measurements of a solution of <sup>204</sup>Tl. BIPM. <em>Rapport BIPM</em>–97/03, pp. 1-3.</formattedref>
   <docidentifier>Ratel, 1999</docidentifier>
   <docnumber>1999</docnumber>
-</bibitem><bibitem anchor="ratel36" id="_36df80d0-5f4d-e7e3-29fb-3cd0e6931a9b">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="ratel36" id="_e9d5a4c1-a7dd-c50a-eb41-e2ddca0959b4">
   <formattedref format="application/x-isodoc+xml">Ratel G., Cassette P., 1999. International comparison of activity measurements of a solution of <sup>204</sup>Tl. Working documents of the 15<sup>th</sup> CCRI (II) meeting, pp. 1-5.</formattedref>
   <docidentifier>Ratel and Cassette, 1999</docidentifier>
   <docnumber>1999</docnumber>
-</bibitem><bibitem anchor="ratel37" id="_be80b6a0-7e7e-1ffe-5f17-90d1f35651ec">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="ratel37" id="_83b62728-18e8-ee92-ad09-4c9f66fb2f7f">
   <formattedref format="application/x-isodoc+xml">Ratel G., Michotte C., 2004. BIPM comparison BIPM.RI (II)-K1.Tl-201 of activity measurements of the radionuclide <sup>201</sup>Tl. <em>Metrologia</em>, Technical Supplement 06015, pp. 1-18.</formattedref>
   <docidentifier>Ratel and Michotte, 2004</docidentifier>
   <docnumber>2004</docnumber>
-</bibitem><bibitem anchor="ringbom38" id="_6a7b94cf-ad23-a19a-ae4a-a5312c404374">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="ringbom38" id="_ed2771eb-c0ca-e87a-2154-f15747ddf6b2">
   <formattedref format="application/x-isodoc+xml">Ringbom A., 1967. Les complexes en chimie analytique. Dunod, Paris, p. 5.</formattedref>
   <docidentifier>Ringbom, 1967</docidentifier>
   <docnumber>1967</docnumber>
-</bibitem><bibitem anchor="shand39" id="_399e977c-75c1-c603-e692-8967494ae041">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="shand39" id="_50915fdf-c92f-137f-f3a6-46cda9348c3b">
   <formattedref format="application/x-isodoc+xml">Shand E.B., 1958. Glass Engineering Handbook. The Maple Press Company, York, p. 95.</formattedref>
   <docidentifier>Shand, 1958</docidentifier>
   <docnumber>1958</docnumber>
-</bibitem><bibitem anchor="sibbens40" id="_8c502a6e-332e-4096-bdf8-952eff088444">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="sibbens40" id="_c26ad263-6a8a-a69a-a2f3-1d11132b0a19">
   <formattedref format="application/x-isodoc+xml">Sibbens G., 1991. A Comparison of NIST/SIR, NPL and CBNM <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>5</mn>
@@ -4142,10 +4195,14 @@
 </math><asciimath>5 "unitsml(ml)"</asciimath></stem> Ampoules. <em>IRMM Internal Report</em> GE/R/RN/14/91. Belgium, p. 2.</formattedref>
   <docidentifier>Sibbens, 1991</docidentifier>
   <docnumber>1991</docnumber>
-</bibitem><bibitem anchor="trudgill41" id="_109d05b6-0caa-028c-c427-b948e65552e7">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="trudgill41" id="_d4b0ed5c-5363-b640-481b-c917dfa7f703">
   <formattedref format="application/x-isodoc+xml">Trudgill S.T., 1986. Solute Processes. John Wiley &amp; Sons Ltd., New York, p. 8.</formattedref>
   <docidentifier>Trudgill, 1986</docidentifier>
   <docnumber>1986</docnumber>
+  <language>en</language>
+  <script>Latn</script>
 </bibitem>
 
 

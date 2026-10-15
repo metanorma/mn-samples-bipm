@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.2" schema-version="v2.1.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.0" schema-version="v2.2.0" flavor="bipm">
 <bibdata type="standard">
-<title language="en" format="text/plain" type="title-main">Comparison of ozone reference standards of the CHMI and the BIPM</title>
-
-<docidentifier primary="true" type="BIPM">BIPM BIPM-2018/03</docidentifier><docnumber>BIPM-2018/03</docnumber><contributor><role type="author"/><organization>
+<title language="en" type="title-main">Comparison of ozone reference standards of the CHMI and the BIPM</title>
+<docidentifier primary="true" type="BIPM">BIPM BIPM-2018/03</docidentifier><docnumber>BIPM-2018/03</docnumber><date type="updated"><on>2018-04-06</on></date><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="editor">Author for correspondence</role><person>
 <name><completename>Joële Viallon</completename></name>
@@ -29,13 +28,19 @@
 <name><completename>Miroslav Vokoun</completename></name>
 <affiliation><organization>
 <name>CHMI</name>
-</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+</organization></affiliation></person></contributor><contributor><role type="author"><description>committee</description></role><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><edition>3</edition><version><revision-date>2018-04-06</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2018</from><owner><organization>
+<subdivision type="Committee">
+<name language="en">International Bureau of Weights and Measures</name>
+
+<name language="fr">Bureau International des Poids et Mesures</name>
+<identifier>BIPM</identifier><identifier type="full">BIPM</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem><date type="circulated"/><version/></bibitem>
-</relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="BIPM" language="en" script="Latn">International Bureau of Weights and Measures</committee><committee acronym="BIPM" language="fr" script="Latn">Bureau International des Poids et Mesures</committee></editorialgroup><structuredidentifier><docnumber>BIPM-2018/03</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#D_N0" id="U_nmol.mol-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>3</edition><version>2018-04-06</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2018</from><owner><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="successorOf"><bibitem/></relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2018/03</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#D_N0" id="U_nmol.mol-1">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">nmol*mol^-1</UnitName>
         <UnitSymbol type="HTML">nmol mol
           <sup>−1</sup>
@@ -45,9 +50,7 @@
             <mi mathvariant="normal">nmol</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mol</mi>
-              </mrow>
+              <mi mathvariant="normal">mol</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -60,9 +63,9 @@
           <EnumeratedRootUnit unit="mole" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_N0" id="U_umol.mol-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">umol*mol^-1</UnitName>
-        <UnitSymbol type="HTML">mol mol
+        <UnitSymbol type="HTML">µmol mol
           <sup>−1</sup>
         </UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -70,9 +73,7 @@
             <mi mathvariant="normal">µmol</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mol</mi>
-              </mrow>
+              <mi mathvariant="normal">mol</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -85,7 +86,7 @@
           <EnumeratedRootUnit unit="mole" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_nm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">nm</UnitName>
         <UnitSymbol type="HTML">nm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -96,8 +97,8 @@
         <RootUnits>
           <EnumeratedRootUnit unit="metre" prefix="n"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd8" id="U_cm2">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L2" id="U_cm2">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">cm^2</UnitName>
         <UnitSymbol type="HTML">cm
           <sup>2</sup>
@@ -105,12 +106,8 @@
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
-              <mrow>
-                <mn>2</mn>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
+              <mn>2</mn>
             </msup>
           </math>
         </UnitSymbol>
@@ -118,7 +115,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="2"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">kelvin</UnitName>
         <UnitSymbol type="HTML">K</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -127,7 +124,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd14" id="U_kPa">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">kPa</UnitName>
         <UnitSymbol type="HTML">kPa</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -139,7 +136,7 @@
           <EnumeratedRootUnit unit="pascal" prefix="k"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_N-1" id="U_mol-1">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mol^-1</UnitName>
         <UnitSymbol type="HTML">mol
           <sup>−1</sup>
@@ -147,9 +144,7 @@
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mol</mi>
-              </mrow>
+              <mi mathvariant="normal">mol</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -157,8 +152,8 @@
             </msup>
           </math>
         </UnitSymbol>
-      </Unit><Unit dimensionURL="#NISTd48" id="U_NISTu13.u6e-1/1.u5e-1/1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L2MT-2Theta-1N-1" id="U_NISTu13.u6e-1/1.u5e-1/1">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">joule per mole kelvin</UnitName>
         <UnitSymbol type="HTML">J mol
           <sup>−1</sup> K
@@ -169,9 +164,7 @@
             <mi mathvariant="normal">J</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mol</mi>
-              </mrow>
+              <mi mathvariant="normal">mol</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -179,9 +172,7 @@
             </msup>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">K</mi>
-              </mrow>
+              <mi mathvariant="normal">K</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -194,8 +185,8 @@
           <EnumeratedRootUnit unit="mole" powerNumerator="-1"/>
           <EnumeratedRootUnit unit="kelvin" powerNumerator="-1"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd29" id="U_cm-1">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L-1" id="U_cm-1">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">cm^-1</UnitName>
         <UnitSymbol type="HTML">cm
           <sup>−1</sup>
@@ -203,9 +194,7 @@
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -217,7 +206,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_cm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">cm</UnitName>
         <UnitSymbol type="HTML">cm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -229,7 +218,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c"/>
         </RootUnits>
       </Unit><Unit id="U_L.min-1">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">L*min^-1</UnitName>
         <UnitSymbol type="HTML">L min
           <sup>−1</sup>
@@ -239,9 +228,7 @@
             <mi mathvariant="normal">L</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">min</mi>
-              </mrow>
+              <mi mathvariant="normal">min</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -257,7 +244,7 @@
         <AmountOfSubstance symbol="N" powerNumerator="0"/>
       </Dimension><Dimension id="NISTd1">
         <Length symbol="L" powerNumerator="1"/>
-      </Dimension><Dimension id="NISTd8">
+      </Dimension><Dimension id="D_L2">
         <Length symbol="L" powerNumerator="2"/>
       </Dimension><Dimension id="NISTd5">
         <ThermodynamicTemperature symbol="Theta" powerNumerator="1"/>
@@ -273,7 +260,13 @@
         <Time symbol="T" powerNumerator="-2"/>
         <ThermodynamicTemperature symbol="Theta" powerNumerator="-1"/>
         <AmountOfSubstance symbol="N" powerNumerator="-1"/>
-      </Dimension><Dimension id="NISTd29">
+      </Dimension><Dimension id="D_L2MT-2Theta-1N-1">
+        <Length symbol="L" powerNumerator="2"/>
+        <Mass symbol="M" powerNumerator="1"/>
+        <Time symbol="T" powerNumerator="-2"/>
+        <ThermodynamicTemperature symbol="Theta" powerNumerator="-1"/>
+        <AmountOfSubstance symbol="N" powerNumerator="-1"/>
+      </Dimension><Dimension id="D_L-1">
         <Length symbol="L" powerNumerator="-1"/>
       </Dimension></DimensionSet><PrefixSet><Prefix prefixBase="10" prefixPower="-9" id="NISTp10_-9">
         <PrefixName lang="en">nano</PrefixName>
@@ -299,11 +292,10 @@
         <PrefixSymbol type="unicode">k</PrefixSymbol>
         <PrefixSymbol type="LaTeX">k</PrefixSymbol>
         <PrefixSymbol type="HTML">k</PrefixSymbol>
-      </Prefix></PrefixSet></UnitsML><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+      </Prefix></PrefixSet></UnitsML><presentation-metadata><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
 <boilerplate><copyright-statement>
 
-<clause id="_c20d5871-59c5-1abb-69c4-33074d4f09d9" obligation="normative">
-<p id="_f81d45d4-b556-ed46-e7c4-9e11a649f5b7" align="center">© Bureau International des Poids et Mesures 2018 all rights reserved</p>
+<clause id="_740fa11a-6d9e-997b-f669-6016f45bcf1a" obligation="normative"><p id="_f81d45d4-b556-ed46-e7c4-9e11a649f5b7" align="center">© Bureau International des Poids et Mesures 2018 all rights reserved</p>
 </clause>
 </copyright-statement>
 
@@ -420,10 +412,9 @@
 </math><asciimath>870 "unitsml(nmol/mol)"</asciimath></stem>. The measurement protocol is described briefly in <xref target="protocol"/>. A description of the standards is given in <xref target="measurement_standards"/> of this report, together with their uncertainty budgets. The data treatment is explained in <xref target="analysis"/>, and the results of the comparison are given in <xref target="results"/>.</p>
 </clause>
 
-<terms id="_cb725b42-0e65-a245-2709-42be979ab068" obligation="normative">
+<terms id="_bf4a18a6-7d45-0c44-fe30-8dcdf27161e5" obligation="normative">
 <title id="_dfb2eab2-f980-6365-3c47-81d0eb272962">Terms and definitions</title><p id="_e5876e78-fa42-efa9-f5ba-a93535689e8d">No terms and definitions are listed in this document.</p>
-
-<dl id="_eb456a5b-8546-94cb-e60c-eed194993a9b"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dl id="_5b0592d8-d3e0-c58b-413c-f89a4cc03e2a"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>x</mi>
@@ -530,7 +521,7 @@
     </msub>
   </mstyle>
 </math><asciimath>s_("A")</asciimath></stem></dt>
-<dd id="_2e1a0396-1212-38e3-18be-5ad6236e8752"><p id="_c569fe8e-f7de-0fad-9ee3-7fd2afa864f5">standard deviation of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_1aa09bd2-dbb6-0c53-19c1-e84303f6d86a"><p id="_c569fe8e-f7de-0fad-9ee3-7fd2afa864f5">standard deviation of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>N</mi>
@@ -599,7 +590,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>s_("A")^2 = 1/(ii(N)-1) sum_(i=1)^ii(N) (x_("A",i)-bar(x)_("A"))^2</asciimath></stem></p>
-<ul id="_cbf3aea1-d8c4-a6a9-75f5-859823c4957d"><li><p id="_4a17e7d4-ea9d-8f0f-a68f-9cf97c163577">The result of the linear regression fit performed between two sets of data measured by photometers A and B during a comparison is written as: <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<ul id="_f36a0f52-2dce-d9ce-c289-263bc1e069af"><li><p id="_73ca7c02-94fd-ade6-4ee0-e43aeb3b9d71">The result of the linear regression fit performed between two sets of data measured by photometers A and B during a comparison is written as: <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>x</mi>
@@ -636,7 +627,6 @@
   </mstyle>
 </math><asciimath>b_("A,B")</asciimath></stem> is expressed in units of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -668,7 +658,7 @@
 <p id="_47b26f6f-a627-5168-8eb8-6ce59e122204">The measurements were performed on 20 September 2017 at the BIPM.</p>
 </clause>
 
-<clause id="_bea34a84-6e6d-8fe0-fd8f-9ae265796ff9" anchor="protocol" obligation="normative">
+<clause id="_8e20fe2c-aaca-2f8d-2760-5e296eafb20a" anchor="protocol" obligation="normative">
 <title id="_1a118314-b6b4-eaef-fbb2-07ac7d150545">Measurement protocol</title>
 <p id="_179ffa38-4856-95fd-067a-599fbbc950ad">This comparison was performed following the protocol established for the key comparison BIPM.QM-K1, with a modified measurement range: the instruments were compared over a nominal ozone mole fraction range of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -821,13 +811,12 @@
 <p id="_2f238f08-e787-5ed7-c00d-d827f888c659">A common dual external manifold in Pyrex is used to supply the necessary flows of reference air and ozone–air mixtures to the ozone photometers. The two columns of this manifold are vented to atmospheric pressure.</p>
 </clause>
 
-<clause id="_f16c68b7-14fc-c7bc-670a-89d879dcbf41" obligation="normative">
+<clause id="_aeeff6f6-6fa3-ed6e-2204-85d81f6588f0" obligation="normative">
 <title id="_a5e1ee58-730d-2e94-151a-534ea2fe9c72">Comparison procedure</title>
 <p id="_bf21a7c9-cfdb-3d96-bae4-354c2459e147">All the instruments were switched on and allowed to stabilize for at least 8 hours before the comparison commenced. The pressure and temperature measurement systems of the instruments were checked at this time. If any adjustments were required, these were noted. For this comparison, no adjustments were necessary.</p>
 
-<p id="_c651db7f-0e36-3cc8-1d3e-5c8f06b55798">One comparison run normally includes ten different amount-of-substance fractions distributed to cover the range, together with the measurement of reference air at the beginning and end of each run. The nominal amount-of-substance fractions were measured in a sequence imposed by the BIPM.QM-K1 protocol, plus three additional values to extend the range (0, 220, 80, 420, 120, 320, 30, 370, 170, 500, 270, 0, 570, 840, 700 and 0) <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_a363aa3e-1832-5cce-494e-c4d122143e11">One comparison run normally includes ten different amount-of-substance fractions distributed to cover the range, together with the measurement of reference air at the beginning and end of each run. The nominal amount-of-substance fractions were measured in a sequence imposed by the BIPM.QM-K1 protocol, plus three additional values to extend the range (0, 220, 80, 420, 120, 320, 30, 370, 170, 500, 270, 0, 570, 840, 700 and 0) <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -918,11 +907,11 @@
 </clause>
 </clause>
 
-<clause id="_2aacb043-5c2c-d0fe-a6ce-9dd3614ce0c4" anchor="measurement_standards" obligation="normative">
+<clause id="_c997a6b0-9957-7e63-aa44-805292503174" anchor="measurement_standards" obligation="normative">
 <title id="_1a586ba6-51ba-7044-f433-3ef6c41b2516">Measurement standards</title>
 <p id="_236f697e-02a2-e996-51c1-c59d7d56bc26">All instruments included in this comparison were Standard Reference Photometers (SRP) built by the NIST. More details on the instrument’s operating principle and capabilities can be found in <eref type="inline" bibitemid="paur" citeas="[1]"/>. The following section describes the SRP measurement principle and uncertainty budget.</p>
 
-<clause id="_800eeb90-b996-0152-886d-10d91c635bb6" obligation="normative">
+<clause id="_53ebd644-8af8-df31-f89e-de709110ad18" obligation="normative">
 <title id="_10777b16-ae42-b2b6-e358-16dbc7688540">Measurement equation of a NIST SRP</title>
 <p id="_68365c3b-0099-0345-59d2-4c671eb95ce1">The measurement of ozone mole fraction by an SRP is based on the absorption of radiation at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1000,14 +989,14 @@
       <mo>)</mo>
     </mrow>
   </mstyle>
-</math><asciimath>ii(C) = (-1)/(2 ii(sigma) ii(L)_("opt")) (ii(T))/(ii(T)_("std")) (ii(P)_("std"))/(ii(P)) "ln"(ii(D))</asciimath></stem><dl id="_8c4403d4-7e7a-d28c-194d-8fd33b76e407" key="true"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>ii(C) = (-1)/(2 ii(sigma) ii(L)_("opt")) (ii(T))/(ii(T)_("std")) (ii(P)_("std"))/(ii(P)) "ln"(ii(D))</asciimath></stem><key><dl id="_0d316001-0b24-d6d3-acd5-5ea3592da5cb"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>σ</mi>
     </mstyle>
   </mstyle>
 </math><asciimath>ii(sigma)</asciimath></stem></dt>
-<dd id="_763635fa-01bf-888a-2507-dc6418711bd5"><p id="_e3c73b49-28ac-0f0b-d41f-2612a6a9e140">is the absorption cross-section of ozone at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_98408d0c-e708-6abb-9f89-a1c7b2549fa1"><p id="_01900591-b0ee-1cfc-0cb7-f418fb2c1139">is the absorption cross-section of ozone at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>253.7</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -1057,7 +1046,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(L)_("opt")</asciimath></stem></dt>
-<dd id="_be30c507-9078-c4bb-6efc-b6bc2acfd55c"><p id="_19d2f178-4269-ab82-9914-13a67a474838">is the optical path length of one of the cells;</p>
+<dd id="_1f105991-6fc6-16ef-6d03-01fa9e9bee9c"><p id="_791d9814-ebac-35de-3e84-0f3123b9d591">is the optical path length of one of the cells;</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1066,7 +1055,7 @@
     </mstyle>
   </mstyle>
 </math><asciimath>ii(T)</asciimath></stem></dt>
-<dd id="_5cdc8fa3-036c-b1a9-50c7-81f126b0adc9"><p id="_a94baa77-4641-d51d-0434-e0a8165d3789">is the measured temperature of the cells;</p>
+<dd id="_1511dcff-c7ae-9c36-dcac-84e061d7c6dc"><p id="_831955ea-4426-fcf1-b249-539323a8ea51">is the measured temperature of the cells;</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1078,7 +1067,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(T)_("std")</asciimath></stem></dt>
-<dd id="_8e12af64-e7d6-e0fc-6ee2-054cd8657a7c"><p id="_5b20186a-f9c2-14f0-7a00-710383f66b8d">is the standard temperature (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_fdfe319b-2e88-f644-f5aa-3acf4c7d44fe"><p id="_1afefebc-814c-c406-7282-feac4c08534b">is the standard temperature (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>273.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -1099,7 +1088,7 @@
     </mstyle>
   </mstyle>
 </math><asciimath>ii(P)</asciimath></stem></dt>
-<dd id="_f8e67392-b951-f223-60a5-9599bb1ffe0c"><p id="_19ebdfdd-5439-1dc1-4567-e7e80197ba11">is the measured pressure of the cells;</p>
+<dd id="_022da92b-6f2b-76bd-4c74-168c6969f335"><p id="_38318411-4382-0ed3-6af1-3d36a3443874">is the measured pressure of the cells;</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1111,7 +1100,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(P)_("std")</asciimath></stem></dt>
-<dd id="_73db608a-1a1f-d7f7-493c-f793b0dde3af"><p id="_b20ee070-aed8-dc53-019f-c9a0843d0604">is the standard pressure (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_9290ecce-bf6d-184c-878c-a15ff8bd42de"><p id="_7fdb7c1e-ecc1-99fd-523d-955995b181c6">is the standard pressure (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>101.325</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -1133,7 +1122,7 @@
     </mstyle>
   </mstyle>
 </math><asciimath>ii(D)</asciimath></stem></dt>
-<dd id="_45ef1571-638f-166f-9369-8824bf0f7828"><p id="_27ee0415-886d-e9e2-26d5-0767323d6d7a">is the product of transmittances of two cells, with the transmittance (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_5530ed31-be86-33ea-ade2-bba687c36fab"><p id="_55da25be-eecb-cb78-80d0-8127aec5f209">is the product of transmittances of two cells, with the transmittance (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1144,7 +1133,7 @@
   </mstyle>
 </math><asciimath>ii(T)_r</asciimath></stem>) of one cell defined as</p>
 </dd>
-</dl></formula>
+</dl></key></formula>
 
 
 
@@ -1174,7 +1163,7 @@
       </msub>
     </mfrac>
   </mstyle>
-</math><asciimath>ii(T)_r = ii(I)_("ozone")/ii(I)_("air")</asciimath></stem><dl id="_b40ae689-4a5d-a74b-7dc7-7249abc6efbe" key="true"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>ii(T)_r = ii(I)_("ozone")/ii(I)_("air")</asciimath></stem><key><dl id="_d2bb90d1-60ee-ae98-9e5e-4f7f6bfe5184"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1184,7 +1173,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(I)_("ozone")</asciimath></stem></dt>
-<dd id="_5e711444-016c-b696-c922-0998b0c00df8"><p id="_cb3b4896-4ce7-fc5b-8843-c298bdc40e15">is the UV radiation intensity measured from the cell when containing ozonized air; and</p>
+<dd id="_0b889fd0-5543-2670-c776-98fcc562e779"><p id="_1d5a51e2-78ab-6b13-ad5e-6628270be52a">is the UV radiation intensity measured from the cell when containing ozonized air; and</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1196,9 +1185,9 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(I)_("air")</asciimath></stem></dt>
-<dd id="_d731ff32-a2ab-a584-2ba1-9b8b8b26d92d"><p id="_0f95c4c7-4161-ed8e-37c4-2bd278975456">is the UV radiation intensity measured from the cell when containing pure air (also called reference or zero air).</p>
+<dd id="_98c096d0-6f2d-641b-0805-2dad61a8e1e5"><p id="_f8f83859-03de-32d5-d44e-8fe7621896b7">is the UV radiation intensity measured from the cell when containing pure air (also called reference or zero air).</p>
 </dd>
-</dl></formula>
+</dl></key></formula>
 
 
 
@@ -1210,7 +1199,7 @@
   </mstyle>
 </math><asciimath>x</asciimath></stem>) of ozone in air:</p>
 
-<formula id="_087cc04f-2e7f-bdb3-b8c7-45b6df4a5bc9" anchor="eq3"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<formula id="_2b5e7acd-67b5-da7d-cbcc-9e6a2b21cb18" anchor="eq3"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mi>x</mi>
     <mo>=</mo>
@@ -1260,7 +1249,7 @@
       <mo>)</mo>
     </mrow>
   </mstyle>
-</math><asciimath>x = (-1)/(2 ii(sigma) ii(L)_("opt")) ii(T)/ii(P) ii(R)/(ii(N)_"A") "ln"(ii(D))</asciimath></stem><dl id="_1be72621-04f0-fa7c-364f-a1601650c663" key="true"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>x = (-1)/(2 ii(sigma) ii(L)_("opt")) ii(T)/ii(P) ii(R)/(ii(N)_"A") "ln"(ii(D))</asciimath></stem><key><dl id="_f026448e-8f8f-33f1-36f4-63a54c84f2e3"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1270,7 +1259,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(N)_"A"</asciimath></stem></dt>
-<dd id="_62da11cb-a73d-2143-15a0-334a9555c050"><p id="_49aebf8d-1373-b43f-63c0-802e90318137">is the Avogadro constant, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_590e3e39-0523-a8b0-6256-13a9d995427d"><p id="_1d6f22ce-8660-7da7-6ed0-6517aeff97c0">is the Avogadro constant, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>6.022142</mn>
     <mo>×</mo>
@@ -1302,7 +1291,7 @@
     </mstyle>
   </mstyle>
 </math><asciimath>ii(R)</asciimath></stem></dt>
-<dd id="_415ec32f-281c-c47c-bf89-eef04ab3066f"><p id="_6ba5e5e7-8460-9290-34c2-e6f23144b594">is the gas constant, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_20d4650f-d5e9-aa79-eaad-cc60965179ed"><p id="_b7b56041-543c-bf8c-2f6b-e3b7d500a7ba">is the gas constant, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>8.314472</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -1332,11 +1321,12 @@
       </msup>
       
       
+      
     </mrow>
   </mstyle>
 </math><asciimath>8.314472 "unitsml(J*mol^(-1)*K^(-1))"</asciimath></stem>.</p>
 </dd>
-</dl></formula>
+</dl></key></formula>
 
 
 
@@ -1344,7 +1334,7 @@
 
 <p id="_8e43b18d-4ba1-b711-ebba-fcdebef426ae">The formulation implemented in the SRP software is:</p>
 
-<formula id="_93f1e909-bf16-51d1-d559-8349f750d38d" anchor="eq4"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<formula id="_27f17b37-5dbd-840d-3603-bdcb0000385b" anchor="eq4"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mi>x</mi>
     <mo>=</mo>
@@ -1400,7 +1390,7 @@
       <mo>)</mo>
     </mrow>
   </mstyle>
-</math><asciimath>x = (-1)/(2 ii(alpha)_"x" ii(L)_("opt")) ii(T)/(ii(T)_("std")) (ii(P)_("std"))/ii(P) "ln"(ii(D))</asciimath></stem><dl id="_bd22bbbc-067a-4cfb-f7e6-596c6e05bca0" key="true"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>x = (-1)/(2 ii(alpha)_"x" ii(L)_("opt")) ii(T)/(ii(T)_("std")) (ii(P)_("std"))/ii(P) "ln"(ii(D))</asciimath></stem><key><dl id="_9e4aa10e-8cd0-209b-414f-23b53c9e9a35"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1410,9 +1400,8 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(alpha)_"x"</asciimath></stem></dt>
-<dd id="_dcc03d5e-3f02-d5e5-ab49-99e6243cef23"><p id="_a3c52607-1552-d131-64c3-93d0011b0437">is the linear absorption coefficient under standard conditions, expressed in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_7b323479-196c-496b-ca2a-392c0563daf7"><p id="_03ce84d4-aed9-232d-9595-e90ae9177425">is the linear absorption coefficient under standard conditions, expressed in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_cm-1">
       <msup>
         <mstyle mathvariant="normal">
@@ -1430,7 +1419,7 @@
   </mstyle>
 </math><asciimath>"unitsml(cm^(-1))"</asciimath></stem>, linked to the absorption cross–section with the relation:</p>
 </dd>
-</dl></formula>
+</dl></key></formula>
 
 
 
@@ -1571,7 +1560,7 @@
 <p id="_a37fb833-3c64-b109-53ec-729ae0e02f6f">Compared to the original design described in <eref type="inline" bibitemid="paur" citeas="[1]"/>, SRP27 and SRP28 have been modified to deal with two biases revealed by a study conducted by the BIPM and the NIST <eref type="inline" bibitemid="viallon3" citeas="[3]"/>. In 2009, an “SRP upgrade kit” was installed in the instruments, as described in <eref type="inline" bibitemid="viallon4" citeas="[4]"/>.</p>
 </clause>
 
-<clause id="_107f8f23-b7de-40f0-bd95-daac8cb8f738" obligation="normative">
+<clause id="_33a0feeb-1bd3-46ce-15a8-2be06f85a55b" obligation="normative">
 <title id="_e28f678e-77ce-41cf-88eb-91acacdd2e6c">Uncertainty budget of the common reference BIPM-SRP27</title>
 <p id="_8359f765-3b72-dc98-0370-dc418aa937b9">The uncertainty budget for the ozone mole fraction in dry air (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2134,9 +2123,8 @@
 </tr></tbody>
 </table>
 
-<p id="_4cfb86ba-d8da-e043-4ec8-cbdc2f9b1288">As explained in the comparison protocol, following this budget the standard uncertainty associated with the ozone mole fraction measurement with the BIPM SRPs can be expressed as a numerical equation (numerical values expressed as <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_0d8df2bc-1cb4-750d-d04c-e826e5cdf08f">As explained in the comparison protocol, following this budget the standard uncertainty associated with the ozone mole fraction measurement with the BIPM SRPs can be expressed as a numerical equation (numerical values expressed as <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -2354,7 +2342,7 @@
 <p id="_5653086b-1f50-33f5-ac75-66bd9ec6ddc7">Compared to the original design, the CHMI SRP17 has been modified to deal with the two biases revealed in <eref type="inline" bibitemid="viallon3" citeas="[3]"/>. In August 2007, an “SRP upgrade kit” was installed by NIST, as already described in the previous comparison report <eref type="inline" bibitemid="viallon5" citeas="[5]"/>.</p>
 </clause>
 
-<clause id="_d98313d7-8e63-2749-4b79-acc6ef207659" obligation="normative">
+<clause id="_e35d90a9-5a4a-4515-7037-288fde705ff2" obligation="normative">
 <title id="_6acc96a2-6fea-272c-646e-928fbfce026c">Uncertainty budget of the CHMI SRP17</title>
 <p id="_89011f49-88d1-aaee-5669-f540ba56a390">The uncertainty budget for the ozone mole fraction in dry air <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2408,9 +2396,8 @@
   </mstyle>
 </math><asciimath>900 "unitsml(nmol/mol)"</asciimath></stem> is given in <xref target="table2"/>.</p>
 
-<p id="_23bfb671-25c3-fe22-3cd7-81a8d259a8f8">Following this budget, as explained in the protocol of the comparison, the standard uncertainty associated with the ozone mole fraction measurement with the CHMI SRP17 can be expressed as a numerical equation (numerical values expressed as <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_5e0bf764-ed32-8919-8f76-8c89def51915">Following this budget, as explained in the protocol of the comparison, the standard uncertainty associated with the ozone mole fraction measurement with the CHMI SRP17 can be expressed as a numerical equation (numerical values expressed as <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -3046,7 +3033,7 @@
 </math><asciimath>u(a_0)</asciimath></stem> are given by OzonE, as well as the covariance between them and the usual statistical parameters to validate the fitting function.</p>
 </clause>
 
-<clause id="_639f1b6f-4c5d-99a7-f813-b5aa5ddb96ee" anchor="results" obligation="normative">
+<clause id="_40cd54dc-996f-1b17-4d6b-febddf1f883b" anchor="results" obligation="normative">
 <title id="_cc5fdf14-ccd6-ae0e-eaa5-eafcdfd96bf5">Results of the comparison</title>
 <p id="_34db5967-539a-8dfd-d539-9210528eadde">SRP17, maintained by the CHMI, was compared with the SRPs maintained by the BIPM following the general procedure outlined above. A cycle of twelve comparison runs between SRP27, SRP28 and SRP17 were performed. Ozone was generated using the Environics 6100 generator with airflow of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -3166,7 +3153,7 @@
   </mstyle>
 </math><asciimath>840 "unitsml(nmol*mol^(-1))"</asciimath></stem> for the last run. The result of the last comparison run is presented in detail in the <xref target="measurement_results"/>. The repeatability of the results over the twelve runs is shown in <xref target="repeatability"/>, and the stability of the BIPM standards in <xref target="history"/>.</p>
 
-<clause id="_a7431956-c0a4-94bd-7214-fc98efd647cc" anchor="measurement_results" obligation="normative">
+<clause id="_21ce6717-6b53-bf75-1f17-f2e77257b632" anchor="measurement_results" obligation="normative">
 <title id="_918cb8a0-d7ab-0904-d305-f718d04c596c">Measurement results</title>
 <p id="_fa28ea38-cf14-7de5-dd17-be4dc1e6770d">The measurement results of the last of the twelve recorded runs are shown in <xref target="table3"/>. For each nominal ozone mole fraction, the standard deviation is reported on the ten successive measurements that were recorded. The values reported here show that both instruments were in a stable regime.</p>
 
@@ -3190,11 +3177,11 @@
   </mstyle>
 </math><asciimath>k = 2</asciimath></stem> (95 % confidence interval), the difference between both standards is much lower than their combined measurement uncertainties.</p>
 
-<table id="_e4e396a1-002c-bd5b-091d-9a9e08f86795" anchor="table3">
+<table id="_acd29148-189e-55e5-2eec-eb0bada0fee9" anchor="table3">
 <name id="_c985c850-c6f5-c3df-61b7-c9d5c6c8f365">measurement results of the comparison between the CHMI standard SRP17 and the BIPM reference standard SRP27</name>
 <tbody><tr id="_3c62fb3e-30c6-6b44-c444-40c520f4abad"><th id="_adcbfb25-5937-701b-a239-d86bda413db7" colspan="3" valign="top" align="center">Reference standard BIPM-SRP27 (RS)</th>
 <th id="_728989a4-61c8-3ba8-7032-cde7d62f6ff7" colspan="3" valign="top" align="center">National standard CHMI SRP17 (NS)</th>
-</tr><tr id="_b663a24b-3a47-a8c1-27e4-07c9bfc4e1bf"><th id="_00ddf312-5dd3-184a-d431-d1968f5e3e42" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_cb1e90e4-8788-f1dd-a1e9-ed1283e3e364"><th id="_192893e9-d87b-0b0c-dc90-7bacc75c7537" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>x</mi>
@@ -3203,7 +3190,6 @@
   </mstyle>
 </math><asciimath>x_("RS")</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -3224,7 +3210,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_e4366830-76ef-2cee-a8f9-7496d06b3161" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_3bf19669-0473-0b2e-bdca-69cb4e86f564" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>s</mi>
@@ -3233,7 +3219,6 @@
   </mstyle>
 </math><asciimath>s_("RS")</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -3254,7 +3239,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_539082d8-8ecb-eef2-72bc-6e2cd4699314" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_b8e45963-20c5-2bf4-5aae-2c01f7f86ae8" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
     <mrow>
@@ -3268,7 +3253,6 @@
   </mstyle>
 </math><asciimath>u(x_("RS"))</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -3289,7 +3273,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_793c8b9d-5fce-5dfd-6aea-d11e9274bbfa" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_6e76ecd6-e224-cb6a-2082-0587da2b3897" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>x</mi>
@@ -3298,7 +3282,6 @@
   </mstyle>
 </math><asciimath>x_("NS")</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -3319,7 +3302,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_604fe6b4-3899-ef2c-df69-a8a1178ba96e" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_83f8dada-8444-f1b4-b68d-3eb0a73cd286" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>s</mi>
@@ -3328,7 +3311,6 @@
   </mstyle>
 </math><asciimath>s_("NS")</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -3349,7 +3331,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_4eaa23b0-b300-dd57-53c0-4652598261b4" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_119ef730-0bf9-55cd-c11e-aae3d1a22ef5" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
     <mrow>
@@ -3363,7 +3345,6 @@
   </mstyle>
 </math><asciimath>u(x_("NS"))</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -3636,7 +3617,7 @@
 </math><asciimath>abs(1 – a_1)&lt; 2 u(a_1)</asciimath></stem>.</p>
 </clause>
 
-<clause id="_ac322fe6-4c18-a713-11ad-25cb3cddcfa4" anchor="repeatability" obligation="normative">
+<clause id="_786bc38a-d1cb-e9ff-e1c0-c4c413a5ae0a" anchor="repeatability" obligation="normative">
 <title id="_494368dc-70c3-a03d-c13f-c3a80489e436">Repeatability</title>
 <p id="_3eee18ce-2e28-4071-2bc0-c633633e4efb">The results of the twelve comparison runs performed successively between SRP17 and SRP27 are reported in <xref target="table4"/>. With a standard deviation of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -3663,9 +3644,9 @@
   </mstyle>
 </math><asciimath>0.04 "unitsml(nmol/mol)"</asciimath></stem> on the intercept and a relative standard deviation of 0.03 % on the slope, these data show a good repeatability.</p>
 
-<table id="_7195daed-013b-ca78-7ae3-ea8a7e318b74" anchor="table4">
+<table id="_c48b348a-d992-090d-7fd3-b1fb95eceb5f" anchor="table4">
 <name id="_110bafb8-a13a-f992-6677-4015df3cb893">results of the ten comparison runs repeated successively</name>
-<thead><tr id="_87ccdad0-78d0-ddec-07b7-eaf483b012d9"><th id="_33657909-387e-8190-20c9-0fc180703b0d" valign="top" align="center">Run</th>
+<thead><tr id="_4ba0db87-3611-fa67-c710-de48a4b080df"><th id="_33657909-387e-8190-20c9-0fc180703b0d" valign="top" align="center">Run</th>
 <th id="_29799e64-86b5-0927-b0fb-3022a6b4a886" valign="top" align="center">Slope <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -3687,7 +3668,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>u(a_1)</asciimath></stem></th>
-<th id="_47958603-7e5a-17b7-fc7a-3b5b0fc0322f" valign="top" align="center">Intercept <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_22ead79a-4a4d-0aae-ae69-f3d35e94672e" valign="top" align="center">Intercept <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>a</mi>
@@ -3696,7 +3677,6 @@
   </mstyle>
 </math><asciimath>a_0</asciimath></stem> / (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -3717,7 +3697,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol*mol^(-1))"</asciimath></stem>)</th>
-<th id="_3d925d99-2f0f-2bce-02d5-a7edbe645339" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_04f873eb-42a6-80ab-f83d-57c806f776f2" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
     <mrow>
@@ -3731,7 +3711,6 @@
   </mstyle>
 </math><asciimath>u(a_0)</asciimath></stem> / (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -3961,27 +3940,37 @@
 </clause>
 
 
-</sections><bibliography><references id="_175f9807-8ba8-1825-238f-b412af2b6a7d" normative="false" obligation="informative">
-<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="paur" id="_56fe27b4-cabe-0f68-5d82-b97349287eb4">
+</sections><bibliography><references id="_73374320-f5ce-0ef6-1126-41ca11b13649" normative="false" obligation="informative">
+<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="paur" id="_a46c934c-b16c-c837-6649-a49ed63d74b8">
   <formattedref format="application/x-isodoc+xml">Paur R.J., Bass A.M., Norris J.E. and Buckley T.J., 2003, Standard reference photometer for the assay of ozone in calibration atmospheres <em>Env. Sci. Technol.</em> <strong>NISTIR 6369</strong>, 25 pp</formattedref>
   <docidentifier type="metanorma">[1]</docidentifier>
-</bibitem><bibitem anchor="iso13964" id="_a8e0c75b-4982-665d-21aa-dcd0917399de" type="standard">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="iso13964" id="_caf875e7-752c-6c18-e9db-2bbe34dd7331" type="standard">
 <title format="text/plain">ISO 13964 : 1996 Ambient air — Determination of ozone — Ultraviolet photometric method (International Organization for Standardization)</title>
 <docidentifier type="metanorma">[2]</docidentifier><docidentifier type="ISO">ISO 13964:1996</docidentifier><docnumber>13964</docnumber><date type="published"><on>1996</on></date><contributor><role type="publisher"/><organization>
 <name>ISO</name>
-</organization></contributor></bibitem><bibitem anchor="viallon3" id="_35efa146-4178-80de-22d0-dacefb76831b">
+</organization></contributor><language>en</language><script>Latn</script></bibitem><bibitem anchor="viallon3" id="_43796a1f-fc59-5930-79a2-c10d9c46495f">
   <formattedref format="application/x-isodoc+xml">Viallon J., Moussay P., Norris J.E., Guenther F.R. and Wielgosz R.I., 2006, A study of systematic biases and measurement uncertainties in ozone mole fraction measurements with the NIST Standard Reference Photometer <em>Metrologia</em> <strong>43</strong> 441-450</formattedref>
   <docidentifier type="metanorma">[3]</docidentifier>
-</bibitem><bibitem anchor="viallon4" id="_131c9edd-6611-a5b2-a59b-8e3a07f44c3b">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="viallon4" id="_570356ba-5521-1dac-c0dc-c0cd9009d332">
   <formattedref format="application/x-isodoc+xml">Viallon J., Moussay P., Idrees F. and Wielgosz R.I., 2010, Upgrade of the BIPM Standard Reference Photometers for Ozone and the effect on the on-going key comparison BIPM.QM-K1, <strong>Rapport BIPM-2010/07</strong>, 16pp</formattedref>
   <docidentifier type="metanorma">[4]</docidentifier>
-</bibitem><bibitem anchor="viallon5" id="_024a8453-a999-a58c-eafa-5766fa1ee295">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="viallon5" id="_de6e372a-5e64-d0b3-9aa5-bfafb4180897">
   <formattedref format="application/x-isodoc+xml">Viallon J., Moussay P., Wielgosz R.I., Novák J. and Vokoun M., 2008, Final report of the on-going key comparison BIPM.QM-K1: Ozone at ambient level, comparison with CHMI, 2007 <em>Metrologia</em> <strong>45</strong>, <strong><em>Tech. Supl.</em></strong> 08005</formattedref>
   <docidentifier type="metanorma">[5]</docidentifier>
-</bibitem><bibitem anchor="bremser" id="_29718274-df45-8cb6-8393-cff7e375ee01">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="bremser" id="_55c023d2-07aa-3772-7321-e264e45c571e">
   <formattedref format="application/x-isodoc+xml">Bremser W., Viallon J. and Wielgosz R.I., 2007, Influence of correlation on the assessment of measurement result compatibility over a dynamic range <em>Metrologia</em> <strong>44</strong> 495-504</formattedref>
   <docidentifier type="metanorma">[6]</docidentifier>
-</bibitem><bibitem anchor="iso6143-2" id="_d4370e9b-7f87-fe9c-6c89-b0741976251e">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="iso6143-2" id="_9c94f39c-bf8d-9708-fe97-76d0bc7a46a6">
   <formattedref format="application/x-isodoc+xml">ISO 6143.2 : 2001 Gas analysis — Determination of the composition of calibration gas mixtures — Comparison methods (International Organization for Standardization)</formattedref>
   <docidentifier type="metanorma">[7]</docidentifier>
   <docidentifier type="ISO">ISO 6143.2:2001</docidentifier>
@@ -3989,6 +3978,8 @@
   <date type="published">
     <on>2001</on>
   </date>
+  <language>en</language>
+  <script>Latn</script>
 </bibitem>
 
 

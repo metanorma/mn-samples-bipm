@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.2" schema-version="v2.1.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.0" schema-version="v2.2.0" flavor="bipm">
 <bibdata type="standard">
-<title language="en" format="text/plain" type="title-main">Estimates of the Differences between Thermodynamic Temperature and the ITS-90</title>
+<title language="en" type="title-main">Estimates of the Differences between Thermodynamic Temperature and the ITS-90</title>
+<docidentifier primary="true" type="BIPM">BIPM PLTS-2000</docidentifier><docnumber>PLTS-2000</docnumber><date type="updated"><on>2012-01-12</on></date><contributor><role type="author"/><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"><description>committee</description></role><organization>
+<name>Bureau International des Poids et Mesures</name>
+<subdivision type="Committee">
+<name language="en">Consultative Committee for Thermometry</name>
 
-<docidentifier primary="true" type="BIPM">BIPM PLTS-2000</docidentifier><docnumber>PLTS-2000</docnumber><contributor><role type="author"/><organization>
+<name language="fr">Comité consultatif de thermométrie</name>
+<identifier>CCT</identifier><identifier type="full">CCT</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="publisher"/><organization>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version>2012-01-12</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2012</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2012-01-12</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2012</from><owner><organization>
-<name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>mise-en-pratique</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="CCT" language="en" script="Latn">Consultative Committee for Thermometry</committee><committee acronym="CCT" language="fr" script="Latn">Comité consultatif de thermométrie</committee></editorialgroup><structuredidentifier><docnumber>PLTS-2000</docnumber></structuredidentifier><si-aspect>K_k</si-aspect></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>mise-en-pratique</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>PLTS-2000</docnumber></structuredidentifier><si-aspect>K_k</si-aspect></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd5" id="U_NISTu5">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">kelvin</UnitName>
         <UnitSymbol type="HTML">K</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -19,7 +25,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd5" id="U_mK">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mK</UnitName>
         <UnitSymbol type="HTML">mK</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -38,11 +44,10 @@
         <PrefixSymbol type="unicode">m</PrefixSymbol>
         <PrefixSymbol type="LaTeX">m</PrefixSymbol>
         <PrefixSymbol type="HTML">m</PrefixSymbol>
-      </Prefix></PrefixSet></UnitsML><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+      </Prefix></PrefixSet></UnitsML><presentation-metadata><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
 <boilerplate><copyright-statement>
 
-<clause id="_69023472-633a-4bfd-3062-566024af17a5" obligation="normative">
-<p id="_c0ee7e59-2583-5707-c292-2bc9d3989ddb" align="center">© Bureau International des Poids et Mesures 2012 all rights reserved</p>
+<clause id="_eafb2c99-b804-e74e-44f4-8f2132361913" obligation="normative"><p id="_c0ee7e59-2583-5707-c292-2bc9d3989ddb" align="center">© Bureau International des Poids et Mesures 2012 all rights reserved</p>
 </clause>
 </copyright-statement>
 
@@ -150,7 +155,7 @@
 </math><asciimath>1358 "unitsml(K)"</asciimath></stem>.</p>
 </clause></preface><sections>
 
-<clause id="_18f05c3c-718b-9329-4cd4-85877baab483" obligation="normative">
+<clause id="_2148428b-bcfb-7c68-70aa-0431080ec915" obligation="normative">
 <title id="_4a183c2d-1212-7101-1c25-640c23c86841">Table of Differences</title>
 <p id="_f0315c09-1493-04a7-3c54-137ec90bebc1"><xref target="tab1"/> summarizes the best estimates of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -179,7 +184,7 @@
   </mstyle>
 </math><asciimath>4.2 "unitsml(K)"</asciimath></stem> as of 2010. In general, a weighted average was formed using the uncertainties identified by WG4. For details see <eref type="inline" bibitemid="Fischer2011" citeas="[1]"/>. The data are shown in <xref target="fig1"/> and <xref target="fig2"/>.</p>
 
-<table id="_f14417b1-a316-04b6-91eb-237568c52540" anchor="tab1">
+<table id="_dcce5cae-8fc0-6cbc-79fa-050c9d88fdfe" anchor="tab1">
 <name id="_c64a8edf-cffb-327f-0ea6-a9c0ea1ba7b1">Estimates of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
@@ -248,7 +253,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>1358 "unitsml(K)"</asciimath></stem> using Planck’s law.</name>
-<tbody><tr id="_ce47ae83-9231-6d42-2ba4-9403a25d9e8f"><td id="_3e9323e8-3793-b1dd-0a0a-1496bc8a66b5" valign="top" align="left"><p id="_545ce2aa-145a-eac0-4603-ec7fd71a9ea9"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<tbody><tr id="_7ab9d769-91d6-ab04-34e7-474f900c020d"><td id="_163f6431-e79b-b8ad-65f3-c085e37b8207" valign="top" align="left"><p id="_460bbd54-2080-52fe-1e46-e93182749dc9"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -260,7 +265,6 @@
 </math><asciimath>ii(T)_{90}</asciimath></stem><br/>
 (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu5">
       <mstyle mathvariant="normal">
         <mi>K</mi>
@@ -271,7 +275,7 @@
   </mstyle>
 </math><asciimath>"unitsml(K)"</asciimath></stem>)</p>
 </td>
-<td id="_a1e39fe5-9427-f848-2512-15faddaceb20" valign="top" align="left"/><td id="_48c5bb01-23ce-260b-d3eb-e0c742652064" valign="top" align="left"><p id="_bcacc4c4-77b5-2ece-ac6e-fcfb83b2b40e"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_a1e39fe5-9427-f848-2512-15faddaceb20" valign="top" align="left"/><td id="_07809a2c-2666-69a2-82ae-a95016da22bd" valign="top" align="left"><p id="_4455d68c-8682-106f-6f6f-88d3f9c32c90"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>T</mi>
@@ -287,7 +291,6 @@
 </math><asciimath>ii(T) - ii(T)_{90}</asciimath></stem><br/>
 (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mK">
       <mstyle mathvariant="normal">
         <mi>mK</mi>
@@ -299,14 +302,13 @@
   </mstyle>
 </math><asciimath>"unitsml(mK)"</asciimath></stem>)</p>
 </td>
-<td id="_ace7de76-cf5a-4a11-0e5f-70ccd28da86a" valign="top" align="left"><p id="_c036871a-22e3-8d70-000f-a1d9f6eae245"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_b658191d-4304-6764-7ef1-f3168cef0ed6" valign="top" align="left"><p id="_ec878d88-7bd0-7ff4-2222-ab85fd7be31c"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
   </mstyle>
 </math><asciimath>u</asciimath></stem><br/>
 (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mK">
       <mstyle mathvariant="normal">
         <mi>mK</mi>
@@ -318,7 +320,7 @@
   </mstyle>
 </math><asciimath>"unitsml(mK)"</asciimath></stem>)</p>
 </td>
-<td id="_5d3bdb5a-badd-3494-77aa-cac04e925491" valign="top" align="left"><p id="_e631ab47-4aee-6c36-bfbd-41ba9b1a8e3a"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_20645f5c-5c60-5608-78ae-9f4c7ac9c02a" valign="top" align="left"><p id="_dc88271f-5451-dab3-265b-4e2c81a1fc25"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -330,7 +332,6 @@
 </math><asciimath>ii(T)_{90}</asciimath></stem><br/>
 (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu5">
       <mstyle mathvariant="normal">
         <mi>K</mi>
@@ -341,7 +342,7 @@
   </mstyle>
 </math><asciimath>"unitsml(K)"</asciimath></stem>)</p>
 </td>
-<td id="_e2338c98-54af-5028-1e25-8976e93d988e" valign="top" align="left"/><td id="_7ccd0a53-0b7d-1c5f-966e-f82e1932390b" valign="top" align="left"><p id="_3f1f198d-4166-7946-5d68-cd22ab9b4a0d"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_e2338c98-54af-5028-1e25-8976e93d988e" valign="top" align="left"/><td id="_9c0c3243-0d1b-2374-3bf9-9447cbc3f7c3" valign="top" align="left"><p id="_cd64ef65-b921-17e2-e263-342a2ba9ec0d"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>T</mi>
@@ -357,7 +358,6 @@
 </math><asciimath>ii(T) - ii(T)_{90}</asciimath></stem><br/>
 (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mK">
       <mstyle mathvariant="normal">
         <mi>mK</mi>
@@ -369,14 +369,13 @@
   </mstyle>
 </math><asciimath>"unitsml(mK)"</asciimath></stem>)</p>
 </td>
-<td id="_5734251a-b6e0-4576-1e9d-043f006944a0" valign="top" align="left"><p id="_1d4f470b-4631-5b6a-0468-2c7842975103"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_11e2bed2-6114-032a-5cf2-27b82d6848ba" valign="top" align="left"><p id="_75d7a953-edf9-21c1-5b85-2d2e31691794"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
   </mstyle>
 </math><asciimath>u</asciimath></stem><br/>
 (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mK">
       <mstyle mathvariant="normal">
         <mi>mK</mi>
@@ -1248,13 +1247,17 @@
 </clause>
 
 
-</sections><bibliography><references id="_24c73d9b-18ca-a0da-16a0-4e54831c0bcc" normative="false" obligation="informative">
-<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="Fischer2011" id="_e185f448-96e0-9bfa-b24f-b300d4436d2c">
+</sections><bibliography><references id="_c384869b-9753-852b-e269-0595644c2c91" normative="false" obligation="informative">
+<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="Fischer2011" id="_f6b51766-59c1-ae79-7e20-13c333ee7432">
   <formattedref format="application/x-isodoc+xml">] J. Fischer, M. de Podesta, K. D. Hill, M. Moldover, L. Pitre, R. Rusby, P. Steur, O. Tamura, R. White, L.Wolber, <em>Int. J. Thermophys.</em> <strong>32</strong>, 12-25 (2011).</formattedref>
   <docidentifier type="metanorma">[1]</docidentifier>
-</bibitem><bibitem anchor="Engert2007" id="_44aac225-41a9-ae82-f45e-aa1bf0fe1763">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Engert2007" id="_52d9e24c-d48b-5e04-4b54-f143bf475dc2">
   <formattedref format="application/x-isodoc+xml">] J. Engert, B. Fellmuth, K. Jousten, <em>Metrologia</em> <strong>44</strong>, 40-52 (2007).</formattedref>
   <docidentifier type="metanorma">[2]</docidentifier>
+  <language>en</language>
+  <script>Latn</script>
 </bibitem>
 
 

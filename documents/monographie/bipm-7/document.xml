@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.2" schema-version="v2.1.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.0" schema-version="v2.2.0" flavor="bipm">
 <bibdata type="standard">
-<title language="en" format="text/plain" type="title-main">Measurement modelling of the International Reference System (SIR) for gamma emitting radionuclides</title>
-
-<docidentifier primary="true" type="BIPM">BIPM BIPM-7</docidentifier><docnumber>BIPM-7</docnumber><contributor><role type="author"/><organization>
+<title language="en" type="title-main">Measurement modelling of the International Reference System (SIR) for gamma emitting radionuclides</title>
+<docidentifier primary="true" type="BIPM">BIPM BIPM-7</docidentifier><docnumber>BIPM-7</docnumber><date type="updated"><on>2007-12-19</on></date><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"/><person>
 <name><completename>Maurice G. Cox</completename></name>
@@ -17,9 +16,15 @@
 <name><completename>Andy K. Pearce</completename></name>
 <affiliation><organization>
 <name>National Physical Laboratory</name>
-<abbreviation>NPL</abbreviation><address><formattedAddress>Teddington, Middlesex TW11 0LW, UK</formattedAddress></address></organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+<abbreviation>NPL</abbreviation><address><formattedAddress>Teddington, Middlesex TW11 0LW, UK</formattedAddress></address></organization></affiliation></person></contributor><contributor><role type="author"><description>committee</description></role><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2007-12-19</revision-date></version><language>en</language><script>Latn</script><abstract><note><p>Work supported by the National Measurement Directorate of the UK Department of Trade and Industry as part of its NMS Ionizing Radiation Metrology and Software Support for Metrology programmes and by the BIPM.</p>
+<subdivision type="Committee">
+<name language="en">Consultative Committee for Ionizing Radiation</name>
+
+<name language="fr">Comité Consultatif des Rayonnements Ionisants</name>
+<identifier>CCRI</identifier><identifier type="full">CCRI</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version>2007-12-19</version><language>en</language><script>Latn</script><abstract><note><p>Work supported by the National Measurement Directorate of the UK Department of Trade and Industry as part of its NMS Ionizing Radiation Metrology and Software Support for Metrology programmes and by the BIPM.</p>
 </note>
 
 <p>The photon and electron efficiency curves of an ionization chamber, as part of the SIR (International Reference System for activity measurements of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -39,8 +44,9 @@
 <p>This process provides estimates of the efficiency values of the ionization chamber, and the associated uncertainties, at any photon or electron energy. The uncertainties associated with the response of the ionization chamber for all radionuclides of interest are also evaluated.</p>
 </abstract><status><stage>in-force</stage></status><copyright><from>2007</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>monographie</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="CCRI" language="en" script="Latn">Consultative Committee for Ionizing Radiation</committee><committee acronym="CCRI" language="fr" script="Latn">Comité Consultatif des Rayonnements Ionisants</committee></editorialgroup><structuredidentifier><docnumber>BIPM-7</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd101" id="U_kBq">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>monographie</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-7</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd101" id="U_kBq">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">kBq</UnitName>
         <UnitSymbol type="HTML">kBq</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -52,7 +58,7 @@
           <EnumeratedRootUnit unit="becquerel" prefix="k"/>
         </RootUnits>
       </Unit><Unit id="U_keV">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">keV</UnitName>
         <UnitSymbol type="HTML">keV</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -64,7 +70,7 @@
           <EnumeratedRootUnit unit="electronvolt" prefix="k"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd101" id="U_GHz">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">GHz</UnitName>
         <UnitSymbol type="HTML">GHz</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -89,11 +95,10 @@
         <PrefixSymbol type="unicode">G</PrefixSymbol>
         <PrefixSymbol type="LaTeX">G</PrefixSymbol>
         <PrefixSymbol type="HTML">G</PrefixSymbol>
-      </Prefix></PrefixSet></UnitsML><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+      </Prefix></PrefixSet></UnitsML><presentation-metadata><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
 <boilerplate><copyright-statement>
 
-<clause id="_9af2be95-d07a-410e-32ff-3087398fa006" obligation="normative">
-<p id="_828a0cf3-3586-04a9-01a1-af1410cfe9a2" align="center">© Bureau International des Poids et Mesures 2007 all rights reserved</p>
+<clause id="_7d766ce2-0aaf-8a49-6a07-6add85f53442" obligation="normative"><p id="_828a0cf3-3586-04a9-01a1-af1410cfe9a2" align="center">© Bureau International des Poids et Mesures 2007 all rights reserved</p>
 </clause>
 </copyright-statement>
 
@@ -163,9 +168,9 @@
 </executivesummary></preface><sections>
 
 
-<clause id="_098a0cf8-087d-8433-9465-82f72d185b43" anchor="intro" obligation="normative">
+<clause id="_0dbf6c35-1eea-12cc-02c1-c388291a99d4" anchor="intro" obligation="normative">
 <title id="_c024632f-5d4a-439d-8727-033a56cb9bd8">Introduction and overview of approach</title>
-<clause id="_03c7fc4e-1641-7fb9-271f-133b2b6fcccd" obligation="normative">
+<clause id="_f7a5f698-26ca-dc72-ae58-d1f8f974212e" obligation="normative">
 <title id="_917955c1-7e75-5fad-982e-70ebd4b7acee">General</title>
 <p id="_6c7c68cd-772f-bc3d-43a7-2e9a03065acc">The SIR (International Reference System for activity measurements of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -207,7 +212,7 @@
   </mstyle>
 </math><asciimath>ii(I)_("Ra",5)</asciimath></stem>.</p>
 
-<p id="_3867aca4-f069-c254-77da-9749022a8e46">Similarly, the detection efficiency <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_751ff87f-4dba-4ca0-75c9-403457271e07">Similarly, the detection efficiency <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>ε</mi>
@@ -227,7 +232,6 @@
   </mstyle>
 </math><asciimath>ii(A)</asciimath></stem> of that radionuclide measured by a laboratory in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_kBq">
       <mstyle mathvariant="normal">
         <mi>kBq</mi>
@@ -24383,74 +24387,118 @@ uncertainty <stem block="false" type="MathML"><math xmlns="http://www.w3.org/199
 </ol>
 
 <p id="_d7b4e469-2a7e-48e5-03ac-97c29fddc172">This procedure was verified using elementary matrix algebra and tested.</p>
-</annex><bibliography><references id="_4a3fc378-17b2-c3ee-0ee1-231c23fb9718" normative="false" obligation="informative">
-<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="aud2003" id="_b28518e0-09d2-bc77-982f-1fa09845e915">
+</annex><bibliography><references id="_0e42c848-7850-ceb6-0703-dffaef0f7d66" normative="false" obligation="informative">
+<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="aud2003" id="_db01b46d-5b34-61a6-b307-0c347e8e7899">
   <formattedref format="application/x-isodoc+xml">G. Audi and et al. The NUBASE evaluation of nuclear and decay properties. <em>Nucl. Phys.</em>, A729:3–128, 2003.</formattedref>
   <docidentifier type="metanorma">[1]</docidentifier>
-</bibitem><bibitem anchor="bar2004" id="_a2b843f8-33b4-0454-0cb4-f702dc5a4fbb">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="bar2004" id="_923ba557-ca26-fe1d-09d5-a51422a85cfd">
   <formattedref format="application/x-isodoc+xml">R. M. Barker, M. G. Cox, A. B. Forbes, and P. M. Harris. SS<em>f</em>M Best Practice Guide No. 4. Discrete modelling and experimental data analysis. Technical report, National Physical Laboratory, Teddington, UK, 2004.</formattedref>
   <docidentifier type="metanorma">[2]</docidentifier>
-</bibitem><bibitem anchor="be2006" id="_f1bf844d-f5e8-bbb7-3aba-d41c2ef52eda">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="be2006" id="_5491323e-412a-37ad-a814-abaae5c9e8fb">
   <formattedref format="application/x-isodoc+xml">M.-M. Bé. Activity measurements and determination of gamma-ray emission intensities in the decay of <sup>65</sup>Zn. <em>Appl. Radiat. Isot.</em>, 64:1396–1402, 2006.</formattedref>
   <docidentifier type="metanorma">[3]</docidentifier>
-</bibitem><bibitem anchor="be2004" id="_49a76c74-ef53-69c4-2968-ff0141a97b44">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="be2004" id="_f931d0c0-1d31-0ce2-13af-3f5831078a12">
   <formattedref format="application/x-isodoc+xml">M.-M. Bé et al. Table of radionuclides. Monographie BIPM-5, Bureau International des Poids et Mesures, Pavillon de Breteuil, F-92312 Sèvres Cedex, France, 2004. <link target="http://www.bipm.org/fr/publications/monographies-ri.html"/>.</formattedref>
   <docidentifier type="metanorma">[4]</docidentifier>
-</bibitem><bibitem anchor="beh1969" id="_3593a3ea-f86a-dfd4-044a-2f1f1ef23be1">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="beh1969" id="_a08e6d87-7996-221c-69d1-5eb06de65348">
   <formattedref format="application/x-isodoc+xml">H. Behrens and J. Jänecke. <em>Landolt-Börnstein Tables, Gruppe I, Band 4</em>. Springer, Berlin, 1969.</formattedref>
   <docidentifier type="metanorma">[5]</docidentifier>
-</bibitem><bibitem anchor="bipm-key" id="_c9cb859d-e4c6-9d8b-e982-c53371b6e11d">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="bipm-key" id="_2a19cb01-fa0d-d3f9-845f-0ab38a32475c">
   <formattedref format="application/x-isodoc+xml">BIPM. BIPM Key Comparison Database. www.bipm.org/kcdb.</formattedref>
   <docidentifier type="metanorma">[6]</docidentifier>
-</bibitem><bibitem anchor="bipm-mut" id="_5a63e666-7f36-b446-c802-adcfe6c2e2d8">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="bipm-mut" id="_83230c2f-a4ed-dc77-f1b9-8b3f5d35367a">
   <formattedref format="application/x-isodoc+xml">BIPM. Mutual recognition of national measurement standards and of calibration and measurement certificates issued by national metrology institutes. International Committee for Weights and Measure, 45 pp., 14 October 1999. Available from the BIPM website: <link target="http://www.bipm.org/pdf/mra.pdf"/>.</formattedref>
   <docidentifier type="metanorma">[7]</docidentifier>
-</bibitem><bibitem anchor="bipm-eva" id="_8799763a-d599-3150-53a0-e005a2c5914d">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="bipm-eva" id="_064bf3d2-b5ee-db2c-362c-3b686397f6b9">
   <formattedref format="application/x-isodoc+xml">BIPM, IEC, IFCC, ILAC, ISO, IUPAC, IUPAP, and OIML. Evaluation of measurement data — Supplement 1 to the “Guide to the expression of uncertainty in measurement” — Propagation of distributions using a Monte Carlo method. Joint Committee for Guides in Metrology, Bureau International des Poids et Mesures, JCGM 101, to appear.</formattedref>
   <docidentifier type="metanorma">[8]</docidentifier>
-</bibitem><bibitem anchor="bipm-gui" id="_53001dae-9e0e-0fb3-cf05-cec8d5c044b0">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="bipm-gui" id="_f0444348-4d4a-f924-f328-9bf2bea2568f">
   <formattedref format="application/x-isodoc+xml">BIPM, IEC, IFCC, ISO, IUPAC, IUPAP, and OIML. Guide to the expression of uncertainty in measurement. International Organisation for Standardisation, Geneva, Switzerland, 1995. ISBN 92-67-10188-9. Corrected and reprinted.</formattedref>
   <docidentifier type="metanorma">[9]</docidentifier>
-</bibitem><bibitem anchor="cox1981" id="_1264b491-0d8d-9824-f085-88c03cb5e7b6">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="cox1981" id="_cd025031-f228-a6af-802a-17e5506442c3">
   <formattedref format="application/x-isodoc+xml">M. G. Cox. The least squares solution of overdetermined linear equations having band or augmented band structure. <em>IMA J. Numer. Anal.</em>, 1:3–22, 1981.</formattedref>
   <docidentifier type="metanorma">[10]</docidentifier>
-</bibitem><bibitem anchor="cox1986" id="_e15fc4f8-8d1c-6c9d-0e4e-dc29b9324ccf">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="cox1986" id="_21ad7f7d-9c58-bd40-6794-884de098ace1">
   <formattedref format="application/x-isodoc+xml">M. G. Cox. Piecewise Chebyshev series. <em>Bull. Inst. Math. Appl.</em>, 22:163–166, 1986.</formattedref>
   <docidentifier type="metanorma">[11]</docidentifier>
-</bibitem><bibitem anchor="cox1987" id="_57ab1f70-21c7-72d0-87ed-358f261dac9f">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="cox1987" id="_61665bd9-c82a-476c-6462-3566f2fecae3">
   <formattedref format="application/x-isodoc+xml">M. G. Cox. The NPL Data Approximation Subroutine Library: current and planned facilities. <em>NAG Newsletter</em>, 2/87:3–16, 1987.</formattedref>
   <docidentifier type="metanorma">[12]</docidentifier>
-</bibitem><bibitem anchor="cox1994" id="_7030d10f-2edc-04f3-a86b-2a93ec8a19a2">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="cox1994" id="_c15cbd87-bf6a-0787-38c0-e1130bb65b4d">
   <formattedref format="application/x-isodoc+xml">M. G. Cox. Survey of numerical methods and metrology applications: discrete processes. In P. Ciarlini, M. G. Cox, R. Monaco, and F. Pavese, editors, <em>Advanced Mathematical Tools in Metrology</em>, pages 1–21, Singapore, 1994. World Scientific.</formattedref>
   <docidentifier type="metanorma">[13]</docidentifier>
-</bibitem><bibitem anchor="cox1996" id="_4b73d133-7b79-404e-88f1-f77188495f39">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="cox1996" id="_842191d2-fac3-b0a9-e1b3-e4fa8a983b7c">
   <formattedref format="application/x-isodoc+xml">M. G. Cox. Constructing and solving mathematical models of measurement. In P. Ciarlini, M. G. Cox, F. Pavese, and D. Richter, editors, <em>Advanced Mathematical Tools in Metrology II</em>, pages 7–21, Singapore, 1996. World Scientific.</formattedref>
   <docidentifier type="metanorma">[14]</docidentifier>
-</bibitem><bibitem anchor="cox2002" id="_c91f37dd-d4b5-fd26-0649-e0b01b828e35">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="cox2002" id="_1c5c5015-aeee-7b31-17e1-8f6cc732643f">
   <formattedref format="application/x-isodoc+xml">M. G. Cox. The evaluation of key comparison data. <em>Metrologia</em>, 39:589–595, 2002.</formattedref>
   <docidentifier type="metanorma">[15]</docidentifier>
-</bibitem><bibitem anchor="cox2007" id="_7454b9ce-c459-c223-39f8-08931db943fd">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="cox2007" id="_67f517c4-5dd4-3c5a-0199-751df34efe62">
   <formattedref format="application/x-isodoc+xml">M. G. Cox. The area under a curve specified by measured values. <em>Metrologia</em>, 44:365–378, 2007.</formattedref>
   <docidentifier type="metanorma">[16]</docidentifier>
-</bibitem><bibitem anchor="cox2004" id="_cbc1d19c-735e-ae44-5a0c-9608069cacc1">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="cox2004" id="_d7b2b7eb-265d-fc68-4bc1-b1cd4e8853f3">
   <formattedref format="application/x-isodoc+xml">M. G. Cox and P. M. Harris. Software specifications for uncertainty evaluation. Technical Report CMSC 40/04, National Physical Laboratory, Teddington, UK, 2004.</formattedref>
   <docidentifier type="metanorma">[17]</docidentifier>
-</bibitem><bibitem anchor="cox2004-2" id="_fdeb3033-c432-cad7-bed7-2a10a470b93a">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="cox2004-2" id="_7b6971e4-6f4e-3f4d-806a-11eeac68c7dc">
   <formattedref format="application/x-isodoc+xml">M. G. Cox and P. M. Harris. SS<em>f</em>M Best Practice Guide No. 6, Uncertainty evaluation. Technical report, National Physical Laboratory, Teddington, UK, 2004.</formattedref>
   <docidentifier type="metanorma">[18]</docidentifier>
-</bibitem><bibitem anchor="cox2006" id="_9cbdfc1f-6450-fbae-109d-423dfefe4fc3">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="cox2006" id="_6fdcd900-0046-f8b6-0eea-86298ee47563">
   <formattedref format="application/x-isodoc+xml">M. G. Cox and P. M. Harris. SS<em>f</em>M Best Practice Guide No. 6, Uncertainty evaluation. Technical Report DEM-ES-011, National Physical Laboratory, Teddington, UK, 2006.</formattedref>
   <docidentifier type="metanorma">[19]</docidentifier>
-</bibitem><bibitem anchor="cox2003" id="_83dc8428-65b8-b6de-8bee-9a467045c43d">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="cox2003" id="_66b22b8f-67be-81ff-2487-96e560421a43">
   <formattedref format="application/x-isodoc+xml">M. G. Cox, P. M. Harris, P. D. Kenward, and Emma Woolliams. Spectral characteristic modelling. Technical Report CMSC 27/03, National Physical Laboratory, Teddington, UK, 2003.</formattedref>
   <docidentifier type="metanorma">[20]</docidentifier>
-</bibitem><bibitem anchor="cox2005" id="_c34c32a0-df38-c2db-6b35-1b47e2c67f8d">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="cox2005" id="_4c2859e4-0eb5-079b-02bc-c7b1c42d1fc0">
   <formattedref format="application/x-isodoc+xml">M. G. Cox, P. M. Harris, and Emma R. Woolliams. Data evaluation of key comparisons involving linked bilateral measurements and multiple artefacts. In <em>NCSL International Workshop and Symposium</em>, Washington, USA, 2005.</formattedref>
   <docidentifier type="metanorma">[21]</docidentifier>
-</bibitem><bibitem anchor="vis2003" id="_97325972-0b68-b6d1-10b7-7626df203920">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="vis2003" id="_2aff99d2-ebd6-dcb0-00e7-73350130934f">
   <formattedref format="application/x-isodoc+xml">A. de Vismes and M.-N. Amiot. Towards absolute activity measurements by ionisation chambers using the penelope monte-carlo code. <em>Appl. Radiat. and Isot.</em>, 59:267–272, 2003.</formattedref>
   <docidentifier type="metanorma">[22]</docidentifier>
-</bibitem><bibitem anchor="dry1986" id="_eb1639e3-b1ab-f91b-01fa-042fccc80032">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="dry1986" id="_0fe29b11-6aad-cc02-64fe-235411cfe584">
   <formattedref format="application/x-isodoc+xml">P. Dryák and L. Dvořák. Measurement of the energy response functions of the ÚVVVR and SIR <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>4</mn>
@@ -24459,88 +24507,142 @@ uncertainty <stem block="false" type="MathML"><math xmlns="http://www.w3.org/199
   </mstyle>
 </math><asciimath>4pi gamma</asciimath></stem> ionization chambers. <em>Appl. Radiat. Isot.</em>, 37:1071–1073, 1986.</formattedref>
   <docidentifier type="metanorma">[23]</docidentifier>
-</bibitem><bibitem anchor="for1979" id="_f7118d19-47bf-dba2-8a0a-f797c43a3341">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="for1979" id="_4246fa72-5fa7-4911-c2c7-331388d56618">
   <formattedref format="application/x-isodoc+xml">B. Ford, J. Bentley, J. J. du Croz, and S. J. Hague. The NAG Library ‘machine’. <em>Software – Practice and Experience</em>, 9:56–72, 1979.</formattedref>
   <docidentifier type="metanorma">[24]</docidentifier>
-</bibitem><bibitem anchor="cea2004" id="_c9e4bdfb-b215-3086-31c1-c8bb9a2344ed">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="cea2004" id="_1f7ef4f0-c98d-a739-978b-42b1583194b3">
   <formattedref format="application/x-isodoc+xml">CEA/LNHB (France), PTB (Germany), INEEL (USA), KRI (Russia), LBNL (USA), NPL (UK), and CIEMAT (Spain). DDEP, Decay Data Evaluation Project, 2004. <link target="http://www.nucleide.org/DDEP.htm"/>.</formattedref>
   <docidentifier type="metanorma">[25]</docidentifier>
-</bibitem><bibitem anchor="gil1981" id="_963aa053-fd98-7300-dfe7-197cafc73f37">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="gil1981" id="_884fe65c-56a8-b020-a628-d2c46c64f916">
   <formattedref format="application/x-isodoc+xml">P. E. Gill, W. Murray, and M. H. Wright. <em>Practical Optimization</em>. Academic Press, London, 1981.</formattedref>
   <docidentifier type="metanorma">[26]</docidentifier>
-</bibitem><bibitem anchor="gol1996" id="_3e27d0be-881d-8285-4087-96f1bde053f8">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="gol1996" id="_7a173eba-a3cf-3022-f0c2-32b4ae275698">
   <formattedref format="application/x-isodoc+xml">G. H. Golub and C. F. Van Loan. <em>Matrix Computations</em>. John Hopkins University Press, Baltimore, MD, USA, 1996. Third edition.</formattedref>
   <docidentifier type="metanorma">[27]</docidentifier>
-</bibitem><bibitem anchor="gra1999" id="_7b741851-456e-51bd-4681-ede59ab21d8a">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="gra1999" id="_36f81c7b-1888-9c92-9629-9278d49aea98">
   <formattedref format="application/x-isodoc+xml">A. Grau Malonda. Free parameter models in liquid scintillation counting. In <em>Colección Documentos Ciemat</em>, Madrid, 1999.</formattedref>
   <docidentifier type="metanorma">[28]</docidentifier>
-</bibitem><bibitem anchor="mar1979" id="_462282d9-5cc9-3d94-420b-91f8ecdf07b9">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="mar1979" id="_59c9b267-e016-e9bf-5862-dcaf9f411ee2">
   <formattedref format="application/x-isodoc+xml">K. V. Mardia, J. T. Kent, and J. M. Bibby. <em>Multivariate Analysis</em>. Academic Press, London, 1979.</formattedref>
   <docidentifier type="metanorma">[29]</docidentifier>
-</bibitem><bibitem anchor="mic2000" id="_ca3975fc-4b3d-8f6e-1733-cb7c12820079">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="mic2000" id="_1f0c5948-6a7a-0c79-3eba-4de93053457f">
   <formattedref format="application/x-isodoc+xml">C. Michotte. Influence of radioactive impurities on SIR measurements. <em>Appl. Radiat. Isot.</em>, 52:319–323, 2000.</formattedref>
   <docidentifier type="metanorma">[30]</docidentifier>
-</bibitem><bibitem anchor="mic2002" id="_835fc0d1-e6ab-d3a5-44ac-e4226c0f2609">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="mic2002" id="_ef0d1016-430b-4481-1270-7d1c9f742562">
   <formattedref format="application/x-isodoc+xml">C. Michotte. Efficiency curve of the ionization chamber of the SIR. <em>Appl. Radiat. Isot.</em>, 56:15–20, 2002.</formattedref>
   <docidentifier type="metanorma">[31]</docidentifier>
-</bibitem><bibitem anchor="mic2006" id="_cba911f4-e265-5f4e-8560-cc11e0075504">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="mic2006" id="_95b388da-5ad1-d9c2-ed30-58c52b723df2">
   <formattedref format="application/x-isodoc+xml">C. Michotte, A. K. Pearce, M. G. Cox, and J.-J. Gostely. An approach based on the SIR measurement model for determining ionization chamber efficiency curves, and a study of <sup>65</sup>Zn and <sup>201</sup>Tl photon emission intensities. <em>Appl. Radiat. and Isot.</em>, 64:1147–1155, 2006.</formattedref>
   <docidentifier type="metanorma">[32]</docidentifier>
-</bibitem><bibitem anchor="mic2003" id="_e4838200-6562-1959-e1a8-4fa12e5d3699">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="mic2003" id="_9b37925d-ebc5-93ac-3228-8d0ba221ded4">
   <formattedref format="application/x-isodoc+xml">C. Michotte and G. Ratel. Key comparison results and the determination of the KCRV, CCRI(II)/03-28. Technical report, BIPM, 2003. <link target="http://www.bipm.org/cc/CCRI(II)/Allowed/17/CCRI(II)03-28.pdf"/>.</formattedref>
   <docidentifier type="metanorma">[33]</docidentifier>
-</bibitem><bibitem anchor="nie2002" id="_fca533b9-4e08-1d96-fe59-fccf44502d3f">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="nie2002" id="_d5f141c3-a253-1c66-a331-2d25ed29b3e8">
   <formattedref format="application/x-isodoc+xml">L. Nielsen. Identification and handling of discrepant measurements in key comparisons. Technical Report DFM-02-R28, Danish Institute of Fundamental Metrology, Denmark, 2002.</formattedref>
   <docidentifier type="metanorma">[34]</docidentifier>
-</bibitem><bibitem anchor="nat2004" id="_b2de8182-782a-fb24-cd56-5ac530935feb">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="nat2004" id="_09817d30-ec9d-a9b7-886f-4c5fbe55da15">
   <formattedref format="application/x-isodoc+xml">National Nuclear Data Center. ENSDF, Evaluated Nuclear Structure Data File, 2004.</formattedref>
   <docidentifier type="metanorma">[35]</docidentifier>
-</bibitem><bibitem anchor="pea2007" id="_040cb165-fd9c-596e-3b32-cfaf23de94d6">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="pea2007" id="_49547769-b22c-c3b9-1c61-8335b291aa29">
   <formattedref format="application/x-isodoc+xml">A. K. Pearce, C. Michotte, and Y. Hino. Ionization chamber efficiency curves. <em>Metrologia</em>, 44:S67–S70, 2007.</formattedref>
   <docidentifier type="metanorma">[36]</docidentifier>
-</bibitem><bibitem anchor="rat2004" id="_69526a42-d654-49d1-5161-7f436582ac63">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="rat2004" id="_80fddb5e-8c98-6883-e164-4e5b61eedcff">
   <formattedref format="application/x-isodoc+xml">G. Ratel and C. Michotte. BIPM comparison BIPM.RI(II)-K1.Yb-169 of activity measurements of the radionuclide <sup>169</sup>Yb and links for the 1997 regional comparison EUROMET.RI(II)-K2.Yb-169. <em>Metrologia</em>, 41:06017, 2004.</formattedref>
   <docidentifier type="metanorma">[37]</docidentifier>
-</bibitem><bibitem anchor="reh1998" id="_51c6e8ce-aff0-46af-d967-5991799afa38">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="reh1998" id="_0efdf1b3-f3fb-2349-c66f-8fde5b326647">
   <formattedref format="application/x-isodoc+xml">D. F. G. Reher, M. J. Woods, B. R. S. Simpson, and G. Ratel. Portability of the calibration of SIR of BIPM to other ionization chambers for radioactivity measurements. <em>Appl. Radiat. Isot.</em>, 49:1417–1419, 1998.</formattedref>
   <docidentifier type="metanorma">[38]</docidentifier>
-</bibitem><bibitem anchor="ros1936" id="_4ffd2a13-f8d8-2dcc-3569-7d9373ca0295">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="ros1936" id="_9a979b30-2004-ba2c-ed1a-1a3b4ae64648">
   <formattedref format="application/x-isodoc+xml">M. E. Rose. <em>Phys. Rev. Lett.</em>, 49:727–729, 1936.</formattedref>
   <docidentifier type="metanorma">[39]</docidentifier>
-</bibitem><bibitem anchor="ryt1983" id="_e6bf8383-1785-fd79-cc12-d8ac02375810">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="ryt1983" id="_71cbd025-1a88-cb26-07ab-078011d49e97">
   <formattedref format="application/x-isodoc+xml">A. Rytz. The international reference system for activity measurements of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">γ</mi>
   </mstyle>
 </math><asciimath>gamma</asciimath></stem>-ray emitting nuclides. <em>Appl. Radiat. Isot</em>, 34:1047–1056, 1983.</formattedref>
   <docidentifier type="metanorma">[40]</docidentifier>
-</bibitem><bibitem anchor="sch1997" id="_5da6cc17-3051-ee96-23be-b29fb3d54094">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="sch1997" id="_74a4a22c-3cee-1a8f-ba55-68237d24a4ce">
   <formattedref format="application/x-isodoc+xml">H. Schrader. Activity measurements with ionization chambers. Monographie BIPM-4, Bureau International des Poids et Mesures, Pavillon de Breteuil, F-92312 Sèvres Cedex, France, 1997.</formattedref>
   <docidentifier type="metanorma">[41]</docidentifier>
-</bibitem><bibitem anchor="sch2000" id="_17c73abb-a995-5474-4eb6-77a96d458f63">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="sch2000" id="_617038fb-07e1-8f78-203c-970f37aeb152">
   <formattedref format="application/x-isodoc+xml">H. Schrader. Calibration and consistency of results of an ionization-chamber secondary standard measuring system for activity. <em>Appl. Radiat. Isot.</em>, 52:325–334, 2000.</formattedref>
   <docidentifier type="metanorma">[42]</docidentifier>
-</bibitem><bibitem anchor="sch2004" id="_25491f31-c08e-06e3-fee8-9e21bf82c6a5">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="sch2004" id="_3304514c-edb1-3f3c-9a28-c44e89524194">
   <formattedref format="application/x-isodoc+xml">H. Schrader and A. Švec. Comparison of ionization chamber efficiencies for activity measurements. <em>Appl. Radiat. Isot.</em>, 60:369–378, 2004.</formattedref>
   <docidentifier type="metanorma">[43]</docidentifier>
-</bibitem><bibitem anchor="sve2002" id="_64d8e791-b05a-2dd9-161f-fc61daf0007f">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="sve2002" id="_241313c1-3b92-f37c-b23b-524ebb7c92d6">
   <formattedref format="application/x-isodoc+xml">A. Švec and H. Schrader. Fitting methods for constructing energy-dependent efficiency curves and their application to ionization chamber measurements. <em>Appl. Radiat. Isot.</em>, 56:237–243, 2002.</formattedref>
   <docidentifier type="metanorma">[44]</docidentifier>
-</bibitem><bibitem anchor="wil1989" id="_05b3f04c-5cd2-c56d-2755-3c855f8e1be6">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="wil1989" id="_eb9265bc-9b21-d37f-b46a-23429517d7f2">
   <formattedref format="application/x-isodoc+xml">D. H. Wilkinson. Evaluation of beta-decay. Part I. The traditional phase space factors. <em>Nucl. Instrum. Methods Phys. Res.</em>, A275:378–386, 1989.</formattedref>
   <docidentifier type="metanorma">[45]</docidentifier>
-</bibitem><bibitem anchor="wil1990" id="_bba10d21-dec3-5b61-c032-0af1e9ce9a62">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="wil1990" id="_8c6b3c25-f29a-ffa9-6a0f-a07c7c825462">
   <formattedref format="application/x-isodoc+xml">D. H. Wilkinson. Evaluation of beta-decay. Part II. Finite mass and size effects. <em>Nucl. Instrum. Methods Phys. Res.</em>, A290:509–515, 1990.</formattedref>
   <docidentifier type="metanorma">[46]</docidentifier>
-</bibitem><bibitem anchor="wil1995" id="_065e9783-d36d-cb17-b95a-cb4ce46c14b3">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="wil1995" id="_b02b0f7c-45b3-550a-6271-7fb5cd22f17c">
   <formattedref format="application/x-isodoc+xml">D. H. Wilkinson. Evaluation of beta-decay. Part V. The Z-independent outer radiative corrections for allowed decay. <em>Nucl. Instrum. Methods Phys. Res.</em>, A365:497–507, 1995.</formattedref>
   <docidentifier type="metanorma">[47]</docidentifier>
-</bibitem><bibitem anchor="wil1997" id="_9a8e798d-d826-1366-1886-340361735d48">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="wil1997" id="_8f4ebee6-3565-1a8a-385a-4822bf4c38bd">
   <formattedref format="application/x-isodoc+xml">D. H. Wilkinson. Evaluation of beta-decay. Part VI. The Z-dependent outer radiative corrections for allowed decay. <em>Nucl. Instrum. Methods Phys. Res.</em>, A401:275–280, 1997.</formattedref>
   <docidentifier type="metanorma">[48]</docidentifier>
-</bibitem><bibitem anchor="wil1998" id="_b9d95279-21ce-f442-c4c8-94618083e185">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="wil1998" id="_ea2ed281-6e8e-7779-1285-f8f28893925e">
   <formattedref format="application/x-isodoc+xml">D. H. Wilkinson. Evaluation of beta-decay. Part VII. The Z-independent outer radiative corrections for unique-forbidden decay. <em>Nucl. Instrum. Methods Phys. Res.</em>, A406:89–92, 1998.</formattedref>
   <docidentifier type="metanorma">[49]</docidentifier>
+  <language>en</language>
+  <script>Latn</script>
 </bibitem>
 
 

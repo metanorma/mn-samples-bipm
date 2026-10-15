@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.2" schema-version="v2.1.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.0" schema-version="v2.2.0" flavor="bipm">
 <bibdata type="standard">
-<title language="en" format="text/plain" type="title-main">Comparison of Ozone Reference Standards of the DECCW and the BIPM</title>
-
-<docidentifier primary="true" type="BIPM">BIPM BIPM-2015/02</docidentifier><docnumber>BIPM-2015/02</docnumber><contributor><role type="author"/><organization>
+<title language="en" type="title-main">Comparison of Ozone Reference Standards of the DECCW and the BIPM</title>
+<docidentifier primary="true" type="BIPM">BIPM BIPM-2015/02</docidentifier><docnumber>BIPM-2015/02</docnumber><date type="updated"><on>2015-02</on></date><contributor><role type="author"/><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="editor">Author for correspondence</role><person>
 <name><completename>Joële Viallon</completename></name>
@@ -25,13 +24,19 @@
 <name><completename>Glenn Ross</completename></name>
 <affiliation><organization>
 <name>OEH</name>
-</organization></affiliation></person></contributor><contributor><role type="publisher"/><organization>
+</organization></affiliation></person></contributor><contributor><role type="author"><description>committee</description></role><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2015-02</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2015</from><owner><organization>
+<subdivision type="Committee">
+<name language="en">International Bureau of Weights and Measures</name>
+
+<name language="fr">Bureau International des Poids et Mesures</name>
+<identifier>BIPM</identifier><identifier type="full">BIPM</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="supersedes"><bibitem><date type="circulated"/><version/></bibitem>
-</relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="BIPM" language="en" script="Latn">International Bureau of Weights and Measures</committee><committee acronym="BIPM" language="fr" script="Latn">Bureau International des Poids et Mesures</committee></editorialgroup><structuredidentifier><docnumber>BIPM-2015/02</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#D_N0" id="U_nmol.mol-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version>2015-02</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2015</from><owner><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="successorOf"><bibitem/></relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2015/02</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#D_N0" id="U_nmol.mol-1">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">nmol*mol^-1</UnitName>
         <UnitSymbol type="HTML">nmol mol
           <sup>−1</sup>
@@ -41,9 +46,7 @@
             <mi mathvariant="normal">nmol</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mol</mi>
-              </mrow>
+              <mi mathvariant="normal">mol</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -56,9 +59,9 @@
           <EnumeratedRootUnit unit="mole" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_N0" id="U_umol.mol-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">umol*mol^-1</UnitName>
-        <UnitSymbol type="HTML">mol mol
+        <UnitSymbol type="HTML">µmol mol
           <sup>−1</sup>
         </UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -66,9 +69,7 @@
             <mi mathvariant="normal">µmol</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mol</mi>
-              </mrow>
+              <mi mathvariant="normal">mol</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -81,7 +82,7 @@
           <EnumeratedRootUnit unit="mole" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_nm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">nm</UnitName>
         <UnitSymbol type="HTML">nm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -92,8 +93,8 @@
         <RootUnits>
           <EnumeratedRootUnit unit="metre" prefix="n"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd8" id="U_cm2">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L2" id="U_cm2">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">cm^2</UnitName>
         <UnitSymbol type="HTML">cm
           <sup>2</sup>
@@ -101,12 +102,8 @@
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
-              <mrow>
-                <mn>2</mn>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
+              <mn>2</mn>
             </msup>
           </math>
         </UnitSymbol>
@@ -114,7 +111,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="2"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">kelvin</UnitName>
         <UnitSymbol type="HTML">°K</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -123,7 +120,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd14" id="U_kPa">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">kPa</UnitName>
         <UnitSymbol type="HTML">kPa</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -135,7 +132,7 @@
           <EnumeratedRootUnit unit="pascal" prefix="k"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_N-1" id="U_mol-1">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mol^-1</UnitName>
         <UnitSymbol type="HTML">mol
           <sup>−1</sup>
@@ -143,9 +140,7 @@
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mol</mi>
-              </mrow>
+              <mi mathvariant="normal">mol</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -153,8 +148,8 @@
             </msup>
           </math>
         </UnitSymbol>
-      </Unit><Unit dimensionURL="#NISTd48" id="U_NISTu13.u6e-1/1.u5e-1/1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L2MT-2Theta-1N-1" id="U_NISTu13.u6e-1/1.u5e-1/1">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">joule per mole kelvin</UnitName>
         <UnitSymbol type="HTML">J mol
           <sup>−1</sup> K
@@ -165,9 +160,7 @@
             <mi mathvariant="normal">J</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">mol</mi>
-              </mrow>
+              <mi mathvariant="normal">mol</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -175,9 +168,7 @@
             </msup>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">K</mi>
-              </mrow>
+              <mi mathvariant="normal">K</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -190,8 +181,8 @@
           <EnumeratedRootUnit unit="mole" powerNumerator="-1"/>
           <EnumeratedRootUnit unit="kelvin" powerNumerator="-1"/>
         </RootUnits>
-      </Unit><Unit dimensionURL="#NISTd29" id="U_cm-1">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L-1" id="U_cm-1">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">cm^-1</UnitName>
         <UnitSymbol type="HTML">cm
           <sup>−1</sup>
@@ -199,9 +190,7 @@
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <msup>
-              <mrow>
-                <mi mathvariant="normal">cm</mi>
-              </mrow>
+              <mi mathvariant="normal">cm</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -213,7 +202,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_cm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">cm</UnitName>
         <UnitSymbol type="HTML">cm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -225,7 +214,7 @@
           <EnumeratedRootUnit unit="metre" prefix="c"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu23">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">degree Celsius</UnitName>
         <UnitSymbol type="HTML">°C</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -234,7 +223,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit id="U_L.min-1">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">L*min^-1</UnitName>
         <UnitSymbol type="HTML">L min
           <sup>−1</sup>
@@ -244,9 +233,7 @@
             <mi mathvariant="normal">L</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">min</mi>
-              </mrow>
+              <mi mathvariant="normal">min</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -259,7 +246,7 @@
           <EnumeratedRootUnit unit="minute" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd3" id="U_NISTu3">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">second</UnitName>
         <UnitSymbol type="HTML">s</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -271,7 +258,7 @@
         <AmountOfSubstance symbol="N" powerNumerator="0"/>
       </Dimension><Dimension id="NISTd1">
         <Length symbol="L" powerNumerator="1"/>
-      </Dimension><Dimension id="NISTd8">
+      </Dimension><Dimension id="D_L2">
         <Length symbol="L" powerNumerator="2"/>
       </Dimension><Dimension id="NISTd5">
         <ThermodynamicTemperature symbol="Theta" powerNumerator="1"/>
@@ -287,7 +274,13 @@
         <Time symbol="T" powerNumerator="-2"/>
         <ThermodynamicTemperature symbol="Theta" powerNumerator="-1"/>
         <AmountOfSubstance symbol="N" powerNumerator="-1"/>
-      </Dimension><Dimension id="NISTd29">
+      </Dimension><Dimension id="D_L2MT-2Theta-1N-1">
+        <Length symbol="L" powerNumerator="2"/>
+        <Mass symbol="M" powerNumerator="1"/>
+        <Time symbol="T" powerNumerator="-2"/>
+        <ThermodynamicTemperature symbol="Theta" powerNumerator="-1"/>
+        <AmountOfSubstance symbol="N" powerNumerator="-1"/>
+      </Dimension><Dimension id="D_L-1">
         <Length symbol="L" powerNumerator="-1"/>
       </Dimension><Dimension id="NISTd3">
         <Time symbol="T" powerNumerator="1"/>
@@ -315,11 +308,10 @@
         <PrefixSymbol type="unicode">k</PrefixSymbol>
         <PrefixSymbol type="LaTeX">k</PrefixSymbol>
         <PrefixSymbol type="HTML">k</PrefixSymbol>
-      </Prefix></PrefixSet></UnitsML><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+      </Prefix></PrefixSet></UnitsML><presentation-metadata><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
 <boilerplate><copyright-statement>
 
-<clause id="_816b7c20-a701-8d42-d942-8ab53cb6692e" obligation="normative">
-<p id="_91c0561a-ba7a-a2bd-4123-974f9fab3dd0" align="center">© Bureau International des Poids et Mesures 2015 all rights reserved</p>
+<clause id="_d2b6e006-5af6-3643-098e-20d74630952c" obligation="normative"><p id="_91c0561a-ba7a-a2bd-4123-974f9fab3dd0" align="center">© Bureau International des Poids et Mesures 2015 all rights reserved</p>
 </clause>
 </copyright-statement>
 
@@ -390,10 +382,9 @@
 <p id="_244b0266-05a4-ed48-9e40-b5570f495f40">A comparison of the ozone reference standards of the Office of Environment and Heritage NSW (OEH) and of the Bureau International des Poids et Mesures (BIPM) was performed. Both institutes maintain Standard Reference Photometers (SRPs), developed by the National Institute of Standards and Technology (NIST) as their reference standards. This comparison was performed following the protocol established for the key comparison BIPM.QM-K1, described briefly in <xref target="protocol"/>. A description of the standards is given in <xref target="standards"/> of this report, together with their uncertainty budgets. The results of the comparison are given in <xref target="results_uncertainties"/>, <xref target="differences"/> and <xref target="analysis"/>.</p>
 </clause>
 
-<terms id="_13b66498-72fa-abe0-82fd-dd7a5d9c3b46" obligation="normative">
+<terms id="_61fcafe3-7d44-b967-a356-c6228e0a54ec" obligation="normative">
 <title id="_dfb2eab2-f980-6365-3c47-81d0eb272962">Terms and definitions</title><p id="_e5876e78-fa42-efa9-f5ba-a93535689e8d">No terms and definitions are listed in this document.</p>
-
-<dl id="_24ba1305-c3da-a5c2-88b9-e48f6dba87ae"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dl id="_a9289e23-f479-7e4c-cb70-d77634778fd4"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>x</mi>
@@ -498,7 +489,7 @@
     </msub>
   </mstyle>
 </math><asciimath>s_("A")</asciimath></stem></dt>
-<dd id="_21124160-2d49-ad4c-a02d-96d9f347b333"><p id="_c569fe8e-f7de-0fad-9ee3-7fd2afa864f5">standard deviation of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_dfa02830-c16b-d6bc-daaf-94307ed7eda6"><p id="_c569fe8e-f7de-0fad-9ee3-7fd2afa864f5">standard deviation of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>N</mi>
@@ -567,7 +558,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>s_("A")^2 = 1/(ii(N)-1) sum_(i=1)^ii(N) (x_("A",i)-bar(x)_("A"))^2</asciimath></stem></p>
-<ul id="_762b43a6-4305-c72b-281f-cbdcba70a779"><li><p id="_4ceee7ac-78bd-0958-8a38-7c1dd5d0f6b7">The result of the linear regression fit performed between two sets of data measured by the photometers A and B during a comparison is written: <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<ul id="_b6371e5d-d274-a15a-7036-8ebff01fa416"><li><p id="_7bc64001-bbc8-e246-4c37-e84300de4d9f">The result of the linear regression fit performed between two sets of data measured by the photometers A and B during a comparison is written: <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>x</mi>
@@ -604,7 +595,6 @@
   </mstyle>
 </math><asciimath>b_("A,B")</asciimath></stem> is expressed in units of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -636,7 +626,7 @@
 <p id="_4402e7d9-ac81-2652-e478-3896fd435b2b">The comparison was originally scheduled and performed in January 2015. After this first comparison, the optical cells of the instrument broke during shipment from the BIPM to the OEH. The instrument was sent back to the BIPM where new cells have been installed, and the comparison repeated. Measurements reported in this report were performed from 10 to 16 April 2015 at the BIPM. Measurements performed in January 2015 are reported for information in  <xref target="history"/>, with the aim to show that replacing the instrument’s gas cells did not change its comparability with SRP27.</p>
 </clause>
 
-<clause id="_27505d1d-fa94-774b-5b85-3ca59cded09b" anchor="protocol" obligation="normative">
+<clause id="_c13de0fc-a369-d238-9c40-cefc667e0f2c" anchor="protocol" obligation="normative">
 <title id="_1a118314-b6b4-eaef-fbb2-07ac7d150545">Measurement protocol</title>
 <p id="_18f073bf-91f7-de4a-e2de-5930f5c47a94">This comparison was performed following the protocol established for the key comparison BIPM.QM-K1. As OEH NSW is not a Designated Institute under the CIPM MRA, the results of this comparison cannot be included in BIPM.QM-K1, but are published in this BIPM report.</p>
 
@@ -697,13 +687,12 @@
 <p id="_87f7c779-e529-1021-0e36-1f270c7d3c12">A common dual external manifold in Pyrex is used to furnish the necessary flows of reference air and ozone-air mixtures to the ozone photometers. The two columns of this manifold are vented to atmospheric pressure.</p>
 </clause>
 
-<clause id="_d6967af9-7a03-8d49-a129-6400b1c05a43" obligation="normative">
+<clause id="_d5ec9640-2493-09df-e9e6-bfaee3790415" obligation="normative">
 <title id="_a5e1ee58-730d-2e94-151a-534ea2fe9c72">Comparison procedure</title>
 <p id="_6c27e00a-60e3-5a05-2ff2-f9504ad1f85a">Prior to the comparison, all the instruments were switched on and allowed to stabilize for at least 8 hours. The pressure and temperature measurement systems of the instruments were checked at this time. If any adjustments were required, these were noted. For this comparison, no adjustments were necessary.</p>
 
-<p id="_6dfbfa1f-cd74-2df3-1b3e-f54d55bc1e28">One comparison run includes 10 different amount-of-substance fractions distributed over the range, together with the measurement of reference air at the beginning and end of each run. The nominal amount-of-substance fractions were measured in a sequence imposed by the protocol (0, 220, 80, 420, 120, 320, 30, 370, 170, 500, 270, and 0) <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_715f8fc3-8670-0b4d-1ebd-73bfa8df5add">One comparison run includes 10 different amount-of-substance fractions distributed over the range, together with the measurement of reference air at the beginning and end of each run. The nominal amount-of-substance fractions were measured in a sequence imposed by the protocol (0, 220, 80, 420, 120, 320, 30, 370, 170, 500, 270, and 0) <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -804,11 +793,11 @@
 <p id="_0dc0b41f-e6f2-47ed-cace-88d501e7e869">All calculations were performed by the BIPM using the information on form BIPM.QM-K1-R1. It includes the difference from the reference value at two nominal ozone amount-of-substance fractions, which are considered as degrees of equivalence for the key comparison BIPM.QM-K1. For information, the difference from the reference value at all nominal ozone amount-of-substance fractions are reported in the same form, as well as the linear relationship between the participant’s standard and the common reference standard.</p>
 </clause>
 
-<clause id="_6c7b8ea9-fb29-dabb-9b88-16bd8b081606" anchor="standards" obligation="normative">
+<clause id="_d55184dc-6eda-6c77-bfe6-f67faf896a1d" anchor="standards" obligation="normative">
 <title id="_bc593cd4-9fdc-0a74-881d-14e5e7590b3c">Measurement standards</title>
 <p id="_37eb1625-a443-d9de-b8b9-71945743a9c1">The instruments maintained by the BIPM and the OEH are Standard Reference Photometers (SRP) built by the NIST. More details on the instrument’s operating principle and its capabilities can be found in <eref type="inline" bibitemid="paur" citeas="[1]"/>. The following section describes the measurement principle and the uncertainty budgets.</p>
 
-<clause id="_18531052-e14c-1ce2-6f81-b223c3de67ab" obligation="normative">
+<clause id="_1624c2f8-900b-5c4c-18d1-3e84b304a1d7" obligation="normative">
 <title id="_eaa9c1c1-f376-2c11-4eb4-ec0760e9f86f">Measurement equation of a NIST SRP</title>
 <p id="_2bf21e7e-5888-abc0-ce51-84dbc481cf4a">The measurement of the ozone amount-of-substance fraction by an SRP is based on the absorption of radiation at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -886,12 +875,12 @@
       <mo>)</mo>
     </mrow>
   </mstyle>
-</math><asciimath>ii(C) = (-1)/(2 ii(sigma) ii(L)_("opt")) (ii(T))/(ii(T)_("std")) (ii(P)_("std"))/(ii(P)) "ln"(ii(D))</asciimath></stem><dl id="_9e3cdd0a-b2d9-40ab-e853-cd0092f480d8" key="true"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>ii(C) = (-1)/(2 ii(sigma) ii(L)_("opt")) (ii(T))/(ii(T)_("std")) (ii(P)_("std"))/(ii(P)) "ln"(ii(D))</asciimath></stem><key><dl id="_e42b489a-8076-3b7d-7aae-51ac7435ce66"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">σ</mi>
   </mstyle>
 </math><asciimath>sigma</asciimath></stem></dt>
-<dd id="_8b2f4ab2-f3c0-fcf9-483a-e0e90250d064"><p id="_544e220b-a1ea-b49a-c4a1-53f837a575cf">is the absorption cross-section of ozone at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_028c9f59-3c8a-a207-96e8-23515320bdc5"><p id="_c40df82c-026f-62e1-dc87-2f349676286c">is the absorption cross-section of ozone at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>253.7</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -942,7 +931,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(L)_("opt")</asciimath></stem></dt>
-<dd id="_693f7727-10a8-4ede-d3fc-03995c48fd92"><p id="_52cf1715-b834-b19b-cfca-57ef20b7d632">is the mean optical path length of the two cells;</p>
+<dd id="_4414d26e-590c-6f4a-44d9-799ef428a297"><p id="_592f3f39-49e2-41c3-c0b1-805976b323e8">is the mean optical path length of the two cells;</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -951,7 +940,7 @@
     </mstyle>
   </mstyle>
 </math><asciimath>ii(T)</asciimath></stem></dt>
-<dd id="_518cea32-a84f-312d-2f33-31b91e0a6964"><p id="_a74ab5f2-a25a-a541-be43-2148b96cd5d8">is the measured temperature of the cells;</p>
+<dd id="_26d68d01-7614-ca08-6ac3-cf982e3d4616"><p id="_1c2979c5-7c92-7d7e-35c9-392c5ffa3a28">is the measured temperature of the cells;</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -963,7 +952,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(T)_("std")</asciimath></stem></dt>
-<dd id="_945062bc-898d-6164-cf1f-bca1d1de69ad"><p id="_bbb32510-37a3-128e-f9df-576c0a66f258">is the standard temperature (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_fbd804aa-5666-8bd5-16b2-9a9c2fbaa983"><p id="_1ea8aa2f-6554-9cbb-54a2-ee0b09bfbf8f">is the standard temperature (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>273.15</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -984,7 +973,7 @@
     </mstyle>
   </mstyle>
 </math><asciimath>ii(P)</asciimath></stem></dt>
-<dd id="_071bed9d-92ad-bd5b-1d59-5a93021e91b0"><p id="_b29b2b26-b7ae-fb75-988f-8f3a627e3a8a">is the measured pressure of the cells;</p>
+<dd id="_aabd2d3e-c891-fac5-de7b-dfc7cf6f8056"><p id="_f5fbd70b-1b49-3188-cb28-6ea3033f9052">is the measured pressure of the cells;</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -996,7 +985,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(P)_("std")</asciimath></stem></dt>
-<dd id="_706d3140-f396-e9cc-3f67-4230227619b2"><p id="_8fe81d2e-e059-19de-0807-f7c270046ee1">is the standard pressure (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_9e3f7f08-b821-5f62-d9e8-574b8c041596"><p id="_549982a0-8a48-7192-f2b8-f4523424e05d">is the standard pressure (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>101.325</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -1018,7 +1007,7 @@
     </mstyle>
   </mstyle>
 </math><asciimath>ii(D)</asciimath></stem></dt>
-<dd id="_dbd5490d-85cc-fae6-8fff-207eefd9ad02"><p id="_7b18482b-6a23-2b62-119a-f42ef0c23737">is the product of transmittances of two cells, with the transmittance (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_7dd7bbc2-e5c8-dcf8-5777-67c68f8b1d78"><p id="_97a8d0c9-8aaa-4271-bdb7-a5ee92fc2dae">is the product of transmittances of two cells, with the transmittance (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1029,7 +1018,7 @@
   </mstyle>
 </math><asciimath>ii(T)_r</asciimath></stem>) of one cell defined as</p>
 </dd>
-</dl></formula>
+</dl></key></formula>
 
 
 
@@ -1059,7 +1048,7 @@
       </msub>
     </mfrac>
   </mstyle>
-</math><asciimath>ii(T)_r = ii(I)_("ozone")/ii(I)_("air")</asciimath></stem><dl id="_82574850-295f-f6a1-8a6b-61151e0c1007" key="true"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>ii(T)_r = ii(I)_("ozone")/ii(I)_("air")</asciimath></stem><key><dl id="_fc8b9dd2-e981-f4c6-7794-c79912918361"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1069,7 +1058,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(I)_("ozone")</asciimath></stem></dt>
-<dd id="_b72e924b-4644-1977-bb29-20854ba12523"><p id="_d4c7f66d-a76e-97bd-9637-d5d805b499e5">is the UV radiation intensity measured from the cell when containing ozonized air, and</p>
+<dd id="_10c6472a-eed3-b795-fcbc-797414abf64a"><p id="_106ac621-b8e9-9821-2a0e-eabef92f70b8">is the UV radiation intensity measured from the cell when containing ozonized air, and</p>
 </dd>
 <dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1081,9 +1070,9 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(I)_("air")</asciimath></stem></dt>
-<dd id="_3e07a87b-4909-271a-b073-00f521864fcc"><p id="_5e9be5df-e8b9-be33-05f9-a6b736d5f2dc">is the UV radiation intensity measured from the cell when containing pure air (also called reference or zero air).</p>
+<dd id="_d0d71740-3948-aeb0-10f1-fecc79b2c92e"><p id="_fbcd48f6-f151-0eb2-2f0a-e77e4be48432">is the UV radiation intensity measured from the cell when containing pure air (also called reference or zero air).</p>
 </dd>
-</dl></formula>
+</dl></key></formula>
 
 
 
@@ -1095,7 +1084,7 @@
   </mstyle>
 </math><asciimath>x</asciimath></stem>) of ozone in air:</p>
 
-<formula id="_8bfbd231-b773-1563-fe5e-6208efac46f5" anchor="eq3"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<formula id="_1c967d18-29e0-2561-1e95-e9c00918cfe1" anchor="eq3"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mi>x</mi>
     <mo>=</mo>
@@ -1145,7 +1134,7 @@
       <mo>)</mo>
     </mrow>
   </mstyle>
-</math><asciimath>x = (-1)/(2 ii(sigma) ii(L)_("opt")) ii(T)/ii(P) ii(R)/(ii(N)_"A") "ln"(ii(D))</asciimath></stem><dl id="_45ffa55b-4b5e-dfd6-0230-e46345f16951" key="true"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>x = (-1)/(2 ii(sigma) ii(L)_("opt")) ii(T)/ii(P) ii(R)/(ii(N)_"A") "ln"(ii(D))</asciimath></stem><key><dl id="_f99e0da5-18f8-caa8-e512-ebabe8a4b3dd"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1155,7 +1144,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(N)_"A"</asciimath></stem></dt>
-<dd id="_81ac7aeb-b5e1-bd3e-07c6-5eebf63b1171"><p id="_cde42732-0c3d-5f7c-1f42-dd0d506b6d46">is the Avogadro constant, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_e5fd384c-7097-2b00-5b37-0e99d6237a67"><p id="_67ba93a7-db89-9c3d-a75a-5033dcf0ce31">is the Avogadro constant, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>6.022142</mn>
     <mo>×</mo>
@@ -1187,7 +1176,7 @@
     </mstyle>
   </mstyle>
 </math><asciimath>ii(R)</asciimath></stem></dt>
-<dd id="_a9c7d33e-696e-1090-ecf6-7311cc789625"><p id="_0e4d4c1e-325f-5cfb-2d96-a762bfc9f6c7">is the gas constant, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_005035ba-df86-2fa2-e27c-167945f4c3d6"><p id="_6b76974b-1a12-825d-4ec7-f8f77a6b6300">is the gas constant, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>8.314472</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -1217,11 +1206,12 @@
       </msup>
       
       
+      
     </mrow>
   </mstyle>
 </math><asciimath>8.314472 "unitsml(J*mol^-1*K^-1)"</asciimath></stem>.</p>
 </dd>
-</dl></formula>
+</dl></key></formula>
 
 
 
@@ -1229,7 +1219,7 @@
 
 <p id="_f17d4418-2e42-d215-475e-b83153f3cfc7">The formulation implemented in the SRP software is:</p>
 
-<formula id="_b0c819e8-d496-e0fa-78c0-6cd55a72ddaa" anchor="eq4"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<formula id="_c2b42610-3730-2d88-7a18-b973554b63e4" anchor="eq4"><stem block="true" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="true">
     <mi>x</mi>
     <mo>=</mo>
@@ -1283,7 +1273,7 @@
       <mo>)</mo>
     </mrow>
   </mstyle>
-</math><asciimath>x = (-1)/(2 ii(alpha)_"x" L_("opt")) ii(T)/(ii(T)_("std")) (ii(P)_("std"))/ii(P) "ln"(ii(D))</asciimath></stem><dl id="_4731002b-2031-f4c0-cb7b-632e5b1abd74" key="true"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</math><asciimath>x = (-1)/(2 ii(alpha)_"x" L_("opt")) ii(T)/(ii(T)_("std")) (ii(P)_("std"))/ii(P) "ln"(ii(D))</asciimath></stem><key><dl id="_836fab5e-deae-d4dc-86be-035fdc2a5352"><dt><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -1293,9 +1283,8 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(alpha)_"x"</asciimath></stem></dt>
-<dd id="_6632b284-a1f3-9fe7-a700-efac420cbb34"><p id="_ad439605-fa80-5413-1814-2419de2f3b1e">is the linear absorption coefficient under standard conditions, expressed in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd id="_a46f9f20-3897-f99d-f8a1-aa16fff7777b"><p id="_5ae74491-8685-1297-e4aa-5f02a2c1f728">is the linear absorption coefficient under standard conditions, expressed in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_cm-1">
       <msup>
         <mstyle mathvariant="normal">
@@ -1313,7 +1302,7 @@
   </mstyle>
 </math><asciimath>"unitsml(cm^-1)"</asciimath></stem>, linked to the absorption cross–section with the relation:</p>
 </dd>
-</dl></formula>
+</dl></key></formula>
 
 
 
@@ -1445,7 +1434,7 @@
 <p id="_b2ef55a2-7d00-fc90-8ae1-3c35cc12073f">Compared to the original design described in <eref type="inline" bibitemid="paur" citeas="[1]"/>, SRP27 and SRP28 have been modified to take into account two biases revealed by the study conducted by the BIPM and the NIST <eref type="inline" bibitemid="viallon3" citeas="[3]"/>. In 2009, an “SRP upgrade kit” was installed in the instruments, as described in the report <eref type="inline" bibitemid="viallon4" citeas="[4]"/>.</p>
 </clause>
 
-<clause id="_23e0702f-e7c3-0d8d-8454-e30ba9f6d6f5" obligation="normative">
+<clause id="_b08510f1-55c3-4e9b-d509-5c928bbfb64c" obligation="normative">
 <title id="_395543f4-300b-fd20-6e4e-f37597735878">Uncertainty budget of the common reference BIPM-SRP27</title>
 <p id="_a6fd3d63-c229-0b90-0f16-d6acc7c4e93a">The uncertainty budget for the ozone amount-of-substance fraction in dry air (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -1499,9 +1488,9 @@
   </mstyle>
 </math><asciimath>500 "unitsml(nmol/mol)"</asciimath></stem> is given in <xref target="table1"/>.</p>
 
-<table id="_15278af7-d705-56cd-c9c2-4b6f1a59f4fa" anchor="table1">
+<table id="_62092701-275e-a115-93e0-16e933e251c6" anchor="table1">
 <name id="_80144dcc-ac21-41f1-6fe5-1e746a56be42">Uncertainty budget for the SRPs maintained by the BIPM</name>
-<tbody><tr id="_8cb6897b-7aa8-024b-fe25-fbd5245cd8e8"><th id="_4828bf95-3375-f56d-7f09-66b3fb22ab23" valign="top" rowspan="2" align="center">Component (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<tbody><tr id="_12f2d0cb-0e78-72a0-13fe-24a725b621e8"><th id="_4828bf95-3375-f56d-7f09-66b3fb22ab23" valign="top" rowspan="2" align="center">Component (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>y</mi>
   </mstyle>
@@ -1535,7 +1524,7 @@
     </mfrac>
   </mstyle>
 </math><asciimath>c_i= (delx)/(dely)</asciimath></stem></th>
-<th id="_bd7ebfd7-9dcf-f2a3-cdde-2ee71cb62391" valign="top" rowspan="2" align="center">contribution to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_2149a0e1-c06c-80f5-3d84-37308758bf84" valign="top" rowspan="2" align="center">contribution to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
     <mrow>
@@ -1564,7 +1553,6 @@
   </mstyle>
 </math><asciimath>abs(c_i)*u(y)</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -2019,9 +2007,8 @@
 </tr></tbody>
 </table>
 
-<p id="_d195a8f8-425e-f2bc-23c7-b3021f432c8a">As explained in the protocol of the comparison, following this budget the standard uncertainty associated with the ozone amount-of-substance fraction measurement with the BIPM SRPs can be expressed as a numerical equation (numerical values expressed as <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_d87829a2-befe-69b2-6f8d-02f0ce1d835a">As explained in the protocol of the comparison, following this budget the standard uncertainty associated with the ozone amount-of-substance fraction measurement with the BIPM SRPs can be expressed as a numerical equation (numerical values expressed as <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -2254,7 +2241,7 @@
 </math><asciimath>89.58 "unitsml(cm)"</asciimath></stem>, when calculated as an average of the two cells. This new average value was provided by NIST. The new optical cell would change the input optical path length parameters whilst affecting its uncertainty evaluation.</p>
 </clause>
 
-<clause id="_c37822b0-3377-0b6f-4a8e-e1d7fc2b2c9e" obligation="normative">
+<clause id="_3ae2ad8e-e546-9cd9-d7a5-8d73153fbd81" obligation="normative">
 <title id="_0c763605-2468-7d60-d07b-bf78be32bea0">Uncertainty budget of the SRP21</title>
 <p id="_508d1125-8186-7405-4b4c-da005e89d732">The uncertainty budget for the ozone amount-of-substance fraction in dry air <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -2308,9 +2295,8 @@
   </mstyle>
 </math><asciimath>500 "unitsml(nmol/mol)"</asciimath></stem> is given in <xref target="table2"/>.</p>
 
-<p id="_39da0237-ecd6-497d-d092-688118363bd5">Following this budget, the standard uncertainty associated with the ozone amount-ofsubstance fraction measurement with the SRP21 can be expressed as a numerical equation (numerical values expressed as <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_b2eef470-092b-4dc1-a77d-fe40a633234f">Following this budget, the standard uncertainty associated with the ozone amount-ofsubstance fraction measurement with the SRP21 can be expressed as a numerical equation (numerical values expressed as <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -2372,16 +2358,16 @@
 
 <p id="_834e0f0f-bd34-a087-94d4-e81767f01940">No covariance term for the SRP21 was included in the calculations.</p>
 
-<table id="_19896ba4-bc77-9f1a-f035-ae7a992ac3de" anchor="table2">
+<table id="_871c2714-1b44-4b45-6caf-06c93d3c271b" anchor="table2">
 <name id="_2d80aa91-36e6-81ed-54c2-ed27c12fbe30">Uncertainty budget for the SRP21</name>
-<thead><tr id="_3b151990-da97-e262-4268-51f2eaad9662"><th id="_3f540fa1-3d43-1679-777b-a4ad4b30863c" valign="top" align="left">Component</th>
+<thead><tr id="_8fee478f-02c5-5004-5ddd-6909bf299433"><th id="_3f540fa1-3d43-1679-777b-a4ad4b30863c" valign="top" align="left">Component</th>
 <th id="_b002df91-f63a-87c9-b755-160c5f8c3676" valign="top" align="center">Value</th>
 <th id="_85750349-fcc7-530e-9675-059a564665df" valign="top" align="left">Source</th>
 <th id="_b33ae753-3ea8-4464-5395-5cef65af3db8" valign="top" align="center">Distribution</th>
 <th id="_6eef1232-f472-b209-addb-c01af3bae7ba" valign="top" align="center">Standard Uncertainty</th>
 <th id="_daac7716-4203-bfb0-38db-9b2a33d3d8e3" valign="top" align="center">Combined Standard Uncertainty</th>
 <th id="_4836b673-04fb-653e-6223-178bf9551fa8" valign="top" align="center">Sensitivity Coefficient</th>
-<th id="_190a7f6b-f832-764e-a797-ff4e71d331bc" valign="top" align="left">Contribution to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_f74bd847-1dcf-d6fe-eca3-d37c462afc05" valign="top" align="left">Contribution to <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
     <mrow>
@@ -2392,7 +2378,6 @@
   </mstyle>
 </math><asciimath>u(x)</asciimath></stem> / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -2882,7 +2867,7 @@
 <p id="_d582043b-6871-c662-4906-b6f6cc76677e">Details of the measurement results, the measurement uncertainties and the standard deviations at each nominal ozone amount-of-substance fraction are given in the form BIPM.QM-K1-R1-DECC-15 (<xref target="appendix1"/>).</p>
 </clause>
 
-<clause id="_78cebfbd-d4ec-1366-a0b7-293c77fc5513" anchor="differences" obligation="normative">
+<clause id="_bc38ce2b-0cac-dfa2-d9d1-56935bdf2fb4" anchor="differences" obligation="normative">
 <title id="_239a22cb-b5f7-4092-5202-9a9fb8a796e5">Differences from the reference values</title>
 <p id="_77bc13da-593e-8f54-4622-1776075d43af">For the key comparison BIPM.QM-K1, differences from the reference values were calculated at the twelve nominal ozone amount-of-substance fractions measured, but are only shown in this report at two particular values: <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -3074,7 +3059,7 @@
 </math><asciimath>i</asciimath></stem> and of SRP27 respectively.</p>
 </clause>
 
-<clause id="_e1e73cd6-05dd-7ab3-d943-5c39bed9edda" obligation="normative">
+<clause id="_ac6d7b4c-a2d4-202f-bb3c-8fe4ed488b9f" obligation="normative">
 <title id="_5bf6e10e-7e26-f2be-6bb7-465e24732ceb">Values</title>
 <p id="_f7d1b4ad-0ca6-f7bc-ef1f-3a24078b0fdf">The differences from the reference values and their uncertainties calculated in the form BIPM.QM-K1-R1-DECC-15 are reported in <xref target="table3"/> below. Corresponding graphs of equivalence are given in <xref target="fig1"/>. The expanded uncertainties are calculated with a coverage factor <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -3084,7 +3069,7 @@
   </mstyle>
 </math><asciimath>k = 2</asciimath></stem>.</p>
 
-<table id="_ba56aa6f-0e09-0de2-5c51-9fdb3fe0d2a3" anchor="table3">
+<table id="_2900454f-b29e-be66-d564-2c4e461cd6c2" anchor="table3">
 <name id="_deb08a4b-049f-f380-5e45-e8f75f3656d3">Differences from the reference values of the OEH at the nominal ozone amount-of-substance fractions <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>80</mn>
@@ -3132,8 +3117,8 @@
     </mrow>
   </mstyle>
 </math><asciimath>420 "unitsml(nmol/mol)"</asciimath></stem></name>
-<tbody><tr id="_216b7d9b-423c-7620-f423-0e679c4f3748"><th id="_82a0b55c-8c2c-f36e-19dc-593e474b6b39" valign="top" align="center">Nom value</th>
-<th id="_e679a212-73cd-04b2-e2ab-2df07f2b4552" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<tbody><tr id="_70003ed6-b955-2f7f-e964-56ebbfe60544"><th id="_82a0b55c-8c2c-f36e-19dc-593e474b6b39" valign="top" align="center">Nom value</th>
+<th id="_49ca1ff3-41a0-a1b0-26b8-181f3b99dd8e" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>x</mi>
@@ -3142,7 +3127,6 @@
   </mstyle>
 </math><asciimath>x_i</asciimath></stem> / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -3163,7 +3147,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_fbb5351f-6209-ae53-4a14-4087284be88b" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_86866467-c189-f70f-df5e-ab404958d602" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>u</mi>
@@ -3172,7 +3156,6 @@
   </mstyle>
 </math><asciimath>u_i</asciimath></stem> / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -3193,7 +3176,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_9fa5b28f-dd6f-7af5-7756-a786bae3b969" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_971012e4-b23a-ba1b-6690-4fe51845f7a3" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>x</mi>
@@ -3202,7 +3185,6 @@
   </mstyle>
 </math><asciimath>x_("SRP27")</asciimath></stem> / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -3223,7 +3205,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_23d7ef88-0001-6cf8-d2b2-605227edf41c" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_ca398486-c518-b7c7-2ece-777aeca56d0c" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>u</mi>
@@ -3232,7 +3214,6 @@
   </mstyle>
 </math><asciimath>u_("SRP27")</asciimath></stem> / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -3253,7 +3234,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_73d85d69-c005-b923-81d2-927322bfe462" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_5fe41780-cf12-3daf-d70b-2537dfb6f564" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -3264,7 +3245,6 @@
   </mstyle>
 </math><asciimath>ii(D)_i</asciimath></stem> / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -3285,7 +3265,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_9ae3c192-9138-6c93-b5b1-8103e6e03349" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_73d048cd-0d5d-471b-e931-174e09057537" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
     <mrow>
@@ -3297,7 +3277,6 @@
   </mstyle>
 </math><asciimath>u(Di)</asciimath></stem> / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -3318,7 +3297,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_46e39f3e-f4ec-51f4-d13e-76bc6a93d30f" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_3ea1959c-382c-aa20-7977-5cba0a9b0242" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">U</mi>
     <mrow>
@@ -3330,7 +3309,6 @@
   </mstyle>
 </math><asciimath>U(Di)</asciimath></stem> / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -3757,12 +3735,12 @@
 
 
 
-</sections><annex id="_585e88bc-e83b-1bbe-b220-d5accb7d56ed" anchor="appendix1" obligation="informative">
+</sections><annex id="_22e0445b-f7a4-e580-dc99-d5b0a9db97d6" anchor="appendix1" obligation="informative">
 <title id="_97a5877c-77e4-3db6-1bed-71517b6d1ed6">Form BIPM.QM-K1-R1-DECC-15</title>
 <p id="_5cfad7d3-1d4f-765b-03f1-2cdabf5e1155">See next pages.</p>
 
 <pagebreak/>
-<clause id="_47e989f0-38c8-f373-4fbe-46d321344dfa" obligation="informative">
+<clause id="_9cd923bd-f903-e227-9eae-cc4696adee5c" obligation="informative">
 <title id="_a08432b9-aa8b-7282-8e2d-650d4ea17239">OZONE COMPARISON RESULT — PROTOCOL A — DIRECT COMPARISON</title>
 <table id="_d257fdde-0380-1a6a-9741-838bda74414e" unnumbered="true"><tbody><tr id="_b40feec5-e340-1692-0072-ed78d8f58f06"><th id="_36628ce1-2d07-101f-7979-128baceaea5c" colspan="2" valign="top" align="center">Participating institute information</th>
 </tr><tr id="_02957265-0724-a10e-c47f-bf303916433e"><th id="_09c24187-b50d-ea27-7ef3-5cc3aba8b4ef" valign="top" align="left">Institute</th>
@@ -3812,7 +3790,7 @@
 </table>
 </clause>
 
-<clause id="_636d6a42-43e4-0a5c-ea2f-edf05f68a2bb" anchor="comparison_results" obligation="informative">
+<clause id="_b0def3fe-3742-70f8-3906-fcd42e4ecf89" anchor="comparison_results" obligation="informative">
 <title id="_0e90b9fe-78f3-716d-f75b-17553d8bca7c">Comparison results</title>
 <dl id="_419dea37-c288-527e-1a8d-e5f08da99fd3"><dt>Equation</dt>
 <dd id="_8c064668-e502-f5d4-f844-9464015be9cb"><p id="_eb828cad-a3bb-39c2-97be-f14613ddef92"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -3848,9 +3826,9 @@
 </dd>
 </dl>
 
-<table id="_4a179b16-87bb-8c93-7aab-7356e86ad6d4">
+<table id="_e1606e02-0a5d-32b1-05d2-ac0d17bb1d55">
 <name id="_a5f6c5a0-e1b7-f028-a0a6-6782bc3fcd80">Least-square regression parameters</name>
-<tbody><tr id="_f574724e-eefa-917f-fb92-fdaba679407e"><td id="_6a797794-b6f4-9bbf-c08c-72af6c391498" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<tbody><tr id="_f9a0404b-bffa-89c8-8bed-d3820fba1f78"><td id="_6a797794-b6f4-9bbf-c08c-72af6c391498" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>a</mi>
@@ -3871,7 +3849,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>u(a_("TS,RS"))</asciimath></stem></td>
-<td id="_7b023a89-7b9e-e192-b8a7-088657948a3c" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_68639ef3-fa80-eba4-7cc3-d753f2a334a9" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>b</mi>
@@ -3880,7 +3858,6 @@
   </mstyle>
 </math><asciimath>b_("TS,RS")</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -3901,7 +3878,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></td>
-<td id="_f3d7da48-f12a-53d9-c92a-73719b731d76" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_3fba103c-616a-5bfd-3aa1-380c97a00b41" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
     <mrow>
@@ -3915,7 +3892,6 @@
   </mstyle>
 </math><asciimath>u(b_("TS,RS"))</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -3959,7 +3935,7 @@
 
 
 
-<table id="_ad051d9a-8458-f993-af0b-c167a99cfa2e">
+<table id="_b4c41f84-c2fe-439b-7a37-249949580c83">
 <name id="_528a66fc-ec9b-db83-3574-b009b2f99629">Difference from the reference value at <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>80</mn>
@@ -4007,9 +3983,8 @@
     </mrow>
   </mstyle>
 </math><asciimath>420 "unitsml(nmol/mol)"</asciimath></stem>:</name>
-<tbody><tr id="_269e4767-c130-c6d0-3aaa-4b63a0e0ed14"><td id="_0e588344-571e-6e79-5272-dbbb61185377" valign="top" align="center">Nom value <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<tbody><tr id="_b0a925b4-da61-e53e-ac2c-dccbc1e8d3ea"><td id="_42c401be-7bb8-b436-706a-3bc914856bfc" valign="top" align="center">Nom value <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -4030,7 +4005,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></td>
-<td id="_08f92487-076a-daf3-ff0b-f1e8ffd05b93" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_0fd40e97-6cf0-8399-a252-6fc0c007fc8e" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -4041,7 +4016,6 @@
   </mstyle>
 </math><asciimath>ii(D)_i</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -4062,7 +4036,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></td>
-<td id="_11377266-a99b-c14a-95e4-1127c46b9f94" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_f1e4a56e-f72a-8c37-0d1c-03031ce4018c" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
     <mrow>
@@ -4078,7 +4052,6 @@
   </mstyle>
 </math><asciimath>u(ii(D)_i)</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -4099,7 +4072,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></td>
-<td id="_b7795867-1c87-50c0-429e-47acd632bdbf" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_4df4f11c-c6e1-44eb-4625-47222fb30877" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>U</mi>
@@ -4117,7 +4090,6 @@
   </mstyle>
 </math><asciimath>ii(U)(ii(D)_i)</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -4152,13 +4124,13 @@
 <figure id="_8b895f4e-9608-eb4e-4164-76547dc119d0" unnumbered="true"><image id="_8b111057-1078-0033-4e06-32be8c44a0e1" src="data:image/png;base64,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" mimetype="image/png" height="auto" width="auto" filename="images/img03.png"/></figure>
 </clause>
 
-<clause id="_c1c165b0-9384-deff-9351-ed51af0801ec" anchor="measurement_results" obligation="informative">
+<clause id="_d06f38ed-bc1e-e06e-25d0-1cd31f39da50" anchor="measurement_results" obligation="informative">
 <title id="_b68c1a71-b770-66ed-4922-5a0723d19b4d">Measurement results</title>
-<table id="_cc51e687-6ba5-8631-ffc6-974423d56d6f" unnumbered="true"><tbody><tr id="_59d65faf-a6b3-c08c-34ad-4fe19feee910"><th id="_2fe3e7e3-7fba-87cc-5c44-7ea4f3117b4c" colspan="7" valign="top" align="center">Measurement results</th>
+<table id="_d2e95e07-e0ec-5eca-22b0-39a8bdc5c9c4" unnumbered="true"><tbody><tr id="_59d65faf-a6b3-c08c-34ad-4fe19feee910"><th id="_2fe3e7e3-7fba-87cc-5c44-7ea4f3117b4c" colspan="7" valign="top" align="center">Measurement results</th>
 </tr><tr id="_d8c8d27b-3d1e-ee6d-7c01-12df7d12cb53"><td id="_030a967f-0285-3b58-3ff2-69bc6d2efa44" valign="top" align="center"/><th id="_0fda7d66-f34e-e9b5-288c-8e4c5dae1bb3" colspan="3" valign="top" align="center">Reference Standard (RS)</th>
 <th id="_071d58fa-db53-0356-0b49-617c70095d88" colspan="3" valign="top" align="center">National standard (NS)</th>
-</tr><tr id="_56011a02-887c-064d-ecda-d69723801ca1"><th id="_56571891-42cd-aa36-7e2d-82c92fa71c7b" valign="top" align="center">Nominal value</th>
-<th id="_cbd16d9a-d0e8-8c1c-21e8-cbb50583e5c0" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_63f17499-edf5-c5ef-4be0-1bcc1d170ae4"><th id="_56571891-42cd-aa36-7e2d-82c92fa71c7b" valign="top" align="center">Nominal value</th>
+<th id="_5a1b65f7-fa33-e5fa-dd82-1bcaf0a89887" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>x</mi>
@@ -4167,7 +4139,6 @@
   </mstyle>
 </math><asciimath>x_("RS")</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -4188,7 +4159,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_11cf8d29-b14c-018d-7af8-7fd6434ee689" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_03a2820f-0d45-fd03-4d2b-d314b6bb770d" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>s</mi>
@@ -4197,7 +4168,6 @@
   </mstyle>
 </math><asciimath>s_("RS")</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -4218,7 +4188,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_df7f9427-a29d-39f2-73f5-48cf797cc378" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_7305156c-d7e8-bbb5-7dd0-81c81d91cf52" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
     <mrow>
@@ -4232,7 +4202,6 @@
   </mstyle>
 </math><asciimath>u(x_("RS"))</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -4253,7 +4222,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_053797c9-d0c6-e1bc-187a-c32906ff1179" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_1d3c8b64-a511-4433-6410-dc7829462c8f" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>x</mi>
@@ -4262,7 +4231,6 @@
   </mstyle>
 </math><asciimath>x_("NS")</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -4283,7 +4251,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_9ddd4ce8-8998-67b5-10fe-b25f0216a15f" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_590f27a2-a577-442f-e282-2b376fec5bfc" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>s</mi>
@@ -4292,7 +4260,6 @@
   </mstyle>
 </math><asciimath>s_("NS")</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -4313,7 +4280,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_e67ab181-250e-82e6-e506-8ecdf1c8a722" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_93ce56eb-5337-f9ce-e65e-acb93b40008c" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
     <mrow>
@@ -4327,7 +4294,6 @@
   </mstyle>
 </math><asciimath>u(x_("NS"))</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -4435,11 +4401,10 @@
 </tr></tbody>
 </table>
 
-<table id="_585aab10-1daa-4c0f-d5c5-766fa9c45c8e" unnumbered="true"><tbody><tr id="_e2823f0f-94c5-9e9a-8d78-68139b4b321c"><th id="_80e05f24-6703-0e92-7985-e83e736f2894" colspan="5" valign="top" align="center">Differences</th>
-</tr><tr id="_9830c335-5d0b-e920-f00e-db98ac8f4a5c"><th id="_e175e46c-6ed7-49fc-fa06-520b2e740101" valign="top" align="center">Point Number</th>
-<th id="_bfed55d3-1bd4-890f-a71a-73a19909d6ee" valign="top" align="center">Nom value <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<table id="_e88e8a31-aa0d-4acb-608b-cd296a875aec" unnumbered="true"><tbody><tr id="_e2823f0f-94c5-9e9a-8d78-68139b4b321c"><th id="_80e05f24-6703-0e92-7985-e83e736f2894" colspan="5" valign="top" align="center">Differences</th>
+</tr><tr id="_4798235f-568b-5fd8-8de8-541d6b42862e"><th id="_e175e46c-6ed7-49fc-fa06-520b2e740101" valign="top" align="center">Point Number</th>
+<th id="_9c1e52e1-7856-948d-b86f-be2598c1a463" valign="top" align="center">Nom value <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -4460,7 +4425,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_071de28c-bb71-5320-8279-efd160face43" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_01fc925a-be97-fdc1-fc3c-5663ff91f46b" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -4471,7 +4436,6 @@
   </mstyle>
 </math><asciimath>ii(D)_i</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -4492,7 +4456,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_4171346d-5d88-0306-1b97-26a6fc5ebca0" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_a9da5fb7-6c6b-41cc-2571-24c4293029bc" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi>u</mi>
     <mrow>
@@ -4508,7 +4472,6 @@
   </mstyle>
 </math><asciimath>u(ii(D)_i)</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -4529,7 +4492,7 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(nmol/mol)"</asciimath></stem></th>
-<th id="_328de811-6ab9-cd71-b066-ba520a9b9113" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<th id="_55cd9cac-3a46-5b4c-5095-c646a185b9d3" valign="top" align="center"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
       <mi>U</mi>
@@ -4547,7 +4510,6 @@
   </mstyle>
 </math><asciimath>ii(U)(ii(D)_i)</asciimath></stem> <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_nmol.mol-1">
       <mstyle mathvariant="normal">
         <mi>nmol</mi>
@@ -4688,9 +4650,9 @@
 </dl>
 </clause>
 
-<clause id="_9cf3e8cd-5acf-e668-6540-26ec00ffbdb4" anchor="comparison_description" obligation="informative">
+<clause id="_567f3aa9-d306-97fd-6f51-8efd5208d4f7" anchor="comparison_description" obligation="informative">
 <title id="_51212dbd-1fbd-586a-48f9-b991eac64d4e">Comparison conditions</title>
-<table id="_c6fac50b-238d-0189-d6fa-db2bd29e3bb7">
+<table id="_cd8167f5-b7ec-1dea-443a-47f4e1e8b6d5">
 <name id="_8b8378da-2df5-ac25-5f4c-e12a2b2fcd7e">Comparison conditions</name>
 <tbody><tr id="_58295b38-bd1f-b993-4b04-dbf117d8691f"><td id="_735552af-f832-4805-baf9-eaf0387d55a4" valign="top" align="left">Ozone generator manufacturer</td>
 <td id="_f7516d5a-9ffc-4cb7-796e-2a6dfaaaa798" valign="top" align="left">Environics</td>
@@ -4698,9 +4660,8 @@
 <td id="_97e6954b-9585-51e7-3687-8eb9a9880496" valign="top" align="left">Model 6100</td>
 </tr><tr id="_78f4c7ef-8c11-5225-cfeb-bbb98e009ec0"><td id="_45690439-b49b-b7b2-9702-20fc4a74fba8" valign="top" align="left">Ozone generator serial number</td>
 <td id="_7997d202-c3ad-68ed-e44d-9ced523120e6" valign="top" align="left">3128</td>
-</tr><tr id="_ee56ad4d-762e-2301-8563-b25fe6401eb2"><td id="_3b4744ef-e43e-38cd-db9d-539b21423487" valign="top" align="left">Room temperature(min-max) / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_ef3f8cda-7e03-e40c-09ae-97fcf607a230"><td id="_601f4dc1-80c6-fffc-25f2-265c5fdd81f7" valign="top" align="left">Room temperature(min-max) / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu23">
       <mstyle mathvariant="normal">
         <mi>°C</mi>
@@ -4715,9 +4676,8 @@
 <td id="_f7bfdd99-8b17-c9a9-9c38-2d607194cd8d" valign="top" align="left">1002.3-1002.6</td>
 </tr><tr id="_d62b3a8d-4369-ccef-bbb0-0c6e0b053b1f"><td id="_b5be4733-4017-64de-4c80-656fe073026c" valign="top" align="left">Zero air source</td>
 <td id="_8f116e6f-05a4-7dfe-b2d7-7fd99b890b02" valign="top" align="left">oil free compressor + dryer+ aadco 737-R</td>
-</tr><tr id="_eb07a00e-24da-78e9-8bd1-4903285ca4db"><td id="_140cb047-32ae-0bc6-6501-9212329eb1a7" valign="top" align="left">Reference air flow rate (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_ce3c8feb-1676-7d0a-0156-227d1145befd"><td id="_a7639df5-e175-cc2d-0528-10ba2d141af1" valign="top" align="left">Reference air flow rate (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_L.min-1">
       <mstyle mathvariant="normal">
         <mi>L</mi>
@@ -4740,9 +4700,8 @@
   </mstyle>
 </math><asciimath>"unitsml(L/min)"</asciimath></stem>)</td>
 <td id="_5abaa83f-e5cc-b72a-35c0-1853d5f84693" valign="top" align="left">15</td>
-</tr><tr id="_4ccb0198-358a-d081-82ca-b12d4f7de6c3"><td id="_48597adc-baf2-5454-33af-eea55d77acb9" valign="top" align="left">Sample flow rate (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_5b28a7ae-9d32-0f7d-9e9f-5969a346a5cf"><td id="_b43f2b42-9db4-c16c-e525-5d422e784f7d" valign="top" align="left">Sample flow rate (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_L.min-1">
       <mstyle mathvariant="normal">
         <mi>L</mi>
@@ -4767,9 +4726,8 @@
 <td id="_92f4458a-78ec-a1aa-86a5-7625c11e9c68" valign="top" align="left">10</td>
 </tr><tr id="_cce63a61-3d22-68ed-f117-a964bb6780d8"><td id="_ebb6ae89-20a8-6a6d-06e3-73038c52d06b" valign="top" align="left">Instruments stabilisation time</td>
 <td id="_1addfb9a-05a3-e5f2-2c24-2340e63ea578" valign="top" align="left">more than 48 hours</td>
-</tr><tr id="_7194a2e2-32b0-ff63-e032-9fac1668d643"><td id="_57e35265-0239-3e34-51d1-6ac185bbcfbf" valign="top" align="left">Instruments acquisition time /<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_2f7de3ae-f27e-f36f-47d2-4db744490ec5"><td id="_2859a781-70fb-690c-5b6b-01b647fffedf" valign="top" align="left">Instruments acquisition time /<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu3">
       <mstyle mathvariant="normal">
         <mi>s</mi>
@@ -4792,9 +4750,8 @@
     </mrow>
   </mstyle>
 </math><asciimath>5 "unitsml(s)"</asciimath></stem></td>
-</tr><tr id="_cd153fca-72d1-3805-ca51-e69f2222a3ca"><td id="_f2f39304-ccaf-ee4c-3a55-92d8dad9f588" valign="top" align="left">Instruments averaging time /<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_9e13a99b-7c13-04ce-9b97-588e41fa728d"><td id="_e4e4c956-7ab1-406a-fc55-2228813641c5" valign="top" align="left">Instruments averaging time /<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu3">
       <mstyle mathvariant="normal">
         <mi>s</mi>
@@ -5480,24 +5437,32 @@
 </math><asciimath>u_("SRP") = sqrt((0.51)^2 + 4.09 xx 10^(-5)x^2)</asciimath></stem></formula>
 </clause>
 </clause>
-</annex><bibliography><references id="_dbb84218-53fb-ae82-004f-bc27aec2d5d0" normative="false" obligation="informative">
-<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="paur" id="_a8415ac2-c05a-d59b-9855-b3bd32fbff94">
+</annex><bibliography><references id="_b5014bfd-dadb-d1c1-2f4f-897b3569410f" normative="false" obligation="informative">
+<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="paur" id="_19b3e354-d2fa-0007-1da9-9e960d866daa">
   <formattedref format="application/x-isodoc+xml">Paur R.J., Bass A.M., Norris J.E. and Buckley T.J. 2003 Standard Reference Photometer for the Assay of Ozone in calibration Atmospheres <em>NISTIR</em> <strong>6963</strong>, 65 pp</formattedref>
   <docidentifier type="metanorma">[1]</docidentifier>
-</bibitem><bibitem anchor="iso13964" id="_a8e0c75b-4982-665d-21aa-dcd0917399de" type="standard">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="iso13964" id="_caf875e7-752c-6c18-e9db-2bbe34dd7331" type="standard">
 <title format="text/plain">ISO 13964 : 1996 Ambient air — Determination of ozone — Ultraviolet photometric method (International Organization for Standardization)</title>
 <docidentifier type="metanorma">[2]</docidentifier><docidentifier type="ISO">ISO 13964:1996</docidentifier><docnumber>13964</docnumber><date type="published"><on>1996</on></date><contributor><role type="publisher"/><organization>
 <name>ISO</name>
-</organization></contributor></bibitem><bibitem anchor="viallon3" id="_36cdd336-21bf-ad1b-5a44-95b1f03a9cd0">
+</organization></contributor><language>en</language><script>Latn</script></bibitem><bibitem anchor="viallon3" id="_28e2c93a-3c69-9681-1158-3977fc84c5ed">
   <formattedref format="application/x-isodoc+xml">Viallon J., Moussay P., Norris J.E., Guenther F.R. and Wielgosz R.I., 2006, A study of systematic biases and measurement uncertainties in ozone mole fraction measurements with the NIST Standard Reference Photometer, <em>Metrologia</em>, <strong>43</strong>, 441-450</formattedref>
   <docidentifier type="metanorma">[3]</docidentifier>
-</bibitem><bibitem anchor="viallon4" id="_e307dcb6-516b-6039-5afa-0e66691e996d">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="viallon4" id="_c182b27e-2033-f4b1-411d-293eaccaefce">
   <formattedref format="application/x-isodoc+xml">Viallon J., Moussay P., Idrees F. and Wielgosz R.I. 2010 Upgrade of the BIPM Standard Reference Photometers for Ozone and the effect on the on-going key comparison BIPM.QM-K1 <strong>Rapport BIPM-2010/07</strong>, 16 pp</formattedref>
   <docidentifier type="metanorma">[4]</docidentifier>
-</bibitem><bibitem anchor="bremser" id="_57baa6e7-709f-0a1a-defd-f933198633b8">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="bremser" id="_872a2710-a5c5-240e-c23d-ed3a8a87316e">
   <formattedref format="application/x-isodoc+xml">Bremser W., Viallon J. and Wielgosz R.I., 2007, Influence of correlation on the assessment of measurement result compatibility over a dynamic range, <em>Metrologia</em>, <strong>44</strong>, 495-504</formattedref>
   <docidentifier type="metanorma">[5]</docidentifier>
-</bibitem><bibitem anchor="iso6143-2" id="_5717125c-3c0d-ca13-f5c5-b2e9334ae71d">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="iso6143-2" id="_78a5d0b1-f16d-8f9a-ae22-ac0e45e7a0e3">
   <formattedref format="application/x-isodoc+xml">ISO 6143.2 : 2001 Gas analysis — Determination of the composition of calibration gas mixtures — Comparison methods (International Organization for Standardization)</formattedref>
   <docidentifier type="metanorma">[6]</docidentifier>
   <docidentifier type="ISO">ISO 6143.2:2001</docidentifier>
@@ -5505,12 +5470,18 @@
   <date type="published">
     <on>2001</on>
   </date>
-</bibitem><bibitem anchor="viallon7" id="_980055e8-e948-7ed6-f09b-8a806958add2">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="viallon7" id="_d7de08b3-7bfd-9323-35bb-116f0d7f6e78">
   <formattedref format="application/x-isodoc+xml">Viallon J., Moussay P., Idrees F., Wielgosz R.I. and Ross G. 2011 Comparison of Ozone Reference Standards of the DECCW and the BIPM, December 2010 <strong>Rapport BIPM-2011/03</strong>, 18 pp</formattedref>
   <docidentifier type="metanorma">[7]</docidentifier>
-</bibitem><bibitem anchor="viallon8" id="_a9b432a0-b2dd-d435-8b23-8d8220c76873">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="viallon8" id="_f0ced770-84bb-8b5e-1293-f58c5693dfa1">
   <formattedref format="application/x-isodoc+xml">Viallon J., Moussay P., Wielgosz R.I. and Ross G. 2009 Comparison of Ozone Reference Standards of the DECC NSW and the BIPM, October 2008 <strong>Rapport BIPM-2009/03</strong>, 19 pp</formattedref>
   <docidentifier type="metanorma">[8]</docidentifier>
+  <language>en</language>
+  <script>Latn</script>
 </bibitem>
 
 

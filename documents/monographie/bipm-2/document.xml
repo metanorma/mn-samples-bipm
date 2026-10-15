@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.2" schema-version="v2.1.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.0" schema-version="v2.2.0" flavor="bipm">
 <bibdata type="standard">
-<title language="en" format="text/plain" type="title-main">The Detection and Estimation of Spurious Pulses</title>
+<title language="en" type="title-main">The Detection and Estimation of Spurious Pulses</title>
+<docidentifier primary="true" type="BIPM">BIPM BIPM-2</docidentifier><docnumber>BIPM-2</docnumber><date type="updated"><on>1976</on></date><contributor><role type="author"/><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"><description>committee</description></role><organization>
+<name>Bureau International des Poids et Mesures</name>
+<subdivision type="Committee">
+<name language="en">Consultative Committee for Ionizing Radiation</name>
 
-<docidentifier primary="true" type="BIPM">BIPM BIPM-2</docidentifier><docnumber>BIPM-2</docnumber><contributor><role type="author"/><organization>
+<name language="fr">Comité Consultatif des Rayonnements Ionisants</name>
+<identifier>CCRI</identifier><identifier type="full">CCRI</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"/><person>
-<name><completename/></name>
-</person></contributor><contributor><role type="publisher"/><organization>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version>1976</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>1976</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>1976</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>1976</from><owner><organization>
-<name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>monographie</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="CCRI" language="en" script="Latn">Consultative Committee for Ionizing Radiation</committee><committee acronym="CCRI" language="fr" script="Latn">Comité Consultatif des Rayonnements Ionisants</committee></editorialgroup><structuredidentifier><docnumber>BIPM-2</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd3" id="U_us">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>monographie</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd3" id="U_us">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">us</UnitName>
-        <UnitSymbol type="HTML">s</UnitSymbol>
+        <UnitSymbol type="HTML">µs</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µs</mi>
@@ -24,7 +28,7 @@
           <EnumeratedRootUnit unit="second" prefix="u"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd3" id="U_NISTu3">
-          <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+          <UnitSystem name="SI" type="SI_base" lang="en"/>
           <UnitName lang="en">second</UnitName>
           <UnitSymbol type="HTML">s</UnitSymbol>
           <UnitSymbol type="MathMl">
@@ -33,7 +37,7 @@
             </math>
           </UnitSymbol>
         </Unit><Unit id="U_keV">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">keV</UnitName>
         <UnitSymbol type="HTML">keV</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -58,11 +62,10 @@
         <PrefixSymbol type="unicode">k</PrefixSymbol>
         <PrefixSymbol type="LaTeX">k</PrefixSymbol>
         <PrefixSymbol type="HTML">k</PrefixSymbol>
-      </Prefix></PrefixSet></UnitsML><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+      </Prefix></PrefixSet></UnitsML><presentation-metadata><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
 <boilerplate><copyright-statement>
 
-<clause id="_a0ef3c40-9dca-82cd-7d30-17ecfe7cff10" obligation="normative">
-<p id="_d2001086-11f0-1ead-3fc7-43e427105c1e" align="center">© Bureau International des Poids et Mesures 1976 all rights reserved</p>
+<clause id="_86580ad1-bdd3-6015-b420-fee4b7da2e48" obligation="normative"><p id="_d2001086-11f0-1ead-3fc7-43e427105c1e" align="center">© Bureau International des Poids et Mesures 1976 all rights reserved</p>
 </clause>
 </copyright-statement>
 
@@ -4124,60 +4127,92 @@ distribution and <stem block="false" type="MathML"><math xmlns="http://www.w3.or
     </mrow>
   </mstyle>
 </math><asciimath>ii(S)_a(t)</asciimath></stem> can be obtained from a subsidiary experiment in which a pulse generator is used to start the TAC system.</p>
-</annex><bibliography><references id="_3e02160e-7ec5-1cd6-931f-6f59d5dbda1b" normative="false" obligation="informative">
-<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="campion1" id="_439560c8-3fd2-f662-7b65-9dcde1dfc917">
+</annex><bibliography><references id="_3a26a7d1-82b9-aa05-b365-437a7bf443c6" normative="false" obligation="informative">
+<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="campion1" id="_1402720c-3822-e864-c100-8b5a9b4eedf5">
   <formattedref format="application/x-isodoc+xml">Campion, P.J., “Spurious pulses in proportional counters: A review”, Nucl. Instr. and Meth. <strong>112</strong>, 75 (1973)</formattedref>
   <docidentifier type="metanorma">[1]</docidentifier>
-</bibitem><bibitem anchor="williams" id="_603e02e6-e144-c9ed-b84d-563f0d858a03">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="williams" id="_2a476750-20df-3ccf-ba04-b04b3c3aae28">
   <formattedref format="application/x-isodoc+xml">Williams, A. and Smith, D., “Afterpulses in liquid scintillation counters”, Nucl. Instr. and Meth. <strong>112</strong>, 131 (1973)</formattedref>
   <docidentifier type="metanorma">[2]</docidentifier>
-</bibitem><bibitem anchor="lovborg" id="_fdc9befd-5894-090b-25dd-c253874ed31f">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="lovborg" id="_29ba9185-7ff1-3d38-ee6b-f0fe6027b909">
   <formattedref format="application/x-isodoc+xml">Løvborg, L., “Accurate determination of the stability of <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">β</mi>
   </mstyle>
 </math><asciimath>beta</asciimath></stem>-proportional counters against variations in the energy threshold”, in “Standardization of Radionuclides”, International Atomic Energy Agency, Vienna, p. 103 (1967)</formattedref>
   <docidentifier type="metanorma">[3]</docidentifier>
-</bibitem><bibitem anchor="houtermans4" id="_020baaf8-3827-6191-fe04-cbb620e13d39">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="houtermans4" id="_8a65cc09-78cb-b539-9a27-6273c80fe35d">
   <formattedref format="application/x-isodoc+xml">Houtermans, H., Miguel, M. and Werner, E., “Fast testing of radiation counter performance by single-channel counting”, in “Standardization of Radionuclides”, International Atomic Energy Agency, Vienna, p. 115 (1967)</formattedref>
   <docidentifier type="metanorma">[4]</docidentifier>
-</bibitem><bibitem anchor="putman" id="_c53f1cc0-9821-75c2-6694-1519e3398e60">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="putman" id="_abf62d10-2904-cbe6-700a-f8f13ee82387">
   <formattedref format="application/x-isodoc+xml">Putman, J.L., “Analysis of spurious counts in Geiger counters”, Proc. Phys. Soc., <strong>61</strong>, 312 (1948)</formattedref>
   <docidentifier type="metanorma">[5]</docidentifier>
-</bibitem><bibitem anchor="genz6" id="_ad5b73af-cb4b-af41-0a88-ca88e4412aeb">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="genz6" id="_b97f7299-0703-50a9-5b14-5a36e1c060fd">
   <formattedref format="application/x-isodoc+xml">Genz, H., Harmer, D.S. and Fink, R.W., “Measurement by two-dimensional pulse analysis of the time and energy distributions of afterpulses in proportional counters”, Nucl. Instr. and Meth. <strong>60</strong>, 195 (1968)</formattedref>
   <docidentifier type="metanorma">[6]</docidentifier>
-</bibitem><bibitem anchor="campion7" id="_96ca0c03-2b3a-f167-a9bf-120c29358516">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="campion7" id="_ef74043f-63a2-959f-d122-7735737e6c28">
   <formattedref format="application/x-isodoc+xml">Campion, P.J. and Kingham, M.W.J., “Spurious pulses in methane filled proportional counters”, Int. J. Appl. Radiat. and Isotopes <strong>20</strong>, 479 (1969)</formattedref>
   <docidentifier type="metanorma">[7]</docidentifier>
-</bibitem><bibitem anchor="muller8" id="_970386e6-d5d8-7ae6-762a-7bb805f00401">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="muller8" id="_8a36fb36-3459-5628-2cbe-afd39af86760">
   <formattedref format="application/x-isodoc+xml">Müller, J.W., Private communication (1974)</formattedref>
   <docidentifier type="metanorma">[8]</docidentifier>
-</bibitem><bibitem anchor="coates9" id="_0a6aad86-ae30-777e-1faf-f1baea7de56f">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="coates9" id="_f71b59a3-209f-7222-8478-40dba5076866">
   <formattedref format="application/x-isodoc+xml">Coates, P. B., “The correction for photon “pile up” in the measurement of radioactive lifetimes”, J. Phys. <strong>E1</strong>, 878 (1968)</formattedref>
   <docidentifier type="metanorma">[9]</docidentifier>
-</bibitem><bibitem anchor="coates10" id="_50bcaee2-091b-1964-bc80-fd213068dd23">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="coates10" id="_c06d3a2a-7b4e-8d46-9d2e-ac14a199788a">
   <formattedref format="application/x-isodoc+xml">Coates, P.B., “Distortion in the measurement of time-interval distributions”, Nucl. Instr. and Meth. <strong>113</strong>, 311 (1973)</formattedref>
   <docidentifier type="metanorma">[10]</docidentifier>
-</bibitem><bibitem anchor="houtermans11" id="_86cfd39a-ff58-7979-644a-57569bd2a5eb">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="houtermans11" id="_94bdc907-e854-e67e-1891-4a245cfe6f86">
   <formattedref format="application/x-isodoc+xml">Houtermans, H., Private communication (1973)</formattedref>
   <docidentifier type="metanorma">[11]</docidentifier>
-</bibitem><bibitem anchor="smith" id="_158e4913-8c57-1eb6-5094-49e6b56ec1b7">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="smith" id="_6dbc772c-2365-a5c1-2fde-9fe948f6f809">
   <formattedref format="application/x-isodoc+xml">Smith, D., Private communication (1974)</formattedref>
   <docidentifier type="metanorma">[12]</docidentifier>
-</bibitem><bibitem anchor="campion13" id="_79323d4f-5fa5-3744-da89-47188f578c55">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="campion13" id="_2055880d-407d-73e7-3d05-0c1c68684112">
   <formattedref format="application/x-isodoc+xml">Campion, P.J., “A sensitive method for determining the end of plateaux in proportional counters”, J. Phys. <strong>E3</strong>, 920 (1970)</formattedref>
   <docidentifier type="metanorma">[13]</docidentifier>
-</bibitem><bibitem anchor="lewis" id="_750ebece-b77c-9d37-30c0-c65a1713e173">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="lewis" id="_eb67310d-dbfa-bc8c-3a5e-268b45833d0f">
   <formattedref format="application/x-isodoc+xml">Lewis, V.E., Smith, D. and Williams, A., “Correlation counting applied to the determination of absolute disintegration rates for nuclides with delayed states”, Metrologia <strong>9</strong>, 14 (1973)</formattedref>
   <docidentifier type="metanorma">[14]</docidentifier>
-</bibitem><bibitem anchor="muller15" id="_dadc15d3-b369-7d5c-3b1e-ad70a0af8b7e">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="muller15" id="_87302b4f-be2c-432f-29b2-a5dd706ae3fd">
   <formattedref format="application/x-isodoc+xml">Müller, J. W., “A new method for distinguishing between pairs and single pulses”, Rapport BIPM-72/14 (1972), Recueil de travaux du BIPM, vol. 4, and personal communication</formattedref>
   <docidentifier type="metanorma">[15]</docidentifier>
-</bibitem><bibitem anchor="muller16" id="_a3992262-b435-98ab-fa2e-cd0fdfc1a964">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="muller16" id="_57d95e34-1381-1351-2b90-89ff9cc31c8f">
   <formattedref format="application/x-isodoc+xml">Müller, J.W., “On the precision of the modulo counting technique”, Rapport BIPM-75/7 (1975)</formattedref>
   <docidentifier type="metanorma">[16]</docidentifier>
-</bibitem><bibitem anchor="landaud" id="_898e20e7-a58f-e1b7-64e8-f8fc6625a7f8">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="landaud" id="_5a73d2e4-fa6c-3988-c8eb-065c2c36e835">
   <formattedref format="application/x-isodoc+xml">Landaud, G. and Mabboux, C., “Analyse du coefficient de corrélation de la fonction aléatoire <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mstyle mathvariant="italic">
@@ -4194,43 +4229,67 @@ distribution and <stem block="false" type="MathML"><math xmlns="http://www.w3.or
   </mstyle>
 </math><asciimath>ii(X)(t) = +- 1</asciimath></stem>. Application ò l’étude de lois de désintégration de radioéléments”, J. Physique Rad. <strong>21</strong>, 615 (1960)</formattedref>
   <docidentifier type="metanorma">[17]</docidentifier>
-</bibitem><bibitem anchor="muller18" id="_42fedebf-794b-b836-91f8-1b498ca22af9">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="muller18" id="_55857e82-39b0-97ac-9645-4b79c633bb0f">
   <formattedref format="application/x-isodoc+xml">Müller, J. W ., “A complex modulo K countert”, Rapport BIPM-73/5 (1973), Recueil de travaux du BIPM, vol. 4</formattedref>
   <docidentifier type="metanorma">[18]</docidentifier>
-</bibitem><bibitem anchor="genz19" id="_a61d103c-118c-89f9-0efd-177c31028d1c">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="genz19" id="_21b37859-a426-89fa-fb3f-6fab5ff58296">
   <formattedref format="application/x-isodoc+xml">Genz, H., “Single electron detection in proportional gas counters”, Nucl. Instr. and Meth. <strong>112</strong>, 83 (1973)</formattedref>
   <docidentifier type="metanorma">[19]</docidentifier>
-</bibitem><bibitem anchor="campion20" id="_9135b8e7-e5f4-5eed-d2ac-b5721a191bb1">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="campion20" id="_69c35572-bc8d-da77-18aa-ed3bb21f978b">
   <formattedref format="application/x-isodoc+xml">Campion, P.J. and Burke, M., “A comparison of proportional counter gases with respect to spurious pulse production”, Int. J. Appl. Radiat. and Isotopes <strong>26</strong>, 79 (1975)</formattedref>
   <docidentifier type="metanorma">[20]</docidentifier>
-</bibitem><bibitem anchor="houtermans21" id="_9b2c5b50-7ce1-18c9-bb91-5d564538cad4">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="houtermans21" id="_4d48d23e-b3c0-606c-7fd5-f47b29c0973c">
   <formattedref format="application/x-isodoc+xml">Houtermans, H., See discussion, Nucl. Instr. and Meth. <strong>112</strong>, 134 (1973)</formattedref>
   <docidentifier type="metanorma">[21]</docidentifier>
-</bibitem><bibitem anchor="morton" id="_aaa94458-c0f1-b039-131f-13c90122bf1b">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="morton" id="_b3d47ac5-0a77-b454-8f19-86bb030f7e72">
   <formattedref format="application/x-isodoc+xml">Morton, G.A., Smith, H.M. and Wasserman, R., “Afterpulses in photomultipliers”, IEEE Trans. on Nucl. Sci. <strong>NS14</strong>, 443 (1967)</formattedref>
   <docidentifier type="metanorma">[22]</docidentifier>
-</bibitem><bibitem anchor="coates23" id="_8d6ca44b-0f74-3e4d-4246-cada5e846c2b">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="coates23" id="_e4ad772d-04a8-e1ea-7cd4-d46fb2e8370b">
   <formattedref format="application/x-isodoc+xml">Coates, P.B., “The origins of afterpulses in photomultipliers”, J. Phys. <strong>D6</strong>, 1159 (1973)</formattedref>
   <docidentifier type="metanorma">[23]</docidentifier>
-</bibitem><bibitem anchor="krall" id="_c2335f24-a2ce-24f5-8742-c2eef65945f3">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="krall" id="_d32e0df9-731c-0477-0ef7-0d4374297a1d">
   <formattedref format="application/x-isodoc+xml">Krall, H.A., “Extraneous light emission from photomultipliers”, IEEE Trans. on Nucl. Sci. <strong>NS14</strong>, 455 (1967)</formattedref>
   <docidentifier type="metanorma">[24]</docidentifier>
-</bibitem><bibitem anchor="jerde" id="_a3aa2e0d-8224-4310-9e6f-651b47b60cd1">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="jerde" id="_74593eae-64ba-cc42-c844-24290863fb35">
   <formattedref format="application/x-isodoc+xml">Jerde, R.L. and Peterson, L.E., “Effects of high energy radiations on noise pulses from photomultiplier tubes”, Rev. Sci. Instr. <strong>38</strong>, 1387 (1967) -</formattedref>
   <docidentifier type="metanorma">[25]</docidentifier>
-</bibitem><bibitem anchor="dressler" id="_c34197f9-57a5-46ec-0b2e-85e0d8ada05a">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="dressler" id="_0f72ad95-a805-cac3-112b-2efc28d104d3">
   <formattedref format="application/x-isodoc+xml">Dressler, K. and Spitzer, L., “Photomultiplier tube pulses induced by <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mi mathvariant="normal">γ</mi>
   </mstyle>
 </math><asciimath>gamma</asciimath></stem>-rays”, Rev. Sci. Instr. <strong>38</strong>, 436 (1967)</formattedref>
   <docidentifier type="metanorma">[26]</docidentifier>
-</bibitem><bibitem anchor="coates27" id="_a021765c-523b-8bdd-772c-544c70135dd3">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="coates27" id="_7272f1ec-a348-f578-5d2c-5277dbfecc92">
   <formattedref format="application/x-isodoc+xml">Coates, P.B., “Noise sources in the C31000D photomultiplier”, J. Phys. <strong>E4</strong>, 201 (1971)</formattedref>
   <docidentifier type="metanorma">[27]</docidentifier>
-</bibitem><bibitem anchor="houtermans28" id="_e9ad96a8-b592-4023-c8c9-380ee5255d1e">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="houtermans28" id="_e11da6c8-f6f2-90c5-7aa8-243788afab04">
   <formattedref format="application/x-isodoc+xml">Houtermans, H., “Probability of non-detection in liquid scintillation counting”, Nucl. Instr. and Meth. <strong>112</strong>, 121 (1973)</formattedref>
   <docidentifier type="metanorma">[28]</docidentifier>
+  <language>en</language>
+  <script>Latn</script>
 </bibitem>
 
 

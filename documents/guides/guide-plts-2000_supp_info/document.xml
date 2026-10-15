@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.7.2" schema-version="v2.1.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.0" schema-version="v2.2.0" flavor="bipm">
 <bibdata type="standard">
-<title language="en" format="text/plain" type="title-main">Supplementary Information for the Realization of the PLTS-2000</title>
+<title language="en" type="title-main">Supplementary Information for the Realization of the PLTS-2000</title>
+<docidentifier primary="true" type="BIPM">BIPM PLTS-2000-SUPP</docidentifier><docnumber>PLTS-2000-SUPP</docnumber><date type="updated"><on>2014-10-29</on></date><contributor><role type="author"/><organization>
+<name>Bureau International des Poids et Mesures</name>
+<abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="author"><description>committee</description></role><organization>
+<name>Bureau International des Poids et Mesures</name>
+<subdivision type="Committee">
+<name language="en">Consultative Committee for Thermometry</name>
 
-<docidentifier primary="true" type="BIPM">BIPM PLTS-2000-SUPP</docidentifier><docnumber>PLTS-2000-SUPP</docnumber><contributor><role type="author"/><organization>
+<name language="fr">Comité consultatif de thermométrie</name>
+<identifier>CCT</identifier><identifier type="full">CCT</identifier></subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><contributor><role type="publisher"/><organization>
+<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version>2014-10-29</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2014</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></contributor><edition>1</edition><version><revision-date>2014-10-29</revision-date></version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2014</from><owner><organization>
-<name>Bureau International des Poids et Mesures</name>
-<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>guide</doctype><flavor>bipm</flavor><editorialgroup><committee acronym="CCT" language="en" script="Latn">Consultative Committee for Thermometry</committee><committee acronym="CCT" language="fr" script="Latn">Comité consultatif de thermométrie</committee></editorialgroup><structuredidentifier><docnumber>PLTS-2000-SUPP</docnumber></structuredidentifier><si-aspect>K_k</si-aspect></ext></bibdata><metanorma-extension><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd5" id="U_mK">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+<abbreviation>BIPM</abbreviation></organization></owner></copyright><ext><doctype>guide</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>PLTS-2000-SUPP</docnumber></structuredidentifier><si-aspect>K_k</si-aspect></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd5" id="U_mK">
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mK</UnitName>
         <UnitSymbol type="HTML">mK</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -22,7 +28,7 @@
           <EnumeratedRootUnit unit="kelvin" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_NISTu5">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">kelvin</UnitName>
         <UnitSymbol type="HTML">K</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -31,7 +37,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd14" id="U_MPa">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">MPa</UnitName>
         <UnitSymbol type="HTML">MPa</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -43,9 +49,9 @@
           <EnumeratedRootUnit unit="pascal" prefix="M"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd5" id="U_uK">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">uK</UnitName>
-        <UnitSymbol type="HTML">K</UnitSymbol>
+        <UnitSymbol type="HTML">µK</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µK</mi>
@@ -55,7 +61,7 @@
           <EnumeratedRootUnit unit="kelvin" prefix="u"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd14" id="U_NISTu12">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">pascal</UnitName>
         <UnitSymbol type="HTML">Pa</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -64,7 +70,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd1" id="U_mm">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mm</UnitName>
         <UnitSymbol type="HTML">mm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -76,9 +82,9 @@
           <EnumeratedRootUnit unit="metre" prefix="m"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd1" id="U_um">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">um</UnitName>
-        <UnitSymbol type="HTML">m</UnitSymbol>
+        <UnitSymbol type="HTML">µm</UnitSymbol>
         <UnitSymbol type="MathMl">
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi mathvariant="normal">µm</mi>
@@ -88,7 +94,7 @@
           <EnumeratedRootUnit unit="metre" prefix="u"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd6" id="U_NISTu6">
-        <UnitSystem name="SI" type="SI_base" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_base" lang="en"/>
         <UnitName lang="en">mole</UnitName>
         <UnitSymbol type="HTML">mol</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -97,7 +103,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit id="U_NISTu130">
-        <UnitSystem name="not_SI" type="not_SI" lang="en-US"/>
+        <UnitSystem name="not_SI" type="not_SI" lang="en"/>
         <UnitName lang="en">litre</UnitName>
         <UnitSymbol type="HTML">L</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -106,7 +112,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd14" id="U_kPa">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">kPa</UnitName>
         <UnitSymbol type="HTML">kPa</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -118,7 +124,7 @@
           <EnumeratedRootUnit unit="pascal" prefix="k"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd19" id="U_pF">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">pF</UnitName>
         <UnitSymbol type="HTML">pF</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -130,7 +136,7 @@
           <EnumeratedRootUnit unit="farad" prefix="p"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#D_L-1M-2T6I2" id="U_pF.MPa-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">pF*MPa^-1</UnitName>
         <UnitSymbol type="HTML">pF MPa
           <sup>−1</sup>
@@ -140,9 +146,7 @@
             <mi mathvariant="normal">pF</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">MPa</mi>
-              </mrow>
+              <mi mathvariant="normal">MPa</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -155,7 +159,7 @@
           <EnumeratedRootUnit unit="pascal" prefix="M" powerNumerator="-1"/>
         </RootUnits>
       </Unit><Unit dimensionURL="#NISTd18" id="U_NISTu16">
-          <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+          <UnitSystem name="SI" type="SI_derived" lang="en"/>
           <UnitName lang="en">volt</UnitName>
           <UnitSymbol type="HTML">V</UnitSymbol>
           <UnitSymbol type="MathMl">
@@ -164,7 +168,7 @@
             </math>
           </UnitSymbol>
         </Unit><Unit dimensionURL="#NISTd101" id="U_NISTu31">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">hertz</UnitName>
         <UnitSymbol type="HTML">Hz</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -173,7 +177,7 @@
           </math>
         </UnitSymbol>
       </Unit><Unit dimensionURL="#NISTd16" id="U_nW">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">nW</UnitName>
         <UnitSymbol type="HTML">nW</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -185,7 +189,7 @@
           <EnumeratedRootUnit unit="watt" prefix="n"/>
         </RootUnits>
       </Unit><Unit id="U_NISTu400">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">parts per million</UnitName>
         <UnitSymbol type="HTML">ppm</UnitSymbol>
         <UnitSymbol type="MathMl">
@@ -193,8 +197,8 @@
             <mi mathvariant="normal">ppm</mi>
           </math>
         </UnitSymbol>
-      </Unit><Unit dimensionURL="#NISTd69" id="U_MPa.K-1">
-        <UnitSystem name="SI" type="SI_derived" lang="en-US"/>
+      </Unit><Unit dimensionURL="#D_L-1MT-2Theta-1" id="U_MPa.K-1">
+        <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">MPa*K^-1</UnitName>
         <UnitSymbol type="HTML">MPa K
           <sup>−1</sup>
@@ -204,9 +208,7 @@
             <mi mathvariant="normal">MPa</mi>
             <mo rspace="thickmathspace">⁢</mo>
             <msup>
-              <mrow>
-                <mi mathvariant="normal">K</mi>
-              </mrow>
+              <mi mathvariant="normal">K</mi>
               <mrow>
                 <mo>−</mo>
                 <mn>1</mn>
@@ -219,14 +221,14 @@
           <EnumeratedRootUnit unit="kelvin" powerNumerator="-1"/>
         </RootUnits>
       </Unit></UnitSet><QuantitySet><Quantity id="NISTq6" quantityType="base" dimensionURL="#NISTd6">
-        <QuantityName lang="en-US">amount of substance</QuantityName>
+        <QuantityName lang="en">amount of substance</QuantityName>
       </Quantity><Quantity id="NISTq10" quantityType="base" dimensionURL="#NISTd10">
-        <QuantityName lang="en-US">volume</QuantityName>
+        <QuantityName lang="en">volume</QuantityName>
       </Quantity><Quantity id="NISTq45" quantityType="base" dimensionURL="#NISTd24">
-        <QuantityName lang="en-US">frequency</QuantityName>
+        <QuantityName lang="en">frequency</QuantityName>
       </Quantity><Quantity id="NISTq186" quantityType="base" dimensionURL="#NISTd85">
-        <QuantityName lang="en-US">mass fraction</QuantityName>
-        <QuantityName lang="en-US">mole fraction</QuantityName>
+        <QuantityName lang="en">mass fraction</QuantityName>
+        <QuantityName lang="en">mole fraction</QuantityName>
       </Quantity></QuantitySet><DimensionSet><Dimension id="NISTd5">
         <ThermodynamicTemperature symbol="Theta" powerNumerator="1"/>
       </Dimension><Dimension id="NISTd14">
@@ -262,7 +264,7 @@
         <Length symbol="L" powerNumerator="2"/>
         <Mass symbol="M" powerNumerator="1"/>
         <Time symbol="T" powerNumerator="-3"/>
-      </Dimension><Dimension id="NISTd85"/><Dimension id="NISTd69">
+      </Dimension><Dimension id="NISTd85"/><Dimension id="D_L-1MT-2Theta-1">
         <Length symbol="L" powerNumerator="-1"/>
         <Mass symbol="M" powerNumerator="1"/>
         <Time symbol="T" powerNumerator="-2"/>
@@ -303,11 +305,10 @@
         <PrefixSymbol type="unicode">n</PrefixSymbol>
         <PrefixSymbol type="LaTeX">n</PrefixSymbol>
         <PrefixSymbol type="HTML">n</PrefixSymbol>
-      </Prefix></PrefixSet></UnitsML><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+      </Prefix></PrefixSet></UnitsML><presentation-metadata><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
 <boilerplate><copyright-statement>
 
-<clause id="_77c3b05e-a3a6-38e4-0f9c-7b03059bcef1" obligation="normative">
-<p id="_00046f86-c58b-7460-669a-3ac64d5f0468" align="center">© Bureau International des Poids et Mesures 2014 all rights reserved</p>
+<clause id="_0d8b87af-ea70-cb82-99d5-d5fa21f2cde8" obligation="normative"><p id="_00046f86-c58b-7460-669a-3ac64d5f0468" align="center">© Bureau International des Poids et Mesures 2014 all rights reserved</p>
 </clause>
 </copyright-statement>
 
@@ -2790,7 +2791,7 @@
 <p id="_6e7fcf78-1515-1835-bd9b-96aee9802aec">Further details of the measurement and connection techniques are given in several references, <em>e.g.</em> [<eref type="inline" bibitemid="Mikheev1994" citeas="[21]"><display-text>Mikheev <em>et al.</em> 1994</display-text></eref>, <eref type="inline" bibitemid="Schuster1986" citeas="[28]"><display-text>Schuster and Wolber 1986</display-text></eref>]. Clearly the performance of the bridge, and the design and pressure sensitivity of the capacitor, both have a direct bearing on the resolution and accuracy of the measurement. Commercial bridges are available with high specification, and are likely to be suitable for many applications. The performance achieved may in practice be limited by the connecting lines and the use of an internal reference capacitor.</p>
 </clause>
 
-<clause id="_9feb3ffe-213d-8648-8f8f-d17a4449546b" obligation="normative">
+<clause id="_fed17609-5324-666e-d51a-d826c64d1c10" obligation="normative">
 <title id="_bd12fa7d-b6a4-ba11-eeba-9b1a79b919eb">Uncertainties</title>
 <p id="_210e955a-1314-bd80-9741-11ac0e8a20ba">The standard uncertainty in the PLTS-2000 in thermodynamic terms was estimated in [<eref type="inline" bibitemid="Rusby2002" citeas="[25]"><display-text>Rusby <em>et al.</em> 2002</display-text></eref>] to be <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
@@ -3119,10 +3120,9 @@
 
 <p id="_6d7ca8c6-8b50-6168-24a2-769a4989f38f">The thermal contact between the sample and the experimental platform must be sufficiently good that no significant temperature gradients arise and to ensure that the thermometer responds fast enough to temperature changes. The use of sintered silver powder in the cell and metal-to-metal contact with the experimental platform, preferably gold plated, should ensure that the cell tracks the platform temperature if the measurement dissipation is not excessive. This can be investigated experimentally.</p>
 
-<table id="_d4f41617-e43a-6974-b8a7-a2de40fd24f6" anchor="table2">
-<name id="_225dfb01-7e5d-9d11-202a-80487d05b4af">Uncertainty budget for the realization of the PLTS-2000 at PTB, with values in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<table id="_0bc78eb8-9c41-8953-2294-3280b28795a1" anchor="table2">
+<name id="_a46fb1bd-e6ad-0841-efa7-e9eded78e0ba">Uncertainty budget for the realization of the PLTS-2000 at PTB, with values in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_mK">
       <mstyle mathvariant="normal">
         <mi>mK</mi>
@@ -3133,9 +3133,8 @@
     </mrow>
   </mstyle>
 </math><asciimath>"unitsml(mK)"</asciimath></stem>. MPS stands for melting-pressure sensor</name>
-<thead><tr id="_a2f68623-c3d4-9960-c370-ce25da8fd195"><th id="_24e8a653-5c85-d107-cd3b-e09cc8cc5572" valign="top" align="left">Temperature / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<thead><tr id="_d5f3344e-d003-f26a-915b-0103310cb7ff"><th id="_ba36e84d-e32e-b758-7717-f08ef9a1ffdb" valign="top" align="left">Temperature / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_NISTu5">
       <mstyle mathvariant="normal">
         <mi>K</mi>
@@ -3733,10 +3732,10 @@
 
 
 
-</sections><annex id="_e5a8da8b-f8de-9641-df69-5de2d1a93626" anchor="appendixA" obligation="informative">
+</sections><annex id="_f4331f2b-370f-9321-ab42-42ceba26a6bd" anchor="appendixA" obligation="informative">
 <title id="_1509dd74-d446-6ba7-98bc-a124b92c46b8">Tables of melting pressures and temperatures</title>
-<table id="_11255bbb-a5d0-0529-e0d5-b0a4f8e67d79" anchor="tablea1">
-<name id="_49bbe10c-e677-671f-0336-ca47bf70d199">Values of melting pressure, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<table id="_efd5103b-3c06-6495-b98f-79256a2e4c51" anchor="tablea1">
+<name id="_84f82987-80ee-083a-ac09-68d8d467adb2">Values of melting pressure, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>p</mi>
@@ -3771,7 +3770,6 @@
   </mstyle>
 </math><asciimath>"d"p_"m"//"d"ii(T)_{2000}</asciimath></stem> in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_MPa.K-1">
       <mstyle mathvariant="normal">
         <mi>MPa</mi>
@@ -3877,8 +3875,8 @@
 </tr></tbody>
 </table>
 
-<table id="_f832606b-9228-01d8-bd37-a82d69eefa44" anchor="tablea2">
-<name id="_a1725062-53da-e7f6-cebe-28ab2bd4f712">Values of melting pressure, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<table id="_43b475e2-a181-fad3-f250-98fddbc10533" anchor="tablea2">
+<name id="_bd3199bf-53f5-f506-c420-df11118b7f2e">Values of melting pressure, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>p</mi>
@@ -3913,7 +3911,6 @@
   </mstyle>
 </math><asciimath>"d" p_"m" //"d" ii(T)_{2000}</asciimath></stem> in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_MPa.K-1">
       <mstyle mathvariant="normal">
         <mi>MPa</mi>
@@ -4117,8 +4114,8 @@
 </tr></tbody>
 </table>
 
-<table id="_c3982e0d-3b80-983e-f403-6e32dcca37e1" anchor="tablea3">
-<name id="_57362c61-abf8-1714-2c2d-3370c87bcb95">Values of melting pressure, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<table id="_217c1398-1e59-544b-b5a3-cf20c60996fd" anchor="tablea3">
+<name id="_c702bdd6-e328-e4a7-ef29-7eeb2b9bc2a9">Values of melting pressure, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mi>p</mi>
@@ -4153,7 +4150,6 @@
   </mstyle>
 </math><asciimath>"d" p_"m"//"d"ii(T)_{2000}</asciimath></stem> in <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
-    <mo rspace="thickmathspace">⁢</mo>
     <mrow xref="U_MPa.K-1">
       <mstyle mathvariant="normal">
         <mi>MPa</mi>
@@ -4348,41 +4344,63 @@
 <td id="_1cdaa1dc-6b12-6624-3b9e-2edd658908cf" valign="middle" align="center">3.999141<br/> 2.70770</td>
 <td id="_eb0fb6c4-6b2b-a30e-06c5-71a993285f14" valign="middle" align="center"/><td id="_57aa9642-041a-7406-8ba0-f8bb3ad41393" valign="middle" align="center"/><td id="_b852f2cb-2da5-ccd7-7645-1797b4dd1266" valign="middle" align="center"/><td id="_04f6e58b-379a-c222-11d9-eb2cc90c19c5" valign="middle" align="center"/><td id="_c17da53f-f77b-0258-7498-2967b7d7f751" valign="middle" align="center"/><td id="_f3a3618d-4b24-6a7a-9035-7f8ac579cf07" valign="middle" align="center"/><td id="_00c41e8f-d61b-ec55-957b-b77701aa3dce" valign="middle" align="center"/><td id="_cef6c0cb-2aa3-f8b9-80d1-ab84bb432295" valign="middle" align="center"/><td id="_88dbe3ec-0155-3729-a880-f3fe061c862e" valign="middle" align="center"/></tr></tbody>
 </table>
-</annex><bibliography><references id="_9c2d9807-4d1e-8bf8-d571-7f55471095ca" normative="false" obligation="informative">
-<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="Adams1993" id="_c9c634c8-86d9-b76a-a437-057304f831ef">
+</annex><bibliography><references id="_bcc086c0-32ab-54c5-f211-a22792425e48" normative="false" obligation="informative">
+<title id="_1d852725-9432-e979-5884-c8c2939954c3">References</title><bibitem anchor="Adams1993" id="_01c9689e-b825-6e6b-39ba-f6a740faa515">
   <formattedref format="application/x-isodoc+xml">Adams E D 1993 High‐resolution capacitive pressure gauges <em>Rev. Sci. Instrum</em>. <strong>64</strong> 601-611</formattedref>
   <docidentifier type="metanorma">[1]</docidentifier>
-</bibitem><bibitem anchor="Adams2005" id="_854303c2-63d8-7ca2-2c4e-7e1f3277f96c">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Adams2005" id="_08bdf256-10d5-66bf-b859-bb7d4fc5c3ba">
   <formattedref format="application/x-isodoc+xml">Adams E D 2005 <em>Progress in Low Temperature Physics</em> Vol. 15, Chapter 4, edited by W Halperin, Elsevier B. V. See also <em>Temperature, its Measurement and Control in Science and Industry,</em> 2003 vol. 7 (edited by D C Ripple), AIP ConferenceProceedings, Melville, New York, pp. 107-112</formattedref>
   <docidentifier type="metanorma">[2]</docidentifier>
-</bibitem><bibitem anchor="Betts1976" id="_4acb8976-ca56-1a12-dca9-e89ec8b9d8bc">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Betts1976" id="_00cc9dfe-a609-97a9-6fca-9af86f5893ba">
   <formattedref format="application/x-isodoc+xml">Betts D S 1976 <em>Refrigeration and Thermometry below 1 K</em>, Sussex University Press</formattedref>
   <docidentifier type="metanorma">[3]</docidentifier>
-</bibitem><bibitem anchor="Bittner1994" id="_2e604fb4-9525-acf9-805a-190971ee7f6d">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Bittner1994" id="_fab53366-91e0-9e24-b83f-3c136ba4a91d">
   <formattedref format="application/x-isodoc+xml">Bittner D N and Adams E D 1994 Solidification of helium in confined geometries <em>J. Low Temp. Phys</em>. <strong>97</strong> 519-535</formattedref>
   <docidentifier type="metanorma">[4]</docidentifier>
-</bibitem><bibitem anchor="Bogayavlenskii1978" id="_1e010835-8185-70e1-f96a-97f32f2d2d5f">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Bogayavlenskii1978" id="_bfa5eab5-1662-09d4-2286-cedc297050ef">
   <formattedref format="application/x-isodoc+xml">Bogayavlenskii I V, Karnatsevich L V and Konareva V G 1978 <em>Soviet J. Low Temp. Phys</em>. <strong>4</strong> (5) 265</formattedref>
   <docidentifier type="metanorma">[5]</docidentifier>
-</bibitem><bibitem anchor="Bremer1992" id="_416ddf6f-ff2a-b59d-8440-7014da23d66c">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Bremer1992" id="_10653758-2752-d4a8-9a17-78f80a52c110">
   <formattedref format="application/x-isodoc+xml">Bremer J 1992 <em>Noise Thermometry and the <sup>3</sup>He Melting Curve below 1 K</em>, Thesis, Leiden University</formattedref>
   <docidentifier type="metanorma">[6]</docidentifier>
-</bibitem><bibitem anchor="BremerDurieux1992" id="_585d1186-0b6c-dd44-41f0-ef5470674d51">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="BremerDurieux1992" id="_59e27731-952b-f6ff-cb4b-d7ea2bf28729">
   <formattedref format="application/x-isodoc+xml">Bremer J and Durieux M 1992 <em>Temperature, its Measurement and Control in Science and Industry</em> vol. 6 (edited by J. F. Schooley), American Institute of Physics, New York,pp. 15-20</formattedref>
   <docidentifier type="metanorma">[7]</docidentifier>
-</bibitem><bibitem anchor="Colwell1992" id="_aa55c5c2-a595-7ed3-94e4-41c609f90854">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Colwell1992" id="_36f8de53-1b72-cd6f-ae85-af42bf714b8c">
   <formattedref format="application/x-isodoc+xml">Colwell J H, Fogle W E and Soulen R J 1992 <em>Temperature, its Measurement and Control in Science and Industry,</em> vol. 6 (edited by J. F. Schooley), American Institute ofPhysics, New York, pp. 101-106</formattedref>
   <docidentifier type="metanorma">[8]</docidentifier>
-</bibitem><bibitem anchor="Durieux1999" id="_5dacdca2-6c05-66d6-faa8-786e23158721">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Durieux1999" id="_b8c63942-482d-b5be-2839-2171ab0dd92c">
   <formattedref format="application/x-isodoc+xml">Durieux M and Reesink A L 1999 7<sup>th</sup> International Symposium on <em>Temperature and Thermal Measurements in Industry and Science</em>, edited by J. Dubbeldam and M. deGroot pp. 19-26</formattedref>
   <docidentifier type="metanorma">[9]</docidentifier>
-</bibitem><bibitem anchor="Engert2002" id="_0e5d214c-e360-fcd0-1937-b38d8ca9f334">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Engert2002" id="_b0505ace-1f55-00f8-7fba-552aa0c9775b">
   <formattedref format="application/x-isodoc+xml">Engert J, Fellmuth B and Jousten K 2002 A new <sup>3</sup>He vapour-pressure based temperature scale from 0.65K to 3.2K consistent with the PLTS-2000 <em>Metrologia</em> <strong>44</strong> 40-52</formattedref>
   <docidentifier type="metanorma">[10]</docidentifier>
-</bibitem><bibitem anchor="Engert2003" id="_2d8ceef0-6511-48af-755b-c6017c8fd1b1">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Engert2003" id="_ec2d4e30-65d9-5be2-e57e-d43afef18d9d">
   <formattedref format="application/x-isodoc+xml">Engert J, Fellmuth B and Hoffmann A 2003 <em>2<sup>nd</sup> International Symposium on Low temperature Thermometry</em>, Wrocław,pp. 13-18, and Document CCT/03-09, <link target="http://www.bipm.org/">www.bipm.org,</link>BIPM</formattedref>
   <docidentifier type="metanorma">[11]</docidentifier>
-</bibitem><bibitem anchor="Fellmuth1992" id="_ebddee6b-3c7f-697b-9ba0-15849a1c1ab4">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Fellmuth1992" id="_1de65db8-09a3-47ab-b9e1-8b05d10c3a61">
   <formattedref format="application/x-isodoc+xml">Fellmuth B and Schuster G 1992 Thermodynamic Inconsistency of the ITS-90 Below <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1.5</mn>
@@ -4397,19 +4415,29 @@
   </mstyle>
 </math><asciimath>1.5 "unitsml(K)"</asciimath></stem> <em>Metrologia</em> <strong>29</strong> 415-423</formattedref>
   <docidentifier type="metanorma">[12]</docidentifier>
-</bibitem><bibitem anchor="Fellmuth2003" id="_53d16664-b4df-658f-0b83-f68776a16049">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Fellmuth2003" id="_b2cc0143-1b41-8d28-90c0-2bebd5a0af9d">
   <formattedref format="application/x-isodoc+xml">Fellmuth B, Hechtfischer D and Hoffmann A 2003 <em>Temperature, its Measurement and Control in Science and Industry,</em> vol. 7 (edited by D C Ripple), AIP ConferenceProceedings, Melville, New York, pp. 71-76</formattedref>
   <docidentifier type="metanorma">[13]</docidentifier>
-</bibitem><bibitem anchor="Fogle1992" id="_3fc263d6-2321-e619-20fb-8b7eaf43c085">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Fogle1992" id="_ddc0272f-4306-196c-3a52-344f4206b426">
   <formattedref format="application/x-isodoc+xml">Fogle W E, Soulen R J and Colwell J H 1992 <em>Temperature, its Measurement and Control in Science and Industry,</em> vol. 6 (edited by J F Schooley), American Institute of Physics,New York, pp. 85-90</formattedref>
   <docidentifier type="metanorma">[14]</docidentifier>
-</bibitem><bibitem anchor="Ganshin2001" id="_3af7cc90-b69d-5065-1591-6c31e5dd6fc5">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Ganshin2001" id="_087ef046-9923-58d3-dbcf-400ae10a76bf">
   <formattedref format="application/x-isodoc+xml">Ganshin A N, Grigor’ev V N, Maidanov V A, Penzev A, Rudavskii E, Rybalko A and Syrnikov E V 2001 On the influence of low <sup>4</sup>He impurity content on the melting curve of <sup>3</sup>He <em>Low Temperature Physics (Russia)</em> <strong>27</strong> N6 509-510</formattedref>
   <docidentifier type="metanorma">[15]</docidentifier>
-</bibitem><bibitem anchor="Greywall1982" id="_ed590859-35ce-c087-2bce-f02ba9ad69f2">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Greywall1982" id="_5e897c5f-a8f7-29df-21b3-44c99fc8a05d">
   <formattedref format="application/x-isodoc+xml">Greywall D S and Busch P A 1982 <sup>3</sup>He-melting-curve thermometry <em>J. Low Temp. Phys</em>. <strong>46</strong> 451-465</formattedref>
   <docidentifier type="metanorma">[16]</docidentifier>
-</bibitem><bibitem anchor="Hudson1975" id="_614fd062-8263-81d3-82c1-5114ca59ad63">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Hudson1975" id="_048eba43-bcf4-458e-18a4-da33fd71913a">
   <formattedref format="application/x-isodoc+xml">Hudson R P,Marshak H, Soulen R J and Utton D B 1975 Recent advances in thermometry below <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>300</mn>
@@ -4425,7 +4453,9 @@
   </mstyle>
 </math><asciimath>300 "unitsml(mK)"</asciimath></stem> <em>J. Low Temp. Phys</em>. <strong>20</strong> 1-103</formattedref>
   <docidentifier type="metanorma">[17]</docidentifier>
-</bibitem><bibitem anchor="Ihas1974" id="_314dfaa9-16df-4adb-6194-53cfb98540e9">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Ihas1974" id="_0d9f0088-53ab-86ae-a6bb-1e43879744a0">
   <formattedref format="application/x-isodoc+xml">Ihas G G and Pobell F 1974 Correlation length, finite-geometry effects, and universality in pressurized superfluid helium near <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
@@ -4439,25 +4469,39 @@
   </mstyle>
 </math><asciimath>ii(T)_{ii(lambda)}</asciimath></stem> <em>Phys. Rev. A</em> <strong>9</strong> 1278-1296</formattedref>
   <docidentifier type="metanorma">[18]</docidentifier>
-</bibitem><bibitem anchor="Jarvis1968" id="_7d1fe05a-2dd4-84a4-6958-9574d655d82c">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Jarvis1968" id="_4b3b025f-3da1-700b-c6c6-630fbc6e4459">
   <formattedref format="application/x-isodoc+xml">Jarvis J F, Ramm D and Meyer H 1968 Measurement of () and Related Properties inSolidified Gases. I. Solid He<sup>4</sup> <em>Phys. Rev</em>. <strong>170</strong> 320-327</formattedref>
   <docidentifier type="metanorma">[19]</docidentifier>
-</bibitem><bibitem anchor="Lounasmaa1974" id="_36e7ce05-54f5-d82e-e13c-36e6fa11b866">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Lounasmaa1974" id="_09982ab7-a140-3738-f8f4-abc951dbf7ab">
   <formattedref format="application/x-isodoc+xml">Lounasmaa O V 1974 <em>Experimental Principles and Methods below 1 K</em>, Academic Press</formattedref>
   <docidentifier type="metanorma">[20]</docidentifier>
-</bibitem><bibitem anchor="Mikheev1994" id="_da7ed831-6051-34ca-da24-e2c8549d3c0e">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Mikheev1994" id="_b7912965-9b83-06cd-8702-09c0d71ca50e">
   <formattedref format="application/x-isodoc+xml">Mikheev V A, Masuhara M, Wagner T, Eska G, Mohandas P and Saunders J 1994 Cylindrical pressure gauge <em>Cryogenics</em> <strong>34</strong> 167-168.</formattedref>
   <docidentifier type="metanorma">[21]</docidentifier>
-</bibitem><bibitem anchor="Pitre2003" id="_e582e412-74d0-bb3a-29db-62afb5f9c9f0">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Pitre2003" id="_dc5674e4-1f25-c4f1-ef48-25aad0c9fdac">
   <formattedref format="application/x-isodoc+xml">Pitre L, HermierY and Bonnier G 2003 <em>Temperature, its Measurement and Control in Science and Industry,</em> vol 7 (edited by D C Ripple), AIP Conference Proceedings,Melville, New York, pp. 95-100</formattedref>
   <docidentifier type="metanorma">[22]</docidentifier>
-</bibitem><bibitem anchor="Pobell1996" id="_4b7ce7a0-6351-9652-7242-cae115f0dacb">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Pobell1996" id="_95b5b04d-ecc9-c4eb-eb6d-3b83022ef304">
   <formattedref format="application/x-isodoc+xml">Pobell F 1996 <em>Matter and Methods at Low Temperatures</em>, Springer Verlag, 2nd Edition.</formattedref>
   <docidentifier type="metanorma">[23]</docidentifier>
-</bibitem><bibitem anchor="Richardson1988" id="_07cdd46f-a923-fad9-4d7c-879eafaea92d">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Richardson1988" id="_cbca3909-0eb0-53d7-3f09-510e931ba30b">
   <formattedref format="application/x-isodoc+xml">Richardson R C and Smith E N 1988 <em>Experimental Techniques in Condensed Matter, Physics at LowTemperatures</em>, Addison-Wesley</formattedref>
   <docidentifier type="metanorma">[24]</docidentifier>
-</bibitem><bibitem anchor="Rusby2002" id="_08a5df84-3dae-e933-68f7-e3e9d2e80e40">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Rusby2002" id="_0e7fd156-3cb2-c1be-2e6b-ba259e9ba84e">
   <formattedref format="application/x-isodoc+xml">Rusby R L, Durieux M, Reesink A L, Hudson R P, Schuster G, Kühne M, Fogle W E, Soulen R J and Adams E D 2002 The Provisional Low Temperature Scale from <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.9</mn>
@@ -4473,22 +4517,34 @@
   </mstyle>
 </math><asciimath>0.9 "unitsml(mK)"</asciimath></stem> to 1 K, PLTS-2000 <em>J. Low Temp. Physics</em> <strong>126</strong> 633-642. See also <em>Temperature, its Measurement and Control in Science and Industry</em> 2003 vol. 7 (edited by D C Ripple),AIP Conference Proceedings, Melville, New York, pp. 77-82</formattedref>
   <docidentifier type="metanorma">[25]</docidentifier>
-</bibitem><bibitem anchor="Rusby2007" id="_bde1f7dd-b0c5-0d59-ac3d-4171133e65d2">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Rusby2007" id="_48bf5d5e-c500-e943-ade8-c69cccb085a3">
   <formattedref format="application/x-isodoc+xml">Rusby R L, Fellmuth B, Engert J, Fogle W E, Adams E D, Pitre L and Durieux M 2007 Realization of the <sup>3</sup>He Melting Pressure Scale, PLTS-2000 <em>J. Low Temp.Physics</em> <strong>149</strong> 156-175</formattedref>
   <docidentifier type="metanorma">[26]</docidentifier>
-</bibitem><bibitem anchor="Scribner1970" id="_6dd47779-d94d-b3b3-8722-efe9e37050de">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Scribner1970" id="_049bce3b-4eb0-c309-2ac6-89efff8f15c9">
   <formattedref format="application/x-isodoc+xml">Scribner R A and Adams E D 1970 Use of the <sup>3</sup>He Melting Curve for Low Temperature Thermometry <em>Rev. Sci. Instrum</em>. <strong>41</strong> 287-288</formattedref>
   <docidentifier type="metanorma">[27]</docidentifier>
-</bibitem><bibitem anchor="Schuster1986" id="_7dbe73dc-b6ca-25f9-02de-da8f1ad1938b">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Schuster1986" id="_a1308ef4-75f8-6313-d822-e0e6022e73e2">
   <formattedref format="application/x-isodoc+xml">Schuster G and Wolber L 1986 Automated 3He melting curve thermometer <em>J Phys. E: Sci Instrum.</em> <strong>19</strong> 701-705</formattedref>
   <docidentifier type="metanorma">[28]</docidentifier>
-</bibitem><bibitem anchor="Schuster1990" id="_4e334d6d-a2b1-d5be-fda0-f82f2d739ca4">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Schuster1990" id="_19e8cad2-7646-3e91-2793-2c3f65076b75">
   <formattedref format="application/x-isodoc+xml">Schuster G, Hechtfischer D, Buck W and Hoffmann A 1990 <em>Proceedings of the 19th International Conference on Low Temperature Physics</em>, <em>Physica</em> B165 &amp; 166 pp. 31-32</formattedref>
   <docidentifier type="metanorma">[29]</docidentifier>
-</bibitem><bibitem anchor="Schuster1992" id="_3d3cca88-2a18-914b-30a1-6c8970064da4">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Schuster1992" id="_0d9db0a5-5399-f301-f75b-4318b87802c5">
   <formattedref format="application/x-isodoc+xml">Schuster G and Hechtfischer D 1992 <em>Temperature, its Measurement and Control in Science and Industry</em> vol. 6 (edited by J F Schooley), American Institute of Physics,New York, pp. 97-100</formattedref>
   <docidentifier type="metanorma">[30]</docidentifier>
-</bibitem><bibitem anchor="Schuster1994" id="_0e735810-7026-763e-639e-5311eae61a15">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Schuster1994" id="_b236c336-0687-1df4-ebe1-be48b23cc65b">
   <formattedref format="application/x-isodoc+xml">Schuster G, Hechtfischer D and Fellmuth B 1994 Thermometry below <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>1</mn>
@@ -4503,13 +4559,19 @@
   </mstyle>
 </math><asciimath>1 "unitsml(K)"</asciimath></stem> <em>Rep. Prog. Phys</em>. <strong>57</strong> 187-230</formattedref>
   <docidentifier type="metanorma">[31]</docidentifier>
-</bibitem><bibitem anchor="Schuster2001" id="_bbeeb240-a9d4-cef7-352a-399a943e3d5c">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Schuster2001" id="_cdce7739-f817-bebf-5d34-3100084728b4">
   <formattedref format="application/x-isodoc+xml">Schuster G, Hoffmann A and Hechtfischer D 2001 <em>Realisation of the temperature scale PLTS-2000 at PTB</em>, PTB, Braunschweig, PTB-ThEx-21, 29pp, available through www.ptb.de.</formattedref>
   <docidentifier type="metanorma">[32]</docidentifier>
-</bibitem><bibitem anchor="Straty1969" id="_197edc97-93f7-d30c-b8fd-ff759f3bd96e">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Straty1969" id="_605c12c5-9882-ea9c-619d-4e6fb9377017">
   <formattedref format="application/x-isodoc+xml">Straty G C and Adams E D 1969 Highly Sensitive Capacitive Pressure Gauge <em>Rev. Sci. Instrum</em>. <strong>40</strong> 1393-1397</formattedref>
   <docidentifier type="metanorma">[33]</docidentifier>
-</bibitem><bibitem anchor="Van1975" id="_6fb5725d-59a8-a850-abe6-77d6c9c80c86">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Van1975" id="_a12b0b45-04bb-081d-5d94-e31d1a991ee4">
   <formattedref format="application/x-isodoc+xml">Van Degrift C T 1975 Tunnel diode oscillator for <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0.001</mn>
@@ -4525,9 +4587,13 @@
   </mstyle>
 </math><asciimath>0.001 "unitsml(ppm)"</asciimath></stem> measurements at low temperatures <em>Rev. Sci. Instrum</em>. <strong>46</strong> 599-607</formattedref>
   <docidentifier type="metanorma">[34]</docidentifier>
-</bibitem><bibitem anchor="Wilks1967" id="_410b6f32-f49d-a2bb-9032-7a001d663d89">
+  <language>en</language>
+  <script>Latn</script>
+</bibitem><bibitem anchor="Wilks1967" id="_81aa7010-72fe-e4c2-ac9e-1cc3be7c59d4">
   <formattedref format="application/x-isodoc+xml">Wilks J 1967 <em>Liquid and Solid Helium</em>, Clarendon Press, Oxford. See also Sherman R H and Edeskuty F J 1960 <em>Ann. Phys</em>. <strong>9</strong> 522, and Grilly E R and Hammel E F 1961 <em>Prog. Low Temp. Phys</em>. <strong>3</strong>, ed Gorter, North Holland, p. 122</formattedref>
   <docidentifier type="metanorma">[35]</docidentifier>
+  <language>en</language>
+  <script>Latn</script>
 </bibitem>
 
 

@@ -1,8 +1,6 @@
 
-<!DOCTYPE html>
-<html lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
-  <!--
-@charset "UTF-8";
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>@charset "UTF-8";
 /*
   0 CSS RESET
 */
@@ -141,6 +139,10 @@ dl dd {
   grid-column-start: 2;
 }
 
+dl:has(dt .stem) {
+  grid-template-columns: fit-content(8em) auto;
+}
+
 b, strong {
   font-weight: bold;
 }
@@ -149,19 +151,14 @@ div.document-stage-band, div.document-type-band {
   background-color: #333333;
 }
 
-a.FootnoteRef + a.FootnoteRef::before {
-  content: ", ";
-  vertical-align: super;
-}
-
-a.TableFootnoteRef + a.TableFootnoteRef::before {
-  content: ", ";
-  vertical-align: super;
-}
-
 a.TableFootnoteRef, span.TableFootnoteRef,
 a.FootnoteRef, span.FootnoteRef {
   vertical-align: super;
+}
+
+a.TableFootnoteRef, a.FootnoteRef, a.footnote-number,
+sup a, a:has(> sup) {
+  vertical-align: baseline;
 }
 
 .addition {
@@ -333,6 +330,11 @@ svg {
   display: block; /* ← removes unwanted inline spacing */
 }
 
+/* style dfn by override in flavor */
+dfn {
+  font-style: inherit;
+}
+
 #standard-band {
   background-color: #0AC442;
 }
@@ -481,10 +483,12 @@ body {
   line-height: 1.4em;
   color: #1d1d1d;
   background-color: #ffffff;
-  font-weight: 400;
 }
 body main {
   margin: 0 3em 0 6em;
+}
+body {
+  font-weight: 400;
 }
 body pre * {
   font-family: Times New Roman !important;
@@ -497,10 +501,6 @@ main {
 /*
     2. Responsive navigation layout
 */
-#toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
-  font-family: Times New Roman;
-  font-weight: 400;
-}
 #toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
   margin: 0;
   padding: 0;
@@ -551,6 +551,10 @@ main {
   #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
     color: black;
   }
+}
+#toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+  font-family: Times New Roman;
+  font-weight: 400;
 }
 @media screen and (max-width: 768px) {
   #toc, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
@@ -620,7 +624,9 @@ main {
     background-color: #6C734A;
     color: white !important;
     cursor: pointer;
-    z-index: 100;
+    left: 0;
+    top: 0;
+    z-index: 103;
   }
   #toggle span {
     text-align: center;
@@ -656,26 +662,26 @@ main {
     margin: 0;
   }
 }
-div.figure {
-  line-height: 1.6em;
-  padding: 1.5em;
-  margin: 2em 0 1em 0;
-  overflow: auto;
-}
-div.figure .FigureTitle, div.figure .figure-title {
+figure figcaption {
   font-weight: 700;
   font-size: 1em;
   text-align: center;
 }
-div.figure > img, div.figure > svg {
+figure > img, figure > svg {
   margin-left: auto;
   margin-right: auto;
   display: block;
   max-width: 100%;
   height: auto;
 }
+figure {
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto;
+}
 
-table div.figure {
+table figure, figure pre {
   padding: 0;
   margin: 0;
 }
@@ -1001,15 +1007,26 @@ ol[class=roman] ol[class=roman] > li::before {
 /*
     3.5 Bibliograhy
 */
-p.Biblio, p.NormRef {
+p.Biblio, p.NormRef, div.Biblio, div.NormRef {
   margin-top: 1em;
   margin-left: 2em;
+}
+
+.Biblio.note, .Biblio.Note, .NormRef.note, .NormRef.Note {
+  margin-left: 3em;
 }
 
 /*
     3.6 Source Code + figures
 */
-.figure,
+figure .SourceTitle,
+pre .SourceTitle,
+.pseudocode .SourceTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+figure,
 pre,
 .pseudocode {
   background-color: #f7f7f7;
@@ -1018,13 +1035,6 @@ pre,
   padding: 1.5em;
   margin: 2em 0 1em 0;
   overflow: auto;
-}
-.figure .SourceTitle,
-pre .SourceTitle,
-.pseudocode .SourceTitle {
-  font-weight: 700;
-  font-size: 1em;
-  text-align: center;
 }
 
 pre {
@@ -1051,7 +1061,7 @@ pre {
   text-align: left;
 }
 
-.FigureTitle,
+figcaption,
 .SourceTitle {
   font-weight: 700;
   font-size: 1em;
@@ -1079,11 +1089,13 @@ pre {
   padding: 1.2em;
   margin: 2em 0 1em 0;
   text-align: left;
-  color: #424242;
-  padding-left: 2.7em;
 }
 .example p {
   margin: 0;
+}
+.example {
+  color: #424242;
+  padding-left: 2.7em;
 }
 .example .example-title {
   font-weight: 700;
@@ -1119,8 +1131,12 @@ table th, table td {
 table td.header {
   font-weight: 400;
 }
+table table.plain, table table.plain th, table table.plain td {
+  border: none !important;
+  font-size: 0.95em;
+}
 
-p.TableTitle {
+table > caption {
   text-align: center;
   margin-top: 2.5em;
   font-weight: 400;
@@ -1290,6 +1306,13 @@ h2 p, .h2 p {
   margin: 0.25em 0;
 }
 
+.logo-img {
+  width: 310px;
+  height: auto;
+  margin: auto;
+  padding: 0.5em;
+}
+
 /*
     4.2 Document Identity
 */
@@ -1366,7 +1389,6 @@ To top button
   cursor: pointer;
   padding: 10px 15px 10px 15px;
   border-radius: 4px;
-  text-transform: uppercase;
 }
 #myBtn:hover {
   opacity: 1;
@@ -1375,6 +1397,9 @@ To top button
   #myBtn {
     display: none;
   }
+}
+#myBtn {
+  text-transform: uppercase;
 }
 #myBtn a.anchorjs-link:hover {
   background: none;
@@ -1393,7 +1418,7 @@ To top button
     page-break-after: avoid;
     margin-top: 1.2em;
   }
-  .note, .figure, pre, .pseudocode, table {
+  .note, figure, pre, .pseudocode, table {
     page-break-inside: avoid;
   }
   .info-section {
@@ -1444,9 +1469,7 @@ To top button
     display: none;
   }
 }
-
--->
-</style><style><!--pre.sourcecode table td { padding: 5px; }
+</style><style>pre.sourcecode table td { padding: 5px; }
 pre.sourcecode table pre { margin: 0; }
 pre.sourcecode, pre.sourcecode .w {
   color: #444444;
@@ -1485,7 +1508,7 @@ pre.sourcecode .nt {
   color: #0000FF;
 }
 
---></style><title>Traceability Statements — References to the JCTLM</title>
+</style><title>Traceability Statements — References to the JCTLM</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--TOC script import-->
@@ -1522,13 +1545,13 @@ pre.sourcecode .nt {
     <div class="doc-number">
       <span class="docnumber">BIPM JCTLM_EXE_15-03</span>
       <span class="docnumber-separator">:</span>
-      <span class="docyear">2025 </span>
+      <span class="docyear">2026 </span>
       
       
     </div>
 
-    <div class="coverpage-logo">
-      <img src="data:image/png;base64,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" width="200" height="200" />
+    <div class="coverpage-logo logo-img">
+      <image src="" mimetype="image/svg+xml"><svg xmlns="http://www.w3.org/2000/svg" id="uuid-4162b5c4-51d5-4227-8dcd-f05974f2b5f8" width="206.54mm" height="104.93mm" viewBox="0 0 585.46 297.43" preserveaspectratio="xMidYMin slice"><path d="M31.43,8h18.98c4.51,0,7.93,1.08,10.27,3.25s3.51,5.29,3.51,9.36c0,2.47-.44,4.52-1.33,6.14-.89,1.62-2.24,3-4.06,4.13,1.82.35,3.37.88,4.65,1.59,1.28.72,2.32,1.59,3.12,2.63.8,1.04,1.38,2.21,1.72,3.51.35,1.3.52,2.69.52,4.16,0,2.3-.4,4.33-1.2,6.11-.8,1.78-1.93,3.27-3.38,4.48-1.45,1.21-3.22,2.12-5.3,2.73-2.08.61-4.42.91-7.02.91h-20.48V8ZM44.17,27.23h2.34c3.99,0,5.98-1.58,5.98-4.75s-1.99-4.74-5.98-4.74h-2.34v9.49ZM44.17,47.13h2.79c3.21,0,5.5-.41,6.89-1.24,1.39-.82,2.08-2.14,2.08-3.96s-.69-3.14-2.08-3.96-3.68-1.24-6.89-1.24h-2.79v10.4Z" style="fill:#0f3c80;"></path><path d="M101.63,43.93c0,4.85-.98,8.4-2.94,10.66s-5.01,3.4-9.16,3.4-7.23-1.13-9.17-3.4c-1.95-2.26-2.92-5.82-2.92-10.66v-17.27h5.21v17.08c0,3.24.52,5.59,1.57,7.05,1.05,1.46,2.82,2.19,5.32,2.19s4.26-.72,5.28-2.16c1.03-1.44,1.54-3.8,1.54-7.08v-17.08h5.27v17.27Z" style="fill:#0f3c80;"></path><path d="M129.47,26.31l-1.24,5.14c-.38-.23-.79-.41-1.24-.52s-.92-.17-1.43-.17c-2.56,0-4.49,1.1-5.79,3.29-1.3,2.19-1.95,5.46-1.95,9.82v13.14h-5.17v-30.34h5.17v5.33c.74-2.18,1.81-3.77,3.21-4.76s3.26-1.49,5.59-1.49c.55,0,1.08.05,1.6.16s.94.24,1.25.41Z" style="fill:#0f3c80;"></path><path d="M161.05,42.63h-24.38c.19,3.28,1.16,5.82,2.9,7.63,1.75,1.81,4.08,2.71,7,2.71,2.22,0,4.11-.44,5.67-1.32,1.55-.88,2.79-2.2,3.7-3.95l4.35,2.29c-1.4,2.65-3.25,4.64-5.57,5.98-2.32,1.34-5.05,2.01-8.2,2.01-4.57,0-8.22-1.49-10.93-4.47s-4.08-6.93-4.08-11.84c0-4.57,1.44-8.37,4.32-11.39,2.88-3.03,6.42-4.54,10.63-4.54s7.83,1.39,10.54,4.16c2.71,2.77,4.06,6.41,4.06,10.92v1.81ZM155.88,38.95c-.28-2.6-1.25-4.63-2.92-6.08-1.67-1.45-3.84-2.17-6.51-2.17s-4.73.75-6.51,2.24c-1.78,1.49-2.82,3.5-3.14,6.01h19.08Z" style="fill:#0f3c80;"></path><path d="M197.59,57.01h-5.21v-5.01c-1.04,1.95-2.49,3.43-4.36,4.46-1.87,1.03-4.08,1.54-6.62,1.54-4.23,0-7.71-1.53-10.44-4.6-2.73-3.07-4.09-6.99-4.09-11.78s1.37-8.49,4.11-11.44c2.74-2.95,6.26-4.43,10.55-4.43,2.43,0,4.58.48,6.44,1.43,1.86.95,3.33,2.32,4.41,4.09v-4.6h5.21v30.34ZM192.38,41.48c0-3.32-.92-5.95-2.75-7.89-1.83-1.94-4.27-2.9-7.32-2.9s-5.49,1.01-7.38,3.02-2.84,4.67-2.84,7.97.93,6.06,2.79,8.16c1.86,2.09,4.25,3.14,7.17,3.14s5.42-1.07,7.38-3.22c1.96-2.15,2.94-4.9,2.94-8.27Z" style="fill:#0f3c80;"></path><path d="M232.19,43.93c0,4.85-.98,8.4-2.94,10.66s-5.01,3.4-9.16,3.4-7.23-1.13-9.17-3.4c-1.95-2.26-2.92-5.82-2.92-10.66v-17.27h5.21v17.08c0,3.24.52,5.59,1.57,7.05,1.05,1.46,2.82,2.19,5.32,2.19s4.26-.72,5.28-2.16c1.03-1.44,1.54-3.8,1.54-7.08v-17.08h5.27v17.27Z" style="fill:#0f3c80;"></path><path d="M153.42,202.46h-12.74v-49.01h20.28c5.5,0,9.72,1.43,12.64,4.29,2.92,2.86,4.39,6.89,4.39,12.09s-1.46,9.23-4.39,12.09c-2.92,2.86-7.14,4.29-12.64,4.29h-7.54v16.25ZM153.42,175.94h4.22c4.68,0,7.02-2.04,7.02-6.11s-2.34-6.11-7.02-6.11h-4.22v12.22Z" style="fill:#0f3c80;"></path><path d="M215.68,187.2c0,4.51-1.58,8.34-4.73,11.51-3.15,3.16-6.99,4.74-11.52,4.74s-8.29-1.58-11.41-4.73c-3.12-3.15-4.68-6.99-4.68-11.52s1.54-8.33,4.63-11.39c3.09-3.07,6.91-4.6,11.46-4.6s8.45,1.54,11.57,4.62c3.12,3.08,4.68,6.87,4.68,11.38ZM210.5,187.2c0-3.19-1.06-5.83-3.17-7.92-2.12-2.08-4.73-3.13-7.84-3.13s-5.75,1.04-7.84,3.13-3.14,4.72-3.14,7.92,1.06,5.9,3.19,8.06c2.13,2.16,4.72,3.24,7.79,3.24s5.75-1.08,7.85-3.24,3.16-4.84,3.16-8.06Z" style="fill:#0f3c80;"></path><path d="M230.6,160.16c0,.97-.35,1.81-1.06,2.51-.71.7-1.55,1.05-2.52,1.05s-1.81-.35-2.51-1.05c-.7-.7-1.05-1.53-1.05-2.51s.35-1.81,1.05-2.52c.7-.71,1.53-1.06,2.51-1.06s1.81.35,2.52,1.06c.71.71,1.06,1.55,1.06,2.52ZM229.62,202.46h-5.21v-30.34h5.21v30.34Z" style="fill:#0f3c80;"></path><path d="M269.3,202.46h-5.21v-5.01c-1.04,1.95-2.49,3.43-4.36,4.46-1.87,1.03-4.08,1.54-6.62,1.54-4.23,0-7.71-1.53-10.44-4.6-2.73-3.07-4.09-6.99-4.09-11.78s1.37-8.49,4.11-11.44c2.74-2.95,6.26-4.43,10.55-4.43,2.43,0,4.58.48,6.44,1.43,1.86.95,3.33,2.32,4.41,4.09v-27.9h5.21v53.64ZM264.09,186.94c0-3.32-.92-5.95-2.75-7.89-1.83-1.94-4.27-2.9-7.32-2.9s-5.49,1.01-7.38,3.02-2.84,4.67-2.84,7.97.93,6.06,2.79,8.16c1.86,2.09,4.25,3.14,7.17,3.14s5.42-1.07,7.38-3.22c1.96-2.15,2.94-4.9,2.94-8.27Z" style="fill:#0f3c80;"></path><path d="M298.95,194.28c0,2.79-1.02,5.02-3.05,6.68s-4.8,2.49-8.32,2.49c-2.64,0-4.88-.53-6.71-1.6-1.83-1.07-3.17-2.62-4.01-4.65l4.41-2.79c.61,1.46,1.47,2.55,2.57,3.27,1.1.72,2.45,1.08,4.06,1.08,1.78,0,3.19-.37,4.25-1.11,1.06-.74,1.59-1.76,1.59-3.05,0-1.42-.48-2.5-1.44-3.24-.96-.74-2.84-1.61-5.63-2.6-2.73-1.02-4.78-2.27-6.14-3.78-1.36-1.5-2.05-3.28-2.05-5.33,0-2.62.87-4.69,2.62-6.19,1.75-1.5,4.18-2.25,7.32-2.25,2.29,0,4.19.47,5.71,1.4,1.52.93,2.74,2.37,3.65,4.32l-4.28,2.6c-.55-1.27-1.25-2.21-2.1-2.81-.85-.6-1.9-.9-3.17-.9-1.46,0-2.6.33-3.43,1-.82.67-1.24,1.57-1.24,2.71s.43,2.14,1.29,2.92c.86.78,2.42,1.54,4.68,2.29,3.34,1.08,5.75,2.37,7.22,3.86,1.47,1.49,2.21,3.39,2.21,5.7Z" style="fill:#0f3c80;"></path><path d="M349.97,188.09h-24.38c.19,3.28,1.16,5.82,2.9,7.63,1.75,1.81,4.08,2.71,7,2.71,2.22,0,4.11-.44,5.67-1.32,1.55-.88,2.79-2.2,3.7-3.95l4.35,2.29c-1.4,2.65-3.25,4.64-5.57,5.98-2.32,1.34-5.05,2.01-8.2,2.01-4.57,0-8.22-1.49-10.93-4.47s-4.08-6.93-4.08-11.84c0-4.57,1.44-8.37,4.32-11.39,2.88-3.03,6.42-4.54,10.63-4.54s7.83,1.39,10.54,4.16c2.71,2.77,4.06,6.41,4.06,10.92v1.81ZM344.79,184.4c-.28-2.6-1.25-4.63-2.92-6.08-1.67-1.45-3.84-2.17-6.51-2.17s-4.73.75-6.51,2.24c-1.78,1.49-2.82,3.5-3.14,6.01h19.08Z" style="fill:#0f3c80;"></path><path d="M365.13,176.79h-4.82v25.68h-5.17v-25.68h-3.65v-4.67h3.65v-12.28h5.17v12.28h4.82v4.67Z" style="fill:#0f3c80;"></path><path d="M188.58,275.07l8.32-49.01h12.61l9.81,26.13,9.75-26.13h12.61l8.32,49.01h-12.67l-4.22-28.21-11.57,28.21h-5.07l-10.98-28.21-4.23,28.21h-12.67Z" style="fill:#0f3c80;"></path><path d="M284.57,260.69h-24.38c.19,3.28,1.16,5.82,2.9,7.63,1.75,1.81,4.08,2.71,7,2.71,2.22,0,4.11-.44,5.67-1.32,1.55-.88,2.79-2.2,3.7-3.95l4.35,2.29c-1.4,2.65-3.25,4.64-5.57,5.98-2.32,1.34-5.05,2.01-8.2,2.01-4.57,0-8.22-1.49-10.93-4.47s-4.08-6.93-4.08-11.84c0-4.57,1.44-8.37,4.32-11.39,2.88-3.03,6.42-4.54,10.63-4.54s7.83,1.39,10.54,4.16c2.71,2.77,4.06,6.41,4.06,10.92v1.81ZM279.39,257.01c-.28-2.6-1.25-4.63-2.92-6.08-1.67-1.45-3.84-2.17-6.51-2.17s-4.73.75-6.51,2.24c-1.78,1.49-2.82,3.5-3.14,6.01h19.08Z" style="fill:#0f3c80;"></path><path d="M310.2,266.88c0,2.79-1.02,5.02-3.05,6.68s-4.8,2.49-8.32,2.49c-2.64,0-4.88-.53-6.71-1.6-1.83-1.07-3.17-2.62-4.01-4.65l4.41-2.79c.61,1.46,1.47,2.55,2.57,3.27,1.1.72,2.45,1.08,4.06,1.08,1.78,0,3.19-.37,4.25-1.11,1.06-.74,1.59-1.76,1.59-3.05,0-1.42-.48-2.5-1.44-3.24-.96-.74-2.84-1.61-5.63-2.6-2.73-1.02-4.78-2.27-6.14-3.78-1.36-1.5-2.05-3.28-2.05-5.33,0-2.62.87-4.69,2.62-6.19,1.75-1.5,4.18-2.25,7.32-2.25,2.29,0,4.19.47,5.71,1.4,1.52.93,2.74,2.37,3.65,4.32l-4.28,2.6c-.55-1.27-1.25-2.21-2.1-2.81-.85-.6-1.9-.9-3.17-.9-1.46,0-2.6.33-3.43,1-.82.67-1.24,1.57-1.24,2.71s.43,2.14,1.29,2.92c.86.78,2.42,1.54,4.68,2.29,3.34,1.08,5.75,2.37,7.22,3.86,1.47,1.49,2.21,3.39,2.21,5.7Z" style="fill:#0f3c80;"></path><path d="M342.17,261.99c0,4.85-.98,8.4-2.94,10.66s-5.01,3.4-9.16,3.4-7.23-1.13-9.17-3.4c-1.95-2.26-2.92-5.82-2.92-10.66v-17.27h5.21v17.08c0,3.24.52,5.59,1.57,7.05,1.05,1.46,2.82,2.19,5.32,2.19s4.26-.72,5.28-2.16c1.03-1.44,1.54-3.8,1.54-7.08v-17.08h5.27v17.27Z" style="fill:#0f3c80;"></path><path d="M369.04,244.38l-1.24,5.14c-.38-.23-.79-.41-1.24-.52s-.92-.17-1.43-.17c-2.56,0-4.49,1.1-5.79,3.29-1.3,2.19-1.95,5.46-1.95,9.82v13.14h-5.17v-30.34h5.17v5.33c.74-2.18,1.81-3.77,3.21-4.76s3.26-1.49,5.59-1.49c.55,0,1.08.05,1.6.16s.94.24,1.25.41Z" style="fill:#0f3c80;"></path><path d="M399.65,260.69h-24.38c.19,3.28,1.16,5.82,2.9,7.63,1.75,1.81,4.08,2.71,7,2.71,2.22,0,4.11-.44,5.67-1.32,1.55-.88,2.79-2.2,3.7-3.95l4.35,2.29c-1.4,2.65-3.25,4.64-5.57,5.98-2.32,1.34-5.05,2.01-8.2,2.01-4.57,0-8.22-1.49-10.93-4.47s-4.08-6.93-4.08-11.84c0-4.57,1.44-8.37,4.32-11.39,2.88-3.03,6.42-4.54,10.63-4.54s7.83,1.39,10.54,4.16c2.71,2.77,4.06,6.41,4.06,10.92v1.81ZM394.47,257.01c-.28-2.6-1.25-4.63-2.92-6.08-1.67-1.45-3.84-2.17-6.51-2.17s-4.73.75-6.51,2.24c-1.78,1.49-2.82,3.5-3.14,6.01h19.08Z" style="fill:#0f3c80;"></path><path d="M425.28,266.88c0,2.79-1.02,5.02-3.05,6.68s-4.8,2.49-8.32,2.49c-2.64,0-4.88-.53-6.71-1.6-1.83-1.07-3.17-2.62-4.01-4.65l4.41-2.79c.61,1.46,1.47,2.55,2.57,3.27,1.1.72,2.45,1.08,4.06,1.08,1.78,0,3.19-.37,4.25-1.11,1.06-.74,1.59-1.76,1.59-3.05,0-1.42-.48-2.5-1.44-3.24-.96-.74-2.84-1.61-5.63-2.6-2.73-1.02-4.78-2.27-6.14-3.78-1.36-1.5-2.05-3.28-2.05-5.33,0-2.62.87-4.69,2.62-6.19,1.75-1.5,4.18-2.25,7.32-2.25,2.29,0,4.19.47,5.71,1.4,1.52.93,2.74,2.37,3.65,4.32l-4.28,2.6c-.55-1.27-1.25-2.21-2.1-2.81-.85-.6-1.9-.9-3.17-.9-1.46,0-2.6.33-3.43,1-.82.67-1.24,1.57-1.24,2.71s.43,2.14,1.29,2.92c.86.78,2.42,1.54,4.68,2.29,3.34,1.08,5.75,2.37,7.22,3.86,1.47,1.49,2.21,3.39,2.21,5.7Z" style="fill:#0f3c80;"></path><path d="M101.6,80.19v49.01h-12.74v-49.01h12.74Z" style="fill:#0f3c80;"></path><path d="M138.13,129.2h-5.21v-18.12c0-2.94-.52-5.1-1.57-6.47-1.05-1.38-2.71-2.06-5-2.06-2.6,0-4.59,1.03-5.95,3.08-1.37,2.05-2.05,5.06-2.05,9.01v14.57h-5.17v-30.34h5.17v4.47c.91-1.8,2.18-3.15,3.81-4.05,1.63-.9,3.62-1.35,5.97-1.35,3.11,0,5.55,1.03,7.33,3.08s2.67,4.93,2.67,8.63v19.55Z" style="fill:#0f3c80;"></path><path d="M158.93,103.52h-4.82v25.68h-5.17v-25.68h-3.65v-4.67h3.65v-12.28h5.17v12.28h4.82v4.67Z" style="fill:#0f3c80;"></path><path d="M192.55,114.82h-24.38c.19,3.28,1.16,5.82,2.9,7.63,1.75,1.81,4.08,2.71,7,2.71,2.22,0,4.11-.44,5.67-1.32,1.55-.88,2.79-2.2,3.7-3.95l4.35,2.29c-1.4,2.65-3.25,4.64-5.57,5.98-2.32,1.34-5.05,2.01-8.2,2.01-4.57,0-8.22-1.49-10.93-4.47s-4.08-6.93-4.08-11.84c0-4.57,1.44-8.37,4.32-11.39,2.88-3.03,6.42-4.54,10.63-4.54s7.83,1.39,10.54,4.16c2.71,2.77,4.06,6.41,4.06,10.92v1.81ZM187.37,111.14c-.28-2.6-1.25-4.63-2.92-6.08-1.67-1.45-3.84-2.17-6.51-2.17s-4.73.75-6.51,2.24c-1.78,1.49-2.82,3.5-3.14,6.01h19.08Z" style="fill:#0f3c80;"></path><path d="M217.66,98.51l-1.24,5.14c-.38-.23-.79-.41-1.24-.52s-.92-.17-1.43-.17c-2.56,0-4.49,1.1-5.79,3.29-1.3,2.19-1.95,5.46-1.95,9.82v13.14h-5.17v-30.34h5.17v5.33c.74-2.18,1.81-3.77,3.21-4.76s3.26-1.49,5.59-1.49c.55,0,1.08.05,1.6.16s.94.24,1.25.41Z" style="fill:#0f3c80;"></path><path d="M248.29,129.2h-5.21v-18.12c0-2.94-.52-5.1-1.57-6.47-1.05-1.38-2.71-2.06-5-2.06-2.6,0-4.59,1.03-5.95,3.08-1.37,2.05-2.05,5.06-2.05,9.01v14.57h-5.17v-30.34h5.17v4.47c.91-1.8,2.18-3.15,3.81-4.05,1.63-.9,3.62-1.35,5.97-1.35,3.11,0,5.55,1.03,7.33,3.08s2.67,4.93,2.67,8.63v19.55Z" style="fill:#0f3c80;"></path><path d="M287.27,129.2h-5.21v-5.01c-1.04,1.95-2.49,3.43-4.36,4.46-1.87,1.03-4.08,1.54-6.62,1.54-4.23,0-7.71-1.53-10.44-4.6-2.73-3.07-4.09-6.99-4.09-11.78s1.37-8.49,4.11-11.44c2.74-2.95,6.26-4.43,10.55-4.43,2.43,0,4.58.48,6.44,1.43,1.86.95,3.33,2.32,4.41,4.09v-4.6h5.21v30.34ZM282.07,113.68c0-3.32-.92-5.95-2.75-7.89-1.83-1.94-4.27-2.9-7.32-2.9s-5.49,1.01-7.38,3.02-2.84,4.67-2.84,7.97.93,6.06,2.79,8.16c1.86,2.09,4.25,3.14,7.17,3.14s5.42-1.07,7.38-3.22c1.96-2.15,2.94-4.9,2.94-8.27Z" style="fill:#0f3c80;"></path><path d="M308.54,103.52h-4.82v25.68h-5.17v-25.68h-3.65v-4.67h3.65v-12.28h5.17v12.28h4.82v4.67Z" style="fill:#0f3c80;"></path><path d="M322.93,86.89c0,.97-.35,1.81-1.06,2.51-.71.7-1.55,1.05-2.52,1.05s-1.81-.35-2.51-1.05c-.7-.7-1.05-1.53-1.05-2.51s.35-1.81,1.05-2.52c.7-.71,1.53-1.06,2.51-1.06s1.81.35,2.52,1.06c.71.71,1.06,1.55,1.06,2.52ZM321.94,129.2h-5.21v-30.34h5.21v30.34Z" style="fill:#0f3c80;"></path><path d="M363.05,113.93c0,4.51-1.58,8.34-4.73,11.51-3.15,3.16-6.99,4.74-11.52,4.74s-8.29-1.58-11.41-4.73c-3.12-3.15-4.68-6.99-4.68-11.52s1.54-8.33,4.63-11.39c3.09-3.07,6.91-4.6,11.46-4.6s8.45,1.54,11.57,4.62c3.12,3.08,4.68,6.87,4.68,11.38ZM357.88,113.93c0-3.19-1.06-5.83-3.17-7.92-2.12-2.08-4.73-3.13-7.84-3.13s-5.75,1.04-7.84,3.13-3.14,4.72-3.14,7.92,1.06,5.9,3.19,8.06c2.13,2.16,4.72,3.24,7.79,3.24s5.75-1.08,7.85-3.24,3.16-4.84,3.16-8.06Z" style="fill:#0f3c80;"></path><path d="M396.29,129.2h-5.21v-18.12c0-2.94-.52-5.1-1.57-6.47-1.05-1.38-2.71-2.06-5-2.06-2.6,0-4.59,1.03-5.95,3.08-1.37,2.05-2.05,5.06-2.05,9.01v14.57h-5.17v-30.34h5.17v4.47c.91-1.8,2.18-3.15,3.81-4.05,1.63-.9,3.62-1.35,5.97-1.35,3.11,0,5.55,1.03,7.33,3.08s2.67,4.93,2.67,8.63v19.55Z" style="fill:#0f3c80;"></path><path d="M435.27,129.2h-5.21v-5.01c-1.04,1.95-2.49,3.43-4.36,4.46-1.87,1.03-4.08,1.54-6.62,1.54-4.23,0-7.71-1.53-10.44-4.6-2.73-3.07-4.09-6.99-4.09-11.78s1.37-8.49,4.11-11.44c2.74-2.95,6.26-4.43,10.55-4.43,2.43,0,4.58.48,6.44,1.43,1.86.95,3.33,2.32,4.41,4.09v-4.6h5.21v30.34ZM430.06,113.68c0-3.32-.92-5.95-2.75-7.89-1.83-1.94-4.27-2.9-7.32-2.9s-5.49,1.01-7.38,3.02-2.84,4.67-2.84,7.97.93,6.06,2.79,8.16c1.86,2.09,4.25,3.14,7.17,3.14s5.42-1.07,7.38-3.22c1.96-2.15,2.94-4.9,2.94-8.27Z" style="fill:#0f3c80;"></path><path d="M451.59,129.2h-5.17v-53.64h5.17v53.64Z" style="fill:#0f3c80;"></path><path d="M507.57,129.2h-5.21v-5.01c-1.04,1.95-2.49,3.43-4.36,4.46-1.87,1.03-4.08,1.54-6.62,1.54-4.23,0-7.71-1.53-10.44-4.6-2.73-3.07-4.09-6.99-4.09-11.78s1.37-8.49,4.11-11.44c2.74-2.95,6.26-4.43,10.55-4.43,2.43,0,4.58.48,6.44,1.43,1.86.95,3.33,2.32,4.41,4.09v-27.9h5.21v53.64ZM502.36,113.68c0-3.32-.92-5.95-2.75-7.89-1.83-1.94-4.27-2.9-7.32-2.9s-5.49,1.01-7.38,3.02-2.84,4.67-2.84,7.97.93,6.06,2.79,8.16c1.86,2.09,4.25,3.14,7.17,3.14s5.42-1.07,7.38-3.22c1.96-2.15,2.94-4.9,2.94-8.27Z" style="fill:#0f3c80;"></path><path d="M540.66,114.82h-24.38c.19,3.28,1.16,5.82,2.9,7.63,1.75,1.81,4.08,2.71,7,2.71,2.22,0,4.11-.44,5.67-1.32,1.55-.88,2.79-2.2,3.7-3.95l4.35,2.29c-1.4,2.65-3.25,4.64-5.57,5.98-2.32,1.34-5.05,2.01-8.2,2.01-4.57,0-8.22-1.49-10.93-4.47s-4.08-6.93-4.08-11.84c0-4.57,1.44-8.37,4.32-11.39,2.88-3.03,6.42-4.54,10.63-4.54s7.83,1.39,10.54,4.16c2.71,2.77,4.06,6.41,4.06,10.92v1.81ZM535.49,111.14c-.28-2.6-1.25-4.63-2.92-6.08-1.67-1.45-3.84-2.17-6.51-2.17s-4.73.75-6.51,2.24c-1.78,1.49-2.82,3.5-3.14,6.01h19.08Z" style="fill:#0f3c80;"></path><path d="M567.26,121.01c0,2.79-1.02,5.02-3.05,6.68s-4.8,2.49-8.32,2.49c-2.64,0-4.88-.53-6.71-1.6-1.83-1.07-3.17-2.62-4.01-4.65l4.41-2.79c.61,1.46,1.47,2.55,2.57,3.27,1.1.72,2.45,1.08,4.06,1.08,1.78,0,3.19-.37,4.25-1.11,1.06-.74,1.59-1.76,1.59-3.05,0-1.42-.48-2.5-1.44-3.24-.96-.74-2.84-1.61-5.63-2.6-2.73-1.02-4.78-2.27-6.14-3.78-1.36-1.5-2.05-3.28-2.05-5.33,0-2.62.87-4.69,2.62-6.19,1.75-1.5,4.18-2.25,7.32-2.25,2.29,0,4.19.47,5.71,1.4,1.52.93,2.74,2.37,3.65,4.32l-4.28,2.6c-.55-1.27-1.25-2.21-2.1-2.81-.85-.6-1.9-.9-3.17-.9-1.46,0-2.6.33-3.43,1-.82.67-1.24,1.57-1.24,2.71s.43,2.14,1.29,2.92c.86.78,2.42,1.54,4.68,2.29,3.34,1.08,5.75,2.37,7.22,3.86,1.47,1.49,2.21,3.39,2.21,5.7Z" style="fill:#0f3c80;"></path><rect x="31.43" y="71.7" width="4.12" height="203.36" style="fill:#0f3c80;"></rect><rect x="26.32" y="104.96" width="14.34" height="14.34" transform="translate(89.1 9.16) rotate(45)" style="fill:#0f3c80;"></rect><rect x="86.8" y="144.12" width="4.12" height="130.95" style="fill:#0f3c80;"></rect><rect x="81.69" y="177.37" width="14.34" height="14.34" transform="translate(156.52 -8.78) rotate(45)" style="fill:#0f3c80;"></rect><rect x="140.91" y="216.92" width="4.12" height="58.15" style="fill:#0f3c80;"></rect><rect x="135.8" y="250.17" width="14.34" height="14.34" transform="translate(223.84 -25.72) rotate(45)" style="fill:#0f3c80;"></rect></svg></image>
     </div>
 
     <div class="coverpage-title">
@@ -1540,20 +1563,22 @@ pre.sourcecode .nt {
   </div>
 
   <div class="coverpage-logo">
-    <span>Bureau International de Poids et Mesures 2025</span>
-    
+    <span>Bureau International de Poids et Mesures 2026</span>
+  
   </div>
 
   
 
   <div class="coverpage-tc-name">
-    <span>JCTLMJCTLM</span>
+    <span></span>
+    <div class="coverpage-logo logo-img">
+      
+    </div>
   </div>
  
   
   <div class="coverpage-tc-name">
-    
-    <span></span>.
+    .
   </div>
   
 
@@ -1584,8 +1609,7 @@ pre.sourcecode .nt {
 <div class="copyright">
 <div class="boilerplate-copyright">
 
-<div id="_0cf7519e-8b68-e893-7d26-3ffe010b57e2">
-<p id="_733b7f75-2eb8-1afe-f7c3-24541a46f429" style="text-align:center;">© Bureau International des Poids et Mesures 2025 all rights reserved</p>
+<div id="_b5626c20-610a-47cd-7055-cb2cc7f7d08e"><p id="_eda3a2da-681b-f37a-f99a-2cd1223fd719" style="text-align:center;">© Bureau International des Poids et Mesures 2026 all rights reserved</p>
 </div>
 </div>
   <div class="boilerplate-license">
@@ -1611,35 +1635,35 @@ pre.sourcecode .nt {
 </header></div><br /><div class="prefatory-section"><nav>
   <div id="toc"><h1 class="IntroTitle"><a class="anchor" href="#_5c1a45ef-0335-c28e-3f58-6bf64e3f6a5a"></a><a class="header" href="#_5c1a45ef-0335-c28e-3f58-6bf64e3f6a5a">Contents</a></h1><ul><li class="h1"><a href="#_284c7b71-6f37-63bd-fe73-b455570f22e8">      
   
-  1.  Summary
+  1<span class="fmt-clause-delim">.</span>  Summary
 </a></li>
 <li class="h1"><a href="#_2aa43174-dd0f-6f83-1244-59ad3eb05545">      
   
-  2.  Preamble
+  2<span class="fmt-clause-delim">.</span>  Preamble
 </a></li>
-<li class="h1"><a href="#_a8937b06-f08a-2c5f-96d0-1d7c2acd08eb">      
+<li class="h1"><a href="#_1421fe24-ff7c-4751-3bf4-dd680527e902">      
   
-  3.  Principles
+  3<span class="fmt-clause-delim">.</span>  Principles
 </a></li>
 <li class="h1"><a href="#_9d48f525-8c6d-33b6-397e-3d36b5d9e6c1">      
   
-  4.  Examples
+  4<span class="fmt-clause-delim">.</span>  Examples
 </a></li>
 <li class="h2"><a href="#_d57a40e4-3582-5d0c-bf70-0c2265c6c75c">      
   
-  4.1.  References to materials
+  4.1<span class="fmt-clause-delim">.</span>  References to materials
 </a></li>
 <li class="h2"><a href="#_15064905-1896-1b63-4c6c-00343bd2781e">      
   
-  4.2.  References to methods
+  4.2<span class="fmt-clause-delim">.</span>  References to methods
 </a></li>
 <li class="h2"><a href="#_70488191-1b11-11bd-8af3-f4c18a7f12db">      
   
-  4.3.  References to methods and materials
+  4.3<span class="fmt-clause-delim">.</span>  References to methods and materials
 </a></li>
 <li class="h1"><a href="#_15494586-f5b3-211f-c0e3-ea21d4625396">      
   
-  5.  Unacceptable Statements
+  5<span class="fmt-clause-delim">.</span>  Unacceptable Statements
 </a></li></ul></div>
 
 </nav>
@@ -1651,12 +1675,12 @@ pre.sourcecode .nt {
 
 
 
-</div><br /><div id="_284c7b71-6f37-63bd-fe73-b455570f22e8"><h1 id="_b051b562-ace7-4193-98db-722dc4b6cb86"><a class="anchor" href="#_284c7b71-6f37-63bd-fe73-b455570f22e8"></a><a class="header" href="#_284c7b71-6f37-63bd-fe73-b455570f22e8">1.  Summary</a></h1><p id="_b5f47416-dce5-882c-2310-39c9343c9af3">This document provides advice to manufacturers and others on the appropriate manner to make reference to JCTLM-listing of reference materials, methods and services in any documentation in which information on metrological traceability is included.</p></div><div id="_2aa43174-dd0f-6f83-1244-59ad3eb05545"><h1 id="_a0891512-8f5d-411b-ad8e-6c7c2d6cd72f"><a class="anchor" href="#_2aa43174-dd0f-6f83-1244-59ad3eb05545"></a><a class="header" href="#_2aa43174-dd0f-6f83-1244-59ad3eb05545">2.  Preamble</a></h1><p id="_04f3ff4f-fa69-5cbb-2749-985281f56e52">One of the primary activities of the JCTLM is to maintain a database of higher order reference materials, reference methods and reference measurement services (materials, methods and services). The purpose of this database is to provide a listing of the reference materials, methods and services which have been reviewed and found to meet the requirements of the relevant harmonized standards (see <a href="https://www.bipm.org/utils/common/pdf/JCTLM/JCTLM-framework.pdf">https://www.bipm.org/utils/common/pdf/JCTLM/JCTLM-framework.pdf</a>) for use at the top of traceability chains for in-vitro diagnostic assays. It is also the purpose of the JCTLM to promote and support the implementation of metrological traceability.</p><p id="_4b6eaa01-ca9c-e176-3c83-f69cf378cb7f">The JCTLM Executive Committee believes that when reference materials, methods or services listed in the JCTLM Database, have been used appropriately to establish traceable measurement results, there is benefit in including this information in manufacturers’ metrological traceability statements or in other relevant manufacturers’ documents. The aim of these references would be to provide purchasers of kits assurance of the quality of the highest order metrological items referred to in the traceability chain for their test kit.</p><p id="_b9d5ea7a-9809-516a-7311-1e4cead2f55a">Traceability statements are also made for values assigned to other materials such as controls and quality assurance (proficiency testing) material. Reference to the JCTLM-listing of reference materials, methods and services would provide important information for users of these products.</p><p id="_351584ab-ebd6-f489-1fef-cfcf77ec914d">This document has been developed to provide advice to manufacturers and others in the appropriate manner to make reference to JCTLM-listing of reference materials, methods and services in any documentation in which information on metrological traceability is provided.</p></div><div id="_a8937b06-f08a-2c5f-96d0-1d7c2acd08eb"><h1 id="_eed69e58-fb19-480c-976b-61019717e756"><a class="anchor" href="#_a8937b06-f08a-2c5f-96d0-1d7c2acd08eb"></a><a class="header" href="#_a8937b06-f08a-2c5f-96d0-1d7c2acd08eb">3.  Principles</a></h1><p id="_59dd8b44-5f93-c846-30f4-76875c86ba76">A traceability statement will include reference to a material and/or method to which the results are traceable. The principle of referring to the JCTLM-listing of these elements is to clearly indicate that the material or method is currently listed on the database, or was listed a time relevant to the procedures described in the statement. The material or method should be clearly identified by name and source with an additional note indicating JCTLM-listing. The reference to the JCTLM must be specifically related to the identity of the material or method. With regard to listed methods, a clear indication should be made as to whether the analyses using the method were performed by a JCTLM-listed reference measurement service provider or in another facility.</p><p id="_bd38a268-c811-9578-caf3-264464d3df8b">The terminology used to describe the material, method or service should be sufficiently close to that used in the JCTLM database to avoid any possibility of confusion as to the identity of the material, method or service.</p><p id="_91ef3ead-09c8-48cd-7fc3-d8a481b1c1a1">The use of the Term ‘JCTLM’ should not be used in any manner which suggests that other procedures or materials used in establishing the traceability chain, or the entirety of the traceability chain are in any way endorsed or supported by the JCTLM.</p></div><div id="_9d48f525-8c6d-33b6-397e-3d36b5d9e6c1"><h1 id="_80d04f9c-2903-4432-9b07-705b9977f752"><a class="anchor" href="#_9d48f525-8c6d-33b6-397e-3d36b5d9e6c1"></a><a class="header" href="#_9d48f525-8c6d-33b6-397e-3d36b5d9e6c1">4.  Examples</a></h1><div id="_d57a40e4-3582-5d0c-bf70-0c2265c6c75c"><h2 id="_0802c4b0-dc26-488e-b34e-77466aaa871b"><a class="anchor" href="#_d57a40e4-3582-5d0c-bf70-0c2265c6c75c"></a><a class="header" href="#_d57a40e4-3582-5d0c-bf70-0c2265c6c75c">4.1.  References to materials</a></h2>
+</div><br /><div id="_284c7b71-6f37-63bd-fe73-b455570f22e8"><h1 id="_9cee10a2-1073-4520-9266-6c96d80b8c5a"><a class="anchor" href="#_284c7b71-6f37-63bd-fe73-b455570f22e8"></a><a class="header" href="#_284c7b71-6f37-63bd-fe73-b455570f22e8">1<span class="fmt-clause-delim">.</span>  Summary</a></h1><p id="_b5f47416-dce5-882c-2310-39c9343c9af3">This document provides advice to manufacturers and others on the appropriate manner to make reference to JCTLM-listing of reference materials, methods and services in any documentation in which information on metrological traceability is included.</p></div><div id="_2aa43174-dd0f-6f83-1244-59ad3eb05545"><h1 id="_65cb4a06-b604-48ac-9f98-cce9e3c165e7"><a class="anchor" href="#_2aa43174-dd0f-6f83-1244-59ad3eb05545"></a><a class="header" href="#_2aa43174-dd0f-6f83-1244-59ad3eb05545">2<span class="fmt-clause-delim">.</span>  Preamble</a></h1><p id="_04f3ff4f-fa69-5cbb-2749-985281f56e52">One of the primary activities of the JCTLM is to maintain a database of higher order reference materials, reference methods and reference measurement services (materials, methods and services). The purpose of this database is to provide a listing of the reference materials, methods and services which have been reviewed and found to meet the requirements of the relevant harmonized standards (see <a href="https://www.bipm.org/utils/common/pdf/JCTLM/JCTLM-framework.pdf">https://www.bipm.org/utils/common/pdf/JCTLM/JCTLM-framework.pdf</a>) for use at the top of traceability chains for in-vitro diagnostic assays. It is also the purpose of the JCTLM to promote and support the implementation of metrological traceability.</p><p id="_4b6eaa01-ca9c-e176-3c83-f69cf378cb7f">The JCTLM Executive Committee believes that when reference materials, methods or services listed in the JCTLM Database, have been used appropriately to establish traceable measurement results, there is benefit in including this information in manufacturers’ metrological traceability statements or in other relevant manufacturers’ documents. The aim of these references would be to provide purchasers of kits assurance of the quality of the highest order metrological items referred to in the traceability chain for their test kit.</p><p id="_b9d5ea7a-9809-516a-7311-1e4cead2f55a">Traceability statements are also made for values assigned to other materials such as controls and quality assurance (proficiency testing) material. Reference to the JCTLM-listing of reference materials, methods and services would provide important information for users of these products.</p><p id="_351584ab-ebd6-f489-1fef-cfcf77ec914d">This document has been developed to provide advice to manufacturers and others in the appropriate manner to make reference to JCTLM-listing of reference materials, methods and services in any documentation in which information on metrological traceability is provided.</p></div><div id="_1421fe24-ff7c-4751-3bf4-dd680527e902"><h1 id="_ed67a55e-a062-4093-bb5a-93a4420aad76"><a class="anchor" href="#_1421fe24-ff7c-4751-3bf4-dd680527e902"></a><a class="header" href="#_1421fe24-ff7c-4751-3bf4-dd680527e902">3<span class="fmt-clause-delim">.</span>  Principles</a></h1><p id="_59dd8b44-5f93-c846-30f4-76875c86ba76">A traceability statement will include reference to a material and/or method to which the results are traceable. The principle of referring to the JCTLM-listing of these elements is to clearly indicate that the material or method is currently listed on the database, or was listed a time relevant to the procedures described in the statement. The material or method should be clearly identified by name and source with an additional note indicating JCTLM-listing. The reference to the JCTLM must be specifically related to the identity of the material or method. With regard to listed methods, a clear indication should be made as to whether the analyses using the method were performed by a JCTLM-listed reference measurement service provider or in another facility.</p><p id="_bd38a268-c811-9578-caf3-264464d3df8b">The terminology used to describe the material, method or service should be sufficiently close to that used in the JCTLM database to avoid any possibility of confusion as to the identity of the material, method or service.</p><p id="_ed1e8b65-cd51-0984-5c5d-982c7185ec0d">The use of the Term ‘<tt>JCTLM</tt>‘ should not be used in any manner which suggests that other procedures or materials used in establishing the traceability chain, or the entirety of the traceability chain are in any way endorsed or supported by the JCTLM.</p></div><div id="_9d48f525-8c6d-33b6-397e-3d36b5d9e6c1"><h1 id="_246f71b2-9e2e-4b7b-b5fb-06f194a1e410"><a class="anchor" href="#_9d48f525-8c6d-33b6-397e-3d36b5d9e6c1"></a><a class="header" href="#_9d48f525-8c6d-33b6-397e-3d36b5d9e6c1">4<span class="fmt-clause-delim">.</span>  Examples</a></h1><div id="_d57a40e4-3582-5d0c-bf70-0c2265c6c75c"><h2 id="_a04b3295-b5f7-4156-a930-01bebf8f531f"><a class="anchor" href="#_d57a40e4-3582-5d0c-bf70-0c2265c6c75c"></a><a class="header" href="#_d57a40e4-3582-5d0c-bf70-0c2265c6c75c">4.1<span class="fmt-clause-delim">.</span>  References to materials</a></h2>
 
 <div class="figdl"><dl id="_be6ba7a2-46b2-0694-e920-7b12978dc494"><dt><p>As a sentence</p></dt><dd id="_b63ed6ab-6419-af23-886f-4568c49ca223"><p id="_e38c566a-a8d4-f315-ed9f-89842ba15151">Measurement results are traceable to SRM 912a (NIST, USA). This material is/was listed on the JCTLM database.</p>
 </dd><dt><p>As a phrase</p></dt><dd id="_2e89edbc-d944-4b85-ddf5-0d72de888cbe"><p id="_12a92b03-de58-f4ca-8e92-8619b63b1100">Measurement results are traceable to SRM 912a, a JCTLM-listed reference material.</p>
 </dd></dl></div>
-</div><div id="_15064905-1896-1b63-4c6c-00343bd2781e"><h2 id="_18eb654b-7b7d-47ed-996f-1785e985867f"><a class="anchor" href="#_15064905-1896-1b63-4c6c-00343bd2781e"></a><a class="header" href="#_15064905-1896-1b63-4c6c-00343bd2781e">4.2.  References to methods</a></h2>
+</div><div id="_15064905-1896-1b63-4c6c-00343bd2781e"><h2 id="_c0961c02-882b-4b3e-910f-5b851b9797dd"><a class="anchor" href="#_15064905-1896-1b63-4c6c-00343bd2781e"></a><a class="header" href="#_15064905-1896-1b63-4c6c-00343bd2781e">4.2<span class="fmt-clause-delim">.</span>  References to methods</a></h2>
 
 <div class="figdl"><dl id="_2cc83906-94c8-a898-90e9-a27db49e712f"><dt><p>As a Sentence</p></dt><dd id="_0f8d18e7-1ad0-7e5c-38f8-000c73ba1d4d"><p id="_9242f833-87bc-1ad4-95af-fe86abc469ad">The values generated by the method are traceable to the IFCC reference method. This reference method was listed on the JCTLM database at the time of method comparison and calibration performed by a JCTLM-listed Reference Measurement Service Provider.</p>
 </dd><dt><p>As a phrase</p></dt><dd id="_0ca3eecd-b3c6-e517-ee30-55e3889b4132"><p id="_2fc32922-e478-20e5-7ada-5fd0282a5039">Traceable to the IFCC reference method (JCTLM-listed).</p>
@@ -1665,12 +1689,12 @@ pre.sourcecode .nt {
 
 
 
-</div><div id="_70488191-1b11-11bd-8af3-f4c18a7f12db"><h2 id="_8f7f1b6c-e89d-4e29-ab72-9e48e4186b4c"><a class="anchor" href="#_70488191-1b11-11bd-8af3-f4c18a7f12db"></a><a class="header" href="#_70488191-1b11-11bd-8af3-f4c18a7f12db">4.3.  References to methods and materials</a></h2>
+</div><div id="_70488191-1b11-11bd-8af3-f4c18a7f12db"><h2 id="_2dfdaee1-02fc-422a-8871-4abb4ecbad83"><a class="anchor" href="#_70488191-1b11-11bd-8af3-f4c18a7f12db"></a><a class="header" href="#_70488191-1b11-11bd-8af3-f4c18a7f12db">4.3<span class="fmt-clause-delim">.</span>  References to methods and materials</a></h2>
 
 <div class="figdl"><dl id="_a5a4b47d-7b4a-dbfe-d9dc-09b25a278401"><dt><p>As a Sentence</p></dt><dd id="_cf6af8b0-e9e4-2ee4-7bb8-b99ac876984d"><p id="_9376eb3f-4165-defb-a82e-628bdf08acff">The values assigned to the calibrators are traceable to SRM 914a using Isotope Dilution Mass Spectrometry. The reference material and method are JCTLM-listed and the method was performed by a JCTLM-listed Reference Measurement Service Provider.</p>
 </dd><dt><p>As a phrase</p></dt><dd id="_38f5b104-09c0-40cc-e3e1-58941dc352dc"><p id="_a220050d-20ab-301b-8233-d94549b958f4">Traceable to SRM 914a (NIST, USA) using Isotope Dilution Mass Spectrometry (JCTLM-listed method) performed by a JCTLM-listed Reference Measurement Service Provider.</p>
 </dd></dl></div>
-</div></div><div id="_15494586-f5b3-211f-c0e3-ea21d4625396"><h1 id="_277f9891-9eb2-4c15-a29a-ce9724a4dfc1"><a class="anchor" href="#_15494586-f5b3-211f-c0e3-ea21d4625396"></a><a class="header" href="#_15494586-f5b3-211f-c0e3-ea21d4625396">5.  Unacceptable Statements</a></h1><p id="_71c6997c-d1c2-ba46-7fcf-73c5ac9b5f4b">Any statement which conveys, or appears to convey approval by the JCTLM of any other facet of the traceability statement other than the identity of the material, method or measurement service is unacceptable.</p><p id="_e3e3575b-e972-6bbe-b282-836ebdc0bc37">It is acceptable to note that a JCTLM-listed material, procedure or measurement service was not available at the time of calibrator value assignment. This may be done in order to assure customers that an opportunity for higher-order traceability has not been overlooked.</p></div></main><script type="text/x-mathjax-config">
+</div></div><div id="_15494586-f5b3-211f-c0e3-ea21d4625396"><h1 id="_9b741253-a6de-48cb-afcd-7784b70a363f"><a class="anchor" href="#_15494586-f5b3-211f-c0e3-ea21d4625396"></a><a class="header" href="#_15494586-f5b3-211f-c0e3-ea21d4625396">5<span class="fmt-clause-delim">.</span>  Unacceptable Statements</a></h1><p id="_71c6997c-d1c2-ba46-7fcf-73c5ac9b5f4b">Any statement which conveys, or appears to convey approval by the JCTLM of any other facet of the traceability statement other than the identity of the material, method or measurement service is unacceptable.</p><p id="_e3e3575b-e972-6bbe-b282-836ebdc0bc37">It is acceptable to note that a JCTLM-listed material, procedure or measurement service was not available at the time of calibrator value assignment. This may be done in order to assure customers that an opportunity for higher-order traceability has not been overlooked.</p></div></main><script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     "HTML-CSS": {
       preferredFont: "STIX",
@@ -1703,24 +1727,51 @@ pre.sourcecode .nt {
       const jqToggle = $('#toggle');
       const animationSpeed = 'slow';
 
+      if(!jqNav.length || !jqToggle.length) {
+        return;
+      }
+
+      const navWidthExpanded = jqNav.outerWidth();
+      const bodyPaddingLeftExpanded =
+        parseFloat(jqBody.css('paddingLeft')) > 0 ?
+          jqBody.css('paddingLeft') : navWidthExpanded + 'px';
+      const expandedToggleLeft = navWidthExpanded + 'px';
+      let bandWidth = 0;
+
+      $('.document-stage-band:visible, .document-type-band:visible')
+        .each(function() {
+          const bounds = this.getBoundingClientRect();
+          bandWidth = Math.max(bandWidth, bounds.right);
+        });
+
+      const toggleWidth = jqToggle.outerWidth();
+      const collapsedToggleLeft = bandWidth + 'px';
+      const collapsedBodyPaddingLeft = bandWidth + toggleWidth + 'px';
+      jqToggle.css({
+        'left': jqNav.is(':visible') ? expandedToggleLeft : collapsedToggleLeft,
+        'top': '0px'
+      });
+
       jqToggle.on('click', function() {
         const isNavVisible = jqNav.is(':visible');
-        const fullNavWidth = jqNav.outerWidth();
-        const navLeft = isNavVisible ? '-' + fullNavWidth + 'px' : '0px';
-        const bodyMarginLeft = isNavVisible ? '0px' : fullNavWidth + 'px';
+        const navLeft = isNavVisible ? '-' + navWidthExpanded + 'px' : '0px';
+        const bodyPaddingLeft =
+          isNavVisible ? collapsedBodyPaddingLeft : bodyPaddingLeftExpanded;
+        const toggleLeft =
+          isNavVisible ? collapsedToggleLeft : expandedToggleLeft;
 
-        // Stop current animations
         jqNav.stop(true, true);
         jqBody.stop(true, true);
+        jqToggle.stop(true, true);
 
         if(!isNavVisible) {
-            jqNav.show();
+          jqNav.show();
         }
         jqNav.animate({'left': navLeft}, animationSpeed, function() {
           if(isNavVisible) {jqNav.hide()}
         });
-        jqBody.animate({'marginLeft': bodyMarginLeft}, animationSpeed);
-
+        jqBody.animate({'paddingLeft': bodyPaddingLeft}, animationSpeed);
+        jqToggle.animate({'left': toggleLeft}, animationSpeed);
       });
     })();
   </script>
@@ -1793,7 +1844,7 @@ pre.sourcecode .nt {
         if (!_this.box) {
           footnoteContent = $("[id='" + _this.footnoteId + "']").children().filter(":not('" + _this.options.hideFromContent + "')");
           linkOffset = _this.el.offset();
-          _this.box = $("<div />", {
+          _this.box = $("<div ></div>", {
             id: _this.options.boxId,
             html: footnoteContent.clone().find(_this.options.hideFromContent).remove().end(),
             css: {
@@ -1905,5 +1956,4 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 </script>
-
 </body></html>
