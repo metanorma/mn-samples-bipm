@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.0" schema-version="v2.2.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.3" schema-version="v2.3.0" flavor="bipm">
 <bibdata type="standard">
 <title language="en" type="title-main">How to define the base units of the revised SI from seven constants with fixed numerical values</title>
 <docidentifier primary="true" type="BIPM">BIPM BIPM-2018/02</docidentifier><docnumber>BIPM-2018/02</docnumber><date type="updated"><on>2018-04-06</on></date><contributor><role type="author"/><organization>
@@ -19,7 +19,7 @@
 <abbreviation>BIPM</abbreviation></organization></contributor><edition>3</edition><version>2018-04-06</version><language>en</language><script>Latn</script><status><stage>in-force</stage></status><copyright><from>2018</from><owner><organization>
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="successorOf"><bibitem/></relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2018/02</docnumber></structuredidentifier><si-aspect>full</si-aspect></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
-<UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd101" id="U_NISTu31">
+<presentation-metadata><output-extensions>xml,html,pdf,rxl</output-extensions><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd101" id="U_NISTu31">
         <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">hertz</UnitName>
         <UnitSymbol type="HTML">Hz</UnitSymbol>
@@ -369,6 +369,9 @@
         <QuantityName lang="en">solid angle</QuantityName>
       </Quantity><Quantity id="NISTq154" quantityType="base" dimensionURL="#NISTd60">
         <QuantityName lang="en">action</QuantityName>
+      </Quantity><Quantity id="NISTq132" quantityType="base" dimensionURL="#NISTd60">
+        <QuantityName lang="en">moment of momentum</QuantityName>
+        <QuantityName lang="en">angular momentum</QuantityName>
       </Quantity><Quantity id="NISTq13" quantityType="base" dimensionURL="#NISTd12">
         <QuantityName lang="en">force</QuantityName>
       </Quantity></QuantitySet><DimensionSet><Dimension id="NISTd24">
@@ -442,7 +445,7 @@
           <PrefixSymbol type="unicode">k</PrefixSymbol>
           <PrefixSymbol type="LaTeX">k</PrefixSymbol>
           <PrefixSymbol type="HTML">k</PrefixSymbol>
-        </Prefix></PrefixSet></UnitsML><presentation-metadata><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
+        </Prefix></PrefixSet></UnitsML></metanorma-extension>
 <boilerplate><copyright-statement>
 
 <clause id="_740fa11a-6d9e-997b-f669-6016f45bcf1a" obligation="normative"><p id="_f81d45d4-b556-ed46-e7c4-9e11a649f5b7" align="center">© Bureau International des Poids et Mesures 2018 all rights reserved</p>
@@ -831,14 +834,14 @@
       <mstyle mathvariant="normal">
         <mi>kg</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
         </mstyle>
         <mn>2</mn>
       </msup>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>s</mi>
@@ -870,7 +873,7 @@
       <mstyle mathvariant="normal">
         <mi>A</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <mstyle mathvariant="normal">
         <mi>s</mi>
       </mstyle>
@@ -888,7 +891,7 @@
       <mstyle mathvariant="normal">
         <mi>cd</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <mstyle mathvariant="normal">
         <mi>sr</mi>
       </mstyle>
@@ -917,7 +920,7 @@
         </mstyle>
         <mn>2</mn>
       </msup>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
@@ -962,14 +965,14 @@
       <mstyle mathvariant="normal">
         <mi>kg</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
         </mstyle>
         <mn>2</mn>
       </msup>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>s</mi>
@@ -1042,9 +1045,9 @@
 <p id="_8f37355c-7f9a-3877-d00b-68ef29c638da">The following method is consistent with a more rigorous analysis provided by Mohr in 2008 <eref type="inline" bibitemid="mohr" citeas="[6]"/>, which the interested reader is encouraged to consult.</p>
 </clause>
 
-<clause id="_5d240784-e564-2510-9e0d-016921925a9b" anchor="defining_constants" obligation="normative">
+<clause id="_357e962a-721f-3278-44fc-507734065fb8" anchor="defining_constants" obligation="normative">
 <title id="_0e21dd03-2dd7-c5c1-125a-fa1e7833d470">Defining constants written in terms of base units</title>
-<p id="_b001d5eb-d092-a107-cc0a-c297692d489f">We begin with <xref target="table1"/>, which presents much of the information given in the bullets of <xref target="introduction"/> in more usable form. Note that the defining constants are shown as labels in the first column. The four new defining constants and the base units which are redefined in consequence are shown in red. The units of the defining constants can be expressed as the product of powers of the base units, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<p id="_ec449348-50c2-41b2-7094-62f078c92abd">We begin with <xref target="table1"/>, which presents much of the information given in the bullets of <xref target="introduction"/> in more usable form. Note that the defining constants are shown as labels in the first column. The four new defining constants and the base units which are redefined in consequence are shown in red. The units of the defining constants can be expressed as the product of powers of the base units, <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msup>
       <mo rspace="thickmathspace">⁢</mo>
@@ -1154,7 +1157,7 @@
       <mstyle mathvariant="normal">
         <mi>J</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <mstyle mathvariant="normal">
         <mi>s</mi>
       </mstyle>
@@ -1169,14 +1172,14 @@
       <mstyle mathvariant="normal">
         <mi>kg</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
         </mstyle>
         <mn>2</mn>
       </msup>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>s</mi>
@@ -1186,6 +1189,7 @@
           <mn>1</mn>
         </mrow>
       </msup>
+      
       
       
       
@@ -2533,11 +2537,11 @@
       <mstyle mathvariant="normal">
         <mi>kg</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <mstyle mathvariant="normal">
         <mi>m</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>s</mi>

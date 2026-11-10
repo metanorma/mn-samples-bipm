@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.0" schema-version="v2.2.0" flavor="bipm">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.3" schema-version="v2.3.0" flavor="bipm">
 <bibdata type="standard">
 <title language="en" type="title-main">Measuring Conditions and Uncertainties for the Comparison and Calibration of National Dosimetric Standards at the BIPM</title>
 <docidentifier primary="true" type="BIPM">BIPM BIPM-2018/06</docidentifier><docnumber>BIPM-2018/06</docnumber><date type="updated"><on>2018-12</on></date><contributor><role type="author"/><organization>
@@ -20,7 +20,7 @@
 <name>Bureau International des Poids et Mesures</name>
 <abbreviation>BIPM</abbreviation></organization></owner></copyright><relation type="successorOf"><bibitem><version>Rapport BIPM-2011/04</version></bibitem>
 </relation><ext><doctype>rapport</doctype><flavor>bipm</flavor><structuredidentifier><docnumber>BIPM-2018/06</docnumber></structuredidentifier></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
-<UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd5" id="U_NISTu23">
+<presentation-metadata><output-extensions>xml,html,pdf,rxl</output-extensions><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata><UnitsML xmlns="https://schema.unitsml.org/unitsml/1.0"><UnitSet><Unit dimensionURL="#NISTd5" id="U_NISTu23">
         <UnitSystem name="SI" type="SI_derived" lang="en"/>
         <UnitName lang="en">degree Celsius</UnitName>
         <UnitSymbol type="HTML">°C</UnitSymbol>
@@ -335,7 +335,7 @@
         <PrefixSymbol type="unicode">T</PrefixSymbol>
         <PrefixSymbol type="LaTeX">T</PrefixSymbol>
         <PrefixSymbol type="HTML">T</PrefixSymbol>
-      </Prefix></PrefixSet></UnitsML><presentation-metadata><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
+      </Prefix></PrefixSet></UnitsML></metanorma-extension>
 <boilerplate><copyright-statement>
 
 <clause id="_740fa11a-6d9e-997b-f669-6016f45bcf1a" obligation="normative"><p id="_f81d45d4-b556-ed46-e7c4-9e11a649f5b7" align="center">© Bureau International des Poids et Mesures 2018 all rights reserved</p>
@@ -667,7 +667,7 @@
       <mstyle mathvariant="normal">
         <mi>g</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>cm</mi>
@@ -690,7 +690,7 @@
       <mstyle mathvariant="normal">
         <mi>g</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>cm</mi>
@@ -785,7 +785,7 @@
       <mstyle mathvariant="normal">
         <mi>g</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>cm</mi>
@@ -849,7 +849,7 @@
       <mstyle mathvariant="normal">
         <mi>g</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>cm</mi>
@@ -889,7 +889,7 @@
       <mstyle mathvariant="normal">
         <mi>g</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>cm</mi>
@@ -912,7 +912,7 @@
       <mstyle mathvariant="normal">
         <mi>g</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>cm</mi>
@@ -1000,7 +1000,7 @@
       <mstyle mathvariant="normal">
         <mi>g</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>cm</mi>
@@ -1097,7 +1097,7 @@
 </ol>
 </clause>
 
-<clause id="_dfa6ddbb-c7b2-c129-2523-1418b16cd16c" obligation="normative">
+<clause id="_df0a8afe-d5c9-067a-fd99-ca0d94b43a78" obligation="normative">
 <title id="_42158a06-310f-c0fa-5ef2-5f0fe3956bf5">Comparison and calibration uncertainties</title>
 <p id="_0a1e0f69-65f1-07fc-71ff-c8c05e84698d">The uncertainties associated with dosimetry measurements made at the BIPM are analysed in accordance with the <em>Guide to the Expression of Uncertainty in Measurement</em> (JCGM 2008). The uncertainty budgets for the dosimetry standards are given in <xref target="table3"/>, <xref target="table6"/>, <xref target="table8"/> and <xref target="table9"/>. For comparisons, the BIPM standard uncertainties are combined with those associated with the primary or transfer chamber, taking correlation into account, to give the combined standard uncertainty of the comparison results. The detailed uncertainty budgets are given in the comparison report. For the calibration of national reference standards, the BIPM standard uncertainties are combined with the uncertainties associated with the chamber under calibration to give the combined standard uncertainty of the calibration coefficient. This value is given in the calibration certificate.</p>
 
@@ -1329,7 +1329,7 @@
         </mstyle>
         <mn>2</mn>
       </msup>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>g</mi>
@@ -1356,7 +1356,7 @@
       <mstyle mathvariant="normal">
         <mi>mGy</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>s</mi>
@@ -1453,7 +1453,7 @@
         </mstyle>
         <mn>2</mn>
       </msup>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>g</mi>
@@ -1479,7 +1479,7 @@
       <mstyle mathvariant="normal">
         <mi>mGy</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>s</mi>
@@ -1583,7 +1583,7 @@
         </mstyle>
         <mn>2</mn>
       </msup>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>g</mi>
@@ -1612,7 +1612,7 @@
       <mstyle mathvariant="normal">
         <mi>mGy</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>s</mi>
@@ -1674,7 +1674,7 @@
       <mstyle mathvariant="normal">
         <mi>kg</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
@@ -1706,7 +1706,7 @@
       <mstyle mathvariant="normal">
         <mi>J</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>C</mi>
@@ -2757,7 +2757,7 @@
       <mstyle mathvariant="normal">
         <mi>kg</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
@@ -2791,7 +2791,7 @@
       <mstyle mathvariant="normal">
         <mi>J</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>C</mi>
@@ -3064,7 +3064,7 @@
       <mstyle mathvariant="normal">
         <mi>g</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>cm</mi>
@@ -3214,7 +3214,7 @@
         </mstyle>
         <mn>2</mn>
       </msup>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>g</mi>
@@ -3240,7 +3240,7 @@
       <mstyle mathvariant="normal">
         <mi>mGy</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>s</mi>
@@ -3266,7 +3266,7 @@
       <mstyle mathvariant="normal">
         <mi>mGy</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>s</mi>
@@ -3326,7 +3326,7 @@
       <mstyle mathvariant="normal">
         <mi>kg</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
@@ -3358,7 +3358,7 @@
       <mstyle mathvariant="normal">
         <mi>J</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>C</mi>
@@ -3812,7 +3812,7 @@
       <mstyle mathvariant="normal">
         <mi>kg</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
@@ -3846,7 +3846,7 @@
       <mstyle mathvariant="normal">
         <mi>J</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>C</mi>
@@ -4254,7 +4254,7 @@
       <mstyle mathvariant="normal">
         <mi>g</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>cm</mi>
@@ -4363,7 +4363,7 @@
       <mstyle mathvariant="normal">
         <mi>kg</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
@@ -4451,7 +4451,7 @@
       <mstyle mathvariant="normal">
         <mi>J</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>C</mi>
@@ -4653,7 +4653,7 @@
       <mstyle mathvariant="normal">
         <mi>g</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>cm</mi>
@@ -4670,7 +4670,7 @@
   </mstyle>
 </math><asciimath>5 "unitsml(g*cm^-2)"</asciimath></stem>, and their estimated relative standard uncertainties</strong></p>
 
-<table id="_c11d1c6b-ad10-edfc-b197-6b2f468dfaed" anchor="table9">
+<table id="_81968b35-af66-a021-3952-105ae199ffd0" anchor="table9">
 <name id="_5574aa43-f878-efec-5d39-5718170d5d1b"><sup>60</sup>Co gamma radiation</name>
 <tbody><tr id="_a2de43e5-fc57-4564-6fad-7fa001a27c3e"><td id="_ad94086a-38b0-3861-046f-732ad83adfdc" valign="top" rowspan="2" align="left">Symbol</td>
 <td id="_bc297584-f2be-434d-cd3f-c628aae9321b" valign="top" rowspan="2" align="left">Parameter / unit</td>
@@ -4717,7 +4717,7 @@
   </mstyle>
 </math><asciimath>u_("i")</asciimath></stem></td>
 </tr><tr id="_8d8602a4-28b8-04e9-d716-d0ceaf4be459"><td id="_e1ef4036-0340-1f00-c64a-7444934b2d19" colspan="5" valign="top" align="left"><em>Physical constants</em></td>
-</tr><tr id="_15044e4e-f5f2-0c85-6e0c-4c5619efa3f4"><td id="_96c302a6-68c2-ee63-1137-8c49481ef15d" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+</tr><tr id="_64b29ae3-a9d4-1e7b-9c74-6c34d3d840f3"><td id="_96c302a6-68c2-ee63-1137-8c49481ef15d" valign="top" align="left"><stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <msub>
       <mstyle mathvariant="italic">
@@ -4727,7 +4727,7 @@
     </msub>
   </mstyle>
 </math><asciimath>ii(rho)_"a"</asciimath></stem></td>
-<td id="_0c880387-0835-8b5a-e665-2a066af7e094" valign="top" align="left">dry air density (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<td id="_38c71d79-120e-8b0c-4960-1d61934ea6ee" valign="top" align="left">dry air density (<stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mn>0</mn>
     <mo rspace="thickmathspace">⁢</mo>
@@ -4743,7 +4743,7 @@
     <mi>t</mi>
     <mi>e</mi>
     <mi>m</mi>
-    <mo>:</mo>
+    </mstyle>
     <mrow>
       <mo>[</mo>
       <mn>101.325</mn>
@@ -4758,14 +4758,14 @@
       </mrow>
       <mo/>
     </mrow>
-  </mstyle>
-</math><asciimath>0 "unitsml(degC)", stem:[101.325 "unitsml(kPa)"</asciimath></stem>) / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  </math>
+</stem>) / <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
   <mstyle displaystyle="false">
     <mrow xref="U_NISTu27p10_3.u1e-3/1">
       <mstyle mathvariant="normal">
         <mi>kg</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>m</mi>
@@ -4826,7 +4826,7 @@
       <mstyle mathvariant="normal">
         <mi>J</mi>
       </mstyle>
-      <mi rspace="thickmathspace">⁢</mi>
+      <mo rspace="thickmathspace">⁢</mo>
       <msup>
         <mstyle mathvariant="normal">
           <mi>C</mi>
